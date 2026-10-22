@@ -1,0 +1,450 @@
+{
+  "diagnostic_part5": [
+    {
+      "answer": 1,
+      "explain_zh": "make + 宾语 + 形容词：made the scheduling much more ___，more 后面要形容词 efficient。",
+      "id": "d1",
+      "node": "G1",
+      "options": [
+        "efficiency",
+        "efficient",
+        "efficiently",
+        "efficiencies"
+      ],
+      "stem": "The new booking system has made the scheduling of client meetings much more -------."
+    },
+    {
+      "answer": 2,
+      "explain_zh": "“在昨天会议开始之前”已完成，是过去的过去，用过去完成时 had finished。",
+      "id": "d2",
+      "node": "G4",
+      "options": [
+        "finishes",
+        "has finished",
+        "had finished",
+        "will finish"
+      ],
+      "stem": "Ms. Tanaka ------- the quarterly sales report before the board meeting began yesterday."
+    },
+    {
+      "answer": 1,
+      "explain_zh": "空后是名词短语 the heavy rain，不是从句，只能用介词 Despite；Although 后面要接完整句子。",
+      "id": "d3",
+      "node": "G7",
+      "options": [
+        "Although",
+        "Despite",
+        "Because",
+        "Unless"
+      ],
+      "stem": "------- the heavy rain, the outdoor product launch went ahead as planned."
+    },
+    {
+      "answer": 2,
+      "explain_zh": "主语核心是 Each，单数，用 is。of the job applicants 是干扰。",
+      "id": "d4",
+      "node": "G3",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "be"
+      ],
+      "stem": "Each of the job applicants ------- required to submit two letters of reference."
+    },
+    {
+      "answer": 1,
+      "explain_zh": "合同是“被签”，by both companies 是动作执行者，且是将来，用 will be signed。",
+      "id": "d5",
+      "node": "G5",
+      "options": [
+        "will sign",
+        "will be signed",
+        "signing",
+        "has signed"
+      ],
+      "stem": "The service contract ------- by both companies by the end of next week."
+    },
+    {
+      "answer": 2,
+      "explain_zh": "空后直接跟名词 team，表示“他的团队”，用所有格关系代词 whose。",
+      "id": "d6",
+      "node": "G6",
+      "options": [
+        "who",
+        "which",
+        "whose",
+        "whom"
+      ],
+      "stem": "The manager ------- team won the design award will speak at the annual dinner."
+    },
+    {
+      "answer": 1,
+      "explain_zh": "修饰动词 completed，放在句末，用副词 carefully。",
+      "id": "d7",
+      "node": "G2",
+      "options": [
+        "careful",
+        "carefully",
+        "care",
+        "cared"
+      ],
+      "stem": "Mr. Lee completed the expense report -------, so it was approved on the first submission."
+    },
+    {
+      "answer": 1,
+      "explain_zh": "affect 是动词“影响”；effect 多作名词；raise/rise 是“提高/上升”，语义不通。",
+      "id": "d8",
+      "node": "V4",
+      "options": [
+        "effected",
+        "affected",
+        "raised",
+        "risen"
+      ],
+      "stem": "The rising cost of materials has ------- the production schedule for the spring line."
+    }
+  ],
+  "drafts": [
+    {
+      "blanks": [
+        {
+          "answer": 1,
+          "explain_zh": "活动是“被举办”，且在将来，用 will be held。",
+          "n": 1,
+          "node": "G5",
+          "options": [
+            "held",
+            "will be held",
+            "holding",
+            "has held"
+          ]
+        },
+        {
+          "answer": 0,
+          "explain_zh": "句子插入看上下文衔接：上一句讲订了顶层餐厅，接“客人能看到港口景色”最自然。",
+          "n": 2,
+          "node": "R6",
+          "options": [
+            "Guests will be able to enjoy a view of the harbor.",
+            "The hotel was built in 1920 and has been renovated twice.",
+            "Please submit your expense reports by Monday.",
+            "Our sales figures rose sharply last quarter."
+          ]
+        },
+        {
+          "answer": 0,
+          "explain_zh": "截止期限用 by（在…之前完成）；until 表示动作持续到某时。",
+          "n": 3,
+          "node": "G7",
+          "options": [
+            "by",
+            "until",
+            "during",
+            "within"
+          ]
+        }
+      ],
+      "from": "Amira Hassan, Marketing",
+      "id": "p6a",
+      "text_parts": [
+        "Dear team,\nOur annual client appreciation event [1] on Friday, December 4. This year, we have reserved the top floor dining room at the Marlowe Hotel. [2] Please send your guest list to me [3] November 20 so that I can confirm the final numbers with the hotel."
+      ],
+      "title": "Draft: Client appreciation event"
+    }
+  ],
+  "inbox": [
+    {
+      "body": "Please be advised that the east elevators will be out of service on Thursday, November 5, from 8:00 A.M. to 2:00 P.M. while technicians replace the control panels. The west elevators will operate as usual, but we expect them to be crowded during the morning. Staff with meetings on the 12th floor are encouraged to allow extra time or to use the stairs beside the cafeteria. Deliveries scheduled for Thursday morning will be sent to the loading area on Pine Street. If you have any questions, please contact me at extension 4471.",
+      "from": "Daniel Reyes, Facilities Manager",
+      "id": "m1",
+      "questions": [
+        {
+          "answer": 0,
+          "explain_zh": "out of service 被替换成 temporary closure，这就是同义替换。",
+          "node": "R2",
+          "options": [
+            "To announce a temporary closure",
+            "To introduce a new facilities manager",
+            "To request repairs to the stairs",
+            "To change the location of a meeting"
+          ],
+          "q": "What is the purpose of the e-mail?"
+        },
+        {
+          "answer": 1,
+          "explain_zh": "原文 encouraged to allow extra time，直接定位。",
+          "node": "R1",
+          "options": [
+            "Reschedule their meetings",
+            "Allow extra travel time",
+            "Call extension 4471",
+            "Use the loading area"
+          ],
+          "q": "What are staff with meetings on the 12th floor advised to do?"
+        },
+        {
+          "answer": 3,
+          "explain_zh": "NOT 题逐项排除：时间、原因（replace the control panels）、送货地点都提到了，费用没有。",
+          "node": "R4",
+          "options": [
+            "When the work will take place",
+            "Why the elevators will be closed",
+            "Where deliveries will be sent",
+            "How much the repairs will cost"
+          ],
+          "q": "What is NOT mentioned in the e-mail?"
+        }
+      ],
+      "subject": "East elevators closed on Thursday",
+      "to": "All Staff",
+      "type": "single"
+    },
+    {
+      "body": "Dear Ms. Nair,\nThank you for your inquiry about our Model K2 office chairs. As requested, here is a quote for 40 chairs at $185 each. Please note that orders of 50 chairs or more receive a 10 percent discount, and delivery is free for all orders over $5,000. Orders are normally delivered within 10 business days.\nSincerely,\nTom Ashby, Sales Department",
+      "from": "Brightline Office Supply",
+      "id": "m2",
+      "questions": [
+        {
+          "answer": 3,
+          "explain_zh": "跨两篇：报价是 40 把，聊天说再加 12 人，40+12=52。",
+          "node": "R5",
+          "options": [
+            "12",
+            "40",
+            "50",
+            "52"
+          ],
+          "q": "How many chairs will most likely be ordered?"
+        },
+        {
+          "answer": 0,
+          "explain_zh": "52≥50 拿到 9 折；52×185 远超 5,000 美元，免运费。多篇题常要把数字带回第一篇的条件里。",
+          "node": "R5",
+          "options": [
+            "A discount and free delivery",
+            "Free delivery only",
+            "A discount only",
+            "Neither a discount nor free delivery"
+          ],
+          "q": "What will the company most likely receive?"
+        },
+        {
+          "answer": 1,
+          "explain_zh": "inquiry = question（询问）。同义词题看上下文：Thank you for your inquiry…here is a quote。",
+          "node": "R2",
+          "options": [
+            "complaint",
+            "question",
+            "payment",
+            "survey"
+          ],
+          "q": "In the e-mail, the word \"inquiry\" in line 1 is closest in meaning to"
+        }
+      ],
+      "second": {
+        "label": "Team chat",
+        "text": "Priya Nair (9:12 A.M.): We just hired 12 more staff for the support team. Let's order chairs for them too, along with the original 40.\nKevin Cho (9:14 A.M.): Got it. I'll place the order with Brightline today."
+      },
+      "subject": "Your price quote",
+      "to": "Priya Nair, Office Manager",
+      "type": "double"
+    }
+  ],
+  "meta": {
+    "blank_marker": "-------",
+    "style_anchor": "ETS TOEIC L&R official sample test (format and directions only; no ETS text reused)",
+    "version": "v0-prototype",
+    "vocab_constraint": "NGSL 1.2 + TSL 1.2 (Browne & Culligan, CC BY-SA 4.0); proper nouns and numbers exempt"
+  },
+  "nodes": [
+    {
+      "freq": 0.14,
+      "id": "G1",
+      "layer": "语法",
+      "name": "词性判断",
+      "prereq": []
+    },
+    {
+      "freq": 0.08,
+      "id": "G2",
+      "layer": "语法",
+      "name": "形容词/副词位置",
+      "prereq": [
+        "G1"
+      ]
+    },
+    {
+      "freq": 0.04,
+      "id": "G3",
+      "layer": "语法",
+      "name": "主谓一致",
+      "prereq": []
+    },
+    {
+      "freq": 0.07,
+      "id": "G4",
+      "layer": "语法",
+      "name": "时态与时间状语",
+      "prereq": []
+    },
+    {
+      "freq": 0.05,
+      "id": "G5",
+      "layer": "语法",
+      "name": "被动语态",
+      "prereq": [
+        "G4"
+      ]
+    },
+    {
+      "freq": 0.03,
+      "id": "G6",
+      "layer": "语法",
+      "name": "关系代词",
+      "prereq": [
+        "G3"
+      ]
+    },
+    {
+      "freq": 0.09,
+      "id": "G7",
+      "layer": "语法",
+      "name": "连词/介词辨析",
+      "prereq": [
+        "G1"
+      ]
+    },
+    {
+      "freq": 0.04,
+      "id": "G8",
+      "layer": "语法",
+      "name": "代词格",
+      "prereq": []
+    },
+    {
+      "freq": 0.06,
+      "id": "V1",
+      "layer": "词汇",
+      "name": "会议与日程词汇",
+      "prereq": []
+    },
+    {
+      "freq": 0.05,
+      "id": "V2",
+      "layer": "词汇",
+      "name": "人事与招聘词汇",
+      "prereq": []
+    },
+    {
+      "freq": 0.05,
+      "id": "V3",
+      "layer": "词汇",
+      "name": "采购与报价词汇",
+      "prereq": []
+    },
+    {
+      "freq": 0.04,
+      "id": "V4",
+      "layer": "词汇",
+      "name": "易混词",
+      "prereq": [
+        "G1"
+      ]
+    },
+    {
+      "freq": 0.12,
+      "id": "R1",
+      "layer": "题型",
+      "name": "细节定位",
+      "prereq": []
+    },
+    {
+      "freq": 0.08,
+      "id": "R2",
+      "layer": "题型",
+      "name": "同义替换识别",
+      "prereq": [
+        "R1"
+      ]
+    },
+    {
+      "freq": 0.06,
+      "id": "R3",
+      "layer": "题型",
+      "name": "推断题",
+      "prereq": [
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "freq": 0.04,
+      "id": "R4",
+      "layer": "题型",
+      "name": "NOT/TRUE 题",
+      "prereq": [
+        "R1"
+      ]
+    },
+    {
+      "freq": 0.1,
+      "id": "R5",
+      "layer": "题型",
+      "name": "多篇跨文定位",
+      "prereq": [
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "freq": 0.05,
+      "id": "R6",
+      "layer": "题型",
+      "name": "句子插入",
+      "prereq": [
+        "G7",
+        "R1"
+      ]
+    },
+    {
+      "freq": 0.1,
+      "id": "S1",
+      "layer": "策略",
+      "name": "限时阅读速度",
+      "prereq": [
+        "R1"
+      ]
+    },
+    {
+      "freq": 0.05,
+      "id": "S2",
+      "layer": "策略",
+      "name": "放弃与时间分配",
+      "prereq": [
+        "S1"
+      ]
+    }
+  ],
+  "urgent": [
+    {
+      "answer": 2,
+      "explain_zh": "推断：会议改到 5:30，B 房间到 6 点都被占，C 整个下午空，所以是 C 房间 5:30。“Please book it” 的 it 指 Room C。",
+      "id": "u1",
+      "node": "S1",
+      "options": [
+        "In Room B at 4:00",
+        "In Room B at 5:30",
+        "In Room C at 5:30",
+        "At the airport"
+      ],
+      "q": "Where will the meeting most likely take place?",
+      "seconds": 90,
+      "thread": [
+        "Mark Ellis (2:05 P.M.): Kenji's flight from Seoul lands at 3:40, so he can't make our 4:00 meeting. Can we move it to 5:30?",
+        "Lena Park (2:07 P.M.): Room B is booked until 6:00, but Room C is free all afternoon.",
+        "Mark Ellis (2:08 P.M.): Perfect. Please book it and let everyone know."
+      ]
+    }
+  ]
+}

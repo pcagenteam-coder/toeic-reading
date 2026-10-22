@@ -1,0 +1,917 @@
+{
+  "anchors": [
+    {
+      "raw_correct": 0,
+      "scaled_score_estimate": 5
+    },
+    {
+      "raw_correct": 5,
+      "scaled_score_estimate": 20
+    },
+    {
+      "raw_correct": 10,
+      "scaled_score_estimate": 45
+    },
+    {
+      "raw_correct": 15,
+      "scaled_score_estimate": 70
+    },
+    {
+      "raw_correct": 20,
+      "scaled_score_estimate": 95
+    },
+    {
+      "raw_correct": 25,
+      "scaled_score_estimate": 120
+    },
+    {
+      "raw_correct": 30,
+      "scaled_score_estimate": 145
+    },
+    {
+      "raw_correct": 35,
+      "scaled_score_estimate": 170
+    },
+    {
+      "raw_correct": 40,
+      "scaled_score_estimate": 195
+    },
+    {
+      "raw_correct": 45,
+      "scaled_score_estimate": 220
+    },
+    {
+      "raw_correct": 50,
+      "scaled_score_estimate": 245
+    },
+    {
+      "raw_correct": 55,
+      "scaled_score_estimate": 270
+    },
+    {
+      "raw_correct": 60,
+      "scaled_score_estimate": 295
+    },
+    {
+      "raw_correct": 65,
+      "scaled_score_estimate": 320
+    },
+    {
+      "raw_correct": 70,
+      "scaled_score_estimate": 345
+    },
+    {
+      "raw_correct": 75,
+      "scaled_score_estimate": 370
+    },
+    {
+      "raw_correct": 80,
+      "scaled_score_estimate": 395
+    },
+    {
+      "raw_correct": 85,
+      "scaled_score_estimate": 420
+    },
+    {
+      "raw_correct": 90,
+      "scaled_score_estimate": 445
+    },
+    {
+      "raw_correct": 95,
+      "scaled_score_estimate": 470
+    },
+    {
+      "raw_correct": 100,
+      "scaled_score_estimate": 495
+    }
+  ],
+  "dataset": "toeic-raw-to-scaled-approximation",
+  "important_note": "Approximate study/practice reference only. ETS does not publish one universal raw-correct to scaled-score table for all TOEIC Listening & Reading forms; official scores are equated and can differ by test form.",
+  "license": "CC-BY-4.0",
+  "listening": [
+    {
+      "raw_correct": 0,
+      "scaled_score_estimate": 5
+    },
+    {
+      "raw_correct": 1,
+      "scaled_score_estimate": 10
+    },
+    {
+      "raw_correct": 2,
+      "scaled_score_estimate": 10
+    },
+    {
+      "raw_correct": 3,
+      "scaled_score_estimate": 15
+    },
+    {
+      "raw_correct": 4,
+      "scaled_score_estimate": 15
+    },
+    {
+      "raw_correct": 5,
+      "scaled_score_estimate": 20
+    },
+    {
+      "raw_correct": 6,
+      "scaled_score_estimate": 25
+    },
+    {
+      "raw_correct": 7,
+      "scaled_score_estimate": 30
+    },
+    {
+      "raw_correct": 8,
+      "scaled_score_estimate": 35
+    },
+    {
+      "raw_correct": 9,
+      "scaled_score_estimate": 40
+    },
+    {
+      "raw_correct": 10,
+      "scaled_score_estimate": 45
+    },
+    {
+      "raw_correct": 11,
+      "scaled_score_estimate": 50
+    },
+    {
+      "raw_correct": 12,
+      "scaled_score_estimate": 55
+    },
+    {
+      "raw_correct": 13,
+      "scaled_score_estimate": 60
+    },
+    {
+      "raw_correct": 14,
+      "scaled_score_estimate": 65
+    },
+    {
+      "raw_correct": 15,
+      "scaled_score_estimate": 70
+    },
+    {
+      "raw_correct": 16,
+      "scaled_score_estimate": 75
+    },
+    {
+      "raw_correct": 17,
+      "scaled_score_estimate": 80
+    },
+    {
+      "raw_correct": 18,
+      "scaled_score_estimate": 85
+    },
+    {
+      "raw_correct": 19,
+      "scaled_score_estimate": 90
+    },
+    {
+      "raw_correct": 20,
+      "scaled_score_estimate": 95
+    },
+    {
+      "raw_correct": 21,
+      "scaled_score_estimate": 100
+    },
+    {
+      "raw_correct": 22,
+      "scaled_score_estimate": 105
+    },
+    {
+      "raw_correct": 23,
+      "scaled_score_estimate": 110
+    },
+    {
+      "raw_correct": 24,
+      "scaled_score_estimate": 115
+    },
+    {
+      "raw_correct": 25,
+      "scaled_score_estimate": 120
+    },
+    {
+      "raw_correct": 26,
+      "scaled_score_estimate": 125
+    },
+    {
+      "raw_correct": 27,
+      "scaled_score_estimate": 130
+    },
+    {
+      "raw_correct": 28,
+      "scaled_score_estimate": 135
+    },
+    {
+      "raw_correct": 29,
+      "scaled_score_estimate": 140
+    },
+    {
+      "raw_correct": 30,
+      "scaled_score_estimate": 145
+    },
+    {
+      "raw_correct": 31,
+      "scaled_score_estimate": 150
+    },
+    {
+      "raw_correct": 32,
+      "scaled_score_estimate": 155
+    },
+    {
+      "raw_correct": 33,
+      "scaled_score_estimate": 160
+    },
+    {
+      "raw_correct": 34,
+      "scaled_score_estimate": 165
+    },
+    {
+      "raw_correct": 35,
+      "scaled_score_estimate": 170
+    },
+    {
+      "raw_correct": 36,
+      "scaled_score_estimate": 175
+    },
+    {
+      "raw_correct": 37,
+      "scaled_score_estimate": 180
+    },
+    {
+      "raw_correct": 38,
+      "scaled_score_estimate": 185
+    },
+    {
+      "raw_correct": 39,
+      "scaled_score_estimate": 190
+    },
+    {
+      "raw_correct": 40,
+      "scaled_score_estimate": 195
+    },
+    {
+      "raw_correct": 41,
+      "scaled_score_estimate": 200
+    },
+    {
+      "raw_correct": 42,
+      "scaled_score_estimate": 205
+    },
+    {
+      "raw_correct": 43,
+      "scaled_score_estimate": 210
+    },
+    {
+      "raw_correct": 44,
+      "scaled_score_estimate": 215
+    },
+    {
+      "raw_correct": 45,
+      "scaled_score_estimate": 220
+    },
+    {
+      "raw_correct": 46,
+      "scaled_score_estimate": 225
+    },
+    {
+      "raw_correct": 47,
+      "scaled_score_estimate": 230
+    },
+    {
+      "raw_correct": 48,
+      "scaled_score_estimate": 235
+    },
+    {
+      "raw_correct": 49,
+      "scaled_score_estimate": 240
+    },
+    {
+      "raw_correct": 50,
+      "scaled_score_estimate": 245
+    },
+    {
+      "raw_correct": 51,
+      "scaled_score_estimate": 250
+    },
+    {
+      "raw_correct": 52,
+      "scaled_score_estimate": 255
+    },
+    {
+      "raw_correct": 53,
+      "scaled_score_estimate": 260
+    },
+    {
+      "raw_correct": 54,
+      "scaled_score_estimate": 265
+    },
+    {
+      "raw_correct": 55,
+      "scaled_score_estimate": 270
+    },
+    {
+      "raw_correct": 56,
+      "scaled_score_estimate": 275
+    },
+    {
+      "raw_correct": 57,
+      "scaled_score_estimate": 280
+    },
+    {
+      "raw_correct": 58,
+      "scaled_score_estimate": 285
+    },
+    {
+      "raw_correct": 59,
+      "scaled_score_estimate": 290
+    },
+    {
+      "raw_correct": 60,
+      "scaled_score_estimate": 295
+    },
+    {
+      "raw_correct": 61,
+      "scaled_score_estimate": 300
+    },
+    {
+      "raw_correct": 62,
+      "scaled_score_estimate": 305
+    },
+    {
+      "raw_correct": 63,
+      "scaled_score_estimate": 310
+    },
+    {
+      "raw_correct": 64,
+      "scaled_score_estimate": 315
+    },
+    {
+      "raw_correct": 65,
+      "scaled_score_estimate": 320
+    },
+    {
+      "raw_correct": 66,
+      "scaled_score_estimate": 325
+    },
+    {
+      "raw_correct": 67,
+      "scaled_score_estimate": 330
+    },
+    {
+      "raw_correct": 68,
+      "scaled_score_estimate": 335
+    },
+    {
+      "raw_correct": 69,
+      "scaled_score_estimate": 340
+    },
+    {
+      "raw_correct": 70,
+      "scaled_score_estimate": 345
+    },
+    {
+      "raw_correct": 71,
+      "scaled_score_estimate": 350
+    },
+    {
+      "raw_correct": 72,
+      "scaled_score_estimate": 355
+    },
+    {
+      "raw_correct": 73,
+      "scaled_score_estimate": 360
+    },
+    {
+      "raw_correct": 74,
+      "scaled_score_estimate": 365
+    },
+    {
+      "raw_correct": 75,
+      "scaled_score_estimate": 370
+    },
+    {
+      "raw_correct": 76,
+      "scaled_score_estimate": 375
+    },
+    {
+      "raw_correct": 77,
+      "scaled_score_estimate": 380
+    },
+    {
+      "raw_correct": 78,
+      "scaled_score_estimate": 385
+    },
+    {
+      "raw_correct": 79,
+      "scaled_score_estimate": 390
+    },
+    {
+      "raw_correct": 80,
+      "scaled_score_estimate": 395
+    },
+    {
+      "raw_correct": 81,
+      "scaled_score_estimate": 400
+    },
+    {
+      "raw_correct": 82,
+      "scaled_score_estimate": 405
+    },
+    {
+      "raw_correct": 83,
+      "scaled_score_estimate": 410
+    },
+    {
+      "raw_correct": 84,
+      "scaled_score_estimate": 415
+    },
+    {
+      "raw_correct": 85,
+      "scaled_score_estimate": 420
+    },
+    {
+      "raw_correct": 86,
+      "scaled_score_estimate": 425
+    },
+    {
+      "raw_correct": 87,
+      "scaled_score_estimate": 430
+    },
+    {
+      "raw_correct": 88,
+      "scaled_score_estimate": 435
+    },
+    {
+      "raw_correct": 89,
+      "scaled_score_estimate": 440
+    },
+    {
+      "raw_correct": 90,
+      "scaled_score_estimate": 445
+    },
+    {
+      "raw_correct": 91,
+      "scaled_score_estimate": 450
+    },
+    {
+      "raw_correct": 92,
+      "scaled_score_estimate": 455
+    },
+    {
+      "raw_correct": 93,
+      "scaled_score_estimate": 460
+    },
+    {
+      "raw_correct": 94,
+      "scaled_score_estimate": 465
+    },
+    {
+      "raw_correct": 95,
+      "scaled_score_estimate": 470
+    },
+    {
+      "raw_correct": 96,
+      "scaled_score_estimate": 475
+    },
+    {
+      "raw_correct": 97,
+      "scaled_score_estimate": 480
+    },
+    {
+      "raw_correct": 98,
+      "scaled_score_estimate": 485
+    },
+    {
+      "raw_correct": 99,
+      "scaled_score_estimate": 490
+    },
+    {
+      "raw_correct": 100,
+      "scaled_score_estimate": 495
+    }
+  ],
+  "maintainer": "Lumi Studio (@alice51849)",
+  "method": "Linear interpolation through common published preparation-chart anchor points in 5-point scaled-score increments. The same transparent reference curve is provided for Listening and Reading to avoid implying an official form-specific conversion.",
+  "reading": [
+    {
+      "raw_correct": 0,
+      "scaled_score_estimate": 5
+    },
+    {
+      "raw_correct": 1,
+      "scaled_score_estimate": 10
+    },
+    {
+      "raw_correct": 2,
+      "scaled_score_estimate": 10
+    },
+    {
+      "raw_correct": 3,
+      "scaled_score_estimate": 15
+    },
+    {
+      "raw_correct": 4,
+      "scaled_score_estimate": 15
+    },
+    {
+      "raw_correct": 5,
+      "scaled_score_estimate": 20
+    },
+    {
+      "raw_correct": 6,
+      "scaled_score_estimate": 25
+    },
+    {
+      "raw_correct": 7,
+      "scaled_score_estimate": 30
+    },
+    {
+      "raw_correct": 8,
+      "scaled_score_estimate": 35
+    },
+    {
+      "raw_correct": 9,
+      "scaled_score_estimate": 40
+    },
+    {
+      "raw_correct": 10,
+      "scaled_score_estimate": 45
+    },
+    {
+      "raw_correct": 11,
+      "scaled_score_estimate": 50
+    },
+    {
+      "raw_correct": 12,
+      "scaled_score_estimate": 55
+    },
+    {
+      "raw_correct": 13,
+      "scaled_score_estimate": 60
+    },
+    {
+      "raw_correct": 14,
+      "scaled_score_estimate": 65
+    },
+    {
+      "raw_correct": 15,
+      "scaled_score_estimate": 70
+    },
+    {
+      "raw_correct": 16,
+      "scaled_score_estimate": 75
+    },
+    {
+      "raw_correct": 17,
+      "scaled_score_estimate": 80
+    },
+    {
+      "raw_correct": 18,
+      "scaled_score_estimate": 85
+    },
+    {
+      "raw_correct": 19,
+      "scaled_score_estimate": 90
+    },
+    {
+      "raw_correct": 20,
+      "scaled_score_estimate": 95
+    },
+    {
+      "raw_correct": 21,
+      "scaled_score_estimate": 100
+    },
+    {
+      "raw_correct": 22,
+      "scaled_score_estimate": 105
+    },
+    {
+      "raw_correct": 23,
+      "scaled_score_estimate": 110
+    },
+    {
+      "raw_correct": 24,
+      "scaled_score_estimate": 115
+    },
+    {
+      "raw_correct": 25,
+      "scaled_score_estimate": 120
+    },
+    {
+      "raw_correct": 26,
+      "scaled_score_estimate": 125
+    },
+    {
+      "raw_correct": 27,
+      "scaled_score_estimate": 130
+    },
+    {
+      "raw_correct": 28,
+      "scaled_score_estimate": 135
+    },
+    {
+      "raw_correct": 29,
+      "scaled_score_estimate": 140
+    },
+    {
+      "raw_correct": 30,
+      "scaled_score_estimate": 145
+    },
+    {
+      "raw_correct": 31,
+      "scaled_score_estimate": 150
+    },
+    {
+      "raw_correct": 32,
+      "scaled_score_estimate": 155
+    },
+    {
+      "raw_correct": 33,
+      "scaled_score_estimate": 160
+    },
+    {
+      "raw_correct": 34,
+      "scaled_score_estimate": 165
+    },
+    {
+      "raw_correct": 35,
+      "scaled_score_estimate": 170
+    },
+    {
+      "raw_correct": 36,
+      "scaled_score_estimate": 175
+    },
+    {
+      "raw_correct": 37,
+      "scaled_score_estimate": 180
+    },
+    {
+      "raw_correct": 38,
+      "scaled_score_estimate": 185
+    },
+    {
+      "raw_correct": 39,
+      "scaled_score_estimate": 190
+    },
+    {
+      "raw_correct": 40,
+      "scaled_score_estimate": 195
+    },
+    {
+      "raw_correct": 41,
+      "scaled_score_estimate": 200
+    },
+    {
+      "raw_correct": 42,
+      "scaled_score_estimate": 205
+    },
+    {
+      "raw_correct": 43,
+      "scaled_score_estimate": 210
+    },
+    {
+      "raw_correct": 44,
+      "scaled_score_estimate": 215
+    },
+    {
+      "raw_correct": 45,
+      "scaled_score_estimate": 220
+    },
+    {
+      "raw_correct": 46,
+      "scaled_score_estimate": 225
+    },
+    {
+      "raw_correct": 47,
+      "scaled_score_estimate": 230
+    },
+    {
+      "raw_correct": 48,
+      "scaled_score_estimate": 235
+    },
+    {
+      "raw_correct": 49,
+      "scaled_score_estimate": 240
+    },
+    {
+      "raw_correct": 50,
+      "scaled_score_estimate": 245
+    },
+    {
+      "raw_correct": 51,
+      "scaled_score_estimate": 250
+    },
+    {
+      "raw_correct": 52,
+      "scaled_score_estimate": 255
+    },
+    {
+      "raw_correct": 53,
+      "scaled_score_estimate": 260
+    },
+    {
+      "raw_correct": 54,
+      "scaled_score_estimate": 265
+    },
+    {
+      "raw_correct": 55,
+      "scaled_score_estimate": 270
+    },
+    {
+      "raw_correct": 56,
+      "scaled_score_estimate": 275
+    },
+    {
+      "raw_correct": 57,
+      "scaled_score_estimate": 280
+    },
+    {
+      "raw_correct": 58,
+      "scaled_score_estimate": 285
+    },
+    {
+      "raw_correct": 59,
+      "scaled_score_estimate": 290
+    },
+    {
+      "raw_correct": 60,
+      "scaled_score_estimate": 295
+    },
+    {
+      "raw_correct": 61,
+      "scaled_score_estimate": 300
+    },
+    {
+      "raw_correct": 62,
+      "scaled_score_estimate": 305
+    },
+    {
+      "raw_correct": 63,
+      "scaled_score_estimate": 310
+    },
+    {
+      "raw_correct": 64,
+      "scaled_score_estimate": 315
+    },
+    {
+      "raw_correct": 65,
+      "scaled_score_estimate": 320
+    },
+    {
+      "raw_correct": 66,
+      "scaled_score_estimate": 325
+    },
+    {
+      "raw_correct": 67,
+      "scaled_score_estimate": 330
+    },
+    {
+      "raw_correct": 68,
+      "scaled_score_estimate": 335
+    },
+    {
+      "raw_correct": 69,
+      "scaled_score_estimate": 340
+    },
+    {
+      "raw_correct": 70,
+      "scaled_score_estimate": 345
+    },
+    {
+      "raw_correct": 71,
+      "scaled_score_estimate": 350
+    },
+    {
+      "raw_correct": 72,
+      "scaled_score_estimate": 355
+    },
+    {
+      "raw_correct": 73,
+      "scaled_score_estimate": 360
+    },
+    {
+      "raw_correct": 74,
+      "scaled_score_estimate": 365
+    },
+    {
+      "raw_correct": 75,
+      "scaled_score_estimate": 370
+    },
+    {
+      "raw_correct": 76,
+      "scaled_score_estimate": 375
+    },
+    {
+      "raw_correct": 77,
+      "scaled_score_estimate": 380
+    },
+    {
+      "raw_correct": 78,
+      "scaled_score_estimate": 385
+    },
+    {
+      "raw_correct": 79,
+      "scaled_score_estimate": 390
+    },
+    {
+      "raw_correct": 80,
+      "scaled_score_estimate": 395
+    },
+    {
+      "raw_correct": 81,
+      "scaled_score_estimate": 400
+    },
+    {
+      "raw_correct": 82,
+      "scaled_score_estimate": 405
+    },
+    {
+      "raw_correct": 83,
+      "scaled_score_estimate": 410
+    },
+    {
+      "raw_correct": 84,
+      "scaled_score_estimate": 415
+    },
+    {
+      "raw_correct": 85,
+      "scaled_score_estimate": 420
+    },
+    {
+      "raw_correct": 86,
+      "scaled_score_estimate": 425
+    },
+    {
+      "raw_correct": 87,
+      "scaled_score_estimate": 430
+    },
+    {
+      "raw_correct": 88,
+      "scaled_score_estimate": 435
+    },
+    {
+      "raw_correct": 89,
+      "scaled_score_estimate": 440
+    },
+    {
+      "raw_correct": 90,
+      "scaled_score_estimate": 445
+    },
+    {
+      "raw_correct": 91,
+      "scaled_score_estimate": 450
+    },
+    {
+      "raw_correct": 92,
+      "scaled_score_estimate": 455
+    },
+    {
+      "raw_correct": 93,
+      "scaled_score_estimate": 460
+    },
+    {
+      "raw_correct": 94,
+      "scaled_score_estimate": 465
+    },
+    {
+      "raw_correct": 95,
+      "scaled_score_estimate": 470
+    },
+    {
+      "raw_correct": 96,
+      "scaled_score_estimate": 475
+    },
+    {
+      "raw_correct": 97,
+      "scaled_score_estimate": 480
+    },
+    {
+      "raw_correct": 98,
+      "scaled_score_estimate": 485
+    },
+    {
+      "raw_correct": 99,
+      "scaled_score_estimate": 490
+    },
+    {
+      "raw_correct": 100,
+      "scaled_score_estimate": 495
+    }
+  ],
+  "score_range": {
+    "per_section_scaled_max": 495,
+    "per_section_scaled_min": 5,
+    "total_scaled_max": 990,
+    "total_scaled_min": 10
+  },
+  "source_urls": [
+    "https://www.ets.org/toeic/test-takers/listening-reading/scores.html",
+    "https://www.iibc-global.org/english/toeic/test/lr/guide05.html",
+    "https://www.oxfordenglishtesting.com/oaslms/resources/toeic_score_conversion_chart.pdf"
+  ],
+  "version": "2026-07-01"
+}

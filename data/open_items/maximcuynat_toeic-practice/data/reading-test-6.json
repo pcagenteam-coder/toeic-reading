@@ -1,0 +1,1792 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-08",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "B",
+          "choices": [
+            "increased",
+            "increase",
+            "increasingly",
+            "increasing"
+          ],
+          "explanation": "After the article “a” and the adjective “significant”, a noun is required: “a significant increase in output”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Ravensholm Tooling reported a significant ______ in output after the second assembly line came online."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "will have installed",
+            "installed",
+            "has installed",
+            "is installing"
+          ],
+          "explanation": "“By the time … next month” sets a deadline in the future, so the future perfect is needed. The present perfect “has installed” cannot reach forward to a future point.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the safety audit begins next month, the plant ______ all of the recommended guard rails."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "against",
+            "for",
+            "with",
+            "to"
+          ],
+          "explanation": "The verb “object” takes “to”: “objected to the proposed increase”. “Against” belongs with “protest” or “argue”, not with “object”.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The tenants association objected ______ the proposed increase in the monthly maintenance charge."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "relocate",
+            "reinforce",
+            "recalibrate",
+            "replicate"
+          ],
+          "explanation": "Readings that have drifted out of tolerance are corrected by adjusting the instrument, which is exactly what “recalibrate” means. Reinforcing or moving the machine would leave the readings wrong.",
+          "number": 104,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Because the sensor readings had drifted out of tolerance, the technician had to ______ the machine before the next production run."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "quickly",
+            "quick",
+            "quickness",
+            "quicken"
+          ],
+          "explanation": "The blank modifies the verb “responding”, so an adverb is required: “responding so quickly”.",
+          "number": 105,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The property manager praised the maintenance crew for responding so ______ to the flooding in the basement."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Despite",
+            "In spite of",
+            "Although",
+            "Owing to"
+          ],
+          "explanation": "Only “although” can introduce a full clause with its own subject and verb; “despite”, “in spite of” and “owing to” must be followed by a noun phrase.",
+          "number": 106,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the zoning application was submitted on time, the council will not rule on it before October."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "who",
+            "whose",
+            "which",
+            "whom"
+          ],
+          "explanation": "The portfolios belong to the apprentices, so the possessive relative “whose” is needed; “who” would leave “portfolios” with no link to their owners.",
+          "number": 107,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The apprentices ______ portfolios were submitted after the deadline will be assessed in the next cycle."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "will divide",
+            "is dividing",
+            "will have divided",
+            "will be divided"
+          ],
+          "explanation": "The unit does not perform the action, it receives it, so the future passive “will be divided” is required.",
+          "number": 108,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The vacant retail unit on Kellerman Street ______ into two smaller offices next spring."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "concise",
+            "concisely",
+            "conciseness",
+            "concision"
+          ],
+          "explanation": "After the linking verb “was” and the adverb “unusually”, an adjective completes the sentence: “was unusually concise”.",
+          "number": 109,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Ms. Adeyemi's report on the conveyor failure was unusually ______, running to fewer than two pages."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "more quietly",
+            "most quietly",
+            "quietly",
+            "as quietly"
+          ],
+          "explanation": "“Than” signals a comparison, so the adverb modifying “runs” must take the comparative form “more quietly”.",
+          "number": 110,
+          "tags": [
+            "comparative"
+          ],
+          "text": "The new hydraulic press runs far ______ than the model it replaced, which has reduced complaints from the neighbouring units."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "offers",
+            "offered",
+            "has offered",
+            "will offer"
+          ],
+          "explanation": "“Since 1998” connects a starting point in the past to the present, which calls for the present perfect “has offered”.",
+          "number": 111,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Hollandale Engineering ______ apprenticeships in precision machining since the plant opened in 1998."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "in",
+            "on",
+            "for",
+            "by"
+          ],
+          "explanation": "The fixed expression is “payable on receipt of”, meaning as soon as the report arrives.",
+          "number": 112,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The surveyor's fee is payable ______ receipt of the completed valuation report."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "reliable",
+            "reliably",
+            "rely",
+            "reliability"
+          ],
+          "explanation": "The object of the preposition “about” must be a noun phrase: “the reliability of the lift”.",
+          "number": 113,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Several tenants have complained about the ______ of the lift in the north tower."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "to keep",
+            "keep",
+            "keeping",
+            "kept"
+          ],
+          "explanation": "“Recommend” is followed by a gerund when no object comes between: “recommends keeping a logbook”.",
+          "number": 114,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The apprenticeship board recommends ______ a logbook of every task completed on the shop floor."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "raised",
+            "risen",
+            "arisen",
+            "aroused"
+          ],
+          "explanation": "“Rise” is intransitive, so demand itself “has risen”. “Raised” would need an object, and “arisen” is used of questions or problems coming into existence.",
+          "number": 115,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Demand for warehouse space near the port has ______ sharply since the rail terminal opened."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "is",
+            "are",
+            "were",
+            "have been"
+          ],
+          "explanation": "The subject is the singular “list”, not the plural “subcontractors” inside the prepositional phrase, so the singular “is” is correct.",
+          "number": 116,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "The list of approved subcontractors ______ reviewed by the procurement team every quarter."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "auditing",
+            "audited",
+            "audit",
+            "auditor"
+          ],
+          "explanation": "A person is appointed, not a procedure: “an external auditor to review the system”. “Audit” names the review itself and cannot be given an appointment.",
+          "number": 117,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Vessikko Precision has appointed an external ______ to review its quality management system."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "opened",
+            "has opened",
+            "opens",
+            "had opened"
+          ],
+          "explanation": "A fixed point on a published timetable takes the present simple, matching “closes” later in the sentence: “opens next Monday”.",
+          "number": 118,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Enrolment for the autumn term ______ next Monday and closes on 30 September."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "who",
+            "which",
+            "whose",
+            "whom"
+          ],
+          "explanation": "The relative pronoun is the subject of “designed” and refers to a person, so “who” is required; “whom” can only serve as an object.",
+          "number": 119,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The engineer ______ designed the new extraction system will lead Thursday's training session."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "confusing",
+            "confused",
+            "confuse",
+            "confusion"
+          ],
+          "explanation": "The delegates experience the feeling, so the past participle “confused” is used; “confusing” would describe the seminar rather than the people at it.",
+          "number": 120,
+          "tags": [
+            "participle-adjective"
+          ],
+          "text": "Delegates left the seminar on the revised building regulations feeling thoroughly ______."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "manage",
+            "manageable",
+            "management",
+            "managerial"
+          ],
+          "explanation": "After the possessive “the site team's”, a noun is needed: “the site team's management of the shutdown”.",
+          "number": 121,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Board members praised the site team's ______ of the shutdown, which finished a full day early."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "until",
+            "in",
+            "on",
+            "by"
+          ],
+          "explanation": "“By” marks the deadline before which the work will be complete. “Until” would describe a period continuing up to that point, which does not fit a verb such as “finish”.",
+          "number": 122,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The refurbishment of the north wing is scheduled to finish ______ the end of the second quarter."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "nor",
+            "or",
+            "and",
+            "but"
+          ],
+          "explanation": "“Neither” is paired with “nor”: “neither the ventilation upgrade nor the lighting replacement”.",
+          "number": 123,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "Neither the ventilation upgrade ______ the lighting replacement was included in the original budget."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "the better",
+            "the best",
+            "better",
+            "as good"
+          ],
+          "explanation": "Three sites are being compared, so the superlative is required; “the better” would be used only of two.",
+          "number": 124,
+          "tags": [
+            "comparative"
+          ],
+          "text": "Of the three sites shortlisted for the depot, the one beside the motorway offers ______ access for heavy vehicles."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "notice",
+            "noticing",
+            "noticeable",
+            "noticeably"
+          ],
+          "explanation": "The blank modifies the noun “improvement”, so an adjective is needed: “a noticeable improvement”. The adverb “noticeably” could only modify a verb or an adjective.",
+          "number": 125,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Attendance at the evening courses has shown a ______ improvement since the campus shuttle was introduced."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "themselves",
+            "them",
+            "their",
+            "theirs"
+          ],
+          "explanation": "The emphatic reflexive “themselves” stresses that the tenants act without help; the object pronoun “them” would have to refer to somebody other than the subject.",
+          "number": 126,
+          "tags": [
+            "pronoun"
+          ],
+          "text": "Tenants who wish to renew early should submit the form ______ rather than send it through the letting agent."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "inspects",
+            "has inspected",
+            "will inspect",
+            "was inspecting"
+          ],
+          "explanation": "The past continuous describes the activity already under way when the sudden event interrupted it: “was inspecting … when the power failed”.",
+          "number": 127,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "The quality team ______ the packing line when the power to the building failed."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "refusal",
+            "reluctance",
+            "obstacle",
+            "reduction"
+          ],
+          "explanation": "Something standing in the way of a plan is an “obstacle to” it. A shortage of staff is a condition, not an attitude, so it can be neither a refusal nor a reluctance.",
+          "number": 128,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "A shortage of qualified fitters is the main ______ to expanding the night shift."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "accessible",
+            "access",
+            "accessibly",
+            "accessibility"
+          ],
+          "explanation": "After the modal “may”, the base form of the verb is required: “may access the distribution boards”.",
+          "number": 129,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Only qualified electricians may ______ the distribution boards in the plant room."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "has",
+            "is",
+            "was",
+            "has been"
+          ],
+          "explanation": "The plot receives the action, and “since” runs the situation from a past point up to now, so the present perfect passive “has been used” is required.",
+          "number": 130,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The vacant plot behind the depot ______ used for staff parking since the lease was renegotiated."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "NOTICE TO RESIDENTS\nLift modernisation — Marden Court, north tower\n\nWork to replace the building's two passenger lifts will begin on Monday 6 April and is {{131}} to take eleven weeks.\n\nThroughout the programme only one lift will be in service at any time, so waiting times will be longer than usual. Residents are asked to allow extra time {{132}} the morning rush, particularly between 8 A.M. and 9 A.M.\n\nThe goods lift will remain available for deliveries and house moves, but it must be booked at the concierge desk at least twenty-four hours ahead. {{133}} Bookings are taken between 7 A.M. and 7 P.M., seven days a week.\n\nWe recognise that the disruption is considerable. The new cars will be quieter, faster and step-free at every landing, and by the end of June both lifts {{134}} back in service. The service charge will not increase as a result of the work.\n\nKestrel Property Services",
+              "label": "Questions 131-134 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "expecting",
+                "expects",
+                "expected",
+                "expectation"
+              ],
+              "explanation": "“Is expected to take” is a passive built on the past participle; the active “expects” would make the building work do the expecting.",
+              "number": 131,
+              "tags": [
+                "passive-voice",
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "during",
+                "while",
+                "since",
+                "among"
+              ],
+              "explanation": "The blank is followed by the noun phrase “the morning rush”, so the preposition “during” is needed; “while” would require a clause with its own verb.",
+              "number": 132,
+              "tags": [
+                "preposition"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Large items may be carried in the passenger lift instead.",
+                "The concierge desk will be closed for the duration of the programme.",
+                "Both passenger lifts will run normally at weekends.",
+                "Requests made on the day of a move cannot normally be accommodated."
+              ],
+              "explanation": "The sentence before it sets a twenty-four-hour booking rule, so what follows naturally states the consequence of giving no notice. A closed concierge desk would contradict the booking hours given in the next sentence.",
+              "number": 133,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "are being",
+                "will be",
+                "have been",
+                "were"
+              ],
+              "explanation": "“By the end of June” points to a date still ahead, so the future “will be” is required; “have been” would place the return to service in the past.",
+              "number": 134,
+              "tags": [
+                "verb-tense"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "To: Production supervisors\nFrom: Dilnoza Karimova, Learning and Development\nDate: 12 February\nSubject: Places on the March safety-leadership course\n\nEight places on the two-day safety-leadership course have been reserved for our site, and every place must be filled by 26 February. {{135}} Nominations should therefore reach me by the end of next week.\n\nThe course is run at the Ferrow Institute and {{136}} both classroom sessions and a supervised walk-round of a working plant. Anyone who finishes it receives a certificate recognised across the sector.\n\nTravel and accommodation are arranged centrally, so please do not book tickets yourself. Supervisors are reminded {{137}} their team rotas before putting a name forward, as the two days are consecutive.\n\nIf more than eight names come in, priority {{138}} to supervisors who have not attended external training in the past two years. The $640 fee is met by the departmental budget.",
+              "label": "Questions 135-138 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "The course has been postponed until the autumn.",
+                "The institute needs a fortnight's notice to confirm each name.",
+                "Places are allocated on the day by the course tutors.",
+                "The fee has not yet been agreed with the provider."
+              ],
+              "explanation": "“Therefore” shows that this sentence supplies the reason for an internal deadline earlier than the institute's, and only the fortnight of notice does that. The fee is stated at the end of the message, so it cannot still be unsettled.",
+              "number": 135,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "including",
+                "include",
+                "to include",
+                "includes"
+              ],
+              "explanation": "The verb shares the singular subject “The course” and balances “is run”, so the third-person form “includes” is needed.",
+              "number": 136,
+              "tags": [
+                "subject-verb-agreement"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "to check",
+                "checking",
+                "check",
+                "checked"
+              ],
+              "explanation": "“Remind” is followed by an infinitive of purpose: “supervisors are reminded to check their team rotas”.",
+              "number": 137,
+              "tags": [
+                "gerund-infinitive"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "will give",
+                "has given",
+                "will be given",
+                "is giving"
+              ],
+              "explanation": "Priority is something granted rather than something that acts, so the future passive “will be given” fits the conditional clause about extra names.",
+              "number": 138,
+              "tags": [
+                "passive-voice"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\n\nTalvern Drivetrain opens rebuilt foundry in Gliwice\n\nGLIWICE, 3 May — Talvern Drivetrain today opened its rebuilt light-alloy foundry in Gliwice, eighteen months after production was transferred to a temporary site so that the original works could be demolished. The new plant is {{139}} larger than the one it replaces and will employ 210 people, forty more than before.\n\nThe rebuild cost $46 million and puts two electric melting furnaces in place of the gas units used previously. Talvern says the change will cut energy consumption per tonne by roughly a third {{140}} shortening the time needed to switch between alloys.\n\n“We could have rebuilt what we had,” said plant director Sunniva Aarø. “We chose instead to design a foundry {{141}} will still be competitive in ten years' time.”\n\nOutput will build up over the summer, with full production expected in September. {{142}}",
+              "label": "Questions 139-142 refer to the following press release.",
+              "type": "press release"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "as",
+                "very",
+                "much more",
+                "considerably"
+              ],
+              "explanation": "A comparative adjective is intensified by an adverb such as “considerably”: “considerably larger than”. “Very” cannot modify “larger”, and “much more” cannot precede a comparative — with “large” the intensified comparative is “much larger”.",
+              "number": 139,
+              "tags": [
+                "comparative"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "despite",
+                "because of",
+                "while",
+                "so that"
+              ],
+              "explanation": "The two effects happen together, and “while” introduces the second one as a simultaneous gain. “Despite” would set the two in opposition, and “so that” cannot be followed by an -ing form.",
+              "number": 140,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "what",
+                "that",
+                "who",
+                "where"
+              ],
+              "explanation": "The relative pronoun is the subject of “will still be competitive” and refers to the thing “foundry”, so “that” is used; “what” cannot follow the noun it describes.",
+              "number": 141,
+              "tags": [
+                "relative-clause"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Journalists may arrange a site visit through the company's press office.",
+                "The gas furnaces will be returned to service once demand recovers.",
+                "Recruitment for the forty additional posts has been suspended.",
+                "Talvern has not yet decided where the new foundry will be built."
+              ],
+              "explanation": "With the production timetable given, the release closes in the standard way, by telling reporters how to visit. Each of the other sentences contradicts the article: the gas units were replaced, forty posts are being added, and the foundry has already opened.",
+              "number": 142,
+              "tags": [
+                "sentence-insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All staff, Alderway House\nFrom: Facilities Management\nDate: 19 October\nSubject: Move to Unit 7, Ashgrove Park\n\nOur lease on Alderway House ends on 31 January and will not be renewed. From 3 February we will occupy the ground floor of Unit 7, Ashgrove Park, which gives us 1,400 square metres on a single level. For the first time {{143}} of the four departments will have a meeting room of its own.\n\n{{144}} A shuttle bus will run from the station to the park every fifteen minutes between 7:30 A.M. and 9:30 A.M., and again from 4:30 P.M.\n\nCrates will be delivered to each floor in the third week of January. Personal items left in the building after the final Friday {{145}} be recovered, since the keys are handed to the landlord the following morning.\n\nFloor plans are on the intranet. Please send seating requests to me by 15 November so that they can be taken into account {{146}} the layout is fixed.",
+              "label": "Questions 143-146 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "each",
+                "all",
+                "both",
+                "every"
+              ],
+              "explanation": "“Each of the four departments” takes the singular possessive “its own”; “all” would require “their own”, “both” refers to two, and “every” cannot be followed by “of”.",
+              "number": 143,
+              "tags": [
+                "quantifier"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Parking at Alderway House will be reserved for visitors from November.",
+                "The new site is further from the station, and we know this worries many of you.",
+                "Ashgrove Park is served by three underground lines and a tram.",
+                "Staff who prefer to stay at Alderway House may apply to do so."
+              ],
+              "explanation": "The sentence that follows announces a shuttle from the station, so what comes before it must raise the travel problem the shuttle solves. Staying at Alderway House is impossible once the lease ends.",
+              "number": 144,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "must not",
+                "need not",
+                "cannot",
+                "should not"
+              ],
+              "explanation": "The clause after “since” explains that the keys are gone, so retrieval is impossible rather than forbidden: “cannot be recovered”.",
+              "number": 145,
+              "tags": [
+                "modal"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "during",
+                "in advance of",
+                "as soon as",
+                "before"
+              ],
+              "explanation": "Requests are useful only while the plan can still change, so “before the layout is fixed” is the deadline meant. “In advance of” and “during” cannot take the clause that follows.",
+              "number": 146,
+              "tags": [
+                "conjunction"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All production supervisors\nFrom: Ingrid Halvorsen, Plant Operations Manager\nDate: 12 March\nSubject: Calibration of line 4\n\nThe optical inspection unit on line 4 will be recalibrated on Thursday 19 March. Engineers from Kesselring Systems arrive at 6:00 A.M. and expect the work to take about seven hours, so line 4 will not run that day.\n\nPlease move your Thursday output targets for line 4 to Friday and Saturday. Overtime for Saturday has been approved; send me the names by Monday 16 March so that the canteen can be staffed.\n\nLine 3 keeps its normal schedule. However, the calibration rig draws on the same compressed-air supply, so line 3 operators may notice slightly slower tool cycling between 9:00 A.M. and noon.\n\nSupervisors do not need to be present for the calibration itself, but I will need one person from each shift to sign off the first inspection run on Friday morning.",
+              "label": "Questions 147-148 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To introduce a new inspection procedure",
+                "To inform supervisors that a line will be out of service",
+                "To report the results of a recent calibration",
+                "To announce a permanent change to shift hours"
+              ],
+              "explanation": "The memo exists to tell supervisors that “line 4 will not run that day” and to have them move their targets accordingly. The calibration is the cause of the shutdown, not a procedure the supervisors are being taught.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why was the memo written?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It will be replaced during the calibration.",
+                "It is monitored by the visiting engineers.",
+                "It serves line 3 only.",
+                "It cannot fully serve two demands at once."
+              ],
+              "explanation": "Line 3 tools are expected to cycle more slowly precisely while the calibration rig is drawing on the same supply, which implies its capacity is stretched. Nothing indicates the supply itself is being changed or watched by the contractor.",
+              "number": 148,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the compressed-air supply?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Petra Wojcik (10:14 A.M.)\nThe tenants in 6B have reported that the balcony door will not lock. Is there anyone on the approved list who could come today?\n\nDaniel Okonkwo (10:16 A.M.)\nVale Hardware usually can, but they charge a call-out fee for anything booked after 11:00. Shall I ring them now?\n\nPetra Wojcik (10:18 A.M.)\nPlease do. It is a ground-floor unit, so I would rather not leave it open overnight.\n\nDaniel Okonkwo (10:23 A.M.)\nBooked for 12:40. The fee applied, but they waived it because we have three buildings on their contract.\n\nPetra Wojcik (10:25 A.M.)\nThat is the third balcony door in that block this year. Let us have the whole row looked at before the winter.\n\nDaniel Okonkwo (10:26 A.M.)\nI will ask them to quote for it while they are on site.",
+              "label": "Questions 149-150 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The unit can be reached from the street.",
+                "The tenants are moving out tomorrow.",
+                "The call-out fee rises after 11:00.",
+                "An inspection of the block is due."
+              ],
+              "explanation": "She links the urgency to the flat being on the ground floor and to not wanting it left open overnight, which points to the risk of entry from outside. The fee is Mr. Okonkwo's concern, not hers.",
+              "number": 149,
+              "tags": [
+                "inference"
+              ],
+              "text": "Why does Ms. Wojcik want the repair carried out the same day?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "He will negotiate a lower call-out fee.",
+                "He will ask the tenants to approve the cost.",
+                "He will obtain a price for checking the other doors.",
+                "He will arrange a second visit for the winter."
+              ],
+              "explanation": "“It” refers back to Ms. Wojcik's request to have the whole row of balcony doors looked at, so he means a price for that wider job. The call-out fee has already been waived.",
+              "number": 150,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:26 A.M., what does Mr. Okonkwo most likely mean when he writes, “I will ask them to quote for it while they are on site”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "ASHGROVE TECHNICAL INSTITUTE\nEvening certificate programmes — autumn intake\n\nSix courses, all taught on our Riverside campus between 6:00 P.M. and 9:00 P.M.\n\nIndustrial Maintenance — Mondays, 14 weeks — $980\nQuality Systems Auditing — Tuesdays, 10 weeks — $720\nWarehouse and Inventory Control — Tuesdays, 12 weeks — $760\nTechnical Drawing (CAD) — Wednesdays, 16 weeks — $1,140\nWorkplace Health and Safety — Thursdays, 8 weeks — $540\nProject Coordination — Thursdays, 12 weeks — $860\n\nFees cover all materials and the final examination. Learners whose employer pays the fee directly are invoiced when the course ends rather than in advance.\n\nEvery course leads to a certificate recognised by the regional manufacturers' association, and class sizes are capped at eighteen.\n\nRegistration closes on 5 September. Applicants who register before 22 August pay no administration charge; after that date a charge of $45 applies.\n\nAsk about our Saturday laboratory sessions, open free of charge to anyone enrolled in a Wednesday course.",
+              "label": "Questions 151-153 refer to the following advertisement.",
+              "type": "advertisement"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "Industrial Maintenance",
+                "Project Coordination",
+                "Workplace Health and Safety",
+                "Technical Drawing (CAD)"
+              ],
+              "explanation": "Technical Drawing runs 16 weeks, ahead of Industrial Maintenance at 14. Project Coordination and Workplace Health and Safety are shorter still, at 12 and 8 weeks.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "Which course runs for the greatest number of weeks?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "They are billed once the course has finished.",
+                "They pay a reduced rate.",
+                "They must register before 22 August.",
+                "They are exempt from the final examination."
+              ],
+              "explanation": "“invoiced when the course ends rather than in advance”. The 22 August date concerns the administration charge and applies to everyone.",
+              "number": 152,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about learners whose fees are paid by an employer?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Anyone registering before 22 August",
+                "Students of Technical Drawing (CAD)",
+                "Members of the manufacturers' association",
+                "Learners sponsored by an employer"
+              ],
+              "explanation": "The sessions are open to anyone enrolled in a Wednesday course, and the timetable shows that Technical Drawing is the only course taught on Wednesdays.",
+              "number": 153,
+              "tags": [
+                "inference"
+              ],
+              "text": "Who may attend the Saturday laboratory sessions without paying?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "To: Beatriz Salgado <b.salgado@northfieldlabs.example>\nFrom: Karolina Brzezinska <k.brzezinska@harborstone.example>\nDate: 3 October\nSubject: Lift modernisation — Fenwick Court\n\nDear Ms. Salgado,\n\nBoth passenger lifts at Fenwick Court are original to the 1978 building and have become steadily more expensive to maintain. The owners have now released funds to replace the drive systems and controllers in both cars.\n\nWork begins on 2 November and will run for roughly nine weeks. The contractor takes one lift out of service at a time, so a single car stays available throughout. During the changeover week of 21 December, however, both cars will be down for four days.\n\nBecause your laboratory occupies the fifth and sixth floors, this will be more disruptive for you than for our ground-floor tenants. If you would like to bring deliveries of heavy equipment forward, the goods entrance on Marlow Lane can be reserved for your exclusive use on any weekday in October at no cost.\n\nPlease let me know by 17 October whether you wish to book it.\n\nKind regards,\n\nKarolina Brzezinska\nBuilding Manager, Harborstone Property Services",
+              "label": "Questions 154-156 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To announce an increase in service charges",
+                "To confirm that a lease has been renewed",
+                "To offer the use of a facility at no charge",
+                "To request payment for completed repairs"
+              ],
+              "explanation": "Alongside the notice of the works, Ms. Brzezinska offers exclusive use of the Marlow Lane goods entrance “at no cost” and asks for a decision by 17 October.",
+              "number": 154,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is one purpose of the e-mail?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Nine weeks",
+                "Four weeks",
+                "One month",
+                "Four days"
+              ],
+              "explanation": "One car remains in service throughout except during the changeover week, when “both cars will be down for four days”. Nine weeks is the length of the whole project.",
+              "number": 155,
+              "tags": [
+                "detail"
+              ],
+              "text": "How long will the building be left with no working lift?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "published",
+                "made available",
+                "let go of",
+                "loosened"
+              ],
+              "explanation": "The owners have put money at the manager's disposal for the work, so “released funds” means the funds have been made available. “Published” fits a different sense of the verb, used of announcements rather than money.",
+              "number": 156,
+              "tags": [
+                "vocabulary"
+              ],
+              "text": "In paragraph 1, the word “released” is closest in meaning to"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "Small Manufacturers Share the Cost of Testing\n\nRIVERTON (14 May) — Nineteen precision-parts makers in the Riverton industrial district have formed a cooperative to buy testing equipment that none of them could justify on its own.\n\nThe group's first purchase, a computed-tomography scanner installed in a leased unit on Kilner Road, allows a finished component to be inspected internally without being cut open. [1] Members book time on the machine through a shared calendar and are billed by the hour.\n\n“We were each sending parts to a laboratory two hundred kilometres away and waiting nine days for a report,” said Adaeze Nwachukwu, who runs a twelve-person machine shop and chairs the cooperative. “Now it is the same afternoon.” [2]\n\nMembership costs $4,000 a year plus usage fees. [3] The cooperative estimates that a member sending forty components a year for inspection recovers the subscription within seven months.\n\n[4] A second unit, for surface-roughness measurement, is expected before the end of the year, and the group has opened discussions with the technical institute about using the scanner for student projects two evenings a week.",
+              "label": "Questions 157-159 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "A shared arrangement that gives small firms access to equipment",
+                "A merger of nineteen manufacturing companies",
+                "A testing laboratory that has opened a second branch",
+                "A training partnership between industry and a college"
+              ],
+              "explanation": "The whole piece describes a cooperative formed so that member firms can use a scanner none of them could buy alone. The talks with the technical institute are one late detail, not the subject.",
+              "number": 157,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the article mainly about?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The price charged by the outside laboratory",
+                "The number of components it produces",
+                "The time needed to obtain test results",
+                "The size of its workforce"
+              ],
+              "explanation": "She contrasts waiting nine days for a report with getting one “the same afternoon”. She mentions the size of her shop only to identify herself, and says nothing about its output or about laboratory prices.",
+              "number": 158,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to Ms. Nwachukwu, what has changed for her business?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "The sentence introduces further plans, and only at [4] is it followed by them: a second measuring unit and talks with the technical institute. At [3] it would interrupt the run of figures about membership cost and payback.",
+              "number": 159,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong?\n\n“Its ambitions do not stop with the scanner.”"
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Tobias Lindqvist (8:02 A.M.)\nThe crane operator reads 14 metres per second on the mast anemometer. Our limit for lifting the roof panels is 12.\n\nRosa Mendieta (8:04 A.M.)\nThen the panels do not go up today. What else can the team get on with?\n\nTobias Lindqvist (8:06 A.M.)\nGround-floor blockwork, or they can start setting out the plant room. Neither needs the crane.\n\nRosa Mendieta (8:07 A.M.)\nSet out the plant room. The blockwork gang is not on site until Wednesday and I would rather not have two trades in the same bay.\n\nTobias Lindqvist (8:09 A.M.)\nUnderstood. One thing — the plant-room drawings in the site office are revision C. Friday's e-mail mentioned a revision D.\n\nRosa Mendieta (8:12 A.M.)\nDo not touch anything until I send it. Give me ten minutes.\n\nTobias Lindqvist (8:13 A.M.)\nWill do. I will have them clear the delivery bay in the meantime.",
+              "label": "Questions 160-162 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "The crane operator is unavailable.",
+                "Conditions on site exceed a safety limit.",
+                "The panels have not been delivered.",
+                "Another trade is working in the same bay."
+              ],
+              "explanation": "The wind reads 14 metres per second against a lifting limit of 12. The blockwork gang is not on site at all, so no other trade is in the way.",
+              "number": 160,
+              "tags": [
+                "detail"
+              ],
+              "text": "Why will the roof panels not be installed?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "She wants the crane shut down for the day.",
+                "She intends to come to the site herself.",
+                "She has not yet decided where the plant room goes.",
+                "Work should wait for the current version of the drawings."
+              ],
+              "explanation": "“It” is the revision D drawing Mr. Lindqvist has just said the site office is missing, so she is holding the work until the up-to-date sheet arrives. The crane is already standing idle for another reason.",
+              "number": 161,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 8:12 A.M., what does Ms. Mendieta most likely mean when she writes, “Do not touch anything until I send it”?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It will not arrive until later in the week.",
+                "It has completed its part of the job.",
+                "It is working from an outdated drawing.",
+                "It needs the crane to continue."
+              ],
+              "explanation": "“The blockwork gang is not on site until Wednesday” is her reason for choosing the plant room instead. The drawing problem concerns the plant room, not the blockwork.",
+              "number": 162,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Mendieta indicate about the blockwork gang?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "NOTICE TO ALL OCCUPIERS — Wharfedale Business Park\nResurfacing of the north car park\n\nThe north car park will be resurfaced between Monday 6 April and Friday 17 April. For those two weeks it is closed completely, including the loading bays behind Units 9 to 14.\n\nAlternative arrangements\n\nStaff parking: the overflow area on Tannery Lane opens at 6:30 A.M. Permits are not required, but please display your unit number on the dashboard.\n\nDeliveries: use the south gate. The barrier is staffed from 7:00 A.M. to 6:00 P.M. Vehicles over 7.5 tonnes must book a slot with the estate office at least one working day ahead.\n\nWaste collection: bins move to the paved area beside Unit 3 for the duration of the work.\n\nThe cycle racks are unaffected.\n\nThe contractor works until 8:00 P.M. on weekdays and does not work at weekends. Noise will be heaviest during the first three days, when the existing surface is broken out.\n\nQuestions and complaints: estate office, extension 214.",
+              "label": "Questions 163-165 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "Booking ahead for a heavy vehicle",
+                "Entering by the south gate to deliver",
+                "Holding a permit to park on Tannery Lane",
+                "Showing a unit number on the dashboard"
+              ],
+              "explanation": "The notice states plainly that permits are not required for the overflow area, although a unit number must still be displayed. Booking and the south gate are both stated requirements.",
+              "number": 163,
+              "tags": [
+                "not-question"
+              ],
+              "text": "According to the notice, what is NOT required of drivers during the work?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "At weekends",
+                "At the start of the closure",
+                "After 6:00 P.M. each day",
+                "In the final week"
+              ],
+              "explanation": "“Noise will be heaviest during the first three days”, when the old surface is broken out. No work at all takes place at weekends.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "When is the work expected to be at its noisiest?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "They will have to take deliveries elsewhere in April.",
+                "They will lose access to their premises.",
+                "They must move their own waste bins.",
+                "They are excused from the parking arrangements."
+              ],
+              "explanation": "Their loading bays are inside the closed area, so for those two weeks their goods must come in through the south gate like everyone else's. Only the car park closes, not the units.",
+              "number": 165,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the businesses in Units 9 to 14?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "MAINTENANCE ENGINEER (NIGHT SHIFT)\nSolvarn Components — Ostrava plant\n\nSolvarn Components moulds and finishes technical plastics for the appliance industry. Our Ostrava plant runs continuously, and we are recruiting a maintenance engineer for the night shift.\n\nThe role\nYou will keep sixteen injection-moulding machines and their ancillary equipment running between 10:00 P.M. and 6:00 A.M., four nights on and four nights off. Roughly two thirds of the work is planned maintenance; the rest is breakdown response.\n\nEssential\n- A recognised qualification in mechanical or electrical engineering\n- At least three years in a manufacturing environment, ideally with hydraulic systems\n- Willingness to be first responder to alarms during your shift\n\nDesirable\n- Experience of tool changes on machines above 300 tonnes\n- Confidence reading engineering drawings in English\n\nWhat we offer\nSalary from $61,000, reviewed after six months. Night allowance of 18%. Four weeks of paid training at our Gdansk plant before you join the line in Ostrava. The company funds one professional course a year.\n\nSend a CV to careers@solvarn.example. We do not accept applications submitted through agencies.",
+              "label": "Questions 166-169 refer to the following job posting.",
+              "type": "job posting"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "It changes every six months.",
+                "It includes daytime hours at weekends.",
+                "It is shared between two engineers.",
+                "It alternates blocks of four nights with time off."
+              ],
+              "explanation": "“four nights on and four nights off” describes the rota. The six-month point in the posting is the salary review, not a change of hours.",
+              "number": 166,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the working pattern?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Experience with machines above 300 tonnes",
+                "Fluency in more than one language",
+                "Three years of work in manufacturing",
+                "A qualification in production planning"
+              ],
+              "explanation": "The essential list asks for “at least three years in a manufacturing environment”. Large-tool experience appears under Desirable, and only reading drawings in English is mentioned, not fluency in several languages.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is an essential requirement of the position?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Train at another company site",
+                "Complete a funded professional course",
+                "Take part in a six-month review",
+                "Visit the company's customers"
+              ],
+              "explanation": "“Four weeks of paid training at our Gdansk plant before you join the line in Ostrava.” The funded course is an annual benefit once employed.",
+              "number": 168,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will the successful candidate do before starting work in Ostrava?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "To identify who will conduct the interviews",
+                "To make clear that candidates should apply directly",
+                "To explain a delay in filling the position",
+                "To indicate that a recruitment fee is payable"
+              ],
+              "explanation": "The sentence follows the instruction to send a CV to the company address, so ruling out agency submissions tells applicants to come straight to Solvarn. Refusing such applications also rules out any fee rather than announcing one.",
+              "number": 169,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does the posting mention agencies?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "CANDIDATE INFORMATION — Certified Lifting Supervisor (Level 2)\nHalberd Training Centre\n\nAssessment takes place on the final afternoon of the course and has three parts.\n\nWritten paper (45 minutes). Forty multiple-choice items on load calculation, sling selection and exclusion zones. The pass mark is 30.\n\nPractical observation (about 90 minutes per candidate). You will plan and direct two lifts using the yard gantry. An assessor records whether each step of the plan is briefed to the team before the lift begins.\n\nOral review (15 minutes). The assessor discusses your decisions with you. This part carries no marks, but a candidate who cannot account for a choice made during the practical may be asked to repeat that lift.\n\nResults are issued within ten working days. A candidate who fails one part only may re-sit that part once, free of charge, within six months. A candidate who fails two or more parts must repeat the whole course at the standard fee.\n\nBring photographic identification and your own safety footwear. All other equipment is provided.",
+              "label": "Questions 170-171 refer to the following information.",
+              "type": "information"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "It lasts ninety minutes.",
+                "It takes place before the practical.",
+                "It carries fewer marks than the other parts.",
+                "It does not count towards the result."
+              ],
+              "explanation": "“This part carries no marks” — it can only send a candidate back to repeat a lift. The 90 minutes belongs to the practical observation.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the oral review?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The result will be issued sooner than usual.",
+                "Only the written paper has to be taken again.",
+                "A further payment will be necessary.",
+                "A wait of six months is required."
+              ],
+              "explanation": "Failing two parts means repeating the whole course “at the standard fee”; the free re-sit is reserved for a candidate who fails one part only.",
+              "number": 171,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about a candidate who fails both the written paper and the practical observation?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "https://www.calderhouse-lettings.example/landlords\n\nCalderhouse Lettings — services for landlords\nHome | Properties | Landlords | Tenants | Contact\n\nWe have managed homes across the county since 1996 and look after 1,400 of them today. Choose the level of service that suits you.\n\nLet Only — 8% of the first year's rent\nWe advertise the property, hold the viewings, take up references and draw up the tenancy agreement. From then on you deal with the tenant yourself.\n\nManaged — 11% of the rent, collected monthly\nEverything in Let Only, plus rent collection, quarterly inspections and a 24-hour repairs line. Contractors are instructed by us; you approve anything above $400.\n\nManaged Plus — 14% of the rent, collected monthly\nEverything in Managed, plus rent guarantee insurance and annual safety certificates at no extra charge.\n\nLandlords who add a property before 30 June pay no set-up fee on any plan. After that date a set-up fee of $220 applies.\n\nInspection reports include dated photographs and reach your online account within two working days of the visit. We send you a text message as soon as a report is ready.\n\nNot sure which plan fits? Call 555 0142 and ask for the landlord team.",
+              "label": "Questions 172-175 refer to the following web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "It includes quarterly inspections.",
+                "The landlord deals with the tenant after the letting.",
+                "It costs 11% of the rent.",
+                "It provides annual safety certificates."
+              ],
+              "explanation": "“From then on you deal with the tenant yourself.” Inspections belong to Managed and safety certificates to Managed Plus.",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the Let Only service?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Rent guarantee insurance",
+                "A 24-hour repairs line",
+                "Reference checks on applicants",
+                "Monthly collection of the rent"
+              ],
+              "explanation": "Managed Plus is described as everything in Managed plus rent guarantee insurance and safety certificates. The repairs line and rent collection are already part of Managed.",
+              "number": 173,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Managed Plus include that Managed does not?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Before the property is advertised",
+                "Before a tenancy agreement is drawn up",
+                "Before an inspection is carried out",
+                "Before repair work over a certain value is ordered"
+              ],
+              "explanation": "The agency instructs contractors itself, “you approve anything above $400”. Advertising, agreements and inspections are all handled by the agency without a separate approval.",
+              "number": 174,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the web page, when must a landlord give approval?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A printed copy of the tenancy agreement",
+                "A telephone call from the contractor",
+                "A message saying the report is ready",
+                "A refund of the set-up fee"
+              ],
+              "explanation": "The report goes to the online account within two working days and “we send you a text message as soon as a report is ready”. The set-up fee is waived before 30 June, never refunded afterwards.",
+              "number": 175,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does a landlord receive after a property inspection?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\nContact: Ingrid Halvorsen, Communications Office — press@aalstrup.example\n\nAALSTRUP COMPONENTS TO OPEN THIRD PLANT AT RIVERMOUTH\n\n11 January — Aalstrup Components announced today that its new plant at the Rivermouth Industrial Park will begin production on 2 March. The 14,000-square-metre facility will manufacture aluminium housings for electric motors, a line currently produced only at the company's plant in Sandvik.\n\nThe plant will employ 130 people at opening, rising to about 200 by the end of next year. Recruitment for machine operators and quality inspectors is already under way. A further round, for maintenance engineers, opens in April.\n\nAalstrup will hold an open house at the site on Friday 14 February, from 10:00 to 16:00. Visitors must register by 7 February. Tours of the assembly floor will be led by plant manager Ifeoma Balogun.\n\nAalstrup Components has supplied the motor industry since 1974 and employs 900 people across three sites.",
+              "label": "Questions 176-180 refer to the following press release and e-mail.",
+              "type": "press release"
+            },
+            {
+              "content": "To: press@aalstrup.example\nFrom: p.rezende@rivermouthtech.example\nDate: 10 February\nSubject: Open house — apprentice group\n\nDear Ms. Halvorsen,\n\nI coordinate the technical apprenticeship programme at Rivermouth Technical College, two kilometres from your new site. I would like to bring fourteen second-year apprentices to the open house on the 14th. They already spend three days a week in workshops of their own, and seeing a plant at this stage would be worth a term of classroom work.\n\nTwo requests. First, could Ms. Balogun give the group fifteen minutes after the floor tour? The apprentices have prepared questions about how a new line is commissioned. Second, could you confirm whether the round of hiring you mention for April will consider candidates who finish our programme in June? Six of the fourteen are in that position.\n\nWe can arrive at whatever hour suits you.\n\nKind regards,\n\nPaulo Rezende\nRivermouth Technical College",
+              "label": "Questions 176-180 refer to the following press release and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To recruit maintenance engineers",
+                "To announce the opening of a manufacturing site",
+                "To report the company's results for the year",
+                "To invite suppliers to submit bids"
+              ],
+              "explanation": "The headline and first paragraph announce that a new plant at Rivermouth will begin production on 2 March. Hiring is mentioned, but only as a consequence of the opening.",
+              "number": 176,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the press release?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "They are currently made at only one Aalstrup plant.",
+                "They will replace an older product line.",
+                "They are produced for a single customer.",
+                "They were designed at the Rivermouth site."
+              ],
+              "explanation": "“a line currently produced only at the company's plant in Sandvik”. Nothing says the product replaces anything or that Rivermouth designed it.",
+              "number": 177,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the aluminium housings?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It was written before the press release appeared.",
+                "It was sent to the wrong department.",
+                "It arrived after the date set for registration.",
+                "It repeats a request he made by telephone."
+              ],
+              "explanation": "The release asks visitors to register by 7 February, and the e-mail is dated 10 February. The open house itself has not yet taken place, so the message is late rather than too early.",
+              "number": 178,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What is suggested about Mr. Rezende's e-mail?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Communications officer",
+                "Plant manager",
+                "Quality inspector",
+                "Maintenance engineer"
+              ],
+              "explanation": "He asks for fifteen minutes with Ms. Balogun, whom the press release identifies as the plant manager leading the assembly-floor tours.",
+              "number": 179,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What position is held by the person Mr. Rezende wants to address his group?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The address of the Rivermouth site",
+                "The maximum size of a tour group",
+                "Whether the open house will be repeated",
+                "Whether his apprentices may apply in April"
+              ],
+              "explanation": "His second request concerns the April round of hiring and whether it is open to candidates finishing his programme in June.",
+              "number": 180,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Rezende ask Ms. Halvorsen to confirm?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "LARKSPUR PROFESSIONAL INSTITUTE — Autumn evening programme\n\nCertificate in Project Scheduling — 8 weeks, Tuesdays 18:30-21:00 — $640\nCertificate in Industrial Quality Systems — 10 weeks, Wednesdays 18:00-20:30 — $780\nCertificate in Contract Negotiation — 6 weeks, Thursdays 18:30-21:00 — $520\nDiploma in Plant Maintenance Management — 16 weeks, Mondays and Thursdays 18:00-21:00 — $1,950\n\nEvery certificate fee covers the examination, printed course notes and twelve months' access to our online library. The diploma adds two Saturday workshops in our machine hall.\n\nAn employer registering three or more members of staff on the same course pays 15 percent less for each place.\n\nCourses beginning on or after 1 October are taught in our new Harbour Street building. Earlier intakes remain at Fenwick Road until the move is complete.\n\nEnrol at larkspur.example/autumn or call 555-0148. A place is confirmed only on payment.",
+              "label": "Questions 181-185 refer to the following advertisement and customer review.",
+              "type": "advertisement"
+            },
+            {
+              "content": "Certificate in Industrial Quality Systems — September intake\nReviewer: Danuta Wrzesniewski, quality supervisor\nRating: 4 out of 5\n\nMy employer sent four of us on the course together, which brought the cost of each place down usefully. The instructor, Kwabena Osei, has run a testing laboratory for twenty years, and every rule he taught came with a story about the day somebody ignored it. I passed the examination in November.\n\nTwo complaints. Our intake began on 10 September, so we spent all ten weeks at Fenwick Road, where the heating fails roughly one evening in three. The photographs on the website had led me to expect otherwise. The printed notes also reached us only in week four, by which time most of us had copied them out by hand.\n\nThe online library, though, is excellent, and I still use it every week at my desk. It is the reason I have signed up for the six-week negotiation course in the spring.",
+              "label": "Questions 181-185 refer to the following advertisement and customer review.",
+              "type": "customer review"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The examination",
+                "A place at a Saturday workshop",
+                "A textbook written by the instructor",
+                "Transport to the Fenwick Road hall"
+              ],
+              "explanation": "“Every certificate fee covers the examination, printed course notes and twelve months' access to our online library.” The Saturday workshops belong to the diploma only.",
+              "number": 181,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is included in the price of every certificate course?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The printed notes",
+                "The location of the classes",
+                "The size of her group",
+                "The online library"
+              ],
+              "explanation": "She calls the library “excellent” and says it is why she is enrolling again. The notes arrived late and the location was one of her two complaints.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Wrzesniewski say she values most?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "5 percent",
+                "10 percent",
+                "15 percent",
+                "20 percent"
+              ],
+              "explanation": "Four members of staff were registered on the same course, which meets the advertisement's condition of three or more for a 15 percent reduction on every place.",
+              "number": 183,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "How much less did Ms. Wrzesniewski's employer most likely pay for each place?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The building was still being fitted out.",
+                "Her course started before October.",
+                "Her group was too large for the new rooms.",
+                "The heating there could not be relied on."
+              ],
+              "explanation": "Only intakes beginning on or after 1 October use Harbour Street, and hers began on 10 September. The unreliable heating is what she found at Fenwick Road, not a reason for staying there.",
+              "number": 184,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why did Ms. Wrzesniewski's class not meet in the Harbour Street building?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "$520",
+                "$640",
+                "$780",
+                "$1,950"
+              ],
+              "explanation": "The six-week negotiation course she has signed up for is the Certificate in Contract Negotiation, listed at $520.",
+              "number": 185,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "How much will Ms. Wrzesniewski's next course cost?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "CORVINA ESTATES — Assistant Property Manager, Northside portfolio\n\nCorvina Estates manages 42 residential buildings in and around the city. We are seeking an Assistant Property Manager to support the six-person Northside team.\n\nDuties: coordinating contractor visits, preparing monthly service-charge statements, carrying out quarterly inspections of fourteen buildings, and answering tenant enquiries within one working day.\n\nRequired:\n- Three years in residential property management\n- A current property licence\n- A driving licence; the portfolio extends 30 kilometres\n\nDesirable: experience with the Tenantly maintenance platform; a second language.\n\nSalary $54,000-$61,000 according to experience, with a vehicle allowance.\n\nSend a résumé and a one-page letter to careers@corvinaestates.example by 20 May. Shortlisted applicants will be seen at our Harrow Lane office in the first week of June. Every interview includes a written exercise on service-charge calculation.\n\nCorvina Estates has managed property in the region since 1998.",
+              "label": "Questions 186-190 refer to the following job posting, e-mail, and schedule.",
+              "type": "job posting"
+            },
+            {
+              "content": "To: n.aguirre@postbox.example\nFrom: s.okonkwo@corvinaestates.example\nDate: 27 May\nSubject: Interview, Thursday 5 June\n\nDear Ms. Aguirre,\n\nThank you for your application. We would like to see you on Thursday 5 June; the schedule for the day is attached. Yours is the second panel interview of the morning.\n\nPlease allow ninety minutes in total. The panel takes forty-five minutes, and the written exercise described in our advertisement follows immediately afterwards in Room 5 and lasts the same length of time.\n\nTwo notes. Your letter mentions two years with the Tenantly platform, and the Northside team will certainly want to ask you about it. Please also bring the original of your licence; we cannot accept a photocopy for our records.\n\nParking at Harrow Lane is limited to eight spaces. The Bellamy Street car park is a five-minute walk away.\n\nKind regards,\n\nSelina Okonkwo\nHuman Resources",
+              "label": "Questions 186-190 refer to the following job posting, e-mail, and schedule.",
+              "type": "e-mail"
+            },
+            {
+              "content": "Assistant Property Manager — panel interviews\nThursday 5 June, Harrow Lane office, Room 3\n\n09:00  Bartosz Nowicki\n10:00  Nerea Aguirre\n11:15  Hyun-woo Chang\n13:30  Marguerite Okafor\n14:30  Tomas Lindqvist\n\nPanel: Selina Okonkwo (Human Resources), Dev Raman (Northside team leader), Marisol Quintero (Finance)\n\nWritten exercises are taken in Room 5 and are supervised by the reception team. Candidates should report to the front desk ten minutes before their panel interview. Coffee is available in the ground-floor waiting area.\n\nA decision is expected by 13 June. Candidates who are not selected will be told by telephone.",
+              "label": "Questions 186-190 refer to the following job posting, e-mail, and schedule.",
+              "type": "schedule"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "A qualification in accounting",
+                "Experience with the Tenantly platform",
+                "A current property licence",
+                "Command of a second language"
+              ],
+              "explanation": "The licence appears under “Required”, whereas the Tenantly platform and a second language are listed only as desirable.",
+              "number": 186,
+              "tags": [
+                "detail"
+              ],
+              "text": "What must applicants for the position have?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "A printed copy of her letter",
+                "An original document",
+                "A sample service-charge statement",
+                "Proof that she has paid for parking"
+              ],
+              "explanation": "“bring the original of your licence; we cannot accept a photocopy”.",
+              "number": 187,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Okonkwo ask Ms. Aguirre to bring?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "9:45 A.M.",
+                "10:00 A.M.",
+                "10:45 A.M.",
+                "11:15 A.M."
+              ],
+              "explanation": "The schedule puts her panel interview at 10:00, and the e-mail says the panel takes forty-five minutes and the exercise follows immediately.",
+              "number": 188,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "At what time will Ms. Aguirre begin the written exercise?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Ms. Okonkwo",
+                "Mr. Nowicki",
+                "Ms. Quintero",
+                "Mr. Raman"
+              ],
+              "explanation": "The e-mail says the Northside team will want to ask about it, and the schedule identifies Dev Raman as the Northside team leader on the panel.",
+              "number": 189,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "Who is most likely to question Ms. Aguirre about the Tenantly platform?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Because a space at the office may not be free",
+                "Because the entrance to the office has moved",
+                "Because the written exercise is held there",
+                "Because no train serves Harrow Lane"
+              ],
+              "explanation": "She names the car park immediately after noting that Harrow Lane has only eight spaces, so it is offered as an alternative.",
+              "number": 190,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does Ms. Okonkwo mention Bellamy Street?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "NOTICE TO TENANTS — Ashgrove Court\nFrom the office of the building manager\n3 April\n\nLift modernisation: 5 May to 27 June\n\nThe two passenger lifts will be replaced one after the other, so one lift remains in service throughout. Journeys will be slower than usual.\n\nDeliveries to floors above the third should be arranged before 09:00 or after 17:00, when the working lift is least busy. The goods lift at the rear is unaffected and may be reserved at the front desk in half-hour slots.\n\nThe cost of the work is divided among tenants in proportion to floor area and appears on the second-quarter service-charge invoice under “capital works”. Tenants of ground-floor units are exempt from this item under clause 14 of the standard lease.\n\nQuestions: Aurelie Fontaine, building manager, 555-0193.",
+              "label": "Questions 191-195 refer to the following notice, invoice, and e-mail.",
+              "type": "notice"
+            },
+            {
+              "content": "ASHGROVE COURT — Quarterly service charge\nInvoice 2Q-1187\n\nBilled to: Steinhaus Design Studio, Unit 402\nPeriod: 1 April - 30 June\nIssued: 5 July\nPayment due: 4 August\n\nCleaning and waste removal      $1,120\nSecurity                        $860\nHeating and ventilation         $1,405\nGrounds and car park            $390\nCapital works (lifts)           $2,340\n\nTotal                           $6,115\n\nPayment by bank transfer to the account shown below. A late fee of 2 percent of the total is added to any balance outstanding after the due date.\n\nQueries about an item on this invoice must be raised in writing within fourteen days of the issue date. The floor-area statements used in the calculation may be obtained from the building manager.",
+              "label": "Questions 191-195 refer to the following notice, invoice, and e-mail.",
+              "type": "invoice"
+            },
+            {
+              "content": "To: a.fontaine@ashgrovecourt.example\nFrom: l.steinhaus@steinhausdesign.example\nDate: 21 July\nSubject: Invoice 2Q-1187\n\nDear Ms. Fontaine,\n\nTwo points on the invoice that reached us this month.\n\nFirst, the capital works line. Our studio occupied Unit 006, at street level, until 31 May and moved up to Unit 402 only on 1 June. We have therefore been charged for the lift work across a quarter in which we spent two of the three months on the ground floor. I would be grateful if you would look at the figure again.\n\nSecond, we take delivery of two cutting machines on the morning of 6 August and will need the goods lift for roughly two hours. The front desk tells me it cannot be held for longer than thirty minutes at a time. Could an exception be arranged?\n\nKind regards,\n\nLena Steinhaus\nSteinhaus Design Studio",
+              "label": "Questions 191-195 refer to the following notice, invoice, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To announce a change of building manager",
+                "To inform tenants about work on the lifts",
+                "To introduce a new delivery contractor",
+                "To explain how car-park spaces are allocated"
+              ],
+              "explanation": "The notice sets out the dates of the lift modernisation and its consequences for tenants.",
+              "number": 191,
+              "tags": [
+                "purpose",
+                "main-idea"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Use the stairs above the third floor",
+                "Report all deliveries to the building manager",
+                "Pay the service charge monthly",
+                "Arrange upper-floor deliveries outside the busiest hours"
+              ],
+              "explanation": "“Deliveries to floors above the third should be arranged before 09:00 or after 17:00, when the working lift is least busy.”",
+              "number": 192,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are tenants asked to do while the work is under way?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Her studio was in an exempt unit for part of the period.",
+                "The work had not started when the invoice was issued.",
+                "Her lease covers only one of the two lifts.",
+                "The amount is higher than in the previous quarter."
+              ],
+              "explanation": "The notice exempts ground-floor tenants from the capital works item, and her studio was at street level in Unit 006 until 31 May.",
+              "number": 193,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does Ms. Steinhaus question one line of the invoice?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It was written before the invoice was issued.",
+                "It was sent to an address no longer in use.",
+                "It falls outside the period allowed for queries.",
+                "It arrived after the payment was due."
+              ],
+              "explanation": "The invoice was issued on 5 July and allows fourteen days for written queries, but her message is dated 21 July. Payment is not due until 4 August, so it is the query window she has missed.",
+              "number": 194,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What is suggested about Ms. Steinhaus's e-mail?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "A meeting with the building manager",
+                "A goods-lift reservation longer than usual",
+                "More time to pay the invoice",
+                "Access to the rear car park"
+              ],
+              "explanation": "She needs the goods lift for about two hours, whereas the notice limits reservations to half-hour slots, so she asks for an exception.",
+              "number": 195,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Steinhaus request for 6 August?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "INSTITUTE OF APPLIED MANUFACTURING\nAnnual Practice Forum — 8-9 October, Delaney Convention Centre\n\nRegistration\nFull forum, both days — $430 members / $560 non-members\nSingle day — $250 members / $330 non-members\nWorkshop supplement (Thursday afternoon, 25 places) — $95\n\nRegistration closes on 26 September. Places in the Thursday workshop are allocated in the order in which payments arrive; last year the workshop was full ten days before that closing date.\n\nA member of the Institute may nominate one colleague to attend at the member rate. Registrations may be refunded until 19 September; after that date a registration may be transferred to another person but not refunded.\n\nThe Delaney Convention Centre is a four-minute walk from Ardmore station. Parking is not included in registration and must be reserved through the venue.\n\nEnquiries: forum@iam.example",
+              "label": "Questions 196-200 refer to the following web page, agenda, and memo.",
+              "type": "web page"
+            },
+            {
+              "content": "ANNUAL PRACTICE FORUM — Thursday 8 October\n\n08:30  Registration and coffee — Foyer\n09:15  Opening address: “Where maintenance budgets actually go”, Dr. Halina Zawadzka — Auditorium\n10:30  Track A: Predictive maintenance in small plants — Room 2\n10:30  Track B: Certifying welded assemblies — Room 3\n12:00  Lunch — Riverside Hall\n13:30  Workshop: Reading vibration data (25 places) — Room 5\n13:30  Track C: Planning a shutdown week — Room 2\n16:00  Panel: Recruiting and keeping technicians — Auditorium\n17:15  Close of day one\n\nFriday 9 October opens at 09:30 with the annual lecture, followed by three further tracks and the members' meeting at 15:00.",
+              "label": "Questions 196-200 refer to the following web page, agenda, and memo.",
+              "type": "agenda"
+            },
+            {
+              "content": "To: Engineering staff\nFrom: Hendrik Vosloo, Engineering Manager\nDate: 12 September\nSubject: Practice Forum, October\n\nFour places at this year's forum have been approved.\n\nAiko Tanaka will attend both days. She joined us in March and is not yet a member of the Institute, so I have nominated her for the place my own membership allows; register her at that rate.\n\nPriya Ganguly and Osman Demir will attend on the Thursday only. Both should take the vibration workshop, and both should book it at the moment they register rather than nearer the date, or they will not get in. I will be there for both days myself.\n\nEveryone should travel by train. We will not pay for parking at the venue.\n\nSend me your confirmation numbers by 19 September. Anyone who finds after that date that they cannot go should tell me at once, so that the place can be passed to a colleague.\n\nHendrik",
+              "label": "Questions 196-200 refer to the following web page, agenda, and memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "It is included in the full-forum fee.",
+                "It is repeated on Friday morning.",
+                "It is held away from the convention centre.",
+                "Places are given out in the order payments arrive."
+              ],
+              "explanation": "The workshop carries a $95 supplement and “places … are allocated in the order in which payments arrive”, which is also why it filled early last year.",
+              "number": 196,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does the web page indicate about the Thursday workshop?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Attracting technicians to the industry",
+                "The certification of welded assemblies",
+                "How maintenance money is actually spent",
+                "The planning of a shutdown week"
+              ],
+              "explanation": "Her opening address is titled “Where maintenance budgets actually go”. The other topics belong to the tracks and the afternoon panel.",
+              "number": 197,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the agenda, what will Dr. Zawadzka speak about?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It is likely to be full before registration closes.",
+                "Refunds are no longer possible after 12 September.",
+                "The member rate is withdrawn at the end of the month.",
+                "The venue needs the numbers in order to open Room 5."
+              ],
+              "explanation": "The web page says the twenty-five places go in order of payment and that last year the workshop was full ten days before registration closed.",
+              "number": 198,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does Mr. Vosloo tell two colleagues to book the workshop as soon as they register?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "$250",
+                "$430",
+                "$525",
+                "$560"
+              ],
+              "explanation": "She attends both days at the member rate her manager's nomination gives her, which is $430; the $560 figure applies to non-members who are not nominated.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "How much will the company pay for Ms. Tanaka's registration?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The opening address",
+                "The panel on technicians",
+                "The vibration workshop",
+                "The annual lecture"
+              ],
+              "explanation": "They come on the Thursday only, and the annual lecture opens the Friday. Everything else listed takes place on the Thursday.",
+              "number": 200,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What will Ms. Ganguly and Mr. Demir be unable to attend?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 6 — full Reading section",
+  "version": 1
+}

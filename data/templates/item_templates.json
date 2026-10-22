@@ -1,0 +1,2788 @@
+{
+  "built": "2026-10-21",
+  "format_version": "current",
+  "numbering": {
+    "P5": [
+      101,
+      130
+    ],
+    "P6": [
+      131,
+      146
+    ],
+    "P7_multi": [
+      176,
+      200
+    ],
+    "P7_single": [
+      147,
+      175
+    ]
+  },
+  "scope": "TOEIC L&R Reading 现行线性版：P5 30 / P6 16（每篇 4 题含 1 句插入）/ P7 54（单篇 29：10 篇各 2–4 题；多篇 25：双篇 2 组+三篇 3 组，各 5 题）",
+  "target_time_sec_base": {
+    "P5": 26.4,
+    "P6": 33.8,
+    "P7": 67.4,
+    "source": "EdNet 中位用时（work/ednet_prior_by_part.csv）"
+  },
+  "templates": [
+    {
+      "difficulty_knobs": [
+        "无"
+      ],
+      "distractor_traps": [],
+      "explanation_template_zh": "先看选项：同根不同形=词性题（只看空格前后，5–15 秒）；同词性不同义=词汇题（读全句）；介词/连词混排=看空格后接名词还是句子。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "meta_tag_only": true,
+      "node_ids": [
+        "QT.P5.IDENTIFY"
+      ],
+      "option_rules": {
+        "rule": "不生成选项；作为每道 P5 的附加标签，训练模式下先问“这是哪类题”"
+      },
+      "part": 5,
+      "stem_pattern": "（元技能，不单独出题）所有 P5 题都附此标签：做题前先看四个选项判断是结构题还是语境题。",
+      "template_id": "T5.IDENTIFY",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "NONFINITE",
+        "COUNT_NUMBER",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "看选项：同一个词根的不同形式 → 词性题，只看空格前后。空格前是{前词}、后是{后词}，这里要{需要的词性}，所以选 {答案}。{干扰项逐个一句话}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.WORD_FORM",
+        "GR.POS.NOUN_AFTER_DET",
+        "GR.POS.NOUN_AFTER_PREP",
+        "GR.POS.NOUN_SUBJ_OBJ"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机，答案位置全卷均衡",
+        "rule": "同一词根的 4 个形式（名/动/形/副或分词），只有一个词性能放进空格；不得出现两个语法都通的形式"
+      },
+      "part": 5,
+      "slot_rule_zh": "冠词/所有格/介词后或主语位置缺名词",
+      "stem_pattern": "The ------- of the {名词短语} {谓语}… / … for her ------- to …",
+      "template_id": "T5.WORD_FORM.NOUN_SLOT",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "NONFINITE",
+        "COUNT_NUMBER",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "看选项：同一个词根的不同形式 → 词性题，只看空格前后。空格前是{前词}、后是{后词}，这里要{需要的词性}，所以选 {答案}。{干扰项逐个一句话}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.WORD_FORM",
+        "GR.POS.ADJ_BEFORE_NOUN",
+        "GR.POS.ADJ_COMPLEMENT",
+        "GR.NONFIN.PARTICIPLE_ADJ"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机，答案位置全卷均衡",
+        "rule": "同一词根的 4 个形式（名/动/形/副或分词），只有一个词性能放进空格；不得出现两个语法都通的形式"
+      },
+      "part": 5,
+      "slot_rule_zh": "名词前或系动词/宾补位置缺形容词（含 -ing/-ed 情感分词）",
+      "stem_pattern": "{主语} offers ------- {名词}. / … found the system very -------.",
+      "template_id": "T5.WORD_FORM.ADJ_SLOT",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "NONFINITE",
+        "COUNT_NUMBER",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "看选项：同一个词根的不同形式 → 词性题，只看空格前后。空格前是{前词}、后是{后词}，这里要{需要的词性}，所以选 {答案}。{干扰项逐个一句话}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.WORD_FORM",
+        "GR.POS.ADV_VERB",
+        "GR.POS.ADV_ADJ",
+        "GR.POS.ADV_AUX_SLOT",
+        "GR.POS.ADV_SENTENCE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机，答案位置全卷均衡",
+        "rule": "同一词根的 4 个形式（名/动/形/副或分词），只有一个词性能放进空格；不得出现两个语法都通的形式"
+      },
+      "part": 5,
+      "slot_rule_zh": "句子已完整，空格修饰动词/形容词/全句 → 副词",
+      "stem_pattern": "… has ------- completed … / -------, the shipment arrived …",
+      "template_id": "T5.WORD_FORM.ADV_SLOT",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "NONFINITE",
+        "COUNT_NUMBER",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "看选项：同一个词根的不同形式 → 词性题，只看空格前后。空格前是{前词}、后是{后词}，这里要{需要的词性}，所以选 {答案}。{干扰项逐个一句话}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.WORD_FORM",
+        "GR.POS.NOUN_PERSON_THING",
+        "GR.POS.NOUN_COUNT",
+        "GR.POS.NOUN_COMPOUND",
+        "VO.CONF.FORM_NOUN"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机，答案位置全卷均衡",
+        "rule": "同一词根的 4 个形式（名/动/形/副或分词），只有一个词性能放进空格；不得出现两个语法都通的形式"
+      },
+      "part": 5,
+      "slot_rule_zh": "名词位置已确定，要在人/物、可数/不可数、复合名词之间选",
+      "stem_pattern": "All ------- at the conference must … (attendees vs attendance)",
+      "template_id": "T5.WORD_FORM.NOUN_TYPE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "NONFINITE",
+        "COUNT_NUMBER",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "看选项：同一个词根的不同形式 → 词性题，只看空格前后。空格前是{前词}、后是{后词}，这里要{需要的词性}，所以选 {答案}。{干扰项逐个一句话}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.WORD_FORM",
+        "GR.POS.VERB_SLOT",
+        "FD.SENT.CLAUSE_COUNT"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机，答案位置全卷均衡",
+        "rule": "同一词根的 4 个形式（名/动/形/副或分词），只有一个词性能放进空格；不得出现两个语法都通的形式"
+      },
+      "part": 5,
+      "slot_rule_zh": "句子缺谓语 → 限定动词",
+      "stem_pattern": "The head of the department ------- the figures at every meeting.",
+      "template_id": "T5.WORD_FORM.VERB_SLOT",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）",
+        "时间线索是否明显"
+      ],
+      "distractor_traps": [
+        "TENSE_MISMATCH",
+        "VOICE_MISMATCH",
+        "AGREEMENT",
+        "NONFINITE"
+      ],
+      "explanation_template_zh": "选项都是 {动词} 的不同形态 → 动词形态题。按顺序查：①要不要谓语 ②主动还是被动（{主语} 是做还是被做）③时间线索 {线索} → {时态} ④单复数。所以选 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VERB_FORM",
+        "GR.VERB.VOICE_PASSIVE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "同一动词的 4 个形态（时态/语态/单复数/非谓语），只有一个同时满足语态+时态+一致"
+      },
+      "part": 5,
+      "slot_rule_zh": "主语是动作承受者 → 被动；再用时间状语定时态",
+      "stem_pattern": "The new rules ------- to all employees by e-mail last Monday.",
+      "template_id": "T5.VERB_FORM.VOICE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）",
+        "时间线索是否明显"
+      ],
+      "distractor_traps": [
+        "TENSE_MISMATCH",
+        "VOICE_MISMATCH",
+        "AGREEMENT",
+        "NONFINITE"
+      ],
+      "explanation_template_zh": "选项都是 {动词} 的不同形态 → 动词形态题。按顺序查：①要不要谓语 ②主动还是被动（{主语} 是做还是被做）③时间线索 {线索} → {时态} ④单复数。所以选 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VERB_FORM",
+        "GR.VERB.TENSE_SIMPLE",
+        "GR.VERB.TENSE_PERFECT",
+        "GR.VERB.TENSE_FUTURE_CLAUSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "同一动词的 4 个形态（时态/语态/单复数/非谓语），只有一个同时满足语态+时态+一致"
+      },
+      "part": 5,
+      "slot_rule_zh": "找时间状语（next month / for ten years before / as soon as）定时态",
+      "stem_pattern": "{人} ------- {宾语} next month. / As soon as …, we will …",
+      "template_id": "T5.VERB_FORM.TENSE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格离判定词的距离（紧邻=易，被修饰语隔开=难）",
+        "选项是否含两个看似都能用的词性（如名词 vs 动名词）",
+        "句子长度/从句层数",
+        "用词档次（NGSL 核心 → TSL）",
+        "时间线索是否明显"
+      ],
+      "distractor_traps": [
+        "TENSE_MISMATCH",
+        "VOICE_MISMATCH",
+        "AGREEMENT",
+        "NONFINITE"
+      ],
+      "explanation_template_zh": "选项都是 {动词} 的不同形态 → 动词形态题。按顺序查：①要不要谓语 ②主动还是被动（{主语} 是做还是被做）③时间线索 {线索} → {时态} ④单复数。所以选 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VERB_FORM",
+        "GR.VERB.AGREE_SV",
+        "GR.VERB.MODAL_BASE",
+        "GR.VERB.SUBJUNCTIVE_DEMAND"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "同一动词的 4 个形态（时态/语态/单复数/非谓语），只有一个同时满足语态+时态+一致"
+      },
+      "part": 5,
+      "slot_rule_zh": "主谓一致（剥离 of 短语）、情态动词后原形、要求类 that 从句原形",
+      "stem_pattern": "The list of suppliers ------- updated … / must ------- / requested that he -------",
+      "template_id": "T5.VERB_FORM.AGREE_MODAL",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "四个选项的语义距离（越近越难）",
+        "是否需要搭配/介词才能区分",
+        "是否用常用词的商务义",
+        "语境线索数量（1 个=难，2 个以上=易）"
+      ],
+      "distractor_traps": [
+        "COLLOCATION",
+        "SEMANTIC_NEAR",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "四个选项词性一样 → 词汇题，要读懂句子。关键线索是 {线索}，意思是“{中文意思}”，只有 {答案} 说得通。{干扰项逐个一句话：它的意思/常见搭配是什么，为什么这里不行}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VOCAB",
+        "VO.LEX.VERB",
+        "VO.COLLO.VERB_NOUN"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个同词性、同形态、难度相近的词；答案与空格前后有固定搭配或语义唯一；干扰项至少 1 个近义但搭配不对、1 个形近或常见义陷阱"
+      },
+      "part": 5,
+      "scene_tag": "每题另挂 1 个 VO.SCENE.* 场景节点",
+      "stem_pattern": "{场景主语} ------- {搭配宾语/补语}…（必须有 1–2 个语境线索锁定唯一答案）",
+      "template_id": "T5.VOCAB.VERB",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "四个选项的语义距离（越近越难）",
+        "是否需要搭配/介词才能区分",
+        "是否用常用词的商务义",
+        "语境线索数量（1 个=难，2 个以上=易）"
+      ],
+      "distractor_traps": [
+        "COLLOCATION",
+        "SEMANTIC_NEAR",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "四个选项词性一样 → 词汇题，要读懂句子。关键线索是 {线索}，意思是“{中文意思}”，只有 {答案} 说得通。{干扰项逐个一句话：它的意思/常见搭配是什么，为什么这里不行}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VOCAB",
+        "VO.LEX.NOUN"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个同词性、同形态、难度相近的词；答案与空格前后有固定搭配或语义唯一；干扰项至少 1 个近义但搭配不对、1 个形近或常见义陷阱"
+      },
+      "part": 5,
+      "scene_tag": "每题另挂 1 个 VO.SCENE.* 场景节点",
+      "stem_pattern": "{场景主语} ------- {搭配宾语/补语}…（必须有 1–2 个语境线索锁定唯一答案）",
+      "template_id": "T5.VOCAB.NOUN",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "四个选项的语义距离（越近越难）",
+        "是否需要搭配/介词才能区分",
+        "是否用常用词的商务义",
+        "语境线索数量（1 个=难，2 个以上=易）"
+      ],
+      "distractor_traps": [
+        "COLLOCATION",
+        "SEMANTIC_NEAR",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "四个选项词性一样 → 词汇题，要读懂句子。关键线索是 {线索}，意思是“{中文意思}”，只有 {答案} 说得通。{干扰项逐个一句话：它的意思/常见搭配是什么，为什么这里不行}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VOCAB",
+        "VO.LEX.ADJ",
+        "VO.COLLO.ADJ_PREP"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个同词性、同形态、难度相近的词；答案与空格前后有固定搭配或语义唯一；干扰项至少 1 个近义但搭配不对、1 个形近或常见义陷阱"
+      },
+      "part": 5,
+      "scene_tag": "每题另挂 1 个 VO.SCENE.* 场景节点",
+      "stem_pattern": "{场景主语} ------- {搭配宾语/补语}…（必须有 1–2 个语境线索锁定唯一答案）",
+      "template_id": "T5.VOCAB.ADJ",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "四个选项的语义距离（越近越难）",
+        "是否需要搭配/介词才能区分",
+        "是否用常用词的商务义",
+        "语境线索数量（1 个=难，2 个以上=易）"
+      ],
+      "distractor_traps": [
+        "COLLOCATION",
+        "SEMANTIC_NEAR",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "四个选项词性一样 → 词汇题，要读懂句子。关键线索是 {线索}，意思是“{中文意思}”，只有 {答案} 说得通。{干扰项逐个一句话：它的意思/常见搭配是什么，为什么这里不行}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VOCAB",
+        "VO.LEX.ADV",
+        "VO.CONF.ADV_FOCUS",
+        "VO.CONF.ADV_TIME"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个同词性、同形态、难度相近的词；答案与空格前后有固定搭配或语义唯一；干扰项至少 1 个近义但搭配不对、1 个形近或常见义陷阱"
+      },
+      "part": 5,
+      "scene_tag": "每题另挂 1 个 VO.SCENE.* 场景节点",
+      "stem_pattern": "{场景主语} ------- {搭配宾语/补语}…（必须有 1–2 个语境线索锁定唯一答案）",
+      "template_id": "T5.VOCAB.ADV",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "四个选项的语义距离（越近越难）",
+        "是否需要搭配/介词才能区分",
+        "是否用常用词的商务义",
+        "语境线索数量（1 个=难，2 个以上=易）"
+      ],
+      "distractor_traps": [
+        "COLLOCATION",
+        "SEMANTIC_NEAR",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "四个选项词性一样 → 词汇题，要读懂句子。关键线索是 {线索}，意思是“{中文意思}”，只有 {答案} 说得通。{干扰项逐个一句话：它的意思/常见搭配是什么，为什么这里不行}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.VOCAB",
+        "VO.COLLO.FIXED_PHRASE",
+        "VO.CONF.BUSINESS_SENSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个同词性、同形态、难度相近的词；答案与空格前后有固定搭配或语义唯一；干扰项至少 1 个近义但搭配不对、1 个形近或常见义陷阱"
+      },
+      "part": 5,
+      "scene_tag": "每题另挂 1 个 VO.SCENE.* 场景节点",
+      "stem_pattern": "{场景主语} ------- {搭配宾语/补语}…（必须有 1–2 个语境线索锁定唯一答案）",
+      "template_id": "T5.VOCAB.PHRASE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格后结构是否一眼可辨",
+        "逻辑关系是否需要读完两句",
+        "是否混入同义不同类的词（despite/although）"
+      ],
+      "distractor_traps": [
+        "SEMANTIC_NEAR",
+        "COLLOCATION",
+        "FORM_LOOKALIKE"
+      ],
+      "explanation_template_zh": "选项都是介词 → 看空格后的名词和整句意思。{线索} 表示“{中文}”，要用 {答案}。{干扰项：各自表示什么}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.PREP",
+        "GR.CONN.PREP_TIME",
+        "GR.CONN.PREP_PLACE",
+        "GR.CONN.PREP_MEANING",
+        "GR.CONN.PREP_PHRASE_MULTI",
+        "VO.COLLO.VERB_PREP",
+        "VO.CONF.PREP_LOOKALIKE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个介词（或复合介词）；按时间/地点/语义/固定搭配只有一个对"
+      },
+      "part": 5,
+      "stem_pattern": "… submitted ------- 5 P.M. on Friday. / comply ------- the rules",
+      "template_id": "T5.PREP",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格后结构是否一眼可辨",
+        "逻辑关系是否需要读完两句",
+        "是否混入同义不同类的词（despite/although）"
+      ],
+      "distractor_traps": [
+        "CONN_TYPE",
+        "CONN_LOGIC"
+      ],
+      "explanation_template_zh": "两步走：①空格后是{名词短语/句子} → 只能用{介词/连词/副词} ②前后是{转折/因果/让步}关系 → {答案}。{干扰项：类别错还是逻辑错}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.CONNECTOR_MIX",
+        "GR.CONN.PREP_VS_CONJ",
+        "GR.CONN.CONJ_ADVERB"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "介词/连词/接续副词混排：先看后面接名词短语还是完整句子，再看逻辑"
+      },
+      "part": 5,
+      "stem_pattern": "------- the heavy rain, the concert started on time.",
+      "template_id": "T5.CONNECTOR_MIX",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "空格后结构是否一眼可辨",
+        "逻辑关系是否需要读完两句",
+        "是否混入同义不同类的词（despite/although）"
+      ],
+      "distractor_traps": [
+        "CONN_LOGIC",
+        "CONN_TYPE"
+      ],
+      "explanation_template_zh": "空格连接两个句子 → 连词题，看两句关系：{关系}，所以用 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.CONJ",
+        "GR.CONN.CONJ_ADVERBIAL",
+        "GR.CONN.CONJ_COORD"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个连词；按逻辑（条件/时间/让步/目的）唯一"
+      },
+      "part": 5,
+      "stem_pattern": "Please call us ------- you have any questions.",
+      "template_id": "T5.CONJ",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "指代对象离空格的距离",
+        "反身代词是否需要判断主语"
+      ],
+      "distractor_traps": [
+        "PRON_CASE",
+        "PRON_REFERENT",
+        "AGREEMENT"
+      ],
+      "explanation_template_zh": "选项都是代词/限定词 → 看位置：{动词后=宾格/名词前=所有格/主语=主格/主语自己=反身}；数量词看后面名词单复数。所以选 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.PRONOUN",
+        "GR.PRON.CASE",
+        "GR.PRON.REFLEXIVE",
+        "GR.PRON.DETERMINER_QUANT",
+        "GR.PRON.INDEFINITE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "同一人称的不同格，或 4 个数量限定词/不定代词；一致性和格位置唯一"
+      },
+      "part": 5,
+      "stem_pattern": "Ms. Ito asked them to send ------- the file. / ------- employee will receive …",
+      "template_id": "T5.PRONOUN",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "从句是否完整（缺成分=代词，完整=副词）",
+        "先行词与空格之间是否有插入"
+      ],
+      "distractor_traps": [
+        "PRON_CASE",
+        "CONN_TYPE"
+      ],
+      "explanation_template_zh": "先行词是 {先行词}，后面从句 {完整/缺主语/缺宾语/名词前缺所有格} → 用 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.RELATIVE",
+        "GR.REL.REL_PRONOUN",
+        "GR.REL.REL_ADVERB",
+        "GR.REL.NOUN_CLAUSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "who/whom/whose/which/where/what 等；看先行词是人/物/地点，从句缺不缺主语或宾语"
+      },
+      "part": 5,
+      "stem_pattern": "Employees ------- cars are parked in Lot B … / The hotel ------- the dinner will be held …",
+      "template_id": "T5.RELATIVE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "比较标志词是否靠近空格"
+      ],
+      "distractor_traps": [
+        "PAIR_MISMATCH",
+        "SEMANTIC_NEAR"
+      ],
+      "explanation_template_zh": "找比较标志：{than/of any/as…as} → {比较级/最高级/原级}；比较级前强调用 much/even/far，不用 very。选 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.COMPARATIVE",
+        "GR.COMP.COMPARATIVE",
+        "GR.COMP.SUPERLATIVE",
+        "GR.COMP.EQUATIVE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "原级/比较级/最高级或程度副词（much/very/more/most）；由 than / of any / as…as 锁定"
+      },
+      "part": 5,
+      "stem_pattern": "… were ------- higher than expected. / the ------- rates of any bank",
+      "template_id": "T5.COMPARATIVE",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "配对词与空格的距离"
+      ],
+      "distractor_traps": [
+        "PAIR_MISMATCH",
+        "COUNT_NUMBER"
+      ],
+      "explanation_template_zh": "看句中的另一半：{配对词} → 只能和 {答案} 配。{干扰项各自的搭档}",
+      "format_version": "current",
+      "length": {
+        "max": 32,
+        "min": 10,
+        "unit": "words_in_stem"
+      },
+      "node_ids": [
+        "QT.P5.PAIR_GRAMMAR",
+        "GR.CONN.CONJ_CORRELATIVE",
+        "VO.CONF.SO_SUCH_TOO",
+        "VO.CONF.QUANT_WORDS",
+        "GR.VERB.AGREE_QUANT"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "成对表达或数量名词：句中另一半（or/nor/that/of+可数复数）锁定唯一答案"
+      },
+      "part": 5,
+      "stem_pattern": "… either by mail ------- online / so light ------- / the ------- of customers",
+      "template_id": "T5.PAIR_GRAMMAR",
+      "text_type": "single_sentence"
+    },
+    {
+      "difficulty_knobs": [
+        "上下文线索距离空格的句数",
+        "篇章用词档次",
+        "干扰项在本句内是否也通"
+      ],
+      "distractor_traps": [
+        "POS_MISMATCH",
+        "TENSE_MISMATCH",
+        "VOICE_MISMATCH",
+        "CONN_TYPE"
+      ],
+      "explanation_template_zh": "这题只看本句就能做（独立型）：{同 P5 解析}。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.INDEPENDENT",
+        "QT.P6.CLASSIFY"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "rule": "同 P5 结构题；只看空格所在句即可唯一"
+      },
+      "part": 6,
+      "stem_pattern": "空格句内即可判定的词性/介词/动词形态题（同 P5 规则）",
+      "template_id": "T6.INDEPENDENT",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "上下文线索距离空格的句数",
+        "篇章用词档次",
+        "干扰项在本句内是否也通"
+      ],
+      "distractor_traps": [
+        "TENSE_MISMATCH",
+        "VOICE_MISMATCH"
+      ],
+      "explanation_template_zh": "只看这一句好几个时态都行，所以要看上下文：发信日期是 {日期}，事件在 {日期}，还没发生/已经发生 → {答案}。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.CTX_TENSE",
+        "QT.P6.CLASSIFY"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "rule": "同一动词 4 个时态；只看本句至少 2 个通，必须用文中日期或前后句锁定"
+      },
+      "part": 6,
+      "stem_pattern": "空格句本身多个时态都通，要看发信日期/前后句判断事件已发生还是将发生",
+      "template_id": "T6.CTX_TENSE",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "上下文线索距离空格的句数",
+        "篇章用词档次",
+        "干扰项在本句内是否也通"
+      ],
+      "distractor_traps": [
+        "PRON_REFERENT",
+        "PRON_CASE"
+      ],
+      "explanation_template_zh": "往前找它指谁：{对象} 是 {单数/复数/第几人称} → {答案}。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.CTX_PRONOUN",
+        "FD.READ.REFERENCE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "rule": "人称/单复数/格不同的代词；对象必须在前 1–2 句里"
+      },
+      "part": 6,
+      "stem_pattern": "空格是代词/所有格，指代对象在前句",
+      "template_id": "T6.CTX_PRONOUN",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "上下文线索距离空格的句数",
+        "篇章用词档次",
+        "干扰项在本句内是否也通"
+      ],
+      "distractor_traps": [
+        "SEMANTIC_NEAR",
+        "COLLOCATION",
+        "CONTRADICT"
+      ],
+      "explanation_template_zh": "光看本句 {几个} 都说得通，但前文/后文讲的是 {话题}，所以只能是 {答案}。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.CTX_VOCAB"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "rule": "4 个同词性词；至少 2 个在本句内语法语义都通，前后文决定唯一"
+      },
+      "part": 6,
+      "stem_pattern": "同词性词汇题，本句多个词都通，靠前后文话题锁定",
+      "template_id": "T6.CTX_VOCAB",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "上下文线索距离空格的句数",
+        "篇章用词档次",
+        "干扰项在本句内是否也通"
+      ],
+      "distractor_traps": [
+        "CONN_LOGIC"
+      ],
+      "explanation_template_zh": "前一句说 {A}，后一句说 {B}，两句是 {转折/因果/追加/举例} 关系 → {答案}。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.CTX_CONJ_ADV",
+        "GR.CONN.CONJ_ADVERB",
+        "FD.READ.DISCOURSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "rule": "However / Therefore / In addition / For example / Instead / Otherwise 等 4 选 1；前后句关系唯一"
+      },
+      "part": 6,
+      "stem_pattern": "句首接续副词 -------, …，判断前后两句逻辑",
+      "template_id": "T6.CTX_CONJ_ADV",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "干扰句与主题的相关度（同场景=难）",
+        "线索词是否显性（this/it/such vs 纯语义衔接）",
+        "是否需要读前后两句以上"
+      ],
+      "distractor_traps": [
+        "OFF_TOPIC",
+        "BROKEN_LINK",
+        "CONTRADICT",
+        "REPEAT_INFO"
+      ],
+      "explanation_template_zh": "后文第一句就说 {the X / this}，前面必须先有人提到 {X}。只有 {答案} 引出了它。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.INSERTION",
+        "QT.P6.INS_OPENING",
+        "FD.READ.DISCOURSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个完整句子，长度相近（差 ≤6 词），都与文章同一行业场景；正确句含指向前后文的线索词；每篇固定 1 道"
+      },
+      "part": 6,
+      "stem_pattern": "段首/开篇缺一句：后文用 the/this/it 指向的东西必须由这句引出",
+      "template_id": "T6.INS_OPENING",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "干扰句与主题的相关度（同场景=难）",
+        "线索词是否显性（this/it/such vs 纯语义衔接）",
+        "是否需要读前后两句以上"
+      ],
+      "distractor_traps": [
+        "OFF_TOPIC",
+        "BROKEN_LINK",
+        "CONTRADICT",
+        "REPEAT_INFO"
+      ],
+      "explanation_template_zh": "前一句讲 {A}，后一句讲 {B}，中间要一句把两者接上。{答案} 里的 {关键词} 正好接住前句、引出后句。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.INSERTION",
+        "QT.P6.INS_TRANSITION",
+        "FD.READ.REFERENCE",
+        "FD.READ.DISCOURSE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个完整句子，长度相近（差 ≤6 词），都与文章同一行业场景；正确句含指向前后文的线索词；每篇固定 1 道"
+      },
+      "part": 6,
+      "stem_pattern": "段中缺一句：承接前句并引出后句（指代词/连接词是关键）",
+      "template_id": "T6.INS_TRANSITION",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "干扰句与主题的相关度（同场景=难）",
+        "线索词是否显性（this/it/such vs 纯语义衔接）",
+        "是否需要读前后两句以上"
+      ],
+      "distractor_traps": [
+        "OFF_TOPIC",
+        "BROKEN_LINK",
+        "CONTRADICT",
+        "REPEAT_INFO"
+      ],
+      "explanation_template_zh": "最后一句一般是让读者做什么或怎么联系。{答案} 里的 {it/this offer} 指前文 {对象}，所以放这里。",
+      "format_version": "current",
+      "length": {
+        "insertion_per_passage": 1,
+        "items_per_passage": 4,
+        "max": 190,
+        "min": 80,
+        "unit": "words_in_passage"
+      },
+      "node_ids": [
+        "QT.P6.INSERTION",
+        "QT.P6.INS_CLOSING"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "order": "随机",
+        "rule": "4 个完整句子，长度相近（差 ≤6 词），都与文章同一行业场景；正确句含指向前后文的线索词；每篇固定 1 道"
+      },
+      "part": 6,
+      "stem_pattern": "结尾缺一句：行动号召/联系方式/致谢，必须与前文主题一致",
+      "template_id": "T6.INS_CLOSING",
+      "text_type": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.ARTICLE",
+        "TX.AD",
+        "TX.WEB"
+      ]
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "REVERSE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "原因题找 because/due to/so：{原文句} → 原因是 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 620,
+        "min": 50,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7.REASON",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为原因句（because/due to/since/as a result）的改写"
+      },
+      "part": 7,
+      "stem_pattern": "Why …?",
+      "template_id": "T7.REASON",
+      "text_type": "any"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.EMAIL",
+        "TX.EMAIL"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 100,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.LETTER",
+        "TX.LETTER"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.LETTER",
+      "text_type": "TX.LETTER"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 50,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.NOTICE",
+        "TX.NOTICE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.NOTICE",
+      "text_type": "TX.NOTICE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 80,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.MEMO",
+        "TX.MEMO"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.MEMO",
+      "text_type": "TX.MEMO"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.ARTICLE",
+        "TX.ARTICLE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 220,
+        "min": 60,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.AD",
+        "TX.AD"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.AD",
+      "text_type": "TX.AD"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.EMAIL",
+        "TX.EMAIL",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.ARTICLE",
+        "TX.ARTICLE",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 50,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.NOTICE",
+        "TX.NOTICE",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.NOTICE",
+      "text_type": "TX.NOTICE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 240,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.WEB",
+        "TX.WEB",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.WEB",
+      "text_type": "TX.WEB"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_NUMBER",
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION"
+      ],
+      "explanation_template_zh": "数字题先锁定是哪一行/哪一项：{行}，对应 {数字}。别的数字属于 {别的项}。",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 30,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL_NUMBER.FORM",
+        "TX.FORM"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中数字（或换算后）；干扰项用文中其他数字或单位/时间错位"
+      },
+      "part": 7,
+      "stem_pattern": "When / How many / How much / What time …?",
+      "template_id": "T7.DETAIL_NUMBER.FORM",
+      "text_type": "TX.FORM"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_NUMBER",
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION"
+      ],
+      "explanation_template_zh": "数字题先锁定是哪一行/哪一项：{行}，对应 {数字}。别的数字属于 {别的项}。",
+      "format_version": "current",
+      "length": {
+        "max": 180,
+        "min": 30,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL_NUMBER.SCHEDULE",
+        "TX.SCHEDULE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中数字（或换算后）；干扰项用文中其他数字或单位/时间错位"
+      },
+      "part": 7,
+      "stem_pattern": "When / How many / How much / What time …?",
+      "template_id": "T7.DETAIL_NUMBER.SCHEDULE",
+      "text_type": "TX.SCHEDULE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "要求类题找 please/must/should：{原文句} → {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.REQUEST_ACTION.EMAIL",
+        "TX.EMAIL",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "定位 please / be asked to / must / should 句；正确项为改写；干扰项为文中其他动作"
+      },
+      "part": 7,
+      "stem_pattern": "What is {person} asked to do? / What are employees asked to do by …?",
+      "template_id": "T7.REQUEST_ACTION.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "要求类题找 please/must/should：{原文句} → {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 80,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.REQUEST_ACTION.MEMO",
+        "TX.MEMO",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "定位 please / be asked to / must / should 句；正确项为改写；干扰项为文中其他动作"
+      },
+      "part": 7,
+      "stem_pattern": "What is {person} asked to do? / What are employees asked to do by …?",
+      "template_id": "T7.REQUEST_ACTION.MEMO",
+      "text_type": "TX.MEMO"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "PARTIAL",
+        "VERBATIM_WRONG",
+        "NOT_MENTIONED",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "照合题逐项核对：A {对/错因}、B …；只有 {答案} 和原文 {原文句} 一致。",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.TRUE_INDICATED.ARTICLE",
+        "TX.ARTICLE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中某处的改写；需逐项排除，干扰项多为部分正确或细节错位"
+      },
+      "part": 7,
+      "stem_pattern": "What is indicated/stated about {X}?",
+      "template_id": "T7.TRUE_INDICATED.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "PARTIAL",
+        "VERBATIM_WRONG",
+        "NOT_MENTIONED",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "照合题逐项核对：A {对/错因}、B …；只有 {答案} 和原文 {原文句} 一致。",
+      "format_version": "current",
+      "length": {
+        "max": 240,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.TRUE_INDICATED.WEB",
+        "TX.WEB"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中某处的改写；需逐项排除，干扰项多为部分正确或细节错位"
+      },
+      "part": 7,
+      "stem_pattern": "What is indicated/stated about {X}?",
+      "template_id": "T7.TRUE_INDICATED.WEB",
+      "text_type": "TX.WEB"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "PARTIAL",
+        "VERBATIM_WRONG",
+        "NOT_MENTIONED",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "照合题逐项核对：A {对/错因}、B …；只有 {答案} 和原文 {原文句} 一致。",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 60,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.TRUE_INDICATED.REVIEW",
+        "TX.REVIEW"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中某处的改写；需逐项排除，干扰项多为部分正确或细节错位"
+      },
+      "part": 7,
+      "stem_pattern": "What is indicated/stated about {X}?",
+      "template_id": "T7.TRUE_INDICATED.REVIEW",
+      "text_type": "TX.REVIEW"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "PARTIAL",
+        "VERBATIM_WRONG",
+        "NOT_MENTIONED",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "照合题逐项核对：A {对/错因}、B …；只有 {答案} 和原文 {原文句} 一致。",
+      "format_version": "current",
+      "length": {
+        "max": 240,
+        "min": 80,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.TRUE_INDICATED.JOB_POSTING",
+        "TX.JOB_POSTING"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项为文中某处的改写；需逐项排除，干扰项多为部分正确或细节错位"
+      },
+      "part": 7,
+      "stem_pattern": "What is indicated/stated about {X}?",
+      "template_id": "T7.TRUE_INDICATED.JOB_POSTING",
+      "text_type": "TX.JOB_POSTING"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "NOT 题反着做：A 在第 {} 句、B 在 …、C 在 …都提到了，只有 {答案} 没提到。",
+      "format_version": "current",
+      "length": {
+        "max": 220,
+        "min": 60,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.NOT_TRUE.AD",
+        "TX.AD",
+        "ST.ELIM.OPTIONS"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "三个选项在文中能找到（多为改写），一个未提及；正确项常为“合理但没说”"
+      },
+      "part": 7,
+      "stem_pattern": "What is NOT mentioned/included/listed …?",
+      "template_id": "T7.NOT_TRUE.AD",
+      "text_type": "TX.AD"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "NOT 题反着做：A 在第 {} 句、B 在 …、C 在 …都提到了，只有 {答案} 没提到。",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.NOT_TRUE.ARTICLE",
+        "TX.ARTICLE",
+        "ST.ELIM.OPTIONS"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "三个选项在文中能找到（多为改写），一个未提及；正确项常为“合理但没说”"
+      },
+      "part": 7,
+      "stem_pattern": "What is NOT mentioned/included/listed …?",
+      "template_id": "T7.NOT_TRUE.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "NOT 题反着做：A 在第 {} 句、B 在 …、C 在 …都提到了，只有 {答案} 没提到。",
+      "format_version": "current",
+      "length": {
+        "max": 240,
+        "min": 80,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.NOT_TRUE.JOB_POSTING",
+        "TX.JOB_POSTING",
+        "ST.ELIM.OPTIONS"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "三个选项在文中能找到（多为改写），一个未提及；正确项常为“合理但没说”"
+      },
+      "part": 7,
+      "stem_pattern": "What is NOT mentioned/included/listed …?",
+      "template_id": "T7.NOT_TRUE.JOB_POSTING",
+      "text_type": "TX.JOB_POSTING"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "OVER_INFERENCE",
+        "VERBATIM_WRONG",
+        "REVERSE",
+        "SCOPE"
+      ],
+      "explanation_template_zh": "原文 {原文句} 说明 {事实}，只能推出 {答案}。{干扰项：推太远/原文没说}",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFERENCE.ARTICLE",
+        "TX.ARTICLE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项需结合 1–2 处原文推一步；干扰项为过度推断或照搬原文"
+      },
+      "part": 7,
+      "stem_pattern": "What is suggested/implied about {X}? / What will most likely …?",
+      "template_id": "T7.INFERENCE.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "OVER_INFERENCE",
+        "VERBATIM_WRONG",
+        "REVERSE",
+        "SCOPE"
+      ],
+      "explanation_template_zh": "原文 {原文句} 说明 {事实}，只能推出 {答案}。{干扰项：推太远/原文没说}",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFERENCE.EMAIL",
+        "TX.EMAIL"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项需结合 1–2 处原文推一步；干扰项为过度推断或照搬原文"
+      },
+      "part": 7,
+      "stem_pattern": "What is suggested/implied about {X}? / What will most likely …?",
+      "template_id": "T7.INFERENCE.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "MISATTRIBUTION",
+        "OVER_INFERENCE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "看场景词：{词1}、{词2} → 读者/身份是 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 50,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFER_WHO.NOTICE",
+        "TX.NOTICE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "由称呼、场景词、职责推身份/读者；干扰项为文中出现的其他角色"
+      },
+      "part": 7,
+      "stem_pattern": "For whom is the {doc} intended? / Who most likely is {person}? / What kind of business …?",
+      "template_id": "T7.INFER_WHO.NOTICE",
+      "text_type": "TX.NOTICE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "MISATTRIBUTION",
+        "OVER_INFERENCE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "看场景词：{词1}、{词2} → 读者/身份是 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 240,
+        "min": 80,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFER_WHO.JOB_POSTING",
+        "TX.JOB_POSTING"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "由称呼、场景词、职责推身份/读者；干扰项为文中出现的其他角色"
+      },
+      "part": 7,
+      "stem_pattern": "For whom is the {doc} intended? / Who most likely is {person}? / What kind of business …?",
+      "template_id": "T7.INFER_WHO.JOB_POSTING",
+      "text_type": "TX.JOB_POSTING"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "MISATTRIBUTION",
+        "OVER_INFERENCE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "看场景词：{词1}、{词2} → 读者/身份是 {答案}。",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFER_WHO.CHAT",
+        "TX.CHAT"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "由称呼、场景词、职责推身份/读者；干扰项为文中出现的其他角色"
+      },
+      "part": 7,
+      "stem_pattern": "For whom is the {doc} intended? / Who most likely is {person}? / What kind of business …?",
+      "template_id": "T7.INFER_WHO.CHAT",
+      "text_type": "TX.CHAT"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "MISATTRIBUTION",
+        "REVERSE",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "下一步看最后：{人} 说 {原文}，所以下一步是 {答案}；别的动作是别人说的。",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFER_NEXT.CHAT",
+        "TX.CHAT"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "答案在最后几句的承诺/计划（I'll… / Let me…）；干扰项是别人的动作"
+      },
+      "part": 7,
+      "stem_pattern": "What will {person} most likely do next?",
+      "template_id": "T7.INFER_NEXT.CHAT",
+      "text_type": "TX.CHAT"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "LITERAL_MEANING",
+        "MISATTRIBUTION",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "意图题看引号前一句：{前一句} 在问/说 {事}，所以 “{quote}” 在这里的意思是 {答案}，不是字面的 {字面}。",
+      "format_version": "current",
+      "length": {
+        "max": 150,
+        "min": 35,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INTENT.TEXT_MSG",
+        "TX.TEXT_MSG"
+      ],
+      "only_in": "TX.TEXT_MSG / TX.CHAT；引号原话必须在文中逐字出现并带时间戳",
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "引号里多为口语短句（Leave that to me / That works / I'm on it）；必须看前一句在说什么；干扰项按字面意思"
+      },
+      "part": 7,
+      "stem_pattern": "At {time}, what does {person} mean when he/she writes, \"{quote}\"?",
+      "template_id": "T7.INTENT.TEXT_MSG",
+      "text_type": "TX.TEXT_MSG"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "LITERAL_MEANING",
+        "MISATTRIBUTION",
+        "OVER_INFERENCE"
+      ],
+      "explanation_template_zh": "意图题看引号前一句：{前一句} 在问/说 {事}，所以 “{quote}” 在这里的意思是 {答案}，不是字面的 {字面}。",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INTENT.CHAT",
+        "TX.CHAT"
+      ],
+      "only_in": "TX.TEXT_MSG / TX.CHAT；引号原话必须在文中逐字出现并带时间戳",
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "引号里多为口语短句（Leave that to me / That works / I'm on it）；必须看前一句在说什么；干扰项按字面意思"
+      },
+      "part": 7,
+      "stem_pattern": "At {time}, what does {person} mean when he/she writes, \"{quote}\"?",
+      "template_id": "T7.INTENT.CHAT",
+      "text_type": "TX.CHAT"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_POSITION"
+      ],
+      "explanation_template_zh": "插入句里有 {线索词}，它指的是 {对象}，{对象} 出现在 [{n}] 前一句，所以放 [{n}]。其他位置前面没有 {对象}。",
+      "fixed_options": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]"
+      ],
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INSERTION.ARTICLE",
+        "TX.ARTICLE"
+      ],
+      "only_in": "single passage, set of 3–4 questions, last question of set",
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "选项固定为 [1]–[4]；插入句含指代/连接线索，只有一个位置前后都接得上"
+      },
+      "part": 7,
+      "stem_pattern": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"{sentence}\"",
+      "template_id": "T7.INSERTION.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_POSITION"
+      ],
+      "explanation_template_zh": "插入句里有 {线索词}，它指的是 {对象}，{对象} 出现在 [{n}] 前一句，所以放 [{n}]。其他位置前面没有 {对象}。",
+      "fixed_options": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]"
+      ],
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INSERTION.EMAIL",
+        "TX.EMAIL"
+      ],
+      "only_in": "single passage, set of 3–4 questions, last question of set",
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "选项固定为 [1]–[4]；插入句含指代/连接线索，只有一个位置前后都接得上"
+      },
+      "part": 7,
+      "stem_pattern": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"{sentence}\"",
+      "template_id": "T7.INSERTION.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_POSITION"
+      ],
+      "explanation_template_zh": "插入句里有 {线索词}，它指的是 {对象}，{对象} 出现在 [{n}] 前一句，所以放 [{n}]。其他位置前面没有 {对象}。",
+      "fixed_options": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]"
+      ],
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 100,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INSERTION.LETTER",
+        "TX.LETTER"
+      ],
+      "only_in": "single passage, set of 3–4 questions, last question of set",
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "选项固定为 [1]–[4]；插入句含指代/连接线索，只有一个位置前后都接得上"
+      },
+      "part": 7,
+      "stem_pattern": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"{sentence}\"",
+      "template_id": "T7.INSERTION.LETTER",
+      "text_type": "TX.LETTER"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "POLYSEMY_OTHER_SENSE",
+        "SEMANTIC_NEAR"
+      ],
+      "explanation_template_zh": "把选项放回原句：{原句}。这里 {w} 的意思是“{中文}”，只有 {答案} 放进去意思不变；{干扰项} 是 {w} 的别的意思。",
+      "format_version": "current",
+      "length": {
+        "max": 320,
+        "min": 150,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.SYNONYM.ARTICLE",
+        "TX.ARTICLE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "目标词是多义常用词，选项含它的其他常见义项；正确项放回原句意思不变"
+      },
+      "part": 7,
+      "stem_pattern": "The word \"{w}\" in paragraph {p}, line {l}, is closest in meaning to",
+      "template_id": "T7.SYNONYM.ARTICLE",
+      "text_type": "TX.ARTICLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "POLYSEMY_OTHER_SENSE",
+        "SEMANTIC_NEAR"
+      ],
+      "explanation_template_zh": "把选项放回原句：{原句}。这里 {w} 的意思是“{中文}”，只有 {答案} 放进去意思不变；{干扰项} 是 {w} 的别的意思。",
+      "format_version": "current",
+      "length": {
+        "max": 260,
+        "min": 90,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.SYNONYM.EMAIL",
+        "TX.EMAIL"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "目标词是多义常用词，选项含它的其他常见义项；正确项放回原句意思不变"
+      },
+      "part": 7,
+      "stem_pattern": "The word \"{w}\" in paragraph {p}, line {l}, is closest in meaning to",
+      "template_id": "T7.SYNONYM.EMAIL",
+      "text_type": "TX.EMAIL"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "POLYSEMY_OTHER_SENSE",
+        "SEMANTIC_NEAR"
+      ],
+      "explanation_template_zh": "把选项放回原句：{原句}。这里 {w} 的意思是“{中文}”，只有 {答案} 放进去意思不变；{干扰项} 是 {w} 的别的意思。",
+      "format_version": "current",
+      "length": {
+        "max": 620,
+        "min": 220,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.SYNONYM.MULTI",
+        "TX.MULTI"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "目标词是多义常用词，选项含它的其他常见义项；正确项放回原句意思不变"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "The word \"{w}\" in paragraph {p}, line {l}, is closest in meaning to",
+      "template_id": "T7.SYNONYM.MULTI",
+      "text_type": "TX.MULTI"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_NUMBER",
+        "VERBATIM_WRONG",
+        "PARTIAL"
+      ],
+      "explanation_template_zh": "先查表：{项目} = {数}；再套规则 {规则} → {算式} = {答案}。直接抄总价/漏算是陷阱。",
+      "format_version": "current",
+      "length": {
+        "max": 180,
+        "min": 30,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.CALC_LOOKUP.INVOICE",
+        "TX.INVOICE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "需要表格查值 + 一条规则（折扣/免运费/时间冲突）计算；干扰项为未应用规则或应用错"
+      },
+      "part": 7,
+      "stem_pattern": "How much will {person} most likely pay? / Which session can {person} attend?",
+      "template_id": "T7.CALC_LOOKUP.INVOICE",
+      "text_type": "TX.INVOICE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_NUMBER",
+        "VERBATIM_WRONG",
+        "PARTIAL"
+      ],
+      "explanation_template_zh": "先查表：{项目} = {数}；再套规则 {规则} → {算式} = {答案}。直接抄总价/漏算是陷阱。",
+      "format_version": "current",
+      "length": {
+        "max": 180,
+        "min": 30,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.CALC_LOOKUP.SCHEDULE",
+        "TX.SCHEDULE"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "需要表格查值 + 一条规则（折扣/免运费/时间冲突）计算；干扰项为未应用规则或应用错"
+      },
+      "part": 7,
+      "stem_pattern": "How much will {person} most likely pay? / Which session can {person} attend?",
+      "template_id": "T7.CALC_LOOKUP.SCHEDULE",
+      "text_type": "TX.SCHEDULE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_DOC",
+        "PARTIAL",
+        "MISATTRIBUTION",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "这是跨篇题：第 {x} 篇说 {规则}，第 {y} 篇说 {个案}，两者一合 → {答案}。只看一篇会选 {陷阱项}。",
+      "format_version": "current",
+      "length": {
+        "max": 450,
+        "min": 220,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.CROSS_REF.DOUBLE",
+        "TX.DOUBLE",
+        "ST.LOCATE.PARAPHRASE_MATCH"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "答案必须由 A 篇规则 + B 篇个案结合得出；单看一篇会选到干扰项"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "（需两篇信息）What is true about …? / Which … will {person} …?",
+      "template_id": "T7.CROSS_REF.DOUBLE",
+      "text_type": "TX.DOUBLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "WRONG_DOC",
+        "PARTIAL",
+        "MISATTRIBUTION",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "这是跨篇题：第 {x} 篇说 {规则}，第 {y} 篇说 {个案}，两者一合 → {答案}。只看一篇会选 {陷阱项}。",
+      "format_version": "current",
+      "length": {
+        "max": 620,
+        "min": 300,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.CROSS_REF.TRIPLE",
+        "TX.TRIPLE",
+        "ST.LOCATE.PARAPHRASE_MATCH"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "答案必须由 A 篇规则 + B 篇个案结合得出；单看一篇会选到干扰项"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "（需两篇信息）What is true about …? / Which … will {person} …?",
+      "template_id": "T7.CROSS_REF.TRIPLE",
+      "text_type": "TX.TRIPLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 620,
+        "min": 300,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.TRIPLE",
+        "TX.TRIPLE",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.TRIPLE",
+      "text_type": "TX.TRIPLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 450,
+        "min": 220,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.DOUBLE",
+        "TX.DOUBLE",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.DOUBLE",
+      "text_type": "TX.DOUBLE"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "PARTIAL",
+        "SCOPE",
+        "NOT_MENTIONED"
+      ],
+      "explanation_template_zh": "目的题看开头：{原文句}，意思是“{中文}”。{答案} 是它的概括说法。{干扰项：只是细节/没提到}",
+      "format_version": "current",
+      "length": {
+        "max": 620,
+        "min": 220,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.MAIN_PURPOSE.MULTI",
+        "TX.MULTI"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是全文目的的概括改写（多在第一段或 I am writing to…）；干扰项取文中细节或扩大范围"
+      },
+      "part": 7,
+      "set_size": 5,
+      "stem_pattern": "What is the purpose of the {doc}? / What is the {doc} mainly about? / Why did {person} write …?",
+      "template_id": "T7.MAIN_PURPOSE.MULTI",
+      "text_type": "TX.MULTI"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 150,
+        "min": 35,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.TEXT_MSG",
+        "TX.TEXT_MSG",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.TEXT_MSG",
+      "text_type": "TX.TEXT_MSG"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "OVER_INFERENCE",
+        "VERBATIM_WRONG",
+        "REVERSE",
+        "SCOPE"
+      ],
+      "explanation_template_zh": "原文 {原文句} 说明 {事实}，只能推出 {答案}。{干扰项：推太远/原文没说}",
+      "format_version": "current",
+      "length": {
+        "max": 200,
+        "min": 60,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.INFERENCE.REVIEW",
+        "TX.REVIEW"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项需结合 1–2 处原文推一步；干扰项为过度推断或照搬原文"
+      },
+      "part": 7,
+      "stem_pattern": "What is suggested/implied about {X}? / What will most likely …?",
+      "template_id": "T7.INFERENCE.REVIEW",
+      "text_type": "TX.REVIEW"
+    },
+    {
+      "difficulty_knobs": [
+        "正确项改写程度（原词→同义词→概括）",
+        "定位句位置（开头=易，中段/跨段=难）",
+        "干扰项与原文用词重合度",
+        "需要整合的句数/篇数",
+        "文本长度与用词档次"
+      ],
+      "distractor_traps": [
+        "VERBATIM_WRONG",
+        "MISATTRIBUTION",
+        "NOT_MENTIONED",
+        "WRONG_NUMBER"
+      ],
+      "explanation_template_zh": "用题干关键词 {关键词} 回文定位到 {原文句}。原文说 {原文}，{答案} 换了个说法：{改写对照}。",
+      "format_version": "current",
+      "length": {
+        "max": 230,
+        "min": 70,
+        "unit": "words_in_set_text"
+      },
+      "node_ids": [
+        "QT.P7X.DETAIL.INSTRUCTIONS",
+        "TX.INSTRUCTIONS",
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "option_rules": {
+        "n_options": 4,
+        "option_length": "四项长度相近，正确项不得明显最长",
+        "order": "随机（INSERTION 固定 [1]–[4]；数字选项按从小到大）",
+        "rule": "正确项是原文的同义改写（换词或换说法）；干扰项照搬原文词、张冠李戴或未提及"
+      },
+      "part": 7,
+      "stem_pattern": "According to the {doc}, what/when/where/who …?",
+      "template_id": "T7.DETAIL.INSTRUCTIONS",
+      "text_type": "TX.INSTRUCTIONS"
+    }
+  ],
+  "trap_types": {
+    "AGREEMENT": "一致错：主谓单复数或数量词搭配不一致",
+    "BROKEN_LINK": "衔接断：句中的 this/they/it 在前文找不到对象，或与后句接不上",
+    "COLLOCATION": "近义但搭配不对：意思接近，但和空格前后的词不搭",
+    "CONN_LOGIC": "逻辑关系错：转折/因果/让步/条件用反",
+    "CONN_TYPE": "连接词类别错：介词/连词/副词混用（后面接名词还是句子）",
+    "CONTRADICT": "与上下文矛盾",
+    "COUNT_NUMBER": "可数/不可数、单复数错",
+    "FORM_LOOKALIKE": "形近词：长得像，意思不同",
+    "LITERAL_MEANING": "意图题按字面意思理解，没看上下文",
+    "MISATTRIBUTION": "张冠李戴：把 A 的信息安到 B 身上",
+    "NONFINITE": "非谓语错：该用谓语却给了 -ing/to do/-ed，或反过来",
+    "NOT_MENTIONED": "未提及：原文没说",
+    "OFF_TOPIC": "话题无关：句子本身没错，但和这段话没关系",
+    "OVER_INFERENCE": "过度推断：听起来合理，原文推不出来",
+    "PAIR_MISMATCH": "成对表达配错（both…and / either…or / so…that）",
+    "PARTIAL": "部分正确：只对了一半",
+    "POLYSEMY_OTHER_SENSE": "同义词题选了这个词的另一个常见义项",
+    "POS_MISMATCH": "词性错位：同词根的别的词性，放进空格语法不通",
+    "PRON_CASE": "代词格错：主格/宾格/所有格/反身混用",
+    "PRON_REFERENT": "指代对象错：人称或单复数和前文不对应",
+    "REPEAT_INFO": "重复已说过的信息，没有推进作用",
+    "REVERSE": "与原文相反",
+    "SCOPE": "范围陷阱：过宽/过窄/绝对化",
+    "SEMANTIC_NEAR": "语义不合：同词性、语法通，但放进句子意思不对",
+    "TENSE_MISMATCH": "时态错位：与时间状语/上下文时间不一致",
+    "VERBATIM_WRONG": "原文逐字重复但意思不对：照搬原文词，说的却是另一回事",
+    "VOICE_MISMATCH": "语态错位：主语和动词的主动/被动关系弄反",
+    "WRONG_DOC": "用错篇：多篇题里拿了另一篇的信息",
+    "WRONG_NUMBER": "数字/时间/金额错位或算错",
+    "WRONG_POSITION": "插入位置不对：放进去后指代或逻辑接不上"
+  },
+  "version": "templates_v1"
+}

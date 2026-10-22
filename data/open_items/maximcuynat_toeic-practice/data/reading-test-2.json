@@ -1,0 +1,1791 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-08",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "B",
+          "choices": [
+            "accurate",
+            "accurately",
+            "accuracy",
+            "accurateness"
+          ],
+          "explanation": "“Plan” is a verb, so it takes an adverb: “plan their collections more accurately”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Vessel arrivals at Terminal 4 are posted hourly so that hauliers can plan their collections more ______."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "invests",
+            "is investing",
+            "was investing",
+            "will have invested"
+          ],
+          "explanation": "“By the time” plus a future event calls for the future perfect: the investing will be complete before the hub opens.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the new sorting hub opens in March, the company ______ more than €4 million in automation."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "explanation": "The fixed expression is “in writing”, meaning in a written document.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "All catering orders must be confirmed ______ writing at least seventy-two hours before the event."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "configurations",
+            "configure",
+            "configured",
+            "configurable"
+          ],
+          "explanation": "“Several” must be followed by a plural noun: “several configurations”.",
+          "number": 104,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The banquet hall can be arranged in several ______ depending on the size of the party."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "decline",
+            "reduce",
+            "postpone",
+            "dismiss"
+          ],
+          "explanation": "“Postpone … until” is the only choice that means moving an event to a later date, which is what the unconfirmed tour dates require.",
+          "number": 105,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The publisher decided to ______ the launch of the biography until the author's tour dates were confirmed."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "removed",
+            "were removed",
+            "have removed",
+            "removing"
+          ],
+          "explanation": "The pallets receive the action, so a past passive is needed to match “was released”.",
+          "number": 106,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "Damaged pallets ______ from the container before the shipment was released to the customer."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "substance",
+            "substantially",
+            "substantiate",
+            "substantial"
+          ],
+          "explanation": "An adjective is needed before the noun “discount”: “a substantial discount”.",
+          "number": 107,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Guests staying more than five nights receive a ______ discount on all spa treatments."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "to book",
+            "book",
+            "booking",
+            "to have booked"
+          ],
+          "explanation": "“Recommend” takes a gerund when no object follows it: “recommends booking”.",
+          "number": 108,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The freight forwarder recommends ______ perishable goods at least a week before the holiday period."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Although",
+            "Because",
+            "So that",
+            "Unless"
+          ],
+          "explanation": "The delay and the on-time arrival conflict, so a concessive conjunction is required. “Because” would make the delay the reason they were punctual.",
+          "number": 109,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the ferry crossing was delayed by fog, the delegates arrived in time for the opening reception."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "compose",
+            "composed",
+            "composure",
+            "composedly"
+          ],
+          "explanation": "After the preposition “with” and the adjective “impressive”, a noun is required: “with impressive composure”.",
+          "number": 110,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The hotel's night manager handled the double-booking with impressive ______."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "leads",
+            "has led",
+            "led",
+            "is leading"
+          ],
+          "explanation": "“Since” with a past starting point calls for the present perfect, showing that she still leads the team.",
+          "number": 111,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Ms. Adeyemi ______ the conference centre's audiovisual team since it was founded eight years ago."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "what",
+            "where",
+            "who",
+            "that"
+          ],
+          "explanation": "“Visited” has no object, so the relative pronoun fills that gap. “Where” is tempting because the noun is a place, but it would leave “visited” incomplete.",
+          "number": 112,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The distribution centre ______ we visited last month processes 12,000 parcels an hour."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "legible",
+            "legibility",
+            "legibly",
+            "legibleness"
+          ],
+          "explanation": "An adverb is needed to modify the verb “is printed”: “printed legibly”.",
+          "number": 113,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Please ensure that the invoice number is printed ______ on the outside of every carton."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "by",
+            "until",
+            "since",
+            "during"
+          ],
+          "explanation": "“By” marks a deadline for a single completed action; “until” would describe an activity continuing up to midnight.",
+          "number": 114,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The trade fair stand must be dismantled ______ midnight on Sunday."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "reduction",
+            "revenue",
+            "receipt",
+            "refund"
+          ],
+          "explanation": "Money returned for goods sent back is a refund; a “reduction” would lower a future price rather than repay one already paid.",
+          "number": 115,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Bookshops that return unsold copies within ninety days are eligible for a full ______."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "profession",
+            "professionalism",
+            "professionally",
+            "professional"
+          ],
+          "explanation": "The praise is for a quality the staff showed, and “professionalism” is the noun naming it. “Profession” would mean their trade, not their conduct.",
+          "number": 116,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The catering manager praised the kitchen staff for their ______ under pressure."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "is",
+            "are",
+            "have been",
+            "were"
+          ],
+          "explanation": "The subject is the singular “list”, not the plural “carriers” inside the prepositional phrase.",
+          "number": 117,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "The list of approved freight carriers ______ reviewed by the procurement committee each quarter."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "has",
+            "will have",
+            "had",
+            "is having"
+          ],
+          "explanation": "The sealing happened before the past arrival, so the past perfect is required.",
+          "number": 118,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "When the courier arrived at the loading bay, the warehouse team ______ already sealed the last crate."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "fascinated",
+            "fascinating",
+            "fascinate",
+            "fascination"
+          ],
+          "explanation": "The account produces the effect, so the present participle is used; “fascinated” would describe the delegates, not the account.",
+          "number": 119,
+          "tags": [
+            "participle-adjective"
+          ],
+          "text": "Delegates found the keynote speaker's account of the industry's transformation deeply ______."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "acquire",
+            "acquired",
+            "acquisitive",
+            "acquisition"
+          ],
+          "explanation": "Between “the” and “of” only a noun can stand: “the acquisition of”.",
+          "number": 120,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The hotel group announced the ______ of three boutique properties on the Adriatic coast."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Both",
+            "All",
+            "Each",
+            "Every"
+          ],
+          "explanation": "The singular verb “has” and the singular “its” rule out “both”, which would take “have”. “Every” cannot be followed by “of”.",
+          "number": 121,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "______ of the two banquet rooms has its own service entrance."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "must be signed",
+            "must sign",
+            "is signing",
+            "will sign"
+          ],
+          "explanation": "The agreement is what gets signed, and the agent appears in a “by” phrase, so the modal passive is required.",
+          "number": 122,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The revised distribution agreement ______ by both parties before the end of the fiscal year."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "steady",
+            "steadier",
+            "steadiness",
+            "steadily"
+          ],
+          "explanation": "The blank describes how the rates have risen, which calls for an adverb.",
+          "number": 123,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Freight rates on the northern route have risen ______ since the canal restrictions were introduced."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "collecting",
+            "to collect",
+            "collect",
+            "collection"
+          ],
+          "explanation": "The pattern “arrange for + noun + to + verb” states the purpose of the arrangement.",
+          "number": 124,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The events team arranged for a second shuttle bus ______ guests from the airport terminal."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "must",
+            "may",
+            "might",
+            "would"
+          ],
+          "explanation": "“There are no exceptions” signals an obligation rather than a permission or a possibility.",
+          "number": 125,
+          "tags": [
+            "modal"
+          ],
+          "text": "Visitors ______ wear a high-visibility vest at all times in the container yard; there are no exceptions."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "in",
+            "at",
+            "on",
+            "for"
+          ],
+          "explanation": "Days of the week take “on”, including recurring plural days: “on Thursdays”.",
+          "number": 126,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The film critic's column appears ______ Thursdays in the weekend supplement."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "inconvenient",
+            "inconvenience",
+            "inconveniently",
+            "inconveniencing"
+          ],
+          "explanation": "After “the” and before the reduced clause “caused by”, a noun is needed: “the inconvenience caused”.",
+          "number": 127,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The conference organisers apologised for the ______ caused by the change of venue."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "moved",
+            "has moved",
+            "had moved",
+            "will be moving"
+          ],
+          "explanation": "“Next Monday” places the move in the future, which the three past forms cannot express.",
+          "number": 128,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Next Monday the newsroom ______ to its refurbished offices on Kandinsky Street."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "in case",
+            "even if",
+            "provided that",
+            "as though"
+          ],
+          "explanation": "The notice is a condition on the adaptation, and “provided that” states that condition. “Even if” would say the notice makes no difference.",
+          "number": 129,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "The banquet menu can be adapted for vegetarian guests, ______ the kitchen is notified at least a day in advance."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "redeemed",
+            "recovered",
+            "restored",
+            "retrieved"
+          ],
+          "explanation": "A voucher is “redeemed” when it is exchanged for what it entitles the holder to; the other verbs describe getting something back rather than using it.",
+          "number": 130,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "All complimentary breakfast vouchers must be ______ before 10:30 A.M."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "To: All Export Desk Staff\nFrom: Bertil Lindqvist, Operations Manager\nDate: 12 May\nSubject: Customs paperwork from 1 June\n\nFrom 1 June, every consignment leaving our Rotterdam depot must {{131}} by an electronic customs declaration lodged at least four hours before collection. The paper declaration will remain valid only for shipments booked before that date.\n\nLodging a declaration takes about ten minutes on the Trade Gateway portal. {{132}}, the system stores each exporter's details, so a repeat customer can be processed in a fraction of that time.\n\n{{133}} Please raise them with your team leader rather than with the carrier, as the carrier is not party to the new arrangement.\n\nLog-in details will be sent to your work address on 26 May. Drivers will not be permitted to leave the yard {{134}} a declaration reference is attached to the manifest.",
+              "label": "Questions 131-134 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "accompany",
+                "accompanying",
+                "be accompanied",
+                "have accompanied"
+              ],
+              "explanation": "The consignment is the thing accompanied, and the agent follows in a “by” phrase, so the modal passive is needed: “must be accompanied by”.",
+              "number": 131,
+              "tags": [
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "However",
+                "Otherwise",
+                "For example",
+                "As a result"
+              ],
+              "explanation": "Ten minutes sounds slow, and the stored details make repeat claims much faster, so the two sentences stand in contrast.",
+              "number": 132,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The portal was tested at three other depots this spring.",
+                "You may find that some customers have questions about the new procedure.",
+                "Customs officers will visit the depot during the first week of June.",
+                "The four-hour deadline applies only to consignments over one tonne."
+              ],
+              "explanation": "The next sentence begins “Please raise them”, so the blank must introduce something that can be raised with a team leader — questions from customers. A visit by customs officers or a tonnage limit gives “them” nothing to refer to.",
+              "number": 133,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "despite",
+                "in case",
+                "so that",
+                "unless"
+              ],
+              "explanation": "Leaving the yard is forbidden except on one condition, which is what “unless” expresses. “So that” would turn the attached reference into the purpose of the ban.",
+              "number": 134,
+              "tags": [
+                "conjunction"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "NOTICE TO RESIDENT GUESTS — LIFT REFURBISHMENT\n\nThe two guest lifts in the north wing will be out of service from 3 to 17 October while their control systems are replaced. {{135}} Signs at every landing will direct you to it.\n\nHousekeeping will make an additional round of the north wing at 11 A.M. each day. Guests who need assistance {{136}} their luggage should call the front desk on extension 2, and a porter will be sent up.\n\nWe {{137}} that this work would cause the least disruption in October, when occupancy is at its lowest. Even so, guests on the upper floors may prefer a room closer to the ground. The duty manager will move you to the south wing at no extra charge, {{138}} to availability.\n\nThank you for your understanding.\n\nIlse Vandenberg, General Manager",
+              "label": "Questions 135-138 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The service lift beside the kitchen will be open to guests for the duration of the work.",
+                "Both lifts were inspected by an external engineer in April.",
+                "The refurbishment will cost the group a considerable sum.",
+                "Guests are asked not to leave luggage on the landings."
+              ],
+              "explanation": "“Signs at every landing will direct you to it” needs a single alternative lift to point to, and only the service lift supplies one. April's inspection and the cost give “it” no antecedent.",
+              "number": 135,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "for",
+                "of",
+                "with",
+                "on"
+              ],
+              "explanation": "“Assistance” takes “with” before the thing one is helped to handle: “assistance with their luggage”.",
+              "number": 136,
+              "tags": [
+                "preposition"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "decide",
+                "are deciding",
+                "will decide",
+                "decided"
+              ],
+              "explanation": "“Would cause” is the reported form of “will cause”, which requires a past reporting verb; the timing of the work has already been chosen.",
+              "number": 137,
+              "tags": [
+                "verb-tense"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "related",
+                "subject",
+                "according",
+                "owing"
+              ],
+              "explanation": "The set phrase is “subject to availability”, meaning the move depends on a free room. “Owing to” would give availability as the reason for the move.",
+              "number": 138,
+              "tags": [
+                "vocabulary"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: Features and Production teams\nFrom: Rosalía Marchetti, Managing Editor\nDate: 9 February\nRe: Spring issue deadlines\n\nThe printer has brought its schedule forward by a week, so the spring issue must be signed off on 6 March. All feature copy therefore needs to reach the subeditors' desk no {{139}} than 24 February.\n\nPhotography is the tightest part of the timetable. Anyone commissioning a shoot should obtain {{140}} approval from the picture desk before the fee is agreed, since we cannot process variations once a contract has been issued.\n\nThe picture desk has agreed to work through the weekend of 1 March, but that goodwill {{141}} on the rest of us filing on time. Please flag any image you know will need retouching as soon as you send in the copy that goes with it.\n\n{{142}} The full timetable is pinned in the shared calendar.",
+              "label": "Questions 139-142 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "later",
+                "late",
+                "latest",
+                "lately"
+              ],
+              "explanation": "The comparative pattern “no later than” sets a deadline; “than” cannot follow the superlative “latest”.",
+              "number": 139,
+              "tags": [
+                "comparative"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "write",
+                "writes",
+                "writing",
+                "written"
+              ],
+              "explanation": "A past participle works as an adjective before the noun: “written approval”, that is, approval given in writing.",
+              "number": 140,
+              "tags": [
+                "participle-adjective"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "depend",
+                "depending",
+                "depends",
+                "to depend"
+              ],
+              "explanation": "The subject of the clause is the singular “goodwill”, so the verb takes the third-person -s.",
+              "number": 141,
+              "tags": [
+                "subject-verb-agreement"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The printer has agreed to absorb the cost of the change.",
+                "I know these dates are tighter than usual, and I am grateful for the extra effort.",
+                "Please do not commission any new photography this quarter.",
+                "The spring issue will be twelve pages longer than the winter one."
+              ],
+              "explanation": "The memo has just asked for extra care under a compressed schedule, so a word of thanks closes it naturally before the pointer to the calendar. Banning new photography would contradict the paragraph that explains how to commission a shoot.",
+              "number": 142,
+              "tags": [
+                "sentence-insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "HALDEN HOUSE — Conference and Events Centre, Trondheim\n\nFifteen minutes from the airport and {{143}} reached by rail from the city centre, Halden House hosts residential meetings for ten to two hundred delegates.\n\nEight meeting rooms, every one of them with daylight and adjustable lighting. Day-delegate rates from €165 per person, including two breaks, a hot lunch and unlimited filter coffee. {{144}}\n\nOur kitchen builds each menu around {{145}} the region's farms and boats supply that week, so the spring and autumn cards are never quite the same.\n\nResidential delegates stay in one of forty rooms in the courtyard wing. Bookings of more than thirty rooms {{146}} a dedicated coordinator from the day the contract is signed.\n\nAsk for our full pack: events@haldenhouse.example or +47 73 55 41 20.",
+              "label": "Questions 143-146 refer to the following advertisement.",
+              "type": "advertisement"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "easy",
+                "ease",
+                "easiness",
+                "easily"
+              ],
+              "explanation": "The blank modifies the participle “reached”, so an adverb is required: “easily reached by rail”.",
+              "number": 143,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "All rooms have been refurbished since the centre changed hands.",
+                "Parking is limited to twenty spaces in the summer season.",
+                "Evening meals and overnight accommodation are quoted separately.",
+                "Delegates are welcome to bring their own audiovisual equipment."
+              ],
+              "explanation": "The sentence before lists exactly what the day rate covers, so the natural follow-on states what it does not, and it leads into the paragraphs on dining and rooms.",
+              "number": 144,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "what",
+                "which",
+                "that",
+                "whose"
+              ],
+              "explanation": "The preposition “around” needs an object, and “what” both supplies it and heads the clause, meaning “the things that”. “Which” and “that” would need a noun to attach to.",
+              "number": 145,
+              "tags": [
+                "relative-clause"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "assign",
+                "are assigned",
+                "assigning",
+                "have assigned"
+              ],
+              "explanation": "The bookings receive a coordinator rather than allocating one, so the passive is needed: “are assigned a dedicated coordinator”.",
+              "number": 146,
+              "tags": [
+                "passive-voice"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All dock supervisors, Halvorsen Freight Terminal\nFrom: Ingrid Solheim, Terminal Operations Manager\nDate: 3 March\nSubject: Bay assignments during resurfacing\n\nThe eastern yard will be resurfaced from 16 to 27 March. Bays 7 through 12 will be closed for the full two weeks, which leaves us nine working bays instead of fifteen.\n\nTo keep turnaround times under forty minutes, every inbound carrier must hold a booked arrival window for the duration of the works. Drivers who arrive without one will be asked to rebook, and that applies to the carriers we see every day as much as to anyone else. Please make this clear to them before the closure begins rather than at the gate.\n\nSupervisors should also move the two afternoon container collections to the 6 A.M. slot, where the schedule has more room.\n\nI will circulate the revised bay chart on 10 March.",
+              "label": "Questions 147-148 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To introduce a booking system for warehouse customers",
+                "To explain how deliveries will be managed during resurfacing work",
+                "To announce a permanent reduction in the number of loading bays",
+                "To report a rise in the cost of terminal operations"
+              ],
+              "explanation": "The memo announces a two-week closure of six bays and then sets out the arrangements — booked arrival windows and revised collection times — that will apply while the yard is resurfaced. The reduction is temporary, not permanent.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why was the memo written?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Divide them between two bays",
+                "Suspend them until 27 March",
+                "Transfer them to a partner terminal",
+                "Move them to an early-morning slot"
+              ],
+              "explanation": "“Supervisors should also move the two afternoon container collections to the 6 A.M. slot”. Nothing suggests the collections stop or are given to another terminal.",
+              "number": 148,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are supervisors asked to do about the afternoon container collections?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Priya Raghunathan (10:12) The printer has just called. The paper we specified for the Ostrowski cookbook is out of stock until mid-May.\n\nDaniel Okonjo (10:14) That is three weeks after our launch date. Can they substitute?\n\nPriya Raghunathan (10:15) They can, but only with a lighter stock. The photographs would lose a lot of their depth.\n\nDaniel Okonjo (10:17) The photographs are the book. I would rather move the launch than print it on the wrong paper.\n\nPriya Raghunathan (10:19) Marketing has already booked us into two food festivals on the last weekend in April.\n\nDaniel Okonjo (10:21) Then they can rebook. Ask the printer to hold the original stock for us and I will speak to Marketing this afternoon.\n\nPriya Raghunathan (10:22) Will do. I will let the studio know as well.",
+              "label": "Questions 149-150 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The images matter too much to risk a lower-quality paper",
+                "The book contains photographs but very little text",
+                "The photographer should be credited on the cover",
+                "The photographs have not yet been delivered"
+              ],
+              "explanation": "Ms. Raghunathan has just said the substitute stock would cost the photographs their depth, and he answers by refusing to print on the wrong paper — so the remark is about how much the images are worth to the book.",
+              "number": 149,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:17, what does Mr. Okonjo most likely mean when he writes, “The photographs are the book”?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Approach a second printer",
+                "Choose a substitute paper stock",
+                "Discuss the schedule with the marketing team",
+                "Attend both food festivals"
+              ],
+              "explanation": "“I will speak to Marketing this afternoon” — the festivals they booked for April will have to be rearranged. It is Ms. Raghunathan, not Mr. Okonjo, who will contact the printer.",
+              "number": 150,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Okonjo agree to do?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "THE GRANARY AT ELDBERG — Events by the water\n\nA restored 1890s grain store on the harbour front, twenty minutes from the airport, for conferences, receptions and product launches.\n\nThe Loft — seated 120, standing 200 — river-facing terrace\nThe Mill Room — seated 60, standing 90 — original timber beams\nThe Vault — seated 24 — boardroom layout, natural light\n\nHire of any of the three rooms includes wireless internet, a technician on site for the whole of your booking, staging and lectern, and parking for thirty cars. Catering comes from our own kitchen; outside caterers cannot be admitted.\n\nWeekday hire from €900, Saturday hire from €1,600. Bookings confirmed more than six months ahead are held at the current year's rates, whatever the increase in the meantime.\n\nViewings by appointment, Tuesday to Friday. Write to bookings@granaryeldberg.example.",
+              "label": "Questions 151-153 refer to the following advertisement.",
+              "type": "advertisement"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A choice of outside caterers",
+                "Overnight accommodation for guests",
+                "Access to the river-facing terrace",
+                "The services of a technician"
+              ],
+              "explanation": "“Hire of any of the three rooms includes […] a technician on site for the whole of your booking”. The terrace belongs to The Loft alone, and outside caterers are expressly refused.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does the hire of every room include?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The Vault",
+                "The Loft",
+                "The Mill Room",
+                "Any of the three rooms"
+              ],
+              "explanation": "Only The Loft seats more than one hundred, at 120. The Mill Room seats 60 and can take 90 only for a standing event, which a dinner is not.",
+              "number": 152,
+              "tags": [
+                "inference"
+              ],
+              "text": "Which room would suit a seated dinner for one hundred guests?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "They are charged at this year's prices.",
+                "They require a larger deposit.",
+                "They include additional parking spaces.",
+                "They may be cancelled without a fee."
+              ],
+              "explanation": "“Bookings confirmed more than six months ahead are held at the current year's rates”, so a later price rise does not reach them.",
+              "number": 153,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about bookings made well in advance?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "To: r.almeida@vestbyimports.example\nFrom: claims@northgateforwarding.example\nDate: 11 October\nSubject: Consignment NG-448120\n\nDear Ms. Almeida,\n\nThank you for your message of 9 October about the twelve pallets of ceramic tableware that reached your Rotterdam warehouse with damaged outer packaging.\n\nOur driver's handheld records show that the consignment left our Gdansk depot intact and was transferred to a partner vehicle at Hanover. We have asked that partner for its own loading photographs and expect them within three working days.\n\nIn the meantime, please do not dispose of the damaged cartons. A surveyor will visit your warehouse on 15 October to inspect them, and no claim can proceed without that inspection.\n\nOnce the surveyor's report reaches us, we will settle any confirmed loss within twenty-one days, in line with clause 9 of our carriage terms.\n\nYours sincerely,\n\nMarek Zielinski\nClaims Officer, Northgate Forwarding",
+              "label": "Questions 154-156 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To confirm a delivery date for a new consignment",
+                "To ask that damaged goods be returned to Gdansk",
+                "To explain how a complaint is being handled",
+                "To request payment of an overdue invoice"
+              ],
+              "explanation": "He replies to Ms. Almeida's message about damaged packaging and sets out each step: the enquiry to the partner carrier, the surveyor's visit, then settlement. The cartons are to stay in Rotterdam, not go back to Gdansk.",
+              "number": 154,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Mr. Zielinski write the e-mail?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Photograph the pallets herself",
+                "Contact the partner carrier directly",
+                "Send a signed copy of clause 9",
+                "Keep the damaged cartons until 15 October"
+              ],
+              "explanation": "“please do not dispose of the damaged cartons”, because the surveyor arrives on 15 October to inspect them. Northgate is dealing with the partner carrier itself.",
+              "number": 155,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is Ms. Almeida asked to do?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It may have occurred after the goods left Gdansk.",
+                "It was limited to one of the twelve pallets.",
+                "It was caused by the driver's handheld device.",
+                "It has already been paid for in full."
+              ],
+              "explanation": "The records show the consignment leaving Gdansk intact, which points to something happening later — hence the request for the partner carrier's loading photographs from Hanover.",
+              "number": 156,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does the e-mail suggest about the damage?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\n\nHalden House to launch audio imprint\n\nBERGEN, 5 June — Halden House, an independent publisher of travel and food writing, today announced Halden Audio, an imprint that will record titles from its backlist as well as new books.\n\n— [1] — The first twelve recordings will be made in a studio the company has built inside its Bergen offices, rather than hired by the day as it has done until now. — [2] — Halden expects to release two audio titles a month from September.\n\n“Our readers have been asking for this for years, and until now we could not answer them at a price that worked,” said Sofia Berntsen, managing director. — [3] —\n\nThe imprint will be led by Tomás Ferreira, who joins from a broadcasting background and will oversee narrator casting and studio scheduling. — [4] — Halden Audio titles will be sold through the company's own site and through the main audiobook retailers.\n\nMedia enquiries: press@haldenhouse.example",
+              "label": "Questions 157-159 refer to the following press release.",
+              "type": "press release"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "They will be produced in a rented studio.",
+                "They will be made on the company's own premises.",
+                "They will all be new titles.",
+                "They will be released in a single month."
+              ],
+              "explanation": "The studio has been built “inside its Bergen offices, rather than hired by the day as it has done until now”. The imprint covers the backlist as well as new books, and releases come at two a month.",
+              "number": 157,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the first twelve recordings?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "He founded Halden House.",
+                "He has written several travel books.",
+                "He previously worked in broadcasting.",
+                "He will narrate the first twelve titles."
+              ],
+              "explanation": "He “joins from a broadcasting background”. His role is casting narrators and scheduling the studio, not reading the books himself.",
+              "number": 158,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about Mr. Ferreira?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "“He” and “the post” need an appointment to refer back to, and the only one described is Mr. Ferreira's, in the sentence immediately before [4]. At [3] the nearest person named is Ms. Berntsen, who is already in her role.",
+              "number": 159,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong? “He takes up the post on 1 July.”"
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Amara Nwachukwu (16:41) I am at the Fjordlyng conference centre. The tables are laid for 90, which matches the guest list I was given, but the organiser tells me she is expecting 110.\n\nLukas Weber (16:44) The organiser added twenty places this morning. I sent the new list to your old address by mistake. Sorry.\n\nAmara Nwachukwu (16:46) That explains it. Can the van bring twenty more covers and chairs? We have enough food.\n\nLukas Weber (16:49) Piotr is loading now. He can be with you by half past five.\n\nAmara Nwachukwu (16:50) Cutting it fine. Doors at six.\n\nLukas Weber (16:52) Ask the centre for their stacking chairs as a fallback. They keep them behind the stage.\n\nAmara Nwachukwu (16:55) Doing that now. If Piotr is on time we will not need them.",
+              "label": "Questions 160-162 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The revised list went to an address she no longer uses.",
+                "She reached the venue after the tables had been laid.",
+                "The organiser made the change during the event.",
+                "The conference centre failed to pass on a message."
+              ],
+              "explanation": "“I sent the new list to your old address by mistake”, which is why she is still working from a list of 90.",
+              "number": 160,
+              "tags": [
+                "detail"
+              ],
+              "text": "Why was Ms. Nwachukwu unaware of the change to the guest list?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Delaying the start of the event",
+                "Borrowing chairs from the venue",
+                "Reducing the number of courses served",
+                "Sending the van out twice"
+              ],
+              "explanation": "“Ask the centre for their stacking chairs as a fallback” — something to fall back on if Piotr is late. Ms. Nwachukwu confirms the food is sufficient, so the menu is not in question.",
+              "number": 161,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Weber suggest as a precaution?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The portions will have to be made smaller.",
+                "The van is carrying more than it should.",
+                "The guest list ought to be shortened.",
+                "The delivery will arrive with little time to spare."
+              ],
+              "explanation": "She follows the remark with “Doors at six”, and the van is due at half past five — only thirty minutes to set twenty extra places.",
+              "number": 162,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 16:50, what does Ms. Nwachukwu mean when she writes, “Cutting it fine”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "NOTICE TO GUESTS — Lift refurbishment, 4-8 February\n\nThe two guest lifts in the north wing will be out of service from 07:00 on Monday 4 February until 18:00 on Friday 8 February while their cabins are replaced.\n\nWhile the work is under way:\n\n- The service lift beside the kitchen will carry guests between the ground floor and floors 1 to 6. A porter will operate it from 06:30 until midnight.\n- Guests with reduced mobility who are booked on floors 4 to 6 will be moved to equivalent rooms on floors 1 and 2 at no extra cost. Please speak to reception on arrival.\n- Luggage will be collected from and delivered to rooms on request; dial extension 4.\n- Breakfast will be served in the Harbour Room on the ground floor rather than in the sixth-floor restaurant.\n\nThe south wing lifts are unaffected. We are sorry for the disruption and thank you for your patience.\n\nGuest Services",
+              "label": "Questions 163-165 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "They will be given a discount on the room rate.",
+                "They will be asked to check out earlier than planned.",
+                "They may be offered a different room at no extra cost.",
+                "They will have breakfast brought to their rooms."
+              ],
+              "explanation": "Guests with reduced mobility on floors 4 to 6 “will be moved to equivalent rooms on floors 1 and 2 at no extra cost”. The rate itself is not reduced, and breakfast moves to the Harbour Room for everyone.",
+              "number": 163,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will happen to some guests booked on the upper floors?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "A service lift with a porter",
+                "Luggage storage in the Harbour Room",
+                "The sixth-floor restaurant",
+                "Parking at no charge"
+              ],
+              "explanation": "“A porter will operate it from 06:30 until midnight”, referring to the service lift beside the kitchen. The sixth-floor restaurant is closed for breakfast during the works.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is available to guests between 06:30 and midnight?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Where breakfast is served",
+                "The hotel's check-out times",
+                "Room assignments for certain guests",
+                "Use of the north wing lifts"
+              ],
+              "explanation": "The notice covers the breakfast room, the reallocation of rooms on floors 4 to 6 and the closure of the north wing lifts, but says nothing about check-out.",
+              "number": 165,
+              "tags": [
+                "not-question"
+              ],
+              "text": "What is NOT mentioned in the notice as being affected by the work?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "www.kestrelline.example/services/bonded-storage\n\nKestrel Line — Bonded storage\n\nKestrel Line operates 18,000 square metres of customs-bonded warehousing at the Port of Trelleby. Goods held in a bonded facility are not taxed until they are released for sale, which frees capital while stock waits for a buyer.\n\nWhat we hold\nPalletised dry goods, wines and spirits, and packaged food with a shelf life of six months or more. We cannot accept chilled or frozen cargo, live plants, or hazardous material of any class.\n\nWhat it costs\nStorage is charged per pallet per week, from €4.10, with the rate falling once a customer keeps more than 200 pallets with us. Handling in and out is billed separately at €7.50 per pallet movement.\n\nReporting\nEvery customer receives a stock file each night and can also run the same report from the customer portal at any hour. Discrepancies raised before noon are investigated the same day.\n\nTo open an account, complete the enquiry form. Accounts are normally active within five working days.",
+              "label": "Questions 166-169 refer to the following Web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "Deliveries to retailers arrive sooner.",
+                "Handling is charged at a lower rate.",
+                "Packaged food keeps for longer.",
+                "Tax is not due until the goods are sold."
+              ],
+              "explanation": "“Goods held in a bonded facility are not taxed until they are released for sale, which frees capital”. Handling is billed separately and at a flat rate.",
+              "number": 166,
+              "tags": [
+                "detail"
+              ],
+              "text": "What advantage of bonded storage does the page describe?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Frozen seafood",
+                "Potted plants",
+                "Bottled wine",
+                "Industrial solvents"
+              ],
+              "explanation": "“wines and spirits” appear on the list of goods held. Frozen cargo, live plants and hazardous material are all excluded.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "What kind of cargo will Kestrel Line accept?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "decreasing",
+                "dropping out",
+                "collapsing",
+                "arriving"
+              ],
+              "explanation": "The rate goes down for customers who store more than 200 pallets, so “falling” here means decreasing rather than collapsing, which would suggest a sudden failure.",
+              "number": 168,
+              "tags": [
+                "vocabulary"
+              ],
+              "text": "In the section “What it costs”, the word “falling” is closest in meaning to"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "They are produced once a week.",
+                "Customers can generate them whenever they wish.",
+                "They must be requested before noon.",
+                "They are posted to the customer's office."
+              ],
+              "explanation": "Customers “can also run the same report from the customer portal at any hour”. Noon is the deadline for raising a discrepancy, not for asking for a report.",
+              "number": 169,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about stock reports?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "LINDVALL & DAUGHTERS — Catering\nReceipt no. 20-6614\nDate: 22 November\n\nClient: Sable & Quill Publishing\nEvent: Autumn author reception, Ravnholt Hall\nGuests: 85\n\nCanapé service, 8 items per guest .......... €1,275.00\nSparkling wine, 14 bottles ................... €322.00\nNon-alcoholic bar ............................ €170.00\nStaff, 6 servers for 5 hours ................. €900.00\nDelivery and collection ....................... €95.00\n\nSubtotal ................................... €2,762.00\nDeposit paid 3 October ...................... -€500.00\nBalance received 22 November ............... €2,262.00\n\nSettled in full by bank transfer. Thank you for your custom.\n\nGlassware is hired and must be returned within three working days; after that a charge of €4 applies for each missing glass. Please report breakages to accounts@lindvalldaughters.example rather than replacing items yourself.",
+              "label": "Questions 170-171 refer to the following receipt.",
+              "type": "receipt"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "€500.00",
+                "€900.00",
+                "€1,275.00",
+                "€2,262.00"
+              ],
+              "explanation": "“Balance received 22 November … €2,262.00”, that is the subtotal of €2,762.00 less the €500.00 deposit paid in October.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "How much did the client pay on 22 November?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Replace any broken glasses before returning them",
+                "Pay the deposit within three working days",
+                "Notify the caterer of any breakages",
+                "Collect the glassware from Ravnholt Hall"
+              ],
+              "explanation": "“Please report breakages to accounts@lindvalldaughters.example rather than replacing items yourself” — the receipt asks for the opposite of replacement.",
+              "number": 171,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is the client asked to do?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "TIDEWATER QUARTERLY — Subscriber information\n\nTidewater Quarterly is published in March, June, September and December. Print copies are posted in the last week of the preceding month; digital editions appear on the first day of the month of publication.\n\nRates\nDigital only — €38 a year\nPrint only — €62 a year\nPrint and digital — €74 a year\nStudents and library staff pay half the print-and-digital rate on production of a valid card.\n\nChanging your address\nTell us at least three weeks before an issue is posted. Copies returned to us as undeliverable are not replaced free of charge; a replacement costs €9 including postage.\n\nBack issues\nIssues from the past four years are on the website for subscribers at no cost. Earlier issues must be ordered from the office and are subject to availability.\n\nGift subscriptions begin with the next issue to be published rather than the current one. A card announcing the gift is sent to the recipient in the week the subscription starts.",
+              "label": "Questions 172-175 refer to the following information.",
+              "type": "information"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "In late February",
+                "On 1 March",
+                "In the last week of March",
+                "In early April"
+              ],
+              "explanation": "“Print copies are posted in the last week of the preceding month”, which for a March issue is the end of February. The first of the month is the date for digital editions.",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "When are print copies of the March issue sent out?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "€19.00",
+                "€37.00",
+                "€62.00",
+                "€74.00"
+              ],
+              "explanation": "Students pay half the print-and-digital rate of €74, that is €37. Halving the digital-only rate instead would give €19.",
+              "number": 173,
+              "tags": [
+                "detail"
+              ],
+              "text": "How much does a student pay for a print and digital subscription?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It is posted again at no cost.",
+                "It is added to the website archive.",
+                "It extends the subscription by one issue.",
+                "A replacement has to be paid for."
+              ],
+              "explanation": "Such copies “are not replaced free of charge; a replacement costs €9 including postage”.",
+              "number": 174,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about a copy returned as undeliverable?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "They cost less than ordinary subscriptions.",
+                "They cannot be bought once an issue has appeared.",
+                "They start with the following issue.",
+                "The announcement card goes to the buyer."
+              ],
+              "explanation": "They “begin with the next issue to be published rather than the current one”, and the card announcing the gift goes to the recipient.",
+              "number": 175,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about gift subscriptions?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "VELLUM & VINE — PUBLISHING SERVICES FOR INDEPENDENT AUTHORS\nHome | Services | Prices | Contact\n\nManuscript Assessment — €390\nA senior editor reads the complete text and returns a report of eight to ten pages. Turnaround: 15 working days.\n\nCopy-editing — €0.021 per word\nGrammar, consistency and house style. Turnaround: 20 working days for texts under 90,000 words; 30 working days above that length.\n\nInterior Design and Typesetting — €640\nPrint-ready files in two formats, including one round of corrections. Further rounds are billed at €95 each.\n\nCover Design — €520\nThree initial concepts, then unlimited revisions of the concept you select.\n\nAuthors who book three or more services in a single order receive a 15% reduction on the total.\n\nAssessments booked before 30 September are returned in 10 working days rather than 15.\n\nTo begin, complete the form on our Contact page. We reply within two working days.",
+              "label": "Questions 176-180 refer to the following web page and e-mail.",
+              "type": "web page"
+            },
+            {
+              "content": "To: studio@vellumandvine.example\nFrom: e.adeyemi@parrowlane.example\nDate: 12 September\nSubject: Order for “The Quiet Terminal”\n\nDear Ms. Brandt,\n\nFollowing our telephone conversation on Tuesday, I would like to place an order for three of your services: the assessment, the copy-edit and the cover. The manuscript runs to 82,000 words.\n\nI am not taking the typesetting, as the distributor I have signed with supplies its own interior template and will not accept files prepared elsewhere.\n\nI am sending the manuscript for assessment this week rather than in October, because the ten-day turnaround matters to me: the book launches in March and the schedule leaves no room.\n\nCould you confirm one thing before I pay? The reduction for booking three services — does it still apply when one of the three is priced per word rather than at a fixed rate?\n\nKind regards,\n\nEfemena Adeyemi",
+              "label": "Questions 176-180 refer to the following web page and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To ask for a revised delivery date",
+                "To place an order for editorial services",
+                "To object to a charge on an invoice",
+                "To request samples of previous cover designs"
+              ],
+              "explanation": "“I would like to place an order for three of your services”. The launch date is mentioned only to explain the timing, not to request a change.",
+              "number": 176,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the e-mail?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "A choice of three designers",
+                "A printed proof copy",
+                "A reduced rate for a series",
+                "Unlimited revisions of the selected concept"
+              ],
+              "explanation": "“Three initial concepts, then unlimited revisions of the concept you select.” The number three refers to concepts, not designers.",
+              "number": 177,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the web page, what is offered with the cover design service?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Book the service before 30 September",
+                "Pay the full amount in advance",
+                "Submit a text of fewer than 90,000 words",
+                "Order at least three services together"
+              ],
+              "explanation": "The web page grants the shorter turnaround to assessments booked before 30 September, which is why he is sending the manuscript this week. The 90,000-word limit governs copy-editing, and the three-service rule gives a price reduction, not faster delivery.",
+              "number": 178,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What must Mr. Adeyemi do in order to receive his assessment in ten working days?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It will be done before the assessment.",
+                "It will be charged at a fixed rate.",
+                "It is expected to take 20 working days.",
+                "It requires the distributor's template."
+              ],
+              "explanation": "The manuscript is 82,000 words, and the web page promises 20 working days for texts under 90,000 words.",
+              "number": 179,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about the copy-editing of Mr. Adeyemi's novel?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Whether his distributor's template can be used",
+                "Whether the multiple-service reduction covers a per-word price",
+                "Whether payment can be made in instalments",
+                "Whether an extra round of corrections is free"
+              ],
+              "explanation": "His single question is whether the 15% reduction still applies when one of the three services is priced per word. He states the template point as a decision already taken, not as a question.",
+              "number": 180,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Adeyemi ask Vellum & Vine to confirm?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\nContact: Iwona Baran, Communications Manager — press@nordhaven.example\n\nNORDHAVEN INTERMODAL OPENS KOLVIK RAIL TERMINAL\n\nKOLVIK, 3 May — Nordhaven Intermodal today opened its fourth inland terminal, a 24-hectare rail-served facility 40 kilometres south of the port of Aalgard.\n\nThe site has two 750-metre loading tracks and capacity for 180,000 containers a year. Shuttle trains will run to the port six days a week, removing an estimated 62,000 lorry journeys from the coastal motorway annually.\n\n“Customers have been asking us for an inland option since 2019,” said Petra Solheim, Chief Operating Officer. “Kolvik lets a container leave the quay in the evening and be ready for collection inland before breakfast.”\n\nConstruction took 19 months and cost €114 million, of which €31 million came from a regional transport fund. Ninety-four people have been recruited. A further 40 posts will follow when the second phase, a temperature-controlled warehouse, opens next spring.",
+              "label": "Questions 181-185 refer to the following press release and article.",
+              "type": "press release"
+            },
+            {
+              "content": "Kolvik opens — but hauliers want the gate open longer\nby Marek Ostrowski, Freight Quarterly, 11 May\n\nRegional forwarders have given a guarded welcome to the container terminal that opened at Kolvik last week. The six-day shuttle to Aalgard was widely praised; the road gate was not.\n\nAt present the gate accepts road collections between 6 A.M. and 8 P.M. only. “If a box is ready for us before breakfast, we would like to collect it before breakfast,” said Anneke Ruys, who runs a forwarding firm in Bregge. “At the moment we cannot get through the gate until the morning peak has already started.”\n\nMs. Solheim told Freight Quarterly that a 24-hour gate was “under review” and that any decision would rest on the volumes handled in the first two quarters of operation. She declined to give a date.\n\nThe temperature-controlled warehouse remains on schedule for next spring.",
+              "label": "Questions 181-185 refer to the following press release and article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "To announce the opening of a new facility",
+                "To report the company's annual results",
+                "To advertise positions at a warehouse",
+                "To publish a revised shuttle train timetable"
+              ],
+              "explanation": "The release exists to state that Nordhaven Intermodal “today opened its fourth inland terminal”. Recruitment and shuttle frequency are supporting details, not the announcement.",
+              "number": 181,
+              "tags": [
+                "main-idea",
+                "purpose"
+              ],
+              "text": "What is the purpose of the press release?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "An additional quay at Aalgard",
+                "Two more loading tracks",
+                "A temperature-controlled warehouse",
+                "A direct road link to the motorway"
+              ],
+              "explanation": "“the second phase, a temperature-controlled warehouse, opens next spring”. The two loading tracks already exist.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is planned for the second phase of the Kolvik site?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "She wrote the article for Freight Quarterly.",
+                "She runs a forwarding firm in Bregge.",
+                "She supervises the road gate at Kolvik.",
+                "She is Nordhaven Intermodal's chief operating officer."
+              ],
+              "explanation": "The article quotes her without a title; the press release identifies Petra Solheim as Chief Operating Officer of Nordhaven Intermodal.",
+              "number": 183,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about Ms. Solheim?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "To propose a change to the shuttle train timetable",
+                "To show that the gate hours do not match a company claim",
+                "To praise the speed of the rail service to the port",
+                "To explain why her drivers begin work at night"
+              ],
+              "explanation": "The press release promises a container “ready for collection inland before breakfast”, but the gate does not open until 6 A.M., so her remark points out the gap between the two.",
+              "number": 184,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "Why does Ms. Ruys mention breakfast?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "The volumes handled in the first two quarters",
+                "The completion of the second phase",
+                "A ruling by the regional transport fund",
+                "The number of staff recruited at the site"
+              ],
+              "explanation": "Ms. Solheim says any decision “would rest on the volumes handled in the first two quarters of operation”. The warehouse is reported as on schedule but is not linked to the gate.",
+              "number": 185,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the article, what will determine whether the gate hours change?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "NORDIC HOSPITALITY FORUM — DELEGATE ITINERARY\nRosenhof Congress Hotel, Bergstad\nPrepared for: Ms. Lucia Ferreira, Camelia Group\n\nTuesday 14 October\n15:00  Check-in (Executive Double)\n18:30  Welcome reception — Orangery\n\nWednesday 15 October\n09:00  Opening plenary — Hall A\n11:00  Workshop as selected: Menu costing — Salon 3\n13:00  Lunch — Terrace Restaurant\n15:00  Workshop as selected: Recruiting seasonal kitchen staff — Salon 5\n19:30  Forum dinner — Grand Ballroom\n\nThursday 16 October\n09:30  Panel: regional sourcing — Hall A\n12:00  Close; rooms to be vacated by 12:00\n\nNotes: workshop places may be exchanged up to 48 hours before the session; write to the registrations desk. Airport transfer is included for delegates landing before 14:00; delegates landing later may book a car at €48 each way.",
+              "label": "Questions 186-190 refer to the following itinerary, e-mail, and invoice.",
+              "type": "itinerary"
+            },
+            {
+              "content": "To: registrations@nordichospitalityforum.example\nFrom: l.ferreira@cameliagroup.example\nDate: 6 October\nSubject: Two changes\n\nDear Mr. Halvorsen,\n\nThank you for the itinerary. Two changes, if they can still be made.\n\nMy flight has been moved and I now land at 16:40 on the Tuesday, so I will need the car you offer to later arrivals. One way only, please: I am staying on privately on the Thursday night and will make my own way to the airport on the Friday.\n\nSecond, I would like to exchange my 11:00 workshop on the Wednesday. Menu costing sits well outside my remit these days; I would rather take “Suppliers and short contracts” in Salon 2, if a place is free. The afternoon session I will keep as it is — recruitment is exactly my problem this year.\n\nWith thanks,\n\nLucia Ferreira\nOperations Director, Camelia Group",
+              "label": "Questions 186-190 refer to the following itinerary, e-mail, and invoice.",
+              "type": "e-mail"
+            },
+            {
+              "content": "NORDIC HOSPITALITY FORUM\nINVOICE 2419-B — issued 20 October\n\nBilled to: Camelia Group, attention L. Ferreira\n\nDelegate registration, full three days            €595\nAccommodation, 2 nights, Executive Double         €412\nForum dinner, 15 October                      included\nAirport transfer, one way                          €48\nReplacement name badge                             €15\n\nTOTAL                                           €1,070\n\nPayment is due within 30 days of issue. Please quote the invoice number on the transfer. Queries about individual lines should go to the registrations desk, not to the hotel; room charges beyond those listed above are settled directly with the Rosenhof at the front desk.",
+              "label": "Questions 186-190 refer to the following itinerary, e-mail, and invoice.",
+              "type": "invoice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "In the Orangery",
+                "In the Terrace Restaurant",
+                "In the Grand Ballroom",
+                "In Hall A"
+              ],
+              "explanation": "The itinerary lists “19:30 Forum dinner — Grand Ballroom”. The Orangery hosts the welcome reception and the Terrace Restaurant the lunch.",
+              "number": 186,
+              "tags": [
+                "detail"
+              ],
+              "text": "Where will the forum dinner be held?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Ms. Ferreira upgraded her room.",
+                "Ms. Ferreira attended an extra workshop.",
+                "Ms. Ferreira stayed a third night at the hotel.",
+                "Ms. Ferreira landed too late for the included transfer."
+              ],
+              "explanation": "Transfers are free only for delegates landing before 14:00, and her rescheduled flight arrives at 16:40, so the €48 one-way rate applies.",
+              "number": 187,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does the invoice include a charge of €48?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It has been moved to Thursday morning.",
+                "She will arrange it herself.",
+                "The registrations desk must reserve a car for it.",
+                "It has been added to her invoice."
+              ],
+              "explanation": "“One way only, please: […] I will make my own way to the airport on the Friday.” The invoice accordingly shows a single transfer.",
+              "number": 188,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Ferreira say about her return journey to the airport?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Menu costing",
+                "Suppliers and short contracts",
+                "Recruiting seasonal kitchen staff",
+                "The panel on regional sourcing"
+              ],
+              "explanation": "Her e-mail, sent well within the 48-hour limit for exchanges, asks to leave the menu-costing workshop for the Salon 2 session. She explicitly keeps the afternoon workshop.",
+              "number": 189,
+              "tags": [
+                "not-question",
+                "cross-reference"
+              ],
+              "text": "Which session will Ms. Ferreira most likely NOT attend?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Ms. Ferreira moved to a cheaper room type.",
+                "Ms. Ferreira checked in a day early.",
+                "Ms. Ferreira's Thursday night was not billed to the forum.",
+                "Ms. Ferreira shared a room with a colleague."
+              ],
+              "explanation": "The itinerary covers Tuesday and Wednesday nights, which is the two nights invoiced; the Thursday night she describes as private is therefore settled elsewhere, as the invoice's closing note indicates.",
+              "number": 190,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What does the accommodation line on the invoice suggest?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "NORTHGATE AUDIO — audiobook production for independent publishers\n\nStandard — €38 per finished hour\nA narrator from our open roster, one proof-listen, delivery in six weeks.\n\nSignature — €62 per finished hour\nYour choice of narrator from auditions by three readers, two proof-listens, delivery in four weeks.\n\nSeries — €55 per finished hour on orders of four titles or more. The same narrator is guaranteed for every title in the order.\n\nEvery price includes mastering to retail specification and one free re-record of up to fifteen minutes should you find an error after delivery. Re-recording beyond that is billed at €140 an hour.\n\nFinished files are delivered through our client portal in the formats the major retailers require.\n\nStudio: Unit 9, Ferrold Lane. Enquiries: bookings@northgateaudio.example",
+              "label": "Questions 191-195 refer to the following advertisement, customer review, and response.",
+              "type": "advertisement"
+            },
+            {
+              "content": "Reviewer: Ingrid Solvang, Larkfell Editions\nPosted: 22 January\nRating: 4 out of 5\n\nWe recorded a four-book crime series with Northgate last autumn, and I would use them again — with one reservation.\n\nAt €55 per finished hour the rate was competitive for work of this quality, and the promise that mattered most to us was kept: one narrator read all four titles. Readers of a series notice a change of voice, and they complain about it.\n\nDelivery is where it went wrong. The first title arrived on the agreed date. The fourth was eleven days late, and nobody told us — we found out because I wrote to ask. For a publisher with retailer listings already scheduled, that is expensive.\n\nWe also found a mispronounced place name in the second book. That was corrected within a week and we were not charged for it.",
+              "label": "Questions 191-195 refer to the following advertisement, customer review, and response.",
+              "type": "customer review"
+            },
+            {
+              "content": "Response from Daniel Okonkwo, Studio Manager, Northgate Audio\nPosted: 26 January\n\nMs. Solvang, thank you for a review that is fair on both counts.\n\nYou are right about the fourth title. Our narrator was unavailable for a week in November, and we should have written to you on the day we knew rather than leaving you to ask. Since December every client receives an automatic message the moment a delivery date moves, whether it moves by a day or by a fortnight. That is a change we owe to your complaint and to two others like it.\n\nOn the correction in book two, I am glad it was straightforward — that is exactly what the clause is there for.\n\nIf Larkfell Editions returns to us this year, the studio time for your first title will be at no charge. Please write to me directly.",
+              "label": "Questions 191-195 refer to the following advertisement, customer review, and response.",
+              "type": "response"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A choice of narrator from three auditions",
+                "Delivery within four weeks",
+                "Promotion of the finished title to retailers",
+                "Mastering to retail specification"
+              ],
+              "explanation": "“Every price includes mastering to retail specification”. The three auditions and the four-week delivery belong to Signature only.",
+              "number": 191,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is included in all of Northgate Audio's prices?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The order was placed at the Signature rate.",
+                "The order qualified for the four-title price.",
+                "Additional re-recording was included.",
+                "The files were delivered in six weeks."
+              ],
+              "explanation": "€55 per finished hour is the Series rate, which applies to orders of four titles or more — and Ms. Solvang recorded four books.",
+              "number": 192,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What does the rate paid by Larkfell Editions indicate?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "That a single narrator read every book",
+                "That the studio answered her messages quickly",
+                "That the files arrived through a portal",
+                "That the rate was the lowest she had found"
+              ],
+              "explanation": "“the promise that mattered most to us was kept: one narrator read all four titles”. She calls the rate competitive, not the lowest available.",
+              "number": 193,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Ms. Solvang value most about the work?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The narrator agreed to work without a fee.",
+                "Larkfell Editions had ordered four titles.",
+                "Every Northgate price covers one short re-record.",
+                "The error was found before the file was delivered."
+              ],
+              "explanation": "The advertisement includes “one free re-record of up to fifteen minutes should you find an error after delivery”, which is the clause Mr. Okonkwo refers to. A single place name falls well inside fifteen minutes.",
+              "number": 194,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why was the error in the second book corrected at no cost?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It has raised the rate for extra re-recording.",
+                "It has doubled the size of its narrator roster.",
+                "It has shortened its standard delivery time.",
+                "It informs clients automatically when a date moves."
+              ],
+              "explanation": "“Since December every client receives an automatic message the moment a delivery date moves.” The free studio time is offered to Larkfell alone, not adopted as a policy.",
+              "number": 195,
+              "tags": [
+                "detail"
+              ],
+              "text": "What change has Northgate Audio made since December?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "NOTICE TO CARRIERS — Rendell Park Distribution Centre\nPosted 2 June\n\nThe main yard will be resurfaced between Monday 15 June and Friday 26 June. For those two weeks:\n\n— Gate 1 will be closed to vehicles. All arrivals must use Gate 4 on Cavell Road.\n— Loading bays 1 to 6 remain in service. Bays 7 to 12 are closed for the whole period.\n— No trailer may be left in the yard overnight. Carriers needing to drop a trailer must use the overflow park at Sindal Road.\n— Every vehicle must hold a booked arrival slot made at least 24 hours in advance. Vehicles arriving without one will be turned away.\n\nThe driver facilities stay where they are, beside Gate 1, and a free shuttle bus will run to them from Gate 4. The timetable is posted separately.\n\nQuestions: Bea Lindqvist, Yard Supervisor, extension 218.",
+              "label": "Questions 196-200 refer to the following notice, schedule, and e-mail.",
+              "type": "notice"
+            },
+            {
+              "content": "GATE 4 AND DRIVER FACILITIES — FREE SHUTTLE TIMETABLE\nIn force 15-26 June\n\nMonday to Friday\nDepartures from Gate 4: 06:15, 07:15, 08:15, 09:15, 10:15, 11:15, 12:15, 13:15, 14:15, 15:15, 16:15, 17:15, 18:15, 19:15, 20:15, 21:15\nDepartures from the driver facilities: 06:30, 07:30, 08:30 and hourly thereafter until 21:30\n\nSaturday\nFirst departure from Gate 4: 08:15. First departure from the driver facilities: 08:30. Hourly thereafter, last departures as on weekdays.\n\nSunday\nNo service.\n\nThe journey takes four minutes. The bus does not call at the overflow park on Sindal Road; drivers leaving a trailer there should allow fifteen minutes to walk to Gate 4.",
+              "label": "Questions 196-200 refer to the following notice, schedule, and e-mail.",
+              "type": "schedule"
+            },
+            {
+              "content": "To: b.lindqvist@rendellpark.example\nFrom: operations@kestrelhaulage.example\nDate: 9 June\nSubject: Our deliveries during the resurfacing\n\nDear Ms. Lindqvist,\n\nWe deliver to Rendell Park three times a week and I would like to get the fortnight right before I book the slots.\n\nTwo of the three runs are chilled and have always been unloaded at bay 9. I assume we should now ask for a bay in the 1 to 6 range; please tell me if any of those six is unsuitable for a chilled trailer.\n\nOur Saturday run reaches you at 07:00. My driver takes his break before starting back, and from the timetable I can see that no bus will be waiting for him at that hour. Is the walk to the facilities signposted from Gate 4?\n\nFinally, our tractor units normally drop a trailer with you on a Thursday evening for collection on the Friday morning. I take it that arrangement is suspended for the two weeks.\n\nRegards,\n\nAdaeze Nwankwo\nTransport Office, Kestrel Haulage",
+              "label": "Questions 196-200 refer to the following notice, schedule, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To announce a permanent change of address",
+                "To set out temporary arrangements during construction work",
+                "To advertise vacancies in the yard team",
+                "To introduce a charge for overnight parking"
+              ],
+              "explanation": "Every instruction in the notice is limited to the two weeks of resurfacing, after which the yard reverts to normal.",
+              "number": 196,
+              "tags": [
+                "main-idea",
+                "purpose"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Reserve an arrival time at least a day beforehand",
+                "Report to the driver facilities before unloading",
+                "Carry a printed copy of the notice",
+                "Unload their vehicles without assistance"
+              ],
+              "explanation": "“Every vehicle must hold a booked arrival slot made at least 24 hours in advance.” Vehicles without one are turned away.",
+              "number": 197,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are drivers required to do?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It has been reserved for chilled loads.",
+                "It can be booked only through Ms. Lindqvist.",
+                "It is the bay closest to Gate 4.",
+                "It will be out of service for the whole fortnight."
+              ],
+              "explanation": "Ms. Nwankwo's chilled runs use bay 9, and the notice closes bays 7 to 12 for the whole period — which is why she expects to move to bays 1 to 6.",
+              "number": 198,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about the bay Kestrel Haulage normally uses?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It will have to be moved to a weekday.",
+                "It arrives after the last shuttle has run.",
+                "It arrives before the first shuttle of the day.",
+                "It cannot be given a booked arrival slot."
+              ],
+              "explanation": "The run reaches Rendell Park at 07:00, but on Saturdays the first bus leaves Gate 4 at 08:15, which is why she asks about walking.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is true about Kestrel Haulage's Saturday delivery?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "They will have to enter through Gate 1.",
+                "They cannot be left in the yard overnight.",
+                "They must be collected by another carrier.",
+                "They will be charged a fee at the overflow park."
+              ],
+              "explanation": "The notice states that no trailer may be left in the yard overnight during the works, so the Thursday-to-Friday drop is indeed suspended. Gate 1 is closed to vehicles altogether, and no fee is mentioned for the overflow park.",
+              "number": 200,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What does Ms. Nwankwo correctly assume about her company's Thursday trailers?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 2 — full Reading section",
+  "version": 1
+}

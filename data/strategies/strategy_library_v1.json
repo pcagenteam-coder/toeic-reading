@@ -1,0 +1,3974 @@
+{
+  "deprecated": [
+    {
+      "format_version": "deprecated",
+      "from_source": "XB:XB-27",
+      "id": "DEP-01",
+      "reason": "旧制 P6 每篇 3 空、无句子插入；新制每篇 4 题含插入句，须读上下文",
+      "replaced_by": "SL-P6-01",
+      "rule_zh": "（旧制）P6 无需通读全文，看空格所在句即可，做法与 P5 一致"
+    },
+    {
+      "format_version": "deprecated",
+      "from_source": "XB:XB-37",
+      "id": "DEP-02",
+      "reason": "旧制双篇 20 题、无三篇；新制含三篇且跨篇题更多，比例不成立",
+      "replaced_by": "SL-P7-17",
+      "rule_zh": "（旧制）双篇大部分题只需读一篇，约 10% 的题需要两篇都读"
+    },
+    {
+      "format_version": "deprecated",
+      "from_source": "XB:XB-11",
+      "id": "DEP-03",
+      "reason": "题数口径（40 题）是旧制 P5，与新制 46 题不符，配时整体偏紧；来源可信度低",
+      "replaced_by": "SL-ALL-03",
+      "rule_zh": "P7 按篇型配时：单篇约 20 分钟、双篇约 10 分钟、三篇约 20 分钟（同视频称“前 40 题语法+填空 15 分钟”）"
+    }
+  ],
+  "entries": [
+    {
+      "channels": [
+        "books",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "选项看似词性题、但同词性的两个都合语法（如 -ion/-ant 人与物）时，仍要读意思。",
+      "format_version": "universal",
+      "id": "SL-P5-01",
+      "mention_breakdown": {
+        "BK:P5-01": 4,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-12": 4
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.IDENTIFY",
+        "QT.P6.INDEPENDENT"
+      ],
+      "rule_zh": "先扫四个选项判断题型（词性/动词形态/介连副/代词/词汇），语法类只看空格周边，词汇类读全句。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P5-01",
+        "XB:XB-12",
+        "SUM:FORUM",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.DEPTH_BY_QTYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "看选项判题型",
+      "weight": 0.85,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "先看四个选项，再决定这句读多少。"
+    },
+    {
+      "channels": [
+        "books",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "副词位置常有多个合法位置；形容词 vs 分词形容词（-ing/-ed）要看主被动/情感对象。",
+      "format_version": "universal",
+      "id": "SL-P5-02",
+      "mention_breakdown": {
+        "BK:P5-02": 9,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-13": 2
+      },
+      "mention_count": 13,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.WORD_FORM",
+        "QT.P6.INDEPENDENT"
+      ],
+      "rule_zh": "限定词/介词后→名词；名词前、be/系动词后→形容词；完整句中修饰动词/形容词/全句→副词；a/an(+very)+adj+n、adj and adj 同词性。",
+      "skill_nodes": [
+        "GR.POS",
+        "GR.POS.NOUN_AFTER_DET",
+        "GR.POS.NOUN_AFTER_PREP",
+        "GR.POS.ADJ_BEFORE_NOUN",
+        "GR.POS.ADJ_COMPLEMENT",
+        "GR.POS.ADV_VERB",
+        "GR.POS.ADV_ADJ",
+        "GR.POS.ADV_AUX_SLOT",
+        "GR.POS.ADV_SENTENCE"
+      ],
+      "sources": [
+        "BK:P5-02",
+        "XB:XB-13",
+        "SUM:FORUM",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.PER_ITEM_P5"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "词性题看空格位置",
+      "weight": 0.85,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.45，÷0.6 封顶 1 → 0.75) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 13/15)=0.87)",
+      "work_rule": "只看空格前后两三个词定词性，5–15 秒交卷。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-03",
+      "mention_breakdown": {
+        "BK:P5-10": 6
+      },
+      "mention_count": 6,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.WORD_FORM"
+      ],
+      "rule_zh": "填名词时再看可数/不可数、限定词搭配、人名词 vs 事物名词、复合名词。",
+      "skill_nodes": [
+        "GR.POS.NOUN_COUNT",
+        "GR.POS.NOUN_PERSON_THING",
+        "GR.POS.NOUN_COMPOUND"
+      ],
+      "sources": [
+        "BK:P5-10"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "同是名词再辨人/物与可数",
+      "weight": 0.49,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.28，÷0.6 封顶 1 → 0.47) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "名词定了别急着选：人还是物？要不要加 s？"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-04",
+      "mention_breakdown": {
+        "BK:P5-03": 2
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VERB_FORM",
+        "QT.P5.CONNECTOR_MIX"
+      ],
+      "rule_zh": "先数句子的谓语动词与连接词：缺谓语填限定动词；已有谓语则填非谓语或连接成分。",
+      "skill_nodes": [
+        "FD.SENT.CLAUSE_COUNT",
+        "GR.POS.VERB_SLOT"
+      ],
+      "sources": [
+        "BK:P5-03"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "数谓语和连接词",
+      "weight": 0.31,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.12，÷0.6 封顶 1 → 0.20) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "数一数：一个连接词配两个谓语，少了谁就补谁。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "空格本身就在修饰语里（如分词短语中缺词）时，要在该短语内部判断。",
+      "format_version": "universal",
+      "id": "SL-P5-05",
+      "mention_breakdown": {
+        "BK:P5-16": 4,
+        "XB:XB-15": 3
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "练习模式可在屏幕上把修饰语变灰；模考模式只能心里删（题本禁止写画）。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.WORD_FORM",
+        "QT.P5.VERB_FORM"
+      ],
+      "rule_zh": "先划掉介词短语、分词短语、插入从句，找到主谓宾后再判断空格成分。",
+      "skill_nodes": [
+        "FD.SENT.MODIFIER_STRIP",
+        "FD.SENT.LONG"
+      ],
+      "sources": [
+        "BK:P5-16",
+        "XB:XB-15"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "删修饰找主干",
+      "weight": 0.63,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.28，÷0.6 封顶 1 → 0.47) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "长句先砍枝叶，只留主干再填空。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "Part 6 时态以全文时间线为准，本句时间状语缺失时不能只靠本句（见 SL-P6-03）。",
+      "format_version": "universal",
+      "id": "SL-P5-06",
+      "mention_breakdown": {
+        "BK:P5-04": 8,
+        "XB:XB-14": 2
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "冲突：书籍为“数→态→时”，青藤/Cindy 为“谓语→态→时→数”。取后者：先排除非谓语选项最省时；数一致可随时顺手查。",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VERB_FORM",
+        "QT.P6.CTX_TENSE"
+      ],
+      "rule_zh": "先判谓语还是非谓语 → 再定主动/被动 → 再定时态 → 最后查主谓一致（数）。",
+      "skill_nodes": [
+        "GR.VERB",
+        "GR.VERB.AGREE_SV",
+        "GR.VERB.VOICE_PASSIVE",
+        "GR.VERB.TENSE_SIMPLE",
+        "GR.VERB.TENSE_PERFECT",
+        "GR.VERB.TENSE_FUTURE_CLAUSE"
+      ],
+      "sources": [
+        "BK:P5-04",
+        "XB:XB-14"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "动词题四步排查",
+      "weight": 0.53,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.12，÷0.6 封顶 1 → 0.20) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "动词题按“谓语？→主被动→时态→单复数”过四道闸。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-07",
+      "mention_breakdown": {
+        "BK:P5-08": 6
+      },
+      "mention_count": 6,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VERB_FORM"
+      ],
+      "rule_zh": "记住只接 to do / 只接 -ing 的词；分词按与被修饰名词的主被动关系选 -ing 或 -ed。",
+      "skill_nodes": [
+        "GR.NONFIN",
+        "GR.NONFIN.TO_INF",
+        "GR.NONFIN.GERUND",
+        "GR.NONFIN.PARTICIPLE_MODIFIER",
+        "GR.NONFIN.PARTICIPLE_CLAUSE",
+        "GR.NONFIN.PARTICIPLE_ADJ"
+      ],
+      "sources": [
+        "BK:P5-08"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "非谓语看搭配与主被动",
+      "weight": 0.36,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.12，÷0.6 封顶 1 → 0.20) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "to do 还是 -ing 看前面的词；-ing/-ed 看名词是主动做还是被做。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-08",
+      "mention_breakdown": {
+        "BK:P5-21": 4
+      },
+      "mention_count": 4,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VERB_FORM",
+        "QT.P5.VOCAB"
+      ],
+      "rule_zh": "掌握及物/不及物、双宾与宾补动词；make/let/have 后宾补用原形，其他多用 to do；近义动词句型不同（inform sb of / explain sth）。",
+      "skill_nodes": [
+        "GR.VERB.VERB_PATTERN",
+        "VO.CONF.SYN_VERB_PATTERN",
+        "GR.VERB.MODAL_BASE"
+      ],
+      "sources": [
+        "BK:P5-21"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "动词句型与宾补",
+      "weight": 0.58,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 4/15)=0.27)",
+      "work_rule": "先看动词后面能跟什么，再看选项。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "结构确定词类后，同类里多个选项仍需按语义（因果/让步/条件）二选一。",
+      "format_version": "universal",
+      "id": "SL-P5-09",
+      "mention_breakdown": {
+        "BK:P5-05": 8
+      },
+      "mention_count": 8,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.CONNECTOR_MIX",
+        "QT.P5.CONJ",
+        "QT.P5.PREP"
+      ],
+      "rule_zh": "介词、连词、副词混排时：后接名词(短语)→介词；后接完整主谓→连词；两句已完整只缺逻辑衔接→接续副词。",
+      "skill_nodes": [
+        "GR.CONN.PREP_VS_CONJ",
+        "GR.CONN.CONJ_ADVERBIAL",
+        "GR.CONN.CONJ_ADVERB"
+      ],
+      "sources": [
+        "BK:P5-05"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "介/连/副看空格后面",
+      "weight": 0.4,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.14，÷0.6 封顶 1 → 0.23) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 8/15)=0.53)",
+      "work_rule": "看空格后面：名词用介词，整句用连词，前后两句都完整用副词。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-10",
+      "mention_breakdown": {
+        "BK:P5-11": 5
+      },
+      "mention_count": 5,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.PREP"
+      ],
+      "rule_zh": "先按空格前后搭配解（时间点/时段、地点、固定介词），搭配不明再按语义（原因/让步/目的/关于）选。",
+      "skill_nodes": [
+        "GR.CONN.PREP_TIME",
+        "GR.CONN.PREP_PLACE",
+        "GR.CONN.PREP_MEANING",
+        "GR.CONN.PREP_PHRASE_MULTI",
+        "VO.CONF.PREP_LOOKALIKE"
+      ],
+      "sources": [
+        "BK:P5-11"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "介词题先搭配后语义",
+      "weight": 0.36,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.14，÷0.6 封顶 1 → 0.23) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "介词先想“固定跟谁搭”，想不到再翻译。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-11",
+      "mention_breakdown": {
+        "BK:P5-06": 9
+      },
+      "mention_count": 9,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.PRONOUN",
+        "QT.P6.CTX_PRONOUN"
+      ],
+      "rule_zh": "先看位置定格（主格/宾格/所有格/名词性物主/反身），再看所指对象的单复数与人/物。",
+      "skill_nodes": [
+        "GR.PRON.CASE",
+        "GR.PRON.POSSESSIVE_PRONOUN",
+        "GR.PRON.REFLEXIVE",
+        "GR.PRON.INDEFINITE",
+        "GR.PRON.DEMONSTRATIVE"
+      ],
+      "sources": [
+        "BK:P5-06"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "代词题先定格再定指代",
+      "weight": 0.38,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.1，÷0.6 封顶 1 → 0.17) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 9/15)=0.60)",
+      "work_rule": "代词先看站哪儿（格），再看替谁（单复数）。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-12",
+      "mention_breakdown": {
+        "BK:P5-07": 7
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.RELATIVE"
+      ],
+      "rule_zh": "看有无先行词、指人还是物，再看后面从句缺不缺成分（缺主宾→关系代词，完整→关系副词/that 名词从句）。",
+      "skill_nodes": [
+        "GR.REL",
+        "GR.REL.REL_PRONOUN",
+        "GR.REL.REL_ADVERB",
+        "GR.REL.REL_WHAT",
+        "GR.REL.NOUN_CLAUSE",
+        "GR.REL.COMPOUND_REL"
+      ],
+      "sources": [
+        "BK:P5-07"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "关系词看先行词与从句完整度",
+      "weight": 0.29,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.02，÷0.6 封顶 1 → 0.03) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "关系词问两件事：前面有没有名词？后面缺不缺东西？"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "新制考频很低（约 1–2%），600 前不必专练。",
+      "format_version": "universal",
+      "id": "SL-P5-13",
+      "mention_breakdown": {
+        "BK:P5-09": 5
+      },
+      "mention_count": 5,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.COMPARATIVE"
+      ],
+      "rule_zh": "than→比较级；the…of/in/among/ever→最高级；as…as→原级；强调比较级用 much/even/far/still。",
+      "skill_nodes": [
+        "GR.COMP.COMPARATIVE",
+        "GR.COMP.SUPERLATIVE",
+        "GR.COMP.EQUATIVE"
+      ],
+      "sources": [
+        "BK:P5-09"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "比较题看标志词",
+      "weight": 0.26,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.02，÷0.6 封顶 1 → 0.03) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "找 than / the / as 三个信号，秒选。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-14",
+      "mention_breakdown": {
+        "BK:P5-19": 4
+      },
+      "mention_count": 4,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "书评称近年出题减少。",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.PAIR_GRAMMAR"
+      ],
+      "rule_zh": "both–and、either–or、neither–nor、not only–but (also)、whether–or：看到一半就找另一半。",
+      "skill_nodes": [
+        "GR.CONN.CONJ_CORRELATIVE"
+      ],
+      "sources": [
+        "BK:P5-19"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "成对表达找搭档词",
+      "weight": 0.25,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.02，÷0.6 封顶 1 → 0.03) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 4/15)=0.27)",
+      "work_rule": "看到 both/either/neither/whether，先去句子里找它的搭档。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-15",
+      "mention_breakdown": {
+        "BK:P5-22": 2
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.PAIR_GRAMMAR",
+        "QT.P5.PRONOUN"
+      ],
+      "rule_zh": "each/every + 单数；a number of + 复数；the number of + 单数谓语；amount/number、few/little 区分可数。",
+      "skill_nodes": [
+        "GR.VERB.AGREE_QUANT",
+        "GR.PRON.DETERMINER_QUANT",
+        "VO.CONF.QUANT_WORDS"
+      ],
+      "sources": [
+        "BK:P5-22"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "数量词与单复数一致",
+      "weight": 0.29,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.1，÷0.6 封顶 1 → 0.17) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "先看数量词，再决定名词和动词要不要 s。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "单项考频 <1%，800 前收益低。",
+      "format_version": "universal",
+      "id": "SL-P5-16",
+      "mention_breakdown": {
+        "BK:P5-18": 4
+      },
+      "mention_count": 4,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VERB_FORM",
+        "QT.P5.PAIR_GRAMMAR"
+      ],
+      "rule_zh": "要求/建议类 that 从句用动词原形；省略 if 的倒装（Should/Had…）；并列结构前后同形；否定词/only 前置倒装；as requested 类省略。",
+      "skill_nodes": [
+        "GR.VERB.SUBJUNCTIVE_DEMAND",
+        "GR.VERB.CONDITIONAL_INVERSION",
+        "GR.SPECIAL.PARALLEL",
+        "GR.SPECIAL.INVERSION_NEG",
+        "GR.SPECIAL.ELLIPSIS"
+      ],
+      "sources": [
+        "BK:P5-18"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "特殊句式记固定形式",
+      "weight": 0.33,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.12，÷0.6 封顶 1 → 0.20) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 4/15)=0.27)",
+      "work_rule": "见到 request/suggest that、句首 Should，直接套模板。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-17",
+      "mention_breakdown": {
+        "BK:P5-20": 3,
+        "XB:XB-18": 1
+      },
+      "mention_count": 4,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VOCAB",
+        "QT.P5.WORD_FORM"
+      ],
+      "rule_zh": "时间副词（already/still/yet）、焦点副词（just/only/even）、so/such/too/enough、also/too/either 按功能和位置辨；never 可直接放动词前，not 需借助动词。",
+      "skill_nodes": [
+        "VO.CONF.ADV_TIME",
+        "VO.CONF.ADV_FOCUS",
+        "VO.CONF.SO_SUCH_TOO"
+      ],
+      "sources": [
+        "BK:P5-20",
+        "XB:XB-18"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "副词按功能辨",
+      "weight": 0.58,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 4/15)=0.27)",
+      "work_rule": "副词不看中文意思，先看它管时间、强调还是程度。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "Part 6 词汇题几个选项本句都通时，以全文为准（SL-P6-06）。",
+      "format_version": "universal",
+      "id": "SL-P5-18",
+      "mention_breakdown": {
+        "BK:P5-12": 8,
+        "XB:XB-16": 1,
+        "XB:XB-17": 1
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VOCAB",
+        "QT.P6.CTX_VOCAB"
+      ],
+      "rule_zh": "词汇题先找搭配与语法线索（介词搭配、及物性、固定短语）“不翻译解”；副/形词义题先把句子压成“修饰词+中心词”；线索不足再读全句。",
+      "skill_nodes": [
+        "VO.COLLO",
+        "VO.COLLO.VERB_PREP",
+        "VO.COLLO.VERB_NOUN",
+        "VO.COLLO.ADJ_NOUN",
+        "VO.COLLO.ADV_VERB_ADJ",
+        "VO.LEX",
+        "VO.LEX.VERB",
+        "VO.LEX.NOUN",
+        "VO.LEX.ADJ",
+        "VO.LEX.ADV"
+      ],
+      "sources": [
+        "BK:P5-12",
+        "XB:XB-16",
+        "XB:XB-17"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "词汇题先找搭配",
+      "weight": 0.78,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "词汇题先看空格跟谁搭，搭不上的先划掉，再看意思。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-19",
+      "mention_breakdown": {
+        "BK:P5-13": 2
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VOCAB",
+        "QT.P7.SYNONYM"
+      ],
+      "rule_zh": "成组辨析近义词，记住常见词的商务义项（address=处理、issue=期刊/发放、term=条款）。",
+      "skill_nodes": [
+        "VO.CONF.BUSINESS_SENSE",
+        "VO.CONF.POLYSEMY_CONTEXT",
+        "VO.CONF.SYN_NOUN",
+        "VO.CONF.SYN_ADJ"
+      ],
+      "sources": [
+        "BK:P5-13"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "常用词记商务义",
+      "weight": 0.56,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "熟词别按日常意思选，先想它在公司里是什么意思。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "-ly 结尾的形容词（timely/costly/friendly）、-al 结尾的名词（approval/proposal）是例外陷阱。",
+      "format_version": "universal",
+      "id": "SL-P5-20",
+      "mention_breakdown": {
+        "BK:P5-17": 2
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.WORD_FORM"
+      ],
+      "rule_zh": "后缀定词性（-tion/-ment 名词、-ive/-able 形容词、-ly 副词、-ize 动词），词根词缀辅助记忆。",
+      "skill_nodes": [
+        "FD.VOC.AFFIX",
+        "VO.CONF.FORM_ADJ",
+        "VO.CONF.FORM_NOUN"
+      ],
+      "sources": [
+        "BK:P5-17"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "词缀猜词性",
+      "weight": 0.44,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.28，÷0.6 封顶 1 → 0.47) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "不认识的词先看尾巴，尾巴决定词性。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-21",
+      "mention_breakdown": {
+        "BK:P5-15": 4,
+        "SUM:EN": 5,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-19": 2
+      },
+      "mention_count": 13,
+      "mock_mode": true,
+      "mode_note": "练习模式显示单题计时；模考模式不显示，只在检查点提示。",
+      "note": "秒数口径不一（5–20 秒 / 20–30 秒），取“按题型分档”：词性 15、语法 20、词汇 30 秒为上限。",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.IDENTIFY"
+      ],
+      "rule_zh": "P5 词性题约 5–15 秒、语法 15 秒、词汇 ≤20–30 秒；超时直接选一个往下走。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P5-15",
+        "XB:XB-19",
+        "SUM:EN",
+        "SUM:FORUM",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.PER_ITEM_P5",
+        "ST.GIVEUP.CUTOFF_RULE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "P5 单题限时",
+      "weight": 0.89,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 13/15)=0.87)",
+      "work_rule": "每张 P5 工单有倒计时，铃响就交。"
+    },
+    {
+      "channels": [
+        "books",
+        "jk"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-22",
+      "mention_breakdown": {
+        "BK:P5-14": 4,
+        "SUM:JK": 1
+      },
+      "mention_count": 5,
+      "mock_mode": false,
+      "mode_note": "引擎层排课规则，用户无需执行。",
+      "note": "比例来自日韩合算 240 题口径（strategy_findings_summary.md）。",
+      "parts": [
+        5
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VOCAB",
+        "QT.P5.WORD_FORM",
+        "QT.P5.PREP"
+      ],
+      "rule_zh": "先攻高频题型（词汇约 30%、词性约 25%、介词约 11%、接续/动词/副词/代词各 7–9%），比较、特殊句式后补。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P5-14",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.DIAGNOSE_BY_TYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按考频排学习顺序",
+      "weight": 0.6,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "先练常考的活，冷门活放到后面。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P5-23",
+      "mention_breakdown": {
+        "XB:XB-21": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "P5 稳定只错 3–4 题后再刷 P5 收益很小，改为大量做 P6/P7 积累地道表达。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-21"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.DIAGNOSE_BY_TYPE"
+      ],
+      "suggested_new_node": "ST.REVIEW.PLATEAU_SWITCH（瓶颈期换练）",
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "P5 瓶颈转练 P6/P7",
+      "weight": 0.4,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "P5 已经很稳，就把时间挪给长文。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "jk"
+      ],
+      "consensus": "高",
+      "counter_examples": "独立型词性题（如 the ___ of）可秒做，不必等读完。",
+      "format_version": "current",
+      "id": "SL-P6-01",
+      "mention_breakdown": {
+        "BK:P6-01": 4,
+        "SUM:EN": 5,
+        "SUM:JK": 1
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "与已弃用的旧制做法 XB-27“P6 只看空格句”冲突，按新制取本条。",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CLASSIFY"
+      ],
+      "rule_zh": "Part 6 按顺序通读，不只读空格所在句：新制每篇 4 题，约 65% 需上下文，只靠本句能解的很少。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P6-01",
+        "SUM:EN",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.DEPTH_BY_QTYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.AD",
+        "TX.ARTICLE",
+        "TX.WEB"
+      ],
+      "title_zh": "P6 顺着读全文",
+      "weight": 0.72,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "P6 从头顺着读，读到空就填。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-02",
+      "mention_breakdown": {
+        "BK:P6-02": 4,
+        "XB:XB-23": 1
+      },
+      "mention_count": 5,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CLASSIFY",
+        "QT.P6.INDEPENDENT"
+      ],
+      "rule_zh": "把 P6 题分为“句内独立可解”和“需上下文”两类：前者按 P5 方法速答；后者（时态/代词/接续副词/词汇/插入句）必须看前后文。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P6-02",
+        "XB:XB-23"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "P6 两类分流",
+      "weight": 0.66,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "先分拣：本句能解的秒做，要看上下文的放慢。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-03",
+      "mention_breakdown": {
+        "BK:P6-03": 3
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CTX_TENSE"
+      ],
+      "rule_zh": "P6 时态题本句语法上多个都通时，以全文时间线为准：看发信日期、前后句、事件是否已发生。",
+      "skill_nodes": [
+        "GR.VERB.TENSE_SIMPLE",
+        "GR.VERB.TENSE_PERFECT",
+        "GR.VERB.TENSE_FUTURE_CLAUSE"
+      ],
+      "sources": [
+        "BK:P6-03"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "时态看全文时间线",
+      "weight": 0.29,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.08，÷0.6 封顶 1 → 0.13) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "先看这封信是哪天写的，事情发生了没有。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-04",
+      "mention_breakdown": {
+        "BK:P6-04": 2
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CTX_PRONOUN"
+      ],
+      "rule_zh": "P6 代词题回前文找所指对象，按单复数、人/物、公司/个人选代词。",
+      "skill_nodes": [
+        "FD.READ.REFERENCE",
+        "GR.PRON.CASE"
+      ],
+      "sources": [
+        "BK:P6-04"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "代词回前文找指代",
+      "weight": 0.23,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.028，÷0.6 封顶 1 → 0.05) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "代词题往回找“它/他们”到底指谁。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-05",
+      "mention_breakdown": {
+        "BK:P6-05": 4,
+        "XB:XB-23": 1
+      },
+      "mention_count": 5,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CTX_CONJ_ADV"
+      ],
+      "rule_zh": "判断前后两句关系（转折/因果/追加/举例/顺序），再选 however/therefore/in addition/for example 等。",
+      "skill_nodes": [
+        "GR.CONN.CONJ_ADVERB",
+        "FD.READ.DISCOURSE"
+      ],
+      "sources": [
+        "BK:P6-05",
+        "XB:XB-23"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "接续副词判前后逻辑",
+      "weight": 0.4,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.04，÷0.6 封顶 1 → 0.07) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "先给两句关系贴标签：转折、因果还是追加。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-06",
+      "mention_breakdown": {
+        "BK:P6-06": 3
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CTX_VOCAB"
+      ],
+      "rule_zh": "P6 词汇题几个选项本句都通顺时，以全文主题和前后信息决定。",
+      "skill_nodes": [
+        "VO.CONF.POLYSEMY_CONTEXT"
+      ],
+      "sources": [
+        "BK:P6-06"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "语境词汇以全文为准",
+      "weight": 0.39,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.2，÷0.6 封顶 1 → 0.33) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "本句都通？回头看整篇在讲什么。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "候选句的代词在前文找不到对象，再“顺”也排除。",
+      "format_version": "current",
+      "id": "SL-P6-07",
+      "mention_breakdown": {
+        "BK:P6-07": 5,
+        "SUM:EN": 5,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-24": 1
+      },
+      "mention_count": 13,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.INSERTION",
+        "QT.P6.INS_OPENING",
+        "QT.P6.INS_TRANSITION",
+        "QT.P6.INS_CLOSING"
+      ],
+      "rule_zh": "句子插入题先抓全文主题和段落走向，再用候选句里的代词（this/these/they）、连接词、新旧信息检查能否接上前后句。",
+      "skill_nodes": [
+        "FD.READ.REFERENCE",
+        "FD.READ.DISCOURSE"
+      ],
+      "sources": [
+        "BK:P6-07",
+        "XB:XB-24",
+        "SUM:FORUM",
+        "SUM:JK",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "插入句看衔接线索",
+      "weight": 0.61,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.16，÷0.6 封顶 1 → 0.27) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 13/15)=0.87)",
+      "work_rule": "插入句先看候选句里的 this/they/also，问它在指前面哪件事。"
+    },
+    {
+      "channels": [
+        "jk"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "只是倾向（toiguru.jp 统计），必须再用 SL-P6-07 的衔接线索验证。",
+      "format_version": "current",
+      "id": "SL-P6-08",
+      "mention_breakdown": {
+        "SUM:JK": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.INS_OPENING",
+        "QT.P6.INS_TRANSITION",
+        "QT.P6.INS_CLOSING"
+      ],
+      "rule_zh": "空在段首多为引入/目的句，在段中为衔接/举例句，在末尾多为“请联系/欢迎/行动号召”句。",
+      "skill_nodes": [],
+      "sources": [
+        "SUM:JK"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "插入句按位置预测句型",
+      "weight": 0.16,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.072，÷0.6 封顶 1 → 0.12) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "空在开头找“开场白”，空在结尾找“请联系我们”。"
+    },
+    {
+      "channels": [
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "800+ 目标不应放弃插入句；且先做其余 3 题本身就能提供解插入句的上下文。",
+      "format_version": "current",
+      "id": "SL-P6-09",
+      "mention_breakdown": {
+        "SUM:JK": 1,
+        "XB:XB-06": 1,
+        "XB:XB-25": 1
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.INSERTION"
+      ],
+      "rule_zh": "插入句是每篇最难的一题：先做本篇其他 3 题再回来；600–700 目标没把握直接猜，不恋战。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-25",
+        "XB:XB-06",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.ORDER.HARD_ITEMS_LAST",
+        "ST.GIVEUP.CUTOFF_RULE",
+        "ST.GIVEUP.TARGET_BASED"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "插入句后做、没把握就猜",
+      "weight": 0.64,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "插入句最后做，30 秒没头绪就先猜一个。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P6-10",
+      "mention_breakdown": {
+        "XB:XB-26": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "引擎诊断阈值。",
+      "note": "",
+      "parts": [
+        6
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P6.CLASSIFY"
+      ],
+      "rule_zh": "平均每篇错 ≤1 题按常规练；错误率超过约 1/3 再开 P6 专项。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-26"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.DIAGNOSE_BY_TYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "P6 是否需要专项",
+      "weight": 0.4,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "P6 每篇错两题以上，才开专项训练。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "短信/表格等很短的文本可先扫全文；主旨、推断题仍需读相关段落。",
+      "format_version": "universal",
+      "id": "SL-P7-01",
+      "mention_breakdown": {
+        "BK:P7-01": 4,
+        "SUM:EN": 12,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-28": 5
+      },
+      "mention_count": 23,
+      "mock_mode": true,
+      "mode_note": "练习模式可高亮题干关键词；模考模式不能在题本上划（ETS 禁止），只能记在脑中。",
+      "note": "XB-28 原步骤“划出人名、日期…”违反纸笔考题本禁写规定，已改写为“记住”。论坛对先题还是先文有分歧，见 md 冲突表。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL",
+        "QT.P7.DETAIL_NUMBER",
+        "QT.P7.REQUEST_ACTION",
+        "QT.P7.REASON"
+      ],
+      "rule_zh": "先读题干（必要时连选项），判断题型并记住人名/日期/数字/动作词，再回原文扫读定位、在定位句前后细读比对。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-01",
+        "XB:XB-28",
+        "SUM:FORUM",
+        "SUM:EN",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "先题后文",
+      "weight": 1.0,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.6，÷0.6 封顶 1 → 1.00) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 23/15)=1.00)",
+      "work_rule": "先看题，再进文找答案。"
+    },
+    {
+      "channels": [
+        "forum",
+        "jk"
+      ],
+      "consensus": "中",
+      "counter_examples": "主旨题、NOT 题、跨篇题不按文序；多篇的跨篇题位置不固定（SL-P7-18）。",
+      "format_version": "current",
+      "id": "SL-P7-02",
+      "mention_breakdown": {
+        "SUM:FORUM": 1,
+        "SUM:JK": 1
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL"
+      ],
+      "rule_zh": "设问顺序大体与原文顺序一致：两题一组读题，再在对应区间一次找完。",
+      "skill_nodes": [],
+      "sources": [
+        "SUM:JK",
+        "SUM:FORUM"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.QUESTION_ORDER"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "题序≈文序，两题一组",
+      "weight": 0.5,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "一次拿两道题进文，顺路把两个答案都找出来。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "题干关键词在文中被改写（job→position）时扫不到原词，要按意思找。",
+      "format_version": "universal",
+      "id": "SL-P7-03",
+      "mention_breakdown": {
+        "BK:P7-03": 6,
+        "XB:XB-30": 3
+      },
+      "mention_count": 9,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL",
+        "QT.P7.DETAIL_NUMBER",
+        "QT.P7X.DETAIL.EMAIL",
+        "QT.P7X.DETAIL.ARTICLE",
+        "QT.P7X.DETAIL.NOTICE",
+        "QT.P7X.DETAIL.WEB",
+        "QT.P7X.DETAIL_NUMBER.FORM",
+        "QT.P7X.DETAIL_NUMBER.SCHEDULE",
+        "QT.P7X.DETAIL.TEXT_MSG"
+      ],
+      "rule_zh": "细节(5W1H)题用题干里的专名、数字、日期、独特名词作锚点扫读，只精读锚点附近一两句；选项通常是改写。",
+      "skill_nodes": [
+        "FD.READ.SCAN"
+      ],
+      "sources": [
+        "BK:P7-03",
+        "XB:XB-30"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.KEYWORD_SCAN"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "细节题用锚点扫读",
+      "weight": 0.75,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 9/15)=0.60)",
+      "work_rule": "拿专名和数字当路标，找到路标只读它前后两句。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "约 30% 正解保留原词；数字/日期/专名题常原样出现，不能一见原词就排除。",
+      "format_version": "universal",
+      "id": "SL-P7-04",
+      "mention_breakdown": {
+        "BK:P7-09": 2,
+        "SUM:EN": 6,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-31": 5
+      },
+      "mention_count": 15,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "新东方课程认为改写“没有技巧，只能靠词汇和语法”，因此本条配合 VO.PARA 词包训练。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL",
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7.INFERENCE",
+        "QT.P7.REASON"
+      ],
+      "rule_zh": "正确选项多是原文的同义改写（约 70%）；照搬原文词语的选项常是陷阱，要核对意思。",
+      "skill_nodes": [
+        "VO.PARA",
+        "VO.PARA.WORD_SYNONYM",
+        "VO.PARA.WORD_TO_PHRASE",
+        "VO.PARA.GENERALIZE",
+        "VO.PARA.POS_SHIFT",
+        "VO.PARA.SUMMARY_NOMINAL",
+        "VO.PARA.ROLE_REFERENCE"
+      ],
+      "sources": [
+        "BK:P7-09",
+        "XB:XB-31",
+        "SUM:FORUM",
+        "SUM:EN",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.PARAPHRASE_MATCH",
+        "ST.ELIM.TRAP_TYPES"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按改写匹配，同词选项要警惕",
+      "weight": 0.92,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 15/15)=1.00)",
+      "work_rule": "答案通常换了说法；和原文一字不差的选项先多看一眼。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "2023–2026 新题有时首段全是铺垫，答案在第二段中部（XB-38，个人考后观察）；开头找不到就往下读到第一个“请求/通知”句。",
+      "format_version": "universal",
+      "id": "SL-P7-05",
+      "mention_breakdown": {
+        "BK:P7-02": 6,
+        "XB:XB-32": 2
+      },
+      "mention_count": 8,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.MAIN_PURPOSE",
+        "QT.P7X.MAIN_PURPOSE.EMAIL",
+        "QT.P7X.MAIN_PURPOSE.LETTER",
+        "QT.P7X.MAIN_PURPOSE.NOTICE",
+        "QT.P7X.MAIN_PURPOSE.MEMO",
+        "QT.P7X.MAIN_PURPOSE.ARTICLE",
+        "QT.P7X.MAIN_PURPOSE.AD",
+        "QT.P7X.MAIN_PURPOSE.MULTI"
+      ],
+      "rule_zh": "主旨/目的题答案多在开头（I am writing to / in regard to / We are pleased to / Please be advised）。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-02",
+        "XB:XB-32"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.NOTICE",
+        "TX.MEMO"
+      ],
+      "title_zh": "主旨/目的题看开头",
+      "weight": 0.49,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.1，÷0.6 封顶 1 → 0.17) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 8/15)=0.53)",
+      "work_rule": "问“为什么写这封信”，先看第一段。"
+    },
+    {
+      "channels": [
+        "books",
+        "jk"
+      ],
+      "consensus": "中",
+      "counter_examples": "原文本身就用了 only/all 时，绝对化选项可能正确。",
+      "format_version": "universal",
+      "id": "SL-P7-06",
+      "mention_breakdown": {
+        "BK:P7-02": 6,
+        "SUM:JK": 1
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.MAIN_PURPOSE",
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7.INFERENCE"
+      ],
+      "rule_zh": "主旨、照合、推断题中，范围过宽、过窄或带绝对化词（always/only/all）的选项先排除。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-02",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.ELIM.SCOPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "选项太宽太窄先怀疑",
+      "weight": 0.52,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "选项说得太大、太小、太绝对，先打问号。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-07",
+      "mention_breakdown": {
+        "BK:P7-04": 6,
+        "SUM:EN": 6,
+        "XB:XB-34": 2
+      },
+      "mention_count": 14,
+      "mock_mode": true,
+      "mode_note": "练习模式可在选项上打勾/叉；模考模式题本不能写，只能心里记。",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.NOT_TRUE",
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7X.NOT_TRUE.AD",
+        "QT.P7X.NOT_TRUE.ARTICLE",
+        "QT.P7X.NOT_TRUE.JOB_POSTING"
+      ],
+      "rule_zh": "NOT/TRUE 题把四个选项逐一回原文核对，找到的划掉，剩下未提及（或唯一相符）的就是答案。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-04",
+        "XB:XB-34",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.ELIM.OPTIONS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "NOT/TRUE 题逐项核对",
+      "weight": 0.82,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 14/15)=0.93)",
+      "work_rule": "NOT 题四个选项挨个对账，对上的划掉。"
+    },
+    {
+      "channels": [
+        "books",
+        "en"
+      ],
+      "consensus": "高",
+      "counter_examples": "先做其他题时已读过大部分原文，回头做 NOT 题反而更快；不要跳到下一组再回来（涂卡易错位）。",
+      "format_version": "universal",
+      "id": "SL-P7-08",
+      "mention_breakdown": {
+        "BK:P7-04": 6,
+        "BK:P7-13": 3,
+        "SUM:EN": 5
+      },
+      "mention_count": 14,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.NOT_TRUE",
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7.INFERENCE"
+      ],
+      "rule_zh": "NOT/TRUE、无关键词的照合题、长选项推断题耗时，先跳过，做完本组其他题再回来。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-04",
+        "BK:P7-13",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.ORDER.HARD_ITEMS_LAST"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "耗时题放到本组最后",
+      "weight": 0.74,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 14/15)=0.93)",
+      "work_rule": "费时的题“稍后处理”，先拿好拿的分。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P7-09",
+      "mention_breakdown": {
+        "XB:XB-33": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7X.TRUE_INDICATED.ARTICLE",
+        "QT.P7X.TRUE_INDICATED.WEB",
+        "QT.P7X.TRUE_INDICATED.REVIEW",
+        "QT.P7X.TRUE_INDICATED.JOB_POSTING"
+      ],
+      "rule_zh": "“What is indicated about X”：先吃透 about 后的对象 → 回文定位所有提到 X 的地方 → 理解后推断 → 找同义替换选项；Note that / Please note 后的句子必读。",
+      "skill_nodes": [
+        "VO.COLLO.REQUEST_EXPR"
+      ],
+      "sources": [
+        "XB:XB-33"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.KEYWORD_SCAN"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "indicated 题四步",
+      "weight": 0.44,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "先认清问的是谁，把文中提到它的地方都找出来再比选项。"
+    },
+    {
+      "channels": [
+        "books",
+        "ets"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-10",
+      "mention_breakdown": {
+        "BK:P7-05": 6,
+        "ETS:RM-17-05": 1
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "练习模式要求“划依据”句（仅练习）；模考模式不划。",
+      "note": "ETS RM-17-05：推断题是 Part 7 题量最大的一类。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.INFERENCE",
+        "QT.P7.INFER_WHO",
+        "QT.P7.INFER_NEXT",
+        "QT.P7X.INFERENCE.ARTICLE",
+        "QT.P7X.INFERENCE.EMAIL",
+        "QT.P7X.INFERENCE.REVIEW",
+        "QT.P7X.INFER_WHO.NOTICE",
+        "QT.P7X.INFER_WHO.JOB_POSTING",
+        "QT.P7X.INFER_WHO.CHAT",
+        "QT.P7X.INFER_NEXT.CHAT"
+      ],
+      "rule_zh": "推断题答案必须能在原文找到依据，是原文信息的稳妥推论，不靠常识或想象；过度推断是最常见陷阱。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-05",
+        "ETS:RM-17-05"
+      ],
+      "strategy_nodes": [
+        "ST.ELIM.TRAP_TYPES"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "推断要有原文依据",
+      "weight": 0.77,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.45，÷0.6 封顶 1 → 0.75) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "能指出原文哪句话撑腰才选，脑补的不选。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-11",
+      "mention_breakdown": {
+        "BK:P7-14": 2,
+        "SUM:EN": 5,
+        "SUM:FORUM": 1,
+        "XB:XB-35": 1,
+        "XB:XB-42": 3
+      },
+      "mention_count": 12,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL",
+        "QT.P7.INFERENCE",
+        "QT.P7.NOT_TRUE",
+        "QT.P7.MAIN_PURPOSE"
+      ],
+      "rule_zh": "主旨和有关键词的细节题只读相关部分；NOT/TRUE、推断题要读完相关段甚至全文才能确定，单独留时间；寻读找信息、略读按意群抓主题。",
+      "skill_nodes": [
+        "FD.READ.SCAN",
+        "FD.READ.SKIM"
+      ],
+      "sources": [
+        "BK:P7-14",
+        "XB:XB-35",
+        "XB:XB-42",
+        "SUM:EN",
+        "SUM:FORUM"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.DEPTH_BY_QTYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按题型决定读多少",
+      "weight": 0.71,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 12/15)=0.80)",
+      "work_rule": "细节题读一句，推断题读一段。"
+    },
+    {
+      "channels": [
+        "books",
+        "ets"
+      ],
+      "consensus": "高",
+      "counter_examples": "不要按字面义选（如 \"I'll say\" 是强烈同意）；群聊要先分清每条是谁说的。",
+      "format_version": "current",
+      "id": "SL-P7-12",
+      "mention_breakdown": {
+        "BK:P7-06": 5,
+        "ETS:HANDBOOK": 1
+      },
+      "mention_count": 6,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "ETS 考生手册官方样题 Q153 为意图题。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.INTENT",
+        "QT.P7X.INTENT.TEXT_MSG",
+        "QT.P7X.INTENT.CHAT"
+      ],
+      "rule_zh": "短信/群聊里引号句的意图：看前后几条消息确定语境，判断这句话在当时的作用（同意/拒绝/确认/惊讶）。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-06",
+        "ETS:HANDBOOK"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [
+        "TX.TEXT_MSG",
+        "TX.CHAT"
+      ],
+      "title_zh": "意图题看前后消息",
+      "weight": 0.41,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.04，÷0.6 封顶 1 → 0.07) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "引号里那句话，先看上一条在问什么。"
+    },
+    {
+      "channels": [
+        "books",
+        "en"
+      ],
+      "consensus": "高",
+      "counter_examples": "新题插入位置不再固定靠后（XB-38）；线索不足时放到本组最后。",
+      "format_version": "current",
+      "id": "SL-P7-13",
+      "mention_breakdown": {
+        "BK:P7-07": 5,
+        "SUM:EN": 5
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.INSERTION",
+        "QT.P7X.INSERTION.ARTICLE",
+        "QT.P7X.INSERTION.EMAIL",
+        "QT.P7X.INSERTION.LETTER"
+      ],
+      "rule_zh": "先读要插入的句子，抓其中的指代词、连接词、冠词等线索，预测它前面应出现什么内容，再到 [1]–[4] 验证。",
+      "skill_nodes": [
+        "FD.READ.REFERENCE",
+        "FD.READ.DISCOURSE"
+      ],
+      "sources": [
+        "BK:P7-07",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.ORDER.HARD_ITEMS_LAST"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "句子位置题先读待插句",
+      "weight": 0.68,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "先读那句“外来句”，猜它前面该说过什么，再去 [1]–[4] 对号。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "ets"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-14",
+      "mention_breakdown": {
+        "BK:P7-08": 7,
+        "ETS:HANDBOOK": 1,
+        "SUM:EN": 5
+      },
+      "mention_count": 13,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.SYNONYM",
+        "QT.P7X.SYNONYM.ARTICLE",
+        "QT.P7X.SYNONYM.EMAIL",
+        "QT.P7X.SYNONYM.MULTI"
+      ],
+      "rule_zh": "“closest in meaning” 题按原文语境选义，不要选该词最常见的意思（多义词陷阱，如 top=favorite）。",
+      "skill_nodes": [
+        "VO.CONF.POLYSEMY_CONTEXT",
+        "VO.CONF.BUSINESS_SENSE"
+      ],
+      "sources": [
+        "BK:P7-08",
+        "SUM:EN",
+        "ETS:HANDBOOK"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "同义词题选语境义",
+      "weight": 0.51,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.048，÷0.6 封顶 1 → 0.08) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 13/15)=0.87)",
+      "work_rule": "把选项代回原句读一遍，通的才对。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-15",
+      "mention_breakdown": {
+        "BK:P7-11": 7,
+        "XB:XB-29": 3,
+        "XB:XB-41": 1
+      },
+      "mention_count": 11,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.MAIN_PURPOSE",
+        "QT.P7.DETAIL"
+      ],
+      "rule_zh": "先认文本类型：邮件/信=称呼-目的-要求-落款；广告=产品特点-优惠-购买方式；公告/备忘=目的-要求；文章/新闻=5W1H、首段细读；表格/日程按栏位找；聊天看情境。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-11",
+        "XB:XB-29",
+        "XB:XB-41"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.LOCATE.TEXT_STRUCTURE（按文本结构预测考点）",
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.MEMO",
+        "TX.NOTICE",
+        "TX.AD",
+        "TX.JOB_POSTING",
+        "TX.ARTICLE",
+        "TX.FORM",
+        "TX.SCHEDULE",
+        "TX.TEXT_MSG",
+        "TX.CHAT",
+        "TX.WEB",
+        "TX.REVIEW",
+        "TX.INSTRUCTIONS"
+      ],
+      "title_zh": "认文本类型、按结构预测考点",
+      "weight": 0.91,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.56，÷0.6 封顶 1 → 0.93) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 11/15)=0.73)",
+      "work_rule": "先认是什么文件，再去它通常放答案的位置找。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-16",
+      "mention_breakdown": {
+        "XB:XB-39": 1,
+        "XB:XB-40": 1
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "XB-39 中“招聘广告里‘打电话应聘’可排除”为讲师经验法则、无官方依据，未收入（见排除表）。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.DETAIL",
+        "QT.P7.INFER_WHO",
+        "QT.P7.REQUEST_ACTION",
+        "QT.P7X.REQUEST_ACTION.EMAIL",
+        "QT.P7X.REQUEST_ACTION.MEMO"
+      ],
+      "rule_zh": "邮件/信：附件(enclosed/attached)、收发件人职位（常被改写）、FYI/BTW 等缩写常考；广告/表格：最后一句常给申请/购买办法或最强优惠。",
+      "skill_nodes": [
+        "VO.TITLES_DEPTS"
+      ],
+      "sources": [
+        "XB:XB-40",
+        "XB:XB-39"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.EMAIL",
+        "TX.LETTER",
+        "TX.AD",
+        "TX.FORM"
+      ],
+      "title_zh": "文体常考细节",
+      "weight": 0.16,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.048，÷0.6 封顶 1 → 0.08) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "邮件看附件和职位，广告看最后一句。"
+    },
+    {
+      "channels": [
+        "books",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P7-17",
+      "mention_breakdown": {
+        "BK:P7-12": 7,
+        "SUM:JK": 1,
+        "XB:XB-38": 2
+      },
+      "mention_count": 10,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.CROSS_REF",
+        "QT.P7X.CROSS_REF.DOUBLE",
+        "QT.P7X.CROSS_REF.TRIPLE",
+        "QT.P7.CALC_LOOKUP",
+        "QT.P7X.CALC_LOOKUP.INVOICE",
+        "QT.P7X.CALC_LOOKUP.SCHEDULE"
+      ],
+      "rule_zh": "双篇/三篇先预判跨篇题：一篇给条件（折扣规则、日程、价目），另一篇给具体数据，答题时两篇对照；三篇常需 1↔3 篇对比、常带图表；每组约 1–2 道跨篇题。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-12",
+        "XB:XB-38",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.LOCATE.MULTI_DOC_ROUTING（多篇按题定篇/跨篇对照）",
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [
+        "TX.MULTI",
+        "TX.DOUBLE",
+        "TX.TRIPLE",
+        "TX.INVOICE",
+        "TX.SCHEDULE"
+      ],
+      "title_zh": "多篇预判跨篇连锁",
+      "weight": 0.63,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.24，÷0.6 封顶 1 → 0.40) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "多篇题先问：条件在哪篇，数据在哪篇？"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-P7-18",
+      "mention_breakdown": {
+        "XB:XB-36": 3
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "XB-36 有新东方课程、杨老师、邹老师 3 位作者，判“中”。与已弃用 XB-37（旧制“双篇多数题只读一篇”）区别：新制跨篇题更多。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7X.DETAIL.DOUBLE",
+        "QT.P7X.DETAIL.TRIPLE",
+        "QT.P7X.MAIN_PURPOSE.MULTI",
+        "QT.P7.CROSS_REF"
+      ],
+      "rule_zh": "多篇先看 5 道题分别指向哪篇（题干里的 e-mail/notice/article 等），精读被问最多的那篇，其余寻读；跨篇题不按先后顺序出。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-36"
+      ],
+      "strategy_nodes": [
+        "ST.LOCATE.QUESTION_FIRST"
+      ],
+      "suggested_new_node": "ST.LOCATE.MULTI_DOC_ROUTING（多篇按题定篇/跨篇对照）",
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.MULTI",
+        "TX.DOUBLE",
+        "TX.TRIPLE"
+      ],
+      "title_zh": "多篇按题定篇",
+      "weight": 0.72,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.6，÷0.6 封顶 1 → 1.00) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "先给 5 道题分配文件，再决定精读哪篇。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-19",
+      "mention_breakdown": {
+        "BK:P7-15": 3
+      },
+      "mention_count": 3,
+      "mock_mode": false,
+      "mode_note": "训练方法，模考中不刻意执行。",
+      "note": "",
+      "parts": [
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "用意群斜线读法训练顺序直读（不回读、不逐词翻译），可跟着题目音频按目标速度读。",
+      "skill_nodes": [
+        "FD.READ.CHUNK",
+        "FD.READ.SPEED_150"
+      ],
+      "sources": [
+        "BK:P7-15"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.AUDIO_SHADOW"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "意群顺读",
+      "weight": 0.43,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.25，÷0.6 封顶 1 → 0.42) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "按意群一块一块往前读，不回头。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "生词恰好是题目问的词（同义词题）或题干关键词时，要停下用上下文猜义。",
+      "format_version": "universal",
+      "id": "SL-P7-20",
+      "mention_breakdown": {
+        "BK:P7-16": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "遇到生词不停下，先靠上下文把握大意，读完再查。",
+      "skill_nodes": [
+        "FD.READ.UNKNOWN_WORD"
+      ],
+      "sources": [
+        "BK:P7-16"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "生词不停",
+      "weight": 0.35,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "生词先跳过，读完再回来查。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-21",
+      "mention_breakdown": {
+        "BK:P7-17": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "先测自己读一篇的用时，再以目标用时反复练同一篇（测时→抓要点→斜线读→答题→提速）。",
+      "skill_nodes": [
+        "FD.READ.SPEED_150",
+        "FD.READ.SPEED_200"
+      ],
+      "sources": [
+        "BK:P7-17"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.SPEED_REPEAT"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "测时后重复同篇提速",
+      "weight": 0.31,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.25，÷0.6 封顶 1 → 0.42) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "同一篇读三遍，每遍限时更短。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-22",
+      "mention_breakdown": {
+        "XB:XB-45": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7.DETAIL"
+      ],
+      "rule_zh": "700+ 提速：精读 although/while/unless 后的转折、关系从句里 who 后的谓语、whoever/whatever 结构；announce/ensure/note that 后的内容常是考点。",
+      "skill_nodes": [
+        "FD.READ.DISCOURSE",
+        "FD.SENT.LONG",
+        "GR.REL.COMPOUND_REL"
+      ],
+      "sources": [
+        "XB:XB-45"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "信号句预测下文",
+      "weight": 0.52,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "看到 although、note that，后面那句重点读。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "600 以上应关闭，否则依赖中文。",
+      "format_version": "universal",
+      "id": "SL-P7-23",
+      "mention_breakdown": {
+        "BK:P7-18": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "只在练习模式、<600 档提供“中文提要”开关。",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "基础阶段先读中文概要再读英文原文，建立“英文能顺读”的感觉。",
+      "skill_nodes": [
+        "FD.READ.SKIM"
+      ],
+      "sources": [
+        "BK:P7-18"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.REVIEW.L1_PRIMING（母语预读）",
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "先看中文概要再读英文",
+      "weight": 0.44,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "新手先看中文提要，再读英文。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-P7-24",
+      "mention_breakdown": {
+        "BK:V-03": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.INFER_WHO"
+      ],
+      "rule_zh": "专门记题干和选项里的高频词，以及部门、职位名称，读题更快。",
+      "skill_nodes": [
+        "VO.TITLES_DEPTS"
+      ],
+      "sources": [
+        "BK:V-03"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "记题干选项常见词与职位名",
+      "weight": 0.27,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.2，÷0.6 封顶 1 → 0.33) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "先认熟题目里反复出现的词和职位名。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-01",
+      "mention_breakdown": {
+        "BK:P5-15": 4,
+        "SUM:EN": 12,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-01": 5
+      },
+      "mention_count": 23,
+      "mock_mode": true,
+      "mode_note": "模考模式默认；练习模式按 5/20 分钟会话缩放。",
+      "note": "冲突：XB-02/日韩 900 档主张压到 15–18 分钟（见 SL-ALL-02）；黄琳达为 15–20+P7 50+检查 5。按分段取舍。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "P5 约 10–12 分钟、P6 约 8–10 分钟（合计 ≤20），P7 留 ≥53–55 分钟；开考约 20 分钟时应翻到第 147 题。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P5-15",
+        "XB:XB-01",
+        "SUM:FORUM",
+        "SUM:EN",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.TOTAL_PLAN"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "整卷配速",
+      "weight": 1.0,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.6，÷0.6 封顶 1 → 1.00) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 23/15)=1.00)",
+      "work_rule": "P5、P6 合计 20 分钟内交差，剩下的全给 P7。"
+    },
+    {
+      "channels": [
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "P5 正确率 <80% 时压时间会丢 P5 分，先提 P5 准确率。",
+      "format_version": "current",
+      "id": "SL-ALL-02",
+      "mention_breakdown": {
+        "SUM:JK": 1,
+        "XB:XB-02": 1
+      },
+      "mention_count": 2,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "理由：近年三篇篇幅变长（邹老师个人观察）。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "目标 800+ 或 P7 常做不完：P5+P6 压到 15–18 分钟（900 目标各 ≤8 分钟），三篇每组留 6–7 分钟。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-02",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.TOTAL_PLAN"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "高分档加速配速",
+      "weight": 0.71,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.6，÷0.6 封顶 1 → 1.00) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "冲高分：P5、P6 合计 16 分钟左右。"
+    },
+    {
+      "channels": [
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-03",
+      "mention_breakdown": {
+        "SUM:JK": 1,
+        "XB:XB-03": 4,
+        "XB:XB-43": 2
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "韩国 hackers 为单篇 28/双篇 11/三篇 17 分钟，与本条一致；XB-11（单篇 20/双 10/三 20）题数口径与新制不符，已弃用。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "单篇 147–175（29 题）≤25–30 分钟，多篇 176–200（25 题）≥25 分钟，三篇每组约 6–7 分钟；单篇尽快做完把时间留给多篇。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-03",
+        "XB:XB-43",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.PER_SET_P7",
+        "ST.ORDER.WITHIN_P7"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.DOUBLE",
+        "TX.TRIPLE"
+      ],
+      "title_zh": "P7 分段配时",
+      "weight": 0.65,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.45，÷0.6 封顶 1 → 0.75) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "单篇别恋战，留够 25 分钟给多篇。"
+    },
+    {
+      "channels": [
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-04",
+      "mention_breakdown": {
+        "SUM:JK": 1,
+        "XB:XB-01": 5,
+        "XB:XB-04": 1
+      },
+      "mention_count": 7,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "不每篇都看表：每做 3–4 篇（或到 P6 开头、147、176 题）对一次检查点，落后就启用放弃线。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-04",
+        "XB:XB-01",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.TIME.CHECKPOINTS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "分阶段看表",
+      "weight": 0.57,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "只在几个检查站看表，落后就提速或猜。"
+    },
+    {
+      "channels": [
+        "en",
+        "ets",
+        "forum",
+        "jk"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-05",
+      "mention_breakdown": {
+        "ETS:HANDBOOK": 1,
+        "SUM:EN": 8,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1
+      },
+      "mention_count": 11,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "答错不扣分，任何题都不要空着；最后来不及就统一猜同一个字母。",
+      "skill_nodes": [],
+      "sources": [
+        "ETS:HANDBOOK",
+        "SUM:EN",
+        "SUM:FORUM",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.GIVEUP.NO_BLANK"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "不留空",
+      "weight": 0.78,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 11/15)=0.73)",
+      "work_rule": "每张工单都要交，空着等于白扔分。"
+    },
+    {
+      "channels": [
+        "en",
+        "ets",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-06",
+      "mention_breakdown": {
+        "ETS:HANDBOOK": 1,
+        "SUM:EN": 7,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-44": 2
+      },
+      "mention_count": 12,
+      "mock_mode": true,
+      "mode_note": "机考/应用里可用“稍后处理”标签；纸笔模考不能在题本标记，只能记题号。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "设放弃线：一题超时（P5 约 30 秒、P7 约 1 分钟）先选一个最像的，标记后继续，有余时间再回看；不要因一题耽误后面的简单题。",
+      "skill_nodes": [],
+      "sources": [
+        "ETS:HANDBOOK",
+        "SUM:EN",
+        "SUM:FORUM",
+        "XB:XB-44",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.GIVEUP.CUTOFF_RULE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "卡住就猜，先跳后回",
+      "weight": 0.88,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 12/15)=0.80)",
+      "work_rule": "卡住就先猜一个，挂“稍后处理”，往下走。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-07",
+      "mention_breakdown": {
+        "XB:XB-05": 3
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "只在模考/限时会话触发（剩余时间 < 所需时间）。",
+      "note": "3 个视频同一作者（邹老师），故判“个人经验”。",
+      "parts": [
+        7
+      ],
+      "practice_mode": false,
+      "qtype_nodes": [],
+      "rule_zh": "剩余时间不够做完时，每组 5 题只挑词义题和直接定位的细节题做 2–3 道，其余快速排除后猜，先保证全部涂满。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-05"
+      ],
+      "strategy_nodes": [
+        "ST.GIVEUP.TARGET_BASED",
+        "ST.TIME.PER_SET_P7"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.DOUBLE",
+        "TX.TRIPLE"
+      ],
+      "title_zh": "时间不够做三蒙二",
+      "weight": 0.51,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.45，÷0.6 封顶 1 → 0.75) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "时间不够：每组只做最容易的两三题，其余先猜。"
+    },
+    {
+      "channels": [
+        "ets",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "800+ 目标不适用；题号区间（121–130、165–175）是个人经验，ETS 未公布难度顺序。",
+      "format_version": "current",
+      "id": "SL-ALL-08",
+      "mention_breakdown": {
+        "ETS:RM-17-05": 1,
+        "XB:XB-06": 1,
+        "XB:XB-07": 2
+      },
+      "mention_count": 4,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "ETS RM-17-05：多篇 p 值 0.42–0.51，低于 P5 的 0.65–0.68，支持“低分段优先保 P5”。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "只求过线/600–700 目标：难题集中区（P5 后段、P6 插入句、P7 单篇后段长文）不会就猜，可战略性放弃部分多篇；多篇每组都有易得分题要先抓。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-07",
+        "XB:XB-06",
+        "ETS:RM-17-05"
+      ],
+      "strategy_nodes": [
+        "ST.GIVEUP.TARGET_BASED"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按目标分决定放弃哪些题",
+      "weight": 0.48,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 4/15)=0.27)",
+      "work_rule": "先拿自己够得着的分，够不着的题批量猜。"
+    },
+    {
+      "channels": [
+        "en",
+        "forum",
+        "xdf_bili"
+      ],
+      "consensus": "中",
+      "counter_examples": "规则上允许先做 P7（toeic.ai 说“不能先做 P7”是错的）；P5 准确率高、P7 常做不完的人可试倒序，但涂卡错位风险更高。",
+      "format_version": "current",
+      "id": "SL-ALL-09",
+      "mention_breakdown": {
+        "SUM:EN": 1,
+        "SUM:FORUM": 1,
+        "XB:XB-08": 1
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "默认按 P5→P6→P7 顺序做，不跳着先做双篇；要预期 P7 篇型顺序被打乱。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-08",
+        "SUM:FORUM",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.ORDER.PART_SEQUENCE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "Part 间按顺序做",
+      "weight": 0.39,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.2，÷0.6 封顶 1 → 0.33) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "按顺序开工，别东一块西一块。"
+    },
+    {
+      "channels": [
+        "books",
+        "en"
+      ],
+      "consensus": "高",
+      "counter_examples": "与 SL-ALL-09“按序做”的取舍：组内调序可以，跨组跳着做不建议。",
+      "format_version": "universal",
+      "id": "SL-ALL-10",
+      "mention_breakdown": {
+        "BK:P7-13": 3,
+        "SUM:EN": 5
+      },
+      "mention_count": 8,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "P7 内先拿把握大的题/篇；多篇里先做单文档题，跨篇题后做；但不要把多篇整块留到最后。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:P7-13",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.ORDER.WITHIN_P7"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [
+        "TX.MULTI"
+      ],
+      "title_zh": "P7 内先易后难，多篇不整块留后",
+      "weight": 0.7,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 8/15)=0.53)",
+      "work_rule": "先做单篇就能答的，跨篇题放在组内最后。"
+    },
+    {
+      "channels": [
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-11",
+      "mention_breakdown": {
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-09": 4
+      },
+      "mention_count": 6,
+      "mock_mode": true,
+      "mode_note": "仅纸笔模考模式（中国大陆纸笔考）；日韩 toeicstory 建议整卷涂卡 ≤3 分钟。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": false,
+      "qtype_nodes": [],
+      "rule_zh": "纸笔考每 30 题或每个 Part 集中涂一次；倒计时 5 分钟停下，把已做题全部涂完，剩余题统一猜涂。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-09",
+        "SUM:FORUM",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.BUBBLE.BATCH",
+        "ST.BUBBLE.FINAL_MINUTES"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "分段涂卡、最后 5 分钟涂完",
+      "weight": 0.59,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.25，÷0.6 封顶 1 → 0.42) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "每做完一段就涂卡；还剩 5 分钟立刻全部涂满。"
+    },
+    {
+      "channels": [
+        "books",
+        "en"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-12",
+      "mention_breakdown": {
+        "BK:G-01": 5,
+        "SUM:EN": 5
+      },
+      "mention_count": 10,
+      "mock_mode": false,
+      "mode_note": "引擎自动完成，展示在“薄弱点榜”。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "按题型统计正确率诊断薄弱点，再针对弱项练（可对照官方 Abilities Measured 5 项）。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:G-01",
+        "SUM:EN"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.DIAGNOSE_BY_TYPE"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按题型统计正确率找弱项",
+      "weight": 0.72,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 10/15)=0.67)",
+      "work_rule": "先看绩效报表：哪类工单错得多就练哪类。"
+    },
+    {
+      "channels": [
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-13",
+      "mention_breakdown": {
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-20": 3,
+        "XB:XB-49": 1
+      },
+      "mention_count": 6,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "每套记录各 Part 错几题、每种原因错几题（词汇/语法/定位/时间/改写没认出），按原因而不是按题复习。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-49",
+        "XB:XB-20",
+        "SUM:JK",
+        "SUM:FORUM"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.ERROR_CAUSE_LOG"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "错题按原因分类",
+      "weight": 0.71,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "每道错题贴一个错因标签。"
+    },
+    {
+      "channels": [
+        "books",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-14",
+      "mention_breakdown": {
+        "BK:G-02": 6,
+        "XB:XB-20": 3
+      },
+      "mention_count": 9,
+      "mock_mode": false,
+      "mode_note": "练习模式复盘页可选“说给 AI 听”检验。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "复盘时逐个说明每个错误选项为什么错，能给别人讲清“为什么选这个、不选另外三个”才算懂。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:G-02",
+        "XB:XB-20"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.EXPLAIN_DISTRACTORS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "讲清每个错误选项为何错",
+      "weight": 0.71,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 9/15)=0.60)",
+      "work_rule": "复盘时把四个选项都“结案”。"
+    },
+    {
+      "channels": [
+        "books",
+        "jk"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-15",
+      "mention_breakdown": {
+        "BK:P7-10": 2,
+        "SUM:JK": 1
+      },
+      "mention_count": 3,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P7.TRUE_INDICATED",
+        "QT.P7.INFERENCE",
+        "QT.P7.DETAIL"
+      ],
+      "rule_zh": "掌握错误选项套路（原文没提、部分正确、张冠李戴、过度推断、照搬原词、因果颠倒）并在复盘时归类。",
+      "skill_nodes": [
+        "VO.PARA.CAUSE_EFFECT",
+        "VO.PARA.NEGATION_SHIFT"
+      ],
+      "sources": [
+        "BK:P7-10",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.ELIM.TRAP_TYPES",
+        "ST.ELIM.OPTIONS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "认熟错误选项套路",
+      "weight": 0.59,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.45，÷0.6 封顶 1 → 0.75) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "错误选项就那几种套路，认出来就划掉。"
+    },
+    {
+      "channels": [
+        "books",
+        "en",
+        "forum",
+        "jk",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-16",
+      "mention_breakdown": {
+        "BK:G-03": 5,
+        "SUM:EN": 5,
+        "SUM:FORUM": 1,
+        "SUM:JK": 1,
+        "XB:XB-48": 3
+      },
+      "mention_count": 15,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": false,
+      "qtype_nodes": [],
+      "rule_zh": "用官方/仿真题严格 75 分钟整卷模考（含涂卡），不在题本写答案以便重做；留 1–2 套新题考前做；每次模考后用一天复盘。",
+      "skill_nodes": [],
+      "sources": [
+        "BK:G-03",
+        "XB:XB-48",
+        "SUM:FORUM",
+        "SUM:EN",
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.TIMED_MOCK"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "限时整卷模考",
+      "weight": 0.92,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 15/15)=1.00)",
+      "work_rule": "定期来一次 75 分钟“季度考核”，第二天专门复盘。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-17",
+      "mention_breakdown": {
+        "BK:G-04": 7
+      },
+      "mention_count": 7,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "7 本书提及，但只来自书籍一路。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "Part 5/6 听音频写出空格，Part 7 跟着音频读原文。",
+      "skill_nodes": [
+        "FD.READ.CHUNK"
+      ],
+      "sources": [
+        "BK:G-04"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.AUDIO_SHADOW"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "用题目音频复习阅读",
+      "weight": 0.6,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.25，÷0.6 封顶 1 → 0.42) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 7/15)=0.47)",
+      "work_rule": "做完的题再听一遍、跟读一遍。"
+    },
+    {
+      "channels": [
+        "forum",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-18",
+      "mention_breakdown": {
+        "SUM:FORUM": 1,
+        "XB:XB-47": 2
+      },
+      "mention_count": 3,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "论坛分歧：要不要专门背单词。取舍：NGSL/TSL 词包打底 + 从题里摘，两者并用。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "生词本从做过的题里摘，只记托业考到的词义；每篇挑 2–3 个词记；先用词表 App 过一遍，再转自建生词本。",
+      "skill_nodes": [
+        "FD.VOC.NGSL_CORE"
+      ],
+      "sources": [
+        "XB:XB-47",
+        "SUM:FORUM"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.VOCAB_FROM_ITEMS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "生词从题里摘",
+      "weight": 0.59,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.3，÷0.6 封顶 1 → 0.50) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 3/15)=0.20)",
+      "work_rule": "每篇做完挑两三个词放进词卡。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-19",
+      "mention_breakdown": {
+        "BK:V-01": 2
+      },
+      "mention_count": 2,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "先背目标分以下各段的词，提分后再扩展。",
+      "skill_nodes": [
+        "VO.BAND",
+        "VO.BAND.B600",
+        "VO.BAND.B730",
+        "VO.BAND.B860",
+        "VO.BAND.B990"
+      ],
+      "sources": [
+        "BK:V-01"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按分数段分层背词",
+      "weight": 0.5,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.35，÷0.6 封顶 1 → 0.58) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "先背自己这一档的词。"
+    },
+    {
+      "channels": [
+        "books"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-20",
+      "mention_breakdown": {
+        "BK:V-02": 5
+      },
+      "mention_count": 5,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [
+        "QT.P5.VOCAB"
+      ],
+      "rule_zh": "以短语/搭配为单位记词（每条不超过 7 个词），兼顾 P5 搭配题和 P7 阅读。",
+      "skill_nodes": [
+        "VO.COLLO",
+        "VO.COLLO.FIXED_PHRASE",
+        "VO.COLLO.VERB_NOUN",
+        "VO.COLLO.PHRASAL_VERB"
+      ],
+      "sources": [
+        "BK:V-02"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": null,
+      "target_band": [
+        "<600",
+        "600-800"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按搭配记词",
+      "weight": 0.72,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.42，÷0.6 封顶 1 → 0.70) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 5/15)=0.33)",
+      "work_rule": "背词背整个短语，不背单个词。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-21",
+      "mention_breakdown": {
+        "XB:XB-46": 1
+      },
+      "mention_count": 1,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "",
+      "parts": [
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "每篇生词 ≥5 个说明词汇未过关，应先补词汇再做模考。",
+      "skill_nodes": [
+        "FD.VOC.NGSL_CORE",
+        "VO.BAND.B600"
+      ],
+      "sources": [
+        "XB:XB-46"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.REVIEW.VOCAB_GATE（生词密度阈值）",
+      "target_band": [
+        "<600"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "生词多先补词再模考",
+      "weight": 0.6,
+      "weight_basis": "0.5×考频(skill/texttype 节点最大 exam_weight=0.7，÷0.6 封顶 1 → 1.00) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "一篇里生词超过 5 个，先回词汇区。"
+    },
+    {
+      "channels": [
+        "xdf_bili"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "",
+      "format_version": "current",
+      "id": "SL-ALL-22",
+      "mention_breakdown": {
+        "XB:XB-22": 2
+      },
+      "mention_count": 2,
+      "mock_mode": false,
+      "mode_note": "",
+      "note": "“偏易 30–50%”是个人主观估计（2026-04 日本场）。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "官方题集 P5/P6 难度接近真题，但 P7 偏易；冲 800+ 需要更难的 P7 材料。",
+      "skill_nodes": [],
+      "sources": [
+        "XB:XB-22"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.REVIEW.MATERIAL_LEVEL（材料难度匹配）",
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "按目标选材料难度",
+      "weight": 0.28,
+      "weight_basis": "0.5×考频(无可用节点，按 0.2 计，÷0.6 封顶 1 → 0.33) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 2/15)=0.13)",
+      "work_rule": "冲高分时 P7 要练更难的文章。"
+    },
+    {
+      "channels": [
+        "ets"
+      ],
+      "consensus": "中",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-23",
+      "mention_breakdown": {
+        "ETS:HANDBOOK": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "用于“绩效评估”页显示预测区间。",
+      "note": "",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": false,
+      "qtype_nodes": [],
+      "rule_zh": "官方 SEM 约 ±25，两次成绩相差 35 分以内可能只是测量误差，不据此大改计划。",
+      "skill_nodes": [],
+      "sources": [
+        "ETS:HANDBOOK"
+      ],
+      "strategy_nodes": [
+        "ST.REVIEW.TIMED_MOCK"
+      ],
+      "suggested_new_node": "ST.REVIEW.SCORE_NOISE（分数误差解读）",
+      "target_band": [
+        "<600",
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "分数波动 35 分以内看作噪音",
+      "weight": 0.61,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.5，÷0.6 封顶 1 → 0.83) + 0.3×共识(中=0.6) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "模考分涨跌 35 分以内，别激动也别泄气。"
+    },
+    {
+      "channels": [
+        "jk"
+      ],
+      "consensus": "个人经验",
+      "counter_examples": "NOT/TRUE 题本质就是逐项核对（SL-P7-07），不适用本条。",
+      "format_version": "universal",
+      "id": "SL-ALL-24",
+      "mention_breakdown": {
+        "SUM:JK": 1
+      },
+      "mention_count": 1,
+      "mock_mode": true,
+      "mode_note": "",
+      "note": "来源 IIBC methods07（日本官方机构文章）。与 SL-P7-07 的冲突按题型取舍。",
+      "parts": [
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "800+ 不靠消去法：先在原文找到支持正确选项的依据再选，排除法只用于犹豫的两选一。",
+      "skill_nodes": [],
+      "sources": [
+        "SUM:JK"
+      ],
+      "strategy_nodes": [
+        "ST.ELIM.OPTIONS"
+      ],
+      "suggested_new_node": null,
+      "target_band": [
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "高分段正向确认，排除作后备",
+      "weight": 0.44,
+      "weight_basis": "0.5×考频(qtype/strategy 节点最大 exam_weight=0.4，÷0.6 封顶 1 → 0.67) + 0.3×共识(个人经验=0.3) + 0.2×提及(min(1, 1/15)=0.07)",
+      "work_rule": "高手先找证据再选，不是靠划掉别的。"
+    },
+    {
+      "channels": [
+        "ets",
+        "xdf_bili"
+      ],
+      "consensus": "高",
+      "counter_examples": "",
+      "format_version": "universal",
+      "id": "SL-ALL-25",
+      "mention_breakdown": {
+        "ETS:HANDBOOK": 1,
+        "XB:XB-10": 2,
+        "XB:XB-48": 3
+      },
+      "mention_count": 6,
+      "mock_mode": true,
+      "mode_note": "模考模式强制：关闭高亮/划线/笔记工具；练习模式允许“划依据”。",
+      "note": "XB-10 中“在答题卡题号旁轻点、结束前擦掉”属规则边缘行为，未收入（见排除表）。",
+      "parts": [
+        5,
+        6,
+        7
+      ],
+      "practice_mode": true,
+      "qtype_nodes": [],
+      "rule_zh": "题本禁止划线/笔记，无草稿纸；听力时间不得翻做阅读（可取消成绩）；平时练习就不在题本写字。",
+      "skill_nodes": [],
+      "sources": [
+        "ETS:HANDBOOK",
+        "XB:XB-10",
+        "XB:XB-48"
+      ],
+      "strategy_nodes": [],
+      "suggested_new_node": "ST.RULES.EXAM_CONDUCT（考场规则）",
+      "target_band": [
+        "<600",
+        "600-800",
+        "800+"
+      ],
+      "texttype_nodes": [],
+      "title_zh": "考场规则：题本不写画、只在阅读时间做阅读",
+      "weight": 0.55,
+      "weight_basis": "0.5×考频(无可用节点，按 0.2 计，÷0.6 封顶 1 → 0.33) + 0.3×共识(高=1.0) + 0.2×提及(min(1, 6/15)=0.40)",
+      "work_rule": "模考里不能在卷子上写字，练习里养成习惯。"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "EXC-01",
+      "reason": "ETS 规定未授权时段作答可取消成绩",
+      "rule_zh": "利用听力时间偷做 Part 5/阅读题",
+      "source": "SUM:EN / ETS:HANDBOOK（论坛偶见）"
+    },
+    {
+      "id": "EXC-02",
+      "reason": "ETS 禁止在题本做任何标记；已把 XB-28 改写为“记住关键词”，练习模式内的高亮不受影响",
+      "rule_zh": "在试题册/题本上划线、圈关键词、写答案",
+      "source": "XB:XB-28 原步骤“划出人名、日期…”；论坛常见"
+    },
+    {
+      "id": "EXC-03",
+      "reason": "规则边缘行为，邹老师本人也提示有被提醒风险；最稳妥是不标记",
+      "rule_zh": "在答题卡题号旁轻点标记、结束前擦净",
+      "source": "XB:XB-10"
+    },
+    {
+      "id": "EXC-04",
+      "reason": "讲师经验法则，无官方依据，可靠性低，作为规则会误导",
+      "rule_zh": "招聘广告选项中“打电话应聘”通常可排除",
+      "source": "XB:XB-39（后半句）"
+    }
+  ],
+  "meta": {
+    "builder": "work/strategies/build_strategy_library.py",
+    "built": "2026-10-21",
+    "exam_format": "TOEIC L&R 阅读现行线性新制（P5 30 / P6 16 / P7 54，75 分钟 100 题）",
+    "field_notes": {
+      "consensus": "高=≥3 个独立渠道或 ≥3 位独立作者/书；中=2 个渠道或 2–3 位作者；个人经验=单一作者（即使有多个视频）。人工判定",
+      "format_version": "current=只适用现行新制（依赖 P6 插入句、三篇、群聊、新制题号等）；universal=新旧制通用。旧制条目标 deprecated，单列在 deprecated[]，不进 entries[]",
+      "mention_count": "跨来源合计：BK/XB 用原文件 mention_count（多少本书/视频提到）；SUM:* 汇总渠道用报告给的来源数，未给按 1 计（下限）；ETS 文件各计 1。是下限，且同一作者多个视频会重复计数",
+      "practice_mode_mock_mode": "该规则在练习/模考模式是否可用或触发；mode_note 说明差异（如“划依据”仅练习模式，模考禁止题本标记）",
+      "qtype_texttype_strategy_skill_nodes": "均为 graph_v1 节点 ID（已校验存在）；skill_nodes 为 grammar/vocab/foundation 层的辅助绑定",
+      "target_band": "<600 / 600-800 / 800+，表示从哪个目标分段开始值得用（可多选）",
+      "weight": "0–1，价值权重 = 0.5×考频 + 0.3×共识 + 0.2×提及数；考频取所绑定 qtype/strategy 叶子节点 exam_weight 最大值 ÷0.6 封顶 1（无则用 skill/texttype 节点）；每条 weight_basis 写明算式",
+      "work_rule": "游戏里的“工作规则”，大白话一句"
+    },
+    "inputs": [
+      "data/strategies/books.json",
+      "data/strategies/xdf_bilibili.json",
+      "data/strategies/xdf_bilibili_sources.md",
+      "work/reports/strategy_findings_summary.md",
+      "data/strategies/exam_pattern_stats.json（经 graph_v1 exam_weight 间接使用）",
+      "data/graph_v1.json"
+    ],
+    "version": "1.0"
+  },
+  "source_registry": {
+    "books": "BK:<technique id> → data/strategies/books.json techniques[]",
+    "summary_channels": {
+      "ETS:HANDBOOK": {
+        "channel": "ets",
+        "count_rule": "1",
+        "desc": "ETS 考生手册 https://www.ets.org/pdfs/toeic/toeic-listening-reading-test-examinee-handbook.pdf"
+      },
+      "ETS:RM-17-05": {
+        "channel": "ets",
+        "count_rule": "1",
+        "desc": "ETS RM-17-05 https://www.ets.org/Media/Research/pdf/RM-17-05.pdf（各 Part p 值、完成率）"
+      },
+      "SUM:EN": {
+        "channel": "en",
+        "count_rule": "用报告括号里的来源数（如 12 源）；未给数的按 1 计",
+        "desc": "英文备考站约 35 来源汇总（engoo/990prep/bestmytest 等）"
+      },
+      "SUM:FORUM": {
+        "channel": "forum",
+        "count_rule": "报告未给逐条来源数，按 1 计（下限）",
+        "desc": "中文论坛 24 来源汇总（知乎/B站专栏/PTT/etogether 等），见 work/reports/strategy_findings_summary.md"
+      },
+      "SUM:JK": {
+        "channel": "jk",
+        "count_rule": "未给逐条来源数，按 1 计（下限）",
+        "desc": "日韩约 81 来源汇总（trankyblog/toiguide/english-route/toeicstory/hackers 等）"
+      }
+    },
+    "xdf_bili": "XB:<id> → data/strategies/xdf_bilibili.json（原始视频/专栏见 xdf_bilibili_sources.md）"
+  },
+  "validation": {
+    "all_node_ids_exist": true,
+    "deprecated_not_in_main": true,
+    "errors": [],
+    "n_deprecated": 3,
+    "n_entries": 82,
+    "n_excluded": 4,
+    "passed": true,
+    "qtype_leaves_without_technique": [
+      "QT.P7X.DETAIL.INSTRUCTIONS"
+    ],
+    "strategy_nodes_without_technique": [],
+    "texttype_without_technique": [
+      "TX.APP_FORM"
+    ],
+    "unique_ids": true
+  }
+}

@@ -1,0 +1,1784 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-04",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "C",
+          "choices": [
+            "construct",
+            "constructed",
+            "construction",
+            "constructively"
+          ],
+          "explanation": "Between “the” and “of” a noun is required: “the construction of”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The board has approved the ______ of two additional distribution centres in the eastern region."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "will have compiled",
+            "compiles",
+            "had compiled",
+            "is compiling"
+          ],
+          "explanation": "“By the time” with a future reference (“next Monday”) calls for the future perfect: the work will be complete before the auditors arrive.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the auditors arrive next Monday, the finance team ______ all supporting documents."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "since",
+            "for",
+            "during",
+            "within"
+          ],
+          "explanation": "“for” introduces a duration (fifteen years); “since” would introduce a starting point, as in “since 2011”.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "Mr. Halloran has worked at Brightline Logistics ______ more than fifteen years."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "distributed",
+            "were distributed",
+            "have distributed",
+            "distributing"
+          ],
+          "explanation": "The guidelines are distributed, they do not distribute: past passive, consistent with “last Thursday”.",
+          "number": 104,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The revised safety guidelines ______ to all warehouse personnel last Thursday."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "sharp",
+            "sharper",
+            "sharply",
+            "sharpness"
+          ],
+          "explanation": "The word modifies the verb “grew”, so an adverb is needed.",
+          "number": 105,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Sales in the northern territory grew ______ after the advertising campaign was launched."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Although",
+            "Because",
+            "Therefore",
+            "Whether"
+          ],
+          "explanation": "The two clauses contrast — the work overran, yet the restaurant reopened on time — which calls for the concessive “Although”.",
+          "number": 106,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the renovation took longer than planned, the restaurant reopened on schedule."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "who",
+            "whose",
+            "which",
+            "that"
+          ],
+          "explanation": "The delivery times belong to the supplier, so the possessive relative “whose” is required.",
+          "number": 107,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "We are looking for a supplier ______ delivery times are consistently under three days."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "leave",
+            "left",
+            "leaving",
+            "to leave"
+          ],
+          "explanation": "Here “before” acts as a preposition, so the verb that follows takes the -ing form.",
+          "number": 108,
+          "tags": [
+            "gerund-infinitive",
+            "preposition"
+          ],
+          "text": "Employees should log out of the system before ______ the building."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "are",
+            "is",
+            "were",
+            "being"
+          ],
+          "explanation": "The subject is “the list”, which is singular; “of approved contractors” is only a modifier. A classic agreement trap.",
+          "number": 109,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "The list of approved contractors ______ updated at the end of every quarter."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "efficient",
+            "efficiently",
+            "more efficient",
+            "most efficient"
+          ],
+          "explanation": "“than” requires a comparative, and because “efficient” is a long adjective it forms one with “more”.",
+          "number": 110,
+          "tags": [
+            "comparative"
+          ],
+          "text": "The revised layout makes the assembly line considerably ______ than the previous one."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "forward",
+            "promote",
+            "proceed",
+            "arrive"
+          ],
+          "explanation": "“forward something to someone” means to pass it on. “proceed” and “arrive” are intransitive, and “promote” does not carry that sense.",
+          "number": 111,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Please ______ the attached invoice to your accounting department for processing."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "they",
+            "them",
+            "themselves",
+            "their"
+          ],
+          "explanation": "An emphatic reflexive pronoun: they did it themselves.",
+          "number": 112,
+          "tags": [
+            "pronoun"
+          ],
+          "text": "The technicians completed the installation ______ without any assistance from the vendor."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "inspect",
+            "to inspect",
+            "inspection",
+            "inspected"
+          ],
+          "explanation": "Infinitive of purpose: she travelled in order to inspect the equipment.",
+          "number": 113,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "Ms. Ibarra travelled to the Rotterdam plant ______ the new packaging equipment."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "prove",
+            "proving",
+            "proven",
+            "proves"
+          ],
+          "explanation": "“proven” is a past participle used as an adjective: demonstrated experience.",
+          "number": 114,
+          "tags": [
+            "participle-adjective",
+            "word-form"
+          ],
+          "text": "Applicants with ______ experience in freight forwarding will be given priority."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "is",
+            "was",
+            "were",
+            "had been"
+          ],
+          "explanation": "First conditional: present tense in the “if” clause, future in the main clause.",
+          "number": 115,
+          "tags": [
+            "verb-tense",
+            "conditional"
+          ],
+          "text": "If the shipment ______ delayed again, we will have to notify the client immediately."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Few",
+            "Little",
+            "Much",
+            "Any"
+          ],
+          "explanation": "“Few” goes with a plural countable noun and carries the negative sense that “so the room remained full” requires.",
+          "number": 116,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "______ of the participants left before the closing remarks, so the room remained full until the end."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "afford",
+            "affordable",
+            "affordably",
+            "affordability"
+          ],
+          "explanation": "“both … and …” links two elements of the same kind, so after the adjective “practical” another adjective is needed.",
+          "number": 117,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The consultant's recommendations were both practical and ______."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "in",
+            "on",
+            "at",
+            "from"
+          ],
+          "explanation": "“on” is used before a specific date; “in” goes with months and years, “at” with clock times.",
+          "number": 118,
+          "tags": [
+            "preposition"
+          ],
+          "text": "All of our offices will be closed ______ 25 December for the winter holiday."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "must",
+            "may",
+            "might",
+            "would"
+          ],
+          "explanation": "“at all times” signals an absolute obligation, so “must”. The other modals express mere possibility.",
+          "number": 119,
+          "tags": [
+            "modal"
+          ],
+          "text": "Visitors ______ wear an identification badge at all times while on the factory floor."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "conflict",
+            "contrast",
+            "contract",
+            "content"
+          ],
+          "explanation": "“scheduling conflict” is the set collocation for two bookings that overlap.",
+          "number": 120,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Because of a scheduling ______, two departments reserved the same room for Tuesday afternoon."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "joins",
+            "joining",
+            "joined",
+            "join"
+          ],
+          "explanation": "“Since” followed by a verb with no expressed subject takes the -ing form.",
+          "number": 121,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "Since ______ the sales team in 2019, Ms. Delacroix has doubled her regional revenue."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "must approve",
+            "must be approved",
+            "must approving",
+            "must have approve"
+          ],
+          "explanation": "The claims are approved, they do not approve: passive after a modal, “must be + past participle”.",
+          "number": 122,
+          "tags": [
+            "passive-voice",
+            "modal"
+          ],
+          "text": "All expense claims ______ by a department manager before payment is issued."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "so that",
+            "in order to",
+            "due to",
+            "as well as"
+          ],
+          "explanation": "“so that” introduces a full clause with its own subject and verb; “in order to” would be followed by an infinitive.",
+          "number": 123,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "The company installed additional lighting ______ the parking area would be safer at night."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "familiar",
+            "familiarity",
+            "familiarize",
+            "familiarly"
+          ],
+          "explanation": "After “to”, the bare infinitive is required: “familiarize someone with something”.",
+          "number": 124,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The programme is designed to ______ new hires with the company's safety procedures."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "that",
+            "which",
+            "where",
+            "who"
+          ],
+          "explanation": "A non-defining relative clause between commas with an inanimate antecedent takes “which”; “that” cannot follow a comma.",
+          "number": 125,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The Hartwell Building, ______ was completed in 1998, will undergo a full renovation next spring."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Both",
+            "Either",
+            "Neither",
+            "None"
+          ],
+          "explanation": "The sense is negative — the search is being reopened — and there are only two candidates, so “Neither”, agreeing in the singular with “holds”. “None” would imply at least three.",
+          "number": 126,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "______ of the two remaining candidates holds the required certification, so we will reopen the search."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "reputation",
+            "recognition",
+            "reference",
+            "reaction"
+          ],
+          "explanation": "“build a reputation for doing something” is the expected collocation.",
+          "number": 127,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Ridgeway Consulting has built a strong ______ for delivering projects ahead of schedule."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "Sending",
+            "Sent",
+            "Sends",
+            "To send"
+          ],
+          "explanation": "The contract undergoes the action of being sent, so a past participle opens the sentence, equivalent to “Because it was sent…”.",
+          "number": 128,
+          "tags": [
+            "participle-adjective"
+          ],
+          "text": "______ in a plain envelope, the contract arrived without attracting any attention."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "attend",
+            "attentive",
+            "attention",
+            "attentively"
+          ],
+          "explanation": "After the adjective “careful” a noun is needed, and “attention to detail” is itself a set phrase.",
+          "number": 129,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The manager praised the team for its careful ______ to detail throughout the audit."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "was",
+            "were",
+            "is",
+            "has been"
+          ],
+          "explanation": "With “neither … nor …” the verb agrees with the second subject, here the plural “the assistants”. The past context rules out the present tense.",
+          "number": 130,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "Neither the supervisor nor the assistants ______ aware of the change in procedure."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "To: All Staff\nFrom: Yolanda Pratt, Finance Director\nDate: 4 August\nSubject: New expense system\n\nBeginning on 1 September, all travel and entertainment expenses must be submitted through our new online portal, ClaimTrack. The paper forms currently in use will no longer be {{131}} after that date.\n\nClaimTrack allows you to photograph receipts with your phone and attach them directly to a claim. {{132}} Claims submitted with legible receipts are normally reimbursed within five working days.\n\nTraining sessions will be held in Room 2B during the last week of August. Attendance is not mandatory, but we strongly {{133}} it for anyone who submits claims regularly.\n\nIf you have questions, contact the finance help desk at extension 3300. Thank you for your {{134}} during the transition.",
+              "label": "Questions 131-134 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "accepted",
+                "accepting",
+                "acceptance",
+                "acceptable"
+              ],
+              "explanation": "Future passive: “will no longer be accepted” — the paper forms will stop being taken.",
+              "number": 131,
+              "tags": [
+                "passive-voice",
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "This removes the need to keep printed copies for your records.",
+                "Paper receipts must still be mailed to the finance office.",
+                "The portal can be accessed only from computers inside the building.",
+                "Reimbursement rates have been revised for the coming year."
+              ],
+              "explanation": "The previous sentence explains that receipts are photographed, so the logical consequence is that no paper copies need keeping. Still mailing paper receipts, or restricting the portal to office computers, would contradict the paragraph.",
+              "number": 132,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "recommend",
+                "recommended",
+                "recommending",
+                "recommendation"
+              ],
+              "explanation": "The subject “we” needs a finite present-tense verb: “we strongly recommend it”.",
+              "number": 133,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "patient",
+                "patience",
+                "patiently",
+                "patients"
+              ],
+              "explanation": "After the possessive determiner “your”, a singular uncountable noun is needed: “your patience”.",
+              "number": 134,
+              "tags": [
+                "word-form"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "Dear Ms. Okonjo,\n\nThank you for your order of 12 March for forty ergonomic desk chairs. Unfortunately, our supplier has informed us that the model you selected is {{135}} out of stock until early May.\n\nWe understand that this delay is inconvenient. {{136}} It is identical in design and carries the same five-year warranty, but it is available for immediate shipment.\n\nIf you would rather wait for your original selection, we will hold your order and {{137}} the delivery charge as a gesture of goodwill. Please let us know your decision by 25 March.\n\nWe {{138}} your understanding and value your continued business.\n\nSincerely,\n\nMarcus Fenn\nCustomer Relations, Alderbrook Office Interiors",
+              "label": "Questions 135-138 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "temporary",
+                "temporarily",
+                "temporariness",
+                "temporaries"
+              ],
+              "explanation": "The word modifies the adjectival phrase “out of stock”, so an adverb is needed.",
+              "number": 135,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "We are therefore able to offer an alternative model in the same price range.",
+                "Your payment has been refunded in full.",
+                "The chairs were unfortunately delivered to the wrong address.",
+                "Our showroom is open seven days a week."
+              ],
+              "explanation": "The next sentence opens with “It is identical in design”, so the pronoun requires that a replacement model has just been introduced.",
+              "number": 136,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "waive",
+                "raise",
+                "charge",
+                "require"
+              ],
+              "explanation": "“waive a charge” means to drop it — the only sense compatible with “as a gesture of goodwill”.",
+              "number": 137,
+              "tags": [
+                "vocabulary"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "appreciate",
+                "appreciated",
+                "appreciating",
+                "appreciation"
+              ],
+              "explanation": "A present-tense closing formula: “We appreciate your understanding”.",
+              "number": 138,
+              "tags": [
+                "word-form"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: Marketing Department\nFrom: Building Services\nRe: Relocation to the fourth floor\n\nOur department will move to the fourth floor over the weekend of 14-15 June. Packing crates will be delivered to your current work area on 12 June, and the movers will begin loading at six P.M. on Friday.\n\nPlease label every crate with your name and your new desk number. Crates that are not labelled {{139}} be placed in general storage, and retrieving them may take several days.\n\n{{140}} Anything you no longer need should be placed in the recycling bins beside the service lift.\n\nPersonal electronics, keys and confidential files should be carried by hand rather than packed. The company cannot accept {{141}} for valuables left in crates.\n\nYour network connection will be restored by Monday morning. If your telephone or computer is not working when you {{142}}, call the help desk at extension 5115.",
+              "label": "Questions 139-142 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "will",
+                "would",
+                "were",
+                "are"
+              ],
+              "explanation": "A certain future consequence of an instruction: “will be placed”. “would” would imply an unreal hypothesis.",
+              "number": 139,
+              "tags": [
+                "verb-tense"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "This is a good opportunity to reduce the volume of material you store.",
+                "The fourth floor has just been completely renovated.",
+                "The movers will pack your personal belongings for you.",
+                "The relocation has been postponed until July."
+              ],
+              "explanation": "The next sentence invites people to discard what they no longer need, so the paragraph must open on sorting. Having the movers pack for you contradicts the labelling instruction, and a July postponement contradicts the memo's own dates.",
+              "number": 140,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "responsible",
+                "responsibly",
+                "responsibility",
+                "responsibilities"
+              ],
+              "explanation": "“accept responsibility for something”: after the verb, the singular uncountable noun is required.",
+              "number": 141,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "arrive",
+                "arrived",
+                "arriving",
+                "will arrive"
+              ],
+              "explanation": "After a future-referring “when”, English uses the present tense, never “will”.",
+              "number": 142,
+              "tags": [
+                "verb-tense"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "PROFESSIONAL DEVELOPMENT GRANTS — Applications now open\n\nNorthwind Industries will fund up to £1,200 per employee this year for external courses, conferences and professional certifications. Any member of staff who has completed at least twelve months of continuous service is {{143}} to apply.\n\nApplications are reviewed twice a year, in April and October. Because the fund is limited, priority {{144}} to courses that relate directly to your current role or to a position you are actively preparing for.\n\n{{145}} Applications submitted without one are returned unread.\n\nSuccessful applicants are asked to share what they have learned with their team, either through a short presentation or a written summary. This requirement is taken {{146}}, and it is the main reason the programme has kept growing since 2019.\n\nForms are available on the intranet under Human Resources.",
+              "label": "Questions 143-146 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "eligible",
+                "eligibly",
+                "eligibility",
+                "elect"
+              ],
+              "explanation": "After the verb “is”, a predicative adjective is needed: “is eligible to apply”.",
+              "number": 143,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "gives",
+                "is given",
+                "giving",
+                "to give"
+              ],
+              "explanation": "“priority” undergoes the action, so the passive: “priority is given to”.",
+              "number": 144,
+              "tags": [
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Every application must include a written endorsement from your line manager.",
+                "The grant may also be used towards personal travel.",
+                "Applications are accepted at any time during the year.",
+                "The programme was suspended for the whole of last year."
+              ],
+              "explanation": "“Applications submitted without one” requires that a single mandatory item has just been mentioned — the manager's endorsement. Accepting applications year-round would contradict the April and October rounds.",
+              "number": 145,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "serious",
+                "seriously",
+                "seriousness",
+                "more serious"
+              ],
+              "explanation": "“take something seriously”: the adverb modifies the verb, in the passive as much as the active.",
+              "number": 146,
+              "tags": [
+                "word-form"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "HILLCREST COMMUNITY POOL — Summer schedule change\n\nFrom 1 July to 31 August, the pool will open at 6:00 A.M. on weekdays instead of 7:00 A.M. The additional hour is reserved for lane swimming only; recreational swimming begins at 8:00 A.M. as usual.\n\nWeekend hours are unchanged: 8:00 A.M. to 8:00 P.M.\n\nMembers who wish to use the early hour must reserve a lane through the Hillcrest app no more than two days in advance. Walk-in access during that hour cannot be guaranteed.\n\nQuestions may be directed to the front desk or to schedule@hillcrestpool.example.",
+              "label": "Questions 147-148 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To advertise a new membership plan",
+                "To announce earlier weekday opening hours",
+                "To describe a renovation project",
+                "To introduce a new swimming instructor"
+              ],
+              "explanation": "“the pool will open at 6:00 A.M. on weekdays instead of 7:00 A.M.”: the point of the notice is the earlier weekday opening.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It is open to non-members.",
+                "It requires a lane reservation.",
+                "It is limited to children.",
+                "It costs an additional fee."
+              ],
+              "explanation": "“must reserve a lane through the Hillcrest app”. The notice mentions neither an extra fee nor access for non-members.",
+              "number": 148,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the early morning hour?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Dara Whitfield (10:42 A.M.)\nThe projector in the Aspen Room won't turn on. I have twelve clients arriving at eleven.\n\nOwen Baptiste (10:44 A.M.)\nTry the second remote, in the drawer under the table. The first one has been dead for a week.\n\nDara Whitfield (10:47 A.M.)\nFound it — still nothing. The green light on the unit isn't on either.\n\nOwen Baptiste (10:48 A.M.)\nThen it's the power strip, not the projector. Move to the Birch Room, it's free until two. I'll bring the spare laptop cable up.\n\nDara Whitfield (10:49 A.M.)\nYou're a lifesaver. Could you also let reception know, so they redirect people?\n\nOwen Baptiste (10:50 A.M.)\nAlready texting them.",
+              "label": "Questions 149-150 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To reserve a meeting room",
+                "To report a piece of equipment that is not working",
+                "To request additional chairs",
+                "To reschedule a client visit"
+              ],
+              "explanation": "Her first message reports that the projector will not turn on. Moving rooms comes later, and at Mr. Baptiste's suggestion.",
+              "number": 149,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does Ms. Whitfield contact Mr. Baptiste?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "She is grateful for a workable solution.",
+                "She wants Mr. Baptiste to attend the meeting.",
+                "She is surprised that the projector now works.",
+                "She thinks reception has made a mistake."
+              ],
+              "explanation": "She is responding to a concrete fix — change rooms, bring a cable — so the phrase expresses gratitude.",
+              "number": 150,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:49 A.M., what does Ms. Whitfield most likely mean when she writes, \"You're a lifesaver\"?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "KETTLE & KIN — Now hiring, all locations\n\nKettle & Kin operates eleven neighbourhood cafés across the metropolitan area. We are currently recruiting for the following positions:\n\nBaristas (full and part time) — no experience necessary; paid four-week training provided\nShift Leaders — minimum one year of food-service supervision required\nBakers — 4:00 A.M. start; previous production baking experience essential\n\nAll employees receive one free meal per shift, a 40% discount on retail items, and transit reimbursement of up to £70 per month. Full-time staff join our health plan after ninety days.\n\nWe promote from within: nine of our eleven current store managers began as baristas.\n\nApply in person at any location with a printed résumé, or online at kettleandkin.example/jobs. Interviews are held on Tuesdays and Thursdays.",
+              "label": "Questions 151-153 refer to the following advertisement.",
+              "type": "advertisement"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "It requires a year of previous experience.",
+                "It includes paid training.",
+                "It is available part time only.",
+                "It begins early in the morning."
+              ],
+              "explanation": "“no experience necessary; paid four-week training provided”. The 4 A.M. start applies to bakers and the year of experience to shift leaders.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the barista position?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Enrolment in the health plan",
+                "A monthly transit allowance",
+                "A private office",
+                "Paid leave in December"
+              ],
+              "explanation": "“All employees receive […] transit reimbursement of up to £70 per month”. The health plan is limited to full-time staff after ninety days.",
+              "number": 152,
+              "tags": [
+                "detail"
+              ],
+              "text": "What benefit is available to every employee?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "To list the company's locations",
+                "To explain a recent change in management",
+                "To emphasise opportunities for advancement",
+                "To identify who conducts the interviews"
+              ],
+              "explanation": "“We promote from within” comes immediately before the statistic, so it serves to illustrate prospects for advancement.",
+              "number": 153,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does the advertisement mention the store managers?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "To: Priya Raman <p.raman@vellmarkdesign.example>\nFrom: Colin Aduba <c.aduba@northgatelibrary.example>\nDate: 8 October\nSubject: Signage project — revised scope\n\nDear Ms. Raman,\n\nThank you for the proposal you submitted last week for the interior signage at our Northgate branch. The design committee reviewed it on Monday and was impressed by the wayfinding concept, particularly the colour coding by floor.\n\nWe do need to revise the scope before we can approve a contract. The renovation of the third floor has been deferred to next year, so signage for that floor should come out of the current phase. That reduces the number of panels from fifty-eight to forty-one.\n\nWe would also like to add six free-standing directory units for the ground-floor lobby, which were not in the original brief.\n\nCould you send a revised quotation covering both changes by 18 October? Our board meets on 22 October and I would like to bring a final figure to that meeting.\n\nOne further note: the library will remain open throughout installation, so any work in public areas must take place after 6:00 P.M.\n\nBest regards,\n\nColin Aduba\nFacilities Manager, Northgate Library",
+              "label": "Questions 154-156 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To reject a design proposal",
+                "To request an updated price quotation",
+                "To confirm an installation date",
+                "To ask for additional design samples"
+              ],
+              "explanation": "The central request is “Could you send a revised quotation covering both changes by 18 October?”. The original proposal is in fact well received.",
+              "number": 154,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the main purpose of the e-mail?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Its signage will be installed first.",
+                "Its renovation has been postponed.",
+                "It will be permanently closed to the public.",
+                "It needs more panels than expected."
+              ],
+              "explanation": "“The renovation of the third floor has been deferred to next year” — hence its signage leaving the current phase.",
+              "number": 155,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the third floor?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Work in public areas must be done in the evening.",
+                "Only library staff may handle the panels.",
+                "The budget cannot exceed the original figure.",
+                "Installation must be completed before 22 October."
+              ],
+              "explanation": "“any work in public areas must take place after 6:00 P.M.”. 22 October is the board meeting, not an installation deadline.",
+              "number": 156,
+              "tags": [
+                "detail"
+              ],
+              "text": "What restriction does Mr. Aduba mention?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "MARITIME QUARTER GETS A SECOND LIFE\n\nPORTHAVEN (14 May) — For thirty years the warehouses along Dock Road stood empty, too solid to fall down and too awkward to convert. This month the first of them reopened as the Porthaven Makers' Yard, a shared workshop for eighty small manufacturers.\n\nThe conversion was funded by a mix of city grants and rent paid in advance by future tenants — an unusual arrangement that the project's director, Ines Cardozo, says was the only way to begin. [1] \"Banks wanted a finished building before they would lend, and we needed money before we could finish one,\" she said. [2]\n\nTenants pay between £180 and £600 a month depending on floor area, well below the £1,100 average for comparable industrial space in the city. [3] In exchange, they commit to a three-year lease and to opening their workshops to the public one Saturday a month.\n\n[4] Two further warehouses are scheduled for conversion, the second of them due to open in eighteen months. Ms. Cardozo expects demand to keep outrunning supply: the Makers' Yard received more than four hundred applications for its eighty units.",
+              "label": "Questions 157-159 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "A decline in local manufacturing",
+                "The reopening of a converted warehouse",
+                "A dispute between a city and its lenders",
+                "A new residential development"
+              ],
+              "explanation": "The subject is the opening of the Porthaven Makers' Yard inside a converted warehouse.",
+              "number": 157,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the article mainly about?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It was not available when the project began.",
+                "It proved cheaper than expected.",
+                "It required a longer lease term.",
+                "It was arranged by the city."
+              ],
+              "explanation": "Her quotation describes a deadlock: banks wanted a finished building, but money was needed to finish one. Hence the grants-plus-advance-rent arrangement.",
+              "number": 158,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does Ms. Cardozo suggest about conventional bank financing?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "The sentence bridges the low rents mentioned before [3] and the obligation introduced by “In exchange” immediately after.",
+              "number": 159,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong?\n\"The saving comes with an obligation.\""
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Rosalind Achebe (2:03 P.M.)\nHas anyone heard back from Tamsin about the Q3 figures? I need them for the deck by Thursday.\n\nPeter Lindqvist (2:05 P.M.)\nShe's out until Wednesday. Her out-of-office message says to contact Devi for anything urgent.\n\nDevi Sharma (2:06 P.M.)\nI have the raw numbers but not the commentary. I can send you a spreadsheet this afternoon if that helps.\n\nRosalind Achebe (2:07 P.M.)\nThe numbers are what I need — I'll write the commentary myself. Are the returns figures final?\n\nDevi Sharma (2:09 P.M.)\nEverything except September returns. Those close on Friday, so the total could still move by half a percent.\n\nPeter Lindqvist (2:10 P.M.)\nThen mark that slide \"provisional\". Ravi got asked about a similar number in July and it was awkward.\n\nRosalind Achebe (2:11 P.M.)\nGood call. Devi, send whatever you have and I'll flag the returns line.",
+              "label": "Questions 160-162 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To reschedule a Thursday meeting",
+                "To obtain data she needs for a presentation",
+                "To report an error in a spreadsheet",
+                "To ask why a colleague is absent"
+              ],
+              "explanation": "“I need them for the deck by Thursday”: she is after the third-quarter figures for her presentation.",
+              "number": 160,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Ms. Achebe start the discussion?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "They have already been finalised.",
+                "They will not be included at all.",
+                "They were reported incorrectly.",
+                "They may still change."
+              ],
+              "explanation": "“Those close on Friday, so the total could still move by half a percent.”",
+              "number": 161,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the September returns figures?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Ravi should prepare the slide instead.",
+                "The presentation should be postponed.",
+                "The July figures turned out to be incorrect.",
+                "Presenting an unlabelled estimate has caused a problem before."
+              ],
+              "explanation": "He recommends the “provisional” label by citing an awkward precedent: the problem came from the missing caveat, not from the figure itself.",
+              "number": 162,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 2:10 P.M., what does Mr. Lindqvist imply?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "Ferrand & Hoyle Chartered Surveyors\n14 Blackfriars Row, Leeds LS1 4QQ\n\n2 November\n\nMr. Anselm Krige\nKrige Timber Products\nUnit 9, Calder Industrial Estate\n\nDear Mr. Krige,\n\nFollowing my inspection of the roof structure at Unit 9 on 28 October, I am writing to summarise my findings ahead of the full report, which will reach you within ten working days.\n\nThe steel frame is in sound condition, and I found no evidence of the corrosion that concerned you. The staining on the north wall is the result of a blocked gutter rather than any failure of the roof covering itself. Clearing the gutter and renewing approximately four metres of flashing should resolve it. I would expect that work to cost between £900 and £1,400.\n\nI must, however, draw your attention to a separate matter. The roof lights above the finishing bay are the original 1987 units and have become brittle. They are not a safety hazard at present, but I would not recommend deferring their replacement beyond the next two years.\n\nMy full report will include photographs, moisture readings and a schedule of recommended works with indicative costs.\n\nYours sincerely,\n\nBernadette Hoyle, MRICS",
+              "label": "Questions 163-165 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "To arrange a site inspection",
+                "To decline a proposed project",
+                "To request payment for a completed report",
+                "To provide preliminary findings"
+              ],
+              "explanation": "“to summarise my findings ahead of the full report”: these are preliminary conclusions, the inspection having already taken place on 28 October.",
+              "number": 163,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Ms. Hoyle write the letter?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It indicates corrosion of the steel frame.",
+                "Its cause could not be identified.",
+                "It requires replacing the entire roof covering.",
+                "It was caused by a drainage problem."
+              ],
+              "explanation": "“the result of a blocked gutter rather than any failure of the roof covering”: a blocked gutter, so a drainage problem.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Ms. Hoyle determine about the staining on the wall?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Repairing them before the end of the month",
+                "Closing the finishing bay immediately",
+                "Leaving them exactly as they are",
+                "Replacing them within two years"
+              ],
+              "explanation": "“I would not recommend deferring their replacement beyond the next two years”: no safety emergency, but replacement inside two years.",
+              "number": 165,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Hoyle recommend concerning the roof lights?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "www.tovarahotels.example/harbourside/reviews\n\nTOVARA HARBOURSIDE — Guest reviews (page 1 of 46)\n\n★★★★☆  \"Right for a working trip, less so for a holiday\"\nReviewed by G. Almeida — stayed three nights in February\n\nI booked the Harbourside for a conference at the centre next door, and for that purpose it is hard to beat. The walk takes four minutes, the business centre is open around the clock, and the front desk had my printing waiting for me when I came down at 6:30 A.M.\n\nThe room itself was quiet and generously sized, with a desk you can actually work at rather than the narrow shelf most hotels install. Housekeeping never once moved my papers, which I appreciated more than I expected to.\n\nTwo reservations. First, the restaurant closes at nine, which is early for a hotel of this size; on my second evening I ended up eating a sandwich from the lobby shop. Second, the much-advertised harbour view applies to roughly a third of the rooms — mine faced the car park, and nobody mentioned that when I booked.\n\nI would return for work without hesitation. If I were bringing my family, I would look at the Tovara Bayside instead, which I gather has a pool.\n\nWas this review helpful?  [Yes 214]  [No 11]",
+              "label": "Questions 166-169 refer to the following online review.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "It is next to a conference venue.",
+                "It is far from the city centre.",
+                "It overlooks a public park.",
+                "It is beside a railway station."
+              ],
+              "explanation": "“a conference at the centre next door […] The walk takes four minutes.”",
+              "number": 166,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the hotel's location?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The size of the television",
+                "The complimentary breakfast",
+                "The view from the window",
+                "The quality of the work space"
+              ],
+              "explanation": "He singles out “a desk you can actually work at”, and that housekeeping never moved his papers. The view is a complaint, not a compliment.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Mr. Almeida particularly appreciate about his room?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The prices are too high.",
+                "The menu is too limited.",
+                "It closes relatively early.",
+                "It requires a reservation."
+              ],
+              "explanation": "“the restaurant closes at nine, which is early for a hotel of this size”.",
+              "number": 168,
+              "tags": [
+                "detail"
+              ],
+              "text": "What complaint does Mr. Almeida make about the restaurant?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It costs less than the Harbourside.",
+                "It has recently been renovated.",
+                "It is closer to the conference centre.",
+                "It may suit families better."
+              ],
+              "explanation": "“If I were bringing my family, I would look at the Tovara Bayside instead, which I gather has a pool.”",
+              "number": 169,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does Mr. Almeida suggest about the Tovara Bayside?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "MEMO\n\nTo: All laboratory staff\nFrom: Yusuf Bello, Quality Manager\nDate: 15 May\nSubject: Calibration logs\n\nBeginning Monday, calibration entries must be made in the electronic log at the moment of calibration, not at the end of the shift. Our auditor flagged fourteen entries last month that had been recorded up to nine hours after the reading was taken.\n\nThe tablets mounted at each bench are now configured for log entry, so there is no longer any reason to walk to the office terminal.\n\nPaper logs will be collected on Friday and archived. Do not continue to use them in parallel: duplicate records were the second finding in the audit.\n\nBench leaders will review entries every Monday morning.",
+              "label": "Questions 170-171 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "The bench tablets will be removed.",
+                "Calibrations will be carried out twice a day.",
+                "A new auditor has been appointed.",
+                "Calibrations must be logged as they are performed."
+              ],
+              "explanation": "“entries must be made […] at the moment of calibration, not at the end of the shift”.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "What change is being introduced?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Reviewing entries on Monday mornings",
+                "Using the office terminal for calibration data",
+                "Keeping paper records at the same time",
+                "Calibrating equipment at the bench"
+              ],
+              "explanation": "“Do not continue to use them in parallel”, referring to the paper logs, whose duplication was the audit's second finding.",
+              "number": 171,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are staff instructed to stop doing?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "CALDERWOOD FILM FESTIVAL — Volunteer information\n\nThank you for volunteering. Please read this page carefully; it answers most of the questions we receive.\n\nSHIFTS\nMorning 8:00 A.M. – 1:00 P.M.  |  Afternoon 12:30 P.M. – 5:30 P.M.  |  Evening 5:00 P.M. – 10:30 P.M.\nShifts overlap by thirty minutes so that duties can be handed over in person. Do not leave your post until your replacement has arrived.\n\nROLES\nBox office — ticket collection and same-day sales. The Friday training session is required.\nUshers — seating, accessibility assistance, screening-room checks. No training required.\nHospitality — the filmmakers' lounge. Volunteers must be eighteen or over.\nTransport — collecting guests from the station. A valid driving licence and two years' driving experience are required.\n\nWHAT WE PROVIDE\nA festival pass valid for any screening on days you are not working, two meal vouchers per shift, and a volunteer jacket (returnable at the end of the festival).\n\nWHAT WE ASK\nArrive fifteen minutes before your shift begins. Wear dark trousers or a dark skirt with the jacket. Photography inside the screening rooms is not permitted, even during your break.\n\nCANCELLATIONS\nTelephone the volunteer line on 0900 55 21 44. Please do not cancel by e-mail — that inbox is not monitored during festival week.",
+              "label": "Questions 172-175 refer to the following information.",
+              "type": "information"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "They are identical for every role.",
+                "They all begin at 8:00 A.M.",
+                "They may be exchanged with other volunteers.",
+                "They include a deliberate overlap."
+              ],
+              "explanation": "“Shifts overlap by thirty minutes so that duties can be handed over in person.”",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the shift times?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Box office",
+                "Ushers",
+                "Hospitality",
+                "Transport"
+              ],
+              "explanation": "“Box office — […] The Friday training session is required.” Ushers need no training at all.",
+              "number": 173,
+              "tags": [
+                "detail"
+              ],
+              "text": "Which role requires attending a training session?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A cash payment for each shift",
+                "Transport to the venue",
+                "Meal vouchers",
+                "Free parking near the cinema"
+              ],
+              "explanation": "“two meal vouchers per shift”. Transport is for guests rather than volunteers, and no payment is mentioned.",
+              "number": 174,
+              "tags": [
+                "detail"
+              ],
+              "text": "What do volunteers receive?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "By e-mailing the festival office",
+                "By informing their replacement directly",
+                "Through the festival website",
+                "By telephoning the volunteer line"
+              ],
+              "explanation": "“Telephone the volunteer line […] Please do not cancel by e-mail”.",
+              "number": 175,
+              "tags": [
+                "detail"
+              ],
+              "text": "How should volunteers report that they are unable to work?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "MERIDIAN WORKS — Flexible workspace in central Bristol\n\nHot Desk — £145/month — unreserved desk, 8 A.M. to 8 P.M. on weekdays\nResident Desk — £260/month — your own desk, 24-hour access\nStudio (2-4 people) — £680/month — lockable room, 24-hour access\nStudio Plus (5-8 people) — £1,240/month — lockable room, 24-hour access, dedicated meeting room\n\nEvery plan includes high-speed internet, printing (500 pages a month), a business address for post, and eight hours of bookable meeting-room time per month. Studio Plus members have unlimited meeting-room use.\n\nMembers who pay twelve months in advance receive one month free.\n\nTours run Monday to Thursday between 10 A.M. and 4 P.M. Book at meridianworks.example/tour or call 0117 496 2210.",
+              "label": "Questions 176-180 refer to the following advertisement and e-mail.",
+              "type": "advertisement"
+            },
+            {
+              "content": "To: hello@meridianworks.example\nFrom: t.nakashima@bramblecode.example\nDate: 4 September\nSubject: Enquiry — team of six\n\nHello,\n\nI run a software consultancy that is outgrowing my flat. There are six of us at the moment and we expect to stay that size for at least a year.\n\nLooking at your list, the £1,240 option seems to be the one that fits, and the dedicated meeting room is the deciding factor — we run client calls most afternoons and cannot do that in an open room.\n\nThree questions.\n\n1. We would like to pay for the full year up front to take advantage of your offer. Does that have to be a single payment, or can it be split across two invoices?\n2. Two of my colleagues work from midnight until eight in the morning. I assume our plan covers that, but I would like it confirmed.\n3. Is there anywhere secure to leave two desktop machines and a small server overnight?\n\nI would also like to arrange a tour. Wednesday or Thursday afternoon next week would suit me best.\n\nKind regards,\n\nTomoko Nakashima\nBramblecode Ltd",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "Hot Desk",
+                "Resident Desk",
+                "Studio",
+                "Studio Plus"
+              ],
+              "explanation": "She quotes the £1,240 rate, which is Studio Plus, and its 5-to-8 capacity fits her team of six.",
+              "number": 176,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Which plan is Ms. Nakashima interested in?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The 24-hour access",
+                "The printing allowance",
+                "The business address",
+                "The dedicated meeting room"
+              ],
+              "explanation": "“the dedicated meeting room is the deciding factor”.",
+              "number": 177,
+              "tags": [
+                "detail"
+              ],
+              "text": "What most influenced Ms. Nakashima's choice?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "They will have to change their working hours.",
+                "They cannot be covered by the same membership.",
+                "They must book the meeting room in advance.",
+                "The plan she wants allows access at those hours."
+              ],
+              "explanation": "Studio Plus includes 24-hour access according to the advertisement, so working from midnight until eight is covered.",
+              "number": 178,
+              "tags": [
+                "inference"
+              ],
+              "text": "What can be concluded about Ms. Nakashima's night-time colleagues?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "A reduced meeting-room rate",
+                "A larger studio",
+                "Additional printing credit",
+                "One free month of membership"
+              ],
+              "explanation": "“Members who pay twelve months in advance receive one month free” in the advertisement — what she calls “your offer”.",
+              "number": 179,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Nakashima hope to obtain by paying a year in advance?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Meeting-room time",
+                "Internet access",
+                "Tour availability",
+                "Secure equipment storage"
+              ],
+              "explanation": "The advertisement covers meeting-room time, tours and internet, but says nothing about secure storage for computer equipment.",
+              "number": 180,
+              "tags": [
+                "not-question",
+                "cross-reference"
+              ],
+              "text": "Ms. Nakashima asks about something that is NOT mentioned in the advertisement. What is it?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "TRANSIT AUTHORITY TRIMS ROUTE 42\n\nEASTVALE (2 November) — The Eastvale Transit Authority will shorten Route 42 from 14 December, ending the service at Fenwick Interchange rather than continuing to Marley Green. The authority says the final three stops carried an average of eleven passengers a day last year, against a network average of two hundred and forty.\n\nRiders travelling beyond Fenwick will be able to transfer to the new Route 42B minibus, which will run hourly on weekdays and every ninety minutes on Saturdays. There will be no Sunday service.\n\nDeputy director Hana Vogel said the change would let the authority add two morning departures on Route 42 itself, where crowding has been the subject of repeated complaints. \"We are moving capacity to where the passengers are,\" she said.\n\nThe authority held two public meetings in September. Attendance was low — nineteen people in total — a fact critics attribute to the meetings' 2 P.M. start.",
+              "label": "Questions 181-185 refer to the following article and letter.",
+              "type": "article"
+            },
+            {
+              "content": "To the Editor,\n\nYour report on Route 42 repeated the transit authority's figure of eleven passengers a day without asking how it was produced.\n\nI have used the Marley Green stop for nine years. The count was taken in the first week of August, when the packing plant that employs most of us shuts for its annual holiday. In any other week the 7:10 service alone carries fifteen to twenty of us.\n\nI do not dispute that the two extra morning departures are needed; the buses from Fenwick are genuinely overcrowded. But the replacement minibus runs hourly, and my shift starts at 6:45 A.M. An hourly service that does not begin until seven is not a replacement — it is a removal.\n\nAs for the public meetings, I would gently point out that a two o'clock meeting on a Tuesday is not accessible to people who work shifts. That is presumably why nineteen people came.\n\nConstance Ebele\nMarley Green",
+              "type": "letter to the editor"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "It will be extended to Marley Green.",
+                "It will operate on weekdays only.",
+                "It will end at an earlier stop.",
+                "It will be replaced entirely by minibuses."
+              ],
+              "explanation": "“ending the service at Fenwick Interchange rather than continuing to Marley Green”: the terminus moves back up the line.",
+              "number": 181,
+              "tags": [
+                "detail"
+              ],
+              "text": "What change to Route 42 was announced?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "To reduce ticket prices",
+                "To comply with a new regulation",
+                "To retire older vehicles",
+                "To move capacity to busier parts of the route"
+              ],
+              "explanation": "Ms. Vogel: “We are moving capacity to where the passengers are”, hence the two extra morning departures.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the article, why is the authority making the change?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It was never made public.",
+                "It included transfers from other routes.",
+                "It was taken during an unrepresentative week.",
+                "It applied only to Sundays."
+              ],
+              "explanation": "The count was taken in the first week of August, while the plant that employs most riders was shut for its annual holiday.",
+              "number": 183,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does Ms. Ebele suggest about the passenger count?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It will be more expensive than Route 42.",
+                "Its vehicles are too small.",
+                "It does not stop at Fenwick Interchange.",
+                "It does not start early enough for her shift."
+              ],
+              "explanation": "Her shift starts at 6:45 A.M. whereas the hourly replacement service does not begin until seven.",
+              "number": 184,
+              "tags": [
+                "detail"
+              ],
+              "text": "What concern does Ms. Ebele raise about Route 42B?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Sunday service should be maintained.",
+                "The public meetings were well attended.",
+                "The extra morning departures on Route 42 are needed.",
+                "The packing plant should change its holiday dates."
+              ],
+              "explanation": "The article cites the morning crowding, and Ms. Ebele writes “I do not dispute that the two extra morning departures are needed”.",
+              "number": 185,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "On what point do the article and the letter agree?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "POSITION: Conservation Technician\nEmployer: Ardwell Institute of Maritime History\nClosing date: 30 January\n\nThe Institute seeks a conservation technician to join its four-person team working on the Corrievreckan collection of recovered ship fittings.\n\nRequirements\n- A degree in conservation, materials science or a related field\n- At least two years' hands-on experience with waterlogged wood or ferrous metals\n- Familiarity with photographic documentation standards\n- Willingness to work occasional weekends during exhibition installation\n\nDesirable\n- Experience with polyethylene glycol treatment\n- A second language (Norwegian or Dutch are particularly useful given our partner institutions)\n\nThe post is full time and based at our Leith workshop. Salary £31,500-£36,000 depending on experience.\n\nTo apply, send a covering letter, a CV and the names of two referees to recruitment@ardwellinstitute.example. Please do not send portfolios at this stage; shortlisted candidates will be asked to bring one to interview.",
+              "label": "Questions 186-190 refer to the following job posting, e-mail and schedule.",
+              "type": "job posting"
+            },
+            {
+              "content": "To: recruitment@ardwellinstitute.example\nFrom: e.solheim@nordvestmuseum.example\nDate: 22 January\nSubject: Application — Conservation Technician\n\nDear Recruitment Team,\n\nI am writing to apply for the Conservation Technician post advertised on your website.\n\nI hold an MSc in Conservation Science from Gothenburg and have spent the past three years at the Nordvest Museum in Ålesund, working almost exclusively on waterlogged oak recovered from two eighteenth-century wrecks. Roughly half of that time has involved polyethylene glycol treatment, including the reprocessing of forty timbers that had been unsuccessfully treated in the 1980s.\n\nI am a native Norwegian speaker and read Dutch competently, though I do not speak it well.\n\nI should mention that I will be at a conference in Lisbon from 3 to 7 February. I could attend an interview by video link during that week if necessary, but I would much prefer to come in person and am free from 10 February onwards.\n\nMy CV is attached, together with the details of two referees. I have not attached a portfolio, in line with your instructions, but can bring one.\n\nYours faithfully,\n\nElise Solheim",
+              "type": "e-mail"
+            },
+            {
+              "content": "CONSERVATION TECHNICIAN — INTERVIEW SCHEDULE\nLeith Workshop, Room 2 — please arrive fifteen minutes early\n\nThursday 12 February\n09:30  Marcus Trent\n11:00  Elise Solheim\n13:30  Priya Kaur\n\nFriday 13 February\n09:30  Domhnall Reid\n11:00  Yusra Kassim\n\nEach interview lasts approximately seventy-five minutes and consists of a panel discussion, a fifteen-minute portfolio presentation and a short practical exercise at the bench. Candidates should bring safety footwear if they have it; spare pairs are available in sizes 5 to 12.\n\nPanel: Dr. Aileen Frost (chair), Mr. Tobias Lund, Ms. Rowan Petrie",
+              "type": "schedule"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A doctoral degree",
+                "Previous experience managing a team",
+                "Fluency in spoken Dutch",
+                "Two years of relevant practical experience"
+              ],
+              "explanation": "“At least two years' hands-on experience with waterlogged wood or ferrous metals”. Dutch is listed as desirable, not required.",
+              "number": 186,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is one requirement listed in the job posting?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Provide the names of referees",
+                "Apply by e-mail",
+                "Send a portfolio with the application",
+                "Include a covering letter"
+              ],
+              "explanation": "“Please do not send portfolios at this stage”.",
+              "number": 187,
+              "tags": [
+                "not-question"
+              ],
+              "text": "What does the posting instruct applicants NOT to do?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Willingness to work weekends",
+                "A degree in materials science",
+                "Familiarity with photographic standards",
+                "Experience with polyethylene glycol treatment"
+              ],
+              "explanation": "Polyethylene glycol treatment appears under “Desirable”, and Ms. Solheim has spent half of her three years on it.",
+              "number": 188,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Which of Ms. Solheim's qualifications does the posting list as desirable rather than required?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A higher starting salary",
+                "A tour of the Leith workshop",
+                "An interview on or after 10 February",
+                "A copy of the collection catalogue"
+              ],
+              "explanation": "“I would much prefer to come in person and am free from 10 February onwards”, because of her 3-7 February conference.",
+              "number": 189,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Ms. Solheim request in her e-mail?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It has been moved to Friday.",
+                "It will be conducted by video link.",
+                "It will be shorter than the other interviews.",
+                "It was scheduled for a date she said she was available."
+              ],
+              "explanation": "She is free from 10 February and her interview is set for Thursday 12 February, in person as she preferred.",
+              "number": 190,
+              "tags": [
+                "inference",
+                "cross-reference"
+              ],
+              "text": "What is suggested about Ms. Solheim's interview?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "BRISTLECONE OUTDOOR — Tarn 2 tent\n\nWeight: 1.9 kg packed\nSleeps: 2\nWaterproof rating: 4,000 mm flysheet, 6,000 mm groundsheet\nPoles: aluminium alloy, colour-coded\nPrice: £249\n\nThe Tarn 2 was designed for three-season use in exposed conditions. Its low profile and six guy points make it unusually stable in wind for a tent of this weight.\n\nTwo doors and two vestibules mean neither occupant has to climb over the other. The inner tent can be pitched on its own in dry conditions, or the flysheet used alone as a shelter.\n\nNot recommended for winter mountaineering or for use below -5 °C.\n\nEvery Bristlecone tent carries a five-year guarantee against manufacturing defects. Damage from ordinary wear, accidents or misuse is not covered, but our Bristlecone Mend service will repair almost anything for a fixed fee of £40 plus parts.\n\nFree delivery on orders over £100. Returns accepted within sixty days provided the tent has not been pitched outdoors.",
+              "label": "Questions 191-195 refer to the following product page, review and response.",
+              "type": "web page"
+            },
+            {
+              "content": "★★★☆☆  \"Excellent tent, one design flaw\"\nReviewed by H. Okwuosa — verified purchase\n\nTwenty-two nights in this tent across Snowdonia and the Cairngorms, including one night of sustained fifty-mile-an-hour wind on a col where I fully expected to be walking out at three in the morning. It did not move. The six guy points are not marketing.\n\nThe two doors are worth the extra two hundred grams over a single-door tent, and being able to pitch the inner on its own was genuinely useful in Spain last month.\n\nMy complaint is the zip on the left vestibule, which snagged on the storm flap from the second week and has now failed completely. Looking at the forum, I am not the first. Whether that counts as a manufacturing defect or as ordinary wear is presumably a matter of opinion, and I suspect I know which way it will go.\n\nWould still buy it again.",
+              "type": "customer review"
+            },
+            {
+              "content": "Response from Bristlecone Outdoor — Customer Care\n\nThank you for this, and for the detail — a col in the Cairngorms in fifty-mile-an-hour wind is exactly what the Tarn 2 was designed for.\n\nOn the vestibule zip: you are right that this has come up before. We changed the storm-flap geometry on units manufactured after March this year for precisely that reason. Tents made before that date are covered by the guarantee for this specific fault, wear or not, and we are treating it as a manufacturing issue rather than sending it to Mend.\n\nPlease contact us with your order number and we will collect the tent and either repair or replace it at no cost to you. If you need it before your next trip, tell us the date and we will send a replacement out first.\n\nWe have also added a note to the product page.\n\n— Ravi Kulkarni, Customer Care",
+              "type": "response"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "It is intended for winter mountaineering.",
+                "It weighs under one kilogram.",
+                "It has two entrances.",
+                "It requires a separate groundsheet."
+              ],
+              "explanation": "“Two doors and two vestibules”. The page explicitly rules out winter mountaineering and gives the weight as 1.9 kg.",
+              "number": 191,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the Tarn 2 tent?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Its low price",
+                "Its small packed size",
+                "Its performance in winter",
+                "Its stability in strong wind"
+              ],
+              "explanation": "“It did not move. The six guy points are not marketing”, after a night of fifty-mile-an-hour wind.",
+              "number": 192,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Okwuosa praise about the tent?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A leaking flysheet",
+                "A broken pole",
+                "A zip that has failed",
+                "A missing guy line"
+              ],
+              "explanation": "“the zip on the left vestibule […] has now failed completely”.",
+              "number": 193,
+              "tags": [
+                "detail"
+              ],
+              "text": "What problem does Mr. Okwuosa describe?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It will oblige him to buy a new tent.",
+                "It will be repaired free of charge.",
+                "It will be the first case of its kind.",
+                "It will be treated as ordinary wear."
+              ],
+              "explanation": "“I suspect I know which way it will go”: he expects the fault to be classed as ordinary wear and therefore excluded from the guarantee.",
+              "number": 194,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does Mr. Okwuosa assume will happen with his complaint?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The company denies that the problem exists.",
+                "The company will charge the fixed Mend fee.",
+                "The company will cover the repair under its guarantee.",
+                "The company asks him to return the tent to a shop."
+              ],
+              "explanation": "“Tents made before that date are covered by the guarantee for this specific fault, wear or not”, with free collection and either repair or replacement.",
+              "number": 195,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "How does the company's response differ from what Mr. Okwuosa expected?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "NOTICE TO ACCOUNT HOLDERS — Change to invoicing\n\nFrom 1 April, Harlow Trade Supplies will issue invoices electronically only. Paper invoices will no longer be posted.\n\nElectronic invoices are sent to the billing e-mail address held on your account. Please check that this address is current by logging in at harlowtrade.example/account before 25 March.\n\nPayment terms are unchanged: thirty days from the invoice date. However, accounts settled within ten days will now receive a 2% early-settlement discount, applied as a credit on your following invoice rather than deducted from the payment itself.\n\nCustomers who need a paper invoice for accessibility reasons should write to accounts@harlowtrade.example. We will continue to post invoices to those accounts at no charge.\n\nTrade counter receipts are not affected by this change.",
+              "label": "Questions 196-200 refer to the following notice, invoice and e-mail.",
+              "type": "notice"
+            },
+            {
+              "content": "HARLOW TRADE SUPPLIES\nInvoice 44-20817\nInvoice date: 6 April\nAccount: Pemberton Joinery (PJ-3391)\nBilling e-mail: accounts@pembertonjoinery.example\n\nItem / Qty / Unit price / Total\nOak veneer sheet, 2440 x 1220 / 14 / £38.00 / £532.00\nBeech edging, 50 m roll / 6 / £22.50 / £135.00\nWood adhesive, 5 L / 4 / £31.00 / £124.00\nDelivery (next day) / 1 / £18.00 / £18.00\n\nSubtotal £809.00\nVAT (20%) £161.80\nTOTAL DUE £970.80\n\nPayment due: 6 May\nEarly settlement (paid by 16 April): 2% credit — £19.42",
+              "type": "invoice"
+            },
+            {
+              "content": "To: accounts@harlowtrade.example\nFrom: r.pemberton@pembertonjoinery.example\nDate: 9 April\nSubject: Invoice 44-20817\n\nHello,\n\nTwo things about this invoice.\n\nFirst, we ordered twelve sheets of oak veneer, not fourteen. Fourteen were delivered and our workshop signed for them, so I accept that this is partly our own fault, but we cannot use the extra two. Can they be collected and credited?\n\nSecond, I will pay the balance on Monday 13 April, which I believe still qualifies for the early-settlement credit. I would like to confirm that the credit will appear on our May invoice rather than reducing Monday's payment, because otherwise our bookkeeper will pay the wrong amount.\n\nWhile I have your attention: we did not receive this invoice by e-mail. It arrived by post, which I assume is a leftover from the old system. The address on our account is correct — I checked it in March.\n\nRegards,\n\nRhian Pemberton\nPemberton Joinery",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "Payment terms will be extended.",
+                "Trade counter receipts will be discontinued.",
+                "Prices will rise by 2%.",
+                "Invoices will be sent electronically."
+              ],
+              "explanation": "“Harlow Trade Supplies will issue invoices electronically only”. Payment terms are explicitly unchanged and trade counter receipts are unaffected.",
+              "number": 196,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the notice, what will change on 1 April?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "As a deduction from the payment being made",
+                "As a refund by cheque",
+                "As a credit on a later invoice",
+                "As a reduction in delivery charges"
+              ],
+              "explanation": "“applied as a credit on your following invoice rather than deducted from the payment itself”.",
+              "number": 197,
+              "tags": [
+                "detail"
+              ],
+              "text": "How is the early-settlement discount applied?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The delivery charge is too high.",
+                "The invoice date is wrong.",
+                "The VAT has been calculated incorrectly.",
+                "More veneer sheets were invoiced than ordered."
+              ],
+              "explanation": "The invoice lists fourteen oak veneer sheets whereas the order was for twelve.",
+              "number": 198,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What discrepancy does Ms. Pemberton identify?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It is the date the extra sheets will be collected.",
+                "It is the date the invoice falls due.",
+                "It is when payment will still earn the discount.",
+                "It is when her bookkeeper returns from leave."
+              ],
+              "explanation": "The invoice sets 16 April as the discount deadline, so paying on 13 April is still inside the ten days.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does Ms. Pemberton mention Monday 13 April?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Her billing address needs to be updated.",
+                "Her account was closed by mistake.",
+                "She would prefer to keep receiving paper invoices.",
+                "The change described in the notice was not applied to her account."
+              ],
+              "explanation": "The 6 April invoice postdates 1 April yet arrived by post, while her e-mail address is correct: the switch to electronic invoicing was not applied to her account.",
+              "number": 200,
+              "tags": [
+                "inference"
+              ],
+              "text": "What does Ms. Pemberton's final paragraph suggest?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 1 — full Reading section",
+  "version": 1
+}

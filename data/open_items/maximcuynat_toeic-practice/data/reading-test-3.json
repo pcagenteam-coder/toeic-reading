@@ -1,0 +1,1791 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-08",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "C",
+          "choices": [
+            "care",
+            "careful",
+            "carefully",
+            "caring"
+          ],
+          "explanation": "The blank modifies the verb “record”, so an adverb is needed: “record each shipment carefully”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Warehouse staff at Solvenda Pharma record each incoming shipment ______ so that the month-end audit finds no discrepancies."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "will have expanded",
+            "expands",
+            "had expanded",
+            "is expanding"
+          ],
+          "explanation": "“By the time” with a present-tense verb points to a future deadline, so the main clause takes the future perfect.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the new distribution centre opens in March, Marleaux Retail ______ its warehouse team by nearly a third."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "during",
+            "among",
+            "since",
+            "within"
+          ],
+          "explanation": "“Within thirty minutes” sets the time limit; “during” would need a named period rather than a deadline.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "All temperature-sensitive medicines must be moved to the cold room ______ thirty minutes of arrival."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "detail",
+            "detailed",
+            "details",
+            "detailing"
+          ],
+          "explanation": "A modifier is required before the noun “report”, and the participial adjective “detailed” fills that slot.",
+          "number": 104,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The site manager submitted a ______ report on the delays affecting the foundation work."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "are reviewed",
+            "review",
+            "are reviewing",
+            "have reviewed"
+          ],
+          "explanation": "Records do not review anything; they undergo the action, so the present passive is required.",
+          "number": 105,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "Prescription records ______ by two members of staff before they are filed."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "extended",
+            "advertised",
+            "shortened",
+            "restored"
+          ],
+          "explanation": "Closing three hours earlier means the hours are shortened; “extended” states the opposite of what the sentence describes.",
+          "number": 106,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The pharmacy's opening hours will be ______ during the refurbishment, with the counter closing at 4:00 P.M. instead of 7:00 P.M."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "revises",
+            "has revised",
+            "revised",
+            "will revise"
+          ],
+          "explanation": "“Since” plus a starting point calls for the present perfect: the two revisions fall in a period reaching the present.",
+          "number": 107,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Kestrel Homeware ______ its returns policy twice since the online store opened."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "structure",
+            "structural",
+            "structures",
+            "structurally"
+          ],
+          "explanation": "An adverb is needed to modify the adjective “secure”; “structural” would have to sit before a noun.",
+          "number": 108,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The scaffolding around the clinic's north facade is ______ secure, according to Thursday's safety inspection."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "whose",
+            "who",
+            "which",
+            "whom"
+          ],
+          "explanation": "The design belongs to the architect, so the possessive relative “whose” is required; “who” would be followed by a verb, not by a noun.",
+          "number": 109,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The architect ______ design won the civic centre competition will lead the hospital extension project."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Because",
+            "Despite",
+            "Although",
+            "Therefore"
+          ],
+          "explanation": "The two clauses contrast, so a concessive conjunction is needed; “Despite” cannot introduce a clause with its own subject and verb.",
+          "number": 110,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the delivery van was held up by roadworks, the vaccines arrived within the required temperature range."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "since",
+            "during",
+            "by",
+            "for"
+          ],
+          "explanation": "“For” introduces the length of a period; “during” would point to an event inside a period already identified.",
+          "number": 111,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The contract requires the roof membrane to be guaranteed ______ a period of fifteen years."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "approve",
+            "approval",
+            "approvingly",
+            "approved"
+          ],
+          "explanation": "The verb “received” needs a noun as its object: “received formal approval”.",
+          "number": 112,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The dispensary has received formal ______ to store controlled medicines on the premises."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "their",
+            "theirs",
+            "them",
+            "themselves"
+          ],
+          "explanation": "A possessive determiner is needed before the noun “supervisor”; “theirs” stands alone and takes no noun after it.",
+          "number": 113,
+          "tags": [
+            "pronoun"
+          ],
+          "text": "Employees who cannot attend Tuesday's safety briefing should notify ______ supervisor before Friday."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "are working on",
+            "work on",
+            "had been working on",
+            "will have worked on"
+          ],
+          "explanation": "The work had been running for two days up to a moment in the past, which is what the past perfect continuous expresses.",
+          "number": 114,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "When the inspector arrived on Thursday, the electricians ______ the ground-floor wiring for two days."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "to submit",
+            "submitting",
+            "submission",
+            "submit"
+          ],
+          "explanation": "“Recommend” takes a gerund when no indirect object follows it; “to submit” would require a person in between.",
+          "number": 115,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The procurement team recommends ______ the tender documents at least a week before the closing date."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "approve",
+            "extend",
+            "postpone",
+            "correct"
+          ],
+          "explanation": "A duplicated charge is an error, so the invoice has to be corrected; approving it would leave the double charge in place.",
+          "number": 116,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Ms. Ferreira asked the supplier to ______ the invoice, as two items had been charged twice."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Inspection",
+            "Inspect",
+            "Inspected",
+            "Inspects"
+          ],
+          "explanation": "The subject of “is carried out” must be a noun.",
+          "number": 117,
+          "tags": [
+            "word-form"
+          ],
+          "text": "______ of the cold-storage units is carried out every six months by a certified engineer."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "awarded",
+            "has awarded",
+            "was awarded",
+            "is awarding"
+          ],
+          "explanation": "The contract receives the action, and “last month” fixes it in finished past time, so the past passive is required.",
+          "number": 118,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The contract for the hospital car park ______ to a firm based in Gdansk last month."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "easy",
+            "easiest",
+            "as easy",
+            "easier"
+          ],
+          "explanation": "“Than” signals a comparison of two things, so the comparative is required; “far” intensifies it.",
+          "number": 119,
+          "tags": [
+            "comparative"
+          ],
+          "text": "The prefabricated wall panels proved far ______ to install than the masonry design originally specified."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "to",
+            "with",
+            "for",
+            "on"
+          ],
+          "explanation": "“Comply” is fixed with the preposition “with”.",
+          "number": 120,
+          "tags": [
+            "preposition"
+          ],
+          "text": "All suppliers must comply ______ the storage standards set out in Appendix 2."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "consistent",
+            "consistently",
+            "consistency",
+            "consist"
+          ],
+          "explanation": "After the linking verb “is”, an adjective is needed: “is consistent with”.",
+          "number": 121,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The revised floor plan is ______ with the fire regulations issued last year."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "so that",
+            "in case",
+            "unless",
+            "whereas"
+          ],
+          "explanation": "The clause names the single condition that would end the opening, which is what “unless” expresses; “in case” would describe a precaution taken in advance.",
+          "number": 122,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "The store will stay open throughout the refit ______ the paint fumes make it unsafe for customers."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "will approve",
+            "approves",
+            "approved",
+            "is approving"
+          ],
+          "explanation": "A time clause introduced by “as soon as” takes the present simple even when the reference is to the future.",
+          "number": 123,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "The design team will begin the interior drawings as soon as the client ______ the revised budget."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "what",
+            "who",
+            "whose",
+            "that"
+          ],
+          "explanation": "The relative pronoun refers to things and is the object of “ordered”, so “that” is required; “what” cannot follow the noun it describes.",
+          "number": 124,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "The refrigeration units ______ we ordered in April are still waiting for customs clearance."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "approves",
+            "will approve",
+            "had approved",
+            "would approve"
+          ],
+          "explanation": "A realistic future condition puts the present simple in the if-clause, with the modal in the main clause.",
+          "number": 125,
+          "tags": [
+            "conditional"
+          ],
+          "text": "If the planning committee ______ the revised drawings next week, construction could start in October."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "certify",
+            "certified",
+            "certification",
+            "certifiable"
+          ],
+          "explanation": "The preposition “of” and the adjective “professional” both call for a noun.",
+          "number": 126,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Applicants for the pharmacy technician post must provide proof of professional ______."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "another",
+            "other",
+            "each other",
+            "the other"
+          ],
+          "explanation": "With exactly two items, the second one is “the other”; “another” would imply a third unit.",
+          "number": 127,
+          "tags": [
+            "pronoun"
+          ],
+          "text": "Although the two shelving units look identical, one is ten centimetres deeper than ______."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "eager",
+            "efficient",
+            "urgent",
+            "willing"
+          ],
+          "explanation": "Limited space calls for use that wastes nothing, which is what “efficient” describes.",
+          "number": 128,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The revised layout makes ______ use of the limited floor space behind the dispensary counter."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "compliance",
+            "comply",
+            "complying",
+            "compliant"
+          ],
+          "explanation": "The subject of “was confirmed” is a noun phrase headed by “the building's”, so the noun “compliance” is required.",
+          "number": 129,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The building's ______ with the new accessibility code was confirmed during Monday's inspection."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "might",
+            "would",
+            "must",
+            "used to"
+          ],
+          "explanation": "A site rule states an obligation, which “must” conveys; “might” would reduce it to a possibility.",
+          "number": 130,
+          "tags": [
+            "modal"
+          ],
+          "text": "Site visitors ______ wear a high-visibility jacket at all times in the loading area."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "Vesterlund Architects\n17 Harbour Row, Portsmouth\n\n12 October\n\nDr. Amara Okonkwo\nRiverbend Community Health Centre\n\nDear Dr. Okonkwo,\n\nThank you for meeting us on site last Thursday. Following that visit, we have {{131}} the drawings for the outpatient extension to take account of your comments on the reception layout.\n\nThe new plan moves the waiting area away from the entrance doors, which should cut down draughts in winter. It also places a second consulting room {{132}} the dispensary and the staff room, so that both can be reached without crossing the waiting area. {{133}}, the storage cupboard you asked about has been widened to 1.8 metres.\n\nWe will submit the package to the planning office on 26 October. {{134}} If you would like anything changed before then, please let us know by 20 October.\n\nYours sincerely,\n\nHenrik Vesterlund\nPartner",
+              "label": "Questions 131-134 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "revise",
+                "revised",
+                "revising",
+                "revision"
+              ],
+              "explanation": "“We have” needs a past participle to complete the present perfect: “we have revised the drawings”.",
+              "number": 131,
+              "tags": [
+                "verb-tense",
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "between",
+                "among",
+                "across",
+                "within"
+              ],
+              "explanation": "Two rooms are named, and “between” is the preposition used with exactly two reference points; “among” would need three or more.",
+              "number": 132,
+              "tags": [
+                "preposition"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Nevertheless",
+                "Instead",
+                "In addition",
+                "For example"
+              ],
+              "explanation": "The cupboard is a further change on top of the ones just listed, so an additive transition is needed; “Instead” would mean it replaced them.",
+              "number": 133,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The planning office rejected an earlier version of this scheme.",
+                "Construction of the extension was finished earlier this year.",
+                "We have therefore cancelled the site meeting arranged for that week.",
+                "A decision normally follows within eight weeks of submission."
+              ],
+              "explanation": "The sentence before gives the submission date, so a note on how long the decision takes continues the thought. A finished extension would make the whole letter pointless, and nothing in the letter suggests a rejection or a cancelled meeting.",
+              "number": 134,
+              "tags": [
+                "sentence-insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "To: All branch managers\nFrom: Priya Raghunathan, Operations\nDate: 3 February\nSubject: Click-and-collect launch\n\nOur click-and-collect service goes live in every branch on 1 March. {{135}} Customers will order online and pick their parcels up from a dedicated counter near the entrance.\n\nEach branch will receive a shelving unit and a handheld scanner during the week of 17 February. Please make sure the counter area has been cleared {{136}} the delivery arrives, as the units are two metres wide.\n\nParcels {{137}} within four hours of an order being placed. Customers are sent a text message the moment their parcel is ready, so the four-hour window matters.\n\nA short training video will be circulated next week; please watch it with your team before 1 March. By the end of that month we expect that every branch {{138}} at least fifty collections a week.",
+              "label": "Questions 135-138 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The pilot in our three largest stores has run since November without difficulty.",
+                "The service will be limited to branches in the northern region.",
+                "Online orders will no longer be accepted after that date.",
+                "Parcels must be returned to the supplier within seven days."
+              ],
+              "explanation": "A reference to the pilot supports the launch announcement it follows. Limiting the service to one region contradicts “every branch”, and ending online orders would remove the reason for the counter described next.",
+              "number": 135,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "during",
+                "so that",
+                "before",
+                "unless"
+              ],
+              "explanation": "The clearing has to happen ahead of the delivery, which “before” expresses; “during” cannot introduce a clause with a subject and verb.",
+              "number": 136,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "must prepare",
+                "must be prepared",
+                "are preparing",
+                "have prepared"
+              ],
+              "explanation": "Parcels are acted on rather than acting, so the passive is required after the modal.",
+              "number": 137,
+              "tags": [
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "handles",
+                "handled",
+                "has handled",
+                "will be handling"
+              ],
+              "explanation": "“By the end of that month” looks forward from a launch still to come, so a future form is needed.",
+              "number": 138,
+              "tags": [
+                "verb-tense"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "Nordhelm Pharmacy Services — Home Delivery\n\nRepeat prescriptions {{139}} are issued by any surgery in the Larkfield district can now be delivered to your door. Delivery is free on orders above $20 and costs $3.50 otherwise.\n\nTo register, create an account and enter the name of the surgery that holds your records. Once your details {{140}} by our team, you can request a delivery from your dashboard at any time.\n\nDeliveries run Monday to Saturday between 9 A.M. and 6 P.M. {{141}} Refrigerated items travel in insulated boxes and are handed over in person; they are never left with a neighbour.\n\nIf you will not be at home, you can {{142}} a delivery to the following day at no extra charge, provided you tell us before 8 P.M. the evening before.",
+              "label": "Questions 139-142 refer to the following web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "who",
+                "what",
+                "that",
+                "they"
+              ],
+              "explanation": "The relative pronoun stands for “prescriptions”, which are things, and introduces a clause describing them: “prescriptions that are issued”.",
+              "number": 139,
+              "tags": [
+                "relative-clause"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "verify",
+                "verifying",
+                "will verify",
+                "have been verified"
+              ],
+              "explanation": "The details undergo the checking, so a passive form is needed, and the perfect shows the checking is complete before a delivery can be requested.",
+              "number": 140,
+              "tags": [
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "You may choose a two-hour slot when you place your order.",
+                "Orders placed on Sunday are delivered the same afternoon.",
+                "Our couriers cannot carry medicines that need refrigeration.",
+                "The district's only pharmacy closed at the end of last year."
+              ],
+              "explanation": "A note on choosing a slot develops the delivery-hours sentence it follows. Sunday delivery contradicts the Monday-to-Saturday schedule, and refusing refrigerated items contradicts the sentence immediately after the blank.",
+              "number": 141,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "cancel",
+                "postpone",
+                "confirm",
+                "repeat"
+              ],
+              "explanation": "“To the following day” shows the delivery is moved rather than dropped, which is what “postpone” means.",
+              "number": 142,
+              "tags": [
+                "vocabulary"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All staff, Meridian Heights Medical Centre\nFrom: Facilities Office\nDate: 9 June\nSubject: Car park resurfacing, 22-26 June\n\nThe main staff car park {{143}} for five days from Monday 22 June while the surface is replaced.\n\nDuring that week, staff should use the overflow area behind the laundry building. {{144}} Spaces there are limited, so please share transport where you can.\n\nThe contractor will start work at 7 A.M. each day. Noise will be {{145}} noticeable in the ground-floor offices on the east side, and colleagues based there are welcome to work from Room 118 instead.\n\nWe apologise for the disruption. Anyone who needs a reserved space for mobility reasons should contact the facilities office by 15 June so that one can be {{146}}.",
+              "label": "Questions 143-146 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "closes",
+                "has closed",
+                "was closed",
+                "will be closed"
+              ],
+              "explanation": "The closure starts on a date still ahead of the 9 June memo, and the car park is acted on, so the future passive is required.",
+              "number": 143,
+              "tags": [
+                "verb-tense",
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The laundry building will also be shut to staff that week.",
+                "A shuttle will run from there to the main entrance every fifteen minutes.",
+                "Visitors may continue to park in the main car park as usual.",
+                "The new surface will be laid in a single day."
+              ],
+              "explanation": "The shuttle explains how staff get from the overflow area to the building, following directly from the instruction to park there. Open access to the main car park and a one-day job both contradict the announcement.",
+              "number": 144,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "particular",
+                "particulars",
+                "particularly",
+                "particularity"
+              ],
+              "explanation": "An adverb is needed to modify the adjective “noticeable”.",
+              "number": 145,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "arranged",
+                "arranging",
+                "arrangement",
+                "arrange"
+              ],
+              "explanation": "After “can be”, a past participle forms the passive: the space is arranged by the office, not by the person asking.",
+              "number": 146,
+              "tags": [
+                "passive-voice",
+                "word-form"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "NOTICE TO ALL DEPARTMENT COORDINATORS\n\nCentral Supply window relocation — 11 to 22 May\n\nThe Central Supply collection window on Level 1 of the Kirkvale Health Centre will be closed from 11 to 22 May while the corridor floor is replaced. During this period, collections will be handled at the Loading Bay B counter, which is entered from the rear car park.\n\nStanding orders will continue to reach each ward on the usual schedule; only walk-in collections are affected. A coordinator who needs an item that is not on the standing order should telephone extension 4180 before 3:00 P.M. so that it can be brought to Loading Bay B the same afternoon. Requests received after 3:00 P.M. will be held until the following working day.\n\nIlona Bergqvist, Supply Services Manager",
+              "label": "Questions 147-148 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To introduce a new system for ordering supplies",
+                "To announce a temporary change to a collection point",
+                "To recruit additional staff for a supply department",
+                "To explain an increase in the cost of supplies"
+              ],
+              "explanation": "The notice announces that the Level 1 window closes from 11 to 22 May and that collections move to Loading Bay B for that period. Nothing in it changes how supplies are ordered — standing orders continue unchanged.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Go to the Level 1 window in person",
+                "Add the item to the ward's standing order",
+                "Collect the item from the rear car park before noon",
+                "Telephone the supply department before 3:00 P.M."
+              ],
+              "explanation": "“should telephone extension 4180 before 3:00 P.M. so that it can be brought to Loading Bay B the same afternoon”. Requests made later wait until the next working day.",
+              "number": 148,
+              "tags": [
+                "detail"
+              ],
+              "text": "What should a coordinator do to receive an extra item on the same day?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Dariusz Wieczorek (8:42 A.M.)\nThe tile shipment for the Halverson lobby is at the gate. The driver's paperwork says 60 boxes, but our manifest says 48.\n\nPriya Raghunathan (8:45 A.M.)\n48 is what I ordered. The extra 12 must be the stair nosing that was meant to go to the Fenwick site.\n\nDariusz Wieczorek (8:47 A.M.)\nDo I send those back with him?\n\nPriya Raghunathan (8:49 A.M.)\nNo. Fenwick is twenty minutes away and their crew starts on Thursday. Sign for all 60 and I will take the twelve across in the van tomorrow.\n\nDariusz Wieczorek (8:51 A.M.)\nUnderstood. I will keep them on the pallet by the hoist so nobody opens them.",
+              "label": "Questions 149-150 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "A delivery contains more boxes than expected.",
+                "A shipment has arrived later than scheduled.",
+                "Several boxes were damaged in transit.",
+                "An order was never placed with the supplier."
+              ],
+              "explanation": "The driver's paperwork lists 60 boxes while the site manifest lists 48, so twelve more boxes have turned up than were ordered.",
+              "number": 149,
+              "tags": [
+                "detail"
+              ],
+              "text": "What problem does Mr. Wieczorek report?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The driver will return to the gate for a collection.",
+                "The Fenwick crew will begin work on the lobby.",
+                "Ms. Raghunathan will move twelve boxes to another site.",
+                "The stair nosing will be unpacked beside the hoist."
+              ],
+              "explanation": "“I will take the twelve across in the van tomorrow” — across to Fenwick, whose crew starts on Thursday. Mr. Wieczorek stores the boxes by the hoist precisely so that they are not opened.",
+              "number": 150,
+              "tags": [
+                "inference"
+              ],
+              "text": "What will most likely happen tomorrow?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "NORDHAVEN PHARMACEUTICALS\nCold Chain Logistics Coordinator — Vantaa distribution centre\n\nNordhaven Pharmaceuticals supplies temperature-sensitive products to hospital pharmacies in fourteen countries. We are seeking a Cold Chain Logistics Coordinator for our distribution centre in Vantaa.\n\nThe role: planning refrigerated shipments, monitoring temperature data loggers, and acting as the first point of contact for carriers when a consignment is delayed. The coordinator reports to the Distribution Manager and works alongside two schedulers.\n\nRequirements\n— Three years' experience in warehousing or freight forwarding\n— Working knowledge of temperature-controlled distribution\n— Fluent English; a second European language is an advantage\n— Willingness to be on call one weekend in five\n\nWe offer a salary from $52,000, subsidised canteen meals and thirty days of annual leave. A candidate who does not yet hold a certificate in good distribution practice will be enrolled in a funded course during the first year.\n\nSend a curriculum vitae and a covering letter naming two referees to careers@nordhavenpharma.example by 30 September. Interviews will be held in Vantaa in the second week of October; travel costs are reimbursed.",
+              "label": "Questions 151-153 refer to the following job posting.",
+              "type": "job posting"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "It is offered on a temporary contract.",
+                "It requires occasional weekend availability.",
+                "It involves supervising two schedulers.",
+                "It can be carried out from any of fourteen countries."
+              ],
+              "explanation": "“Willingness to be on call one weekend in five” appears among the requirements. The coordinator works alongside the two schedulers, not above them.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the position?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It must be certified before the interview.",
+                "It is tested during the first year of employment.",
+                "It raises the starting salary above $52,000.",
+                "It is useful but not required."
+              ],
+              "explanation": "“Fluent English; a second European language is an advantage” — an advantage, not a requirement. Only English fluency is obligatory.",
+              "number": 152,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about a second European language?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "To indicate that a certificate is not needed at the time of hiring",
+                "To explain why the salary begins at $52,000",
+                "To describe a benefit available to every employee",
+                "To set out a condition for being invited to an interview"
+              ],
+              "explanation": "The course is offered to “a candidate who does not yet hold a certificate”, which tells applicants they may apply without one. It is not open to all staff, only to those lacking the qualification.",
+              "number": 153,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does the posting mention a funded course?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "Vestbury Architects\n17 Calderwood Row\nPortmarrow\n\n12 June\n\nMs. Adaeze Okonkwo\nFacilities Director\nLarkfield Community Trust\n\nDear Ms. Okonkwo,\n\nThank you for sending the survey drawings for the annexe at Larkfield Hall. Our structural engineer has now reviewed them.\n\nThe drawings confirm that the north wall can carry the proposed second storey without additional piling, which removes the largest cost risk we identified in April. However, the survey stops at the boundary line, and the drainage run serving the annexe appears to continue beneath the neighbouring car park. Before we can complete the planning submission we will need written confirmation from the car park's owner that the run may stay where it is.\n\nI have therefore held the drawing package at stage C instead of taking it to stage D, so that we do not have to redraw the ground floor twice.\n\nCould you tell me by 26 June whether your legal team can obtain that confirmation? If it is likely to take more than a month, I would suggest submitting the annexe and the drainage works as two separate applications.\n\nYours sincerely,\n\nTomás Berenguer\nProject Architect",
+              "label": "Questions 154-156 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "That the annexe will have to be demolished",
+                "That additional piling must be installed",
+                "That the north wall can support another storey",
+                "That the boundary line was recorded incorrectly"
+              ],
+              "explanation": "“The drawings confirm that the north wall can carry the proposed second storey without additional piling”. Piling is what the drawings rule out, not what they require.",
+              "number": 154,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did the survey drawings establish?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "An invoice from his practice remains unpaid.",
+                "The structural engineer has not finished the review.",
+                "A planning application has already been refused.",
+                "The ground floor may still have to be altered."
+              ],
+              "explanation": "He stops “so that we do not have to redraw the ground floor twice”, since the drainage question is unresolved. The engineer's review is complete — that is what the letter reports.",
+              "number": 155,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why has Mr. Berenguer held the work at stage C?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Removing the second storey from the design",
+                "Making two separate planning applications",
+                "Purchasing the neighbouring car park",
+                "Commissioning a second survey"
+              ],
+              "explanation": "“If it is likely to take more than a month, I would suggest submitting the annexe and the drainage works as two separate applications.”",
+              "number": 156,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Berenguer propose if the confirmation is slow to arrive?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "Retailers rethink the back of the store\n\nMARLOWE BAY — When Halvorsen & Reed refitted its department store on Ashgrove Street last year, the most expensive work was not on the sales floor at all. — [1] —. The chain spent nine months converting two levels of stockrooms into a parcel hub that now dispatches online orders for eleven of its shops.\n\nThe change reflects a shift across the sector. Customers who order online increasingly collect from a shop rather than wait at home, and a store that already holds stock sits closer to the customer than a warehouse beside a motorway. — [2] —.\n\nHalvorsen & Reed reports that orders collected in store rose by 34 percent last year, while home deliveries were flat. — [3] —. Two-thirds of the customers who came in to collect a parcel bought something else while they were there.\n\nNot every site can be converted. — [4] —. Older buildings often have lifts too small for pallet trolleys, and loading doors that open straight onto a pedestrian street.\n\nThe company intends to convert four more stores by March.",
+              "label": "Questions 157-159 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "It turned storage areas into a dispatch centre.",
+                "It extended the sales floor onto two more levels.",
+                "It closed the shop to customers for nine months.",
+                "It moved its stock to a warehouse beside a motorway."
+              ],
+              "explanation": "The chain converted “two levels of stockrooms into a parcel hub”. The nine months refers to the length of the conversion work, not to a closure — the article never says the shop shut.",
+              "number": 157,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Halvorsen & Reed do at its Ashgrove Street store?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "level in surface",
+                "sharply reduced",
+                "unchanged",
+                "inexpensive"
+              ],
+              "explanation": "The contrast is with collections that “rose by 34 percent”, so home deliveries neither rose nor fell. A fall would need “down”, not “flat”.",
+              "number": 158,
+              "tags": [
+                "vocabulary"
+              ],
+              "text": "In paragraph 3, the word “flat” is closest in meaning to"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "It follows “Not every site can be converted” and introduces the physical obstacles listed next — small lifts and doors onto a pedestrian street.",
+              "number": 159,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong?\n\n“The limits are usually set by the building rather than by the budget.”"
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Renata Cardoso (10:12)\nQuick one before the eleven o'clock meeting. The agency has confirmed two ward clerks for the June rota, not the three we asked for.\n\nKwame Boateng (10:14)\nWhich cover did we lose?\n\nRenata Cardoso (10:15)\nThe Tuesday and Thursday evenings on Level 4.\n\nIngrid Sollie (10:16)\nI can move Farida to evenings for June if we bring her weekend hours down. She asked for fewer weekends last month anyway.\n\nKwame Boateng (10:18)\nThat leaves the weekend gap, though. Level 4 cannot run a Saturday with one clerk.\n\nIngrid Sollie (10:19)\nAgreed. Could we go back to the agency once the June rota is published? They usually find people when the dates are fixed.\n\nRenata Cardoso (10:21)\nLet us do that. Kwame, can you publish the rota by Friday so Ingrid has something to send them?\n\nKwame Boateng (10:22)\nFriday is tight, but yes. I will mark the Saturday line as provisional.",
+              "label": "Questions 160-162 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "Two clerks have resigned without giving notice.",
+                "Fewer agency staff than requested are available.",
+                "Level 4 will be closed on Tuesday evenings.",
+                "The June rota was published later than promised."
+              ],
+              "explanation": "“The agency has confirmed two ward clerks […] not the three we asked for.” The rota has not been published yet, so it cannot be late.",
+              "number": 160,
+              "tags": [
+                "detail"
+              ],
+              "text": "What problem are the writers discussing?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Moving her from weekend shifts to evening shifts",
+                "Asking her to take on extra Saturdays",
+                "Transferring her to a different level",
+                "Offering her a permanent contract"
+              ],
+              "explanation": "“I can move Farida to evenings for June if we bring her weekend hours down.” The extra Saturdays are the gap this creates, not something Farida is asked to fill.",
+              "number": 161,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Sollie propose doing about Farida?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "He believes the deadline has already passed.",
+                "He would prefer someone else to publish the rota.",
+                "He thinks the Saturday shift should be cancelled.",
+                "He will meet the deadline even though it is difficult."
+              ],
+              "explanation": "“Tight” concedes that the date is demanding and “but yes” accepts the request; he then explains how he will handle the unresolved Saturday.",
+              "number": 162,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:22, what does Mr. Boateng most likely mean when he writes, “Friday is tight, but yes”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "To: g.lindqvist@webmail.example\nFrom: customercare@brightfoldhome.example\nDate: 3 October\nSubject: Your order 88-40217\n\nDear Mr. Lindqvist,\n\nThank you for telling us that the Ainsley shelving unit delivered to you on 28 September arrived with a damaged side panel.\n\nWe have ordered a replacement panel rather than a complete second unit. The panel is the only part affected, it fits using the screws already supplied, and it will reach you far sooner than a whole unit would — 9 October rather than the end of the month. Illustrated instructions are packed with the panel.\n\nIf you would rather have a complete replacement or a refund, reply to this message before 6 October and we will arrange collection of the original unit instead. Nothing has to be returned if you accept the panel.\n\nBy way of apology we have added a $25 credit to your account. It is applied automatically at checkout and has no expiry date.\n\nKind regards,\n\nSelma Achterberg\nCustomer Care, Brightfold Home",
+              "label": "Questions 163-165 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To confirm that an order has been dispatched",
+                "To request photographs of a damaged item",
+                "To explain how a customer's complaint will be settled",
+                "To announce a change to the company's returns policy"
+              ],
+              "explanation": "The message sets out the remedy for the damaged panel, the alternatives open to Mr. Lindqvist and the compensation offered. The damage has already been reported, so no photographs are asked for.",
+              "number": 163,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the main purpose of the e-mail?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The complete unit is no longer manufactured.",
+                "The panel will arrive considerably earlier.",
+                "Mr. Lindqvist asked for the panel only.",
+                "Returning the unit would cost Mr. Lindqvist money."
+              ],
+              "explanation": "“it will reach you far sooner than a whole unit would — 9 October rather than the end of the month”. A complete replacement is still available if he prefers it, so the unit is clearly still made.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "Why is a replacement panel being sent instead of a complete unit?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It can be used on a purchase at any time in the future.",
+                "It must be claimed before 6 October.",
+                "It will be sent as a paper voucher by post.",
+                "It covers the full price of the shelving unit."
+              ],
+              "explanation": "It is already on the account, “applied automatically at checkout and has no expiry date”, so there is no deadline. The 6 October date belongs to the refund option, not to the credit.",
+              "number": 165,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the $25 credit?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "www.calderstone-supply.example/trade-account\n\nCALDERSTONE SUPPLY | Trade Account | Deliveries | Returns | Contact\n\nTRADE ACCOUNT\n\nA Calderstone trade account gives building contractors and architectural practices a single monthly invoice, tiered pricing and access to our specification library.\n\nOpening an account\nComplete the online form and upload one document confirming your business address. Accounts are normally approved within two working days. A credit limit of $5,000 applies for the first three months, after which it is reviewed against your payment record.\n\nPricing tiers\nBronze — standard trade prices, no minimum spend\nSilver — 6% below trade prices, from $30,000 a year\nGold — 11% below trade prices, from $90,000 a year, plus a named account manager\n\nDeliveries\nOrders placed before 2:00 P.M. are delivered the next working day at any address within 40 km of a branch. A site delivery requires a telephone number for the person receiving the load; our drivers will not leave materials unattended.\n\nReturns\nUnopened stock items may be returned within 28 days. Cut-to-size timber, paint mixed to order and special orders cannot be returned.",
+              "label": "Questions 166-169 refer to the following web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A deposit of $5,000",
+                "References from three suppliers",
+                "A signed schedule of planned deliveries",
+                "A document confirming the business address"
+              ],
+              "explanation": "“upload one document confirming your business address”. The $5,000 figure is the initial credit limit, not a payment.",
+              "number": 166,
+              "tags": [
+                "detail"
+              ],
+              "text": "What must be provided when an account is opened?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A single monthly invoice",
+                "Next-working-day delivery",
+                "A named account manager",
+                "Access to the specification library"
+              ],
+              "explanation": "The account manager is listed under Gold alone; the invoice and the specification library come with any trade account, and next-day delivery depends on the 2:00 P.M. cut-off rather than on the tier.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is available only at the Gold tier?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "An unopened box of screws bought last week",
+                "A tin of paint mixed to a customer's colour",
+                "An unopened stock door delivered ten days ago",
+                "An unopened roll of insulation bought three weeks ago"
+              ],
+              "explanation": "“paint mixed to order […] cannot be returned”. The other three are unopened stock items still inside the 28-day window.",
+              "number": 168,
+              "tags": [
+                "not-question"
+              ],
+              "text": "Which item may NOT be returned?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The account will be closed at the end of the year.",
+                "No credit limit will be applied to the account.",
+                "Delivery beyond 40 km will be free of charge.",
+                "Prices will be 6% below standard trade prices."
+              ],
+              "explanation": "$40,000 passes the $30,000 threshold for Silver but not the $90,000 threshold for Gold, so the Silver discount of 6% applies.",
+              "number": 169,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about a contractor who spends $40,000 a year with Calderstone Supply?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All staff, Weatherby Clinic administration building\nFrom: Oluwaseun Adeyemi, Operations\nDate: 7 February\nRe: Car park resurfacing\n\nThe staff car park will be resurfaced over three weekends beginning 21 February. One third of the spaces will be out of use each weekend, and the barrier at the north entrance will be removed for the whole of the works.\n\nBecause that barrier houses our permit readers, permits cannot be scanned between 21 February and 8 March. During those weeks, please display your permit on the dashboard where it can be read from outside the vehicle. Vehicles without a visible permit may be issued a notice by the contractor's marshals, and we are not able to cancel those notices on your behalf.\n\nSpaces in the visitor area remain reserved for visitors throughout. Anyone who normally arrives after 8:30 A.M. should consider the overflow area behind the laundry building, which will be open on weekdays for the duration of the works.",
+              "label": "Questions 170-171 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "Place their permits where they can be seen",
+                "Register their vehicles with the contractor",
+                "Use the visitor area at weekends",
+                "Arrive before 8:30 A.M."
+              ],
+              "explanation": "With the readers removed, “please display your permit on the dashboard where it can be read from outside the vehicle”. The visitor area stays reserved for visitors throughout.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are staff asked to do while the work is under way?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "They will be forwarded to the operations department.",
+                "They apply at weekends only.",
+                "The clinic will not withdraw them.",
+                "They can be paid at the north entrance."
+              ],
+              "explanation": "“we are not able to cancel those notices on your behalf”. The scanning problem runs from 21 February to 8 March, weekdays included, so the notices are not limited to weekends.",
+              "number": 171,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about notices issued by the marshals?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "NORTHERN HEALTH PROCUREMENT FORUM\nDay 2 — Thursday 14 November\nBrandt Conference Centre, Halbrook\n\n08:30-09:00  Registration and coffee — Foyer\n09:00-09:45  Keynote: What ten years of shortage data tell us — Dr. Aneta Kowalczyk — Auditorium\n10:00-11:15  Workshop A: Writing a tender that suppliers can answer — Room 2 (limit 30)\n10:00-11:15  Workshop B: Cold chain audits in practice — Room 3 (limit 30)\n11:15-11:45  Break — Foyer\n11:45-12:45  Panel: Consolidating orders across four hospitals — Auditorium\n12:45-13:45  Lunch — Terrace Room\n13:45-15:00  Workshop C: Renewing a contract without retendering — Room 2 (limit 30)\n15:00-15:30  Break — Foyer\n15:30-16:30  Closing session and certificates — Auditorium\n\nNotes\nWorkshops A and B run at the same hour; a delegate may attend one of them. Places are allocated when you collect your badge at registration, so arrive early if you have a preference.\nThe Terrace Room is on Level 2 and is reached by the stairs beside Room 3; the lift serves Levels 1 and 3 only.\nSlides from every session will be posted on the forum website on 18 November.",
+              "label": "Questions 172-175 refer to the following schedule.",
+              "type": "schedule"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "Book online before the forum begins",
+                "Speak to the workshop leader beforehand",
+                "Pay an additional registration fee",
+                "Arrive early to collect their badge"
+              ],
+              "explanation": "“Places are allocated when you collect your badge at registration, so arrive early if you have a preference.”",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are delegates advised to do in order to obtain a place in a particular workshop?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "One",
+                "Two",
+                "Three",
+                "Four"
+              ],
+              "explanation": "A and B clash, so only one of them can be attended, and Workshop C is in the afternoon — two in all.",
+              "number": 173,
+              "tags": [
+                "inference"
+              ],
+              "text": "How many workshops can one delegate attend on 14 November?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It is used both for lunch and for the closing session.",
+                "It holds no more than thirty people.",
+                "It cannot be reached by lift.",
+                "It is next to the Auditorium."
+              ],
+              "explanation": "The room is on Level 2 and the lift “serves Levels 1 and 3 only”, so the stairs beside Room 3 are the way in. The limit of thirty applies to the workshops.",
+              "number": 174,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the Terrace Room?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Presentation materials will be made available online.",
+                "Certificates will be posted to delegates.",
+                "A third day of the forum will be held.",
+                "Tender documents will be published."
+              ],
+              "explanation": "“Slides from every session will be posted on the forum website on 18 November.” Certificates are handed out at the closing session on 14 November.",
+              "number": 175,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will happen on 18 November?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "HALVORSEN REGIONAL HEALTH NETWORK\nPharmacy Supply Coordinator — Central Distribution Centre\n\nHalvorsen Regional Health Network supplies medicines and consumables to fourteen clinics across the region. We are seeking a coordinator to manage stock rotation and delivery scheduling at our central warehouse.\n\nResponsibilities\n- Plan the daily delivery runs to the fourteen clinic sites\n- Maintain cold-chain records for temperature-sensitive products\n- Reconcile the monthly stock count against the ordering system\n\nRequirements\n- Three years of experience in warehouse or supply-chain work\n- A recognised certificate in logistics or in pharmacy technology\n- Familiarity with cold-chain handling is an advantage\n\nThe post is full time, based on site, and carries a starting salary of $52,000.\n\nApplications close on 30 April. Send a letter of application and two references to Ingrid Solheim, Human Resources, at the address below. Interviews will be held during the first week of May.",
+              "label": "Questions 176-180 refer to the following job posting and letter.",
+              "type": "job posting"
+            },
+            {
+              "content": "Ingrid Solheim\nHuman Resources\nHalvorsen Regional Health Network\n18 Kastanie Vej\n\n22 April\n\nDear Ms. Solheim,\n\nI am writing to apply for the post of Pharmacy Supply Coordinator advertised on your careers page.\n\nFor the past six years I have worked at Brannon Cold Storage, where I supervise a team of four in the refrigerated goods section. My daily work involves precisely the record-keeping your notice describes: every pallet entering or leaving our chilled units is logged against a temperature trace, and I prepare the monthly audit file for the inspectorate.\n\nI should be open about one gap. My certificate is in transport management rather than in either of the two fields you name, although I completed a forty-hour course in cold-chain handling last autumn.\n\nI can be reached on weekday evenings on 555-0142. I should add that I will be abroad until 12 May, but I would be glad to come in at any time after that date.\n\nYours sincerely,\n\nOlamide Bakare\n\nEnclosures: two references",
+              "label": "Questions 176-180 refer to the following job posting and letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To request details of a training course",
+                "To apply for an advertised position",
+                "To confirm the date of an interview",
+                "To recommend a colleague for a post"
+              ],
+              "explanation": "“I am writing to apply for the post of Pharmacy Supply Coordinator advertised on your careers page.” The course he mentions is one he has already completed, not one he is asking about.",
+              "number": 176,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Mr. Bakare write the letter?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Arranging the daily deliveries to clinic sites",
+                "Interviewing candidates for warehouse roles",
+                "Preparing the network's annual budget",
+                "Training clinical staff to use the ordering system"
+              ],
+              "explanation": "The first responsibility listed is to “Plan the daily delivery runs to the fourteen clinic sites”. The ordering system appears only in connection with the monthly stock count, not with training.",
+              "number": 177,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the job posting, what is one duty of the position?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The number of years of experience",
+                "The field in which his certificate was awarded",
+                "Familiarity with cold-chain handling",
+                "The supply of two references"
+              ],
+              "explanation": "The posting asks for a certificate in logistics or pharmacy technology; his is in transport management. His six years, his cold-chain course and the two enclosed references all satisfy the notice.",
+              "number": 178,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Which of the network's requirements does Mr. Bakare fail to meet?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "He cannot apply before the closing date.",
+                "He will miss the monthly audit at his current employer.",
+                "His references may not reach the network in time.",
+                "He will be away when the interviews take place."
+              ],
+              "explanation": "Interviews are held in the first week of May and he is abroad until 12 May. His letter is dated 22 April, comfortably inside the 30 April closing date.",
+              "number": 179,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What difficulty does Mr. Bakare's travel create?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A copy of his certificate",
+                "A sample temperature record",
+                "Two references",
+                "A list of his previous employers"
+              ],
+              "explanation": "The letter closes “Enclosures: two references”, which is what the posting asks applicants to provide. His certificate and his temperature logs are described but not enclosed.",
+              "number": 180,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Bakare send with his letter?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "NOTICE TO TENANTS — Westhaven Shopping Centre\n\nRefurbishment of the north atrium\n\nWork on the north atrium begins on Monday 3 June and is expected to finish by 26 July.\n\nWhile the work continues:\n\n- The north entrance and car park level B will be closed. Shoppers should be directed to the east entrance.\n- Deliveries to units 12 to 28 must be made through the service corridor behind unit 30, between 6:00 and 9:00 A.M. only.\n- The two passenger lifts in the atrium will be out of service. The goods lift remains available to tenants on request to the centre office.\n\nTenants whose trade is affected may apply for an adjustment to their June and July rent. Applications must reach the centre office by 14 June.\n\nQuestions: Farida Yusuf, Centre Manager, extension 210.",
+              "label": "Questions 181-185 refer to the following notice and e-mail.",
+              "type": "notice"
+            },
+            {
+              "content": "To: f.yusuf@westhavencentre.example\nFrom: p.oyelaran@lantern-home.example\nDate: 6 June\nSubject: Unit 19 — deliveries and rent\n\nDear Ms. Yusuf,\n\nWe run the homewares shop in unit 19, and two matters arise from your notice.\n\nFirst, deliveries. Our furniture supplier will only unload in the afternoon; his lorry is on another contract every morning until noon, and three deliveries are already booked for late June. Is there any prospect of an afternoon slot, or should I ask him to bring the load to the east entrance instead?\n\nSecond, we do intend to apply for the adjustment. Our unit faces the atrium and takes most of its custom from people arriving on the north side, so a fall in takings seems certain. Could you tell me what the application has to show? Last year's figures for the same weeks, presumably.\n\nOne more thing. We would need the goods lift for the furniture. Must a request be made for each delivery, or once for the whole period?\n\nRegards,\n\nPatience Oyelaran\nLantern Home",
+              "label": "Questions 181-185 refer to the following notice and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "To explain how building work will affect tenants",
+                "To announce the appointment of a centre manager",
+                "To advertise retail units that have become vacant",
+                "To remind tenants that their rent is overdue"
+              ],
+              "explanation": "Every item on the notice sets out a consequence of the atrium refurbishment for the people trading in the centre. Rent is mentioned only as something tenants may ask to have reduced.",
+              "number": 181,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Park on level B",
+                "Use the service corridor",
+                "Come in by the east entrance",
+                "Telephone the centre office first"
+              ],
+              "explanation": "“Shoppers should be directed to the east entrance.” Level B is closed and the service corridor is for deliveries by tenants, not for the public.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the notice, what should shoppers be asked to do?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "They are suspended until 26 July.",
+                "They must go through the service corridor.",
+                "They may continue to use the north entrance.",
+                "They will be received on the shop's behalf by the centre office."
+              ],
+              "explanation": "Lantern Home occupies unit 19, and the notice routes all deliveries to units 12 to 28 through the corridor behind unit 30. The north entrance is closed for the duration.",
+              "number": 183,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about deliveries to Lantern Home?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Her rent has risen without warning.",
+                "Her supplier has cancelled three deliveries.",
+                "The east entrance is too far from her unit.",
+                "Her supplier cannot deliver within the permitted hours."
+              ],
+              "explanation": "Deliveries are allowed between 6:00 and 9:00 A.M. only, and her furniture supplier is committed elsewhere every morning until noon. The three deliveries are booked, not cancelled.",
+              "number": 184,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What problem does Ms. Oyelaran describe?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "How often a request must be made",
+                "Whether tenants are charged for using it",
+                "Whether it will be closed during the works",
+                "How much weight it will carry"
+              ],
+              "explanation": "“Must a request be made for each delivery, or once for the whole period?” It is the passenger lifts, not the goods lift, that are going out of service.",
+              "number": 185,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Oyelaran ask about the goods lift?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "KIRRA & POST — Returns and exchanges\n\nWe want you to be happy with everything you order from us.\n\nStandard items may be returned within 30 days of delivery for a full refund, provided they are unused and in their original packaging. Sale items may be exchanged but not refunded. Made-to-measure items cannot be returned unless they are faulty.\n\nHow to return an item\n1. Complete the returns form enclosed with your parcel.\n2. Attach the prepaid label printed on the reverse of the form.\n3. Hand the parcel in at any post office and keep your receipt.\n\nRefunds are issued to the original payment method within ten working days of the parcel reaching our warehouse in Coimbra. Exchanges are dispatched the next working day when the replacement is in stock.\n\nReturn postage is free on orders over $60. On smaller orders, $4.50 is deducted from the refund.",
+              "label": "Questions 186-190 refer to the following web page, form, and e-mail.",
+              "type": "web page"
+            },
+            {
+              "content": "KIRRA & POST — RETURNS FORM\n\nOrder number: KP-48211\nCustomer: Marek Wiśniewski\nDate of delivery: 9 October\nDate posted back: 2 November\n\nItem returned: Linen table runner, 2 m, sand\nItem price: $38.00\nOrder total: $71.50\n\nReason for return (tick one)\n[ ] Wrong item sent\n[ ] Faulty\n[X] Not as expected\n[ ] Arrived late\n\nRefund or exchange\n[X] Refund   [ ] Exchange\n\nCustomer comments: The colour is far darker than it appeared on the website. The runner has not been used and the paper band is still around it.\n\nOffice use only: received at the Coimbra warehouse on 6 November.",
+              "label": "Questions 186-190 refer to the following web page, form, and e-mail.",
+              "type": "form"
+            },
+            {
+              "content": "To: m.wisniewski@example.net\nFrom: help@kirraandpost.example\nDate: 8 November\nSubject: Order KP-48211\n\nDear Mr. Wiśniewski,\n\nThank you for sending the table runner back to us. It reached Coimbra on 6 November, and our warehouse team has confirmed that it is unused and still in its packaging, so the return has been accepted in full.\n\nYour remark about the colour has gone to the studio that photographs our textiles. Sand and the darker shade beside it in the range have been confused by several customers this season, and both will be photographed again against a neutral background before the winter catalogue is printed.\n\nIf you would still like a runner for the table, the 2 m size is also made in chalk and in a pale grey. I can post you a fabric sample of either at no charge — simply reply with the shade you would like to see.\n\nWith thanks,\n\nHelena Brancusi\nCustomer Care",
+              "label": "Questions 186-190 refer to the following web page, form, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "Pay the postage in advance",
+                "Keep the receipt from the post office",
+                "Telephone customer care beforehand",
+                "Address the parcel to the Coimbra warehouse"
+              ],
+              "explanation": "Step 3 is “Hand the parcel in at any post office and keep your receipt”. The label is prepaid, and the address is already on it, so neither postage nor addressing falls to the customer.",
+              "number": 186,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the web page, what should a customer do when returning an item?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It reached him later than promised.",
+                "The wrong size had been sent.",
+                "It was damaged in transit.",
+                "Its colour was unlike the one shown online."
+              ],
+              "explanation": "He ticked “Not as expected” and wrote that the colour was far darker than on the website. “Arrived late” and “Faulty” were both available on the form and were left unticked.",
+              "number": 187,
+              "tags": [
+                "detail"
+              ],
+              "text": "Why did Mr. Wiśniewski return the table runner?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "$33.50",
+                "$38.00",
+                "$67.00",
+                "$71.50"
+              ],
+              "explanation": "He is refunded the price of the one item he sent back, $38.00. The $4.50 postage deduction applies only to orders of $60 or less, and his order came to $71.50.",
+              "number": 188,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "How much will Mr. Wiśniewski be refunded?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "To account for a delay in issuing the refund",
+                "To identify where the runner was woven",
+                "To describe a step taken in response to his comment",
+                "To invite him to appear in the winter catalogue"
+              ],
+              "explanation": "The paragraph follows directly from his complaint about the colour and reports that both shades will be photographed again. Nothing in the message suggests the refund has been held up.",
+              "number": 189,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does Ms. Brancusi mention the studio?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "A sample of another shade",
+                "A replacement runner",
+                "A discount on his next order",
+                "A prepaid returns label"
+              ],
+              "explanation": "“I can post you a fabric sample of either at no charge.” She names two alternative shades but does not offer a runner itself.",
+              "number": 190,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Brancusi offer to send free of charge?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "Timber returns to the city centre\n\nBy Delphine Arroyo\n\nUntil recently, an eight-storey office block in this country meant steel and concrete. That is changing. Nineteen buildings of five storeys or more framed in cross-laminated timber were completed nationally last year, against three in the year the material was first permitted at that height.\n\nDevelopers give two reasons. The panels arrive cut to size, so a floor can be assembled in days rather than in weeks, and a timber frame weighs roughly a fifth of a concrete one, which cuts the cost of foundations on soft ground.\n\nTenants appear to have noticed. Letting agents report that timber schemes are being taken up before completion at a rate the sector has not seen for a decade.\n\nNot everyone is persuaded. Insurers have been slow to price the risk, and several city authorities still ask for fire modelling beyond what the building code requires. “The engineering is settled,” says Ravi Mahadevan of the practice Norrland & Vale. “The paperwork is not.”",
+              "label": "Questions 191-195 refer to the following article, survey results, and memo.",
+              "type": "article"
+            },
+            {
+              "content": "NORRLAND & VALE — Tenant priorities survey, March\n\n412 responses from occupiers of commercial buildings completed within the last five years.\n\nWhich single factor most influenced your choice of building?\n\nNatural light and interior finish — 34%\nRent per square metre — 29%\nDistance from a transport hub — 21%\nEnvironmental credentials — 11%\nOther — 5%\n\nWould you pay a higher rent for a building with a timber structure?\n\nNo — 44%\nYes, up to 5% more — 38%\nYes, more than 5% more — 9%\nDon't know — 9%\n\nRespondents by sector: professional services 41%, technology 27%, public bodies 18%, retail and hospitality 14%.",
+              "label": "Questions 191-195 refer to the following article, survey results, and memo.",
+              "type": "survey results"
+            },
+            {
+              "content": "MEMORANDUM\n\nTo: Design team, Studio 3\nFrom: Ravi Mahadevan\nDate: 2 April\nSubject: Kesselring Quay — structure\n\nThe client has asked us to price a timber frame for Kesselring Quay alongside the concrete option and to report by the end of the month.\n\nTwo things to keep in front of us. The site is reclaimed land, so anything that lightens the building helps us at foundation level, and that argument alone may carry the decision. And the letting agent means to market the upper floors well before completion, which last week's property supplement suggests is now realistic for schemes of this kind.\n\nI would not lean on the environmental case in the client presentation. Our own survey put that factor well down the list, behind light, rent and location, and the client's board is unlikely to think differently.\n\nGiselle, please pull the fire-modelling correspondence from the Harbour Lane job. We should assume the same authority will want it again.\n\nRavi",
+              "label": "Questions 191-195 refer to the following article, survey results, and memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "It is cheaper per square metre than concrete.",
+                "It is exempt from fire modelling.",
+                "It is simpler to insure than steel.",
+                "It goes up faster than concrete."
+              ],
+              "explanation": "“The panels arrive cut to size, so a floor can be assembled in days rather than in weeks.” Insurance and fire modelling appear in the article as obstacles to timber, not as advantages.",
+              "number": 191,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the article, what is one reason developers choose cross-laminated timber?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "That respondents would pay more than 5% extra",
+                "That respondents would not pay any more",
+                "That respondents had not decided",
+                "That respondents would pay up to 5% extra"
+              ],
+              "explanation": "“No” drew 44%, ahead of the 38% willing to pay up to 5% more. No single answer was given by a majority, but 44% is the largest share.",
+              "number": 192,
+              "tags": [
+                "detail"
+              ],
+              "text": "What was the most common answer to the survey's second question?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "11%",
+                "21%",
+                "29%",
+                "34%"
+              ],
+              "explanation": "The memo warns against leaning on the environmental case, and environmental credentials were chosen by 11% of the 412 respondents.",
+              "number": 193,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What share of respondents named the factor Mr. Mahadevan advises the team not to stress?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The authority has waived its fire-modelling requirement.",
+                "The upper floors have already been let.",
+                "A lighter building is cheaper to found on reclaimed land.",
+                "Timber panels can be delivered to the quay by water."
+              ],
+              "explanation": "The memo notes that the site is reclaimed land and that lightening the building helps at foundation level; the article supplies the figure, a timber frame weighing about a fifth of a concrete one. The upper floors are still to be marketed.",
+              "number": 194,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does Mr. Mahadevan believe the Kesselring Quay site suits a timber frame?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Refuse permission for a timber structure",
+                "Require the client to change insurer",
+                "Issue a revised building code",
+                "Ask for fire modelling the code does not require"
+              ],
+              "explanation": "He wants the Harbour Lane fire-modelling file because “the same authority will want it again”, and the article explains that several city authorities demand modelling beyond the code.",
+              "number": 195,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What does Mr. Mahadevan expect the local authority to do?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "THERMALINE PACKAGING\nValidated shipping for temperature-sensitive goods\n\nOur reusable insulated shippers hold 2–8 °C for a documented period with no external power.\n\nTL-12 — 12 litres — 48 hours — $180 each\nTL-24 — 24 litres — 72 hours — $265 each\nTL-48 — 48 litres — 96 hours — $410 each\nTL-72 — 72 litres — 120 hours — $560 each\n\nEvery shipper leaves us with two sets of coolant packs and a validation certificate for your regulatory file.\n\nOrders of ten or more units of a single model take 8% off the unit price.\n\nDelivery is free on orders above $2,000; below that, a flat $95 applies. Replacement coolant packs cost $22 a set, and lids and gaskets are guaranteed for three years.\n\nOrder on 555-0186 or through your account manager. Quotations hold good for 30 days.",
+              "label": "Questions 196-200 refer to the following advertisement, invoice, and e-mail.",
+              "type": "advertisement"
+            },
+            {
+              "content": "THERMALINE PACKAGING — INVOICE 7742\n\nBill to: Marchetti Pharmacy Group, 40 Ostrowska Street\nInvoice date: 11 September\nPayment terms: 30 days from the invoice date\n\nQty   Item                              Unit price   Amount\n12    Shipper TL-24, 24 L, 72 hours     $243.80      $2,925.60\n4     Coolant pack set, spare           $22.00       $88.00\n      Delivery                                       $0.00\n\n                                        Total        $3,013.60\n\nUnit price reflects the volume rate. Shippers are reusable and need not be returned to us.\n\nQueries: accounts@thermaline.example",
+              "label": "Questions 196-200 refer to the following advertisement, invoice, and e-mail.",
+              "type": "invoice"
+            },
+            {
+              "content": "To: accounts@thermaline.example\nFrom: b.marchetti@marchettipharmacy.example\nDate: 24 September\nSubject: Invoice 7742, and a further order\n\nDear colleagues,\n\nInvoice 7742 has been passed for payment and will be settled well before it falls due.\n\nTwo points, however.\n\nFirst, the twelve shippers arrived with one set of coolant packs each rather than two, and the delivery note lists only twelve sets. The four spare sets we ordered on top of the standard supply did arrive and are not in dispute. Please send the missing sets or credit us for them.\n\nSecond, we open a fourth branch in November and will need shippers for a run that goes out to the coast and back over four days. The 72-hour model cannot cover that, so we would like six units of the next size up. Am I right that six will not reach your threshold for the volume rate? If a larger quantity would change the price materially, I would rather know before the order goes in.\n\nKind regards,\n\nBianca Marchetti",
+              "label": "Questions 196-200 refer to the following advertisement, invoice, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "A power adaptor",
+                "Two sets of coolant packs",
+                "A prepaid return label",
+                "A three-year service contract"
+              ],
+              "explanation": "“Every shipper leaves us with two sets of coolant packs and a validation certificate.” The three-year guarantee covers lids and gaskets and is not a service contract, and the shippers need no power at all.",
+              "number": 196,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the advertisement, what is supplied with every shipper?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "11 September",
+                "24 September",
+                "11 October",
+                "24 October"
+              ],
+              "explanation": "The invoice is dated 11 September and the terms are 30 days from the invoice date. 24 September is the date of Ms. Marchetti's message, not a payment date.",
+              "number": 197,
+              "tags": [
+                "detail"
+              ],
+              "text": "By what date must invoice 7742 be paid?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The shippers reached her after the agreed date.",
+                "She was charged for delivery she should not have paid for.",
+                "One of the twelve shippers arrived damaged.",
+                "Fewer coolant packs were supplied than advertised."
+              ],
+              "explanation": "The advertisement promises two sets of coolant packs with every shipper, so twelve shippers should have brought twenty-four sets rather than the twelve delivered. Delivery was in fact charged at $0.00.",
+              "number": 198,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does Ms. Marchetti believe Thermaline owes her something?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "TL-12",
+                "TL-24",
+                "TL-48",
+                "TL-72"
+              ],
+              "explanation": "She wants “the next size up” from the 72-hour model she already buys, which is the TL-48, and its 96 hours covers the four-day run. The TL-72 is two sizes up.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Which model is Ms. Marchetti likely to order in November?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It will not qualify for the volume rate.",
+                "It will be larger than the September order.",
+                "It will be for the same model as the September order.",
+                "It will have to be paid for when it is placed."
+              ],
+              "explanation": "The 8% volume rate begins at ten units of one model, and she intends to buy six. Six units is fewer than the twelve she bought in September, and of a different model.",
+              "number": 200,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What is true of the order Ms. Marchetti is considering?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 3 — full Reading section",
+  "version": 1
+}

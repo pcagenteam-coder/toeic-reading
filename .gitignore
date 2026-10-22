@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+.hark/
+# 私有题库（无授权资料，单独私有仓库 toeic-reading-private 管理）——绝不能进公开仓库
+private_data/
+# 含私有题的构建产物
+app/dist/index.private.html
+work/bili/
+work/drive_sync_state.json
+data/external/

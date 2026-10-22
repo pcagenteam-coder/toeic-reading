@@ -1,0 +1,1790 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-08",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "C",
+          "choices": [
+            "deceive",
+            "deception",
+            "deceptively",
+            "deceptive"
+          ],
+          "explanation": "An adverb is needed to modify the adjective “simple”: “deceptively simple”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The new interface is ______ simple, which is why most agents need only an hour of training."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "completes",
+            "will have completed",
+            "had completed",
+            "is completing"
+          ],
+          "explanation": "“By the time … begins” sets a deadline in the future, so the future perfect is required for something finished before that point.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the autumn harvest begins, Vasterlund Orchards ______ the installation of its new sorting line."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "by",
+            "until",
+            "over",
+            "since"
+          ],
+          "explanation": "“by 15 March” states a deadline. “Until” would describe an action continuing up to that date, which a single delivery cannot do.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "All exhibit labels must reach the design office ______ 15 March so that printing can begin."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "abrupt",
+            "hasty",
+            "brisk",
+            "instant"
+          ],
+          "explanation": "“Instant access” is the standard collocation for data available with no delay; “abrupt” and “hasty” describe something done suddenly or carelessly, not availability.",
+          "number": 104,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The redesigned dashboard gives packhouse supervisors ______ access to yield figures from every line."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "to postpone",
+            "postponing",
+            "postpone",
+            "postponement"
+          ],
+          "explanation": "“Recommend” takes a gerund when no object follows: “recommended postponing the display”.",
+          "number": 105,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The curator recommended ______ the textile display until the humidity controls have been serviced."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "automatic",
+            "automation",
+            "automatically",
+            "automate"
+          ],
+          "explanation": "The verb “operates” needs an adverb to say how it works: “operates automatically”.",
+          "number": 106,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The gallery's lighting system operates ______ during opening hours, dimming as the daylight changes."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Either",
+            "Both",
+            "Any",
+            "Every"
+          ],
+          "explanation": "“Of the two” with the singular verb “has” points to “Either”; “Both” would require the plural “have”.",
+          "number": 107,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "______ of the two candidates for the archivist post has worked with digitised collections."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "has changed",
+            "changed",
+            "changes",
+            "will change"
+          ],
+          "explanation": "“Since the plant opened” marks a period running up to the present, which the present perfect expresses.",
+          "number": 108,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Northfield Dairy ______ its packaging supplier three times since the plant opened."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "disappointing",
+            "disappoint",
+            "disappointment",
+            "disappointed"
+          ],
+          "explanation": "The people experience the feeling, so the past participle is used: “holders were disappointed”. “Disappointing” would describe the news rather than the holders.",
+          "number": 109,
+          "tags": [
+            "participle-adjective"
+          ],
+          "text": "Ticket holders were ______ to learn that the sculpture wing would stay closed for a further week."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "reliability",
+            "reliable",
+            "reliably",
+            "rely"
+          ],
+          "explanation": "In “find + object + complement”, the complement describes the app, so the adjective “reliable” is needed.",
+          "number": 110,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Delegates found the conference app surprisingly ______, even on five-year-old handsets."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "among",
+            "between",
+            "during",
+            "along"
+          ],
+          "explanation": "A stretch of time takes “during”: “during the second quarter”. “Between” would need two separate points in time.",
+          "number": 111,
+          "tags": [
+            "preposition"
+          ],
+          "text": "Attendance at the weekend workshops rose sharply ______ the second quarter."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "are",
+            "have been",
+            "were",
+            "is"
+          ],
+          "explanation": "The subject is the singular “list”, not “varieties”, so the singular “is” is correct.",
+          "number": 112,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "The list of approved seed varieties ______ updated every January by the regional agency."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "secured",
+            "gathered",
+            "collected",
+            "reached"
+          ],
+          "explanation": "“Secure a grant” means to obtain funding after applying for it; “gather” and “collect” suit objects one accumulates, and “reach” suits a target or an agreement.",
+          "number": 113,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The museum has ______ a grant of $85,000 to conserve its collection of glass negatives."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "analyse",
+            "analytical",
+            "analyst",
+            "analysis"
+          ],
+          "explanation": "The sentence describes a person to be hired, so the person noun “analyst” is needed; “analysis” names the activity.",
+          "number": 114,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The laboratory is looking for an experienced ______ to lead its soil-testing programme."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "are displaying",
+            "will be displayed",
+            "have displayed",
+            "display"
+          ],
+          "explanation": "The photographs receive the action rather than perform it, so a passive form is required, and the period runs into the future.",
+          "number": 115,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "Photographs of the excavation ______ in the east corridor until the end of the year."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "reviews",
+            "has reviewed",
+            "will review",
+            "had been reviewing"
+          ],
+          "explanation": "The review was already under way when the auditors arrived, and the duration “for six hours” calls for the past perfect continuous.",
+          "number": 116,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "When the auditors arrived on Tuesday, the finance team ______ the quarterly figures for six hours."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "Although",
+            "Despite",
+            "However",
+            "Because"
+          ],
+          "explanation": "Two contrasting clauses need the subordinating conjunction “Although”; “Despite” must be followed by a noun phrase rather than a clause.",
+          "number": 117,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the irrigation contract was signed late, the pilot plots were planted on schedule."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "updating",
+            "update",
+            "to update",
+            "updated"
+          ],
+          "explanation": "“Arrange” is followed by an infinitive: “has arranged to update”.",
+          "number": 118,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The IT department has arranged ______ every workstation with the new client before the audit."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "reduce",
+            "reduction",
+            "reduced",
+            "reducing"
+          ],
+          "explanation": "After the article and adjective “a significant”, a noun is required: “a significant reduction in”.",
+          "number": 119,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Growers reported a significant ______ in water use after switching to drip irrigation."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "few",
+            "many",
+            "several",
+            "little"
+          ],
+          "explanation": "“Evidence” is uncountable and so takes “little”; the other three quantifiers require a countable plural noun.",
+          "number": 120,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "There is very ______ evidence that the new coating shortens shelf life."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "on",
+            "in",
+            "at",
+            "to"
+          ],
+          "explanation": "Software is installed “on” a device, so “installed on up to five devices” is the correct phrasing.",
+          "number": 121,
+          "tags": [
+            "preposition"
+          ],
+          "text": "Under the revised licence, the software may be installed ______ up to five devices per user."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "revoked",
+            "reversed",
+            "revised",
+            "restored"
+          ],
+          "explanation": "A description corrected in the light of new evidence is “revised”; “revoked” applies to permissions and “reversed” to decisions.",
+          "number": 122,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "The catalogue entry was ______ after new evidence about the painting's origin came to light."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "supervise",
+            "supervision",
+            "supervisory",
+            "supervisor"
+          ],
+          "explanation": "“Under the supervision of” is the fixed phrase, and only the noun “supervision” fits between “the” and “of” here.",
+          "number": 123,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The vineyard was replanted under the ______ of an agronomist from Mendoza."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "handled",
+            "has handled",
+            "handles",
+            "will have handled"
+          ],
+          "explanation": "“Last Thursday” is a finished past time, which requires the simple past; the present perfect cannot be used with it.",
+          "number": 124,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "The support desk ______ more than two hundred tickets last Thursday, a record for a single day."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "easy",
+            "easiest",
+            "as easy",
+            "far easier"
+          ],
+          "explanation": "“Than” requires a comparative, and “far easier” is the only choice that supplies one.",
+          "number": 125,
+          "tags": [
+            "comparative"
+          ],
+          "text": "The second prototype proved ______ to assemble than the one the team built in the spring."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "collecting",
+            "collect",
+            "collected",
+            "collection"
+          ],
+          "explanation": "A reduced relative clause is needed — “the samples that were collected” — so the past participle is correct; “collecting” would make the samples do the collecting.",
+          "number": 126,
+          "tags": [
+            "participle-adjective"
+          ],
+          "text": "The samples ______ from the northern plots will be tested before the others."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "art",
+            "artistic",
+            "artistically",
+            "artist"
+          ],
+          "explanation": "The noun “director” needs an adjective in front of it, and “artistic director” is the established title.",
+          "number": 127,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The festival's ______ director will announce next season's programme in April."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "was",
+            "has been",
+            "is",
+            "were"
+          ],
+          "explanation": "After “neither … nor”, the verb agrees with the nearer subject, the plural “speakers”, and the lecture is in the past.",
+          "number": 128,
+          "tags": [
+            "subject-verb-agreement"
+          ],
+          "text": "Neither the projector nor the speakers ______ working when the lecture was due to begin."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "might",
+            "may",
+            "must",
+            "can"
+          ],
+          "explanation": "“No exceptions will be made” signals an obligation rather than a possibility or a permission, so “must” is the only fit.",
+          "number": 129,
+          "tags": [
+            "modal"
+          ],
+          "text": "Because the server room is locked outside office hours, contractors ______ arrange access a day in advance; no exceptions will be made."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "decision",
+            "decide",
+            "decisive",
+            "decisively"
+          ],
+          "explanation": "The possessive “panel's” must be followed by a noun: “the panel's decision”.",
+          "number": 130,
+          "tags": [
+            "word-form"
+          ],
+          "text": "All applicants will be notified of the panel's ______ by the end of May."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All Helpdesk Staff\nFrom: Priya Raghunathan, Service Operations\nDate: 12 May\nSubject: Change to ticket triage\n\nFrom Monday 19 May, incoming tickets will no longer be assigned by hand. The routing engine will read each request and {{131}} it to the queue that matches the system being reported. Tickets the engine cannot classify will land in a general queue, which the duty lead checks twice a day.\n\nWe expect the change to {{132}} the first-response time for common requests, which currently wait an average of forty minutes. During the first fortnight, please make a note of any ticket that reaches the wrong queue. {{133}} The vendor has agreed to retrain the classifier at the end of June using everything we send.\n\nOne thing does not change: the {{134}} of a ticket is still decided by the agent who picks it up, not by the routing engine.",
+              "label": "Questions 131-134 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "direct",
+                "directs",
+                "directing",
+                "direction"
+              ],
+              "explanation": "The blank continues “will read each request and ______”, so the bare infinitive “direct” is needed to match “read”.",
+              "number": 131,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "shrink",
+                "abbreviate",
+                "shorten",
+                "compress"
+              ],
+              "explanation": "A length of time is “shortened”; “shrink” applies to physical size, “abbreviate” to words and “compress” to files.",
+              "number": 132,
+              "tags": [
+                "vocabulary"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Agents should keep assigning tickets by hand until further notice.",
+                "A short form for reporting these cases is now on the intranet.",
+                "The routing engine will be switched off for the whole of June.",
+                "The vendor no longer supports the classifier we are using."
+              ],
+              "explanation": "The sentence before asks staff to note mis-routed tickets and the one after refers to what the team sends the vendor, so a sentence explaining how to report them belongs here. Keeping manual assignment or switching the engine off would contradict the memo.",
+              "number": 133,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "prior",
+                "prioritised",
+                "prioritise",
+                "priority"
+              ],
+              "explanation": "Between “the” and “of” a noun is required: “the priority of a ticket”.",
+              "number": 134,
+              "tags": [
+                "word-form"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "To: Members of the Vale Growers' Association\nFrom: Bendik Sørland, Field Services\nDate: 3 February\nSubject: Free soil testing — March round\n\nOur March round of free soil testing is now open to every member farm. {{135}} Sampling kits will be posted to the address we hold on file, so please check that yours is up to date.\n\nEach kit contains ten tubes, a probe and a prepaid return envelope. Take one sample from every hectare you intend to test, and {{136}} the tubes clearly with the name of the plot. Results take about twelve working days from the day the laboratory receives your package.\n\nThis year the report also {{137}} an estimate of organic matter, which a number of you asked for last season. There is no charge for the addition. Results are sent {{138}} e-mail only; we no longer post paper copies.\n\nTo register, reply to this message before 20 February.",
+              "label": "Questions 135-138 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "Farms that joined the association after September are eligible for the first time.",
+                "The testing service has been suspended until further notice.",
+                "A fee of $60 per kit applies to every participant this year.",
+                "Only farms in the northern district may take part in this round."
+              ],
+              "explanation": "The sentence announces that the round is open to every member farm, so a note about who is newly eligible follows naturally. A fee contradicts “free” and “no charge”, and a district restriction contradicts “every member farm”.",
+              "number": 135,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "labelling",
+                "label",
+                "labelled",
+                "labels"
+              ],
+              "explanation": "The blank continues the imperative “Take one sample …, and ______”, so the base form “label” is required.",
+              "number": 136,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "include",
+                "including",
+                "have included",
+                "includes"
+              ],
+              "explanation": "The singular subject “the report” takes the singular present verb “includes”.",
+              "number": 137,
+              "tags": [
+                "subject-verb-agreement"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "in",
+                "on",
+                "by",
+                "with"
+              ],
+              "explanation": "The means by which something is transmitted takes “by”: “sent by e-mail”.",
+              "number": 138,
+              "tags": [
+                "preposition"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "MEMBERSHIP RENEWAL — WHAT HAPPENS NEXT\n\nThank you for renewing your membership of the Ardmore Institute of Applied Arts. Your new card will reach you within ten working days. {{139}} it does, the confirmation e-mail you received serves as proof of membership at the admissions desk.\n\nMembers enter all permanent galleries free of charge and receive two guest passes a year. The passes are valid on any day except the opening weekend of a {{140}} exhibition, when demand is at its highest.\n\nYour card also gives you fifteen percent off in the shop and the café. Places on the Thursday evening lecture series {{141}} to members a week before general booking opens, and the room seats sixty.\n\nIf your card has not arrived after ten working days, please write to members@ardmoreinstitute.example. {{142}} Replacement cards are issued free of charge.",
+              "label": "Questions 139-142 refer to the following information.",
+              "type": "information"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "Although",
+                "Whether",
+                "Until",
+                "Unless"
+              ],
+              "explanation": "The e-mail serves as proof only for the period before the card arrives, so the time conjunction “Until” is correct.",
+              "number": 139,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "temporary",
+                "temporarily",
+                "temporariness",
+                "temporaries"
+              ],
+              "explanation": "The noun “exhibition” needs an adjective in front of it, and only “temporary” is an adjective.",
+              "number": 140,
+              "tags": [
+                "word-form"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "offer",
+                "are offering",
+                "offering",
+                "are offered"
+              ],
+              "explanation": "Places do not offer themselves; the institute offers them to members, so the passive “are offered” is required.",
+              "number": 141,
+              "tags": [
+                "passive-voice"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Membership cards cannot be replaced once they have been issued.",
+                "Please include the postcode the card was sent to.",
+                "The institute no longer accepts renewals by post.",
+                "Guest passes must be collected from the shop in person."
+              ],
+              "explanation": "The paragraph deals with a card that has not arrived, so asking for the delivery postcode helps trace it. The sentence that follows promises free replacements, which rules out the claim that cards cannot be replaced.",
+              "number": 142,
+              "tags": [
+                "sentence-insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "NOTICE — SCHEDULED SYSTEM MAINTENANCE\n\nThe stock and ordering system will be unavailable from 22:00 on Friday 6 June until 06:00 on Saturday 7 June while the database is moved to new hardware. All twelve packhouses, including the two that joined the network in April, {{143}} affected.\n\nSupervisors should print the Saturday morning picking lists before they leave on Friday. {{144}} Orders taken by telephone during the outage must be written on the paper forms kept in each office and entered on Monday.\n\nWe have chosen this window because it is the {{145}} period of the week for order traffic. Even so, some of you will be working, and we are sorry for the inconvenience.\n\nQuestions about the move should go to Ingrid Halvorsen, {{146}} will monitor the migration overnight and can be reached on extension 4102.",
+              "label": "Questions 143-146 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "is",
+                "has been",
+                "was",
+                "will be"
+              ],
+              "explanation": "The subject is the plural “packhouses” — the phrase between the commas does not change it — and the outage has not happened yet, so “will be affected” is the only possible form.",
+              "number": 143,
+              "tags": [
+                "subject-verb-agreement",
+                "verb-tense"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The new hardware will be installed at head office in July.",
+                "Picking lists can be generated from the mobile app at any time.",
+                "Nothing printed after 22:00 will show the final order figures.",
+                "Saturday deliveries have been cancelled for this weekend."
+              ],
+              "explanation": "The instruction to print before Friday evening needs a reason, and a printout made during the migration would be out of date. Generating lists from the app is impossible while the system is down, and the paragraph shows that Saturday orders are still being taken.",
+              "number": 144,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "quietest",
+                "quieter",
+                "quiet",
+                "more quiet"
+              ],
+              "explanation": "“Of the week” sets the whole week as the field of comparison, which calls for the superlative “quietest”.",
+              "number": 145,
+              "tags": [
+                "comparative"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "she",
+                "who",
+                "which",
+                "whom"
+              ],
+              "explanation": "A relative clause about a person, with the pronoun acting as the subject of “will monitor”, takes “who”; “whom” would be needed only for an object.",
+              "number": 146,
+              "tags": [
+                "relative-clause"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "HARVEST NOTE — Week 24\nIncluded with every Torvald Fields vegetable box\n\nThis week's box was packed on Tuesday morning at our sorting shed in Reddington and left the same afternoon. Everything in it was cut, pulled or picked within forty-eight hours of packing.\n\nIn the box: broad beans, red chard, spring onions, two heads of butter lettuce, 500 g of new potatoes and a bunch of flat-leaf parsley.\n\nA note on the potatoes. The wet spring pushed our own main crop back by roughly three weeks, so this week's potatoes come from Bendik Aasen's farm in the next valley, which sits on lighter soil and drained faster. They are grown to the same standard as ours and cost us slightly more; we have absorbed the difference rather than change your subscription price.\n\nRecipe cards are no longer printed. Every recipe we have ever sent out is at torvaldfields.example/kitchen, sorted by vegetable.\n\nQuestions about a delivery? Reply to the message that told you your box was on its way.",
+              "label": "Questions 147-148 refer to the following information.",
+              "type": "information"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To announce the closure of a nearby farm",
+                "To explain where one item in the box came from",
+                "To recommend a shop in the next valley",
+                "To introduce a new subscription level"
+              ],
+              "explanation": "A wet spring delayed Torvald Fields' own potatoes, so the potatoes in this week's box were bought from the neighbouring farm instead.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does the note mention Bendik Aasen's farm?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The box is now packed on a different day.",
+                "The subscription price has increased.",
+                "Deliveries are now confirmed by telephone.",
+                "Recipes are provided online rather than on paper."
+              ],
+              "explanation": "“Recipe cards are no longer printed” and every recipe is now on the website. The price is tempting because the potatoes cost more, but the note says that difference was absorbed.",
+              "number": 148,
+              "tags": [
+                "detail"
+              ],
+              "text": "What change does the note describe?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Priya Raghunathan (10:02) — The staging server is refusing every deploy this morning. Is anyone else seeing this?\n\nMarek Wozniak (10:04) — Yes. It started around 09:30. The build passes and then the upload step times out.\n\nPriya Raghunathan (10:05) — So it is not something we wrote.\n\nInes Ferreira (10:09) — It is not. Hosting rotated the storage credentials overnight and did not tell us. Our deploy key is dead.\n\nMarek Wozniak (10:10) — Can we generate a new one ourselves?\n\nInes Ferreira (10:12) — Only from the account owner's console, and that is Daniel, who is away until Thursday. I have opened a ticket and marked it urgent.\n\nPriya Raghunathan (10:13) — The client demonstration is at 14:00. I will run it from the build already on production and say nothing.\n\nInes Ferreira (10:14) — That works. Nothing in this week's changes affects what they asked to see.",
+              "label": "Questions 149-150 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "The hosting provider changed the storage credentials.",
+                "The team's most recent code contains an error.",
+                "The staging server has run out of space.",
+                "A scheduled maintenance window was missed."
+              ],
+              "explanation": "“Hosting rotated the storage credentials overnight […] Our deploy key is dead.” The code is not at fault, since the build itself passes.",
+              "number": 149,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is causing the deployment failures?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A new deploy key has been issued.",
+                "The provider has already resolved the ticket.",
+                "She agrees that the demonstration can use the older build.",
+                "She will reach Daniel before Thursday."
+              ],
+              "explanation": "She is replying to Ms. Raghunathan's plan to show the client the build already on production, and she adds that the week's changes are irrelevant to the demonstration.",
+              "number": 150,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:14, what does Ms. Ferreira most likely mean when she writes, “That works”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "THE HALVERSEN GLASS COLLECTION — Members' Season\n\nThe Halversen reopens on 3 October after eleven months of building work, and membership for the new season is open now.\n\nIndividual — $85 a year\nHousehold (two adults and any children under 18) — $140 a year\nStudent and Under-26 — $35 a year\nPatron — $400 a year\n\nEvery membership includes unlimited entry to the permanent galleries, entry to all three ticketed exhibitions of the season, 15% off in the shop and café, and the quarterly journal by post. Patrons are additionally invited to the curator's preview evening before each exhibition opens and may bring one guest to it.\n\nThe permanent galleries are free to everyone on the first Sunday of each month; no membership is needed on those days.\n\nJoin before 20 September and your card will be posted to you in time for the reopening weekend. Cards for applications received after that date will be waiting at the front desk.\n\nhalversenglass.example/join",
+              "label": "Questions 151-153 refer to the following advertisement.",
+              "type": "advertisement"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "An invitation to the curator's preview evenings",
+                "Free parking at the museum",
+                "A guest pass for every visit",
+                "The quarterly journal by post"
+              ],
+              "explanation": "The journal is listed among the benefits of every membership, whereas the preview evenings and the guest place are reserved for Patrons.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does every membership include?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "They pay a higher rate.",
+                "They collect their card at the museum.",
+                "They cannot enter the permanent galleries until January.",
+                "They must apply again in the following season."
+              ],
+              "explanation": "“Cards for applications received after that date will be waiting at the front desk” — the card is not posted, but nothing else changes.",
+              "number": 152,
+              "tags": [
+                "detail"
+              ],
+              "text": "What happens to people who join after 20 September?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "To indicate when the permanent galleries can be visited free of charge",
+                "To give the date of the reopening",
+                "To announce when the ticketed exhibitions open",
+                "To explain when membership cards are posted"
+              ],
+              "explanation": "The sentence exists to say that the permanent galleries are open to everyone on those days and that “no membership is needed”.",
+              "number": 153,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why does the advertisement mention the first Sunday of each month?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "To: r.oyelaran@ferrolinelogistics.example\nFrom: support@quillstack.example\nDate: 12 May\nSubject: Ticket 44-2087 — report exports\n\nDear Ms. Oyelaran,\n\nThank you for your patience. Our engineers have reproduced the fault you described: on accounts holding more than 50,000 records, a scheduled export finishes normally but produces a file whose final column is empty.\n\nThe cause is a change we released on 6 May. A fix has been written and will go out with the 19 May release. Until then, exports started by hand from the Reports screen are unaffected, so please use that route for anything urgent.\n\nTwo of your scheduled exports ran on 8 and 11 May and contain the empty column. We have regenerated both and placed them in your account's Files area under the original names with “-corrected” added. Nothing has been deleted.\n\nBecause the fault was ours, your May invoice will be issued at half the usual amount. You do not need to request this.\n\nIf the corrected files do not open as expected, reply to this message and it will return to the same engineer.\n\nKind regards,\n\nSolveig Lindqvist\nCustomer Support, Quillstack",
+              "label": "Questions 154-156 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "Reduce the number of records in her account",
+                "Reschedule her exports for a later date",
+                "Run exports by hand from the Reports screen",
+                "Contact the engineer who wrote the fix"
+              ],
+              "explanation": "“exports started by hand from the Reports screen are unaffected, so please use that route for anything urgent”. Contacting the engineer is offered only if the corrected files fail to open.",
+              "number": 154,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is Ms. Oyelaran advised to do before 19 May?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "They have been deleted from the account.",
+                "They were attached to this message.",
+                "They were replaced with the versions from 6 May.",
+                "Corrected copies were added to the Files area."
+              ],
+              "explanation": "Both were regenerated and put in the Files area under the original names with “-corrected” added; the e-mail states that nothing has been deleted.",
+              "number": 155,
+              "tags": [
+                "detail"
+              ],
+              "text": "What has been done about the two faulty exports?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It will be cancelled entirely.",
+                "It will be reduced without Ms. Oyelaran having to ask.",
+                "It will be delayed until the fix is released.",
+                "It will include a charge for the corrected files."
+              ],
+              "explanation": "It will be issued “at half the usual amount” and “You do not need to request this” — a reduction applied automatically, not a cancellation.",
+              "number": 156,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the May invoice?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "Sensors move into the greenhouse\nBy Adaeze Nwachukwu\n\nUntil recently the tomato growers of the Vale district judged their crop as their parents had: by hand, by eye, and by walking the rows twice a day. Since March, four of the district's largest producers have been running a system that does part of that walking for them.\n\nBuilt by a small firm in the regional capital, the system buries a probe every twenty metres and reports soil moisture, temperature and salinity to a screen in the packing shed. Growers set a range for each figure, and when a reading leaves that range a message is sent.\n\nThe saving is not in labour. Ola Bergström, who grows twelve hectares under glass, says his staff still walk the rows. What has changed is water. “We were irrigating on a schedule,” he said. “Now we irrigate when the soil asks for it. That has cut our use by about a fifth.”\n\nWhether smaller growers will follow is less certain. Installation runs to roughly $9,000 per hectare, and the district's co-operative has so far declined to subsidise it.",
+              "label": "Questions 157-159 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "Conditions in the soil",
+                "The weight of each harvest",
+                "The market price of tomatoes",
+                "The hours worked by staff"
+              ],
+              "explanation": "The buried probes send “soil moisture, temperature and salinity” to a screen in the packing shed.",
+              "number": 157,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does the system report to the packing shed?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "reduced",
+                "descended",
+                "refused",
+                "postponed"
+              ],
+              "explanation": "“Declined to subsidise it” means the co-operative has refused to pay towards the cost. “Reduced” and “descended” are the other senses of the verb and do not work before an infinitive.",
+              "number": 158,
+              "tags": [
+                "vocabulary"
+              ],
+              "text": "The word “declined” in the last paragraph is closest in meaning to"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It falls a little each year.",
+                "It is met by the district's co-operative.",
+                "It is lower than the cost of hiring extra staff.",
+                "It may prevent smaller growers from adopting the system."
+              ],
+              "explanation": "The doubt about smaller growers is stated immediately before the figure of $9,000 per hectare and the co-operative's refusal to help, so price is presented as the obstacle. The article says the saving is not in labour.",
+              "number": 159,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is implied about the cost of the system?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Hana Okabe (08:41)\nThe crate with the Weiss panels is here, but the truck is at the loading bay on Mill Street, not the one on Carrow Lane.\n\nTobias Adeyemi (08:43)\nMill Street is the old bay. The lift there has been out since February.\n\nHana Okabe (08:44)\nThe driver says nobody told him. He has another drop at 10:30 and will not wait.\n\nTobias Adeyemi (08:46)\nThen he has to come round. It is four minutes' drive. I will meet him at Carrow Lane and sign for it myself.\n\nHana Okabe (08:47)\nI will tell him. Do you want the conservator there when it is opened?\n\nTobias Adeyemi (08:49)\nNot at the bay. Have it taken straight to Gallery 3 and she can look at it there. Nothing gets unwrapped in the corridor again.",
+              "label": "Questions 160-162 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "It is closed for building work.",
+                "Its lift is out of service.",
+                "Another vehicle is using it.",
+                "It is too small for the crate."
+              ],
+              "explanation": "Mr. Adeyemi calls it the old bay and says “The lift there has been out since February”.",
+              "number": 160,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is the problem with the Mill Street bay?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Take delivery of the crate at the Carrow Lane bay",
+                "Telephone the haulage company",
+                "Delay the delivery until 10:30",
+                "Unwrap the panels in the corridor"
+              ],
+              "explanation": "“I will meet him at Carrow Lane and sign for it myself.” The 10:30 appointment is the driver's next drop, not a new delivery time.",
+              "number": 161,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Adeyemi say he will do?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The corridor is currently being repainted.",
+                "The conservator prefers to work without an audience.",
+                "Opening a crate outside a gallery has caused trouble before.",
+                "The panels have already been inspected once."
+              ],
+              "explanation": "“Again” points back to an earlier occasion, and he insists the crate go straight to Gallery 3 before anyone opens it.",
+              "number": 162,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 08:49, what does Mr. Adeyemi imply when he writes, “Nothing gets unwrapped in the corridor again”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All shift supervisors, Line 2\nFrom: Ingrid Halvorsen, Plant Manager\nDate: 9 November\nSubject: Changeover procedure\n\nFrom Monday 16 November, Line 2 will run oat drinks on the early shift and almond drinks on the late shift. The two products cannot share equipment without a full wash, and the wash is what this memo is about.\n\nUntil now the outgoing shift has begun the wash and the incoming shift has finished it. That arrangement has twice produced a line signed off as clean when it was not. From Monday the wash belongs to a single shift from start to finish: the outgoing shift runs it, records the readings and signs the sheet before anyone from the next shift touches the line.\n\nThis adds thirty-five minutes to the end of each shift. The extra time is paid and has been agreed with the works council.\n\nSupervisors should collect the revised sheets from my office this week. The old sheets will be taken off the line on Friday.",
+              "label": "Questions 163-165 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "To announce a new product line",
+                "To report the findings of an inspection",
+                "To ask for volunteers to work extra shifts",
+                "To set out a change to a cleaning procedure"
+              ],
+              "explanation": "The subject line is “Changeover procedure”, and the memo is given over to the new rule that one shift now performs the whole wash.",
+              "number": 163,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the main purpose of the memo?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "A line was signed off as clean when it was not.",
+                "Two shifts were paid for the same work.",
+                "Products were packed into the wrong containers.",
+                "Wash readings were recorded twice."
+              ],
+              "explanation": "Splitting the wash between two shifts “has twice produced a line signed off as clean when it was not”.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "What problem does Ms. Halvorsen say the previous arrangement caused?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Sign the works council agreement",
+                "Collect the revised record sheets",
+                "Train the late shift on Line 2",
+                "Submit a weekly overtime claim"
+              ],
+              "explanation": "“Supervisors should collect the revised sheets from my office this week.” The agreement with the works council is already in place.",
+              "number": 165,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are supervisors asked to do this week?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "halversenglass.example  ›  For professionals  ›  Object loans\n\nLoans from the collection\n\nThe Halversen lends objects from its permanent collection to museums, galleries and registered public archives. We do not lend to private collectors, to commercial premises, or for use as film or photographic props. — [1]\n\nRequests must reach the registrar at least nine months before the opening date of the exhibition. — [2] A request should name the objects by catalogue number, state the dates on which the objects would be away from us, and describe the case or mount in which each would be displayed.\n\nEvery request is assessed by a conservator before it goes to the loans committee, which meets in February, June and October. — [3] Glass that has been repaired, and anything still on its original wooden base, is rarely approved for travel.\n\nThere is no fee for the loan itself. — [4] The borrower pays for packing, transport, courier travel and insurance, all of which we arrange and invoice afterwards.\n\nEnquiries: registrar@halversenglass.example",
+              "label": "Questions 166-169 refer to the following web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "An exhibition opening at the museum",
+                "A change to the museum's admission charges",
+                "The conditions under which the museum lends objects",
+                "A vacancy in the registrar's office"
+              ],
+              "explanation": "The page sets out who may borrow, when to apply, how requests are assessed and who pays the costs.",
+              "number": 166,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the web page mainly about?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "In February, June or October",
+                "Nine months after the loans committee meets",
+                "As soon as a conservator has assessed the objects",
+                "At least nine months before the exhibition opens"
+              ],
+              "explanation": "“Requests must reach the registrar at least nine months before the opening date of the exhibition.” February, June and October are the committee's meeting months, not the deadline.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "When must a loan request be submitted?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "The name of the exhibition's curator",
+                "The catalogue numbers of the objects",
+                "The dates the objects would be away",
+                "A description of the case or mount"
+              ],
+              "explanation": "The three items the page asks for are catalogue numbers, the dates away, and the case or mount; nobody is asked to name a curator.",
+              "number": 168,
+              "tags": [
+                "not-question"
+              ],
+              "text": "What is NOT required in a loan request?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "“Later than this” can only refer to the nine-month deadline, so the sentence follows the sentence that sets it. At [4] it would be read as being about the loan fee.",
+              "number": 169,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong?\n\n“Requests that arrive later than this are held over to the following season.”"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "NOTICE — Building network, floors 3 to 6\nSaturday 22 February, 06:00 to 18:00\n\nThe wired and wireless networks on floors 3, 4, 5 and 6 will be switched off for the whole of Saturday while the building's switches are replaced. Floors 1 and 2 are unaffected.\n\nWhat this means on those floors:\n· No internet, no shared drives and no desk telephones\n· Door badges will still work; the badge system runs on its own circuit\n· Anything saved only to a shared drive will be unreachable until Sunday morning\n\nIf you plan to work on Saturday, book a desk on floor 2 through the usual room-booking page by Thursday. Fourteen desks are available and they are allocated in the order requests arrive.\n\nLaptops left in a dock on floors 3 to 6 on Friday evening should be unplugged and taken home; the docks will be powered down with everything else.\n\nFacilities will post a message in the building channel once the network is back.",
+              "label": "Questions 170-171 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "The shared drives",
+                "The desk telephones",
+                "The door badge readers",
+                "The docking stations"
+              ],
+              "explanation": "“Door badges will still work; the badge system runs on its own circuit.” The docks are explicitly powered down.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will continue to work on floors 3 to 6 during the shutdown?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Copy their files to a shared drive",
+                "Unplug their laptops from the docks",
+                "Post a message in the building channel",
+                "Reserve a desk on floor 2"
+              ],
+              "explanation": "Anyone working on Saturday must “book a desk on floor 2 […] by Thursday”. Unplugging laptops is for Friday evening, and the channel message comes from Facilities.",
+              "number": 171,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are staff told to do by Thursday?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "NORDVIK PRESERVES — Goods Received and Inspection Record\nForm GR-14 · one per delivery · retain for three years\n\nSupplier: Almadén Orchards\nPurchase order: PO-7741\nProduct: Apricots, Class 1, for jam line\nDelivery date: 3 August          Time unloaded: 07:20\nQuantity ordered: 4,000 kg       Quantity delivered: 3,650 kg\nVehicle temperature on arrival: 4 °C (limit 6 °C)\n\nINSPECTION\nChecked by: Marisol Duarte, Quality Technician\nSample: 12 crates out of 146\nFindings: Fruit firm and within specification in 11 crates. One crate, marked 88, showed bruising on roughly a quarter of the fruit and has not been accepted.\n\nDECISION:  [ ] Accept in full    [X] Accept in part    [ ] Reject\n\nNotes: Crate 88 rejected and left on the vehicle. Shortfall of 350 kg confirmed with the supplier by telephone at 08:05; the balance will follow on 5 August at no extra carriage cost. Line 1 has enough fruit for today's run.\n\nCountersigned: T. Oyelowo, Shift Manager, 08:15",
+              "label": "Questions 172-175 refer to the following form.",
+              "type": "form"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "One of the sampled crates contained bruised fruit.",
+                "The vehicle temperature was above the limit.",
+                "The fruit delivered was of the wrong class.",
+                "The purchase order number was incorrect."
+              ],
+              "explanation": "Eleven of the twelve sampled crates were within specification; crate 88 was bruised. The arrival temperature of 4 °C is below the stated limit of 6 °C.",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did Ms. Duarte find during the inspection?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The order was cancelled.",
+                "A replacement supplier was contacted.",
+                "The supplier agreed to send the remainder on 5 August.",
+                "An additional carriage charge was accepted."
+              ],
+              "explanation": "The 350 kg shortfall was confirmed by telephone and “the balance will follow on 5 August at no extra carriage cost”.",
+              "number": 173,
+              "tags": [
+                "detail"
+              ],
+              "text": "How was the shortfall handled?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It was moved to another line.",
+                "It went ahead as planned.",
+                "It was halted until the balance arrived.",
+                "It used fruit from a second supplier."
+              ],
+              "explanation": "“Line 1 has enough fruit for today's run”, so the missing 350 kg did not interrupt the day's production.",
+              "number": 174,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about production on 3 August?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It was emptied and the fruit sorted by hand.",
+                "It was placed in the cold store.",
+                "It was sent to a different production line.",
+                "It remained on the delivery vehicle."
+              ],
+              "explanation": "The notes record that crate 88 was “rejected and left on the vehicle”, which is why the delivery was accepted only in part.",
+              "number": 175,
+              "tags": [
+                "detail"
+              ],
+              "text": "What happened to crate 88?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "FENNHORSE AGRI HIRE\nSeasonal machinery rental for the Wexbury Valley\n\nWeekly rates, delivery within 60 km of our yard included:\n\nCompact tractor (45 hp) — $310\nRound baler — $540\nGrain trailer (12 t) — $265\nSelf-propelled sprayer — $890\n\nRentals begin and end on a Monday. A trained operator can be supplied with any machine for an additional $180 per day.\n\nBookings placed before 1 April receive a 15 percent early-season reduction. Because demand peaks in July and August, we ask that harvest equipment be reserved at least three weeks ahead.\n\nDeliveries beyond the 60 km zone are charged at $2.40 per kilometre each way.\n\nCall 555 0148 or write to bookings@fennhorse.example. Our yard on Ledbury Road is open Tuesday to Saturday, 7 A.M. to 5 P.M.",
+              "label": "Questions 176-180 refer to the following advertisement and e-mail.",
+              "type": "advertisement"
+            },
+            {
+              "content": "To: bookings@fennhorse.example\nFrom: p.adeyemi@brackenfield.example\nDate: 12 March\nSubject: Baler and trailer, week of 20 July\n\nDear Fennhorse team,\n\nI manage a 180-hectare mixed farm at Brackenfield, roughly 75 km north of your yard. We took a grain trailer from you last summer and were very pleased with it.\n\nThis year I would like to book the round baler and the grain trailer for the week beginning 20 July. Neither of my two farmhands has handled a baler of that size, so I would like an operator to come with it for the first two days.\n\nTwo points I would be grateful for clarification on. First, I am writing this early partly to secure the reduction you advertise, and I would like it confirmed that a booking placed today qualifies. Second, our access track is narrow and turns sharply at the gate. Could someone come out and look at it before the delivery date, so that we are not discovering the problem with a lorry standing in the lane?\n\nKind regards,\n\nPriya Adeyemi\nBrackenfield Farm",
+              "label": "Questions 176-180 refer to the following advertisement and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "It begins and ends on a Monday.",
+                "It is limited to a maximum of two weeks.",
+                "It may be extended at no additional cost.",
+                "It differs depending on the machine."
+              ],
+              "explanation": "“Rentals begin and end on a Monday” — the same period applies to every machine on the list.",
+              "number": 176,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the rental period?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It is included in the weekly rate.",
+                "It will involve an additional charge.",
+                "It must be arranged three weeks in advance.",
+                "It can be made only on a Saturday."
+              ],
+              "explanation": "The farm is “roughly 75 km” away and free delivery covers only 60 km, so the $2.40 per kilometre charge applies. The three-week rule concerns reserving harvest equipment, not delivery.",
+              "number": 177,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What is indicated about the delivery to Brackenfield Farm?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "$180",
+                "$310",
+                "$360",
+                "$540"
+              ],
+              "explanation": "An operator costs $180 per day and she wants one for the first two days: $360. The $540 is the baler's weekly rate.",
+              "number": 178,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "How much will Ms. Adeyemi be charged for the operator she requests?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Free delivery outside the standard zone",
+                "A 15 percent reduction",
+                "An extra day of rental",
+                "Priority during the harvest period"
+              ],
+              "explanation": "She writes on 12 March “to secure the reduction you advertise”, and the advertisement gives 15 percent off bookings placed before 1 April.",
+              "number": 179,
+              "tags": [
+                "cross-reference",
+                "detail"
+              ],
+              "text": "What does Ms. Adeyemi expect to receive because of when she is booking?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Send a revised list of rates",
+                "Train two members of her staff",
+                "Confirm the yard's opening hours",
+                "Examine the entrance to her farm"
+              ],
+              "explanation": "She asks that someone “come out and look at” the narrow access track and its sharp turn. She requests an operator for the baler, but not training for her farmhands.",
+              "number": 180,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Adeyemi ask Fennhorse to do before the delivery date?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "Kestrel Bay Maritime Museum Reports Record Spring\n\nKESTREL BAY (18 May) — The Kestrel Bay Maritime Museum welcomed 41,600 visitors between February and April, its strongest spring since the building opened in 1998 and an increase of 26 percent on the same period last year.\n\nDirector Ingrid Solheim credits the rise to two changes. In January the museum began staying open until 9 P.M. on Fridays, and in March it withdrew its printed guide in favour of a free mobile application offering commentary in six languages.\n\n“The Friday evenings brought us an audience we had never reached — people who are at work all day,” Ms. Solheim said. “The application surprised us more. Nearly half of all visitors now use it.”\n\nThe museum will close its east wing on 1 September for eight months while the Whaling Gallery is rebuilt. The remaining galleries, the archive reading room and the café will stay open throughout the work.",
+              "label": "Questions 181-185 refer to the following article and online chat discussion.",
+              "type": "article"
+            },
+            {
+              "content": "Ravi Chandrasekar (10:02 A.M.)\nHave you both seen the spring figures? Ingrid wants the evening opening extended to Thursdays as well, starting in October.\n\nMarta Oyelaran (10:04 A.M.)\nI saw them. October is exactly what worries me. The east wing goes on the first of September, so from then on we have about a third less to show, and I do not want people paying the full price for two thirds of a museum.\n\nRavi Chandrasekar (10:06 A.M.)\nFair. What if the evening ticket were reduced for as long as the work lasts?\n\nJonas Berglund (10:09 A.M.)\nThat would answer it, and we could send people to the reading room, which is empty every evening.\n\nMarta Oyelaran (10:11 A.M.)\nBetter still, the tour on the application. It runs ninety minutes and not one stop on it is in the wing that is closing.\n\nRavi Chandrasekar (10:13 A.M.)\nGood. Let me put something to Ingrid before Friday: two evenings a week, reduced admission until the wing opens again.",
+              "label": "Questions 181-185 refer to the following article and online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "To report on a museum's visitor numbers",
+                "To announce the opening of a new museum",
+                "To review a mobile application",
+                "To describe a change of director"
+              ],
+              "explanation": "The article opens with the 41,600 spring figure and spends the rest of its length explaining why attendance rose.",
+              "number": 181,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the article?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Evening opening on Fridays",
+                "A printed guide in six languages",
+                "A free mobile application",
+                "A reduced admission price"
+              ],
+              "explanation": "“in March it withdrew its printed guide in favour of a free mobile application”. The Friday evenings began in January, and the six languages belong to the application, not to a printed guide.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "What did the museum introduce in March?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The evening programme costs too much to run.",
+                "The reading room will be closed to visitors.",
+                "Too few visitors are using the application.",
+                "Visitors would pay full price for a reduced museum."
+              ],
+              "explanation": "“I do not want people paying the full price for two thirds of a museum” once the east wing shuts.",
+              "number": 183,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is Ms. Oyelaran concerned about?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "In January",
+                "In May",
+                "In September",
+                "In October"
+              ],
+              "explanation": "He would keep the reduction “until the wing opens again”, and the article dates the closure from 1 September for eight months, which takes it to about the beginning of May.",
+              "number": 184,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "When would Mr. Chandrasekar's reduced admission most likely end?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "The ninety-minute tour on the application",
+                "A guided tour of the Whaling Gallery",
+                "Free use of the café",
+                "A printed map of the building"
+              ],
+              "explanation": "She recommends the application tour precisely because none of its stops is in the wing that is closing; a Whaling Gallery tour is impossible while that gallery is being rebuilt.",
+              "number": 185,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Ms. Oyelaran propose offering evening visitors?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "GRAINLEDGER — Traceability software for small food producers\n\nPlans are billed monthly, per site.\n\nSprout — $29 — up to 3 users; batch records; printable labels\nHarvest — $79 — up to 12 users; everything in Sprout; supplier register; barcode scanning\nEstate — $149 — unlimited users; everything in Harvest; single-file audit export; a named account manager\n\nEvery plan includes unlimited storage of batch photographs and a nightly backup, and your records can be exported as a spreadsheet at any time.\n\nBarcode scanning requires a handheld reader. We do not supply readers; compatible models are listed on our hardware page.\n\nSupport is by e-mail on Sprout and by telephone on the other two plans, Monday to Friday, 8 A.M. to 6 P.M.\n\nAny plan may be trialled free for thirty days, and no payment details are needed to begin a trial.",
+              "label": "Questions 186-190 refer to the following web page, customer review, and response.",
+              "type": "web page"
+            },
+            {
+              "content": "Reviewed by Solomon Adeyinka, Vellowmoor Creamery — 3 stars out of 5\n\nWe make cheese at two sites and have run Grainledger for seven months. The batch records are excellent. An inspector arrived in April and asked for three years of history; I had it in front of him in about a minute.\n\nTwo frustrations. We moved up from the entry plan to the $79 one so that we could scan barcodes, and it took me a week to work out that the reader itself was not part of what I had bought. That is written down somewhere, but not anywhere a buyer is looking.\n\nThe second is the telephone line. Our packing runs finish at seven in the evening, which is precisely when things go wrong, and by then nobody answers. An hour of evening cover would be worth more to me than most of the features on the list.",
+              "label": "Questions 186-190 refer to the following web page, customer review, and response.",
+              "type": "customer review"
+            },
+            {
+              "content": "Response from Grainledger — Dagmara Wisniewska, Customer Success\n\nMr. Adeyinka, thank you for a review we could act on.\n\nYou are right about the reader. The list of compatible models has been moved onto the plan comparison itself, so it now sits beside the feature that needs it rather than three pages away, and the trial checklist names it as well.\n\nOn the telephone line: from 1 October it will stay open until 8 P.M. from Monday to Thursday. Your plan already includes telephone support, so nothing has to change on your account for you to use it.\n\nOne further thought on the inspection you describe. Customers on the plan above yours can produce that history as a single audit file rather than assembling it on screen. If inspections are becoming frequent at both sites, it may be worth a conversation.",
+              "label": "Questions 186-190 refer to the following web page, customer review, and response.",
+              "type": "response"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "Sprout",
+                "Harvest",
+                "Estate",
+                "The free trial"
+              ],
+              "explanation": "Mr. Adeyinka moved up from the entry plan to “the $79 one”, which the web page names Harvest.",
+              "number": 186,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Which plan does Vellowmoor Creamery currently use?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "A device he needed was not included in the plan.",
+                "His batch records could not be exported.",
+                "An inspector rejected the history he produced.",
+                "His two sites were billed as a single site."
+              ],
+              "explanation": "He upgraded in order to scan barcodes and only discovered a week later that the handheld reader was sold separately.",
+              "number": 187,
+              "tags": [
+                "detail"
+              ],
+              "text": "What difficulty does Mr. Adeyinka describe with his purchase?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "To request more detail about a fault",
+                "To offer a refund for a piece of equipment",
+                "To explain why an inspection was failed",
+                "To set out what has been changed in reply to the criticism"
+              ],
+              "explanation": "She takes his two complaints in turn and says what has been done about each — the reader list moved, the telephone hours extended.",
+              "number": 188,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Ms. Wisniewska write the response?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "The price of one of the plans will rise.",
+                "A list of compatible readers will be published for the first time.",
+                "Telephone support will run later on four days a week.",
+                "E-mail support will be added to every plan."
+              ],
+              "explanation": "“from 1 October it will stay open until 8 P.M. from Monday to Thursday”. The reader list already exists; it has only been moved to a more visible place.",
+              "number": 189,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will happen on 1 October?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Reducing the number of users on his account",
+                "Trialling the software free for thirty days",
+                "Exporting his records as a spreadsheet",
+                "Moving to the Estate plan"
+              ],
+              "explanation": "“the plan above yours” produces a single audit file; above Harvest on the web page is Estate. The spreadsheet export he already has on any plan.",
+              "number": 190,
+              "tags": [
+                "inference",
+                "cross-reference"
+              ],
+              "text": "What does Ms. Wisniewska imply Mr. Adeyinka might consider?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\nContact: Nadia Ferreira, Press Office, Ashgrove Gallery\npress@ashgrovegallery.example\n\nASHGROVE GALLERY TO HOST “PAPER AND SALT” THIS AUTUMN\n\nAshgrove Gallery has announced that Paper and Salt, a touring exhibition of nineteenth-century photographic prints assembled by the Lindqvist Institute, will open on 14 October and run until 11 January.\n\nThe exhibition brings together 190 salt prints, forty of which have never been shown outside the Institute's storerooms. Ashgrove is the tour's third and final venue.\n\nBecause salt prints fade in strong light, the galleries will be kept at low illumination and photography of any kind is prohibited throughout the exhibition.\n\nA programme of talks, demonstrations and guided viewings will accompany the opening week; the full schedule is available at the ticket desk and on our web page.\n\nTickets are $18, or $12 for members, and include entry to the permanent collection. Members may attend the preview evening on 13 October at no charge.",
+              "label": "Questions 191-195 refer to the following press release, schedule, and e-mail.",
+              "type": "press release"
+            },
+            {
+              "content": "PAPER AND SALT — Opening week programme, Ashgrove Gallery\n\nMonday 13 October, 6:30 P.M. — Preview evening (members only), Long Gallery\nTuesday 14 October, 11:00 A.M. — Curator's introduction with Dr. Henrik Lindqvist, Lecture Room B\nWednesday 15 October, 2:00 P.M. — Making a salt print: demonstration, Studio 1\nThursday 16 October, 6:00 P.M. — Handling and storing early photographs, Studio 1\nFriday 17 October, 11:00 A.M. — Guided viewing in British Sign Language, Long Gallery\nSaturday 18 October, 10:00 A.M. to 4:00 P.M. — Workshop: salt printing for beginners, Studio 2\n\nEvery event except the Saturday workshop is free to holders of an exhibition ticket. The workshop is $45, is limited to twelve places, and all materials are supplied. The studios are reached from the Marlow Street entrance, which is step-free.",
+              "label": "Questions 191-195 refer to the following press release, schedule, and e-mail.",
+              "type": "schedule"
+            },
+            {
+              "content": "To: bookings@ashgrovegallery.example\nFrom: e.matsuura@northfieldcollege.example\nDate: 22 September\nSubject: Group visit during the opening week\n\nDear Ms. Ferreira,\n\nI teach photography at Northfield College and would like to bring eleven students to Paper and Salt during its opening week. Our timetable puts us in the city on the Wednesday and the Thursday only, which rules out a good deal of your programme.\n\nThe students are preparing a unit on early processes, so the Wednesday afternoon demonstration is exactly what we need. I would also like to add the Saturday workshop for two of them if places remain; they can travel back for it on their own.\n\nThree things I need to know. Is the group rate the same as the member rate? One of my students uses a wheelchair, and I should like to confirm that she can reach the demonstration. And the students will want to record what they see, so please tell me whether cameras are permitted; if they are not, I will tell them what to bring instead.\n\nWith thanks,\n\nEmiko Matsuura",
+              "label": "Questions 191-195 refer to the following press release, schedule, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To report the sale of a photographic collection",
+                "To announce an exhibition and the events around it",
+                "To invite applications for a workshop place",
+                "To explain a change to the gallery's opening hours"
+              ],
+              "explanation": "It gives the exhibition's dates, contents and ticket prices, and points readers to the opening-week programme.",
+              "number": 191,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the press release?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It is free to holders of an exhibition ticket.",
+                "Participants must supply their own materials.",
+                "An additional fee is charged for it.",
+                "It is held in the Long Gallery."
+              ],
+              "explanation": "It is the one event excluded from the free-with-a-ticket rule, at $45. Materials are supplied, and it takes place in Studio 2.",
+              "number": 192,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the Saturday workshop?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It falls on a day when the group is not in the city.",
+                "It is open to gallery members only.",
+                "Its places have already been taken.",
+                "It carries a charge the college will not meet."
+              ],
+              "explanation": "The introduction is on Tuesday 14 October, and her group is in the city on the Wednesday and Thursday only.",
+              "number": 193,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why will Ms. Matsuura's group be unable to attend the curator's introduction?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Cameras",
+                "Membership cards",
+                "Printed tickets",
+                "Sketchbooks"
+              ],
+              "explanation": "Photography is prohibited throughout the exhibition, so the alternative she promised to name must be something to draw with rather than a camera.",
+              "number": 194,
+              "tags": [
+                "cross-reference",
+                "inference"
+              ],
+              "text": "What will Ms. Matsuura most likely tell her students to bring?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It will be repeated later in the week.",
+                "It will be led by Dr. Lindqvist.",
+                "It can be reached without using stairs.",
+                "It is limited to twelve participants."
+              ],
+              "explanation": "The demonstration is in Studio 1, and the studios are reached from the step-free Marlow Street entrance, which answers Ms. Matsuura's question about her student.",
+              "number": 195,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is suggested about the Wednesday demonstration?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "Quality Engineer — Halvard Systems, Lindholm office\n\nHalvard Systems builds scheduling software for regional bus and rail operators. We are looking for a quality engineer to join the eleven-person platform team.\n\nWhat you would do\n- Write and maintain the automated tests for our timetable engine\n- Reproduce and document faults reported by operators\n- Sit with the release team one week in four and approve deployments\n\nWhat we ask for\n- Three years in software testing, at least one of them on a product with external customers\n- Confidence reading Python; you will not be asked to write new features\n- Working German, as our two largest customers correspond with us in it\n\nA background in transport, timetabling or ticketing is welcome but not required.\n\nWe work four days in the office and one from home. The salary range is $62,000 to $78,000.\n\nSend a CV and a short covering note to careers@halvardsystems.example by 30 April. Interviews are held in the first half of May.",
+              "label": "Questions 196-200 refer to the following job posting, e-mail, and agenda.",
+              "type": "job posting"
+            },
+            {
+              "content": "To: b.okonkwo@example.net\nFrom: l.haugen@halvardsystems.example\nDate: 6 May\nSubject: Your visit on 12 May\n\nDear Ms. Okonkwo,\n\nThank you for making time to speak with me last week. We would like to invite you to the Lindholm office on Tuesday 12 May, and I attach the agenda for the day.\n\nTwo notes on it. The exercise after lunch is not a coding test. You will be handed a real fault report from one of our operators and asked how you would set about reproducing it, which is the work itself rather than a puzzle. There is nothing to prepare.\n\nYou will also meet Annika Sjoberg, who runs our release team. As the post carries one week in four with that team, she will want to hear how you have handled deployment approvals before.\n\nReception is on Marlow Street. Ask for me and I will come down for you.\n\nBest wishes,\n\nLars Haugen\nPeople Team",
+              "label": "Questions 196-200 refer to the following job posting, e-mail, and agenda.",
+              "type": "e-mail"
+            },
+            {
+              "content": "Interview day — B. Okonkwo, Tuesday 12 May\nLindholm office, meeting room 4B unless stated otherwise\n\n9:30 — Arrival and coffee, L. Haugen (People Team)\n10:00 — Platform team interview, T. Varga (head of platform)\n11:15 — Conversation in German, M. Kruger (Customer Accounts)\n12:00 — Lunch with the platform team, canteen, ground floor\n13:00 — Practical exercise, room 2A\n14:30 — Second interview, A. Sjoberg\n15:15 — Questions and close, L. Haugen\n\nPlease bring photo identification and hand it in at reception. The parking bays on Marlow Street are reserved for visitors holding a permit; a permit is issued at reception on request.",
+              "label": "Questions 196-200 refer to the following job posting, e-mail, and agenda.",
+              "type": "agenda"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "It is carried out entirely from home.",
+                "It does not involve writing new features.",
+                "It requires previous experience of ticketing.",
+                "It reports to the head of Customer Accounts."
+              ],
+              "explanation": "“Confidence reading Python; you will not be asked to write new features.” A transport or ticketing background is welcome but explicitly not required.",
+              "number": 196,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about the quality engineer position?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Because the Lindholm office works in German",
+                "Because the practical exercise is written in German",
+                "Because the company's largest customers write in it",
+                "Because the platform team is based abroad"
+              ],
+              "explanation": "The posting asks for working German “as our two largest customers correspond with us in it”, and the conversation is held by Customer Accounts.",
+              "number": 197,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "Why does the agenda include a conversation in German?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It will be marked by the platform team.",
+                "It requires no preparation in advance.",
+                "It will test her ability to write Python code.",
+                "It will take place before lunch."
+              ],
+              "explanation": "“There is nothing to prepare.” He states plainly that it is not a coding test, and the agenda places it at 13:00, after lunch.",
+              "number": 198,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does Mr. Haugen say about the practical exercise?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "10:00",
+                "11:15",
+                "13:00",
+                "14:30"
+              ],
+              "explanation": "The e-mail identifies Annika Sjoberg as the person who runs the release team, and the agenda puts A. Sjoberg at 14:30.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "At what time will Ms. Okonkwo meet the head of the release team?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Ask reception for a parking permit",
+                "Park on the ground floor of the building",
+                "Arrive before 9:30",
+                "Contact Ms. Kruger in advance"
+              ],
+              "explanation": "The Marlow Street bays are for permit holders, and the agenda says a permit is issued at reception on request. The ground floor holds the canteen, not parking.",
+              "number": 200,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are visitors who drive to the office advised to do?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 4 — full Reading section",
+  "version": 1
+}

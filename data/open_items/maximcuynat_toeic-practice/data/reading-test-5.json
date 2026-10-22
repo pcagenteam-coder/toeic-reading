@@ -1,0 +1,1787 @@
+{
+  "format": "toeic-lr",
+  "meta": {
+    "author": "toeic-practice",
+    "createdAt": "2026-08-08",
+    "notes": "Complete Reading section in the official shape: Part 5 (30), Part 6 (16, four texts), Part 7 (54: ten single passages, two double, three triple). Numbered 101-200, 75 minutes."
+  },
+  "parts": [
+    {
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given. Select the best answer to complete the sentence.",
+      "part": 5,
+      "questions": [
+        {
+          "answer": "C",
+          "choices": [
+            "reduce",
+            "reduced",
+            "reduction",
+            "reducing"
+          ],
+          "explanation": "After the article “a” and the adjective “substantial”, a noun is required: “a substantial reduction”.",
+          "number": 101,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Delegates who register before 15 March will receive a substantial ______ on the conference fee."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "will have compiled",
+            "is compiling",
+            "compiled",
+            "had compiled"
+          ],
+          "explanation": "“By the time … arrives” sets a deadline in the future, so an action finished before it takes the future perfect “will have compiled”.",
+          "number": 102,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "By the time the audit team arrives on Monday, the finance department ______ all supporting invoices."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "during",
+            "within",
+            "among",
+            "toward"
+          ],
+          "explanation": "“Within 24 hours of” names the period inside which checking in is possible; “during” would need a defined event rather than a countdown.",
+          "number": 103,
+          "tags": [
+            "preposition"
+          ],
+          "text": "Passengers may check in online ______ 24 hours of their scheduled departure time."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "attend",
+            "present",
+            "remind",
+            "represent"
+          ],
+          "explanation": "To “represent the branch” is to act on its behalf. “Present” would require something shown to an audience rather than an organisation, and one attends a forum, not a branch.",
+          "number": 104,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Ms. Adeyemi has been asked to ______ the Lisbon branch at next month's regional banking forum."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "will be processed",
+            "will process",
+            "are processing",
+            "have processed"
+          ],
+          "explanation": "Claims do not act on themselves; the subject receives the action, so the future passive “will be processed” is needed.",
+          "number": 105,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "Claims submitted after the 31 May deadline ______ in the following quarter."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "steady",
+            "steadier",
+            "steadily",
+            "steadiness"
+          ],
+          "explanation": "An adverb is needed to modify the verb “worked”: “worked steadily through the night”.",
+          "number": 106,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The maintenance crew worked ______ through the night to restore power to the northern grid."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "so that",
+            "until",
+            "despite",
+            "in case of"
+          ],
+          "explanation": "“Until” marks the point at which the offline period ends. “Despite” and “in case of” cannot introduce a clause with a finite verb.",
+          "number": 107,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "The turbines will remain offline ______ the replacement gearboxes clear customs."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "to purchase",
+            "purchase",
+            "to have purchased",
+            "purchasing"
+          ],
+          "explanation": "“Recommend” takes a gerund when no object comes between it and the verb: “recommends purchasing”.",
+          "number": 108,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The agency recommends ______ travel insurance at the time of booking rather than a few days before departure."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "satisfactory",
+            "satisfaction",
+            "satisfy",
+            "satisfactorily"
+          ],
+          "explanation": "An adjective is needed before the noun “proof”: “satisfactory proof of address”.",
+          "number": 109,
+          "tags": [
+            "word-form"
+          ],
+          "text": "Applicants must supply ______ proof of address before a business account can be opened."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "must",
+            "had better",
+            "may",
+            "ought to"
+          ],
+          "explanation": "“At no additional charge” describes a service offered to guests, so the permission modal “may” fits; “must” would turn an option into an obligation.",
+          "number": 110,
+          "tags": [
+            "modal"
+          ],
+          "text": "Guests ______ leave luggage at the front desk after checking out, at no additional charge."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "in",
+            "by",
+            "at",
+            "on"
+          ],
+          "explanation": "The fixed expression is “on the basis of”.",
+          "number": 111,
+          "tags": [
+            "preposition"
+          ],
+          "text": "The premium is calculated ______ the basis of the driver's claims history over the previous five years."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "receives",
+            "has received",
+            "is receiving",
+            "received"
+          ],
+          "explanation": "“Since January” opens a period that runs up to the present, which takes the present perfect “has received”.",
+          "number": 112,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "Since the tariff changed in January, the utility ______ more than four thousand enquiries about billing."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "considerably",
+            "considerable",
+            "consider",
+            "consideration"
+          ],
+          "explanation": "An adverb is needed to intensify the comparative adjective “simpler”: “considerably simpler”.",
+          "number": 113,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The new fare structure is ______ simpler than the one it replaces."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "have tested",
+            "are testing",
+            "have been tested",
+            "were testing"
+          ],
+          "explanation": "“Since April” calls for the present perfect, and the generators undergo the testing rather than carry it out, so the passive “have been tested” is required.",
+          "number": 114,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "The emergency generators ______ twice since the substation was upgraded in April."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "which",
+            "whose",
+            "who",
+            "of them"
+          ],
+          "explanation": "A possessive relative is needed to link “travellers” to “passports”: “travellers whose passports expire”. “Who” would leave “passports” without a subject.",
+          "number": 115,
+          "tags": [
+            "relative-clause"
+          ],
+          "text": "Travellers ______ passports expire within six months of arrival may be refused entry."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "observe",
+            "follow",
+            "comply",
+            "adhere"
+          ],
+          "explanation": "Only “adhere” is completed by “to”; “comply” would need “with”, and “observe” and “follow” take a direct object with no preposition.",
+          "number": 116,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "All branch managers are expected to ______ strictly to the revised lending guidelines."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "adviser",
+            "advise",
+            "advisory",
+            "advisedly"
+          ],
+          "explanation": "“An external” must be followed by a noun, and the one appointed to review procedures is a person: “an external adviser”.",
+          "number": 117,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The firm has appointed an external ______ to review its data-protection procedures."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Despite",
+            "Because of",
+            "Although",
+            "Owing to"
+          ],
+          "explanation": "A conjunction is needed before the clause “the storm damaged three substations”; “despite” and “owing to” must be followed by a noun phrase.",
+          "number": 118,
+          "tags": [
+            "conjunction"
+          ],
+          "text": "______ the storm damaged three substations, service was restored to most customers within a day."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "will arrive",
+            "arrives",
+            "arrived",
+            "would arrive"
+          ],
+          "explanation": "A time clause introduced by “when” uses the present simple for future reference; the future is already carried by “will meet”.",
+          "number": 119,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "When the delegation ______ tomorrow, a representative from the consulate will meet them at the gate."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "little",
+            "few",
+            "many",
+            "several"
+          ],
+          "explanation": "“Information” is uncountable, so it takes “little”; “few” and “several” count separate items.",
+          "number": 120,
+          "tags": [
+            "quantifier"
+          ],
+          "text": "Very ______ information was available about the cause of the delay when the notice was first posted."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "populate",
+            "popularity",
+            "popularly",
+            "popular"
+          ],
+          "explanation": "“Prove” is a linking verb here and takes an adjective complement: “has proved highly popular”.",
+          "number": 121,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The bank's mobile application has proved highly ______ with customers under thirty."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "adjusting",
+            "adjustment",
+            "to adjust",
+            "adjust"
+          ],
+          "explanation": "“Agree” is followed by the infinitive: “has agreed to adjust the timetable”.",
+          "number": 122,
+          "tags": [
+            "gerund-infinitive"
+          ],
+          "text": "The regional operator has agreed ______ the timetable until the track works are finished."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "by",
+            "on",
+            "with",
+            "in"
+          ],
+          "explanation": "A means of transport named without an article takes “by”: “by rail”. “On” would require a specific vehicle, as in “on the 7:15 train”.",
+          "number": 123,
+          "tags": [
+            "preposition"
+          ],
+          "text": "Delegates travelling ______ rail should keep their tickets for reimbursement."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "notify",
+            "are notified",
+            "notifying",
+            "are notifying"
+          ],
+          "explanation": "The policyholders receive the message rather than send it, so the present passive “are notified” is required.",
+          "number": 124,
+          "tags": [
+            "passive-voice"
+          ],
+          "text": "Policyholders ______ by e-mail as soon as a decision on their claim has been reached."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "approved",
+            "has approved",
+            "would approve",
+            "had approved"
+          ],
+          "explanation": "The main clause “would have opened” marks an unreal past condition, which requires the past perfect “had approved”.",
+          "number": 125,
+          "tags": [
+            "conditional"
+          ],
+          "text": "If the ministry ______ the subsidy last year, the wind farm would have opened on schedule."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "efficient",
+            "efficiently",
+            "efficiency",
+            "more efficient"
+          ],
+          "explanation": "After the preposition “with” and the adjective “remarkable”, only a noun can stand: “with remarkable efficiency”.",
+          "number": 126,
+          "tags": [
+            "word-form"
+          ],
+          "text": "The claims department cleared the backlog with remarkable ______."
+        },
+        {
+          "answer": "A",
+          "choices": [
+            "must",
+            "might",
+            "would",
+            "could"
+          ],
+          "explanation": "A safety rule that applies at all times is an obligation, expressed by “must”; “might” and “could” would reduce it to a possibility.",
+          "number": 127,
+          "tags": [
+            "modal"
+          ],
+          "text": "Contractors ______ wear high-visibility clothing at all times inside the plant."
+        },
+        {
+          "answer": "B",
+          "choices": [
+            "have been working",
+            "had been working",
+            "are working",
+            "will have worked"
+          ],
+          "explanation": "The work ran up to a point in the past fixed by “before they found”, so the past perfect continuous is needed.",
+          "number": 128,
+          "tags": [
+            "verb-tense"
+          ],
+          "text": "The auditors ______ through the branch records for six hours before they found the discrepancy."
+        },
+        {
+          "answer": "D",
+          "choices": [
+            "permit",
+            "licence",
+            "ticket",
+            "pass"
+          ],
+          "explanation": "The fixed compound is “boarding pass”; a ticket records the purchase of travel rather than the document issued at check-in.",
+          "number": 129,
+          "tags": [
+            "vocabulary"
+          ],
+          "text": "Passengers must present a printed or digital boarding ______ before entering the departure lounge."
+        },
+        {
+          "answer": "C",
+          "choices": [
+            "Grow",
+            "Growing",
+            "Growth",
+            "Grown"
+          ],
+          "explanation": "The subject of “has slowed” must be a noun: “Growth in renewable capacity”.",
+          "number": 130,
+          "tags": [
+            "word-form"
+          ],
+          "text": "______ in renewable capacity has slowed in the last two quarters, according to the regulator."
+        }
+      ],
+      "title": "Incomplete Sentences"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p6-b1",
+          "passages": [
+            {
+              "content": "To: Business Banking Clients\nFrom: Ingrid Halvorsen, Head of Client Operations\nDate: 12 October\nSubject: Uploading documents to Nordvik Direct\n\nFrom 1 November, statements and identity documents can be sent to us through Nordvik Direct, our online client portal. Papers posted to the branch will still be {{131}}, but they take up to ten working days to reach our verification team.\n\nUploading a file takes about a minute. Once a document has arrived, the portal {{132}} its status until the review is complete. {{133}} Most accounts are cleared within two working days.\n\nPlease note that scanned pages must be legible; blurred images are returned for resubmission. If you are unsure whether a document meets the standard, our client desk will {{134}} it with you first.\n\nThank you for banking with Nordvik.",
+              "label": "Questions 131-134 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "process",
+                "processed",
+                "processing",
+                "processor"
+              ],
+              "explanation": "After “will still be” a past participle is needed, because the posted papers undergo the handling: “will still be processed”.",
+              "number": 131,
+              "tags": [
+                "passive-voice",
+                "word-form"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "displays",
+                "display",
+                "displaying",
+                "to display"
+              ],
+              "explanation": "The singular subject “the portal” needs a finite third-person verb: “the portal displays its status”.",
+              "number": 132,
+              "tags": [
+                "subject-verb-agreement"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Paper statements will no longer be issued to any client.",
+                "The portal is unavailable between midnight and 6 A.M.",
+                "You will also receive an e-mail each time a document is approved.",
+                "Identity documents must be certified by a solicitor before they are sent."
+              ],
+              "explanation": "The sentence extends the point just made about being kept informed of a document's status, and leads into how quickly accounts are cleared. Requiring certification by a solicitor would contradict a process the e-mail says takes about a minute.",
+              "number": 133,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "remind",
+                "submit",
+                "replace",
+                "review"
+              ],
+              "explanation": "“Review it with you” describes the check the desk offers before a client uploads; “submit” would name the client's own action rather than the desk's help.",
+              "number": 134,
+              "tags": [
+                "vocabulary"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b2",
+          "passages": [
+            {
+              "content": "VESTRA ENERGY — PLANNED OUTAGE NOTIFICATION POLICY\n\nVestra Energy carries out scheduled maintenance on the distribution network throughout the year. {{135}} This policy sets out how and when the households affected are informed.\n\nWritten notice is posted to every property on the affected circuit at least fourteen days {{136}} the work begins. The notice states the date, the expected start and finish times, and a reference number for enquiries.\n\nCustomers who have registered a mobile number also receive a text message on the previous evening. Registration is free and {{137}} be completed at any time through the customer portal.\n\nIf a planned outage is cancelled or moved to another date, a second notice is issued. Where the change is made less than 48 hours in advance, customers are contacted {{138}} by telephone.",
+              "label": "Questions 135-138 refer to the following policy.",
+              "type": "policy"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "Some of this work requires the supply to be switched off for several hours.",
+                "Emergency repairs are handled by a separate contractor.",
+                "The network was last extended eleven years ago.",
+                "Customers may change supplier at any time without penalty."
+              ],
+              "explanation": "It connects the maintenance named before it to the notification rules that follow: an interruption to supply is precisely what households need to be told about. Emergency repairs fall outside a policy on planned outages.",
+              "number": 135,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "during",
+                "until",
+                "since",
+                "before"
+              ],
+              "explanation": "The notice is placed earlier in time than the work, which “before” expresses; “since” and “until” would reverse or stretch that relationship.",
+              "number": 136,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "should",
+                "can",
+                "must",
+                "need"
+              ],
+              "explanation": "Registration is an option, and “can be completed at any time” states that it is available; “must” would make it compulsory, which the paragraph does not.",
+              "number": 137,
+              "tags": [
+                "modal"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "direct",
+                "direction",
+                "directly",
+                "directed"
+              ],
+              "explanation": "An adverb is needed to modify the passive verb “are contacted”: “are contacted directly by telephone”.",
+              "number": 138,
+              "tags": [
+                "word-form"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b3",
+          "passages": [
+            {
+              "content": "Kestrel Travel Management\n41 Rue des Ateliers, Brussels\n\n18 February\n\nMs. Paulina Rzepka\nProcurement Manager\nHalberd Instruments\n\nDear Ms. Rzepka,\n\nThank you for asking us to review your company's travel arrangements for the coming year. Our analysts {{139}} your booking records, and I am pleased to enclose a summary of what they found.\n\nTwo figures stand out. First, more than a third of your flights are booked within seven days of departure, {{140}} raises the average fare by roughly €180 per journey. Second, your teams stayed in eleven different hotel chains in Frankfurt alone.\n\nBoth figures can be improved without restricting where your staff stay. {{141}}, we would suggest a preferred-hotel list of four properties and an internal booking deadline of fourteen days.\n\nI will telephone you next week to arrange a meeting. {{142}}\n\nYours sincerely,\n\nBruno Okonkwo\nClient Director",
+              "label": "Questions 139-142 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "examine",
+                "are examining",
+                "will examine",
+                "have examined"
+              ],
+              "explanation": "The review is finished and its summary is enclosed, so the present perfect “have examined” is required; the continuous would suggest the work is still under way.",
+              "number": 139,
+              "tags": [
+                "verb-tense"
+              ]
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "what",
+                "that",
+                "which",
+                "it"
+              ],
+              "explanation": "A relative pronoun referring back to the whole preceding clause is needed: “which raises the average fare”. “It” would leave two main clauses joined by nothing but a comma.",
+              "number": 140,
+              "tags": [
+                "relative-clause"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Specifically",
+                "Nevertheless",
+                "Otherwise",
+                "Meanwhile"
+              ],
+              "explanation": "The sentence narrows the general claim before it into two concrete proposals, which “specifically” signals; “nevertheless” would announce a contrast the paragraph does not make.",
+              "number": 141,
+              "tags": [
+                "vocabulary"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Please settle the enclosed invoice within thirty days.",
+                "If a particular morning suits you better, my assistant can be reached on the number below.",
+                "We are unfortunately unable to advise on hotel bookings.",
+                "Your account has been transferred to our Warsaw office."
+              ],
+              "explanation": "It follows directly from the offer to telephone and gives Ms. Rzepka a way to fix a time. Declining to advise on hotels would contradict the preferred-hotel list recommended a paragraph earlier.",
+              "number": 142,
+              "tags": [
+                "sentence-insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p6-b4",
+          "passages": [
+            {
+              "content": "Coastal Railway Draws Record Summer Traffic\n\nPORTHAVEN — The narrow-gauge line linking Porthaven to the cliff villages of the northern coast carried 214,000 passengers between May and September, its highest figure {{143}} the railway reopened in 2011.\n\nOperators credit a combined ticket, sold together with entry to the maritime museum, for much of the rise. {{144}} It now accounts for nearly a quarter of all summer journeys.\n\nThe increase has not pleased everyone. Residents of Aldmere, the smallest village on the route, report that the single car park fills by nine in the morning. The regional tourism board says it is {{145}} the possibility of a shuttle bus from a field outside the village.\n\nA decision is expected before the timetable for next season {{146}} in January.",
+              "label": "Questions 143-146 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "before",
+                "while",
+                "since",
+                "until"
+              ],
+              "explanation": "“Since” fixes the starting point of the period across which the figure is a record; “until” would place the record before the reopening.",
+              "number": 143,
+              "tags": [
+                "conjunction"
+              ]
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The museum closed for refurbishment in March and has not reopened.",
+                "Introduced in April, it costs €18 and covers travel in both directions.",
+                "Passenger numbers fell sharply in the two seasons that followed.",
+                "The railway employs eleven drivers, three of whom work part time."
+              ],
+              "explanation": "It supplies the details of the combined ticket just mentioned, which the next sentence then quantifies with “It now accounts for…”. A museum closed since March could not be selling entry with the ticket.",
+              "number": 144,
+              "tags": [
+                "sentence-insertion"
+              ]
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "refusing",
+                "denying",
+                "delaying",
+                "exploring"
+              ],
+              "explanation": "“Exploring the possibility” fits an idea still under consideration, as the decision expected in January confirms; “refusing” or “denying” would already have ruled the shuttle out.",
+              "number": 145,
+              "tags": [
+                "vocabulary"
+              ]
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "is published",
+                "publishes",
+                "will publish",
+                "is publishing"
+              ],
+              "explanation": "The timetable undergoes the publishing, so the passive is needed, and a time clause introduced by “before” uses the present rather than the future.",
+              "number": 146,
+              "tags": [
+                "passive-voice"
+              ]
+            }
+          ]
+        }
+      ],
+      "instructions": "Read the texts that follow. A word, phrase, or sentence is missing in parts of each text. Select the best answer to complete the text.",
+      "part": 6,
+      "title": "Text Completion"
+    },
+    {
+      "blocks": [
+        {
+          "id": "p7-s1",
+          "passages": [
+            {
+              "content": "NOTICE TO ALL TENANTS — Nordvik Business Centre\n\nPlanned electrical maintenance\nSaturday 18 April, 06:00-14:00\n\nThe building's main switchgear will be replaced on Saturday 18 April. Power to floors 1 through 9 will be interrupted for the whole of the eight-hour window. Lifts, air conditioning and card readers will not operate during this time.\n\nThe server rooms on floor 4 will remain on the backup supply. Tenants who keep equipment anywhere else in the building are asked to shut it down before leaving on Friday 17 April.\n\nStairwell lighting will stay on. The loading bay entrance will be locked for the duration of the work; use the Ravnsgate door and sign in with the duty engineer.\n\nQuestions: facilities@nordvikcentre.example or extension 4180.",
+              "label": "Questions 147-148 refer to the following notice.",
+              "type": "notice"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To announce a change in the building's opening hours",
+                "To introduce a new facilities contractor",
+                "To warn tenants of a temporary loss of power",
+                "To request payment of an annual maintenance charge"
+              ],
+              "explanation": "The notice is headed “Planned electrical maintenance” and states that power will be interrupted for an eight-hour window on 18 April.",
+              "number": 147,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Switch off their equipment before the weekend",
+                "Move their equipment to floor 4",
+                "Enter the building through the loading bay",
+                "Report to the facilities office on 18 April"
+              ],
+              "explanation": "Tenants with equipment outside the floor-4 server rooms are told to “shut it down before leaving on Friday 17 April”. The loading bay is mentioned only because it will be locked.",
+              "number": 148,
+              "tags": [
+                "detail"
+              ],
+              "text": "What are tenants asked to do?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s2",
+          "passages": [
+            {
+              "content": "Aleksandra Wójcik (10:12)\nAre you still at the Hallberg office? The audit files we sent on Tuesday have come back to us unsigned.\n\nDaniel Okonjo (10:14)\nJust left the car park. I can turn around if it is urgent.\n\nAleksandra Wójcik (10:15)\nNot urgent exactly, but the filing deadline is Friday and Ms. Hallberg travels on Thursday morning.\n\nDaniel Okonjo (10:17)\nThen it is urgent. Going back now. Do you need anything else from her, or is it only the signature?\n\nAleksandra Wójcik (10:19)\nOnly the signature, on pages 3 and 11. I will e-mail those two pages to their front desk so they can print them for you.\n\nDaniel Okonjo (10:21)\nAsk them for two sets. I would like to leave a signed copy with her.\n\nAleksandra Wójcik (10:22)\nDone. I am copying you in as well, in case the desk is unattended when you arrive.",
+              "label": "Questions 149-150 refer to the following text-message chain.",
+              "type": "text-message chain"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A meeting has been cancelled.",
+                "A filing deadline has been brought forward.",
+                "An office has closed for the day.",
+                "Documents were returned without a signature."
+              ],
+              "explanation": "Her first message says the audit files “have come back to us unsigned”. The Friday deadline is mentioned later as context, not as something that has changed.",
+              "number": 149,
+              "tags": [
+                "detail"
+              ],
+              "text": "What problem does Ms. Wójcik report?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "He believes the deadline has already passed.",
+                "He realises there is very little time left to obtain the signature.",
+                "He thinks Ms. Hallberg should postpone her trip.",
+                "He wants Ms. Wójcik to handle the matter instead."
+              ],
+              "explanation": "He replies immediately after learning that Ms. Hallberg travels on Thursday and the deadline is Friday, which leaves almost no window — hence “Going back now”.",
+              "number": 150,
+              "tags": [
+                "inference"
+              ],
+              "text": "At 10:17, what does Mr. Okonjo most likely mean when he writes, “Then it is urgent”?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s3",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\nVantorp Energi to supply district heating to Kallsund industrial park\n\nVANTORP, 6 May — Vantorp Energi announced today that it has been selected to build and operate a district heating network for the Kallsund industrial park, serving eighteen manufacturing and logistics tenants from the winter of next year.\n\nThe network will draw its heat from the aluminium works on the northern edge of the park, which currently discharges cooling water into the harbour at around 70°C. Vantorp Energi estimates that recovering that water will meet roughly 60 percent of the park's annual heating demand and cut the park's gas purchases by €2.4 million a year.\n\n“The heat is already being produced,” said Ingrid Solheim, the company's chief operating officer. “Our contribution is a pipe network and a set of pumps. What makes the project unusual is that eighteen competing tenants agreed to sign a single shared supply contract.”\n\nConstruction begins in September. An information evening for park tenants will be held on 28 May at the Kallsund conference centre.",
+              "label": "Questions 151-153 refer to the following press release.",
+              "type": "press release"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "An aluminium works",
+                "A gas-fired power station",
+                "Water pumped out of the harbour",
+                "The Kallsund conference centre"
+              ],
+              "explanation": "The network “will draw its heat from the aluminium works”. The harbour is where that water is currently discharged, not a source.",
+              "number": 151,
+              "tags": [
+                "detail"
+              ],
+              "text": "Where will the heat for the new network come from?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The temperature of the water being recovered",
+                "The speed at which construction will be completed",
+                "The size of the savings on gas",
+                "The tenants' agreement to share one contract"
+              ],
+              "explanation": "She says explicitly, “What makes the project unusual is that eighteen competing tenants agreed to sign a single shared supply contract.”",
+              "number": 152,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to Ms. Solheim, what is unusual about the project?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "attract",
+                "take",
+                "sketch",
+                "extend"
+              ],
+              "explanation": "“Draw its heat from the aluminium works” means take or obtain it from there. “Attract” would reverse the direction of the transfer.",
+              "number": 153,
+              "tags": [
+                "vocabulary"
+              ],
+              "text": "In paragraph 3, the word “draw” is closest in meaning to"
+            }
+          ]
+        },
+        {
+          "id": "p7-s4",
+          "passages": [
+            {
+              "content": "Meridian Mutual Insurance\n14 Rua das Amoreiras, Lisbon\n\n11 February\n\nMs. Chiaki Morimoto\nAparthotel Rosa dos Ventos\nSetúbal\n\nDear Ms. Morimoto,\n\nYour commercial property policy, number CP-40915, renews on 1 April. The premium for the coming year is €3,180, an increase of €95 on the expiring policy.\n\nTwo terms have changed. The flood exclusion that applied to your ground-floor storage rooms has been removed, following the drainage works you reported to us in October. In addition, the excess payable on glass claims has risen from €250 to €400.\n\nYou need do nothing to renew. Payment will be taken from the account we hold on file on 25 March unless you instruct us otherwise before that date.\n\nIf the use or occupancy of the building has changed in the past twelve months, please telephone us on 21 447 0090 before renewal so that the cover can be adjusted.\n\nYours sincerely,\n\nBartosz Lewandowski\nRenewals Team",
+              "label": "Questions 154-156 refer to the following letter.",
+              "type": "letter"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To request payment of an overdue premium",
+                "To respond to a claim for flood damage",
+                "To set out the terms of a renewal",
+                "To explain why cover has been withdrawn"
+              ],
+              "explanation": "The letter states the renewal date, the new premium and the two terms that have changed. No claim has been made and nothing is overdue.",
+              "number": 154,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why was the letter written?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "The amount the policyholder must pay has increased.",
+                "They are no longer covered by the policy.",
+                "They must be reported within thirty days.",
+                "They carry a separate additional premium."
+              ],
+              "explanation": "“The excess payable on glass claims has risen from €250 to €400” — the excess is the part the policyholder pays.",
+              "number": 155,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is stated about claims for glass?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "They are insured under a separate policy.",
+                "They will be inspected before 1 April.",
+                "They are no longer used for storage.",
+                "They are now considered less likely to flood."
+              ],
+              "explanation": "The insurer dropped the flood exclusion only after the drainage works were completed, which implies the flood risk there is now judged lower.",
+              "number": 156,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the ground-floor storage rooms?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s5",
+          "passages": [
+            {
+              "content": "Slow trains, full carriages\n\nOvernight rail travel across the continent, written off a decade ago as a relic, carried 4.1 million passengers last year — the highest figure since 2004. Three operators have added routes in the past eighteen months, and a fourth has ordered sleeping cars for delivery in 2028.\n\nThe revival is not driven by price. A berth from Kraków to Trieste costs €149 return, roughly twice the cheapest flight on the same day. Operators say their passengers are buying something else: a night that does not have to be spent in a hotel, and an arrival in the centre of the city that needs no onward transfer.\n\nLoad factors tell the story. On the Kraków-Trieste service, single-occupancy cabins sell out first and are typically booked eleven weeks ahead, while the ordinary seated carriages on the same train run at 62 percent.\n\nThe constraint is rolling stock. A sleeping car takes four years to build, and only two manufacturers on the continent still make them.",
+              "label": "Questions 157-159 refer to the following article.",
+              "type": "article"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "A fall in the cost of air travel",
+                "Renewed demand for overnight rail services",
+                "The closure of a rolling-stock manufacturer",
+                "A hotel chain expanding near railway stations"
+              ],
+              "explanation": "The article opens with record passenger numbers on overnight trains and explains why demand has returned. The manufacturers appear only as a limit on supply.",
+              "number": 157,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the article mainly about?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "They are cheaper than flights.",
+                "They offer discounts to frequent travellers.",
+                "They remove the need to pay for a hotel night.",
+                "They run more often than daytime services."
+              ],
+              "explanation": "Passengers are buying “a night that does not have to be spent in a hotel”. The article states directly that the revival is not driven by price.",
+              "number": 158,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to operators, why do passengers choose overnight trains?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "They are reserved well in advance.",
+                "They cost less than a seat in an ordinary carriage.",
+                "They are offered on only two routes.",
+                "They will be introduced in 2028."
+              ],
+              "explanation": "They “sell out first and are typically booked eleven weeks ahead”. The 2028 date refers to an order for new sleeping cars, not to the cabins in service today.",
+              "number": 159,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about single-occupancy cabins?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s6",
+          "passages": [
+            {
+              "content": "Priya Ramanathan (09:02)\nMorning, both. The card-issuing system goes read-only at 18:00 tonight for the migration. Anything outstanding on your side?\n\nMarek Zieliński (09:04)\nFourteen replacement cards sitting in the queue. I can clear them by lunchtime.\n\nAdaeze Nwosu (09:05)\nBranch staff have not been told that the ordering screen disappears tonight. I only found out from the release note yesterday afternoon.\n\nPriya Ramanathan (09:06)\nThat is my fault — I assumed operations had circulated it. Adaeze, could you send something to the branch network this morning?\n\nAdaeze Nwosu (09:08)\nYes. What do they do between tonight and Monday?\n\nPriya Ramanathan (09:10)\nPaper form BR-12, faxed to us, and we key it in on Monday. The same arrangement as the last migration.\n\nMarek Zieliński (09:11)\nThere is a stock of BR-12 in every branch safe. Half of them will not know it is there.\n\nAdaeze Nwosu (09:12)\nThen I will say so explicitly. Draft with you both by 10:30.",
+              "label": "Questions 160-162 refer to the following online chat discussion.",
+              "type": "online chat discussion"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "A branch will close to the public.",
+                "Replacement cards will be delivered.",
+                "A meeting of the three writers will begin.",
+                "A system will stop accepting new entries."
+              ],
+              "explanation": "The card-issuing system “goes read-only at 18:00”, so orders can no longer be entered until the migration is finished.",
+              "number": 160,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will happen at 18:00?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "They have already read the release note.",
+                "Many are unaware of the paper forms held in their branch.",
+                "They will be asked to work over the weekend.",
+                "They have ordered more cards than usual."
+              ],
+              "explanation": "Mr. Zieliński notes that BR-12 forms are in every branch safe but “half of them will not know it is there”, which is why Ms. Nwosu will spell it out.",
+              "number": 161,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about the branch staff?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "Clear the queue of replacement cards",
+                "Rewrite the release note",
+                "Visit several branches in person",
+                "Prepare a message for the branch network"
+              ],
+              "explanation": "She agrees to write to the branch network and promises a draft “by 10:30”. Clearing the card queue is Mr. Zieliński's task.",
+              "number": 162,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will Ms. Nwosu do next?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s7",
+          "passages": [
+            {
+              "content": "To: h.bergstrom@lindqvistpartners.example\nFrom: tours@aurorapaths.example\nDate: 9 October\nSubject: Change to your 3 November departure — Fjord & Highland, 6 nights\n\nDear Mr. Bergström,\n\nThe ferry operator has withdrawn the Wednesday afternoon crossing to Sørvik for the remainder of the season. Your group's itinerary uses that crossing on day four, so we have rebuilt the second half of the tour.\n\nIn place of the ferry, the coach will follow the coast road to Sørvik. The drive adds ninety minutes to the day but passes the Rennedal viewpoint, where we will stop for lunch. Nothing else changes: the same hotel, the same guide and the same return flight.\n\nBecause the coach route costs us less than the ferry, we are refunding €40 per traveller. The refund will reach the card used for the booking within ten working days; you do not need to request it.\n\nPlease confirm by 20 October that the revised day four is acceptable to your group. If it is not, we can move the whole departure to 17 November at no charge.\n\nKind regards,\n\nSolveig Marstrand\nAurora Paths",
+              "label": "Questions 163-165 refer to the following e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "To confirm a hotel reservation",
+                "To advertise a newly created tour",
+                "To explain a change to a booked itinerary",
+                "To request payment of an outstanding balance"
+              ],
+              "explanation": "The subject line reads “Change to your 3 November departure”, and the e-mail sets out how day four has been rebuilt after the ferry was withdrawn.",
+              "number": 163,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Ms. Marstrand write the e-mail?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "It takes longer than the original plan.",
+                "It requires an extra night in a hotel.",
+                "It will be led by a different guide.",
+                "It ends with an earlier return flight."
+              ],
+              "explanation": "“The drive adds ninety minutes to the day.” The e-mail states that the hotel, guide and return flight are unchanged.",
+              "number": 164,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is indicated about the new day-four arrangement?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Apply in writing for the refund",
+                "Reply before a stated date",
+                "Rebook his group's return flight",
+                "Pay a fee for changing the itinerary"
+              ],
+              "explanation": "“Please confirm by 20 October that the revised day four is acceptable.” The refund is automatic and no fee is charged.",
+              "number": 165,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is Mr. Bergström asked to do?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s8",
+          "passages": [
+            {
+              "content": "www.halvorsen-adeyemi.example/about\n\nAbout Halvorsen & Adeyemi\n\nHalvorsen & Adeyemi advises industrial clients on energy procurement and metering. — [1] — The firm began in 2009 as a two-person practice above a bakery in Trondheim, with a single client: a fish-processing plant that could not explain its own electricity bill.\n\nWe now employ forty-one people across three offices and audit roughly €90 million of annual energy spend on behalf of our clients. — [2] — Our work is deliberately narrow. We do not sell equipment, we do not install anything, and we take no commission from suppliers. Our only revenue is the fee our clients pay us.\n\nThat independence occasionally costs us work. — [3] — A client who wants one firm to audit, specify and install is better served elsewhere, and we say so at the first meeting.\n\nEvery engagement begins with a fortnight of meter data and one uncomfortable question: what are you paying for that you are not using? On average, the answer is eleven percent of the bill. — [4] —\n\nOffices: Trondheim · Gdańsk · Lagos",
+              "label": "Questions 166-169 refer to the following web page.",
+              "type": "web page"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "As a division of a larger consultancy",
+                "With offices in three cities at once",
+                "By installing metering equipment for suppliers",
+                "As a small practice serving one client"
+              ],
+              "explanation": "It “began in 2009 as a two-person practice above a bakery in Trondheim, with a single client”. The three offices came later.",
+              "number": 166,
+              "tags": [
+                "detail"
+              ],
+              "text": "How did Halvorsen & Adeyemi begin?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "From commissions paid by energy suppliers",
+                "From the sale of metering equipment",
+                "From fees charged to the clients it advises",
+                "From installation contracts on industrial sites"
+              ],
+              "explanation": "“Our only revenue is the fee our clients pay us.” The page rules out commission, equipment sales and installation explicitly.",
+              "number": 167,
+              "tags": [
+                "detail"
+              ],
+              "text": "How does the firm earn its income?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "The professional qualifications of its consultants",
+                "The year in which it was founded",
+                "The number of people it employs",
+                "The cities in which it has offices"
+              ],
+              "explanation": "The page gives 2009, forty-one employees and the three office cities, but says nothing about what qualifications its consultants hold.",
+              "number": 168,
+              "tags": [
+                "not-question"
+              ],
+              "text": "What information about the firm is NOT given on the web page?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "[1]",
+                "[2]",
+                "[3]",
+                "[4]"
+              ],
+              "explanation": "The sentence converts the eleven percent into euros, so it can only follow the sentence that supplies that figure, at [4].",
+              "number": 169,
+              "tags": [
+                "sentence-insertion"
+              ],
+              "text": "In which of the positions marked [1], [2], [3] and [4] does the following sentence best belong?\n\n“For a plant spending €4 million a year on power, that is €440,000 left on the table.”"
+            }
+          ]
+        },
+        {
+          "id": "p7-s9",
+          "passages": [
+            {
+              "content": "MEMORANDUM\n\nTo: All holders of a corporate card\nFrom: Renata Duarte, Head of Finance\nDate: 22 January\nSubject: New card provider from 1 March\n\nOur corporate card programme moves to a new provider on 1 March. Your current card will stop working at midnight on 28 February; please destroy it rather than returning it to this office.\n\nReplacement cards will be posted to your home address during the week of 16 February and will arrive unactivated. Activate yours by calling the number on the sticker, from the telephone number we hold for you in the staff directory. If that number is out of date, correct your entry before 9 February.\n\nClaims for January and February must be submitted under the old system by 5 March. Anything submitted after that date has to be re-entered by hand, which delays reimbursement by about three weeks.\n\nSpending limits and approval routes are unchanged.",
+              "label": "Questions 170-171 refer to the following memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "Return them to the finance office",
+                "Destroy them",
+                "Keep them until 5 March",
+                "Post them to the new provider"
+              ],
+              "explanation": "“Please destroy it rather than returning it to this office.” The 5 March date applies to expense claims, not to the cards.",
+              "number": 170,
+              "tags": [
+                "detail"
+              ],
+              "text": "What should staff do with their current cards?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "They will not be sent a replacement card.",
+                "They must collect their card in person.",
+                "They may be unable to activate their new card.",
+                "Their spending limit will be reduced."
+              ],
+              "explanation": "Activation must be done from the number held in the directory, so an incorrect entry would block it — which is why corrections are due by 9 February.",
+              "number": 171,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about staff whose directory entry is out of date?"
+            }
+          ]
+        },
+        {
+          "id": "p7-s10",
+          "passages": [
+            {
+              "content": "KESTREL HOUSE HOTELS — Cancellation and amendment policy\nApplies to all direct bookings made on or after 1 June\n\nFlexible rate\nCancel or amend free of charge up to 18:00 on the day before arrival. After that time, one night is charged.\n\nSaver rate\nNon-refundable; the full stay is charged at the time of booking. Dates may be moved once, to any date within six months, for a fee of €25 per room.\n\nGroup bookings (five rooms or more)\nCancel up to 21 days before arrival at no cost. Between 20 and 8 days before arrival, half the value of the booking is charged. Within 7 days, the full value is charged. The number of rooms may be reduced by up to 20 percent at any time before the 21-day point without penalty.\n\nAmendments must be made through the hotel holding the booking, not through central reservations. Bookings made through a travel agent or an online platform are governed by that partner's terms rather than by this policy.\n\nGuests who do not arrive and have not cancelled are charged under the rules of their rate.",
+              "label": "Questions 172-175 refer to the following policy.",
+              "type": "policy"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "By 18:00 on the day before arrival",
+                "By 18:00 on the day of arrival",
+                "Seven days before arrival",
+                "Twenty-one days before arrival"
+              ],
+              "explanation": "The flexible rate allows free cancellation “up to 18:00 on the day before arrival”; after that one night is charged. The seven- and twenty-one-day limits belong to group bookings.",
+              "number": 172,
+              "tags": [
+                "detail"
+              ],
+              "text": "By when must a flexible-rate booking be cancelled to avoid a charge?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "A full refund within twenty-four hours",
+                "A transfer to a different hotel at no cost",
+                "Cancellation up to eight days before arrival",
+                "One change of dates in return for a fee"
+              ],
+              "explanation": "The saver rate is non-refundable, but “dates may be moved once, to any date within six months, for a fee of €25 per room”.",
+              "number": 173,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is possible with a saver-rate booking?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "Nothing",
+                "Half the value of the booking",
+                "One night for each room",
+                "The full value of the booking"
+              ],
+              "explanation": "Twelve days falls inside the 20-to-8-day band, for which “half the value of the booking is charged”. The full value applies only within seven days.",
+              "number": 174,
+              "tags": [
+                "detail"
+              ],
+              "text": "A group booking of ten rooms is cancelled twelve days before arrival. What will be charged?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "It cannot be amended at any point.",
+                "It qualifies for a reduction of 20 percent.",
+                "The terms above do not apply to it.",
+                "It must be confirmed twenty-one days in advance."
+              ],
+              "explanation": "Such bookings “are governed by that partner's terms rather than by this policy”, so the rates and deadlines set out here do not cover them.",
+              "number": 175,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is suggested about a reservation made through an online platform?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d1",
+          "passages": [
+            {
+              "content": "NOTICE TO ALL TENANTS — RIVERGATE BUSINESS PARK\n\nHalvorsen Power will replace the two ageing substations that serve the park. Each building will lose mains electricity for one working day, as follows:\n\nBuilding A — Tuesday 3 March, 07:00-17:00\nBuilding B — Wednesday 4 March, 07:00-17:00\nBuilding C — Thursday 5 March, 07:00-17:00\nBuilding D — Friday 6 March, 07:00-17:00\n\nEmergency lighting, fire alarms and door entry systems will run on battery throughout. Lifts will be out of service; the stairwells remain open.\n\nTenants who cannot suspend operations for a day may hire a portable generator through the site office. The charge is €340 per building for the day, and requests must reach us at least ten working days before the interruption.\n\nPlease note that our standard tenancy agreement does not provide compensation for planned interruptions of this kind.\n\nQuestions to the site office, ground floor, Building B, or facilities@rivergatepark.example.",
+              "label": "Questions 176-180 refer to the following notice and e-mail.",
+              "type": "notice"
+            },
+            {
+              "content": "To: facilities@rivergatepark.example\nFrom: p.oyelaran@sundermeyer-actuarial.example\nDate: 18 February\nSubject: Generator hire — Building C\n\nDear site office,\n\nThank you for the notice. Sundermeyer Actuarial occupies the third and fourth floors of Building C, and the day you have given us is the last day of our quarterly reporting cycle. Our analysts cannot lose it, so I would like to book a portable generator.\n\nPlease confirm that the fee covers the whole building, as the wording suggests. The recruitment agency on our ground floor would also like to keep working and would share the cost with us.\n\nTwo further points. Our server room is cooled by a unit that draws far more power than ordinary office equipment, and I need to know whether the generator will support it. And since our staff will be on site all day, could you confirm that the stairwell doors will unlock from the inside while the entry system is running on battery?\n\nI am writing well inside your deadline, but tell me at once if anything further is needed.\n\nKind regards,\n\nPaulo Oyelaran\nOperations Manager",
+              "label": "Questions 176-180 refer to the following notice and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "B",
+              "choices": [
+                "To announce a change to the tenancy agreement",
+                "To warn tenants that electricity will be cut off for a day",
+                "To advertise portable generators for sale",
+                "To explain a rise in service charges"
+              ],
+              "explanation": "The notice gives the day on which each building will lose mains electricity while the substations are replaced. Generators are offered for hire, not for sale.",
+              "number": 176,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the purpose of the notice?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "3 March",
+                "4 March",
+                "5 March",
+                "6 March"
+              ],
+              "explanation": "The e-mail places Sundermeyer Actuarial in Building C, and the notice gives Building C the Thursday 5 March slot.",
+              "number": 177,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "On what date will Mr. Oyelaran's firm lose its electricity supply?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "To explain that another tenant would share the cost of the generator",
+                "To pass on a complaint made by another tenant",
+                "To ask that the agency be moved to a different building",
+                "To identify who will pay the whole hire fee"
+              ],
+              "explanation": "He asks whether the €340 covers the whole building because the ground-floor agency “would share the cost with us”. He never says the agency will pay all of it.",
+              "number": 178,
+              "tags": [
+                "inference"
+              ],
+              "text": "Why does Mr. Oyelaran mention the recruitment agency?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "The date of the interruption in his building",
+                "The cost of hiring a generator",
+                "The deadline for requesting a generator",
+                "Whether a generator can run a cooling unit"
+              ],
+              "explanation": "The notice supplies the dates, the €340 charge and the ten-working-day deadline, but says nothing about how much equipment a generator will support.",
+              "number": 179,
+              "tags": [
+                "not-question",
+                "cross-reference"
+              ],
+              "text": "Which of Mr. Oyelaran's concerns is NOT addressed in the notice?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It is paid only to tenants who hire a generator.",
+                "It is not available for interruptions of this kind.",
+                "It is calculated according to the number of floors occupied.",
+                "It must be claimed within ten working days."
+              ],
+              "explanation": "“our standard tenancy agreement does not provide compensation for planned interruptions of this kind”. The ten-working-day limit belongs to generator requests, not to claims.",
+              "number": 180,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does the notice indicate about compensation?"
+            }
+          ]
+        },
+        {
+          "id": "p7-d2",
+          "passages": [
+            {
+              "content": "Visitor levy to fund coastal path\nBy Ingrid Sælen, 12 May\n\nKaldvik will introduce a visitor levy of €2.50 per guest per night from 1 October, the town council confirmed on Tuesday. The charge will apply to hotels, guesthouses and licensed short-term rentals, and will be collected by the operator and passed to the council each quarter.\n\nOfficials expect the levy to raise about €1.4 million in its first full year. Roughly two-thirds is earmarked for the long-delayed coastal path between the harbour and Storneset, with the remainder going to public toilets, waste collection and the summer shuttle bus.\n\nGuests staying more than fourteen consecutive nights will be exempt from the fifteenth night onwards, as will anyone travelling for medical treatment.\n\nKaldvik recorded 310,000 overnight stays last year, 18 percent more than five years ago. Councillor Renata Bielawska, who chairs the tourism committee, said the town had “reached the point where visitors must contribute to the infrastructure they use”.\n\nA consultation on the collection procedure closes on 30 June.",
+              "label": "Questions 181-185 refer to the following article and letter to the editor.",
+              "type": "article"
+            },
+            {
+              "content": "To the editor,\n\nI have run a nine-room guesthouse in Kaldvik for twenty-two years, and I am not against the levy in principle. The path your article describes has been promised since before I opened, and the state of the harbour toilets is no advertisement for us. If €2.50 a night buys those things, my guests will pay it without complaint.\n\nMy objection is to who does the collecting. Under this scheme I become an unpaid tax collector: I must add the charge, decide who is exempt, hold the money and file a return four times a year. A hotel with a finance office can absorb that. I cannot, and neither can the eleven other small operators I have spoken to.\n\nThere is an obvious alternative. The council already licenses every operator in the town. Bill the levy once a year, based on the previous year's declared occupancy, and send us a single invoice. The council collects the same money and I get my evenings back.\n\nI would urge the committee to look at this before the consultation closes.\n\nHalldór Jónsson\nSjøhuset Guesthouse",
+              "label": "Questions 181-185 refer to the following article and letter to the editor.",
+              "type": "letter to the editor"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "The completion of a path along the coast",
+                "A decline in visitor numbers in Kaldvik",
+                "A new charge on overnight visitors",
+                "A dispute between hotels and guesthouses"
+              ],
+              "explanation": "The article reports the council's decision to introduce a €2.50 nightly visitor levy from 1 October. The coastal path is what the money will pay for; it has not been built.",
+              "number": 181,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is the article mainly about?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "On building a path along the coast",
+                "On running the summer shuttle bus",
+                "On collecting waste",
+                "On licensing short-term rentals"
+              ],
+              "explanation": "“Roughly two-thirds is earmarked for the long-delayed coastal path”; the shuttle bus and waste collection share what is left.",
+              "number": 182,
+              "tags": [
+                "detail"
+              ],
+              "text": "According to the article, how will most of the money raised be spent?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "Guests in licensed short-term rentals",
+                "Guests travelling on business",
+                "Guests staying longer than two weeks",
+                "Guests who book before 1 October"
+              ],
+              "explanation": "Guests staying more than fourteen consecutive nights are exempt “from the fifteenth night onwards”. Those travelling for medical treatment are exempt for the whole stay, not part of it.",
+              "number": 183,
+              "tags": [
+                "detail"
+              ],
+              "text": "Who will stop paying the levy part-way through a stay?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The nightly amount is too high for his guests.",
+                "Small operators would have to administer it.",
+                "The coastal path is not worth building.",
+                "Hotels would be exempt from paying it."
+              ],
+              "explanation": "“My objection is to who does the collecting” — adding the charge, judging exemptions and filing quarterly returns falls on operators too small to absorb the work. He states plainly that his guests will pay the €2.50 without complaint.",
+              "number": 184,
+              "tags": [
+                "main-idea"
+              ],
+              "text": "What is Mr. Jónsson's main objection to the levy?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "12 May",
+                "30 June",
+                "1 October",
+                "The end of the first quarter"
+              ],
+              "explanation": "He asks the committee to look at his alternative “before the consultation closes”, and the article dates that closing at 30 June.",
+              "number": 185,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "By what date does Mr. Jónsson want the committee to consider his proposal?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t1",
+          "passages": [
+            {
+              "content": "KIRUNA TRANSLATION PARTNERS\nCertified business translation since 2004\n\nStandard — €0.14 per word — delivered in five working days\nPriority — €0.19 per word — delivered in two working days\nSame day — €0.28 per word — ordered before 10:00, delivered by 18:00\n\nCertification for official use, including the sworn translator's stamp and declaration: €45 per document.\n\nVolume agreement: clients who commit to 100,000 words in a calendar year pay the Standard rate on every job, whatever the delivery speed, and are invoiced monthly rather than order by order.\n\nAll prices exclude VAT. Word counts are taken from the source document. Minimum charge €90 per order.\n\nWe work into and out of twenty-two languages, with sworn translators available for eleven of them. Financial, insurance and engineering texts are our specialisms.\n\nQuotations within two hours during office hours: quotes@kirunatranslation.example or +46 8 550 3120.",
+              "label": "Questions 186-190 refer to the following advertisement, invoice, and e-mail.",
+              "type": "advertisement"
+            },
+            {
+              "content": "KIRUNA TRANSLATION PARTNERS\nInvoice 2024-1187\n\nBill to: Vestberg Marine Insurance, 14 Kaisalmi, Turku\nIssued: 7 April\nPayment due: 7 May\n\nKTP-9042  Policy wording, Swedish into English\n          6,400 words, priority delivery — €1,216.00\n\nKTP-9058  Survey report, English into Finnish\n          2,150 words, standard delivery — €301.00\n\nKTP-9061  Board minutes, English into Swedish\n          900 words, same-day delivery — €126.00\n\n          Certification, 2 documents — €90.00\n\nSubtotal — €1,733.00\nVAT 24% — €415.92\nTotal due — €2,148.92\n\nPlease transfer to the account below, quoting the invoice number. A late payment charge of 1.5% per month applies after the due date.",
+              "label": "Questions 186-190 refer to the following advertisement, invoice, and e-mail.",
+              "type": "invoice"
+            },
+            {
+              "content": "To: accounts@kirunatranslation.example\nFrom: h.vestberg@vestbergmarine.example\nDate: 11 April\nSubject: Invoice 2024-1187 — query\n\nDear colleagues,\n\nThank you for the invoice. Two of the three order lines are correct; the first is not.\n\nWe signed the volume agreement on 8 January and have sent you just over 40,000 words since then, so every order should be billed at your lowest per-word rate however quickly we need it back. The policy wording has been charged at the faster rate instead. The board minutes were delivered the same day and were billed correctly, which is why I assume the first line is simply an oversight.\n\nCould you reissue the invoice with that line corrected? I would rather pay one corrected invoice than pay this one and wait for a credit note.\n\nOne further question. The certification charge covers two documents, but only the policy wording was returned to us with a stamp, and the survey report is not marked for certification on your order confirmation. Please confirm which two documents you certified.\n\nKind regards,\n\nHanna Vestberg\nHead of Underwriting Support",
+              "label": "Questions 186-190 refer to the following advertisement, invoice, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "D",
+              "choices": [
+                "It removes the minimum charge per order.",
+                "It includes certification at no extra cost.",
+                "It is offered only for financial texts.",
+                "It applies the lowest per-word rate to every job."
+              ],
+              "explanation": "Clients who commit to 100,000 words a year “pay the Standard rate on every job, whatever the delivery speed”. The €90 minimum and the €45 certification fee are untouched by it.",
+              "number": 186,
+              "tags": [
+                "detail"
+              ],
+              "text": "What does the advertisement indicate about the volume agreement?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "€0.14 per word",
+                "€0.19 per word",
+                "€0.28 per word",
+                "€45 per document"
+              ],
+              "explanation": "The invoice bills the policy wording at the Priority rate, but Vestberg signed the volume agreement in January, so the €0.14 Standard rate was due regardless of delivery speed.",
+              "number": 187,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What rate should have been applied to order KTP-9042?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "To place a further translation order",
+                "To ask for a credit note",
+                "To request a faster delivery option",
+                "To have an invoice issued again"
+              ],
+              "explanation": "“Could you reissue the invoice with that line corrected?” She says explicitly that she prefers this to paying and then waiting for a credit note.",
+              "number": 188,
+              "tags": [
+                "purpose"
+              ],
+              "text": "Why did Ms. Vestberg write the e-mail?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "The date on which the volume agreement began",
+                "Which documents were certified",
+                "The word count of the board minutes",
+                "The rate of VAT that was applied"
+              ],
+              "explanation": "The invoice charges for two certifications, but only the policy wording came back stamped and the survey report is not marked for certification, so she asks which two were certified.",
+              "number": 189,
+              "tags": [
+                "detail"
+              ],
+              "text": "What else does Ms. Vestberg ask Kiruna to confirm?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "It has sent Kiruna more than 100,000 words this year.",
+                "It receives a separate invoice for each order.",
+                "It requires a sworn translator for every text.",
+                "It has undertaken to send a set volume of work this year."
+              ],
+              "explanation": "It signed the volume agreement, which the advertisement defines as a commitment to 100,000 words in a calendar year; only just over 40,000 have been sent so far. Volume clients are invoiced monthly, and this single invoice covers three orders.",
+              "number": 190,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about Vestberg Marine Insurance?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t2",
+          "passages": [
+            {
+              "content": "FJALLSTIGEN GUIDED WALKS — Autumn programme\nfjallstigen.example/book\n\nRidge Traverse — 3 days, 2 nights in mountain huts — €430 per person\n  Departures: 5, 12, 19 and 26 September\n\nLake Circuit — 2 days, 1 night — €245 per person\n  Departures: every Saturday from 6 September to 25 October\n\nValley Walk — 1 day, no overnight stay — €95 per person\n  Departures: Wednesdays and Sundays throughout the season\n\nEvery price includes the guide, hut accommodation, evening meals and baggage transfer between huts. Boots and waterproofs are not supplied; a kit list is sent when you book.\n\nGroups are limited to twelve walkers, and four is the minimum for a departure to run. If fewer than four have booked seven days before departure, we will offer you a transfer to another date or a full refund.\n\nTravel insurance is strongly recommended and is not included in the price. Please read our booking conditions before you pay.",
+              "label": "Questions 191-195 refer to the following web page, policy, and e-mail.",
+              "type": "web page"
+            },
+            {
+              "content": "FJALLSTIGEN GUIDED WALKS — Booking conditions (extract)\n\n3. Payment\nA deposit of 30 percent is due when the booking is made. The balance is due 30 days before departure. Bookings made within 30 days of departure must be paid in full at once.\n\n4. Cancellation by the walker\nMore than 60 days before departure: the deposit is refunded in full.\nBetween 60 and 30 days: the deposit is retained; nothing further is charged.\nBetween 29 and 8 days: 50 percent of the total price is retained.\nWithin 7 days: no refund is given.\n\n5. Change of date by the walker\nOne change of date may be made free of charge up to 30 days before departure, subject to availability on the new date. A later change, or a second change, is treated as a cancellation under clause 4 followed by a new booking.\n\n6. Weather\nWe do not cancel for rain. If a route is closed by the authorities, walkers are offered an alternative route on the same dates or a full refund.",
+              "label": "Questions 191-195 refer to the following web page, policy, and e-mail.",
+              "type": "policy"
+            },
+            {
+              "content": "To: bookings@fjallstigen.example\nFrom: m.aguirre@correo.example\nDate: 2 August\nSubject: Booking FJ-4471 — change of date\n\nHello,\n\nOn 12 July I booked the three-day walk leaving on 12 September for two people and paid the deposit that day. My colleague has since been called to a client meeting that week, so we would like to move to the last September departure instead.\n\nAs I read your conditions, this is our first change and we are still comfortably outside the limit, so there should be nothing extra to pay. Please tell me if I have misunderstood.\n\nTwo other things. On what date exactly will the balance be taken for the new departure? And the long-range forecast for late September looks poor — if it rains hard for three days, do we simply walk in it?\n\nThank you,\n\nMariana Aguirre",
+              "label": "Questions 191-195 refer to the following web page, policy, and e-mail.",
+              "type": "e-mail"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "C",
+              "choices": [
+                "Waterproof clothing",
+                "Travel insurance",
+                "Transport of luggage between huts",
+                "Transport back to the starting point"
+              ],
+              "explanation": "“baggage transfer between huts” is listed as included, whereas boots and waterproofs are not supplied and insurance is “not included in the price”.",
+              "number": 191,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is included in the price of a Fjallstigen walk?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "Offer another date or return the money",
+                "Run the walk with a second guide",
+                "Combine the group with a different route",
+                "Reduce the price for those who booked"
+              ],
+              "explanation": "With fewer than four booked seven days before departure, walkers are offered “a transfer to another date or a full refund”.",
+              "number": 192,
+              "tags": [
+                "detail"
+              ],
+              "text": "What will Fjallstigen do if only three people have booked a departure?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "12 August",
+                "22 August",
+                "26 August",
+                "27 August"
+              ],
+              "explanation": "She wants the last September departure, which the web page gives as 26 September, and clause 3 makes the balance due 30 days before departure.",
+              "number": 193,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "When will the balance for Ms. Aguirre's new booking fall due?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "It will be treated as a cancellation.",
+                "It can be made at no additional cost.",
+                "It requires a second deposit.",
+                "It cannot be made once the balance is paid."
+              ],
+              "explanation": "It is her first change and she writes on 2 August, more than 30 days before the 12 September departure, so clause 5 makes it free of charge.",
+              "number": 194,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What is indicated about the change of date Ms. Aguirre requests?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "A full refund is given.",
+                "The walk is shortened by one day.",
+                "The walk goes ahead as planned.",
+                "A different route is offered."
+              ],
+              "explanation": "“We do not cancel for rain.” The alternative route and the refund apply only when the authorities close a route.",
+              "number": 195,
+              "tags": [
+                "detail"
+              ],
+              "text": "Ms. Aguirre asks what happens if it rains hard. What do the booking conditions state?"
+            }
+          ]
+        },
+        {
+          "id": "p7-t3",
+          "passages": [
+            {
+              "content": "FOR IMMEDIATE RELEASE\nSolvind Energi to extend evening service hours\n\nBergen, 14 October — Solvind Energi, which supplies electricity to 480,000 households across the western region, announced today that its telephone service centre will stay open until 21:00 on weekdays from 5 January, three hours later than at present.\n\nThe decision follows the company's annual customer survey, completed in September by 6,200 households. “Our customers told us plainly that they cannot call us between nine and six because they are at work,” said Ingvild Røstad, Director of Customer Operations. “Answering that is the single most useful thing we can do this year.”\n\nFrom the same date the company's home page will display estimated waiting times, so that callers can choose a quieter moment.\n\nSolvind has recruited 45 additional advisers, who begin training in November. No existing role will be affected by the change.\n\nMedia contact: press@solvindenergi.example",
+              "label": "Questions 196-200 refer to the following press release, survey results, and memo.",
+              "type": "press release"
+            },
+            {
+              "content": "SOLVIND ENERGI — Annual customer survey, September\n6,200 responses\n\n“Which single change would improve your experience most?” (one answer only)\n\n1. Longer telephone service hours — 34%\n2. A clearer bill — 27%\n3. Shorter waiting times when calling — 19%\n4. An app for submitting meter readings — 12%\n5. More payment dates to choose from — 8%\n\n“How would you rate your last contact with us?”\nVery satisfied 21% — Satisfied 38% — Neither 22% — Dissatisfied 13% — Very dissatisfied 6%\n\nSubjects raised most often in free-text comments: opening hours (1,940 mentions), bill layout (1,505), meter-reading errors (870), the tone of advisers (240).",
+              "label": "Questions 196-200 refer to the following press release, survey results, and memo.",
+              "type": "survey results"
+            },
+            {
+              "content": "To: All service centre advisers\nFrom: Ingvild Røstad\nDate: 20 October\nSubject: Evening shifts from January\n\nYou will have seen last week's announcement. I want to set out what it means for this team.\n\nFrom 5 January the centre closes at 21:00 on weekdays. Saturday hours are unchanged and we will still not open on Sundays.\n\nNo one currently on the team is required to work the new evening slot. The 45 advisers we are recruiting are being hired for it, and they join us for training on 3 November. If you would like to move to evenings, the allowance is €4.20 per hour worked after 18:00; speak to your team leader before 15 November.\n\nThe second item on the survey list is not being ignored either. It is with the printers now and will reach customers in March.\n\nFrom 5 January the home page will also show live waiting times, which makes the third item on that list visible to every caller. Please read the briefing note before then.",
+              "label": "Questions 196-200 refer to the following press release, survey results, and memo.",
+              "type": "memo"
+            }
+          ],
+          "questions": [
+            {
+              "answer": "A",
+              "choices": [
+                "To announce longer telephone service hours",
+                "To publish the findings of a customer survey",
+                "To introduce a new billing system",
+                "To advertise positions for advisers"
+              ],
+              "explanation": "The headline and opening paragraph announce that the service centre will stay open until 21:00 from 5 January; the survey is cited only as the reason for the decision.",
+              "number": 196,
+              "tags": [
+                "purpose"
+              ],
+              "text": "What is the main purpose of the press release?"
+            },
+            {
+              "answer": "A",
+              "choices": [
+                "34 percent",
+                "27 percent",
+                "19 percent",
+                "12 percent"
+              ],
+              "explanation": "“Longer telephone service hours” was the first item on the survey list, chosen by 34 percent; the 19 percent figure belongs to shorter waiting times.",
+              "number": 197,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "The press release announces that the service centre will close later. What proportion of survey respondents chose that as the change they most wanted?"
+            },
+            {
+              "answer": "D",
+              "choices": [
+                "A shorter working week",
+                "Priority for Saturday shifts",
+                "Extra training in November",
+                "An additional payment for each hour after 18:00"
+              ],
+              "explanation": "“the allowance is €4.20 per hour worked after 18:00”. The November training is for the newly recruited advisers, not for staff moving across.",
+              "number": 198,
+              "tags": [
+                "detail"
+              ],
+              "text": "What is offered to advisers who move to the evening shift?"
+            },
+            {
+              "answer": "B",
+              "choices": [
+                "An app for submitting meter readings",
+                "A bill in a new format",
+                "A wider choice of payment dates",
+                "A summary of the survey results"
+              ],
+              "explanation": "The memo says the second item on the survey list “is with the printers now and will reach customers in March”, and the second item on that list is a clearer bill.",
+              "number": 199,
+              "tags": [
+                "cross-reference"
+              ],
+              "text": "What will customers receive in March?"
+            },
+            {
+              "answer": "C",
+              "choices": [
+                "They will all be retrained in November.",
+                "They will be asked to work on Sundays.",
+                "None of them has to take the new evening hours.",
+                "Their hourly allowance will rise in January."
+              ],
+              "explanation": "The memo states that no one currently on the team is required to work the evening slot, which is why 45 advisers were recruited for it; moving to evenings is voluntary and is arranged with a team leader.",
+              "number": 200,
+              "tags": [
+                "inference"
+              ],
+              "text": "What is indicated about the advisers already working at the service centre?"
+            }
+          ]
+        }
+      ],
+      "instructions": "In this part you will read a selection of texts. Each text or set of texts is followed by several questions. Select the best answer for each question.",
+      "part": 7,
+      "title": "Reading Comprehension"
+    }
+  ],
+  "title": "Reading Test 5 — full Reading section",
+  "version": 1
+}
