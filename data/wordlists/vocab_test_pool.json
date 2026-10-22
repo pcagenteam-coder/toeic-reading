@@ -1,0 +1,4589 @@
+{
+"meta": {
+"built_by": "data/wordlists/build_lexicon.py",
+"seed": 20261022,
+"design": "认识/不认识自评；每档按题内频次分 5 层均匀抽 100 个真词（排除虚词与 NGSL 前 150），另加约 15% 合法拼写假词（字母三元组生成，已排除 ECDICT 77 万词条/词形与真词编辑距离 1 的串）；选中假词=过度自评，用于校正",
+"scoring_hint": "估计词汇档 = 各档 (真词认识率 − 假词误认率) 校正后过 0.8 的最高档",
+"license": "真词释义同 lexicon_v1.json（CC BY 4.0/MIT）",
+"counts": {
+"real": 400,
+"fake": 71,
+"real_core": 100,
+"real_600": 100,
+"real_730": 100,
+"real_860": 100
+}
+},
+"items": [
+{
+"word": "seafood",
+"real": true,
+"tier": "730",
+"zh": "海鲜；海洋生物",
+"pos": [
+"n."
+],
+"id": "VT0001"
+},
+{
+"word": "insurance",
+"real": true,
+"tier": "600",
+"zh": "保险；保险金",
+"pos": [
+"n."
+],
+"id": "VT0002"
+},
+{
+"word": "assumption",
+"real": true,
+"tier": "600",
+"zh": "假设；推测；认为",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0003"
+},
+{
+"word": "popular",
+"real": true,
+"tier": "core",
+"zh": "广受欢迎的；普及的；受欢迎的",
+"pos": [
+"adj."
+],
+"id": "VT0004"
+},
+{
+"word": "info",
+"real": true,
+"tier": "860",
+"zh": "信息；数据",
+"pos": [
+"n."
+],
+"id": "VT0005"
+},
+{
+"word": "cancel",
+"real": true,
+"tier": "730",
+"zh": "取消；废除",
+"pos": [
+"v."
+],
+"id": "VT0006"
+},
+{
+"word": "spoleder",
+"real": false,
+"tier": null,
+"id": "VT0007"
+},
+{
+"word": "shutdown",
+"real": true,
+"tier": "860",
+"zh": "关门，停工，停机",
+"pos": [
+"n."
+],
+"id": "VT0008"
+},
+{
+"word": "memorize",
+"real": true,
+"tier": "730",
+"zh": "记忆并牢记；背诵",
+"pos": [
+"v."
+],
+"id": "VT0009"
+},
+{
+"word": "swear",
+"real": true,
+"tier": "730",
+"zh": "发誓；宣誓；强调",
+"pos": [
+"v."
+],
+"id": "VT0010"
+},
+{
+"word": "reduce",
+"real": true,
+"tier": "core",
+"zh": "减少；降低",
+"pos": [
+"v."
+],
+"id": "VT0011"
+},
+{
+"word": "anyway",
+"real": true,
+"tier": "core",
+"zh": "无论如何；话虽如此；总之",
+"pos": [
+"adv."
+],
+"id": "VT0012"
+},
+{
+"word": "wireless",
+"real": true,
+"tier": "600",
+"zh": "无线的；不使用电缆或线的",
+"pos": [
+"adj."
+],
+"id": "VT0013"
+},
+{
+"word": "resource",
+"real": true,
+"tier": "core",
+"zh": "资源；可用于达成目标的资产或能力",
+"pos": [
+"n."
+],
+"id": "VT0014"
+},
+{
+"word": "spror",
+"real": false,
+"tier": null,
+"id": "VT0015"
+},
+{
+"word": "controversial",
+"real": true,
+"tier": "860",
+"zh": "引起争议的；具争议性的",
+"pos": [
+"adj."
+],
+"id": "VT0016"
+},
+{
+"word": "problainve",
+"real": false,
+"tier": null,
+"id": "VT0017"
+},
+{
+"word": "migrant",
+"real": true,
+"tier": "860",
+"zh": "候鸟，移居者",
+"pos": [
+"n."
+],
+"id": "VT0018"
+},
+{
+"word": "nearby",
+"real": true,
+"tier": "600",
+"zh": "附近的；在附近",
+"pos": [
+"adv.",
+"adj."
+],
+"id": "VT0019"
+},
+{
+"word": "graterange",
+"real": false,
+"tier": null,
+"id": "VT0020"
+},
+{
+"word": "settlement",
+"real": true,
+"tier": "600",
+"zh": "和解",
+"pos": [
+"n."
+],
+"id": "VT0021"
+},
+{
+"word": "difficult",
+"real": true,
+"tier": "core",
+"zh": "困难的；棘手的；具有挑战性的",
+"pos": [
+"adj."
+],
+"id": "VT0022"
+},
+{
+"word": "discharge",
+"real": true,
+"tier": "860",
+"zh": "解除职务；出院；放电",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0023"
+},
+{
+"word": "tobacco",
+"real": true,
+"tier": "860",
+"zh": "烟草；雪茄、香烟等烟草制品",
+"pos": [
+"n."
+],
+"id": "VT0024"
+},
+{
+"word": "conglomerate",
+"real": true,
+"tier": "730",
+"zh": "企业集团",
+"pos": [
+"v."
+],
+"id": "VT0025"
+},
+{
+"word": "ophypial",
+"real": false,
+"tier": null,
+"id": "VT0026"
+},
+{
+"word": "minity",
+"real": false,
+"tier": null,
+"id": "VT0027"
+},
+{
+"word": "gasoline",
+"real": true,
+"tier": "730",
+"zh": "汽油；汽油燃料",
+"pos": [
+"n."
+],
+"id": "VT0028"
+},
+{
+"word": "activist",
+"real": true,
+"tier": "730",
+"zh": "激进主义分子",
+"pos": [
+"n."
+],
+"id": "VT0029"
+},
+{
+"word": "previous",
+"real": true,
+"tier": "core",
+"zh": "先前的；之前的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0030"
+},
+{
+"word": "stereo",
+"real": true,
+"tier": "730",
+"zh": "立体声系统；立体声设备",
+"pos": [
+"n."
+],
+"id": "VT0031"
+},
+{
+"word": "transport",
+"real": true,
+"tier": "600",
+"zh": "运输；运送",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0032"
+},
+{
+"word": "begin",
+"real": true,
+"tier": "core",
+"zh": "开始；起始",
+"pos": [
+"v."
+],
+"id": "VT0033"
+},
+{
+"word": "full",
+"real": true,
+"tier": "core",
+"zh": "完全的；全部的；饱满的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0034"
+},
+{
+"word": "center",
+"real": true,
+"tier": "core",
+"zh": "中心点；中心区域；总部",
+"pos": [
+"n."
+],
+"id": "VT0035"
+},
+{
+"word": "score",
+"real": true,
+"tier": "core",
+"zh": "分数；成绩；计分结果",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0036"
+},
+{
+"word": "firm",
+"real": true,
+"tier": "core",
+"zh": "公司、实体；坚定的、稳固的",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0037"
+},
+{
+"word": "bomb",
+"real": true,
+"tier": "600",
+"zh": "炸弹；轰炸，投弹于；失败",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0038"
+},
+{
+"word": "energy",
+"real": true,
+"tier": "core",
+"zh": "活力、能量；资源、能力",
+"pos": [
+"n."
+],
+"id": "VT0039"
+},
+{
+"word": "inflate",
+"real": true,
+"tier": "730",
+"zh": "膨胀；充气；扩大",
+"pos": [
+"v."
+],
+"id": "VT0040"
+},
+{
+"word": "television",
+"real": true,
+"tier": "core",
+"zh": "电视机；电视广播",
+"pos": [
+"n."
+],
+"id": "VT0041"
+},
+{
+"word": "elderly",
+"real": true,
+"tier": "860",
+"zh": "年长的；高龄的",
+"pos": [
+"adj."
+],
+"id": "VT0042"
+},
+{
+"word": "wevion",
+"real": false,
+"tier": null,
+"id": "VT0043"
+},
+{
+"word": "pretty",
+"real": true,
+"tier": "core",
+"zh": "相当漂亮，令人满意",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0044"
+},
+{
+"word": "staisil",
+"real": false,
+"tier": null,
+"id": "VT0045"
+},
+{
+"word": "spell",
+"real": true,
+"tier": "600",
+"zh": "拼写；拼出",
+"pos": [
+"v."
+],
+"id": "VT0046"
+},
+{
+"word": "locker",
+"real": true,
+"tier": "600",
+"zh": "抽屉，小柜，上锁人；锁柜",
+"pos": [
+"n."
+],
+"id": "VT0047"
+},
+{
+"word": "cormary",
+"real": false,
+"tier": null,
+"id": "VT0048"
+},
+{
+"word": "learn",
+"real": true,
+"tier": "core",
+"zh": "学习；获取知识或技能",
+"pos": [
+"v."
+],
+"id": "VT0049"
+},
+{
+"word": "workspace",
+"real": true,
+"tier": "860",
+"zh": "工作空间；办公区域",
+"pos": [
+"n."
+],
+"id": "VT0050"
+},
+{
+"word": "audio",
+"real": true,
+"tier": "730",
+"zh": "音频；声音频号",
+"pos": [
+"n."
+],
+"id": "VT0051"
+},
+{
+"word": "desirable",
+"real": true,
+"tier": "600",
+"zh": "令人满意的；理想的；值得拥有的",
+"pos": [
+"adj."
+],
+"id": "VT0052"
+},
+{
+"word": "sense",
+"real": true,
+"tier": "core",
+"zh": "感知能力；直觉；理解力；判断力、洞察力",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0053"
+},
+{
+"word": "dealer",
+"real": true,
+"tier": "860",
+"zh": "经销商，商人；交易员，贩卖商",
+"pos": [
+"n."
+],
+"id": "VT0054"
+},
+{
+"word": "helen",
+"real": true,
+"tier": "860",
+"zh": "海伦",
+"pos": [
+"n."
+],
+"id": "VT0055"
+},
+{
+"word": "attracted",
+"real": true,
+"tier": "860",
+"zh": "被吸引；引起兴趣",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0056"
+},
+{
+"word": "comprehend",
+"real": true,
+"tier": "860",
+"zh": "理解；领会",
+"pos": [
+"v."
+],
+"id": "VT0057"
+},
+{
+"word": "amend",
+"real": true,
+"tier": "730",
+"zh": "修改；修正；增补",
+"pos": [
+"v."
+],
+"id": "VT0058"
+},
+{
+"word": "decade",
+"real": true,
+"tier": "600",
+"zh": "十年；一个十年期间",
+"pos": [
+"n."
+],
+"id": "VT0059"
+},
+{
+"word": "repairperson",
+"real": true,
+"tier": "730",
+"zh": "维修人员；保养维修技术人员",
+"pos": [
+"n."
+],
+"id": "VT0060"
+},
+{
+"word": "mate",
+"real": true,
+"tier": "860",
+"zh": "配偶，对手，助手，将死；成配偶，紧密配合",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0061"
+},
+{
+"word": "strictly",
+"real": true,
+"tier": "730",
+"zh": "严格地；完全地；依照规定",
+"pos": [
+"adv."
+],
+"id": "VT0062"
+},
+{
+"word": "gentle",
+"real": true,
+"tier": "860",
+"zh": "温和的；柔和的；客气的",
+"pos": [
+"adj."
+],
+"id": "VT0063"
+},
+{
+"word": "ritly",
+"real": false,
+"tier": null,
+"id": "VT0064"
+},
+{
+"word": "repay",
+"real": true,
+"tier": "730",
+"zh": "偿还；报答",
+"pos": [
+"v."
+],
+"id": "VT0065"
+},
+{
+"word": "surface",
+"real": true,
+"tier": "600",
+"zh": "表面；外观；范围",
+"pos": [
+"n.",
+"v.",
+"adj."
+],
+"id": "VT0066"
+},
+{
+"word": "norwegian",
+"real": true,
+"tier": "860",
+"zh": "挪威的；挪威人的；挪威语的",
+"pos": [
+"adj."
+],
+"id": "VT0067"
+},
+{
+"word": "reception",
+"real": true,
+"tier": "600",
+"zh": "接待；款待；接待处",
+"pos": [
+"n."
+],
+"id": "VT0068"
+},
+{
+"word": "space",
+"real": true,
+"tier": "core",
+"zh": "空间；空隙；职位空缺",
+"pos": [
+"n."
+],
+"id": "VT0069"
+},
+{
+"word": "state",
+"real": true,
+"tier": "core",
+"zh": "说明、声明；状况、情形",
+"pos": [
+"n.",
+"v.",
+"adj."
+],
+"id": "VT0070"
+},
+{
+"word": "payout",
+"real": true,
+"tier": "730",
+"zh": "支付；付款；支出；赔款；发放的金额",
+"pos": [
+"n."
+],
+"id": "VT0071"
+},
+{
+"word": "stroke",
+"real": true,
+"tier": "860",
+"zh": "中风；划线",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0072"
+},
+{
+"word": "tape",
+"real": true,
+"tier": "600",
+"zh": "胶带",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0073"
+},
+{
+"word": "candidate",
+"real": true,
+"tier": "core",
+"zh": "候选人",
+"pos": [
+"n."
+],
+"id": "VT0074"
+},
+{
+"word": "pubtrisal",
+"real": false,
+"tier": null,
+"id": "VT0075"
+},
+{
+"word": "fluctuate",
+"real": true,
+"tier": "730",
+"zh": "波动；变动",
+"pos": [
+"v."
+],
+"id": "VT0076"
+},
+{
+"word": "design",
+"real": true,
+"tier": "core",
+"zh": "设计；规划；构思",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0077"
+},
+{
+"word": "covist",
+"real": false,
+"tier": null,
+"id": "VT0078"
+},
+{
+"word": "throw",
+"real": true,
+"tier": "core",
+"zh": "抛掷；丢弃；传输",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0079"
+},
+{
+"word": "rairep",
+"real": false,
+"tier": null,
+"id": "VT0080"
+},
+{
+"word": "random",
+"real": true,
+"tier": "860",
+"zh": "随意，随机；胡乱地",
+"pos": [
+"n.",
+"adj.",
+"adv."
+],
+"id": "VT0081"
+},
+{
+"word": "ounic",
+"real": false,
+"tier": null,
+"id": "VT0082"
+},
+{
+"word": "maybe",
+"real": true,
+"tier": "core",
+"zh": "或许；可能；表示不确定或推测",
+"pos": [
+"adv."
+],
+"id": "VT0083"
+},
+{
+"word": "aspect",
+"real": true,
+"tier": "600",
+"zh": "面向；层面；方面",
+"pos": [
+"n."
+],
+"id": "VT0084"
+},
+{
+"word": "warn",
+"real": true,
+"tier": "600",
+"zh": "警告；提醒",
+"pos": [
+"v."
+],
+"id": "VT0085"
+},
+{
+"word": "lip",
+"real": true,
+"tier": "860",
+"zh": "唇，口缘，唇状构造；以嘴唇碰，轻轻说出",
+"pos": [
+"n.",
+"v.",
+"adj."
+],
+"id": "VT0086"
+},
+{
+"word": "noublost",
+"real": false,
+"tier": null,
+"id": "VT0087"
+},
+{
+"word": "ingen",
+"real": false,
+"tier": null,
+"id": "VT0088"
+},
+{
+"word": "calibrate",
+"real": true,
+"tier": "860",
+"zh": "测定口径，校准，使标准化，调整",
+"pos": [
+"v."
+],
+"id": "VT0089"
+},
+{
+"word": "taker",
+"real": true,
+"tier": "600",
+"zh": "取者，捕者，接受者，收取者",
+"pos": [
+"n."
+],
+"id": "VT0090"
+},
+{
+"word": "seven",
+"real": true,
+"tier": "730",
+"zh": "七",
+"pos": [
+"n."
+],
+"id": "VT0091"
+},
+{
+"word": "handful",
+"real": true,
+"tier": "860",
+"zh": "少数，一把，棘手事",
+"pos": [
+"n."
+],
+"id": "VT0092"
+},
+{
+"word": "supported",
+"real": true,
+"tier": "860",
+"zh": "支持；赞助；维持；供应",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0093"
+},
+{
+"word": "military",
+"real": true,
+"tier": "core",
+"zh": "军事、军队；与军事相关的",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0094"
+},
+{
+"word": "handheld",
+"real": true,
+"tier": "860",
+"zh": "手持设备；便携式设备",
+"pos": [
+"adj."
+],
+"id": "VT0095"
+},
+{
+"word": "visual",
+"real": true,
+"tier": "730",
+"zh": "视觉上的；与视觉相关的；基于图像或图表的",
+"pos": [
+"adj."
+],
+"id": "VT0096"
+},
+{
+"word": "circulate",
+"real": true,
+"tier": "600",
+"zh": "流动；传播；发行",
+"pos": [
+"v."
+],
+"id": "VT0097"
+},
+{
+"word": "vacuum",
+"real": true,
+"tier": "730",
+"zh": "吸尘器；吸取",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0098"
+},
+{
+"word": "slitonowly",
+"real": false,
+"tier": null,
+"id": "VT0099"
+},
+{
+"word": "reliable",
+"real": true,
+"tier": "730",
+"zh": "可靠的；值得信赖的，能按预期运作的",
+"pos": [
+"adj."
+],
+"id": "VT0100"
+},
+{
+"word": "photocopy",
+"real": true,
+"tier": "600",
+"zh": "复印文档；复印复本",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0101"
+},
+{
+"word": "commodity",
+"real": true,
+"tier": "730",
+"zh": "商品；原料或农产品",
+"pos": [
+"n."
+],
+"id": "VT0102"
+},
+{
+"word": "create",
+"real": true,
+"tier": "core",
+"zh": "创造、创建、设计",
+"pos": [
+"v."
+],
+"id": "VT0103"
+},
+{
+"word": "riot",
+"real": true,
+"tier": "860",
+"zh": "暴动，骚乱；极度丰富、奔放",
+"pos": [
+"n."
+],
+"id": "VT0104"
+},
+{
+"word": "laudue",
+"real": false,
+"tier": null,
+"id": "VT0105"
+},
+{
+"word": "fit",
+"real": true,
+"tier": "core",
+"zh": "合身；符合；适应；符合要求",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0106"
+},
+{
+"word": "outstanding",
+"real": true,
+"tier": "600",
+"zh": "杰出、卓越的；超出预期的",
+"pos": [
+"adj."
+],
+"id": "VT0107"
+},
+{
+"word": "free",
+"real": true,
+"tier": "core",
+"zh": "免费的；无偿的；空闲的",
+"pos": [
+"adj.",
+"adv.",
+"n."
+],
+"id": "VT0108"
+},
+{
+"word": "provincial",
+"real": true,
+"tier": "860",
+"zh": "属于地方性的；省级的；地方性的、乡下的",
+"pos": [
+"adj."
+],
+"id": "VT0109"
+},
+{
+"word": "arrive",
+"real": true,
+"tier": "core",
+"zh": "抵达；到达",
+"pos": [
+"v."
+],
+"id": "VT0110"
+},
+{
+"word": "awareness",
+"real": true,
+"tier": "860",
+"zh": "对某事或某情况的认识或了解；意识",
+"pos": [
+"n."
+],
+"id": "VT0111"
+},
+{
+"word": "conversation",
+"real": true,
+"tier": "core",
+"zh": "对话；谈话",
+"pos": [
+"n."
+],
+"id": "VT0112"
+},
+{
+"word": "depression",
+"real": true,
+"tier": "860",
+"zh": "经济衰退；萧条期",
+"pos": [
+"n."
+],
+"id": "VT0113"
+},
+{
+"word": "remedy",
+"real": true,
+"tier": "730",
+"zh": "补救措施；解决方案",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0114"
+},
+{
+"word": "macroeconomic",
+"real": true,
+"tier": "730",
+"zh": "巨观经济的",
+"pos": [
+"adj."
+],
+"id": "VT0115"
+},
+{
+"word": "enthusiasm",
+"real": true,
+"tier": "730",
+"zh": "热情；热忱；兴奋感",
+"pos": [
+"n."
+],
+"id": "VT0116"
+},
+{
+"word": "loyal",
+"real": true,
+"tier": "600",
+"zh": "忠诚的；值得信赖的",
+"pos": [
+"adj."
+],
+"id": "VT0117"
+},
+{
+"word": "riumnaliar",
+"real": false,
+"tier": null,
+"id": "VT0118"
+},
+{
+"word": "concern",
+"real": true,
+"tier": "core",
+"zh": "关切、顾虑、担心；与有关",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0119"
+},
+{
+"word": "chemical",
+"real": true,
+"tier": "600",
+"zh": "化学物质；化学产品",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0120"
+},
+{
+"word": "singer",
+"real": true,
+"tier": "860",
+"zh": "歌手；演唱者",
+"pos": [
+"n."
+],
+"id": "VT0121"
+},
+{
+"word": "punishment",
+"real": true,
+"tier": "860",
+"zh": "惩罚；处罚；制裁",
+"pos": [
+"n."
+],
+"id": "VT0122"
+},
+{
+"word": "pie",
+"real": true,
+"tier": "730",
+"zh": "馅饼，财富，总额，贪污受贿，杂乱，喜鹊",
+"pos": [
+"n."
+],
+"id": "VT0123"
+},
+{
+"word": "percentage",
+"real": true,
+"tier": "600",
+"zh": "百分比，比例，数百分之",
+"pos": [
+"n."
+],
+"id": "VT0124"
+},
+{
+"word": "ninety",
+"real": true,
+"tier": "730",
+"zh": "九十",
+"pos": [
+"adj."
+],
+"id": "VT0125"
+},
+{
+"word": "july",
+"real": true,
+"tier": "730",
+"zh": "七月，一年中的第七个月",
+"pos": [
+"n."
+],
+"id": "VT0126"
+},
+{
+"word": "picnic",
+"real": true,
+"tier": "600",
+"zh": "野餐",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0127"
+},
+{
+"word": "temperature",
+"real": true,
+"tier": "600",
+"zh": "温度；温度计所测得的冷热程度",
+"pos": [
+"n."
+],
+"id": "VT0128"
+},
+{
+"word": "sport",
+"real": true,
+"tier": "core",
+"zh": "运动；体育活动",
+"pos": [
+"n."
+],
+"id": "VT0129"
+},
+{
+"word": "flower",
+"real": true,
+"tier": "600",
+"zh": "鲜花；花卉",
+"pos": [
+"n."
+],
+"id": "VT0130"
+},
+{
+"word": "sunscreen",
+"real": true,
+"tier": "730",
+"zh": "遮光剂",
+"pos": [
+"n."
+],
+"id": "VT0131"
+},
+{
+"word": "rely",
+"real": true,
+"tier": "600",
+"zh": "依靠；信赖；指完全取决于某人或某事",
+"pos": [
+"v."
+],
+"id": "VT0132"
+},
+{
+"word": "stone",
+"real": true,
+"tier": "600",
+"zh": "石头；坚硬的岩石",
+"pos": [
+"n."
+],
+"id": "VT0133"
+},
+{
+"word": "decrease",
+"real": true,
+"tier": "600",
+"zh": "减少；降低；下降",
+"pos": [
+"v."
+],
+"id": "VT0134"
+},
+{
+"word": "unclear",
+"real": true,
+"tier": "core",
+"zh": "不易了解的，不清楚的，含混的",
+"pos": [
+"adj."
+],
+"id": "VT0135"
+},
+{
+"word": "comedy",
+"real": true,
+"tier": "860",
+"zh": "喜剧，有趣的事情",
+"pos": [
+"n."
+],
+"id": "VT0136"
+},
+{
+"word": "sciply",
+"real": false,
+"tier": null,
+"id": "VT0137"
+},
+{
+"word": "polove",
+"real": false,
+"tier": null,
+"id": "VT0138"
+},
+{
+"word": "generative",
+"real": true,
+"tier": "860",
+"zh": "生殖的，生产的，有生殖力的",
+"pos": [
+"adj."
+],
+"id": "VT0139"
+},
+{
+"word": "express",
+"real": true,
+"tier": "core",
+"zh": "表达；传达",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0140"
+},
+{
+"word": "reasonable",
+"real": true,
+"tier": "600",
+"zh": "合理的；符合逻辑的；在可接受的范围内",
+"pos": [
+"adj."
+],
+"id": "VT0141"
+},
+{
+"word": "certified",
+"real": true,
+"tier": "730",
+"zh": "认证的；证明",
+"pos": [
+"adj."
+],
+"id": "VT0142"
+},
+{
+"word": "gradually",
+"real": true,
+"tier": "730",
+"zh": "逐渐地",
+"pos": [
+"adv."
+],
+"id": "VT0143"
+},
+{
+"word": "body",
+"real": true,
+"tier": "core",
+"zh": "身体",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0144"
+},
+{
+"word": "grifent",
+"real": false,
+"tier": null,
+"id": "VT0145"
+},
+{
+"word": "emerge",
+"real": true,
+"tier": "600",
+"zh": "浮现；出现",
+"pos": [
+"v."
+],
+"id": "VT0146"
+},
+{
+"word": "historic",
+"real": true,
+"tier": "730",
+"zh": "具有历史意义的；重要的，具有里程碑意义的",
+"pos": [
+"adj."
+],
+"id": "VT0147"
+},
+{
+"word": "hurry",
+"real": true,
+"tier": "730",
+"zh": "催促；赶紧，以快的速度行动",
+"pos": [
+"v.",
+"adv."
+],
+"id": "VT0148"
+},
+{
+"word": "depict",
+"real": true,
+"tier": "860",
+"zh": "描绘；描写；呈现",
+"pos": [
+"v."
+],
+"id": "VT0149"
+},
+{
+"word": "legislation",
+"real": true,
+"tier": "600",
+"zh": "立法；法律",
+"pos": [
+"n."
+],
+"id": "VT0150"
+},
+{
+"word": "bring",
+"real": true,
+"tier": "core",
+"zh": "携带、带来；将从带到",
+"pos": [
+"v."
+],
+"id": "VT0151"
+},
+{
+"word": "activate",
+"real": true,
+"tier": "600",
+"zh": "启动；激活；使生效",
+"pos": [
+"v."
+],
+"id": "VT0152"
+},
+{
+"word": "unplug",
+"real": true,
+"tier": "730",
+"zh": "拔掉插头；断开电源",
+"pos": [
+"v."
+],
+"id": "VT0153"
+},
+{
+"word": "advisor",
+"real": true,
+"tier": "600",
+"zh": "顾问；建议人",
+"pos": [
+"n."
+],
+"id": "VT0154"
+},
+{
+"word": "comment",
+"real": true,
+"tier": "core",
+"zh": "评论；意见；发表看法",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0155"
+},
+{
+"word": "competence",
+"real": true,
+"tier": "860",
+"zh": "胜任，职称，能力；能力，活性",
+"pos": [
+"n."
+],
+"id": "VT0156"
+},
+{
+"word": "fortice",
+"real": false,
+"tier": null,
+"id": "VT0157"
+},
+{
+"word": "benefit",
+"real": true,
+"tier": "core",
+"zh": "利益；好处；优势",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0158"
+},
+{
+"word": "recent",
+"real": true,
+"tier": "core",
+"zh": "近来的；最近的",
+"pos": [
+"adj."
+],
+"id": "VT0159"
+},
+{
+"word": "appointment",
+"real": true,
+"tier": "600",
+"zh": "预约、约会",
+"pos": [
+"n."
+],
+"id": "VT0160"
+},
+{
+"word": "cookbook",
+"real": true,
+"tier": "730",
+"zh": "食谱，烹饪指南",
+"pos": [
+"n."
+],
+"id": "VT0161"
+},
+{
+"word": "creamery",
+"real": true,
+"tier": "860",
+"zh": "乳品厂，乳制品商店；乳油制造厂",
+"pos": [
+"n."
+],
+"id": "VT0162"
+},
+{
+"word": "poison",
+"real": true,
+"tier": "860",
+"zh": "毒物；有毒物质，可能对健康造成危害",
+"pos": [
+"n.",
+"v.",
+"adj."
+],
+"id": "VT0163"
+},
+{
+"word": "attly",
+"real": false,
+"tier": null,
+"id": "VT0164"
+},
+{
+"word": "oversight",
+"real": true,
+"tier": "860",
+"zh": "监督；疏忽",
+"pos": [
+"n."
+],
+"id": "VT0165"
+},
+{
+"word": "safely",
+"real": true,
+"tier": "730",
+"zh": "安全地；以安全的方式",
+"pos": [
+"adv."
+],
+"id": "VT0166"
+},
+{
+"word": "foureplay",
+"real": false,
+"tier": null,
+"id": "VT0167"
+},
+{
+"word": "intervene",
+"real": true,
+"tier": "860",
+"zh": "插入，调停，干涉；进场干预",
+"pos": [
+"v."
+],
+"id": "VT0168"
+},
+{
+"word": "float",
+"real": true,
+"tier": "860",
+"zh": "漂浮；浮于表面；在交易所交易",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0169"
+},
+{
+"word": "dual",
+"real": true,
+"tier": "730",
+"zh": "双重的，双的；双数",
+"pos": [
+"adj.",
+"n."
+],
+"id": "VT0170"
+},
+{
+"word": "reorganization",
+"real": true,
+"tier": "860",
+"zh": "改组，再编制，改造；再机化，组织再生",
+"pos": [
+"n."
+],
+"id": "VT0171"
+},
+{
+"word": "staff",
+"real": true,
+"tier": "core",
+"zh": "员工、工作人员；团队",
+"pos": [
+"n."
+],
+"id": "VT0172"
+},
+{
+"word": "transition",
+"real": true,
+"tier": "730",
+"zh": "转变；过渡期；转换",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0173"
+},
+{
+"word": "ship",
+"real": true,
+"tier": "600",
+"zh": "船舶；货物运输船",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0174"
+},
+{
+"word": "cable",
+"real": true,
+"tier": "730",
+"zh": "连接线、缆线",
+"pos": [
+"n."
+],
+"id": "VT0175"
+},
+{
+"word": "parliament",
+"real": true,
+"tier": "730",
+"zh": "国会；议会",
+"pos": [
+"n."
+],
+"id": "VT0176"
+},
+{
+"word": "hit",
+"real": true,
+"tier": "core",
+"zh": "击打；撞击；达到",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0177"
+},
+{
+"word": "alone",
+"real": true,
+"tier": "core",
+"zh": "独自一人；孤单的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0178"
+},
+{
+"word": "metric",
+"real": true,
+"tier": "730",
+"zh": "指针",
+"pos": [
+"adj."
+],
+"id": "VT0179"
+},
+{
+"word": "ditoriker",
+"real": false,
+"tier": null,
+"id": "VT0180"
+},
+{
+"word": "prevent",
+"real": true,
+"tier": "600",
+"zh": "采取措施以避免或阻止某事发生",
+"pos": [
+"v."
+],
+"id": "VT0181"
+},
+{
+"word": "shape",
+"real": true,
+"tier": "core",
+"zh": "外形；形状；轮廓；格式",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0182"
+},
+{
+"word": "regime",
+"real": true,
+"tier": "730",
+"zh": "政权，当权期间，政体，社会制度，体制",
+"pos": [
+"n."
+],
+"id": "VT0183"
+},
+{
+"word": "antrunt",
+"real": false,
+"tier": null,
+"id": "VT0184"
+},
+{
+"word": "top",
+"real": true,
+"tier": "core",
+"zh": "覆盖在之上；装饰",
+"pos": [
+"v."
+],
+"id": "VT0185"
+},
+{
+"word": "valid",
+"real": true,
+"tier": "600",
+"zh": "有效的；合法的；可接受的",
+"pos": [
+"adj."
+],
+"id": "VT0186"
+},
+{
+"word": "sunny",
+"real": true,
+"tier": "600",
+"zh": "阳光的；晴朗的",
+"pos": [
+"adj."
+],
+"id": "VT0187"
+},
+{
+"word": "agent",
+"real": true,
+"tier": "core",
+"zh": "代表、代理人；经纪人",
+"pos": [
+"n."
+],
+"id": "VT0188"
+},
+{
+"word": "coomly",
+"real": false,
+"tier": null,
+"id": "VT0189"
+},
+{
+"word": "meappep",
+"real": false,
+"tier": null,
+"id": "VT0190"
+},
+{
+"word": "pritatee",
+"real": false,
+"tier": null,
+"id": "VT0191"
+},
+{
+"word": "worth",
+"real": true,
+"tier": "core",
+"zh": "价值；值得的程度",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0192"
+},
+{
+"word": "conequent",
+"real": false,
+"tier": null,
+"id": "VT0193"
+},
+{
+"word": "researcher",
+"real": true,
+"tier": "600",
+"zh": "研究人员；研究员",
+"pos": [
+"n."
+],
+"id": "VT0194"
+},
+{
+"word": "path",
+"real": true,
+"tier": "600",
+"zh": "路线；道路；进步途径",
+"pos": [
+"n."
+],
+"id": "VT0195"
+},
+{
+"word": "governmental",
+"real": true,
+"tier": "860",
+"zh": "政治的，统治上的，政府的",
+"pos": [
+"adj."
+],
+"id": "VT0196"
+},
+{
+"word": "chatbot",
+"real": true,
+"tier": "860",
+"zh": "聊天机器人",
+"pos": [
+"n."
+],
+"id": "VT0197"
+},
+{
+"word": "peter",
+"real": true,
+"tier": "860",
+"zh": "逐渐消失，逐渐减少",
+"pos": [
+"v."
+],
+"id": "VT0198"
+},
+{
+"word": "fragment",
+"real": true,
+"tier": "860",
+"zh": "碎片，破片，片段；段落",
+"pos": [
+"n."
+],
+"id": "VT0199"
+},
+{
+"word": "entemp",
+"real": false,
+"tier": null,
+"id": "VT0200"
+},
+{
+"word": "million",
+"real": true,
+"tier": "730",
+"zh": "百万",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0201"
+},
+{
+"word": "morning",
+"real": true,
+"tier": "core",
+"zh": "早晨",
+"pos": [
+"n."
+],
+"id": "VT0202"
+},
+{
+"word": "dishwasher",
+"real": true,
+"tier": "730",
+"zh": "洗碗机；用于清洗餐具的家用电器",
+"pos": [
+"n."
+],
+"id": "VT0203"
+},
+{
+"word": "tribunal",
+"real": true,
+"tier": "860",
+"zh": "法庭；特别法庭；仲裁庭；审裁处",
+"pos": [
+"n."
+],
+"id": "VT0204"
+},
+{
+"word": "minor",
+"real": true,
+"tier": "600",
+"zh": "次要的；不重要的；轻微的",
+"pos": [
+"adj.",
+"n."
+],
+"id": "VT0205"
+},
+{
+"word": "course",
+"real": true,
+"tier": "core",
+"zh": "课程；训练计划",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0206"
+},
+{
+"word": "process",
+"real": true,
+"tier": "core",
+"zh": "流程；处理进程；步骤",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0207"
+},
+{
+"word": "story",
+"real": true,
+"tier": "core",
+"zh": "叙述、故事；演示文稿、报告",
+"pos": [
+"n."
+],
+"id": "VT0208"
+},
+{
+"word": "miseke",
+"real": false,
+"tier": null,
+"id": "VT0209"
+},
+{
+"word": "toner",
+"real": true,
+"tier": "730",
+"zh": "调色剂；增色剂",
+"pos": [
+"n."
+],
+"id": "VT0210"
+},
+{
+"word": "judge",
+"real": true,
+"tier": "core",
+"zh": "评判；裁决；法官",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0211"
+},
+{
+"word": "answer",
+"real": true,
+"tier": "core",
+"zh": "回复；答复；回应",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0212"
+},
+{
+"word": "birstathug",
+"real": false,
+"tier": null,
+"id": "VT0213"
+},
+{
+"word": "hypothesis",
+"real": true,
+"tier": "860",
+"zh": "假设",
+"pos": [
+"n."
+],
+"id": "VT0214"
+},
+{
+"word": "escape",
+"real": true,
+"tier": "600",
+"zh": "逃离；脱离",
+"pos": [
+"v."
+],
+"id": "VT0215"
+},
+{
+"word": "confirmation",
+"real": true,
+"tier": "600",
+"zh": "确认；证明；认可",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0216"
+},
+{
+"word": "multiple",
+"real": true,
+"tier": "600",
+"zh": "多重的；数个的；多种的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0217"
+},
+{
+"word": "pholuxuree",
+"real": false,
+"tier": null,
+"id": "VT0218"
+},
+{
+"word": "conservation",
+"real": true,
+"tier": "730",
+"zh": "保护资源，环境或自然生态系统的行为或措施",
+"pos": [
+"n."
+],
+"id": "VT0219"
+},
+{
+"word": "liquidation",
+"real": true,
+"tier": "860",
+"zh": "清算；变卖资产；公司破产",
+"pos": [
+"n."
+],
+"id": "VT0220"
+},
+{
+"word": "packet",
+"real": true,
+"tier": "600",
+"zh": "小包，一批信件，大量，信息包",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0221"
+},
+{
+"word": "opt",
+"real": true,
+"tier": "730",
+"zh": "选择；选定；决定",
+"pos": [
+"v."
+],
+"id": "VT0222"
+},
+{
+"word": "veto",
+"real": true,
+"tier": "860",
+"zh": "否决权；否决，禁止",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0223"
+},
+{
+"word": "retirement",
+"real": true,
+"tier": "860",
+"zh": "退休；退休金；退职",
+"pos": [
+"n."
+],
+"id": "VT0224"
+},
+{
+"word": "timely",
+"real": true,
+"tier": "730",
+"zh": "及时的；适时的；准时的",
+"pos": [
+"adj."
+],
+"id": "VT0225"
+},
+{
+"word": "conclude",
+"real": true,
+"tier": "600",
+"zh": "结论；结束；推论出",
+"pos": [
+"v."
+],
+"id": "VT0226"
+},
+{
+"word": "sculpture",
+"real": true,
+"tier": "600",
+"zh": "雕塑品；雕刻艺术品",
+"pos": [
+"n."
+],
+"id": "VT0227"
+},
+{
+"word": "faunk",
+"real": false,
+"tier": null,
+"id": "VT0228"
+},
+{
+"word": "saturday",
+"real": true,
+"tier": "730",
+"zh": "星期六，周六",
+"pos": [
+"n."
+],
+"id": "VT0229"
+},
+{
+"word": "segment",
+"real": true,
+"tier": "860",
+"zh": "区段；部门；片段",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0230"
+},
+{
+"word": "pain",
+"real": true,
+"tier": "600",
+"zh": "痛苦、疼痛；困难、不愉快的事物",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0231"
+},
+{
+"word": "vine",
+"real": true,
+"tier": "860",
+"zh": "藤本植物，葡萄，藤，蔓；形成藤蔓",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0232"
+},
+{
+"word": "dictate",
+"real": true,
+"tier": "860",
+"zh": "口述、指示、传达",
+"pos": [
+"v."
+],
+"id": "VT0233"
+},
+{
+"word": "planet",
+"real": true,
+"tier": "860",
+"zh": "行星，命运星辰，杰出的人，重大影响的事",
+"pos": [
+"n."
+],
+"id": "VT0234"
+},
+{
+"word": "waress",
+"real": false,
+"tier": null,
+"id": "VT0235"
+},
+{
+"word": "skill",
+"real": true,
+"tier": "core",
+"zh": "能力；技巧；擅长领域",
+"pos": [
+"n."
+],
+"id": "VT0236"
+},
+{
+"word": "comict",
+"real": false,
+"tier": null,
+"id": "VT0237"
+},
+{
+"word": "equation",
+"real": true,
+"tier": "860",
+"zh": "相等，等式，平衡；方程序",
+"pos": [
+"n."
+],
+"id": "VT0238"
+},
+{
+"word": "clean",
+"real": true,
+"tier": "core",
+"zh": "清洁；使干净；清除",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0239"
+},
+{
+"word": "aulagesse",
+"real": false,
+"tier": null,
+"id": "VT0240"
+},
+{
+"word": "evaluate",
+"real": true,
+"tier": "730",
+"zh": "评估；评估价值或表现",
+"pos": [
+"v."
+],
+"id": "VT0241"
+},
+{
+"word": "poside",
+"real": false,
+"tier": null,
+"id": "VT0242"
+},
+{
+"word": "arrangement",
+"real": true,
+"tier": "600",
+"zh": "安排；协调；计划",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0243"
+},
+{
+"word": "foreigner",
+"real": true,
+"tier": "730",
+"zh": "外国人；外国人士",
+"pos": [
+"n."
+],
+"id": "VT0244"
+},
+{
+"word": "postponement",
+"real": true,
+"tier": "860",
+"zh": "延期；推迟",
+"pos": [
+"n."
+],
+"id": "VT0245"
+},
+{
+"word": "communicate",
+"real": true,
+"tier": "600",
+"zh": "传达信息、想法或感受；沟通",
+"pos": [
+"v."
+],
+"id": "VT0246"
+},
+{
+"word": "naturally",
+"real": true,
+"tier": "860",
+"zh": "自然地；顺其自然地；本能地",
+"pos": [
+"adv."
+],
+"id": "VT0247"
+},
+{
+"word": "disruptive",
+"real": true,
+"tier": "860",
+"zh": "分裂的，破坏的；击穿的，中断的",
+"pos": [
+"adj."
+],
+"id": "VT0248"
+},
+{
+"word": "join",
+"real": true,
+"tier": "core",
+"zh": "加入；参与；联合",
+"pos": [
+"v."
+],
+"id": "VT0249"
+},
+{
+"word": "rucconic",
+"real": false,
+"tier": null,
+"id": "VT0250"
+},
+{
+"word": "voice",
+"real": true,
+"tier": "core",
+"zh": "声音；语气；表达意见的方式",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0251"
+},
+{
+"word": "belief",
+"real": true,
+"tier": "600",
+"zh": "信念；相信",
+"pos": [
+"n."
+],
+"id": "VT0252"
+},
+{
+"word": "cart",
+"real": true,
+"tier": "600",
+"zh": "手推车；购物车",
+"pos": [
+"n."
+],
+"id": "VT0253"
+},
+{
+"word": "inventory",
+"real": true,
+"tier": "600",
+"zh": "库存；存货",
+"pos": [
+"n."
+],
+"id": "VT0254"
+},
+{
+"word": "position",
+"real": true,
+"tier": "core",
+"zh": "职位；位置；状态；立场",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0255"
+},
+{
+"word": "circle",
+"real": true,
+"tier": "600",
+"zh": "圆周，社交圈，循环，范围；围着，环绕",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0256"
+},
+{
+"word": "grade",
+"real": true,
+"tier": "600",
+"zh": "评级；等级；成绩",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0257"
+},
+{
+"word": "improved",
+"real": true,
+"tier": "730",
+"zh": "改善；提升；改良",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0258"
+},
+{
+"word": "city",
+"real": true,
+"tier": "core",
+"zh": "都市；城市",
+"pos": [
+"n."
+],
+"id": "VT0259"
+},
+{
+"word": "black",
+"real": true,
+"tier": "core",
+"zh": "黑色；深色；正式的；严肃的",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0260"
+},
+{
+"word": "championship",
+"real": true,
+"tier": "860",
+"zh": "冠军身份，冠军称号，捍卫",
+"pos": [
+"n."
+],
+"id": "VT0261"
+},
+{
+"word": "whikete",
+"real": false,
+"tier": null,
+"id": "VT0262"
+},
+{
+"word": "classifier",
+"real": true,
+"tier": "860",
+"zh": "分类者，分粒器，分级机，汉语中的量词",
+"pos": [
+"n."
+],
+"id": "VT0263"
+},
+{
+"word": "pleasing",
+"real": true,
+"tier": "860",
+"zh": "令人愉悦的；使人满意的；使人感到高兴的",
+"pos": [
+"adj."
+],
+"id": "VT0264"
+},
+{
+"word": "terminal",
+"real": true,
+"tier": "600",
+"zh": "终点站；终端机",
+"pos": [
+"n."
+],
+"id": "VT0265"
+},
+{
+"word": "beam",
+"real": true,
+"tier": "860",
+"zh": "光芒；梁、桁",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0266"
+},
+{
+"word": "materially",
+"real": true,
+"tier": "860",
+"zh": "实质上，重大，物质上",
+"pos": [
+"adv."
+],
+"id": "VT0267"
+},
+{
+"word": "grant",
+"real": true,
+"tier": "600",
+"zh": "补助金；授予；同意",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0268"
+},
+{
+"word": "gas",
+"real": true,
+"tier": "600",
+"zh": "天然气；燃料气体",
+"pos": [
+"n."
+],
+"id": "VT0269"
+},
+{
+"word": "substance",
+"real": true,
+"tier": "730",
+"zh": "物质；成分；内容；主题",
+"pos": [
+"n."
+],
+"id": "VT0270"
+},
+{
+"word": "cybersecurity",
+"real": true,
+"tier": "860",
+"zh": "网络安全",
+"pos": [
+"n."
+],
+"id": "VT0271"
+},
+{
+"word": "detach",
+"real": true,
+"tier": "730",
+"zh": "分离；拆卸；移除",
+"pos": [
+"v."
+],
+"id": "VT0272"
+},
+{
+"word": "contiont",
+"real": false,
+"tier": null,
+"id": "VT0273"
+},
+{
+"word": "background",
+"real": true,
+"tier": "600",
+"zh": "指个人或事物过去的经历、教育、工作等信息",
+"pos": [
+"n."
+],
+"id": "VT0274"
+},
+{
+"word": "trend",
+"real": true,
+"tier": "600",
+"zh": "趋势；潮流；发展方向",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0275"
+},
+{
+"word": "piece",
+"real": true,
+"tier": "core",
+"zh": "指单独的一件物品，部件或一段信息",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0276"
+},
+{
+"word": "adjacent",
+"real": true,
+"tier": "730",
+"zh": "紧邻的；相邻的",
+"pos": [
+"adj."
+],
+"id": "VT0277"
+},
+{
+"word": "skim",
+"real": true,
+"tier": "600",
+"zh": "撇取浮沫，略读，掠过；擦过，浏览",
+"pos": [
+"v.",
+"n.",
+"adj."
+],
+"id": "VT0278"
+},
+{
+"word": "bank",
+"real": true,
+"tier": "core",
+"zh": "银行；金融机构",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0279"
+},
+{
+"word": "resolve",
+"real": true,
+"tier": "600",
+"zh": "解决；调解；决心",
+"pos": [
+"v."
+],
+"id": "VT0280"
+},
+{
+"word": "allocation",
+"real": true,
+"tier": "730",
+"zh": "分配",
+"pos": [
+"n."
+],
+"id": "VT0281"
+},
+{
+"word": "sick",
+"real": true,
+"tier": "600",
+"zh": "生病的；身体不适的；感到厌烦或不满",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0282"
+},
+{
+"word": "batch",
+"real": true,
+"tier": "730",
+"zh": "一批；一批量",
+"pos": [
+"n."
+],
+"id": "VT0283"
+},
+{
+"word": "assemble",
+"real": true,
+"tier": "730",
+"zh": "组装；组合；聚集",
+"pos": [
+"v."
+],
+"id": "VT0284"
+},
+{
+"word": "debit",
+"real": true,
+"tier": "730",
+"zh": "借款；从帐户扣款",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0285"
+},
+{
+"word": "honver",
+"real": false,
+"tier": null,
+"id": "VT0286"
+},
+{
+"word": "photo",
+"real": true,
+"tier": "600",
+"zh": "照片；摄影作品",
+"pos": [
+"n."
+],
+"id": "VT0287"
+},
+{
+"word": "analytic",
+"real": true,
+"tier": "730",
+"zh": "分析的，善于分析的，解析的",
+"pos": [
+"adj."
+],
+"id": "VT0288"
+},
+{
+"word": "compare",
+"real": true,
+"tier": "core",
+"zh": "比较；将事物进行对照以找出异同",
+"pos": [
+"v."
+],
+"id": "VT0289"
+},
+{
+"word": "alloweely",
+"real": false,
+"tier": null,
+"id": "VT0290"
+},
+{
+"word": "convergence",
+"real": true,
+"tier": "860",
+"zh": "集中，收敛；收敛，会聚",
+"pos": [
+"n."
+],
+"id": "VT0291"
+},
+{
+"word": "seize",
+"real": true,
+"tier": "730",
+"zh": "抓住机会；强行夺取；控制",
+"pos": [
+"v."
+],
+"id": "VT0292"
+},
+{
+"word": "divide",
+"real": true,
+"tier": "600",
+"zh": "将划分；分配；除",
+"pos": [
+"v."
+],
+"id": "VT0293"
+},
+{
+"word": "commit",
+"real": true,
+"tier": "600",
+"zh": "承诺；致力于；做出承诺",
+"pos": [
+"v."
+],
+"id": "VT0294"
+},
+{
+"word": "succession",
+"real": true,
+"tier": "860",
+"zh": "继任；接替；一系列",
+"pos": [
+"n."
+],
+"id": "VT0295"
+},
+{
+"word": "fraud",
+"real": true,
+"tier": "730",
+"zh": "欺诈行为；诈欺",
+"pos": [
+"n."
+],
+"id": "VT0296"
+},
+{
+"word": "choice",
+"real": true,
+"tier": "core",
+"zh": "选择；选项",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0297"
+},
+{
+"word": "app",
+"real": true,
+"tier": "730",
+"zh": "应用程序",
+"pos": [
+"n."
+],
+"id": "VT0298"
+},
+{
+"word": "boost",
+"real": true,
+"tier": "860",
+"zh": "提升；增强",
+"pos": [
+"v."
+],
+"id": "VT0299"
+},
+{
+"word": "microwave",
+"real": true,
+"tier": "730",
+"zh": "微波",
+"pos": [
+"n."
+],
+"id": "VT0300"
+},
+{
+"word": "lodge",
+"real": true,
+"tier": "860",
+"zh": "入住；提出，递交",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0301"
+},
+{
+"word": "steadily",
+"real": true,
+"tier": "600",
+"zh": "稳定地；持续地",
+"pos": [
+"adv."
+],
+"id": "VT0302"
+},
+{
+"word": "jump",
+"real": true,
+"tier": "600",
+"zh": "跃起；跳跃；突然增加",
+"pos": [
+"v."
+],
+"id": "VT0303"
+},
+{
+"word": "correctly",
+"real": true,
+"tier": "600",
+"zh": "正确地；恰当地",
+"pos": [
+"adv."
+],
+"id": "VT0304"
+},
+{
+"word": "insert",
+"real": true,
+"tier": "730",
+"zh": "插入；嵌入；输入",
+"pos": [
+"v."
+],
+"id": "VT0305"
+},
+{
+"word": "bridge",
+"real": true,
+"tier": "600",
+"zh": "桥，舰桥，桥梁，桥牌；架桥于，跨越",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0306"
+},
+{
+"word": "unneverist",
+"real": false,
+"tier": null,
+"id": "VT0307"
+},
+{
+"word": "student",
+"real": true,
+"tier": "core",
+"zh": "学生；学习者",
+"pos": [
+"n."
+],
+"id": "VT0308"
+},
+{
+"word": "journey",
+"real": true,
+"tier": "600",
+"zh": "旅程；一段经历",
+"pos": [
+"n."
+],
+"id": "VT0309"
+},
+{
+"word": "court",
+"real": true,
+"tier": "core",
+"zh": "法院；法庭；球场",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0310"
+},
+{
+"word": "avail",
+"real": true,
+"tier": "860",
+"zh": "有用，有利；有利于；效用，利益",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0311"
+},
+{
+"word": "proposal",
+"real": true,
+"tier": "core",
+"zh": "提案；建议方案",
+"pos": [
+"n."
+],
+"id": "VT0312"
+},
+{
+"word": "gauge",
+"real": true,
+"tier": "860",
+"zh": "衡量标准；测量仪器；评估",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0313"
+},
+{
+"word": "bid",
+"real": true,
+"tier": "730",
+"zh": "出价；竞标；提出",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0314"
+},
+{
+"word": "experience",
+"real": true,
+"tier": "core",
+"zh": "经验；经历；技能",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0315"
+},
+{
+"word": "inevitable",
+"real": true,
+"tier": "730",
+"zh": "不可避免的；难以避免的",
+"pos": [
+"adj."
+],
+"id": "VT0316"
+},
+{
+"word": "generation",
+"real": true,
+"tier": "core",
+"zh": "世代；群体",
+"pos": [
+"n."
+],
+"id": "VT0317"
+},
+{
+"word": "invite",
+"real": true,
+"tier": "600",
+"zh": "邀请；请求参与",
+"pos": [
+"v."
+],
+"id": "VT0318"
+},
+{
+"word": "dentist",
+"real": true,
+"tier": "600",
+"zh": "牙医；牙科医生",
+"pos": [
+"n."
+],
+"id": "VT0319"
+},
+{
+"word": "node",
+"real": true,
+"tier": "730",
+"zh": "节，结节，瘤；节点",
+"pos": [
+"n."
+],
+"id": "VT0320"
+},
+{
+"word": "regration",
+"real": false,
+"tier": null,
+"id": "VT0321"
+},
+{
+"word": "impression",
+"real": true,
+"tier": "600",
+"zh": "印象；观感；意见",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0322"
+},
+{
+"word": "sample",
+"real": true,
+"tier": "600",
+"zh": "样本；试用品；摘录",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0323"
+},
+{
+"word": "exotic",
+"real": true,
+"tier": "730",
+"zh": "外来、异国情调的；不常见的，引人注目的",
+"pos": [
+"adj."
+],
+"id": "VT0324"
+},
+{
+"word": "refinver",
+"real": false,
+"tier": null,
+"id": "VT0325"
+},
+{
+"word": "subscriber",
+"real": true,
+"tier": "600",
+"zh": "订阅者；订户",
+"pos": [
+"n."
+],
+"id": "VT0326"
+},
+{
+"word": "auckwarede",
+"real": false,
+"tier": null,
+"id": "VT0327"
+},
+{
+"word": "zip",
+"real": true,
+"tier": "860",
+"zh": "将压缩成 ZIP 文件；ZIP 压缩文件",
+"pos": [
+"v."
+],
+"id": "VT0328"
+},
+{
+"word": "accommodation",
+"real": true,
+"tier": "600",
+"zh": "住宿；膳宿安排；住宿福利",
+"pos": [
+"n."
+],
+"id": "VT0329"
+},
+{
+"word": "truly",
+"real": true,
+"tier": "600",
+"zh": "真正地；确实地；诚挚地",
+"pos": [
+"adv."
+],
+"id": "VT0330"
+},
+{
+"word": "second",
+"real": true,
+"tier": "core",
+"zh": "第二；仅次于第一的；一分钟的六十秒",
+"pos": [
+"n.",
+"adj.",
+"adv."
+],
+"id": "VT0331"
+},
+{
+"word": "van",
+"real": true,
+"tier": "730",
+"zh": "货车；小型商用车",
+"pos": [
+"n."
+],
+"id": "VT0332"
+},
+{
+"word": "arm",
+"real": true,
+"tier": "core",
+"zh": "手臂，袖子，狭长港湾，武器；武装，装备",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0333"
+},
+{
+"word": "manual",
+"real": true,
+"tier": "600",
+"zh": "手动操作的；产品使用手册；人工的",
+"pos": [
+"adj.",
+"n."
+],
+"id": "VT0334"
+},
+{
+"word": "banker",
+"real": true,
+"tier": "600",
+"zh": "银行家；金融从业人员",
+"pos": [
+"n."
+],
+"id": "VT0335"
+},
+{
+"word": "based",
+"real": true,
+"tier": "730",
+"zh": "基于；以为基础；根据",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0336"
+},
+{
+"word": "soar",
+"real": true,
+"tier": "730",
+"zh": "大幅上涨；激扬，节节攀升",
+"pos": [
+"v."
+],
+"id": "VT0337"
+},
+{
+"word": "lure",
+"real": true,
+"tier": "860",
+"zh": "诱惑；吸引",
+"pos": [
+"v."
+],
+"id": "VT0338"
+},
+{
+"word": "nisal",
+"real": false,
+"tier": null,
+"id": "VT0339"
+},
+{
+"word": "salt",
+"real": true,
+"tier": "730",
+"zh": "食盐；盐",
+"pos": [
+"n."
+],
+"id": "VT0340"
+},
+{
+"word": "account",
+"real": true,
+"tier": "core",
+"zh": "帐户；纪录；说明；负责人",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0341"
+},
+{
+"word": "pitch",
+"real": true,
+"tier": "730",
+"zh": "语气、表达方式；音高",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0342"
+},
+{
+"word": "verove",
+"real": false,
+"tier": null,
+"id": "VT0343"
+},
+{
+"word": "founder",
+"real": true,
+"tier": "730",
+"zh": "创办人；创始人",
+"pos": [
+"n."
+],
+"id": "VT0344"
+},
+{
+"word": "throver",
+"real": false,
+"tier": null,
+"id": "VT0345"
+},
+{
+"word": "wordirever",
+"real": false,
+"tier": null,
+"id": "VT0346"
+},
+{
+"word": "candy",
+"real": true,
+"tier": "730",
+"zh": "糖果；甜食",
+"pos": [
+"n."
+],
+"id": "VT0347"
+},
+{
+"word": "record",
+"real": true,
+"tier": "core",
+"zh": "记录；录音；销售数据",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0348"
+},
+{
+"word": "hertivelph",
+"real": false,
+"tier": null,
+"id": "VT0349"
+},
+{
+"word": "whiblis",
+"real": false,
+"tier": null,
+"id": "VT0350"
+},
+{
+"word": "aversion",
+"real": true,
+"tier": "860",
+"zh": "厌恶，讨厌的事，讨厌的人",
+"pos": [
+"n."
+],
+"id": "VT0351"
+},
+{
+"word": "nerve",
+"real": true,
+"tier": "860",
+"zh": "精神，勇气，叶脉，神经；鼓起勇气",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0352"
+},
+{
+"word": "machine",
+"real": true,
+"tier": "core",
+"zh": "机器；设备",
+"pos": [
+"n."
+],
+"id": "VT0353"
+},
+{
+"word": "selusapil",
+"real": false,
+"tier": null,
+"id": "VT0354"
+},
+{
+"word": "tomish",
+"real": false,
+"tier": null,
+"id": "VT0355"
+},
+{
+"word": "victory",
+"real": true,
+"tier": "600",
+"zh": "胜利，战胜，克服",
+"pos": [
+"n."
+],
+"id": "VT0356"
+},
+{
+"word": "oil",
+"real": true,
+"tier": "core",
+"zh": "石油；润滑油",
+"pos": [
+"n."
+],
+"id": "VT0357"
+},
+{
+"word": "bankruptcy",
+"real": true,
+"tier": "730",
+"zh": "破产；无力偿还债务的状态",
+"pos": [
+"n."
+],
+"id": "VT0358"
+},
+{
+"word": "rock",
+"real": true,
+"tier": "core",
+"zh": "摇滚乐；坚定、稳定；岩石",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0359"
+},
+{
+"word": "rebtrestal",
+"real": false,
+"tier": null,
+"id": "VT0360"
+},
+{
+"word": "deal",
+"real": true,
+"tier": "core",
+"zh": "协议；交易；处理",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0361"
+},
+{
+"word": "sprint",
+"real": true,
+"tier": "860",
+"zh": "短距离赛跑；全速跑，冲刺；全速跑过",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0362"
+},
+{
+"word": "gain",
+"real": true,
+"tier": "core",
+"zh": "获得；取得；增加",
+"pos": [
+"v."
+],
+"id": "VT0363"
+},
+{
+"word": "saver",
+"real": true,
+"tier": "860",
+"zh": "节省的器具，节约装置，省俭的人；回收器",
+"pos": [
+"n."
+],
+"id": "VT0364"
+},
+{
+"word": "prospectus",
+"real": true,
+"tier": "860",
+"zh": "招股说明书；内容说明书；简章",
+"pos": [
+"n."
+],
+"id": "VT0365"
+},
+{
+"word": "care",
+"real": true,
+"tier": "core",
+"zh": "关心；注意；维护；照料",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0366"
+},
+{
+"word": "understand",
+"real": true,
+"tier": "core",
+"zh": "理解；领会；明白",
+"pos": [
+"v."
+],
+"id": "VT0367"
+},
+{
+"word": "spenscligh",
+"real": false,
+"tier": null,
+"id": "VT0368"
+},
+{
+"word": "pause",
+"real": true,
+"tier": "core",
+"zh": "暂停；中断",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0369"
+},
+{
+"word": "transmit",
+"real": true,
+"tier": "730",
+"zh": "传输；发送",
+"pos": [
+"v."
+],
+"id": "VT0370"
+},
+{
+"word": "illustrate",
+"real": true,
+"tier": "600",
+"zh": "阐明；说明；以图例说明",
+"pos": [
+"v."
+],
+"id": "VT0371"
+},
+{
+"word": "curtain",
+"real": true,
+"tier": "860",
+"zh": "窗帘；帷幕",
+"pos": [
+"n."
+],
+"id": "VT0372"
+},
+{
+"word": "thus",
+"real": true,
+"tier": "core",
+"zh": "因此；于是",
+"pos": [
+"adv."
+],
+"id": "VT0373"
+},
+{
+"word": "violence",
+"real": true,
+"tier": "600",
+"zh": "暴力行为；武力冲突",
+"pos": [
+"n."
+],
+"id": "VT0374"
+},
+{
+"word": "justify",
+"real": true,
+"tier": "730",
+"zh": "证明合理；为辩护；合理化",
+"pos": [
+"v."
+],
+"id": "VT0375"
+},
+{
+"word": "reconcile",
+"real": true,
+"tier": "860",
+"zh": "调和；和解；使相符；对帐",
+"pos": [
+"v."
+],
+"id": "VT0376"
+},
+{
+"word": "acknowledge",
+"real": true,
+"tier": "600",
+"zh": "承认；认可；表示理解",
+"pos": [
+"v."
+],
+"id": "VT0377"
+},
+{
+"word": "thirsty",
+"real": true,
+"tier": "730",
+"zh": "口渴的，渴望的，干燥的",
+"pos": [
+"adj."
+],
+"id": "VT0378"
+},
+{
+"word": "maximum",
+"real": true,
+"tier": "600",
+"zh": "最大值；极限；最高限度",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0379"
+},
+{
+"word": "baseball",
+"real": true,
+"tier": "600",
+"zh": "棒球；棒球系统",
+"pos": [
+"n."
+],
+"id": "VT0380"
+},
+{
+"word": "naleby",
+"real": false,
+"tier": null,
+"id": "VT0381"
+},
+{
+"word": "broadly",
+"real": true,
+"tier": "730",
+"zh": "广泛地；大体上；总体而言",
+"pos": [
+"adv."
+],
+"id": "VT0382"
+},
+{
+"word": "cry",
+"real": true,
+"tier": "600",
+"zh": "哭泣；引起眼泪",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0383"
+},
+{
+"word": "sake",
+"real": true,
+"tier": "860",
+"zh": "目的，缘故，理由",
+"pos": [
+"n."
+],
+"id": "VT0384"
+},
+{
+"word": "receptionist",
+"real": true,
+"tier": "600",
+"zh": "前台接待员",
+"pos": [
+"n."
+],
+"id": "VT0385"
+},
+{
+"word": "bloody",
+"real": true,
+"tier": "860",
+"zh": "血腥的，嗜杀的，有血的",
+"pos": [
+"adj."
+],
+"id": "VT0386"
+},
+{
+"word": "misunderstand",
+"real": true,
+"tier": "860",
+"zh": "误解；被误解",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0387"
+},
+{
+"word": "industry",
+"real": true,
+"tier": "core",
+"zh": "产业；工业；事业",
+"pos": [
+"n."
+],
+"id": "VT0388"
+},
+{
+"word": "downstairs",
+"real": true,
+"tier": "730",
+"zh": "在楼下",
+"pos": [
+"adv.",
+"adj."
+],
+"id": "VT0389"
+},
+{
+"word": "especially",
+"real": true,
+"tier": "core",
+"zh": "尤其；特别是",
+"pos": [
+"adv."
+],
+"id": "VT0390"
+},
+{
+"word": "treatment",
+"real": true,
+"tier": "core",
+"zh": "治疗、处理；待遇",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0391"
+},
+{
+"word": "scrutiny",
+"real": true,
+"tier": "860",
+"zh": "仔细审查，严格检验",
+"pos": [
+"n."
+],
+"id": "VT0392"
+},
+{
+"word": "spend",
+"real": true,
+"tier": "core",
+"zh": "花费；使用",
+"pos": [
+"v.",
+"n."
+],
+"id": "VT0393"
+},
+{
+"word": "checkup",
+"real": true,
+"tier": "730",
+"zh": "健康检查；年度体检",
+"pos": [
+"n."
+],
+"id": "VT0394"
+},
+{
+"word": "principal",
+"real": true,
+"tier": "600",
+"zh": "主要；首要；校长",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0395"
+},
+{
+"word": "hard",
+"real": true,
+"tier": "core",
+"zh": "更困难的；更具挑战性的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0396"
+},
+{
+"word": "catalog",
+"real": true,
+"tier": "730",
+"zh": "产品目录；清单",
+"pos": [
+"n."
+],
+"id": "VT0397"
+},
+{
+"word": "improve",
+"real": true,
+"tier": "core",
+"zh": "提升、改良，使更好",
+"pos": [
+"v."
+],
+"id": "VT0398"
+},
+{
+"word": "opening",
+"real": true,
+"tier": "730",
+"zh": "开端、开业、开放",
+"pos": [
+"n.",
+"v.",
+"adj."
+],
+"id": "VT0399"
+},
+{
+"word": "ruler",
+"real": true,
+"tier": "860",
+"zh": "量尺；尺子",
+"pos": [
+"n."
+],
+"id": "VT0400"
+},
+{
+"word": "important",
+"real": true,
+"tier": "core",
+"zh": "重要的；具有意义的；关键的",
+"pos": [
+"adj."
+],
+"id": "VT0401"
+},
+{
+"word": "ditcherse",
+"real": false,
+"tier": null,
+"id": "VT0402"
+},
+{
+"word": "judiply",
+"real": false,
+"tier": null,
+"id": "VT0403"
+},
+{
+"word": "visibility",
+"real": true,
+"tier": "860",
+"zh": "能见度；能清楚看见的范围",
+"pos": [
+"n."
+],
+"id": "VT0404"
+},
+{
+"word": "acceptable",
+"real": true,
+"tier": "730",
+"zh": "可接受的；令人满意的",
+"pos": [
+"adj."
+],
+"id": "VT0405"
+},
+{
+"word": "evil",
+"real": true,
+"tier": "860",
+"zh": "邪恶，不幸，罪恶",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0406"
+},
+{
+"word": "disability",
+"real": true,
+"tier": "860",
+"zh": "无力，无能，残疾；劳动能力丧失，病废",
+"pos": [
+"n."
+],
+"id": "VT0407"
+},
+{
+"word": "dolagarch",
+"real": false,
+"tier": null,
+"id": "VT0408"
+},
+{
+"word": "implied",
+"real": true,
+"tier": "860",
+"zh": "暗示的；含蓄的；未明言但可推断的",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0409"
+},
+{
+"word": "movement",
+"real": true,
+"tier": "core",
+"zh": "移动；变动；调整",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0410"
+},
+{
+"word": "guaranteed",
+"real": true,
+"tier": "860",
+"zh": "保证；确保；有的保障",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0411"
+},
+{
+"word": "pason",
+"real": false,
+"tier": null,
+"id": "VT0412"
+},
+{
+"word": "secret",
+"real": true,
+"tier": "600",
+"zh": "秘密；不为人知的信息",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0413"
+},
+{
+"word": "counter",
+"real": true,
+"tier": "730",
+"zh": "柜台；对抗；反驳",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0414"
+},
+{
+"word": "hoping",
+"real": true,
+"tier": "860",
+"zh": "期望、盼望",
+"pos": [
+"v.",
+"adj."
+],
+"id": "VT0415"
+},
+{
+"word": "parade",
+"real": true,
+"tier": "730",
+"zh": "游行队伍；庆祝活动的游行",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0416"
+},
+{
+"word": "carter",
+"real": true,
+"tier": "860",
+"zh": "搬运工；运输工",
+"pos": [
+"n."
+],
+"id": "VT0417"
+},
+{
+"word": "shall",
+"real": true,
+"tier": "core",
+"zh": "将",
+"pos": [
+"v."
+],
+"id": "VT0418"
+},
+{
+"word": "small",
+"real": true,
+"tier": "core",
+"zh": "小的",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0419"
+},
+{
+"word": "objection",
+"real": true,
+"tier": "860",
+"zh": "异议；反对意见",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0420"
+},
+{
+"word": "keen",
+"real": true,
+"tier": "860",
+"zh": "热衷于；对感兴趣；渴望",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0421"
+},
+{
+"word": "motorcycle",
+"real": true,
+"tier": "730",
+"zh": "摩托车",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0422"
+},
+{
+"word": "detail",
+"real": true,
+"tier": "core",
+"zh": "细节；详情；精确信息",
+"pos": [
+"n.",
+"adj."
+],
+"id": "VT0423"
+},
+{
+"word": "bunch",
+"real": true,
+"tier": "730",
+"zh": "串，束；骨肿块",
+"pos": [
+"n."
+],
+"id": "VT0424"
+},
+{
+"word": "flobly",
+"real": false,
+"tier": null,
+"id": "VT0425"
+},
+{
+"word": "closion",
+"real": false,
+"tier": null,
+"id": "VT0426"
+},
+{
+"word": "ventilation",
+"real": true,
+"tier": "730",
+"zh": "通风系统；通风设备",
+"pos": [
+"n."
+],
+"id": "VT0427"
+},
+{
+"word": "eye",
+"real": true,
+"tier": "core",
+"zh": "眼睛，视力，看；看，注视",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0428"
+},
+{
+"word": "pattern",
+"real": true,
+"tier": "core",
+"zh": "模式；规律；样式；设计图",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0429"
+},
+{
+"word": "air",
+"real": true,
+"tier": "core",
+"zh": "空气；气流；空中传输",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0430"
+},
+{
+"word": "execution",
+"real": true,
+"tier": "730",
+"zh": "实行，完成，执行，死刑",
+"pos": [
+"n."
+],
+"id": "VT0431"
+},
+{
+"word": "embarrass",
+"real": true,
+"tier": "860",
+"zh": "使困窘，使局促不安，阻碍",
+"pos": [
+"v."
+],
+"id": "VT0432"
+},
+{
+"word": "ink",
+"real": true,
+"tier": "600",
+"zh": "墨水，墨汁；涂墨水于，签署，加墨水",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0433"
+},
+{
+"word": "lengthy",
+"real": true,
+"tier": "730",
+"zh": "冗长的；持续时间长的",
+"pos": [
+"adj."
+],
+"id": "VT0434"
+},
+{
+"word": "plaintiff",
+"real": true,
+"tier": "730",
+"zh": "原告，起诉人",
+"pos": [
+"n."
+],
+"id": "VT0435"
+},
+{
+"word": "continuously",
+"real": true,
+"tier": "860",
+"zh": "不断地，连续地",
+"pos": [
+"adv."
+],
+"id": "VT0436"
+},
+{
+"word": "redeem",
+"real": true,
+"tier": "860",
+"zh": "兑换；换取",
+"pos": [
+"v."
+],
+"id": "VT0437"
+},
+{
+"word": "occur",
+"real": true,
+"tier": "core",
+"zh": "发生；出现；产生",
+"pos": [
+"v."
+],
+"id": "VT0438"
+},
+{
+"word": "complete",
+"real": true,
+"tier": "core",
+"zh": "完成；全部；完整",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0439"
+},
+{
+"word": "underground",
+"real": true,
+"tier": "730",
+"zh": "地下的；位于地下的；地铁",
+"pos": [
+"adj.",
+"adv."
+],
+"id": "VT0440"
+},
+{
+"word": "scholar",
+"real": true,
+"tier": "860",
+"zh": "学者；学术研究者",
+"pos": [
+"n."
+],
+"id": "VT0441"
+},
+{
+"word": "corporation",
+"real": true,
+"tier": "600",
+"zh": "公司，企业",
+"pos": [
+"n."
+],
+"id": "VT0442"
+},
+{
+"word": "composed",
+"real": true,
+"tier": "860",
+"zh": "由组成；构成；沉着冷静",
+"pos": [
+"adj.",
+"v."
+],
+"id": "VT0443"
+},
+{
+"word": "evacuation",
+"real": true,
+"tier": "860",
+"zh": "疏散，撤离",
+"pos": [
+"n."
+],
+"id": "VT0444"
+},
+{
+"word": "autsoccurn",
+"real": false,
+"tier": null,
+"id": "VT0445"
+},
+{
+"word": "organization",
+"real": true,
+"tier": "core",
+"zh": "组织；机构；公司",
+"pos": [
+"n."
+],
+"id": "VT0446"
+},
+{
+"word": "inference",
+"real": true,
+"tier": "600",
+"zh": "推论；推论，推理，推断",
+"pos": [
+"n."
+],
+"id": "VT0447"
+},
+{
+"word": "construction",
+"real": true,
+"tier": "600",
+"zh": "建筑、建造；施工",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0448"
+},
+{
+"word": "instructor",
+"real": true,
+"tier": "600",
+"zh": "指导者；教练",
+"pos": [
+"n."
+],
+"id": "VT0449"
+},
+{
+"word": "royal",
+"real": true,
+"tier": "860",
+"zh": "属于皇室的；尊贵的；王室的",
+"pos": [
+"adj.",
+"n."
+],
+"id": "VT0450"
+},
+{
+"word": "restatement",
+"real": true,
+"tier": "730",
+"zh": "再声明，重述；重报，重新陈述，再声明",
+"pos": [
+"n."
+],
+"id": "VT0451"
+},
+{
+"word": "wing",
+"real": true,
+"tier": "730",
+"zh": "翅膀，翼，机翼，派别；飞行",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0452"
+},
+{
+"word": "pleasure",
+"real": true,
+"tier": "600",
+"zh": "乐趣；享受；荣幸",
+"pos": [
+"n."
+],
+"id": "VT0453"
+},
+{
+"word": "authorization",
+"real": true,
+"tier": "600",
+"zh": "授权",
+"pos": [
+"n."
+],
+"id": "VT0454"
+},
+{
+"word": "massage",
+"real": true,
+"tier": "730",
+"zh": "按摩；按摩服务",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0455"
+},
+{
+"word": "vienslet",
+"real": false,
+"tier": null,
+"id": "VT0456"
+},
+{
+"word": "mill",
+"real": true,
+"tier": "730",
+"zh": "压榨机，磨坊，制造厂；乱转，被碾磨",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0457"
+},
+{
+"word": "lack",
+"real": true,
+"tier": "core",
+"zh": "缺乏；不足；缺少",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0458"
+},
+{
+"word": "venture",
+"real": true,
+"tier": "860",
+"zh": "冒险、创业、尝试",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0459"
+},
+{
+"word": "dependence",
+"real": true,
+"tier": "730",
+"zh": "依赖，依存，信赖；依赖，从属，偏利共生",
+"pos": [
+"n."
+],
+"id": "VT0460"
+},
+{
+"word": "exchange",
+"real": true,
+"tier": "600",
+"zh": "交换；互换；调换；兑换",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0461"
+},
+{
+"word": "tabituar",
+"real": false,
+"tier": null,
+"id": "VT0462"
+},
+{
+"word": "imearden",
+"real": false,
+"tier": null,
+"id": "VT0463"
+},
+{
+"word": "neweize",
+"real": false,
+"tier": null,
+"id": "VT0464"
+},
+{
+"word": "sleep",
+"real": true,
+"tier": "core",
+"zh": "睡眠；休息",
+"pos": [
+"n.",
+"v."
+],
+"id": "VT0465"
+},
+{
+"word": "customer",
+"real": true,
+"tier": "core",
+"zh": "顾客；客户",
+"pos": [
+"n."
+],
+"id": "VT0466"
+},
+{
+"word": "division",
+"real": true,
+"tier": "600",
+"zh": "部门；划分；除法",
+"pos": [
+"n."
+],
+"id": "VT0467"
+},
+{
+"word": "fiber",
+"real": true,
+"tier": "860",
+"zh": "纤维，构造，纤维制品",
+"pos": [
+"n."
+],
+"id": "VT0468"
+},
+{
+"word": "inevitably",
+"real": true,
+"tier": "860",
+"zh": "不可避免地",
+"pos": [
+"adv."
+],
+"id": "VT0469"
+},
+{
+"word": "item",
+"real": true,
+"tier": "core",
+"zh": "项目；物品；一项",
+"pos": [
+"n."
+],
+"id": "VT0470"
+},
+{
+"word": "significance",
+"real": true,
+"tier": "730",
+"zh": "重要性；意义",
+"pos": [
+"n."
+],
+"id": "VT0471"
+}
+]
+}
