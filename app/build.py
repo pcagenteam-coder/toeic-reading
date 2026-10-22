@@ -68,6 +68,27 @@ def conv_item(i, src, kind=None):
     return o
 
 
+
+# 技巧库：优先读 v2（data/strategies/strategies_v2.json），不存在则回退 v1；两种格式都转成同一前端结构
+STRATS_V2 = 'data/strategies/strategies_v2.json'
+STRATS_V1 = 'data/strategies/strategy_library_v1.json'
+
+
+def load_strats():
+    p = STRATS_V2 if os.path.exists(os.path.join(ROOT, STRATS_V2)) else STRATS_V1
+    print('strategies:', p)
+    return load(p)
+
+
+def conv_strat(e):
+    ns = e['qtype_nodes'] + e['texttype_nodes'] + e['strategy_nodes'] + e['skill_nodes']
+    if 'plain_zh' in e:   # v2
+        return {'id': e['id'], 'ti': e['title_zh'], 'wr': e['plain_zh'], 'r': e['detail_zh'], 'ns': ns, 'p': e['parts'],
+                'w': e['weight'], 'pm': 1 if e['practice_mode'] else 0, 'roi': e['roi'], 'bd': e['bands'], 'ms': e['min_set_bands']}
+    return {'id': e['id'], 'ti': e['title_zh'], 'wr': e['work_rule'], 'r': e['rule_zh'],   # v1
+            'ns': ns, 'p': e['parts'], 'w': e['weight'], 'pm': 1 if e['practice_mode'] else 0}
+
+
 def main():
     # 私有题库（无授权，只自用）：private_data/ 存在就一起打包，否则只用公开题。
     # 公开构建：python3 app/build.py --public   （强制不打私有题，可发布到 GitHub Pages）
@@ -76,7 +97,7 @@ def main():
     use_private = os.path.exists(xp) and '--public' not in sys.argv
     X = load(xp) if use_private else {'items': [], 'bundles': []}
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
-    G = load('data/graph_v1.json'); S = load('data/strategies/strategy_library_v1.json')
+    G = load('data/graph_v1.json'); S = load_strats()
     OPEN = {'items': [], 'bundles': []}
     for path, tag in OPEN_SETS:
         if os.path.exists(os.path.join(ROOT, path)):
@@ -103,11 +124,7 @@ def main():
     nodes = [{'id': n['id'], 'nm': n['name_zh'], 'l': n['layer'], 'pa': n['parent'],
               'w': n['exam_weight'], 'bd': n['target_band'], 'g': 1 if n['is_group'] else 0}
              for n in G['nodes']]
-    strats = []
-    for e in S['entries']:
-        ns = e['qtype_nodes'] + e['texttype_nodes'] + e['strategy_nodes'] + e['skill_nodes']
-        strats.append({'id': e['id'], 'ti': e['title_zh'], 'wr': e['work_rule'], 'r': e['rule_zh'],
-                       'ns': ns, 'p': e['parts'], 'w': e['weight'], 'pm': 1 if e['practice_mode'] else 0})
+    strats = [conv_strat(e) for e in S['entries']]
     data = {'v': 'v2-' + G.get('built', ''), 'items': items, 'bundles': bundles, 'nodes': nodes, 'strats': strats}
     js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
