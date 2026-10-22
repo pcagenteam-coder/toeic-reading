@@ -1,0 +1,188 @@
+{
+ "excluded_esl_module": {
+  "P5": 120,
+  "P6": 120,
+  "P7": 96,
+  "total": 336
+ },
+ "bank_total": 1107,
+ "annotations_applied": 44,
+ "non_reading": 302,
+ "esl_text_hits": [],
+ "dropped_format": [
+  {
+   "id": "P6-072",
+   "reason": "P6 选项是篇章原词（非填空考点，题目设计坏）"
+  }
+ ],
+ "dropped_dup": [],
+ "near_dup_report": [],
+ "reading_by_part": {
+  "P5": 328,
+  "P6": 120,
+  "P7": 357
+ },
+ "kept": {
+  "P5": 328,
+  "P6": 119,
+  "P7": 357
+ },
+ "kept_total": 804,
+ "bundles": 135,
+ "kinds": {
+  "6-single": 30,
+  "7-single": 55,
+  "7-double": 32,
+  "7-triple": 18
+ },
+ "primary_nodes": [
+  [
+   "QT.P7.DETAIL",
+   175
+  ],
+  [
+   "QT.P5.VERB_FORM",
+   89
+  ],
+  [
+   "QT.P6.INDEPENDENT",
+   86
+  ],
+  [
+   "QT.P5.WORD_FORM",
+   54
+  ],
+  [
+   "QT.P7.REASON",
+   54
+  ],
+  [
+   "QT.P5.PAIR_GRAMMAR",
+   46
+  ],
+  [
+   "QT.P5.PREP",
+   34
+  ],
+  [
+   "QT.P7.DETAIL_NUMBER",
+   29
+  ],
+  [
+   "QT.P5.RELATIVE",
+   27
+  ],
+  [
+   "QT.P5.VOCAB",
+   27
+  ],
+  [
+   "QT.P5.CONNECTOR_MIX",
+   25
+  ],
+  [
+   "QT.P7.INFERENCE",
+   19
+  ],
+  [
+   "QT.P7X.CROSS_REF.TRIPLE",
+   19
+  ],
+  [
+   "QT.P7X.CROSS_REF.DOUBLE",
+   17
+  ],
+  [
+   "QT.P6.INSERTION",
+   15
+  ],
+  [
+   "QT.P7.MAIN_PURPOSE",
+   15
+  ],
+  [
+   "QT.P5.CONJ",
+   11
+  ],
+  [
+   "QT.P6.CTX_VOCAB",
+   9
+  ],
+  [
+   "QT.P7.NOT_TRUE",
+   9
+  ],
+  [
+   "QT.P5.COMPARATIVE",
+   8
+  ],
+  [
+   "QT.P5.PRONOUN",
+   7
+  ],
+  [
+   "QT.P7.INFER_WHO",
+   6
+  ],
+  [
+   "QT.P7.REQUEST_ACTION",
+   6
+  ],
+  [
+   "QT.P6.CTX_TENSE",
+   5
+  ],
+  [
+   "QT.P6.CTX_CONJ_ADV",
+   4
+  ],
+  [
+   "QT.P7.TRUE_INDICATED",
+   3
+  ],
+  [
+   "QT.P7.INFER_NEXT",
+   2
+  ],
+  [
+   "QT.P7.INTENT",
+   1
+  ],
+  [
+   "QT.P7.INSERTION",
+   1
+  ],
+  [
+   "QT.P7.SYNONYM",
+   1
+  ]
+ ],
+ "forms": {
+  "KDP5-01": 30,
+  "KDP5-02": 30,
+  "KDP5-03": 30,
+  "KDP5-04": 30,
+  "KDP5-05": 30,
+  "KDP5-06": 30,
+  "KDP5-07": 30,
+  "KDP5-08": 30,
+  "KDP5-09": 30,
+  "KDP5-10": 30,
+  "KDP5-11": 28,
+  "KDP6-01": 16,
+  "KDP6-02": 16,
+  "KDP6-03": 16,
+  "KDP6-04": 16,
+  "KDP6-05": 15,
+  "KDP6-06": 16,
+  "KDP6-07": 16,
+  "KDP6-08": 8,
+  "KDP7-01": 53,
+  "KDP7-02": 52,
+  "KDP7-03": 51,
+  "KDP7-04": 53,
+  "KDP7-05": 54,
+  "KDP7-06": 54,
+  "KDP7-07": 40
+ }
+}
