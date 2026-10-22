@@ -1,4 +1,4 @@
-/* ===== 引擎：数据索引 / 掌握度(Elo) / 预测分 / 简化 FSRS / 选题 ===== */
+/* ===== 引擎：数据索引 / 掌握度(Elo) / 预测分 / 复习排程(FSRS-4.5，见 fsrs.js) / 选题 ===== */
 const D = window.TDATA;
 const IT = {}, BU = {}, ND = {}, BY_NODE = {}, FORMS = {}, ALLF = {};
 const FULL_MIN = 90;   // 一个 form 题数 ≥90 才算整套（可模考）；pilot 迷你卷不够数，不进模考
@@ -23,14 +23,30 @@ const RANKS = [[0, '实习生'], [200, '专员'], [300, '主管'], [375, '经理
 const SCALE = [[0, 5], [10, 5], [20, 60], [30, 110], [40, 165], [50, 220], [60, 275], [70, 330], [80, 385], [90, 440], [95, 470], [100, 495]];
 
 function newState(target, exam) {
-  return { ver: 2, created: Date.now(), target: target || 700, exam: exam || '', diag: false,
+  return { ver: 2, fv: 'fsrs45', created: Date.now(), target: target || 700, exam: exam || '', diag: false,
     th: 0, N: 0, nd: {}, seen: {}, cards: {}, words: {}, wrong: {}, mocks: [], used: [],
-    streak: { d: '', n: 0 }, days: {}, log: [], hist: [], cons: {}, hl: {}, run: null };
+    streak: { d: '', n: 0 }, days: {}, hist: [], cons: {}, hl: {}, run: null,
+    log: exam ? [{ t: Date.now(), e: 'exam_date_set', tz: -new Date().getTimezoneOffset(), exam_date: exam }] : [] };
 }
+/* FSRS 接入：cards[id] / words[w] = {s,d,last,due,reps,lapses,rv}（due/last 为 FSRS.dayIndex，凌晨 4 点换日）。
+ * 卡片状态 = FSRS.replay(log) 的结果；作答时对同一条日志事件增量 applyEvent，两者一致。 */
+const fxTz = () => -new Date().getTimezoneOffset();
+const fxToday = () => FSRS.dayIndex(Date.now(), fxTz());
 
 const E = {
   st: null,
-  log(e, o) { const L = this.st.log; L.push(Object.assign({ t: Date.now(), e }, o || {})); if (L.length > 20000) L.splice(0, L.length - 20000); },
+  log(e, o) { const L = this.st.log, x = Object.assign({ t: Date.now(), e }, o || {}); L.push(x); if (L.length > 20000) L.splice(0, L.length - 20000); return x; },
+  fxParams() { return FSRS.params({ tz: fxTz(), targetMs: id => (IT[id] ? IT[id].t * 1000 : null) }); },
+  /* 旧档案（简化排程）或导入数据：从答题日志回放重建卡片状态 */
+  fxEnsure() {
+    const s = this.st; if (s.fv === 'fsrs45') return;
+    const ev = (s.exam ? [{ t: 0, e: 'exam_date_set', exam_date: s.exam }] : []).concat(s.log || []);
+    const all = FSRS.replay(ev, this.fxParams()), cards = {};
+    Object.keys(all).forEach(k => { if (k.indexOf(FSRS.WORD) && k.indexOf(FSRS.PARA)) cards[k] = all[k]; });
+    s.cards = cards;
+    Object.keys(s.words).forEach(w => { const o = s.words[w], c = all[FSRS.WORD + w]; delete o.ivl; Object.assign(o, c && c.s != null ? c : { s: null, d: null, last: null, reps: 0, lapses: 0, rv: null }); });
+    s.fv = 'fsrs45';
+  },
   mastery(n) { const v = this.st.nd[n]; return v ? sig(v[0]) : null; },
   rawFromTheta(th) {
     const bs = [-1.4, -0.7, 0, 0.7, 1.4], ws = [.1, .25, .35, .2, .1];
@@ -63,34 +79,30 @@ const E = {
     up(it.n, false); it.ns.forEach(n => up(n, true));
     s.cons[it.n] = ok ? 0 : (s.cons[it.n] || 0) + 1;
   },
-  /* 简化 FSRS：快对×2.5、慢对×1.3、错/查词→1 天。新题快对不建卡（已会）。 */
-  schedule(id, ok, fast, lookedUp) {
-    const s = this.st, c = s.cards[id];
-    if (!c && ok && fast && !lookedUp) return;
-    const iv = c ? c.ivl : 1;
-    const ni = (!ok || lookedUp) ? 1 : (fast ? Math.max(1, iv) * 2.5 : Math.max(1, iv) * 1.3);
-    s.cards[id] = { ivl: ni, due: dayNum() + Math.round(ni) };
-    if (!ok) s.wrong[id] = Date.now();
+  /* FSRS-4.5：自动评分（错/查词=Again，慢=Hard，正常=Good，快=Easy）；新题快对不建卡；考前压缩。
+   * ev = 本次写入日志的 answer 事件，和回放用的是同一个 FSRS.applyEvent。 */
+  schedule(ev) {
+    this.fxEnsure();
+    FSRS.applyEvent({ cards: this.st.cards, exam: FSRS.examDayIndex(this.st.exam) }, ev, this.fxParams());
   },
-  scheduleWord(w, grade) { // grade: 2 认识 1 模糊 0 不认识
-    const c = this.st.words[w]; if (!c) return;
-    c.ivl = grade === 2 ? Math.max(1, c.ivl) * 2.5 : grade === 1 ? Math.max(1, c.ivl) * 1.3 : 1;
-    c.due = dayNum() + Math.round(c.ivl);
+  scheduleWord(w, grade) { // grade: 2 认识 1 模糊 0 不认识 → Good / Hard / Again
+    this.fxEnsure(); const c = this.st.words[w]; if (!c) return;
+    Object.assign(c, FSRS.scheduleCard(c, grade === 2 ? FSRS.GOOD : grade === 1 ? FSRS.HARD : FSRS.AGAIN, fxToday(), FSRS.examDayIndex(this.st.exam), this.fxParams()));
   },
   addWord(w, ctx) {
-    w = w.toLowerCase(); const s = this.st;
-    if (!s.words[w]) s.words[w] = { c: ctx.slice(0, 160), ivl: 1, due: dayNum() + 1, ts: Date.now() };
-    else s.words[w].due = dayNum() + 1;
-    this.log('word', { w });
+    this.fxEnsure(); w = w.toLowerCase(); const s = this.st, t = fxToday();
+    if (!s.words[w]) s.words[w] = { c: ctx.slice(0, 160), ts: Date.now(), s: null, d: null, last: null, due: t + 1, reps: 0, lapses: 0, rv: null };
+    else s.words[w].due = Math.min(s.words[w].due, t + 1);
+    this.log('word', { w, tz: fxTz() });
   },
   /* 记一次作答（训练/诊断/复习/模考交卷都走这里） */
   record(it, ans, mode) {
-    const ok = ans.c === it.a, fast = ans.ms / 1000 <= it.t;
+    const ok = ans.c === it.a;
     this.update(it, ok);
-    if (mode !== 'diag') this.schedule(it.id, ok, fast, !!ans.lu);
+    const ev = this.log('answer', { tz: fxTz(), id: it.id, mode, c: ans.c, ok: ok ? 1 : 0, ms: ans.ms, lu: ans.lu ? 1 : 0, ms_target: it.t * 1000 });
+    if (mode !== 'diag') { this.schedule(ev); if (!ok) this.st.wrong[it.id] = Date.now(); }
     const sn = this.st.seen[it.id] || [0, 0]; sn[0]++; sn[1] = ok ? 1 : 0; this.st.seen[it.id] = sn;
     const d = today(); this.st.days[d] = (this.st.days[d] || 0) + 1; this.touchStreak();
-    this.log('answer', { id: it.id, mode, c: ans.c, ok: ok ? 1 : 0, ms: ans.ms, lu: ans.lu ? 1 : 0 });
     return ok;
   },
   touchStreak() {
@@ -110,8 +122,14 @@ const E = {
       return { n, m, sc: n.w * (1 - mm) * (m == null ? 0.9 : 1) };
     }).sort((a, b) => b.sc - a.sc);
   },
-  dueItems() { const t = dayNum(); return Object.keys(this.st.cards).filter(id => IT[id] && this.st.cards[id].due <= t).sort((a, b) => this.st.cards[a].due - this.st.cards[b].due); },
-  dueWords() { const t = dayNum(); return Object.keys(this.st.words).filter(w => this.st.words[w].due <= t); },
+  /* 今天该复习：每日上限 20，超出按"考频×遗忘程度"顺延到后几天（不出现逾期） */
+  reviewQueue() {
+    this.fxEnsure();
+    return FSRS.dailyQueue(this.st.cards, fxToday(), { params: this.fxParams(), filter: id => !!IT[id],
+      weight: id => { const n = ND[IT[id].n]; return n && n.w > 0 ? n.w : 0.5; } });
+  },
+  dueItems() { return this.reviewQueue().today; },
+  dueWords() { this.fxEnsure(); return FSRS.dailyQueue(this.st.words, fxToday(), { params: this.fxParams() }).today; },
   /* 选题：节点集合内、未做过、难度贴近能力 */
   pickSingles(nodes, k, used, fill) {
     const ns = new Set(nodes), th = this.st.th;

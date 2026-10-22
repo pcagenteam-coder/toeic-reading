@@ -341,6 +341,6 @@ document.addEventListener('click', ev => {
     if (k < 0) a.push(i); else a.splice(k, 1); sen.classList.toggle('hl'); E.log('hl', { b: ps.dataset.bid, s: i }); save();
   }
 });
-document.addEventListener('change', ev => { if (ev.target.id === 'exDate') { E.st.exam = ev.target.value; save(); } });
+document.addEventListener('change', ev => { if (ev.target.id === 'exDate') { E.st.exam = ev.target.value; E.log('exam_date_set', { tz: -new Date().getTimezoneOffset(), exam_date: ev.target.value || null }); save(); } });
 window.addEventListener('pagehide', save);
 boot();

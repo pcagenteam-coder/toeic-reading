@@ -9,7 +9,7 @@ import json, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 SRC = os.path.join(APP, 'src')
-JS_FILES = ['store.js', 'engine.js', 'app.js']   # 按顺序拼接
+JS_FILES = ['store.js', 'fsrs.js', 'engine.js', 'app.js']   # 按顺序拼接
 # 开源题库（可公开发布）：(相对路径, src 标记)。题目字段与 items_pilot_v1 兼容
 OPEN_SETS = [('data/items_open_maximcuynat.json', 'open'), ('data/items_open_kdeppaei.json', 'open')]
 # EdNet 先验 + 新制节奏：xdf/open 题没有 target_time_sec / difficulty_est 时用这里的默认值
