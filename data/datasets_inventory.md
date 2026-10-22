@@ -202,3 +202,14 @@
 - 没下成：sbljsc/toeic-practice-studio（自称 2,000 题，仓库 >120 MB，tarball 被截断）。
 - 新技巧 11 条（N1–N11），见 github_inventory.md §4。
 - 风险：大部分题目没有逐题抽查；G1、G4 的 ESL Lounge 部分、G7、G21 是出版物/网站内容，只能自用。
+
+---
+
+## 6. 外部资源补充检索（2026-10-22 追加）
+
+详见 `docs/research/external_sources_2026-10-22.md`。
+- 没有找到新的、有明确开源许可的新制阅读题库；sbljsc（G26）阅读 1,000 题已拉下，但与私有 xdf1000 重复。
+- G4 kdeppaei：336 题来自 ESL Lounge，MIT 只覆盖其余约 1,107 题。
+- **D6 许可已查明**：即 HF `kknono668/toeic-vocab-tw`，CC BY-SA 4.0。
+- 新入公开池的词表（`data/open_items/`）：LEE-WHITE/toeic-vocab-tw（CC BY 4.0，9,537 条繁中）、kknono668/toeic-vocab-tw（CC BY-SA 4.0，11,238 条，含分数段）、chunchiech/EnglishCoach toeic_3600（MIT，3,600 条繁中+例句）、ECDICT 子集（MIT，17,894 条简中）。
+- 技巧增补 16 条：`data/strategies/strategy_additions_v1_1.md`。
