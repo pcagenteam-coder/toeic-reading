@@ -1,11 +1,13 @@
 /* ===== 引擎：数据索引 / 掌握度(Elo) / 预测分 / 简化 FSRS / 选题 ===== */
 const D = window.TDATA;
-const IT = {}, BU = {}, ND = {}, BY_NODE = {}, FORMS = {};
+const IT = {}, BU = {}, ND = {}, BY_NODE = {}, FORMS = {}, ALLF = {};
+const FULL_MIN = 90;   // 一个 form 题数 ≥90 才算整套（可模考）；pilot 迷你卷不够数，不进模考
 D.items.forEach(i => {
   IT[i.id] = i;
   [i.n].concat(i.ns).forEach(n => (BY_NODE[n] = BY_NODE[n] || []).push(i.id));
-  if (i.src === 'xdf') (FORMS[i.f] = FORMS[i.f] || []).push(i.id);
+  (ALLF[i.f] = ALLF[i.f] || []).push(i.id);
 });
+Object.keys(ALLF).forEach(f => { if (ALLF[f].length >= FULL_MIN) FORMS[f] = ALLF[f]; });   // 整套：open MXT01–06 / 私有 xdf T01–T10 / 以后 ETS 等，按题数通用判定
 D.bundles.forEach(b => { BU[b.id] = b; });
 D.nodes.forEach(n => { ND[n.id] = n; });
 Object.values(FORMS).forEach(a => a.sort((x, y) => IT[x].q - IT[y].q));
@@ -99,7 +101,7 @@ const E = {
   },
   streakNow() { const s = this.st.streak; if (!s.d) return 0; const gap = (new Date(today()) - new Date(s.d)) / DAY; return gap <= 1 ? s.n : 0; },
   /* 训练池：去掉模考用过的套 */
-  pool() { const u = new Set(this.st.used); return D.items.filter(i => !(i.src === 'xdf' && u.has(i.f))); },
+  pool() { const u = new Set(this.st.used); return D.items.filter(i => !(FORMS[i.f] && u.has(i.f))); },
   /* 薄弱节点：考频 × (1 − 掌握度)；未测节点用全局能力并稍加探索分 */
   weakList() {
     const g = sig(this.st.th);
@@ -111,15 +113,17 @@ const E = {
   dueItems() { const t = dayNum(); return Object.keys(this.st.cards).filter(id => IT[id] && this.st.cards[id].due <= t).sort((a, b) => this.st.cards[a].due - this.st.cards[b].due); },
   dueWords() { const t = dayNum(); return Object.keys(this.st.words).filter(w => this.st.words[w].due <= t); },
   /* 选题：节点集合内、未做过、难度贴近能力 */
-  pickSingles(nodes, k, used) {
+  pickSingles(nodes, k, used, fill) {
     const ns = new Set(nodes), th = this.st.th;
-    const c = this.pool().filter(i => i.p === 5 && !used.has(i.id) && (ns.size === 0 || ns.has(i.n) || i.ns.some(x => ns.has(x))));
+    let c = this.pool().filter(i => i.p === 5 && !used.has(i.id) && (ns.size === 0 || ns.has(i.n) || i.ns.some(x => ns.has(x))));
+    // fill：薄弱节点里 P5 不够 k 道时（前几名薄弱点常是 TX/ST 等非 P5 节点），用其余 P5 补足（日常训练按设计"补到 8"）
+    if (fill && c.length < k) { const have = new Set(c.map(i => i.id)); c = c.concat(this.pool().filter(i => i.p === 5 && !used.has(i.id) && !have.has(i.id)).sort(() => Math.random() - 0.5).slice(0, k - c.length)); }
     c.sort((a, b) => ((this.st.seen[a.id] ? 5 : 0) + Math.abs(diffB(a.d) - th) + Math.random()) - ((this.st.seen[b.id] ? 5 : 0) + Math.abs(diffB(b.d) - th) + Math.random()));
     const out = c.slice(0, k); out.forEach(i => used.add(i.id)); return out.map(i => ({ ids: [i.id] }));
   },
   pickBundle(part, nodes, used, kind, must) {
     const ns = new Set(nodes), u = new Set(this.st.used);
-    const c = D.bundles.filter(b => b.p === part && b.qs.length && !(b.qs[0].startsWith('XDF') && u.has(b.f)) && !b.qs.some(q => used.has(q)) && (!kind || kind.includes(b.k)) && (!must || b.qs.some(q => ns.has(IT[q].n) || IT[q].ns.some(x => ns.has(x)))));
+    const c = D.bundles.filter(b => b.p === part && b.qs.length && !(FORMS[b.f] && u.has(b.f)) && !b.qs.some(q => used.has(q)) && (!kind || kind.includes(b.k)) && (!must || b.qs.some(q => ns.has(IT[q].n) || IT[q].ns.some(x => ns.has(x)))));
     const score = b => b.qs.reduce((s, q) => { const i = IT[q]; return s + (ns.has(i.n) || i.ns.some(x => ns.has(x)) ? 1 : 0) - (this.st.seen[q] ? 2 : 0); }, 0) + Math.random();
     c.sort((a, b) => score(b) - score(a));
     const b = c[0]; if (!b) return null; b.qs.forEach(q => used.add(q)); return { b: b.id, ids: b.qs.slice() };
@@ -130,10 +134,10 @@ const E = {
   },
   plan(min) {
     const used = new Set(), top = this.weakList().slice(0, 6).map(x => x.n.id);
-    if (min === 5) { const r = this.reviewUnits(4).filter(u => !u.b); r.forEach(u => used.add(u.ids[0])); return r.concat(this.pickSingles(top, 8 - r.length, used)); }
+    if (min === 5) { const r = this.reviewUnits(4).filter(u => !u.b); r.forEach(u => used.add(u.ids[0])); return r.concat(this.pickSingles(top, 8 - r.length, used, true)); }
     if (min === 20) {
       const r = this.reviewUnits(10); r.forEach(u => u.ids.forEach(q => used.add(q)));
-      const out = r.concat(this.pickSingles(top, 8, used));
+      const out = r.concat(this.pickSingles(top, 8, used, true));
       const b6 = this.pickBundle(6, top, used); if (b6) out.push(b6);
       const b7 = this.pickBundle(7, top, used, ['single']); if (b7) out.push(b7);
       return out;
@@ -153,7 +157,7 @@ const E = {
     if (b6) out.push({ b: b6.id, ids: b6.qs.slice() }); if (b7) out.push({ b: b7.id, ids: b7.qs.slice() });
     return out;
   },
-  /* 模考：选做过题最少、未用过的 xdf 套 */
+  /* 模考：选未用过、做过题最少的整套（题数 ≥ FULL_MIN 的任意 form） */
   nextForm() {
     const u = new Set(this.st.used);
     return Object.keys(FORMS).filter(f => !u.has(f)).sort((a, b) => FORMS[a].filter(q => this.st.seen[q]).length - FORMS[b].filter(q => this.st.seen[q]).length)[0] || null;

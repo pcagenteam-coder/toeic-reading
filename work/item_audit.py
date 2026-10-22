@@ -5,11 +5,12 @@
 近似重复（与 items_v0、自身、data/external/toeic_items 参考题库）、P6/P7 bundle 建模与题号/题数、长度范围、
 节点/模板合法性、意图题/同义词题/插入题的文本一致性。"""
 import json, re, sys, os, csv, glob, collections, argparse
-ROOT = "/workspace/projects/58061e9e-e075-4f3f-880c-32a61b21a72c"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # 仓库根（原先写死了旧项目路径）
 ap = argparse.ArgumentParser()
 ap.add_argument("items", nargs="?", default=f"{ROOT}/data/items_pilot_v1.json")
 ap.add_argument("--md"); ap.add_argument("--json")
 ap.add_argument("--no-external", action="store_true")
+ap.add_argument("--imported", action="store_true", help="第三方导入题（无 template_id/错因/难度等编写字段）：只把结构问题记为不通过，编写规范类（超纲词/篇幅/答案分布）记为警告；不给参数时按 template_id 是否全空自动判断")
 A = ap.parse_args()
 
 # ---------- 词表 ----------
@@ -23,7 +24,8 @@ def load_lemma(path):
     return forms
 NGSL = load_lemma(f"{ROOT}/data/wordlists/NGSL_12_lemmatized_for_research.csv")
 TSL = load_lemma(f"{ROOT}/data/wordlists/TSL_lemma.csv")
-SUP = load_lemma(f"{ROOT}/data/external/wordlists/SUP_lemmatized.csv")  # 星期/月份/数词，视同“数字”豁免
+_sup = f"{ROOT}/data/external/wordlists/SUP_lemmatized.csv"  # 星期/月份/数词，视同“数字”豁免（可选文件）
+SUP = load_lemma(_sup) if os.path.exists(_sup) else {w for w in "monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion first second third fourth fifth sixth seventh eighth ninth tenth".split()}
 VOCAB = NGSL | TSL
 EXEMPT = {"mr", "ms", "mrs", "dr", "a.m", "p.m", "e-mail", "e-mails", "re", "it", "inc", "co", "web", "vs", "etc", "ok"}
 CONTR = {"n't": "", "'re": "", "'ll": "", "'s": "", "'m": "", "'ve": "", "'d": ""}
@@ -108,6 +110,8 @@ def jacc(a, b): return len(a & b) / max(1, len(a | b))
 def load_external():
     out = []
     base = f"{ROOT}/data/external/toeic_items"
+    if not os.path.isdir(base):   # 参考题库只用于查重、不进产物；公开仓库没有时退到本地私有副本（若存在）
+        base = f"{ROOT}/private_data/sources/toeic_items"
     for p in glob.glob(f"{base}/*.csv"):
         with open(p, encoding="utf-8", errors="ignore") as f:
             r = csv.reader(f); hdr = next(r, None)
@@ -138,6 +142,14 @@ def load_v0():
         out += [("v0", q["q"] + " " + " ".join(q["options"])) for q in x["questions"]]
     return out
 
+def load_pilot():
+    p = f"{ROOT}/data/items_pilot_v1.json"
+    if os.path.abspath(A.items) == os.path.abspath(p): return []
+    d = json.load(open(p))
+    out = [("pilot", x["stem"]) for x in d["items"] if x["part"] == 5]
+    out += [("pilot", " ".join(dd["text"] for dd in b["docs"])) for b in d["bundles"]]
+    return out
+
 # ---------- 主流程 ----------
 D = json.load(open(A.items))
 G = {n["id"]: n for n in json.load(open(f"{ROOT}/data/graph_v1.json"))["nodes"]}
@@ -145,8 +157,19 @@ TPL = {t["template_id"]: t for t in json.load(open(f"{ROOT}/data/templates/item_
 items, bundles = D["items"], {b["bundle_id"]: b for b in D.get("bundles", [])}
 fails = collections.defaultdict(list); warns = collections.defaultdict(list)
 vocab_log = []; derived_log = []; proper_log = collections.Counter()
+IMPORTED = A.imported or all(not i.get("template_id") for i in items)
 def F(iid, msg): fails[iid].append(msg)
 def W(iid, msg): warns[iid].append(msg)
+def S(iid, msg): (W if IMPORTED else F)(iid, msg)   # 编写规范类：导入题记警告
+# 题型判定：编写题看 template_id 前缀，导入题看节点
+NODE_KIND = {"T6.INS": "QT.P6.INSERTION", "T7.INSERTION": "QT.P7.INSERTION", "T7.INTENT": "QT.P7.INTENT", "T7.SYNONYM": "QT.P7.SYNONYM", "CROSS_REF": "CROSS_REF"}
+def kind_is(it, key):
+    if (it.get("template_id") or "").startswith(key) or (key == "CROSS_REF" and "CROSS_REF" in (it.get("template_id") or "")): return True
+    if IMPORTED:
+        n = NODE_KIND[key]
+        return any(n in x for x in it.get("node_ids", [])) if key == "CROSS_REF" else n in it.get("node_ids", [])
+    return False
+QUOTE = r"[\"“”]"
 
 # 1 题目字段与格式
 ids = collections.Counter(i["id"] for i in items)
@@ -154,7 +177,9 @@ for k, v in ids.items():
     if v > 1: F(k, f"id 重复 {v} 次")
 for it in items:
     iid = it["id"]
-    for f in ("id", "part", "node", "node_ids", "template_id", "options", "answer", "explain_zh", "distractor_reasons", "difficulty_est", "target_time_sec", "format_version", "qnum"):
+    req = ("id", "part", "node", "node_ids", "options", "answer", "format_version", "qnum", "form") if IMPORTED else \
+          ("id", "part", "node", "node_ids", "template_id", "options", "answer", "explain_zh", "distractor_reasons", "difficulty_est", "target_time_sec", "format_version", "qnum")
+    for f in req:
         if f not in it: F(iid, f"缺字段 {f}")
     if it.get("format_version") != "current": F(iid, "format_version 不是 current")
     opts = it.get("options", [])
@@ -165,17 +190,22 @@ for it in items:
     if not isinstance(a, int) or not 0 <= a <= 3: F(iid, f"answer 非法: {a}")
     elif it.get("answer_letter") and it["answer_letter"] != "ABCD"[a]: F(iid, "answer_letter 与 answer 不一致")
     dr = it.get("distractor_reasons", {})
-    if isinstance(a, int) and 0 <= a <= 3:
+    if isinstance(a, int) and 0 <= a <= 3 and not IMPORTED:
         need = {"ABCD"[i] for i in range(4) if i != a}
         if set(dr) != need: F(iid, f"干扰项错因应覆盖 {sorted(need)}，实际 {sorted(dr)}")
         if "ABCD"[a] in dr: F(iid, "正确选项被写了错因（唯一答案冲突）")
-    if not str(it.get("explain_zh", "")).strip(): F(iid, "缺中文解析")
-    if not 1 <= it.get("difficulty_est", 0) <= 5: F(iid, "difficulty_est 不在 1–5")
+    if IMPORTED:
+        if not str(it.get("explain_zh") or it.get("explain_en") or "").strip(): F(iid, "缺解析（explain_zh/explain_en 都空）")
+    else:
+        if not str(it.get("explain_zh", "")).strip(): F(iid, "缺中文解析")
+        if not 1 <= it.get("difficulty_est", 0) <= 5: F(iid, "difficulty_est 不在 1–5")
     for n in it.get("node_ids", []):
         if n not in G: F(iid, f"未知节点 {n}")
     if it.get("node") not in it.get("node_ids", []): F(iid, "node 不在 node_ids 中")
     t = TPL.get(it.get("template_id"))
-    if not t: F(iid, f"未知模板 {it.get('template_id')}")
+    if IMPORTED and not it.get("template_id"):
+        if it["part"] == 7 and "QT.P7.INSERTION" in it.get("node_ids", []) and opts != ["[1]", "[2]", "[3]", "[4]"]: F(iid, "插入题选项必须为 [1]–[4]")
+    elif not t: F(iid, f"未知模板 {it.get('template_id')}")
     else:
         if t["part"] != it["part"]: F(iid, "模板 Part 与题目 Part 不一致")
         if t.get("meta_tag_only"): F(iid, "使用了仅作标签的模板")
@@ -192,15 +222,16 @@ for it in items:
         if not it.get("bundle_id") or it["bundle_id"] not in bundles: F(iid, "P6/P7 必须挂在存在的 bundle_id 上")
         if p == 7 and not it.get("q"): F(iid, "P7 缺题干 q")
     # 选项长度均衡（P7：正确项不得明显最长）
-    if p == 7 and len(opts) == 4 and isinstance(a, int) and not (t and t.get("fixed_options")):
+    if p == 7 and len(opts) == 4 and isinstance(a, int) and not (t and t.get("fixed_options")) and opts[0] != "[1]":
         L = [len(o.split()) for o in opts]
         if L[a] == max(L) and L[a] >= 2 * sorted(L)[1] and L[a] - sorted(L)[1] >= 4: W(iid, f"正确项明显最长 {L}")
 
 # 2 词汇
 for it in items:
     iid = it["id"]
-    t = TPL.get(it["template_id"], {})
-    allow = it["part"] in (5, 6) and any(k in it["template_id"] for k in ("WORD_FORM", "VERB_FORM", "INDEPENDENT"))
+    tid = it.get("template_id") or ""
+    allow = it["part"] in (5, 6) and (any(k in tid for k in ("WORD_FORM", "VERB_FORM", "INDEPENDENT")) or
+                                      (IMPORTED and any(k in it["node"] for k in ("WORD_FORM", "VERB_FORM", "INDEPENDENT"))))
     texts = [it.get("stem", ""), it.get("q", "")]
     ctx = ""
     if it.get("bundle_id") in bundles:
@@ -208,18 +239,18 @@ for it in items:
     seen = capitalized_midsentence(" ".join(texts) + " " + ctx + " " + " ".join(it["options"]))
     for txt in texts:
         off, der, prop = check_vocab(txt, False, seen, set(it.get("vocab_exceptions", {})))
-        for w in off: F(iid, f"超纲词（题干）: {w}"); vocab_log.append((iid, "stem", w))
+        for w in off: S(iid, f"超纲词（题干）: {w}"); vocab_log.append((iid, "stem", w))
         proper_log.update(prop)
     exc = set(it.get("vocab_exceptions", {}))
     for o in it["options"]:
         off, der, prop = check_vocab(o, allow, seen, exc)
-        for w in off: F(iid, f"超纲词（选项）: {w}"); vocab_log.append((iid, "option", w))
+        for w in off: S(iid, f"超纲词（选项）: {w}"); vocab_log.append((iid, "option", w))
         derived_log += [(iid, x) for x in der]; proper_log.update(prop)
 for bid, b in bundles.items():
     alltext = " ".join(d.get("header", "") + "\n" + d.get("title", "") + "\n" + d["text"] for d in b["docs"])
     seen = capitalized_midsentence(alltext)
     off, der, prop = check_vocab(alltext, False, seen)
-    for w in off: F(bid, f"超纲词（文章）: {w}"); vocab_log.append((bid, "passage", w))
+    for w in off: S(bid, f"超纲词（文章）: {w}"); vocab_log.append((bid, "passage", w))
     proper_log.update(prop)
 
 # 3 bundle / 题号 / 题数（现行新制）
@@ -235,14 +266,14 @@ for bid, b in bundles.items():
     words = len(re.findall(r"[A-Za-z0-9$']+", alltext))
     if b["part"] == 6:
         if len(its) != 4: F(bid, f"P6 每篇应 4 题，实际 {len(its)}")
-        ins = [x for x in its if x["template_id"].startswith("T6.INS")]
+        ins = [x for x in its if kind_is(x, "T6.INS")]
         if len(ins) != 1: F(bid, f"P6 每篇应恰有 1 道句子插入，实际 {len(ins)}")
         for k in range(1, 5):
             if alltext.count(f"[{k}]") != 1: F(bid, f"空格标记 [{k}] 出现 {alltext.count(f'[{k}]')} 次")
         if qn and not (131 <= qn[0] and qn[-1] <= 146 and (qn[0] - 131) % 4 == 0): F(bid, "P6 题号应在 131–146 且每篇从 131/135/139/143 起")
         if len(b["docs"]) != 1: F(bid, "P6 每篇只能 1 个文本")
         lo, hi = 80, 190
-        if not lo <= words <= hi: F(bid, f"P6 篇幅 {words} 词，超出 {lo}–{hi}")
+        if not lo <= words <= hi: S(bid, f"P6 篇幅 {words} 词，超出 {lo}–{hi}")
         for x in its:
             if x.get("blank_n") is None or f"[{x['blank_n']}]" not in alltext: F(x["id"], "blank_n 在文中找不到")
     if b["part"] == 7:
@@ -256,24 +287,23 @@ for bid, b in bundles.items():
             if nd != {"double": 2, "triple": 3}[kind]: F(bid, f"{kind} 组文本数 {nd} 不对")
             if len(its) != 5: F(bid, f"多篇组应 5 题，实际 {len(its)}")
             if qn and not (176 <= qn[0] and qn[-1] <= 200 and (qn[0] - 176) % 5 == 0): F(bid, "多篇题号应在 176–200 且从 176/181/186/191/196 起")
-            if not any("CROSS_REF" in x["template_id"] or any("CROSS_REF" in n for n in x["node_ids"]) for x in its): F(bid, "多篇组至少需 1 道跨篇题")
-        tlen = TPL.get(its[0]["template_id"], {}).get("length", {}) if its else {}
+            if not any(kind_is(x, "CROSS_REF") or any("CROSS_REF" in n for n in x["node_ids"]) for x in its): F(bid, "多篇组至少需 1 道跨篇题")
         lo, hi = {"TX.TEXT_MSG": (35, 150), "TX.CHAT": (70, 230), "TX.DOUBLE": (220, 450), "TX.TRIPLE": (300, 620)}.get(b["text_type"], (30, 330))
-        if not lo <= words <= hi: F(bid, f"P7 篇幅 {words} 词，超出 {lo}–{hi}（{b['text_type']}）")
-        ins = [x for x in its if x["template_id"].startswith("T7.INSERTION")]
+        if not lo <= words <= hi: S(bid, f"P7 篇幅 {words} 词，超出 {lo}–{hi}（{b['text_type']}）")
+        ins = [x for x in its if kind_is(x, "T7.INSERTION")]
         if ins:
             if kind != "single": F(bid, "P7 插入句题只出现在单篇")
             for k in range(1, 5):
                 if alltext.count(f"[{k}]") != 1: F(bid, f"插入位置 [{k}] 出现 {alltext.count(f'[{k}]')} 次")
         for x in its:
-            if x["template_id"].startswith("T7.INTENT"):
-                m = re.search(r"\"(.+?)\"", x["q"])
+            if kind_is(x, "T7.INTENT"):
+                m = re.search(QUOTE + r"(.+?)" + QUOTE, x["q"])
                 if not m or m.group(1) not in alltext: F(x["id"], "意图题引号原话在文中找不到")
                 if b["text_type"] not in ("TX.TEXT_MSG", "TX.CHAT"): F(x["id"], "意图题只用于短信/群聊")
-                tm = re.search(r"At (\d+:\d+ [AP]\.M\.)", x["q"])
+                tm = re.search(r"At (\d+:\d+(?: [AP]\.M\.)?)", x["q"])
                 if tm and tm.group(1) not in alltext: F(x["id"], "意图题时间戳在文中找不到")
-            if x["template_id"].startswith("T7.SYNONYM"):
-                m = re.search(r"\"(\w+)\"", x["q"])
+            if kind_is(x, "T7.SYNONYM"):
+                m = re.search(r"word " + QUOTE + r"(\w+)" + QUOTE, x["q"]) or re.search(QUOTE + r"(\w+)" + QUOTE, x["q"])
                 if not m or not re.search(rf"\b{m.group(1)}\b", alltext): F(x["id"], "同义词题目标词不在文中")
 # P5 题号
 for form in {i["form"] for i in items if i["part"] == 5}:
@@ -295,19 +325,19 @@ for p in (5, 6, 7):
     dist[p] = {"ABCD"[k]: c.get(k, 0) for k in range(4)}
     for k in range(4):
         share = c.get(k, 0) / n
-        if n >= 12 and not 0.15 <= share <= 0.35: F(f"P{p}", f"答案 {'ABCD'[k]} 占比 {share:.0%} 超出 15–35%")
+        if n >= 12 and not 0.15 <= share <= 0.35: S(f"P{p}", f"答案 {'ABCD'[k]} 占比 {share:.0%} 超出 15–35%")
     run = mx = 1
     for x, y in zip(seq, seq[1:]):
         run = run + 1 if x == y else 1; mx = max(mx, run)
-    if mx > 3: F(f"P{p}", f"连续相同答案 {mx} 题（>3）")
+    if mx > 3: S(f"P{p}", f"连续相同答案 {mx} 题（>3）")
     dist[p]["max_run"] = mx
 
 # 5 长度（P5）
 for it in items:
     if it["part"] == 5:
         n = len(it["stem"].split())
-        L = TPL[it["template_id"]]["length"]
-        if not L["min"] <= n <= L["max"]: F(it["id"], f"P5 题干 {n} 词，超出 {L['min']}–{L['max']}")
+        L = TPL[it["template_id"]]["length"] if it.get("template_id") in TPL else {"min": 8, "max": 35}
+        if not L["min"] <= n <= L["max"]: S(it["id"], f"P5 题干 {n} 词，超出 {L['min']}–{L['max']}")
 
 # 6 近似重复
 pool = []
@@ -316,7 +346,7 @@ for it in items:
     if it["part"] == 5: pool.append((it["id"], "stem", txt))
 for bid, b in bundles.items():
     pool.append((bid, "passage", " ".join(d["text"] for d in b["docs"])))
-refs = load_v0()
+refs = load_v0() + load_pilot()
 ext = [] if A.no_external else load_external()
 dups = []
 sh = [(i, k, shingles(norm_text(t)), set(norm_text(t))) for i, k, t in pool]
@@ -348,14 +378,14 @@ units = [i["id"] for i in items] + list(bundles)
 failed = [u for u in units if fails.get(u)]
 global_fail = {k: v for k, v in fails.items() if k not in units}
 node_cov = collections.Counter(n for i in items for n in i["node_ids"])
-res = {"file": A.items, "n_items": len(items), "n_bundles": len(bundles),
+res = {"file": A.items, "imported_mode": IMPORTED, "n_items": len(items), "n_bundles": len(bundles),
        "items_failed": len([i for i in items if fails.get(i["id"]) or (i.get("bundle_id") and fails.get(i["bundle_id"]))]),
        "units_failed": len(failed), "global_fail": global_fail, "answer_distribution": dist,
        "vocab_offlist": vocab_log, "vocab_exceptions": {i["id"]: i["vocab_exceptions"] for i in items if i.get("vocab_exceptions")}, "derived_allowed": derived_log, "assumed_proper_nouns": sorted(proper_log),
        "fails": {k: v for k, v in fails.items()}, "warns": dict(warns), "external_refs_checked": len(ext), "v0_refs_checked": len(refs),
        "node_coverage": dict(node_cov), "n_nodes_covered": len(node_cov)}
 ok = res["items_failed"] == 0 and not global_fail
-print(f"items {len(items)} bundles {len(bundles)} | 不通过题 {res['items_failed']} | 全局问题 {len(global_fail)} | 警告 {sum(len(v) for v in warns.values())} | 外部比对 {len(ext)} 条")
+print(("[导入题模式] " if IMPORTED else "") + f"items {len(items)} bundles {len(bundles)} | 不通过题 {res['items_failed']} | 全局问题 {len(global_fail)} | 警告 {sum(len(v) for v in warns.values())} | 外部比对 {len(ext)} 条")
 for k, v in list(fails.items())[:80]: print("FAIL", k, v)
 for k, v in list(warns.items())[:30]: print("WARN", k, v)
 print("答案分布", dist)

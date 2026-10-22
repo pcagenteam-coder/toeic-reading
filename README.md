@@ -3,7 +3,8 @@
 给工作忙、精力有限的成年人用的托业阅读备考工具：先诊断，再按 ROI 安排练习（知识图谱 + 考试技巧 + 记忆曲线），每天 5/20/75 分钟，职场模拟外壳降低抵触。单文件离线网页，手机/平板/电脑都能用。
 
 - 构建：`python3 app/build.py --public` → `app/dist/index.html`（只含公开题）
-- 测试：`node app/test/smoke.js`
+- 测试：`node app/test/smoke.js`（可传 dist 路径，如私有构建 `app/dist/index.private.html`）
+- 公开题库：自编 pilot 107 题 + 开源 MIT 6 套完整阅读 600 题（data/items_open_maximcuynat.json，模考用）
 - 产品原则：docs/PRODUCT_BRIEF.md；设计与算法：app/DESIGN.md；交接说明：HANDOFF.md
 
 ## 数据与许可

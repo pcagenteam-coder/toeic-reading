@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """托业阅读提分 v2 构建脚本。
 读 data/ 下题库/技巧库/图谱 → 统一 schema、精简字段 → 内嵌进 src/index.html → dist/index.html（单文件，离线可用）。
-用法：python3 app/build.py   （在项目根或任意目录运行均可）
+用法：python3 app/build.py --public  → dist/index.html（只含公开题：pilot 自编 + open 开源 MIT 题）
+      python3 app/build.py           → private_data/ 存在时 dist/index.private.html（另含 xdf 私有题，禁止公开）
 """
 import json, re, os, sys
 
@@ -9,7 +10,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 SRC = os.path.join(APP, 'src')
 JS_FILES = ['store.js', 'engine.js', 'app.js']   # 按顺序拼接
-# EdNet 先验 + 新制节奏：xdf 题没有 target_time_sec / difficulty_est 时用这里的默认值
+# 开源题库（可公开发布）：(相对路径, src 标记)。题目字段与 items_pilot_v1 兼容
+OPEN_SETS = [('data/items_open_maximcuynat.json', 'open')]
+# EdNet 先验 + 新制节奏：xdf/open 题没有 target_time_sec / difficulty_est 时用这里的默认值
 DEF_TIME = {5: 22, 6: 30, 7: 55}
 DEF_DIFF = {5: 3, 6: 3, 7: 3}
 
@@ -28,10 +31,10 @@ def conv_bundle(b, items_of_bundle, src):
     """统一 bundle：docs → [{t:文本类型, h:标题/信头, x:正文}]，P6 空位统一成 {{题号}}"""
     docs = []
     for d in b['docs']:
-        h = (d.get('title') or d.get('header') or '').strip()
+        h = (d.get('header') or d.get('title') or '').strip()   # 信头优先（open 题同时有 title=文本类型名 和 header=To/From）
         x = d.get('text') or ''
         if b['part'] == 6:
-            if src == 'pilot':
+            if src in ('pilot', 'open'):
                 # pilot 用 [n]（n=blank_n，第 n 个空），换成对应题号
                 m = {str(i.get('blank_n')): i['qnum'] for i in items_of_bundle if i.get('blank_n')}
                 x = re.sub(r'\[(\d)\]', lambda g: '{{%s}}' % m.get(g.group(1), g.group(1)), x)
@@ -54,16 +57,14 @@ def conv_item(i, src, kind=None):
     t = i.get('target_time_sec') or (65 if (p == 7 and kind in ('double', 'triple')) else DEF_TIME[p])
     o = {'id': i['id'], 'p': p, 'f': i['form'], 'q': i['qnum'], 'n': i['node'], 'ns': ns,
          's': i.get('stem') or i.get('q') or '', 'o': i['options'], 'a': i['answer'],
-         'e': i.get('explain_zh') or '', 'd': i.get('difficulty_est') or DEF_DIFF[p], 't': t,
+         'e': i.get('explain_zh') or i.get('explain_en') or '', 'd': i.get('difficulty_est') or DEF_DIFF[p], 't': t,
          'src': src}
     if i.get('bundle_id'):
         o['b'] = i['bundle_id']
     if dr:
         o['dr'] = {str(k): v for k, v in dr.items()}
-    if p == 6 and src == 'xdf':
+    if p == 6:
         o['s'] = ''   # P6 题干就是原文里的空，不重复存
-    if p == 6 and src == 'pilot':
-        o['s'] = ''
     return o
 
 
@@ -76,8 +77,12 @@ def main():
     X = load(xp) if use_private else {'items': [], 'bundles': []}
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
     G = load('data/graph_v1.json'); S = load('data/strategies/strategy_library_v1.json')
+    OPEN = {'items': [], 'bundles': []}
+    for path, tag in OPEN_SETS:
+        if os.path.exists(os.path.join(ROOT, path)):
+            o = load(path); OPEN['items'] += o['items']; OPEN['bundles'] += o['bundles']
     items, bundles, skipped = [], [], 0
-    for src, d in (('pilot', P), ('xdf', X)):
+    for src, d in (('pilot', P), ('open', OPEN), ('xdf', X)):
         by_b = {}
         for i in d['items']:
             if i.get('bundle_id'):
@@ -115,9 +120,13 @@ def main():
     dst = os.path.join(APP, 'dist', 'index.html' if not use_private else 'index.private.html')
     open(dst, 'w', encoding='utf-8').write(out)
     from collections import Counter
-    forms = Counter(i['f'] for i in items if i['src'] == 'xdf')
+    allf = Counter(i['f'] for i in items)
+    full = {f: n for f, n in sorted(allf.items()) if n >= 90}   # 整套（模考可用），与 engine.js FULL_MIN 一致
     print('items', len(items), 'skipped', skipped, 'bundles', len(bundles), 'nodes', len(nodes), 'strats', len(strats))
-    print('by part', dict(Counter(i['p'] for i in items)), 'xdf forms', dict(forms))
+    print('by src', dict(Counter(i['src'] for i in items)), 'by part', dict(Counter(i['p'] for i in items)))
+    print('mock forms (>=90 题)', full)
+    if not use_private:
+        assert not any(i['src'] == 'xdf' for i in items), '公开构建混入了私有题'
     print('code KB', round(len(code.encode()) / 1024, 1), 'css KB', round(len(css.encode()) / 1024, 1),
           'dist KB', round(os.path.getsize(dst) / 1024, 1))
 
