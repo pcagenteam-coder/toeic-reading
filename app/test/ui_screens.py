@@ -52,7 +52,10 @@ def run(br, tag, w, h):
     pg.wait_for_selector('.bc'); shot(pg, d, '00g_diag_result')
     txt = pg.inner_text('#main'); check(not re.search(r'正确率|\d+\s*/\s*\d+ 题', txt), f'{tag}: S6 shows counts')
     check(1 <= pg.locator('.bc li').count() <= 8, f'{tag}: battle card lines'); check('第 1 天' in txt, f'{tag}: day 1 not shown')
-    pg.click('[data-act=obDone]'); shot(pg, d, '01_today')
+    pg.click('[data-act=obDone]'); pg.wait_for_selector('#obRm'); shot(pg, d, '00h_remind'); no_overflow(pg, f'{tag} remind')
+    check('每天几点提醒你' in pg.inner_text('#main') and pg.locator('[data-act=rmSkip]').count() == 1, f'{tag}: S7 remind/skip missing')
+    pg.click('[data-act=rmSave]'); shot(pg, d, '01_today')
+    check(pg.evaluate("E.st.settings.remind") not in (None, False), f'{tag}: remind not saved')
     check(pg.locator('.fz').count() == 1, f'{tag}: streak freeze ❄ missing')
     check(pg.locator('.task .btn.lg').count() <= 1, f'{tag}: today has >1 main button')
     # P5 一组

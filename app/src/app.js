@@ -64,7 +64,7 @@ function modal(h) { $('#sheet').innerHTML = h; $('#modal').classList.toggle('hid
 
 /* ---------- 首日 S1–S6：目标 → 词汇摸底 → 入职测试 → 结果+作战卡 ---------- */
 const r5 = x => Math.round(x / 5) * 5;
-const OBS = ['目标', '词汇', '测试', '结果'];
+const OBS = ['目标', '词汇', '测试', '结果', '提醒'];
 const ob = () => E.st && E.st.ob && E.st.ob.step !== 'done' ? E.st.ob : null;
 function steps(k) {
   return `<div class="steps">${OBS.map((x, i) => `<i class="${i < k ? 'd' : i === k ? 'c' : ''}"><span>${x}</span></i>`).join('')}</div>`;
@@ -185,7 +185,31 @@ function vObResult(o) {
     ${battleCardHTML(true)}
     <div class="thumb"><p class="ok sm">今天已算第 1 天 ✓</p><button class="btn full lg" data-act="obDone">明天见</button><button class="link" data-act="obMore">现在再做 5 分钟（可选）</button></div></div>`;
 }
-function vOnboard(o) { return o.step === 'result' ? vObResult(o) : vVocab(o); }
+/* S7 每日提醒（可跳过）：建议时间按作息画像，没有画像就按现在这个时段（正在学的时间）；只做应用内提示，无推送 */
+const RM_SLOT = { early: '07:30', morning: '10:00', noon: '12:30', afternoon: '15:30', evening: '20:30' };
+function rmSuggest() {
+  const c = API.profile().circadian || {}; if (c.best && RM_SLOT[c.best]) return RM_SLOT[c.best];
+  const d = new Date(), m = d.getHours() * 60 + d.getMinutes(), r = Math.ceil(m / 30) * 30;
+  if (r < 7 * 60 || r > 22 * 60) return '21:00';
+  return String(Math.floor(r / 60)).padStart(2, '0') + ':' + (r % 60 ? '30' : '00');
+}
+const rmOk = v => /^([01]\d|2[0-3]):[0-5]\d$/.test(v || '');
+function vRemind(o) {
+  const sg = rmSuggest(), sel = o.rm || sg, opts = [...new Set([sg, '08:00', '12:30', '21:00'])];
+  return `<div class="onb">${steps(4)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
+    <p class="mut sm">到点后打开应用，今天页会提示你还没做的活。随时可在「我的」里改。</p>
+    <div class="row wrapr">${opts.map(t => `<button class="chip ${t === sel ? 'on' : ''}" data-act="rmPick" data-v="${t}">${t === sg ? '建议 ' : ''}${t}</button>`).join('')}</div>
+    <h3>或者自己定</h3><input id="obRm" class="inl tmi" type="time" value="${sel}"></div>
+    <div class="thumb"><button class="btn full lg" data-act="rmSave">就这个时间</button><button class="link" data-act="rmSkip">先不设，跳过</button></div></div>`;
+}
+/* 今天页：到了提醒时间、今天的活还没做 → 一条应用内提示（当天可关） */
+function rmTip(done) {
+  const v = (E.st.settings || {}).remind, u = ui(); if (!rmOk(v) || done || u.rmX === today()) return '';
+  const d = new Date(), hm = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+  if (hm < v) return '';
+  return `<div class="card tipc rmtip"><span>⏰ ${v} 到了：今天的活还没做</span><span class="row"><button class="link mut" data-act="rmX">知道了</button></span></div>`;
+}
+function vOnboard(o) { return o.step === 'result' ? vObResult(o) : o.step === 'remind' ? vRemind(o) : vVocab(o); }
 
 /* ---------- 今天 ---------- */
 function dayName() { const h = new Date().getHours(); return h < 12 ? '上午' : h < 18 ? '下午' : '傍晚'; }
@@ -222,7 +246,7 @@ function vToday() {
   else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p><button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
   else {
     const p = API.plan(min);
-    main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(planSummary(p))}</p>
+    main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
       <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始'}</button>
       <details><summary>今天时间多？ ˅</summary><div class="row wrapr"><button class="chip" data-act="start" data-m="15">多做 15 分钟</button>
       <button class="chip" data-act="mock">紧急项目（全真模考）</button></div></details></div>`;
@@ -232,7 +256,7 @@ function vToday() {
     ${g.text ? `<p class="sm">${esc(g.text)}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
   const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
-  return top + `<div class="grid2"><div>${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+  return top + `<div class="grid2"><div>${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
 }
 function examLeft() { return E.st.exam ? Math.round((new Date(E.st.exam + 'T00:00') - new Date(today() + 'T00:00')) / 864e5) : null; }
 
@@ -329,6 +353,7 @@ function vMe() {
     <div class="li"><span>剧情过渡（同事的一句话）</span>${sw('nostory', !u.nostory, 'tgl')}</div>
     <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
     <div class="li"><span>用时环</span>${sw('hideRing', !u.hideRing, 'tgl')}</div>
+    <div class="li"><span>每日提醒</span><span class="row"><input id="mRm" class="inl tmi" type="time" value="${rmOk(set.remind) ? set.remind : ''}"><button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
     <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
   <div class="card"><h2>越用越贴合</h2>
     <div class="li"><span>复习间隔</span><span class="mut sm">${pf.fsrs && pf.fsrs.personal ? '已按你的记忆速度调整' : '先用通用间隔，做得多了会按你的记忆速度调'}</span></div>
@@ -693,8 +718,15 @@ const A = {
   vskip() { const o = E.st.ob; o.vskip = true; o.voc = { n: 3000, biz: null }; E.st.vocab = E.st.vocab || 3000; delete o.vt; o.step = E.st.diag ? 'done' : 'dintro'; if (E.st.diag) tab = 'today'; save(); render(); },
   vretest() { E.st.ob = { step: 'vocab', again: 1 }; save(); render(); },
   vreX() { ui().vreX = 1; save(); render(); },
-  obDone() { E.st.ob.step = 'done'; tab = 'today'; save(); render(); },
-  obMore() { E.st.ob.step = 'done'; save(); A.start({ dataset: { m: 5 } }); },
+  obDone() { const o = E.st.ob; if (o.step === 'result' && (E.st.settings || {}).remind === undefined) { o.step = 'remind'; o.then = 'done'; save(); return render(); } o.step = 'done'; tab = 'today'; save(); render(); },
+  obMore() { const o = E.st.ob; if (o.step === 'result' && (E.st.settings || {}).remind === undefined) { o.step = 'remind'; o.then = 'more'; save(); return render(); } o.step = 'done'; save(); A.start({ dataset: { m: 5 } }); },
+  rmPick(el) { E.st.ob.rm = el.dataset.v; save(); render(); },
+  rmEnd(v) { const o = E.st.ob; E.setSetting('remind', v); const more = o.then === 'more'; o.step = 'done'; delete o.then; delete o.rm; tab = 'today'; save(); if (more) return A.start({ dataset: { m: 5 } }); render(); },
+  rmSave() { const v = (($('#obRm') || {}).value) || E.st.ob.rm || rmSuggest(); A.rmEnd(rmOk(v) ? v : rmSuggest()); },
+  rmSkip() { A.rmEnd(false); },
+  rmSet() { const v = (($('#mRm') || {}).value) || ''; if (!rmOk(v)) return; E.setSetting('remind', v); delete ui().rmX; save(); render(); },
+  rmOff() { E.setSetting('remind', false); save(); render(); },
+  rmX() { ui().rmX = today(); save(); render(); },
   goTab(el) { tab = el.dataset.t; render(); },
   weak(el) { const u = E.weakPlan(el.dataset.n); startSession('train', u); },
   circX() { save(); render(); ui().circClosed = (API.profile().circadian || {}).best; save(); render(); },

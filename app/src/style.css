@@ -172,6 +172,7 @@ a.ref:after{content:" ↗";font-size:12px}
 .thumb.two{flex-direction:row}.thumb.two .btn{flex:1}
 .kb{margin-left:8px;font-size:12px;opacity:.6}@media (max-width:1023px){.kb{display:none}}
 input.inl{width:6.5em;padding:6px 10px;border-radius:20px}
+input.tmi{width:9.5em}
 .out{margin:12px 0 4px}.warn{color:var(--warn)}.ok{color:var(--ok)}
 .ln{padding-left:18px;margin:8px 0}.ln li{margin:4px 0}
 .vtop{display:flex;justify-content:space-between;align-items:center}.vtop .x{border:0;background:none;font-size:20px;width:40px;height:40px}
