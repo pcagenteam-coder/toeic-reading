@@ -259,7 +259,10 @@ t('首日计划：入职测试最薄弱的前 2 个考点 P5 + 1 篇短 P7（单
   const bu = Y.ctx.window.TDATA.bundles.find(x => x.id === b[0].b); assert(bu.p === 7 && bu.k === 'single' && bu.qs.length <= 3, JSON.stringify([bu.p, bu.k, bu.qs.length]));
   const A = E1.getProgress(), G = {}; A.nodes.forEach(x => { G[x.id] = x.m; });
   const dn = [...new Set(E1.st.log.filter(x => x.e === 'answer' && x.mode === 'diag').map(x => I1[x.id].n))].filter(n => G[n] != null).sort((a, c) => G[a] - G[c]);
-  assert(p5.every(u => G[u.node] <= G[dn[Math.min(2, dn.length - 1)]] + 1e-9), JSON.stringify(p5.map(u => [u.node, G[u.node]])) + ' vs ' + JSON.stringify(dn.slice(0, 3).map(n => G[n])));
+  // 只有还有未做过的 P5 可练的考点才能入选（入职测试随机抽题，薄弱考点可能只出现在 P6/P7 里或 P5 已用完）→ 比较对象按“可练”过滤，避免约 1/8 偶发失败
+  const dz = new Set(E1.st.log.filter(x => x.e === 'answer' && x.mode === 'diag').map(x => x.id)), dnP = dn.filter(n => E1.pickFor(n, dz, 600, null, true));
+  assert(dnP.length >= 1 && p5.some(u => u.node === dnP[0] || G[u.node] <= G[dnP[0]] + 1e-3), 'weakest pickable ' + dnP[0]);
+  if (dnP.length >= 2) assert(p5.every(u => G[u.node] <= G[dnP[1]] + 1e-3), JSON.stringify(p5.map(u => [u.node, G[u.node]])) + ' vs ' + JSON.stringify(dnP.slice(0, 3).map(n => [n, G[n]])));
   E1.recordAnswer({ item_id: p5[0].ids[0], choice: 0, ms: 20000, mode: 'train' });
   assert(E1.getTodayPlan(E1.st, 5).first === false, '做过训练后不再是首日计划');
 });
