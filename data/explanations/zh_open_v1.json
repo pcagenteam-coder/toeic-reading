@@ -10,7 +10,7 @@
    "paraphrase": "P7 同义替换对 [{text 原文短语, option 选项短语}]"
   },
   "n_items_pool": 1511,
-  "n_explained": 669,
+  "n_explained": 707,
   "n_flagged": 0,
   "generator": "work/explain/merge.py（文本由 agent 逐题自写，不含第三方解析原文）"
  },
@@ -10228,6 +10228,576 @@
    "paraphrase": [],
    "node": "QT.P7X.DETAIL.TEXT_MSG",
    "hash": "54a846264046"
+  },
+  "MXC-T06-163": {
+   "answer_letter": "C",
+   "basis": "Permits are not required",
+   "why": "Tannery Lane 停车不需要许可证。",
+   "distractors": {
+    "A": "重车要预约",
+    "B": "送货走南门",
+    "D": "要摆单元号"
+   },
+   "tip": "NOT 题逐项核对",
+   "tip_strategy_id": "S2-P7-07",
+   "paraphrase": [],
+   "node": "QT.P7.NOT_TRUE",
+   "hash": "b3377770ffd3"
+  },
+  "MXC-T06-164": {
+   "answer_letter": "B",
+   "basis": "Noise will be heaviest during the first three days",
+   "why": "噪音最大是开工头三天。",
+   "distractors": {
+    "A": "周末不施工",
+    "C": "晚 6 点不是重点",
+    "D": "是第一周不是最后"
+   },
+   "tip": "heaviest 定位",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.NOTICE",
+   "hash": "259a663194c4"
+  },
+  "MXC-T06-165": {
+   "answer_letter": "A",
+   "basis": "including the loading bays behind Units 9 to 14",
+   "why": "9–14 号后面装卸区封闭，四月要改到南门收货。",
+   "distractors": {
+    "B": "只是停车场关",
+    "C": "垃圾桶统一挪",
+    "D": "没豁免"
+   },
+   "tip": "推断看被关的设施",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "3de660ce719d"
+  },
+  "MXC-T06-166": {
+   "answer_letter": "D",
+   "basis": "four nights on and four nights off",
+   "why": "上四晚休四晚轮换。",
+   "distractors": {
+    "A": "六个月是调薪",
+    "B": "全是夜班",
+    "C": "没说两人分担"
+   },
+   "tip": "on/off＝上班/休息",
+   "tip_strategy_id": "S2-P7-16",
+   "paraphrase": [],
+   "node": "QT.P7X.TRUE_INDICATED.JOB_POSTING",
+   "hash": "b722b341ae8a"
+  },
+  "MXC-T06-167": {
+   "answer_letter": "C",
+   "basis": "At least three years in a manufacturing environment",
+   "why": "必备条件之一是三年制造业经验。",
+   "distractors": {
+    "A": "300 吨是加分项",
+    "B": "没要求多语",
+    "D": "要的是工程资质"
+   },
+   "tip": "Essential 下找",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.DETAIL",
+   "hash": "6995cc36faab"
+  },
+  "MXC-T06-168": {
+   "answer_letter": "A",
+   "basis": "Four weeks of paid training at our Gdansk plant",
+   "why": "到奥斯特拉发前先在格但斯克厂培训四周。",
+   "distractors": {
+    "B": "课程是每年资助",
+    "C": "六个月是调薪",
+    "D": "没提拜访客户"
+   },
+   "tip": "before you join 定位",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.DETAIL",
+   "hash": "ba48873e2db9"
+  },
+  "MXC-T06-169": {
+   "answer_letter": "B",
+   "basis": "We do not accept applications submitted through agencies",
+   "why": "不收中介投递，即要本人直接申请。",
+   "distractors": {
+    "A": "没说谁面试",
+    "C": "没提延误",
+    "D": "没提中介费"
+   },
+   "tip": "否定句推出正面要求",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "364477d1fc76"
+  },
+  "MXC-T06-170": {
+   "answer_letter": "D",
+   "basis": "This part carries no marks",
+   "why": "口头复核不计分。",
+   "distractors": {
+    "A": "15 分钟",
+    "B": "在实操之后讨论",
+    "C": "是完全不计分"
+   },
+   "tip": "no marks＝不计分",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.TRUE_INDICATED",
+   "hash": "d131441ab84f"
+  },
+  "MXC-T06-171": {
+   "answer_letter": "C",
+   "basis": "must repeat the whole course at the standard fee",
+   "why": "挂两科要重修全课并付费。",
+   "distractors": {
+    "A": "没说更快",
+    "B": "要全部重修",
+    "D": "六个月是单科补考期限"
+   },
+   "tip": "two or more parts 定位",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "de5b311bd849"
+  },
+  "MXC-T06-172": {
+   "answer_letter": "B",
+   "basis": "From then on you deal with the tenant yourself",
+   "why": "仅出租服务签约后房东自己对接租客。",
+   "distractors": {
+    "A": "季检属托管",
+    "C": "8% 不是 11%",
+    "D": "证书属 Plus"
+   },
+   "tip": "按套餐分段定位",
+   "tip_strategy_id": "S2-P7-16",
+   "paraphrase": [],
+   "node": "QT.P7X.TRUE_INDICATED.WEB",
+   "hash": "7e7ec2ddea71"
+  },
+  "MXC-T06-173": {
+   "answer_letter": "A",
+   "basis": "plus rent guarantee insurance",
+   "why": "Plus 比托管多了租金保险。",
+   "distractors": {
+    "B": "托管已有",
+    "C": "基础版就有",
+    "D": "托管已有"
+   },
+   "tip": "plus 后是新增项",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.WEB",
+   "hash": "63615236d831"
+  },
+  "MXC-T06-174": {
+   "answer_letter": "D",
+   "basis": "you approve anything above $400",
+   "why": "超过 400 美元的维修需房东批准。",
+   "distractors": {
+    "A": "登广告无需批准",
+    "B": "起草租约无需批准",
+    "C": "检查无需批准"
+   },
+   "tip": "approve 定位",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.WEB",
+   "hash": "ff405379f5b8"
+  },
+  "MXC-T06-175": {
+   "answer_letter": "C",
+   "basis": "text message as soon as a report is ready",
+   "why": "报告出来就发短信通知。",
+   "distractors": {
+    "A": "没寄租约",
+    "B": "不是承包商打电话",
+    "D": "与设置费无关"
+   },
+   "tip": "as soon as 定位",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.WEB",
+   "hash": "51025023e0fd"
+  },
+  "MXC-T06-176": {
+   "answer_letter": "B",
+   "basis": "its new plant … will begin production on 2 March",
+   "why": "新闻稿宣布新厂投产。",
+   "distractors": {
+    "A": "招工只是一部分",
+    "C": "没讲年度业绩",
+    "D": "没招供应商"
+   },
+   "tip": "标题即主旨",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MULTI",
+   "hash": "b0c00a7af6d8"
+  },
+  "MXC-T06-177": {
+   "answer_letter": "A",
+   "basis": "a line currently produced only at the company's plant in Sandvik",
+   "why": "铝壳目前只在 Sandvik 一个厂生产。",
+   "distractors": {
+    "B": "没说替代旧线",
+    "C": "没说单一客户",
+    "D": "没说在新厂设计"
+   },
+   "tip": "only 定位",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.TRUE_INDICATED",
+   "hash": "42af65be798a"
+  },
+  "MXC-T06-178": {
+   "answer_letter": "C",
+   "basis": "Visitors must register by 7 February",
+   "why": "报名截止 2 月 7 日，他 2 月 10 日才发邮件。",
+   "distractors": {
+    "A": "新闻稿 1 月 11 日已发",
+    "B": "发给了新闻办正确地址",
+    "D": "没提电话"
+   },
+   "tip": "两篇日期对比",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "eddfd6de3fb3"
+  },
+  "MXC-T06-179": {
+   "answer_letter": "B",
+   "basis": "Tours … will be led by plant manager Ifeoma Balogun",
+   "why": "他想请 Balogun 讲话，她是厂长。",
+   "distractors": {
+    "A": "通讯是 Halvorsen",
+    "C": "质检是招聘岗位",
+    "D": "维修工程师是四月招聘岗位"
+   },
+   "tip": "邮件给人名，新闻稿给职位",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "d75d3108e3f8"
+  },
+  "MXC-T06-180": {
+   "answer_letter": "D",
+   "basis": "will consider candidates who finish our programme in June",
+   "why": "他问四月招聘是否考虑六月毕业的学徒。",
+   "distractors": {
+    "A": "学院就在附近",
+    "B": "没问人数上限",
+    "C": "没问是否再办"
+   },
+   "tip": "confirm whether 定位",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.REQUEST_ACTION",
+   "hash": "fff657084e25"
+  },
+  "MXC-T06-181": {
+   "answer_letter": "A",
+   "basis": "Every certificate fee covers the examination",
+   "why": "证书课费用含考试。",
+   "distractors": {
+    "B": "周六工作坊只属文凭课",
+    "C": "讲义不是教师写的书",
+    "D": "没含交通"
+   },
+   "tip": "covers 后列举",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "hash": "b7f3e27e898d"
+  },
+  "MXC-T06-182": {
+   "answer_letter": "D",
+   "basis": "The online library, though, is excellent",
+   "why": "她最看重在线图书馆，至今每周用。",
+   "distractors": {
+    "A": "讲义迟到被吐槽",
+    "B": "场地暖气差",
+    "C": "人数只是省钱"
+   },
+   "tip": "though 转折后是褒奖",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "hash": "41afda22d60c"
+  },
+  "MXC-T06-183": {
+   "answer_letter": "C",
+   "basis": "three or more members … pays 15 percent less",
+   "why": "公司派了四人，享 15% 折扣。",
+   "distractors": {
+    "A": "广告无此比例",
+    "B": "广告无此比例",
+    "D": "广告无此比例"
+   },
+   "tip": "人数对上优惠条件",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "e06d99cf65de"
+  },
+  "MXC-T06-184": {
+   "answer_letter": "B",
+   "basis": "Our intake began on 10 September",
+   "why": "10 月 1 日后开课才去新楼，她 9 月开课。",
+   "distractors": {
+    "A": "没说在装修",
+    "C": "没提人数",
+    "D": "暖气坏的是旧楼"
+   },
+   "tip": "两篇日期对比",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "106e4e6f661b"
+  },
+  "MXC-T06-185": {
+   "answer_letter": "A",
+   "basis": "signed up for the six-week negotiation course",
+   "why": "六周谈判课是 520 美元。",
+   "distractors": {
+    "B": "640 是排程课",
+    "C": "780 是她上过的",
+    "D": "1950 是文凭课"
+   },
+   "tip": "课名回价目表",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "68e50aff6f00"
+  },
+  "MXC-T06-186": {
+   "answer_letter": "C",
+   "basis": "A current property licence",
+   "why": "必备条件含有效物业执照。",
+   "distractors": {
+    "A": "没要会计资格",
+    "B": "Tenantly 是加分项",
+    "D": "第二语言是加分项"
+   },
+   "tip": "Required 下找",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "bd2511d56311"
+  },
+  "MXC-T06-187": {
+   "answer_letter": "B",
+   "basis": "Please also bring the original of your licence",
+   "why": "请她带执照原件。",
+   "distractors": {
+    "A": "没要信件副本",
+    "C": "没要样表",
+    "D": "没提停车费"
+   },
+   "tip": "original＝原件",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.REQUEST_ACTION",
+   "hash": "5f5ee37a02a8"
+  },
+  "MXC-T06-188": {
+   "answer_letter": "C",
+   "basis": "The panel takes forty-five minutes … follows immediately afterwards",
+   "why": "她 10:00 面试，45 分钟后即 10:45 笔试。",
+   "distractors": {
+    "A": "9:45 是报到",
+    "B": "10:00 是面试",
+    "D": "11:15 是下一人"
+   },
+   "tip": "日程时间＋时长",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "bf2e593e7475"
+  },
+  "MXC-T06-189": {
+   "answer_letter": "D",
+   "basis": "the Northside team will certainly want to ask you about it",
+   "why": "Northside 团队会问，面试官里团队负责人是 Raman。",
+   "distractors": {
+    "A": "HR",
+    "B": "另一位候选人",
+    "C": "财务"
+   },
+   "tip": "邮件说团队，日程给名字",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "874a45e8df9c"
+  },
+  "MXC-T06-190": {
+   "answer_letter": "A",
+   "basis": "Parking at Harrow Lane is limited to eight spaces",
+   "why": "办公室只有 8 个车位，可能没空位，所以提附近停车场。",
+   "distractors": {
+    "B": "没搬入口",
+    "C": "笔试在 5 号房",
+    "D": "没提火车"
+   },
+   "tip": "推断看 limited",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "baf673355658"
+  },
+  "MXC-T06-191": {
+   "answer_letter": "B",
+   "basis": "Lift modernisation: 5 May to 27 June",
+   "why": "通知租户电梯改造。",
+   "distractors": {
+    "A": "经理没换",
+    "C": "没换送货商",
+    "D": "没讲停车"
+   },
+   "tip": "标题即主旨",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MULTI",
+   "hash": "f3b3e12f6fe1"
+  },
+  "MXC-T06-192": {
+   "answer_letter": "D",
+   "basis": "Deliveries to floors above the third should be arranged before 09:00",
+   "why": "三楼以上送货要避开忙时。",
+   "distractors": {
+    "A": "没让走楼梯",
+    "B": "没要报备",
+    "C": "仍按季度"
+   },
+   "tip": "should 后是要求",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.REQUEST_ACTION",
+   "hash": "d067f89bf12b"
+  },
+  "MXC-T06-193": {
+   "answer_letter": "A",
+   "basis": "Tenants of ground-floor units are exempt from this item",
+   "why": "她五月前在一楼单元，那段时间应免电梯费。",
+   "distractors": {
+    "B": "工程已开始",
+    "C": "没提只含一台",
+    "D": "没比上季"
+   },
+   "tip": "通知给豁免，邮件给时间",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "9286299d8b2e"
+  },
+  "MXC-T06-194": {
+   "answer_letter": "C",
+   "basis": "must be raised in writing within fourteen days of the issue date",
+   "why": "7 月 5 日开票，14 天内即 19 日前，她 21 日才发。",
+   "distractors": {
+    "A": "开票后才写",
+    "B": "地址正确",
+    "D": "付款截止 8 月 4 日"
+   },
+   "tip": "日期一步步算",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "ff712f2fe843"
+  },
+  "MXC-T06-195": {
+   "answer_letter": "B",
+   "basis": "will need the goods lift for roughly two hours",
+   "why": "她要用货梯两小时，超过半小时上限。",
+   "distractors": {
+    "A": "没约会面",
+    "C": "没要延期付款",
+    "D": "没提停车场"
+   },
+   "tip": "请求在 Could 句",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "8d114b8c75d7"
+  },
+  "MXC-T06-196": {
+   "answer_letter": "D",
+   "basis": "allocated in the order in which payments arrive",
+   "why": "工作坊按付款先后分配名额。",
+   "distractors": {
+    "A": "要另付 95",
+    "B": "只在周四",
+    "C": "在 5 号房"
+   },
+   "tip": "allocated 定位",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "fbca7e0807d9"
+  },
+  "MXC-T06-197": {
+   "answer_letter": "C",
+   "basis": "\"Where maintenance budgets actually go\"",
+   "why": "她讲维护预算实际花在哪。",
+   "distractors": {
+    "A": "招人是座谈会",
+    "B": "焊接是 B 组",
+    "D": "停产周是 C 组"
+   },
+   "tip": "人名对标题",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "ff2828e390e3"
+  },
+  "MXC-T06-198": {
+   "answer_letter": "A",
+   "basis": "last year the workshop was full ten days before that closing date",
+   "why": "去年截止前十天就满，所以要报名时就订。",
+   "distractors": {
+    "B": "退款截止 9 月 19 日",
+    "C": "没这说法",
+    "D": "无依据"
+   },
+   "tip": "网页给原因",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "5a0948a5584f"
+  },
+  "MXC-T06-199": {
+   "answer_letter": "B",
+   "basis": "Full forum, both days — $430 members",
+   "why": "她两天全程，被提名享会员价 430。",
+   "distractors": {
+    "A": "250 是单日",
+    "C": "无依据",
+    "D": "560 是非会员价"
+   },
+   "tip": "提名→会员价",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "a30d219519a4"
+  },
+  "MXC-T06-200": {
+   "answer_letter": "D",
+   "basis": "Friday 9 October opens at 09:30 with the annual lecture",
+   "why": "两人只去周四，周五的年度讲座去不了。",
+   "distractors": {
+    "A": "开幕致辞在周四",
+    "B": "座谈会在周四",
+    "C": "工作坊在周四"
+   },
+   "tip": "只去周四→排除周五活动",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "b3452c9b59fb"
   }
  }
 }
