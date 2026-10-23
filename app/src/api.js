@@ -28,7 +28,7 @@ const API = {
   calibrate(real) {
     if (typeof Predict === 'undefined') return null;
     const pr = API.predict(), est = pr.est; if (!est) return null;
-    const c = Predict.calibrate(E.st.predCalib, real, est);
+    const c = Object.assign(Predict.calibrate(E.st.predCalib, real, est), { at: Date.now() });
     E.st.predCalib = c; E.log('setting_change', { key: 'predCalib', value: c }); API._pk = null;
     return c;
   },

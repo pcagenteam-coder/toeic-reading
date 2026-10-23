@@ -284,7 +284,7 @@ function vToday() {
     main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
       <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始'}</button>
       <details><summary>今天时间多？ ˅</summary><div class="row wrapr"><button class="chip" data-act="start" data-m="15">多做 15 分钟</button>
-      <button class="chip" data-act="mock">紧急项目（全真模考）</button></div></details></div>`;
+      ${examLeft() != null && examLeft() >= 0 && examLeft() <= 1 ? '' : '<button class="chip" data-act="mock">紧急项目（全真模考）</button>'}</div></details></div>`;
   }
   const pr = API.predict(), g = API.progress(), b = wkSnap(g, pr), nt = needText(g, pr), gl = gainLine(pr);
   // P0-2：今天页不常驻分数，只给本周趋势（稳 / 上升，不写下降），点开才看数字
@@ -293,7 +293,21 @@ function vToday() {
     ${nt ? `<p class="sm">${nt}</p>` : ''}${gl ? `<p class="mut sm">${gl}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
   const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
-  return top + `<div class="grid2${done && !(S && S.paused) ? ' solo' : ''}"><div>${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+  return top + `<div class="grid2${done && !(S && S.paused) ? ' solo' : ''}"><div>${examCard()}${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+}
+/* P1-8 考前节奏：≤21 天一行倒计时 + 本周重点；T-14/T-7 各推荐一次模考（可拆 P5+6 约 25 分钟 / P7 约 50 分钟两段）；
+ * T-1 只做作战卡和轻复习；考试当天作战卡 +“考完回来填分数”；考后 14 天内未填分数时提示回填（接 API.calibrate） */
+function examCard() {
+  const L = examLeft(); if (L == null || L > 21 || L < -14) return '';
+  const ex = new Date(E.st.exam + 'T00:00').getTime(), c = E.st.predCalib;
+  if (L < 0) return c && c.at >= ex ? '' : `<div class="card tipc"><span>考完了？填一下真实阅读分，之后的预测会更准。</span><button class="link" data-act="goCalib">去填</button></div>`;
+  if (L === 0) return `<div class="card exam"><h2>今天考试，按作战卡来 ✓</h2><p class="sum">不用再刷题。考完回来填一下分数。</p><button class="btn ghost full" data-act="goCalib">考完回来填分数</button></div>`;
+  if (L === 1) return `<div class="card exam"><p><b>明天考试</b> · 今天只看作战卡 + 轻复习，早点休息。</p></div>`;
+  const win = L <= 7 ? 7 : L <= 14 ? 14 : 0, since = ex - win * 864e5;
+  const ms = win ? (E.st.mocks || []).filter(m => m.ts >= since) : [], full = ms.some(m => !m.part), has = p => full || ms.some(m => m.part === p);
+  const focus = L > 14 ? '补最快涨分的考点' : L > 7 ? '做一次模考，找节奏' : '复习错题 + 熟悉作战卡';
+  const mk = win && !(has('56') && has('7')) ? `<div class="row wrapr">${has('56') ? '' : '<button class="chip" data-act="mockPart" data-s="56">模考第 1 段 · P5+6（约 25 分钟）</button>'}${has('7') ? '' : '<button class="chip" data-act="mockPart" data-s="7">第 2 段 · P7（约 50 分钟）</button>'}</div>` : '';
+  return `<div class="card exam"><p><b>距考试 ${L} 天</b> · 本周重点：${focus}</p>${mk ? `<p class="mut sm">这周建议做一次模考，可以分两段做。</p>${mk}` : ''}</div>`;
 }
 function examLeft() { return E.st.exam ? Math.round((new Date(E.st.exam + 'T00:00') - new Date(today() + 'T00:00')) / 864e5) : null; }
 
@@ -427,7 +441,7 @@ function startSession(mode, units, extra) {
   const g = API.progress();
   S = Object.assign({ mode, units, ui: 0, qi: 0, ans: {}, lu: {}, mt: {}, t0: Date.now(), qt0: Date.now(), day: fxToday(), pred0: API.predict(), nd0,
     rem0: g.need ? g.need.nodes : null, fb: null, v: 'q', doc: 0, sc: {}, ppn: 0, tipN: 0 }, extra || {});
-  if (mode === 'mock') { S.end = Date.now() + 75 * 6e4; S.v = 'a'; }
+  if (mode === 'mock') { S.end = Date.now() + (S.part === '56' ? 25 : S.part === '7' ? 50 : 75) * 6e4; S.v = 'a'; }
   E.log('start', { mode, n: units.reduce((s, u) => s + u.ids.length, 0), form: S.form });
   save(); render();
 }
@@ -468,7 +482,8 @@ function finish() {
   const nodes = Object.keys(S.nd0).map(n => ({ n, a: S.nd0[n], b: E.mastery(n) })).filter(x => x.b != null).map(x => Object.assign(x, { d: x.b - (x.a == null ? 0.5 : x.a) }));
   const p5 = ids.filter(id => IT[id].p === 5 && S.ans[id].ms), p5s = p5.reduce((s, id) => s + S.ans[id].ms, 0) / Math.max(1, p5.length) / 1000, p5t = p5.reduce((s, id) => s + IT[id].t, 0) / Math.max(1, p5.length);
   R = { mode: S.mode, n: ids.length, ok, ms, p0: S.pred0, p1, nodes, rem0: S.rem0, need: g.need, rem1: g.need ? g.need.nodes : null, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
-  if (S.mode === 'mock') { R.scaled = Math.round(E.scaled(ok / Math.max(1, ids.length) * 100) / 5) * 5; E.st.mocks.push({ ts: Date.now(), form: S.form, ok, n: ids.length, scaled: R.scaled, ms }); }
+  if (S.mode === 'mock') { R.scaled = Math.round(E.scaled(ok / Math.max(1, ids.length) * 100) / 5) * 5; E.st.mocks.push(Object.assign({ ts: Date.now(), form: S.form, ok, n: ids.length, scaled: R.scaled, ms }, S.part ? { part: S.part } : {}));
+    R.part = S.part || null; const mh = ui().mockHalf; ui().mockHalf = S.part && !(mh && mh.f === S.form && mh.done && mh.done !== S.part) ? { f: S.form, done: S.part } : null; }
   if (S.mode === 'diag') {
     E.st.diag = true; const o = E.st.ob = E.st.ob || {};
     const seen = Object.keys(S.nd0).map(n => ({ n, m: E.mastery(n) })).filter(x => x.m != null && ND[x.n]);
@@ -492,7 +507,7 @@ function resPred(r) {
 /* 10 秒结算：写 2–3 条具体进步，不显示题数和正确率 */
 function vResult() {
   const r = R, ls = [];
-  if (r.mode === 'mock') ls.push(`紧急项目交付：预估阅读 ${r.scaled} 分`);
+  if (r.mode === 'mock') ls.push(r.part ? `模考${r.part === '56' ? '第 1 段（P5+6）' : '第 2 段（P7）'}交付：按这一段推算约 ${r.scaled} 分` : `紧急项目交付：预估阅读 ${r.scaled} 分`);
   r.nodes.filter(x => x.d > 0.02).sort((a, b) => b.d - a.d).slice(0, 2).forEach(x => ls.push(`${esc((ND[x.n] || {}).nm || x.n)}：又稳了一点`));
   if (r.p5 && r.p5[0] <= r.p5[1]) ls.push(`审稿 ${r.p5[0]} 秒/句（目标 ${r.p5[1]}）`);
   // P0-1：只计够达标的最少考点；N 下降才写“−k”，上升静默（UX §11.2）；预测估算中不写
@@ -827,6 +842,12 @@ const A = {
     startSession('train', p.units);
   },
   more() { R = null; A.start({ dataset: { m: 5 } }); },
+  mockPart(el) {
+    const sp = el.dataset.s, mh = ui().mockHalf, f = mh && mh.f && mh.done !== sp ? mh.f : E.nextForm(); if (!f) return alert('整套题都做过了');
+    const ps = sp === '56' ? [5, 6] : [7], units = E.mockPlan(f).filter(u => ps.includes(IT[u.ids[0]].p));
+    startSession('mock', units, { form: f, part: sp });
+  },
+  goCalib() { tab = 'me'; render(); },
   mock() { const f = E.nextForm(); if (!f) return alert('整套题都做过了'); startSession('mock', E.mockPlan(f), { form: f }); },
   rev() { const a = revAlloc(); if (a.nw) { WQ = { ws: a.ws.slice(0, a.nw), i: 0, ni: a.ni, q: null, ans: null }; return render(); } startSession('review', E.reviewUnits(a.ni || 20)); },
   ans(el) { answer(+el.dataset.c); },

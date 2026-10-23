@@ -58,6 +58,14 @@ for (const f of Object.keys(FORMS)) { const pl = E.mockPlan(f), n = pl.reduce((s
   answer((IT[ids[0]].a + 1) % 4); A.tip(); if (!/下次遇到同类题会提醒你/.test(vQuiz())) throw new Error('tip toast'); next();
   if (!/你记过的招/.test(vQuiz())) throw new Error('tip hint on same node'); if (!E.st.tips.find(t => t.id === ids[0]).hinted) throw new Error('tip hinted flag');
   S = null; E.st.run = null; tab = 'review'; render(); if (!/你记下的招 · /.test($('#main').innerHTML)) throw new Error('tips merged into review card'); S = S0; }
+{ const ex0 = E.st.exam, dd = n => { const d = new Date(today() + 'T12:00'); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); }, S0 = S;
+  const mk0 = E.st.mocks; E.st.mocks = []; E.st.exam = dd(10); let h = examCard(); if (!/距考试 10 天/.test(h) || !/data-s="56"/.test(h) || !/data-s="7"/.test(h)) throw new Error('exam card T-10 ' + h);
+  A.mockPart(el({ s: '56' })); if (!S.units.every(u => [5, 6].includes(IT[u.ids[0]].p)) || S.end - Date.now() > 26 * 6e4) throw new Error('mock part 56');
+  while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); } A.closeR();
+  if (E.st.mocks[E.st.mocks.length - 1].part !== '56') throw new Error('mock part saved'); h = examCard(); if (/data-s="56"/.test(h) || !/data-s="7"/.test(h)) throw new Error('mock part 56 done ' + h);
+  E.st.exam = dd(1); if (!/明天考试/.test(examCard())) throw new Error('T-1'); E.st.exam = dd(0); if (!/考完回来填分数/.test(examCard())) throw new Error('T-0');
+  E.st.exam = dd(-2); const pc = E.st.predCalib; E.st.predCalib = null; if (!/考完了？/.test(examCard())) throw new Error('after exam'); E.st.predCalib = pc;
+  E.st.mocks = mk0.concat(E.st.mocks); E.st.exam = ex0; S = S0; }
 for (const t of ['today', 'review', 'progress', 'me']) { tab = t; render(); const h = $('#main').innerHTML; console.log('tab', t, h.length); if (/出了点问题/.test(h)) throw new Error('render error ' + t + ' ' + A._err); }
 tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做了 \\d+ 题|\\d+\\s*\\/\\s*\\d+ 题/.test(h) || !/职级/.test(h) || !/本周小结/.test(h) || /绩效|出勤/.test(h)) throw new Error('progress page'); }
 ['apple', 'invoice', 'deadline', 'budget'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).slice(0, 30).forEach(k => E.st.cards[k].due = 0);
