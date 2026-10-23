@@ -3,21 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#1d3557">
-<title>托业阅读提分 v2</title>
+<meta name="theme-color" content="#f6f5f1">
+<title>托业阅读提分</title>
 <style>/*CSS*/</style>
 </head>
 <body>
+<div id="app" class="app">
+  <nav id="nav" class="nav">
+    <b class="brand">Halvorsen</b>
+    <button data-tab="today"><i>◐</i><span>今天</span></button>
+    <button data-tab="review"><i>↻</i><span>复习</span><em id="revN"></em></button>
+    <button data-tab="progress"><i>◎</i><span>进度</span></button>
+    <button data-tab="me"><i>☺</i><span>我的</span></button>
+  </nav>
+  <main id="main" class="main"></main>
+</div>
 <div id="banner" class="banner hide"></div>
-<header class="top"><b id="title">托业阅读提分</b><span id="who" class="who"></span></header>
-<main id="main"></main>
-<nav id="tabs" class="tabs">
-  <button data-tab="home"><i>▦</i>工作台</button>
-  <button data-tab="weak"><i>◎</i>薄弱点</button>
-  <button data-tab="review"><i>↻</i>复习</button>
-  <button data-tab="graph"><i>⋔</i>图谱</button>
-  <button data-tab="me"><i>☺</i>我的</button>
-</nav>
+<div id="pop" class="pop hide"></div>
 <div id="modal" class="modal hide"><div class="sheet" id="sheet"></div></div>
 <script>/*DATA*/</script>
 <script>/*JS*/</script>
