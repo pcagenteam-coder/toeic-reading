@@ -208,3 +208,4 @@ details.pred summary{cursor:pointer;list-style:none;min-height:44px;display:flex
 details.pred summary::-webkit-details-marker{display:none}
 .bar.tkb{position:relative;overflow:visible}.bar.tkb i{border-radius:4px}.bar .tk{position:absolute;top:-3px;bottom:-3px;width:2px;background:#555;border-radius:1px}
 .grid2.solo{grid-template-columns:1fr;max-width:640px;margin:0 auto}
+.tiph{font-size:14px;color:#6b5a2e;background:#faf4e4;border-radius:8px;padding:6px 10px;margin:0 0 8px}.tipok{display:block;margin-top:4px}

@@ -53,6 +53,11 @@ A.mock(); console.log('mock form', S.form); if (!S || S.mode !== 'mock') throw n
 const mf = S.form; for (let i = 0; i < 40; i++) { vQuiz(); answer(i % 4); } finish(); console.log('mock scaled', R.scaled); A.closeR();
 if (!E.st.used.includes(mf) || E.pool().some(i => i.f === mf)) throw new Error('used mock form still in pool');
 for (const f of Object.keys(FORMS)) { const pl = E.mockPlan(f), n = pl.reduce((s, u) => s + u.ids.length, 0); if (n !== FORMS[f].length || n < FULL_MIN) throw new Error('mockPlan ' + f + ' ' + n); }
+{ const by = {}; D.items.filter(i => i.p === 5 && D.exp && D.exp[i.id] && D.exp[i.id].t).forEach(i => (by[i.n] = by[i.n] || []).push(i.id));
+  const ids = Object.values(by).find(v => v.length >= 2); const S0 = S; startSession('train', [{ ids: [ids[0]] }, { ids: [ids[1]] }]);
+  answer((IT[ids[0]].a + 1) % 4); A.tip(); if (!/下次遇到同类题会提醒你/.test(vQuiz())) throw new Error('tip toast'); next();
+  if (!/你记过的招/.test(vQuiz())) throw new Error('tip hint on same node'); if (!E.st.tips.find(t => t.id === ids[0]).hinted) throw new Error('tip hinted flag');
+  S = null; E.st.run = null; tab = 'review'; render(); if (!/你记下的招 · /.test($('#main').innerHTML)) throw new Error('tips merged into review card'); S = S0; }
 for (const t of ['today', 'review', 'progress', 'me']) { tab = t; render(); const h = $('#main').innerHTML; console.log('tab', t, h.length); if (/出了点问题/.test(h)) throw new Error('render error ' + t + ' ' + A._err); }
 tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做了 \\d+ 题|\\d+\\s*\\/\\s*\\d+ 题/.test(h) || !/职级/.test(h) || !/本周小结/.test(h) || /绩效|出勤/.test(h)) throw new Error('progress page'); }
 ['apple', 'invoice', 'deadline', 'budget'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).slice(0, 30).forEach(k => E.st.cards[k].due = 0);

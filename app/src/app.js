@@ -306,15 +306,15 @@ function revAlloc() {
 function vReview() {
   const hd = '<div class="hd"><h1>复习</h1></div>';
   if (!E.st.diag) return hd + `<div class="card empty"><p>做完入职测试后，做错的题和你点过的生词会按记忆曲线出现在这里。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
-  const a = revAlloc(), n = a.ni + a.nw, g = API.progress();
+  const a = revAlloc(), n = a.ni + a.nw, g = API.progress(), tips = (E.st.tips || []).filter(t => t.t);
+  const tl = tips.length ? `<details class="tips"><summary>顺便看看你记下的招 · ${tips.length} ›</summary>${tips.slice(-20).reverse().map(t => `<div class="li"><span class="sm">${esc(t.t)}</span></div>`).join('')}<p class="mut sm">遇到同类题时会在题目上方提醒你一次。</p></details>` : '';
   const main = n ? `<div class="card task"><h2>今天该复习 ${n} 个 · 约 ${Math.max(1, Math.round((a.ni * 40 + a.nw * 6) / 60))} 分钟</h2>
       <p class="sum">${[a.ni && `错题 ${a.ni}`, a.nw && `生词 ${a.nw}`].filter(Boolean).join(' · ')}</p><button class="btn full lg" data-act="rev">开始复习</button>
-      <p class="mut sm">这些也会放进今天的活，不单独做也行。</p></div>`
-    : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的活</button></div>`;
+      <p class="mut sm">这些也会放进今天的活，不单独做也行。</p>${tl}</div>`
+    : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的活</button>${tl}</div>`;
   const nx = (g.next || []).map(x => { const nd = (g.nodes || []).find(y => y.id === x.id); return `<div class="li"><span>${esc(x.nm)}</span><span class="row"><span class="mut sm">${nd && nd.remainMin ? `约 ${Math.max(3, Math.min(30, nd.remainMin))} 分钟` : ''}</span><button class="chip" data-act="weak" data-n="${esc(x.id)}">开始</button></span></div>`; }).join('');
-  const W = Object.keys(E.st.words || {}), tips = (E.st.tips || []).filter(t => t.t);
-  const lists = `<div class="card"><details><summary>生词本 · ${W.length} ›</summary>${W.length ? W.slice(-30).reverse().map(w => `<div class="li"><b>${esc(w)}</b><span class="mut sm">${esc(API.lookup(w).zh.slice(0, 24))}</span></div>`).join('') : '<p class="mut sm">做题时点生词，会自动加进来。</p>'}</details>
-    <details><summary>我记下的招 · ${tips.length} ›</summary>${tips.length ? tips.slice(-20).reverse().map(t => `<div class="li"><span class="sm">${esc(t.t)}</span></div>`).join('') : '<p class="mut sm">答错时点「记一招」会存到这里。</p>'}</details></div>`;
+  const W = Object.keys(E.st.words || {});
+  const lists = `<div class="card"><details><summary>生词本 · ${W.length} ›</summary>${W.length ? W.slice(-30).reverse().map(w => `<div class="li"><b>${esc(w)}</b><span class="mut sm">${esc(API.lookup(w).zh.slice(0, 24))}</span></div>`).join('') : '<p class="mut sm">做题时点生词，会自动加进来。</p>'}</details></div>`;
   return hd + `<div class="grid2"><div>${main}${nx ? `<div class="card"><h2>${ui().plain ? '最快涨分' : '主管带你练（最快涨分）'}</h2>${nx}</div>` : ''}</div><div>${lists}</div></div>`;
 }
 function wqOpts(w) {
@@ -589,11 +589,20 @@ function vQuiz() {
     <div class="pane pa" id="pa">${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
     <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div><button class="fab" data-act="flip" aria-label="切换">⇄</button></div>`;
 }
+/* P1-9：同类题（同主考点）出现时，在题干上方提示 1 次记下的招；每条招只提示一次（t.hinted） */
+function tipHint(it, id) {
+  S.tipH = S.tipH || {};
+  if (!(id in S.tipH)) {
+    const t = S.mode === 'mock' ? null : (E.st.tips || []).find(x => x.t && !x.hinted && x.id !== id && (x.n || (IT[x.id] || {}).n) === it.n);
+    S.tipH[id] = t ? t.t : null; if (t) t.hinted = Date.now();
+  }
+  return S.tipH[id] ? `<div class="tiph">☆ 你记过的招：${esc(S.tipH[id])}</div>` : '';
+}
 function vP5(it, id) {
   const a = S.ans[id], s = (it.s || '').replace(/-{3,}|_{3,}|\(\s*\)/, '\u0004');
   const doc = rich(s).replace('\u0004', `<span class="gap">${a ? esc(it.o[a.c] || '') : '&nbsp;'}</span>`);
   const who = ui().plain ? '选择' : '批注 · Ken：这里用哪个？';
-  return `<div class="p5"><div class="paper"><div class="lab">文档 · 第 ${it.q} 句</div>${doc}</div>
+  return `${tipHint(it, id)}<div class="p5"><div class="paper"><div class="lab">文档 · 第 ${it.q} 句</div>${doc}</div>
     <div class="anno"><div class="ah">${who}</div>${vOpts(it, id)}${vFb(it, id)}</div></div>`;
 }
 function vPassage(b, it, id, refs, multi) {
@@ -629,7 +638,7 @@ function vQs(b, u, it, id, refs) {
     if (!refs.q && !refs.para && !refs.ins && refs.doc >= 0 && b.docs.length > 1) stem += ` <a class="ref" data-act="jump" data-to="doc">看${TXN[b.docs[refs.doc].t] || '原文'}</a>`;
     stem += '</p>';
   }
-  return nav + stem + vOpts(it, id) + vFb(it, id);
+  return nav + tipHint(it, id) + stem + vOpts(it, id) + vFb(it, id);
 }
 function vOpts(it, id) {
   const a = S.ans[id], show = a && S.mode !== 'mock';
@@ -645,7 +654,7 @@ function vFb(it, id) {
   const x = API.explain(id), wrong = a.c !== it.a, mine = wrong && a.c >= 0 ? x.dis[L4[a.c]] : '';
   const L = API.lesson(it.n), nm = (ND[it.n] || {}).nm || '';
   const saved = (E.st.tips || []).some(t => t.id === id);
-  const tip = wrong && x.tip ? `<div class="tip"><span><b>记一招</b> ${esc(x.tip)}</span><button class="chip ${saved ? 'on' : ''}" data-act="tip">${saved ? '已记下' : '记下☆'}</button></div>` : '';
+  const tip = wrong && x.tip ? `<div class="tip"><span><b>记一招</b> ${esc(x.tip)}</span><button class="chip ${saved ? 'on' : ''}" data-act="tip">${saved ? '已记下' : '记下☆'}</button>${saved ? '<span class="mut sm tipok">下次遇到同类题会提醒你</span>' : ''}</div>` : '';
   let pp = '';
   if (it.p === 7 && x.pp.length && (S.ppShown === id || S.ppn < 2)) { if (S.ppShown !== id) { S.ppn++; S.ppShown = id; } const p = x.pp[0];
     pp = `<div class="pp">${ui().plain ? '' : 'Leo 的备忘：'}这两个说法是一回事<br>原文 <b>${esc(p[0])}</b> ↔ 选项 <b>${esc(p[1])}</b></div>`; }
@@ -845,7 +854,7 @@ const A = {
     S.jumpTo = to === 'ref' ? '#mref' : to === 'basis' ? '#mbasis' : to === 'para' ? `#p${S.doc}-${refs.para}` : to === 'ins' ? '#ins1' : to === 'blank' ? '.blank.cur' : null;
     save(); render();
   },
-  tip() { const id = curId(), x = API.explain(id); E.st.tips = E.st.tips || []; if (!E.st.tips.some(t => t.id === id)) { E.st.tips.push({ id, t: x.tip, ts: Date.now() }); E.log('tip_save', { id }); } save(); render(); },
+  tip() { const id = curId(), x = API.explain(id); E.st.tips = E.st.tips || []; if (!E.st.tips.some(t => t.id === id)) { E.st.tips.push({ id, n: IT[id].n, t: x.tip, ts: Date.now() }); E.log('tip_save', { id }); } save(); render(); },
   lesson() { const L = API.lesson(IT[curId()].n); if (L) { E.log('lesson_open', { node: L.node }); modal(vLesson(L)); } },
   unword(el) { const w = el.dataset.w; delete E.st.words[w]; E.log('word_remove', { lemma: w }); save(); hidePop(); },
   menu() {
