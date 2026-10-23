@@ -1,0 +1,2205 @@
+{
+ "meta": {
+  "version": "grammar_v1",
+  "n_lessons": 75,
+  "coverage": "graph_v1 GR.* 叶节点 54 + QT.P5/QT.P6 叶节点 21",
+  "fields": {
+   "rule": "一句话规则",
+   "examples": "2 个托业式自编例句 {en, zh}",
+   "trap": "常见陷阱 1 条",
+   "signal": "识别信号：看到什么就用这招",
+   "priority": "全局学习顺序（600 档视角）",
+   "priority_600_tier": "0=600 档核心（词性、介词/连词、看选项判题型）；1=在 600 档最小技巧集；2=其余",
+   "in_min_set": "其关联技巧进入了哪些档的最小技巧集"
+  },
+  "order_by_band": {
+   "≤500": [
+    "QT.P5.IDENTIFY",
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET",
+    "GR.POS.NOUN_AFTER_PREP",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.POS.ADV_VERB",
+    "QT.P5.WORD_FORM",
+    "QT.P6.CLASSIFY",
+    "GR.CONN.PREP_VS_CONJ",
+    "GR.POS.ADJ_COMPLEMENT",
+    "GR.POS.ADV_ADJ",
+    "GR.POS.ADV_AUX_SLOT",
+    "QT.P5.CONNECTOR_MIX",
+    "GR.POS.ADV_SENTENCE",
+    "QT.P5.VOCAB",
+    "QT.P6.CTX_VOCAB",
+    "QT.P6.INSERTION"
+   ],
+   "600": [
+    "QT.P5.IDENTIFY",
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET",
+    "GR.POS.NOUN_AFTER_PREP",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.POS.ADV_VERB",
+    "QT.P5.WORD_FORM",
+    "QT.P6.CLASSIFY",
+    "GR.CONN.PREP_VS_CONJ",
+    "QT.P5.PREP",
+    "GR.POS.ADJ_COMPLEMENT",
+    "GR.POS.ADV_ADJ",
+    "GR.POS.ADV_AUX_SLOT",
+    "QT.P5.CONNECTOR_MIX",
+    "GR.CONN.CONJ_ADVERBIAL",
+    "GR.CONN.CONJ_ADVERB",
+    "QT.P5.CONJ",
+    "GR.POS.ADV_SENTENCE",
+    "QT.P5.VOCAB",
+    "QT.P5.VERB_FORM",
+    "QT.P6.CTX_VOCAB",
+    "QT.P6.INSERTION"
+   ],
+   "730": [
+    "QT.P5.IDENTIFY",
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET",
+    "GR.POS.NOUN_AFTER_PREP",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.POS.ADV_VERB",
+    "QT.P5.WORD_FORM",
+    "QT.P6.CLASSIFY",
+    "GR.CONN.PREP_VS_CONJ",
+    "QT.P5.PREP",
+    "GR.POS.ADJ_COMPLEMENT",
+    "GR.POS.ADV_ADJ",
+    "GR.POS.ADV_AUX_SLOT",
+    "QT.P5.CONNECTOR_MIX",
+    "GR.CONN.CONJ_ADVERBIAL",
+    "GR.CONN.CONJ_ADVERB",
+    "QT.P5.CONJ",
+    "GR.POS.ADV_SENTENCE",
+    "QT.P5.VOCAB",
+    "QT.P5.VERB_FORM",
+    "QT.P6.CTX_VOCAB",
+    "QT.P6.INSERTION",
+    "GR.VERB.AGREE_SV",
+    "GR.VERB.TENSE_SIMPLE",
+    "GR.VERB.VOICE_PASSIVE",
+    "GR.VERB.TENSE_PERFECT",
+    "GR.VERB.TENSE_FUTURE_CLAUSE",
+    "QT.P6.CTX_TENSE",
+    "QT.P6.CTX_CONJ_ADV",
+    "QT.P6.INS_OPENING",
+    "QT.P6.INS_TRANSITION",
+    "QT.P6.INS_CLOSING"
+   ],
+   "860+": [
+    "QT.P5.IDENTIFY",
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET",
+    "GR.POS.NOUN_AFTER_PREP",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.POS.ADV_VERB",
+    "QT.P5.WORD_FORM",
+    "QT.P6.CLASSIFY",
+    "GR.CONN.PREP_VS_CONJ",
+    "QT.P5.PREP",
+    "GR.CONN.PREP_TIME",
+    "GR.CONN.PREP_PLACE",
+    "GR.POS.ADJ_COMPLEMENT",
+    "GR.POS.ADV_ADJ",
+    "GR.POS.ADV_AUX_SLOT",
+    "QT.P5.CONNECTOR_MIX",
+    "GR.CONN.CONJ_ADVERBIAL",
+    "GR.CONN.CONJ_ADVERB",
+    "QT.P5.CONJ",
+    "GR.POS.NOUN_COUNT",
+    "GR.POS.NOUN_PERSON_THING",
+    "GR.POS.VERB_SLOT",
+    "GR.CONN.PREP_MEANING",
+    "GR.POS.ADV_SENTENCE",
+    "GR.POS.NOUN_COMPOUND",
+    "GR.CONN.PREP_PHRASE_MULTI",
+    "QT.P5.VOCAB",
+    "QT.P5.VERB_FORM",
+    "QT.P6.CTX_VOCAB",
+    "QT.P6.INSERTION",
+    "GR.VERB.AGREE_SV",
+    "GR.VERB.TENSE_SIMPLE",
+    "GR.VERB.VOICE_PASSIVE",
+    "GR.VERB.MODAL_BASE",
+    "GR.PRON.CASE",
+    "QT.P5.PRONOUN",
+    "GR.VERB.TENSE_PERFECT",
+    "GR.VERB.TENSE_FUTURE_CLAUSE",
+    "GR.NONFIN.TO_INF",
+    "GR.NONFIN.GERUND",
+    "GR.NONFIN.PARTICIPLE_ADJ",
+    "GR.PRON.POSSESSIVE_PRONOUN",
+    "GR.PRON.REFLEXIVE",
+    "GR.REL.REL_PRONOUN",
+    "GR.COMP.COMPARATIVE",
+    "GR.COMP.SUPERLATIVE",
+    "QT.P5.RELATIVE",
+    "QT.P5.COMPARATIVE",
+    "QT.P6.CTX_TENSE",
+    "QT.P6.CTX_PRONOUN",
+    "QT.P6.CTX_CONJ_ADV",
+    "GR.VERB.VERB_PATTERN",
+    "GR.NONFIN.PARTICIPLE_MODIFIER",
+    "GR.PRON.INDEFINITE",
+    "GR.REL.NOUN_CLAUSE",
+    "GR.COMP.EQUATIVE",
+    "QT.P6.INS_OPENING",
+    "QT.P6.INS_TRANSITION",
+    "QT.P6.INS_CLOSING",
+    "GR.NONFIN.PARTICIPLE_CLAUSE",
+    "GR.PRON.DEMONSTRATIVE",
+    "GR.REL.REL_ADVERB",
+    "GR.REL.REL_WHAT",
+    "GR.REL.COMPOUND_REL"
+   ]
+  },
+  "source": "全部自编；排序依据 data/strategies/strategies_v2.json min_sets",
+  "builder": "work/explain/build_lessons.py"
+ },
+ "lessons": [
+  {
+   "node": "QT.P5.IDENTIFY",
+   "name_zh": "看选项判题型（结构先行 vs 语境先行）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-01",
+    "S2-P5-05"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "先看四个选项长什么样：词尾不同是词性题，同一个动词不同形式是动词题，意思不同才是词汇题。",
+   "examples": [
+    {
+     "en": "The ------- of the new system took two weeks. (A) install (B) installation (C) installed (D) installs",
+     "zh": "选项同根不同尾→词性题，只看 The ___ of，选名词 installation。"
+    },
+    {
+     "en": "Please ------- the attached form by Friday. (A) complete (B) attend (C) achieve (D) perform",
+     "zh": "四个都是动词、意思不同→词汇题，要读宾语 form，选 complete。"
+    }
+   ],
+   "trap": "一上来就从头读整句、逐词翻译，词性题也花了 40 秒。",
+   "signal": "四个选项长得像（同一个词根）→ 只看空格前后；四个选项意思不同 → 读全句。",
+   "priority": 1
+  },
+  {
+   "node": "QT.P6.INDEPENDENT",
+   "name_zh": "独立型语法/词性题",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-01",
+    "S2-P5-02",
+    "S2-P6-01"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "独立型空格和 P5 一模一样：看空格前后两三个词定词性、语态或介词。",
+   "examples": [
+    {
+     "en": "Thank you for your patience during the transition.",
+     "zh": "感谢大家在过渡期的耐心。"
+    },
+    {
+     "en": "Training sessions will be held in Room 2B.",
+     "zh": "培训课将在 2B 室举行。"
+    }
+   ],
+   "trap": "以为 P6 题都要读全文，花太多时间。",
+   "signal": "四个选项同词根，或都是介词。",
+   "priority": 2
+  },
+  {
+   "node": "GR.POS.NOUN_AFTER_DET",
+   "name_zh": "限定词/冠词/所有格后填名词",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "the / a / his / their / this 这类词后面，到下一个介词或动词之前，缺的就是名词。",
+   "examples": [
+    {
+     "en": "The approval of the budget is expected soon.",
+     "zh": "预算预计很快获批。（the ___ of → approval）"
+    },
+    {
+     "en": "We appreciate your cooperation.",
+     "zh": "感谢您的配合。（your ___ → cooperation）"
+    }
+   ],
+   "trap": "the 后面紧跟的是 -ly 或动词原形时别选，中间还可能要个形容词：the ___ report → 形容词。",
+   "signal": "空格前是 the/a/所有格，空格后是 of、句号或动词。",
+   "priority": 3
+  },
+  {
+   "node": "GR.POS.NOUN_AFTER_PREP",
+   "name_zh": "介词后填名词（或动名词）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "介词（for / of / in / with / without）后面要名词；要带宾语的动作就用 -ing。",
+   "examples": [
+    {
+     "en": "Thank you for your patience.",
+     "zh": "感谢您的耐心。（for your ___ → 名词）"
+    },
+    {
+     "en": "She left without signing the form.",
+     "zh": "她没签表就走了。（介词后接动作 → signing）"
+    }
+   ],
+   "trap": "把 to 一律当不定式：look forward to、be committed to 后面要 -ing 或名词。",
+   "signal": "空格前是介词；空格后还有宾语就选 -ing。",
+   "priority": 4
+  },
+  {
+   "node": "GR.POS.ADJ_BEFORE_NOUN",
+   "name_zh": "名词前填形容词",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "名词前面空一格（a/the 和名词中间），填形容词。",
+   "examples": [
+    {
+     "en": "The hotel offers complimentary breakfast.",
+     "zh": "酒店提供免费早餐。"
+    },
+    {
+     "en": "We need an accurate estimate by Monday.",
+     "zh": "周一前我们需要一份准确的估价。"
+    }
+   ],
+   "trap": "选了副词 accurately——副词不修饰名词。",
+   "signal": "空格夹在 a/the/所有格 和名词之间。",
+   "priority": 5
+  },
+  {
+   "node": "GR.POS.ADV_VERB",
+   "name_zh": "修饰动词的副词",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "句子主干已经完整，空格修饰动词，就填 -ly 副词。",
+   "examples": [
+    {
+     "en": "Please read the instructions carefully.",
+     "zh": "请仔细阅读说明。"
+    },
+    {
+     "en": "The team completed the project successfully.",
+     "zh": "团队顺利完成项目。"
+    }
+   ],
+   "trap": "选形容词 careful——句子不缺成分时不填形容词。",
+   "signal": "空格在“动词＋宾语”后面，或在句尾，去掉它句子照样成立。",
+   "priority": 6
+  },
+  {
+   "node": "QT.P5.WORD_FORM",
+   "name_zh": "词性题",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-02",
+    "S2-P5-03",
+    "S2-P5-04",
+    "S2-P5-09",
+    "S2-P5-14",
+    "S2-P5-16",
+    "S2-P5-23"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "词性题只看空格前后两三个词：冠词/所有格后填名词，名词前填形容词，动词前后、句首逗号前填副词。",
+   "examples": [
+    {
+     "en": "Ms. Ito gave a detailed ------- of the plan. → explanation",
+     "zh": "伊藤女士对计划做了详细说明。（a＋形容词＋___ → 名词）"
+    },
+    {
+     "en": "Sales increased ------- last quarter. → sharply",
+     "zh": "上季度销量大幅增长。（修饰动词 increased → 副词）"
+    }
+   ],
+   "trap": "看到中文“的”就选形容词——要看位置，不看中文。",
+   "signal": "四个选项同一个词根，只是 -tion / -ive / -ly / -ed 词尾不同。",
+   "priority": 7
+  },
+  {
+   "node": "QT.P6.CLASSIFY",
+   "name_zh": "独立型 vs 上下文型判别",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P6-01",
+    "S2-P6-03",
+    "S2-P6-11"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "P6 先分两类：本句就能定答案的（词性、介词、语态）按 P5 秒做；要看上下文的（时态、代词、连接副词、插入句）再放慢读。",
+   "examples": [
+    {
+     "en": "The paper forms will no longer be accepted.",
+     "zh": "纸质表格不再受理。（be ＋分词，本句可做）"
+    },
+    {
+     "en": "We will ship the order next week.",
+     "zh": "我们下周发货。（时态要看信的日期，需上下文）"
+    }
+   ],
+   "trap": "每空都从头细读全文，或每空都只看本句。",
+   "signal": "选项是同一词的不同词尾 → 本句做；选项是不同时态 / 代词 / however 类 / 整句 → 看上下文。",
+   "priority": 8
+  },
+  {
+   "node": "GR.CONN.PREP_VS_CONJ",
+   "name_zh": "介词 vs 连词（despite/although, during/while, because of/because）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-03",
+    "S2-P5-08"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "意思一样的成对词：despite/although、during/while、because of/because——前者接名词，后者接句子。",
+   "examples": [
+    {
+     "en": "During the meeting, phones must be switched off.",
+     "zh": "开会期间手机须关机。"
+    },
+    {
+     "en": "While the manager was away, Ms. Lee handled the calls.",
+     "zh": "经理不在时，李女士接听电话。"
+    }
+   ],
+   "trap": "during 后面接了句子，或 while 后面只接名词短语（while 后可接 -ing，但不接单独名词）。",
+   "signal": "选项里出现成对的“介词版”和“连词版”。",
+   "priority": 9
+  },
+  {
+   "node": "QT.P5.PREP",
+   "name_zh": "介词题",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-08",
+    "S2-P5-12",
+    "S2-P5-16"
+   ],
+   "in_min_set": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "介词题先想固定搭配（on Monday、in May、by Friday），想不起来再按意思选。",
+   "examples": [
+    {
+     "en": "The report is due by 5 P.M. on Friday.",
+     "zh": "报告周五下午 5 点前交。"
+    },
+    {
+     "en": "The store will be closed throughout the renovation.",
+     "zh": "装修期间商店一直关闭。"
+    }
+   ],
+   "trap": "by 和 until 不分：交东西用 by，持续状态用 until。",
+   "signal": "四个选项都是介词。",
+   "priority": 10
+  },
+  {
+   "node": "GR.POS.NOUN_SUBJ_OBJ",
+   "name_zh": "主语/宾语位置填名词",
+   "target_band": 400,
+   "strategy_ids": [],
+   "in_min_set": [],
+   "priority_600_tier": 0,
+   "rule": "句子缺主语或动词后缺宾语，就填名词。",
+   "examples": [
+    {
+     "en": "Applications must be received by May 15.",
+     "zh": "申请须在 5 月 15 日前收到。（句首缺主语 → Applications）"
+    },
+    {
+     "en": "The manager requested clarification on the costs.",
+     "zh": "经理要求说明费用。（requested 后缺宾语 → 名词）"
+    }
+   ],
+   "trap": "句首选了动词原形 Apply——动词不能直接当主语。",
+   "signal": "空格在句首、后面紧跟谓语动词；或空格在及物动词后、句尾。",
+   "priority": 11
+  },
+  {
+   "node": "GR.CONN.PREP_TIME",
+   "name_zh": "时间介词（at/on/in/by/until/within/during/for）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-12"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "at 钟点、on 日期/星期、in 月份/年份；by 截止、until 持续到、for 时长、since 起点、within 在…之内、during 某段期间。",
+   "examples": [
+    {
+     "en": "Please submit the form by June 30.",
+     "zh": "请于 6 月 30 日前提交表格。"
+    },
+    {
+     "en": "The offer is valid until December 31.",
+     "zh": "优惠有效期至 12 月 31 日。"
+    }
+   ],
+   "trap": "截止期限用了 until：“提交”是一下子的动作，要用 by。",
+   "signal": "空格后是时间点、日期或一段时长。",
+   "priority": 12
+  },
+  {
+   "node": "GR.CONN.PREP_PLACE",
+   "name_zh": "地点/方位介词（at/in/on/across/throughout/along）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-12"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "at 小地点/具体点、in 在里面/城市、on 在表面/楼层；across 对面/横跨、throughout 遍及、along 沿着。",
+   "examples": [
+    {
+     "en": "The café is across the street from the library.",
+     "zh": "咖啡馆在图书馆的街对面。"
+    },
+    {
+     "en": "We have branches throughout the country.",
+     "zh": "我们在全国都有分店。"
+    }
+   ],
+   "trap": "among（三者以上之间）和 between（两者之间）混用。",
+   "signal": "空格后是地点、楼层、街道或区域。",
+   "priority": 13
+  },
+  {
+   "node": "GR.CONN.CONJ_COORD",
+   "name_zh": "并列连词（and/but/or/yet/so）",
+   "target_band": 400,
+   "strategy_ids": [],
+   "in_min_set": [],
+   "priority_600_tier": 0,
+   "rule": "and 加合、but/yet 转折、or 选择、so 结果——连接两个同等的部分。",
+   "examples": [
+    {
+     "en": "The room is small, but it is well equipped.",
+     "zh": "房间小，但设备齐全。"
+    },
+    {
+     "en": "The printer was broken, so we sent the files to a shop.",
+     "zh": "打印机坏了，所以我们把文件送去店里印。"
+    }
+   ],
+   "trap": "so 和 but 混：前后是因果用 so，相反用 but。",
+   "signal": "空格前有逗号，后面是完整句子，选项是 and/but/or/so/yet。",
+   "priority": 14
+  },
+  {
+   "node": "GR.POS.ADJ_COMPLEMENT",
+   "name_zh": "be/系动词/宾补位置填形容词",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "be / become / remain / seem 后面，以及 make / keep / find＋东西后面，填形容词描述状态。",
+   "examples": [
+    {
+     "en": "The new software is easy to use.",
+     "zh": "新软件很好用。（be ＋形容词）"
+    },
+    {
+     "en": "Please keep the door closed.",
+     "zh": "请保持门关闭。（keep＋东西＋形容词）"
+    }
+   ],
+   "trap": "在 be 后面选副词 easily，或者在 find it ___ 后选名词。",
+   "signal": "空格前是 be/become/remain/seem，或 make/keep/find＋宾语。",
+   "priority": 15
+  },
+  {
+   "node": "GR.POS.ADV_ADJ",
+   "name_zh": "修饰形容词/分词/副词的副词",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "形容词、过去分词、另一个副词前面的空格，填副词。",
+   "examples": [
+    {
+     "en": "The forms are surprisingly simple.",
+     "zh": "表格出乎意料地简单。"
+    },
+    {
+     "en": "The plan was highly praised.",
+     "zh": "计划广受好评。"
+    }
+   ],
+   "trap": "选 surprising simple——两个形容词不能这样硬连。",
+   "signal": "空格后紧跟形容词或 -ed 分词。",
+   "priority": 16
+  },
+  {
+   "node": "GR.POS.ADV_AUX_SLOT",
+   "name_zh": "助动词与动词之间的副词",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "助动词和动词中间（has ___ done, will ___ be, is ___ -ing）的空格，填副词。",
+   "examples": [
+    {
+     "en": "The report has already been sent.",
+     "zh": "报告已经发出了。"
+    },
+    {
+     "en": "We will carefully review your application.",
+     "zh": "我们会认真审核您的申请。"
+    }
+   ],
+   "trap": "看到 has 后面就选过去分词，结果动词重复了。",
+   "signal": "空格前是 has/have/will/can/is，空格后已经有动词。",
+   "priority": 17
+  },
+  {
+   "node": "QT.P5.CONNECTOR_MIX",
+   "name_zh": "介词/连词/副词混排题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-03",
+    "S2-P5-08",
+    "S2-P5-10"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "介词、连词、副词混在一起时，看空格后面：跟名词用介词，跟完整句子用连词，前后都是完整句、中间有分号或句号用副词。",
+   "examples": [
+    {
+     "en": "Despite the rain, the event started on time.",
+     "zh": "尽管下雨，活动按时开始。（后接名词 → 介词）"
+    },
+    {
+     "en": "Although it rained, the event started on time.",
+     "zh": "虽然下了雨，活动按时开始。（后接句子 → 连词）"
+    }
+   ],
+   "trap": "只按中文意思选，despite 和 although 都是“尽管”，结果选错。",
+   "signal": "选项里既有 despite/because of 又有 although/because 或 however。",
+   "priority": 18
+  },
+  {
+   "node": "GR.CONN.CONJ_ADVERBIAL",
+   "name_zh": "从属连词（although/unless/once/as soon as/provided that/so that）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-08"
+   ],
+   "in_min_set": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "从属连词引出一个“条件/时间/让步/目的”小句：unless 除非、once 一旦、provided that 只要、so that 为了、even though 即使。",
+   "examples": [
+    {
+     "en": "You may return the item provided that it is unused.",
+     "zh": "只要未使用即可退货。"
+    },
+    {
+     "en": "Once the contract is signed, work will begin.",
+     "zh": "合同一签，就开工。"
+    }
+   ],
+   "trap": "unless 本身带“不”，后面再加 not 就意思反了。",
+   "signal": "空格后是完整句子，另一半也是完整句子，中间用逗号或直接连。",
+   "priority": 19
+  },
+  {
+   "node": "GR.CONN.CONJ_ADVERB",
+   "name_zh": "接续副词（however/therefore/in addition/otherwise）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-08",
+    "S2-P6-06"
+   ],
+   "in_min_set": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "however、therefore、in addition、otherwise 是副词，不能把两个句子直接连起来，前面要句号或分号，后面常跟逗号。",
+   "examples": [
+    {
+     "en": "The shipment was late; therefore, we refunded the fee.",
+     "zh": "货晚到了，因此我们退了运费。"
+    },
+    {
+     "en": "The price is high. However, the quality is excellent.",
+     "zh": "价格高，但质量很好。"
+    }
+   ],
+   "trap": "把 however 当 although 用，直接连两个句子不加分号。",
+   "signal": "空格在句首或分号后，后面紧跟逗号。",
+   "priority": 20
+  },
+  {
+   "node": "QT.P5.CONJ",
+   "name_zh": "连词题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-08"
+   ],
+   "in_min_set": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "连词题后面都是句子，先判断前后关系：转折 although、条件 if/unless/provided that、时间 once/as soon as、目的 so that。",
+   "examples": [
+    {
+     "en": "Unless you register by Friday, you cannot attend.",
+     "zh": "周五前不报名就不能参加。"
+    },
+    {
+     "en": "We will ship the order as soon as payment is received.",
+     "zh": "一收到付款就发货。"
+    }
+   ],
+   "trap": "用 because 连接两句其实是转折关系的句子。",
+   "signal": "四个选项都是连词，空格后是完整句子。",
+   "priority": 21
+  },
+  {
+   "node": "GR.POS.NOUN_COUNT",
+   "name_zh": "可数/不可数与单复数",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-14"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "可数名词单数前面必须有 a/the/所有格；没有就用复数。advice、equipment、information 不可数，不加 s。",
+   "examples": [
+    {
+     "en": "We received several inquiries about the product.",
+     "zh": "我们收到几封关于产品的咨询。（several ＋复数）"
+    },
+    {
+     "en": "The new equipment arrived yesterday.",
+     "zh": "新设备昨天到了。（equipment 不可数，不加 s）"
+    }
+   ],
+   "trap": "选了 advices / equipments / informations。",
+   "signal": "选项里同一名词有单数和复数；空格前有 several / many / a / each。",
+   "priority": 22
+  },
+  {
+   "node": "GR.POS.NOUN_PERSON_THING",
+   "name_zh": "人名词 vs 事物名词",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-14"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "先看要的是人还是事：-er/-or/-ant/-ee 是人，-tion/-ance/-ment 是事物或行为。",
+   "examples": [
+    {
+     "en": "All attendees must wear name badges.",
+     "zh": "所有参会者须佩戴胸牌。（戴胸牌的是人 → attendees）"
+    },
+    {
+     "en": "Attendance at the meeting is required.",
+     "zh": "必须出席会议。（出席这件事 → attendance）"
+    }
+   ],
+   "trap": "两个都是名词就随便选——看动词：戴胸牌、签字的是人；被要求、增加的多是事。",
+   "signal": "选项里同时有 -ant/-ee/-er 和 -ance/-tion。",
+   "priority": 23
+  },
+  {
+   "node": "GR.POS.VERB_SLOT",
+   "name_zh": "缺谓语时填限定动词",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-10"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "句子有主语没谓语，就必须填能当谓语的动词（带时态的形式），-ing 和 to do 都不行。",
+   "examples": [
+    {
+     "en": "The director presents the figures every month.",
+     "zh": "主管每月汇报数据。"
+    },
+    {
+     "en": "Our office closes at 6 P.M. on Fridays.",
+     "zh": "我们办公室周五下午 6 点关门。"
+    }
+   ],
+   "trap": "选 presenting / to present——这两种不能单独当谓语。",
+   "signal": "数一数句子里的动词：一个都没有，就补谓语。",
+   "priority": 24
+  },
+  {
+   "node": "GR.CONN.PREP_MEANING",
+   "name_zh": "按语义选介词（despite/due to/regarding/except/prior to）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-12"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "按意思选的介词要背一小组：despite 尽管、due to 由于、regarding 关于、except 除了、prior to 在…之前、instead of 代替。",
+   "examples": [
+    {
+     "en": "Due to heavy snow, the flight was canceled.",
+     "zh": "由于大雪，航班取消了。"
+    },
+    {
+     "en": "Please read the manual prior to use.",
+     "zh": "使用前请阅读说明书。"
+    }
+   ],
+   "trap": "把 due to（因为）和 despite（尽管）看反，前后逻辑正好相反。",
+   "signal": "选项都是两三个词的介词，要看前后是因果、让步还是范围。",
+   "priority": 25
+  },
+  {
+   "node": "GR.CONN.CONJ_CORRELATIVE",
+   "name_zh": "成对连词（both–and/either–or/neither–nor/not only–but also/whether–or）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-24"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 0,
+   "rule": "成对词找另一半：both…and、either…or、neither…nor、not only…but also、whether…or。",
+   "examples": [
+    {
+     "en": "You can apply either online or by mail.",
+     "zh": "可以网上申请，也可以邮寄申请。"
+    },
+    {
+     "en": "Neither the manager nor the staff were informed.",
+     "zh": "经理和员工都没收到通知。"
+    }
+   ],
+   "trap": "看到 or 选了 both，看到 and 选了either。",
+   "signal": "句中已有 and / or / nor / but also，空格在前半句。",
+   "priority": 26
+  },
+  {
+   "node": "GR.POS.ADV_SENTENCE",
+   "name_zh": "修饰全句的副词/句首副词",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-02"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "句首逗号前的空格，修饰整句，填副词（Fortunately, Unfortunately, Additionally）。",
+   "examples": [
+    {
+     "en": "Fortunately, the shipment arrived early.",
+     "zh": "幸运的是，货提前到了。"
+    },
+    {
+     "en": "Unfortunately, the item is out of stock.",
+     "zh": "很遗憾，该商品缺货。"
+    }
+   ],
+   "trap": "选名词 Fortune 或形容词 Fortunate 放句首。",
+   "signal": "空格在句首，后面紧跟逗号和完整句子。",
+   "priority": 27
+  },
+  {
+   "node": "GR.POS.NOUN_COMPOUND",
+   "name_zh": "复合名词（名词+名词）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-14"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "有些名词直接放在另一个名词前当修饰，形成固定组合，不变成形容词。",
+   "examples": [
+    {
+     "en": "Please keep your purchase receipt.",
+     "zh": "请保留购物收据。（purchase receipt）"
+    },
+    {
+     "en": "The safety regulations were updated.",
+     "zh": "安全规定已更新。（safety regulations）"
+    }
+   ],
+   "trap": "硬选形容词 safe regulations、purchased receipt。",
+   "signal": "空格后已经是名词，而选项里形容词放进去意思怪；常见：sales figures、job opening、customer satisfaction。",
+   "priority": 28
+  },
+  {
+   "node": "GR.CONN.PREP_PHRASE_MULTI",
+   "name_zh": "复合介词（in addition to/on behalf of/in accordance with）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-12"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 0,
+   "rule": "多词介词当成一个整体背：in addition to、on behalf of、in accordance with、in charge of、as a result of。",
+   "examples": [
+    {
+     "en": "On behalf of the company, I thank you all.",
+     "zh": "我代表公司感谢大家。"
+    },
+    {
+     "en": "Ms. Kim is in charge of the training program.",
+     "zh": "金女士负责培训项目。"
+    }
+   ],
+   "trap": "只看第一个词，把 in case of（万一）当成 in charge of（负责）。",
+   "signal": "选项是 in ___ of / on ___ of 这种长短语，或空格在固定短语中间。",
+   "priority": 29
+  },
+  {
+   "node": "QT.P5.VOCAB",
+   "name_zh": "词汇题（同词性异义）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-06",
+    "S2-P5-07",
+    "S2-P5-15",
+    "S2-P5-16",
+    "S2-P5-21",
+    "S2-P5-23",
+    "S2-ALL-23"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 1,
+   "rule": "词汇题先找搭配：看空格后面跟的名词、介词，搭不上的先划掉，再看意思。",
+   "examples": [
+    {
+     "en": "The hotel offers complimentary breakfast.",
+     "zh": "酒店提供免费早餐。（complimentary 和 complementary 只差一个字母）"
+    },
+    {
+     "en": "The new manager will address customer complaints.",
+     "zh": "新经理将处理客户投诉。（address＝处理）"
+    }
+   ],
+   "trap": "按日常意思选熟词，忽略商务义（address 不是“地址”）。",
+   "signal": "四个选项同词性、意思不同；找空格后的名词或介词。",
+   "priority": 30
+  },
+  {
+   "node": "QT.P5.VERB_FORM",
+   "name_zh": "动词形态题",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-09",
+    "S2-P5-10",
+    "S2-P5-11",
+    "S2-P5-20",
+    "S2-P5-21",
+    "S2-P5-25"
+   ],
+   "in_min_set": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 1,
+   "rule": "动词题按顺序问四句：要不要当谓语→主动还是被动→什么时态→单数还是复数。",
+   "examples": [
+    {
+     "en": "The parcels were delivered yesterday.",
+     "zh": "包裹昨天送到了。（被动＋过去＋复数）"
+    },
+    {
+     "en": "The manager reviews all reports on Fridays.",
+     "zh": "经理每周五审核所有报告。（主动＋现在＋单数）"
+    }
+   ],
+   "trap": "先看时态，结果漏看了主语是“东西”要用被动。",
+   "signal": "四个选项是同一个动词的不同形式（-s / -ed / -ing / will / be done）。",
+   "priority": 31
+  },
+  {
+   "node": "QT.P6.CTX_VOCAB",
+   "name_zh": "语境词汇题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-06",
+    "S2-P5-07",
+    "S2-P6-07"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 1,
+   "rule": "语境词汇题本句几个词都说得通时，回头看整篇在讲什么再选。",
+   "examples": [
+    {
+     "en": "Space is limited, so early registration is recommended.",
+     "zh": "名额有限，建议尽早报名。"
+    },
+    {
+     "en": "The parking garage will be closed for repairs.",
+     "zh": "停车场将因维修关闭。"
+    }
+   ],
+   "trap": "只看空格那一句，选了“也能说”的词。",
+   "signal": "四个选项同词性、意思不同，本句都通。",
+   "priority": 32
+  },
+  {
+   "node": "QT.P6.INSERTION",
+   "name_zh": "句子插入（文选择）题",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P6-02",
+    "S2-P6-04",
+    "S2-P6-08"
+   ],
+   "in_min_set": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 1,
+   "rule": "插入句看衔接：候选句里的 this / it / they / also / such 要能接住前一句，下一句也要接得住它。",
+   "examples": [
+    {
+     "en": "Our supplier cannot deliver until May. We can send you a similar model instead.",
+     "zh": "供应商五月前送不了货，我们可以给您换个类似款。"
+    },
+    {
+     "en": "Please speak to reception on arrival.",
+     "zh": "抵达时请联系前台。"
+    }
+   ],
+   "trap": "选和上下文用词重复、但其实把前文原话又说一遍的句子。",
+   "signal": "空格单独占一句（整句选项）。",
+   "priority": 33
+  },
+  {
+   "node": "GR.VERB.AGREE_SV",
+   "name_zh": "主谓一致",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-11"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "动词跟真正的主语一致：of / with 后面的名词只是修饰，别被它带偏。",
+   "examples": [
+    {
+     "en": "The list of approved suppliers is updated monthly.",
+     "zh": "认可供应商名单每月更新。"
+    },
+    {
+     "en": "The cost of the repairs was higher than expected.",
+     "zh": "修理费用高于预期。"
+    }
+   ],
+   "trap": "看到 suppliers、repairs 就选复数动词。",
+   "signal": "主语后面跟着一长串 of… / with… / who…，空格离主语很远。",
+   "priority": 34
+  },
+  {
+   "node": "GR.VERB.TENSE_SIMPLE",
+   "name_zh": "一般时态与时间状语",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-11",
+    "S2-P6-05"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "看时间词定时态：yesterday/last/ago 用过去，every/usually 用现在，next/tomorrow 用 will。",
+   "examples": [
+    {
+     "en": "Mr. Chen visited the factory last week.",
+     "zh": "陈先生上周参观了工厂。"
+    },
+    {
+     "en": "Mr. Chen will visit the factory next month.",
+     "zh": "陈先生下个月将参观工厂。"
+    }
+   ],
+   "trap": "有 last week 却选了 has visited——现在完成时不和具体过去时间连用。",
+   "signal": "句子里有 yesterday / last / ago / next / every 等时间词。",
+   "priority": 35
+  },
+  {
+   "node": "GR.VERB.VOICE_PASSIVE",
+   "name_zh": "主动 vs 被动语态",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-11"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "主语是“被做”的东西，用 be＋过去分词；后面有 by＋人时多半是被动。",
+   "examples": [
+    {
+     "en": "The documents were signed by both parties.",
+     "zh": "文件已由双方签署。"
+    },
+    {
+     "en": "The meeting has been postponed until Monday.",
+     "zh": "会议已推迟到周一。"
+    }
+   ],
+   "trap": "主语是物，却选了主动 signed / postponed，好像文件自己签字。",
+   "signal": "主语是报告、货物、会议这类东西；空格后没有宾语或有 by。",
+   "priority": 36
+  },
+  {
+   "node": "GR.VERB.MODAL_BASE",
+   "name_zh": "情态动词/助动词 + 动词原形",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-21"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "must / can / should / will / may 以及 do/does/did 后面，一律跟动词原形。",
+   "examples": [
+    {
+     "en": "Visitors must register at the front desk.",
+     "zh": "访客必须在前台登记。"
+    },
+    {
+     "en": "You should contact the help desk.",
+     "zh": "你应该联系服务台。"
+    }
+   ],
+   "trap": "情态动词后选了 registers / registering。",
+   "signal": "空格前是情态动词或 do/does/did/to。",
+   "priority": 37
+  },
+  {
+   "node": "GR.PRON.CASE",
+   "name_zh": "人称代词格（主格/宾格/所有格）",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-13",
+    "S2-P6-09"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "动词前当主语用 I/he/they，动词或介词后用 me/him/them，名词前用 my/his/their。",
+   "examples": [
+    {
+     "en": "They will contact you tomorrow.",
+     "zh": "他们明天会联系你。"
+    },
+    {
+     "en": "Please send the invoice to them.",
+     "zh": "请把发票寄给他们。"
+    }
+   ],
+   "trap": "名词前选了 them 或 they（them office ✗）。",
+   "signal": "看空格紧挨的是动词、介词还是名词。",
+   "priority": 38
+  },
+  {
+   "node": "QT.P5.PRONOUN",
+   "name_zh": "代词/限定词题",
+   "target_band": 400,
+   "strategy_ids": [
+    "S2-P5-13",
+    "S2-P5-22"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "代词先看位置定形式（主格 he、宾格 him、所有格 his、自己 himself），再看指一个还是几个。",
+   "examples": [
+    {
+     "en": "Ms. Ito asked the designers to send her the file.",
+     "zh": "伊藤让设计师把文件发给她。"
+    },
+    {
+     "en": "Employees should notify their supervisor.",
+     "zh": "员工应通知自己的主管。"
+    }
+   ],
+   "trap": "只想“指谁”没看位置，在动词后选了 she。",
+   "signal": "四个选项是同一个人称的 he/him/his/himself 或 they/them/their/themselves。",
+   "priority": 39
+  },
+  {
+   "node": "GR.VERB.AGREE_QUANT",
+   "name_zh": "数量表达与一致（each/a number of/the number of）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-22"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "each / every / the number of 后面动词用单数；a number of（很多）后面用复数。",
+   "examples": [
+    {
+     "en": "Each employee has a locker.",
+     "zh": "每位员工都有一个储物柜。"
+    },
+    {
+     "en": "A number of customers have complained.",
+     "zh": "不少顾客投诉了。"
+    }
+   ],
+   "trap": "the number of 和 a number of 看混——the 是“数目”（单数），a 是“许多”（复数）。",
+   "signal": "主语以 each / every / the number of / a number of / one of 开头。",
+   "priority": 40
+  },
+  {
+   "node": "GR.VERB.TENSE_PERFECT",
+   "name_zh": "完成时（since/for/by the time/already）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-11",
+    "S2-P6-05"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "since＋起点、for＋时长、already/recently 用 has done；by the time＋过去 用 had done；by the time＋将来 用 will have done。",
+   "examples": [
+    {
+     "en": "She has worked here since 2018.",
+     "zh": "她从 2018 年起一直在这里工作。"
+    },
+    {
+     "en": "By the time we arrived, the meeting had started.",
+     "zh": "我们到的时候会议已经开始了。"
+    }
+   ],
+   "trap": "since 2018 却选了 worked（一般过去）。",
+   "signal": "看到 since / for＋时长 / already / by the time / before＋过去。",
+   "priority": 41
+  },
+  {
+   "node": "GR.VERB.TENSE_FUTURE_CLAUSE",
+   "name_zh": "时间/条件从句以现在代将来",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-11",
+    "S2-P6-05"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "when / as soon as / once / if / until 引导的小句，讲将来也用一般现在时，主句才用 will。",
+   "examples": [
+    {
+     "en": "We will start as soon as the director approves the plan.",
+     "zh": "主管一批准计划我们就开始。"
+    },
+    {
+     "en": "If the order arrives late, we will call you.",
+     "zh": "如果货晚到，我们会给您打电话。"
+    }
+   ],
+   "trap": "在 as soon as / if 后面选了 will approve。",
+   "signal": "空格在 when / as soon as / once / if / until / before 后面，另半句有 will。",
+   "priority": 42
+  },
+  {
+   "node": "GR.NONFIN.TO_INF",
+   "name_zh": "to 不定式（目的/只接 to do 的词）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-20"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "表“为了做…”用 to do；plan / want / decide / hope / need / ask 人 后面接 to do。",
+   "examples": [
+    {
+     "en": "She went to the plant to inspect the equipment.",
+     "zh": "她去工厂检查设备。"
+    },
+    {
+     "en": "We plan to open a new branch next year.",
+     "zh": "我们计划明年开新分店。"
+    }
+   ],
+   "trap": "表目的选了动词原形 inspect 或 -ing。",
+   "signal": "句子已完整，后面还要补“目的”；或空格前是 plan / decide / hope / ask sb。",
+   "priority": 43
+  },
+  {
+   "node": "GR.NONFIN.GERUND",
+   "name_zh": "动名词（介词后/只接 -ing 的词）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-20"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "介词后、以及 recommend / consider / avoid / finish / suggest 后面接 -ing。",
+   "examples": [
+    {
+     "en": "The firm recommends booking early.",
+     "zh": "公司建议提前预订。"
+    },
+    {
+     "en": "Thank you for choosing our hotel.",
+     "zh": "感谢您选择本酒店。"
+    }
+   ],
+   "trap": "recommend 后选了 to book。",
+   "signal": "空格前是介词或 recommend / consider / avoid / finish / look forward to。",
+   "priority": 44
+  },
+  {
+   "node": "GR.NONFIN.PARTICIPLE_ADJ",
+   "name_zh": "情感/状态分词形容词（-ing vs -ed）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-20"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "让人有感觉的东西用 -ing（an exciting plan），人自己的感受用 -ed（excited staff）。",
+   "examples": [
+    {
+     "en": "The results were very encouraging.",
+     "zh": "结果很鼓舞人心。"
+    },
+    {
+     "en": "The staff were pleased with the results.",
+     "zh": "员工对结果很满意。"
+    }
+   ],
+   "trap": "说人时选了 -ing：The staff were pleasing（员工很讨人喜欢）。",
+   "signal": "选项里同时有 -ing 和 -ed 形容词（interesting/interested 等）。",
+   "priority": 45
+  },
+  {
+   "node": "GR.PRON.POSSESSIVE_PRONOUN",
+   "name_zh": "名词性物主代词（mine/theirs/ours）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-13"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "mine / yours / his / hers / ours / theirs 自己就等于“某人的东西”，后面不再接名词。",
+   "examples": [
+    {
+     "en": "Your office is larger than ours.",
+     "zh": "你的办公室比我们的大。"
+    },
+    {
+     "en": "The decision is entirely yours.",
+     "zh": "这个决定完全由你来做。"
+    }
+   ],
+   "trap": "在名词前选了 theirs（theirs supervisor ✗）。",
+   "signal": "空格后面没有名词，句末或接 than 后面。",
+   "priority": 46
+  },
+  {
+   "node": "GR.PRON.REFLEXIVE",
+   "name_zh": "反身代词（by oneself / 强调）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-13"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "强调“亲自、自己”或主语和宾语是同一个人时用 -self；by oneself＝独自。",
+   "examples": [
+    {
+     "en": "The technicians completed the work themselves.",
+     "zh": "技术员自己完成了工作。"
+    },
+    {
+     "en": "Mr. Novak checks every bill himself.",
+     "zh": "诺瓦克先生每张账单都亲自核对。"
+    }
+   ],
+   "trap": "主语和宾语不是同一人也用 -self：asked the designers to send herself ✗。",
+   "signal": "句子已完整，空格在句尾，或前面有 by。",
+   "priority": 47
+  },
+  {
+   "node": "GR.PRON.DETERMINER_QUANT",
+   "name_zh": "数量限定词（each/every/all/most/few/little）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-22"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "each / every / another ＋单数可数；all / most / several / many / few ＋复数；much / little ＋不可数。",
+   "examples": [
+    {
+     "en": "Each participant receives a certificate.",
+     "zh": "每位学员都会收到证书。"
+    },
+    {
+     "en": "Few of the guests left early.",
+     "zh": "几乎没有客人提前离开。"
+    }
+   ],
+   "trap": "后面是单数却选了 all / most。",
+   "signal": "先看空格后的名词是单数、复数还是不可数。",
+   "priority": 48
+  },
+  {
+   "node": "GR.REL.REL_PRONOUN",
+   "name_zh": "关系代词（who/which/that/whose）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-18"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "指人用 who，指物用 which，人物都行用 that；后面紧跟名词表示“谁的”用 whose；逗号后不用 that。",
+   "examples": [
+    {
+     "en": "Employees who work late can use the taxi service.",
+     "zh": "加班的员工可以用出租车服务。"
+    },
+    {
+     "en": "The Hartwell Building, which opened in 1998, will be renovated.",
+     "zh": "1998 年启用的哈特韦尔大楼将翻修。"
+    }
+   ],
+   "trap": "逗号后面选 that。",
+   "signal": "空格前是名词，后面缺主语或宾语。",
+   "priority": 49
+  },
+  {
+   "node": "GR.COMP.COMPARATIVE",
+   "name_zh": "比较级与强调（much/even/far + -er）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-19"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "有 than 用比较级；加强比较级用 much / far / even / considerably，不用 very。",
+   "examples": [
+    {
+     "en": "The new model is far more efficient than the old one.",
+     "zh": "新型号比旧型号高效得多。"
+    },
+    {
+     "en": "Costs were even lower than expected.",
+     "zh": "成本比预期还低。"
+    }
+   ],
+   "trap": "用 very 修饰比较级，或写成 more higher。",
+   "signal": "空格后或句中有 than；空格前是 much / far / even。",
+   "priority": 50
+  },
+  {
+   "node": "GR.COMP.SUPERLATIVE",
+   "name_zh": "最高级（the most…of/in/ever）",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-19"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "the＋最高级＋of/in/among/ever；one of the＋最高级＋复数名词。",
+   "examples": [
+    {
+     "en": "She is one of the most experienced engineers in the company.",
+     "zh": "她是公司最有经验的工程师之一。"
+    },
+    {
+     "en": "This is the lowest price we have ever offered.",
+     "zh": "这是我们给出过的最低价。"
+    }
+   ],
+   "trap": "有 the…in the region 却选比较级。",
+   "signal": "空格前有 the，后面有 of / in / ever / of any。",
+   "priority": 51
+  },
+  {
+   "node": "QT.P5.RELATIVE",
+   "name_zh": "关系词题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-18"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "关系词题问两件事：前面有没有名词（先行词），后面的句子缺不缺成分。",
+   "examples": [
+    {
+     "en": "The supplier whose prices are lowest won the contract.",
+     "zh": "报价最低的供应商拿到了合同。"
+    },
+    {
+     "en": "The hotel where the dinner will be held is downtown.",
+     "zh": "举办晚宴的酒店在市中心。"
+    }
+   ],
+   "trap": "后面句子完整还选 which。",
+   "signal": "空格前是名词，选项是 who/which/whose/where/what/that。",
+   "priority": 52
+  },
+  {
+   "node": "QT.P5.COMPARATIVE",
+   "name_zh": "比较题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-19"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "比较题看标志词：than 选比较级，the…of/in/ever 选最高级，as…as 选原级。",
+   "examples": [
+    {
+     "en": "This year's sales are much higher than last year's.",
+     "zh": "今年销量比去年高得多。"
+    },
+    {
+     "en": "It is the largest branch in the region.",
+     "zh": "这是该地区最大的分店。"
+    }
+   ],
+   "trap": "看到 more 就选，没看后面有没有 than。",
+   "signal": "选项是同一个形容词的原级、比较级、最高级。",
+   "priority": 53
+  },
+  {
+   "node": "QT.P5.PAIR_GRAMMAR",
+   "name_zh": "成对表达/语法搭配/数量一致题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-22",
+    "S2-P5-24",
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "成对或固定的语法搭配要找“另一半”：so…that、such…that、either…or、the number of＋单数动词。",
+   "examples": [
+    {
+     "en": "The tablet is so light that it fits in a small bag.",
+     "zh": "平板轻得能放进小包。"
+    },
+    {
+     "en": "It was such a long meeting that we missed lunch.",
+     "zh": "会开得太长，我们错过了午饭。"
+    }
+   ],
+   "trap": "so 和 such 混：so＋形容词，such＋（a）＋名词。",
+   "signal": "句中已经有 that / or / nor / and，或空格后是数量名词。",
+   "priority": 54
+  },
+  {
+   "node": "QT.P6.CTX_TENSE",
+   "name_zh": "语境时态题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-11",
+    "S2-P6-05"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "时态题几个都通时，看信件日期和事情发生没发生：日期之后的事用将来，之前的事用过去。",
+   "examples": [
+    {
+     "en": "Our supplier will not deliver the chairs until March 17.",
+     "zh": "供应商要到 3 月 17 日才送椅子。（信写于 3 月 3 日）"
+    },
+    {
+     "en": "The new store will offer seating for 80 customers.",
+     "zh": "新店将提供 80 个座位。（店下个月才开）"
+    }
+   ],
+   "trap": "只看本句，选了语法上也通的过去时。",
+   "signal": "选项是同一动词的不同时态，本句没有明确时间词。",
+   "priority": 55
+  },
+  {
+   "node": "QT.P6.CTX_PRONOUN",
+   "name_zh": "语境代词题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P5-13",
+    "S2-P6-09"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "代词题往前找它指谁：一个人、几个人、公司（it/its）还是收信人（you/your）。",
+   "examples": [
+    {
+     "en": "Keep your receipts and bring them to the front desk.",
+     "zh": "保留收据，带到前台。（them＝receipts）"
+    },
+    {
+     "en": "We would like to offer you a free night on your next visit.",
+     "zh": "我们想在您下次入住时送您一晚免费住宿。"
+    }
+   ],
+   "trap": "选了语法通但指错对象的代词（her / their）。",
+   "signal": "选项是 it / they / them / your / its 等，指代对象在前一两句。",
+   "priority": 56
+  },
+  {
+   "node": "QT.P6.CTX_CONJ_ADV",
+   "name_zh": "接续副词题",
+   "target_band": 600,
+   "strategy_ids": [
+    "S2-P6-06"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "接续副词题先判断前后两句是转折（However）、因果（Therefore）、补充（In addition）还是举例（For example）。",
+   "examples": [
+    {
+     "en": "Parking normally costs $12. However, the management will cover it.",
+     "zh": "停车通常 12 美元，不过物业会报销。"
+    },
+    {
+     "en": "The store will add a kitchen. In addition, it will hire 15 staff.",
+     "zh": "门店将增设厨房，另外还要招 15 人。"
+    }
+   ],
+   "trap": "不看前一句，只凭“however 最常见”就选。",
+   "signal": "空格在句首，后面紧跟逗号，选项是 However / Therefore / In addition 等。",
+   "priority": 57
+  },
+  {
+   "node": "GR.VERB.VERB_PATTERN",
+   "name_zh": "动词句型（及物/不及物/双宾/宾补）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-21"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "选动词先看它后面跟什么：contact 直接加人，reply 要加 to；remind 人 to do；make 东西 形容词。",
+   "examples": [
+    {
+     "en": "Please reply to this e-mail by Friday.",
+     "zh": "请于周五前回复此邮件。"
+    },
+    {
+     "en": "We reminded the staff to submit their reports.",
+     "zh": "我们提醒员工交报告。"
+    }
+   ],
+   "trap": "只按中文意思选，没看后面能不能直接接宾语（reply the e-mail ✗）。",
+   "signal": "四个动词意思接近，空格后紧跟名词、介词或 to do。",
+   "priority": 58
+  },
+  {
+   "node": "GR.NONFIN.PARTICIPLE_MODIFIER",
+   "name_zh": "分词作后置/前置修饰（主动 -ing / 被动 -ed）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-20"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "名词后面跟一个分词短语做说明：名词自己在做用 -ing，名词被做用 -ed。",
+   "examples": [
+    {
+     "en": "Employees wishing to attend should sign up.",
+     "zh": "想参加的员工请报名。（员工自己想 → -ing）"
+    },
+    {
+     "en": "The report submitted yesterday contains errors.",
+     "zh": "昨天提交的报告有错误。（报告被提交 → -ed）"
+    }
+   ],
+   "trap": "把 submitted 当成谓语，结果又在后面多找了一个动词。",
+   "signal": "空格紧跟在名词后，句子已有谓语。",
+   "priority": 59
+  },
+  {
+   "node": "GR.PRON.INDEFINITE",
+   "name_zh": "不定代词（another/the other/others/one）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-13"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "两个里的另一个是 the other；三个以上再来一个是 another；其余的全部是 the others；不特指的别的用 others。",
+   "examples": [
+    {
+     "en": "One room is booked, so we will use the other.",
+     "zh": "一间被订了，我们用另一间。"
+    },
+    {
+     "en": "Would you like another cup of coffee?",
+     "zh": "再来一杯咖啡吗？"
+    }
+   ],
+   "trap": "只有两个却选了 another。",
+   "signal": "句中出现 one of the two / one…，或 another / the other / others 并列在选项中。",
+   "priority": 60
+  },
+  {
+   "node": "GR.REL.NOUN_CLAUSE",
+   "name_zh": "名词从句连接词（whether/if/that/wh-）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-18"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "整个小句当名词用：确定的事用 that，“是否”用 whether/if，问具体用 who/when/how。",
+   "examples": [
+    {
+     "en": "We are not sure whether the order will arrive today.",
+     "zh": "我们不确定订单今天到不到。"
+    },
+    {
+     "en": "The survey shows that customers prefer online ordering.",
+     "zh": "调查显示顾客更喜欢网上下单。"
+    }
+   ],
+   "trap": "“是否”选了 that；或在介词后用 if（介词后只能 whether）。",
+   "signal": "空格在 know / ask / decide / sure / depends on 后面，后面是完整句。",
+   "priority": 61
+  },
+  {
+   "node": "GR.COMP.EQUATIVE",
+   "name_zh": "原级比较（as…as / as many as）",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-19"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "as＋原级＋as 表示“一样”；as many/much as 表示“多达”。",
+   "examples": [
+    {
+     "en": "The new printer is as fast as the old one.",
+     "zh": "新打印机和旧的一样快。"
+    },
+    {
+     "en": "The event attracted as many as 500 visitors.",
+     "zh": "活动吸引了多达 500 名访客。"
+    }
+   ],
+   "trap": "as…as 中间填了比较级 faster。",
+   "signal": "空格前后有 as…as。",
+   "priority": 62
+  },
+  {
+   "node": "GR.SPECIAL.PARALLEL",
+   "name_zh": "并列结构一致",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "and / or / but / both…and 连接的两边要“长得一样”：名词对名词、形容词对形容词、-ing 对 -ing。",
+   "examples": [
+    {
+     "en": "The plan is both practical and affordable.",
+     "zh": "方案既实用又实惠。"
+    },
+    {
+     "en": "Duties include answering calls and scheduling meetings.",
+     "zh": "职责包括接电话和安排会议。"
+    }
+   ],
+   "trap": "一边是形容词，另一边选了名词或副词。",
+   "signal": "空格紧挨 and / or / but，另一边词性清楚。",
+   "priority": 63
+  },
+  {
+   "node": "QT.P6.INS_OPENING",
+   "name_zh": "插入句：段首/引入句",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P6-08",
+    "S2-P6-10"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "段首空格找“介绍主题”的开场句，下一句会用 the/this 回指它。",
+   "examples": [
+    {
+     "en": "Our department will hold a training workshop this fall.",
+     "zh": "我们部门今年秋天将举办培训工作坊。"
+    },
+    {
+     "en": "We are pleased to announce the opening of our new branch.",
+     "zh": "我们很高兴宣布新分店开业。"
+    }
+   ],
+   "trap": "选了细节句当开场，后文的 The workshop 找不到出处。",
+   "signal": "空格在第一句，下一句以 The＋名词 或 It 开头。",
+   "priority": 64
+  },
+  {
+   "node": "QT.P6.INS_TRANSITION",
+   "name_zh": "插入句：段中衔接句",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P6-08",
+    "S2-P6-10"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "段中空格的句子要承上启下：前一句讲 A，后一句讲 B，它要把 A 和 B 接起来。",
+   "examples": [
+    {
+     "en": "The new center has a quiet work area. It was created to meet both needs.",
+     "zh": "新中心有安静工作区，就是为满足这两种需求。"
+    },
+    {
+     "en": "Lodging takes ten minutes. However, repeat customers are faster.",
+     "zh": "首次登记十分钟，老客户更快。"
+    }
+   ],
+   "trap": "选了只接得上前句、接不上后句的句子。",
+   "signal": "空格在段落中间，前后都有内容。",
+   "priority": 65
+  },
+  {
+   "node": "QT.P6.INS_CLOSING",
+   "name_zh": "插入句：结尾/行动号召句",
+   "target_band": 700,
+   "strategy_ids": [
+    "S2-P6-08",
+    "S2-P6-10"
+   ],
+   "in_min_set": [
+    "730",
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "结尾空格常是“欢迎联系 / 感谢 / 怎么使用”这类收尾句。",
+   "examples": [
+    {
+     "en": "Questions can be directed to the management office.",
+     "zh": "有疑问请联系管理处。"
+    },
+    {
+     "en": "To use the offer, simply mention this letter when booking.",
+     "zh": "使用优惠，订房时提及此信即可。"
+    }
+   ],
+   "trap": "选了引出新话题、后面又没下文的句子。",
+   "signal": "空格在全文最后一句。",
+   "priority": 66
+  },
+  {
+   "node": "GR.VERB.SUBJUNCTIVE_DEMAND",
+   "name_zh": "要求/建议类 that 从句用原形",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "request / require / suggest / recommend / insist that 后面的动词用原形，不管主语是谁、不看时态。",
+   "examples": [
+    {
+     "en": "The manager requested that every member attend the session.",
+     "zh": "经理要求每位成员都参加。"
+    },
+    {
+     "en": "It is essential that the form be signed.",
+     "zh": "表格必须签字。"
+    }
+   ],
+   "trap": "看到主语 every member 是单数就选 attends。",
+   "signal": "前面有 request / require / suggest / recommend / essential / important that。",
+   "priority": 67
+  },
+  {
+   "node": "GR.VERB.CONDITIONAL_INVERSION",
+   "name_zh": "假设语气与省略 if 倒装",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "省掉 if 时把 should / had / were 提到句首：Should you need…＝If you should need…；Had we known…＝If we had known…。",
+   "examples": [
+    {
+     "en": "Should you have any questions, please call us.",
+     "zh": "如有任何问题，请来电。"
+    },
+    {
+     "en": "Had we known about the delay, we would have rebooked.",
+     "zh": "早知道延误，我们就改订了。"
+    }
+   ],
+   "trap": "句首选了 If 之外的连词，或看到 Should 以为是“应该”。",
+   "signal": "句首空格，后面主语＋动词原形/过去分词，没有 if。",
+   "priority": 68
+  },
+  {
+   "node": "GR.NONFIN.PARTICIPLE_CLAUSE",
+   "name_zh": "分词构句与连词+分词",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-20"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "句首分词短语的逻辑主语是后面句子的主语：主语自己做用 -ing，被做用 -ed（Sent in a plain envelope, the contract…）。",
+   "examples": [
+    {
+     "en": "Located near the station, the hotel is popular.",
+     "zh": "酒店位于车站附近，很受欢迎。"
+    },
+    {
+     "en": "Before leaving the office, please turn off the lights.",
+     "zh": "离开办公室前请关灯。"
+    }
+   ],
+   "trap": "主语是物却选了 -ing（Sending…, the contract）。",
+   "signal": "空格在句首，后面是短语加逗号再接完整句子。",
+   "priority": 69
+  },
+  {
+   "node": "GR.PRON.DEMONSTRATIVE",
+   "name_zh": "指示代词（those who / that of）",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-13"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "those who＝那些…的人；that of / those of 用来代替前面提到的名词，避免重复。",
+   "examples": [
+    {
+     "en": "Those who wish to attend should register now.",
+     "zh": "想参加的人请现在报名。"
+    },
+    {
+     "en": "Our prices are lower than those of our competitors.",
+     "zh": "我们的价格比竞争对手的低。"
+    }
+   ],
+   "trap": "用 them who 或 these who。",
+   "signal": "空格后紧跟 who，或比较句里后半句缺一个和前面同类的名词。",
+   "priority": 70
+  },
+  {
+   "node": "GR.REL.REL_ADVERB",
+   "name_zh": "关系副词（where/when）与 介词+which",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-18"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "先行词是地点、后面句子完整用 where；是时间用 when；也可以写成 in which / on which。",
+   "examples": [
+    {
+     "en": "This is the room where the interviews take place.",
+     "zh": "这是面试的房间。"
+    },
+    {
+     "en": "Friday is the day when the report is due.",
+     "zh": "周五是报告截止日。"
+    }
+   ],
+   "trap": "先行词是地点就一律选 where，没看后面缺不缺宾语（the hotel which we visited ✓）。",
+   "signal": "空格前是地点/时间名词，后面句子主谓宾齐全。",
+   "priority": 71
+  },
+  {
+   "node": "GR.REL.REL_WHAT",
+   "name_zh": "what vs that（先行词有无）",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-18"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "what＝the thing that，前面不能再有名词；前面有名词用 that/which。",
+   "examples": [
+    {
+     "en": "What the client needs is a faster delivery.",
+     "zh": "客户需要的是更快的交货。"
+    },
+    {
+     "en": "The menu reflects what local farms supply.",
+     "zh": "菜单反映本地农场供应的东西。"
+    }
+   ],
+   "trap": "名词后面接了 what（the plan what we made ✗）。",
+   "signal": "空格前是动词或介词（没有名词），后面缺宾语。",
+   "priority": 72
+  },
+  {
+   "node": "GR.SPECIAL.ELLIPSIS",
+   "name_zh": "省略结构（as requested/if necessary/when needed）",
+   "target_band": 800,
+   "strategy_ids": [
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "公文里常省掉“主语＋be”：as requested、if necessary、when needed、unless otherwise noted。",
+   "examples": [
+    {
+     "en": "As requested, I have attached the invoice.",
+     "zh": "按您的要求，我附上了发票。"
+    },
+    {
+     "en": "Please contact us if necessary.",
+     "zh": "如有需要请联系我们。"
+    }
+   ],
+   "trap": "在 as ___ 后面选了名词 request 或主动 requesting。",
+   "signal": "空格在 as / if / when / unless 后，后面没有主语。",
+   "priority": 73
+  },
+  {
+   "node": "GR.REL.COMPOUND_REL",
+   "name_zh": "复合关系词（whoever/whatever/however）",
+   "target_band": 900,
+   "strategy_ids": [
+    "S2-P5-18",
+    "S2-P7-25"
+   ],
+   "in_min_set": [
+    "860+"
+   ],
+   "priority_600_tier": 2,
+   "rule": "whoever＝任何…的人，whatever＝任何…的东西，however＋形容词＝无论多么。",
+   "examples": [
+    {
+     "en": "Whoever finishes first can leave early.",
+     "zh": "谁先做完谁可以早走。"
+    },
+    {
+     "en": "However busy you are, please reply by Friday.",
+     "zh": "无论多忙，请周五前回复。"
+    }
+   ],
+   "trap": "用 who 开头当主语（Who finishes first can leave ✗）。",
+   "signal": "空格在句首或动词后，前面没有先行词，意思是“任何/无论”。",
+   "priority": 74
+  },
+  {
+   "node": "GR.SPECIAL.INVERSION_NEG",
+   "name_zh": "否定/only 前置倒装",
+   "target_band": 900,
+   "strategy_ids": [
+    "S2-P5-25"
+   ],
+   "in_min_set": [],
+   "priority_600_tier": 2,
+   "rule": "never / rarely / not only / only＋时间 放句首时，后面像疑问句一样把助动词提前。",
+   "examples": [
+    {
+     "en": "Rarely has the company seen such strong sales.",
+     "zh": "公司很少见到如此强劲的销量。"
+    },
+    {
+     "en": "Only after the review will the budget be approved.",
+     "zh": "只有审核之后预算才会批准。"
+    }
+   ],
+   "trap": "否定词在句首，后面仍按正常语序选 the company has。",
+   "signal": "句首是 Never / Rarely / Seldom / Not only / Only。",
+   "priority": 75
+  }
+ ]
+}

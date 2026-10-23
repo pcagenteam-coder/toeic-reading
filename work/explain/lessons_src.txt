@@ -1,0 +1,451 @@
+# 语法 60 秒微讲解源文件（自编）。每条：@节点id / R 一句话规则 / E 例句（英文 ## 中文）×2 / T 常见陷阱 / S 识别信号
+@QT.P5.IDENTIFY
+R: 先看四个选项长什么样：词尾不同是词性题，同一个动词不同形式是动词题，意思不同才是词汇题。
+E: The ------- of the new system took two weeks. (A) install (B) installation (C) installed (D) installs ## 选项同根不同尾→词性题，只看 The ___ of，选名词 installation。
+E: Please ------- the attached form by Friday. (A) complete (B) attend (C) achieve (D) perform ## 四个都是动词、意思不同→词汇题，要读宾语 form，选 complete。
+T: 一上来就从头读整句、逐词翻译，词性题也花了 40 秒。
+S: 四个选项长得像（同一个词根）→ 只看空格前后；四个选项意思不同 → 读全句。
+@QT.P5.WORD_FORM
+R: 词性题只看空格前后两三个词：冠词/所有格后填名词，名词前填形容词，动词前后、句首逗号前填副词。
+E: Ms. Ito gave a detailed ------- of the plan. → explanation ## 伊藤女士对计划做了详细说明。（a＋形容词＋___ → 名词）
+E: Sales increased ------- last quarter. → sharply ## 上季度销量大幅增长。（修饰动词 increased → 副词）
+T: 看到中文“的”就选形容词——要看位置，不看中文。
+S: 四个选项同一个词根，只是 -tion / -ive / -ly / -ed 词尾不同。
+@GR.POS.NOUN_AFTER_DET
+R: the / a / his / their / this 这类词后面，到下一个介词或动词之前，缺的就是名词。
+E: The approval of the budget is expected soon. ## 预算预计很快获批。（the ___ of → approval）
+E: We appreciate your cooperation. ## 感谢您的配合。（your ___ → cooperation）
+T: the 后面紧跟的是 -ly 或动词原形时别选，中间还可能要个形容词：the ___ report → 形容词。
+S: 空格前是 the/a/所有格，空格后是 of、句号或动词。
+@GR.POS.NOUN_AFTER_PREP
+R: 介词（for / of / in / with / without）后面要名词；要带宾语的动作就用 -ing。
+E: Thank you for your patience. ## 感谢您的耐心。（for your ___ → 名词）
+E: She left without signing the form. ## 她没签表就走了。（介词后接动作 → signing）
+T: 把 to 一律当不定式：look forward to、be committed to 后面要 -ing 或名词。
+S: 空格前是介词；空格后还有宾语就选 -ing。
+@GR.POS.NOUN_SUBJ_OBJ
+R: 句子缺主语或动词后缺宾语，就填名词。
+E: Applications must be received by May 15. ## 申请须在 5 月 15 日前收到。（句首缺主语 → Applications）
+E: The manager requested clarification on the costs. ## 经理要求说明费用。（requested 后缺宾语 → 名词）
+T: 句首选了动词原形 Apply——动词不能直接当主语。
+S: 空格在句首、后面紧跟谓语动词；或空格在及物动词后、句尾。
+@GR.POS.NOUN_COUNT
+R: 可数名词单数前面必须有 a/the/所有格；没有就用复数。advice、equipment、information 不可数，不加 s。
+E: We received several inquiries about the product. ## 我们收到几封关于产品的咨询。（several ＋复数）
+E: The new equipment arrived yesterday. ## 新设备昨天到了。（equipment 不可数，不加 s）
+T: 选了 advices / equipments / informations。
+S: 选项里同一名词有单数和复数；空格前有 several / many / a / each。
+@GR.POS.NOUN_PERSON_THING
+R: 先看要的是人还是事：-er/-or/-ant/-ee 是人，-tion/-ance/-ment 是事物或行为。
+E: All attendees must wear name badges. ## 所有参会者须佩戴胸牌。（戴胸牌的是人 → attendees）
+E: Attendance at the meeting is required. ## 必须出席会议。（出席这件事 → attendance）
+T: 两个都是名词就随便选——看动词：戴胸牌、签字的是人；被要求、增加的多是事。
+S: 选项里同时有 -ant/-ee/-er 和 -ance/-tion。
+@GR.POS.NOUN_COMPOUND
+R: 有些名词直接放在另一个名词前当修饰，形成固定组合，不变成形容词。
+E: Please keep your purchase receipt. ## 请保留购物收据。（purchase receipt）
+E: The safety regulations were updated. ## 安全规定已更新。（safety regulations）
+T: 硬选形容词 safe regulations、purchased receipt。
+S: 空格后已经是名词，而选项里形容词放进去意思怪；常见：sales figures、job opening、customer satisfaction。
+@GR.POS.ADJ_BEFORE_NOUN
+R: 名词前面空一格（a/the 和名词中间），填形容词。
+E: The hotel offers complimentary breakfast. ## 酒店提供免费早餐。
+E: We need an accurate estimate by Monday. ## 周一前我们需要一份准确的估价。
+T: 选了副词 accurately——副词不修饰名词。
+S: 空格夹在 a/the/所有格 和名词之间。
+@GR.POS.ADJ_COMPLEMENT
+R: be / become / remain / seem 后面，以及 make / keep / find＋东西后面，填形容词描述状态。
+E: The new software is easy to use. ## 新软件很好用。（be ＋形容词）
+E: Please keep the door closed. ## 请保持门关闭。（keep＋东西＋形容词）
+T: 在 be 后面选副词 easily，或者在 find it ___ 后选名词。
+S: 空格前是 be/become/remain/seem，或 make/keep/find＋宾语。
+@GR.POS.ADV_VERB
+R: 句子主干已经完整，空格修饰动词，就填 -ly 副词。
+E: Please read the instructions carefully. ## 请仔细阅读说明。
+E: The team completed the project successfully. ## 团队顺利完成项目。
+T: 选形容词 careful——句子不缺成分时不填形容词。
+S: 空格在“动词＋宾语”后面，或在句尾，去掉它句子照样成立。
+@GR.POS.ADV_ADJ
+R: 形容词、过去分词、另一个副词前面的空格，填副词。
+E: The forms are surprisingly simple. ## 表格出乎意料地简单。
+E: The plan was highly praised. ## 计划广受好评。
+T: 选 surprising simple——两个形容词不能这样硬连。
+S: 空格后紧跟形容词或 -ed 分词。
+@GR.POS.ADV_AUX_SLOT
+R: 助动词和动词中间（has ___ done, will ___ be, is ___ -ing）的空格，填副词。
+E: The report has already been sent. ## 报告已经发出了。
+E: We will carefully review your application. ## 我们会认真审核您的申请。
+T: 看到 has 后面就选过去分词，结果动词重复了。
+S: 空格前是 has/have/will/can/is，空格后已经有动词。
+@GR.POS.ADV_SENTENCE
+R: 句首逗号前的空格，修饰整句，填副词（Fortunately, Unfortunately, Additionally）。
+E: Fortunately, the shipment arrived early. ## 幸运的是，货提前到了。
+E: Unfortunately, the item is out of stock. ## 很遗憾，该商品缺货。
+T: 选名词 Fortune 或形容词 Fortunate 放句首。
+S: 空格在句首，后面紧跟逗号和完整句子。
+@GR.POS.VERB_SLOT
+R: 句子有主语没谓语，就必须填能当谓语的动词（带时态的形式），-ing 和 to do 都不行。
+E: The director presents the figures every month. ## 主管每月汇报数据。
+E: Our office closes at 6 P.M. on Fridays. ## 我们办公室周五下午 6 点关门。
+T: 选 presenting / to present——这两种不能单独当谓语。
+S: 数一数句子里的动词：一个都没有，就补谓语。
+@QT.P5.CONNECTOR_MIX
+R: 介词、连词、副词混在一起时，看空格后面：跟名词用介词，跟完整句子用连词，前后都是完整句、中间有分号或句号用副词。
+E: Despite the rain, the event started on time. ## 尽管下雨，活动按时开始。（后接名词 → 介词）
+E: Although it rained, the event started on time. ## 虽然下了雨，活动按时开始。（后接句子 → 连词）
+T: 只按中文意思选，despite 和 although 都是“尽管”，结果选错。
+S: 选项里既有 despite/because of 又有 although/because 或 however。
+@GR.CONN.PREP_VS_CONJ
+R: 意思一样的成对词：despite/although、during/while、because of/because——前者接名词，后者接句子。
+E: During the meeting, phones must be switched off. ## 开会期间手机须关机。
+E: While the manager was away, Ms. Lee handled the calls. ## 经理不在时，李女士接听电话。
+T: during 后面接了句子，或 while 后面只接名词短语（while 后可接 -ing，但不接单独名词）。
+S: 选项里出现成对的“介词版”和“连词版”。
+@QT.P5.PREP
+R: 介词题先想固定搭配（on Monday、in May、by Friday），想不起来再按意思选。
+E: The report is due by 5 P.M. on Friday. ## 报告周五下午 5 点前交。
+E: The store will be closed throughout the renovation. ## 装修期间商店一直关闭。
+T: by 和 until 不分：交东西用 by，持续状态用 until。
+S: 四个选项都是介词。
+@GR.CONN.PREP_TIME
+R: at 钟点、on 日期/星期、in 月份/年份；by 截止、until 持续到、for 时长、since 起点、within 在…之内、during 某段期间。
+E: Please submit the form by June 30. ## 请于 6 月 30 日前提交表格。
+E: The offer is valid until December 31. ## 优惠有效期至 12 月 31 日。
+T: 截止期限用了 until：“提交”是一下子的动作，要用 by。
+S: 空格后是时间点、日期或一段时长。
+@GR.CONN.PREP_PLACE
+R: at 小地点/具体点、in 在里面/城市、on 在表面/楼层；across 对面/横跨、throughout 遍及、along 沿着。
+E: The café is across the street from the library. ## 咖啡馆在图书馆的街对面。
+E: We have branches throughout the country. ## 我们在全国都有分店。
+T: among（三者以上之间）和 between（两者之间）混用。
+S: 空格后是地点、楼层、街道或区域。
+@GR.CONN.PREP_MEANING
+R: 按意思选的介词要背一小组：despite 尽管、due to 由于、regarding 关于、except 除了、prior to 在…之前、instead of 代替。
+E: Due to heavy snow, the flight was canceled. ## 由于大雪，航班取消了。
+E: Please read the manual prior to use. ## 使用前请阅读说明书。
+T: 把 due to（因为）和 despite（尽管）看反，前后逻辑正好相反。
+S: 选项都是两三个词的介词，要看前后是因果、让步还是范围。
+@GR.CONN.PREP_PHRASE_MULTI
+R: 多词介词当成一个整体背：in addition to、on behalf of、in accordance with、in charge of、as a result of。
+E: On behalf of the company, I thank you all. ## 我代表公司感谢大家。
+E: Ms. Kim is in charge of the training program. ## 金女士负责培训项目。
+T: 只看第一个词，把 in case of（万一）当成 in charge of（负责）。
+S: 选项是 in ___ of / on ___ of 这种长短语，或空格在固定短语中间。
+@QT.P5.CONJ
+R: 连词题后面都是句子，先判断前后关系：转折 although、条件 if/unless/provided that、时间 once/as soon as、目的 so that。
+E: Unless you register by Friday, you cannot attend. ## 周五前不报名就不能参加。
+E: We will ship the order as soon as payment is received. ## 一收到付款就发货。
+T: 用 because 连接两句其实是转折关系的句子。
+S: 四个选项都是连词，空格后是完整句子。
+@GR.CONN.CONJ_ADVERBIAL
+R: 从属连词引出一个“条件/时间/让步/目的”小句：unless 除非、once 一旦、provided that 只要、so that 为了、even though 即使。
+E: You may return the item provided that it is unused. ## 只要未使用即可退货。
+E: Once the contract is signed, work will begin. ## 合同一签，就开工。
+T: unless 本身带“不”，后面再加 not 就意思反了。
+S: 空格后是完整句子，另一半也是完整句子，中间用逗号或直接连。
+@GR.CONN.CONJ_COORD
+R: and 加合、but/yet 转折、or 选择、so 结果——连接两个同等的部分。
+E: The room is small, but it is well equipped. ## 房间小，但设备齐全。
+E: The printer was broken, so we sent the files to a shop. ## 打印机坏了，所以我们把文件送去店里印。
+T: so 和 but 混：前后是因果用 so，相反用 but。
+S: 空格前有逗号，后面是完整句子，选项是 and/but/or/so/yet。
+@GR.CONN.CONJ_CORRELATIVE
+R: 成对词找另一半：both…and、either…or、neither…nor、not only…but also、whether…or。
+E: You can apply either online or by mail. ## 可以网上申请，也可以邮寄申请。
+E: Neither the manager nor the staff were informed. ## 经理和员工都没收到通知。
+T: 看到 or 选了 both，看到 and 选了either。
+S: 句中已有 and / or / nor / but also，空格在前半句。
+@GR.CONN.CONJ_ADVERB
+R: however、therefore、in addition、otherwise 是副词，不能把两个句子直接连起来，前面要句号或分号，后面常跟逗号。
+E: The shipment was late; therefore, we refunded the fee. ## 货晚到了，因此我们退了运费。
+E: The price is high. However, the quality is excellent. ## 价格高，但质量很好。
+T: 把 however 当 although 用，直接连两个句子不加分号。
+S: 空格在句首或分号后，后面紧跟逗号。
+@QT.P5.VERB_FORM
+R: 动词题按顺序问四句：要不要当谓语→主动还是被动→什么时态→单数还是复数。
+E: The parcels were delivered yesterday. ## 包裹昨天送到了。（被动＋过去＋复数）
+E: The manager reviews all reports on Fridays. ## 经理每周五审核所有报告。（主动＋现在＋单数）
+T: 先看时态，结果漏看了主语是“东西”要用被动。
+S: 四个选项是同一个动词的不同形式（-s / -ed / -ing / will / be done）。
+@GR.VERB.AGREE_SV
+R: 动词跟真正的主语一致：of / with 后面的名词只是修饰，别被它带偏。
+E: The list of approved suppliers is updated monthly. ## 认可供应商名单每月更新。
+E: The cost of the repairs was higher than expected. ## 修理费用高于预期。
+T: 看到 suppliers、repairs 就选复数动词。
+S: 主语后面跟着一长串 of… / with… / who…，空格离主语很远。
+@GR.VERB.AGREE_QUANT
+R: each / every / the number of 后面动词用单数；a number of（很多）后面用复数。
+E: Each employee has a locker. ## 每位员工都有一个储物柜。
+E: A number of customers have complained. ## 不少顾客投诉了。
+T: the number of 和 a number of 看混——the 是“数目”（单数），a 是“许多”（复数）。
+S: 主语以 each / every / the number of / a number of / one of 开头。
+@GR.VERB.TENSE_SIMPLE
+R: 看时间词定时态：yesterday/last/ago 用过去，every/usually 用现在，next/tomorrow 用 will。
+E: Mr. Chen visited the factory last week. ## 陈先生上周参观了工厂。
+E: Mr. Chen will visit the factory next month. ## 陈先生下个月将参观工厂。
+T: 有 last week 却选了 has visited——现在完成时不和具体过去时间连用。
+S: 句子里有 yesterday / last / ago / next / every 等时间词。
+@GR.VERB.TENSE_PERFECT
+R: since＋起点、for＋时长、already/recently 用 has done；by the time＋过去 用 had done；by the time＋将来 用 will have done。
+E: She has worked here since 2018. ## 她从 2018 年起一直在这里工作。
+E: By the time we arrived, the meeting had started. ## 我们到的时候会议已经开始了。
+T: since 2018 却选了 worked（一般过去）。
+S: 看到 since / for＋时长 / already / by the time / before＋过去。
+@GR.VERB.TENSE_FUTURE_CLAUSE
+R: when / as soon as / once / if / until 引导的小句，讲将来也用一般现在时，主句才用 will。
+E: We will start as soon as the director approves the plan. ## 主管一批准计划我们就开始。
+E: If the order arrives late, we will call you. ## 如果货晚到，我们会给您打电话。
+T: 在 as soon as / if 后面选了 will approve。
+S: 空格在 when / as soon as / once / if / until / before 后面，另半句有 will。
+@GR.VERB.VOICE_PASSIVE
+R: 主语是“被做”的东西，用 be＋过去分词；后面有 by＋人时多半是被动。
+E: The documents were signed by both parties. ## 文件已由双方签署。
+E: The meeting has been postponed until Monday. ## 会议已推迟到周一。
+T: 主语是物，却选了主动 signed / postponed，好像文件自己签字。
+S: 主语是报告、货物、会议这类东西；空格后没有宾语或有 by。
+@GR.VERB.MODAL_BASE
+R: must / can / should / will / may 以及 do/does/did 后面，一律跟动词原形。
+E: Visitors must register at the front desk. ## 访客必须在前台登记。
+E: You should contact the help desk. ## 你应该联系服务台。
+T: 情态动词后选了 registers / registering。
+S: 空格前是情态动词或 do/does/did/to。
+@GR.VERB.VERB_PATTERN
+R: 选动词先看它后面跟什么：contact 直接加人，reply 要加 to；remind 人 to do；make 东西 形容词。
+E: Please reply to this e-mail by Friday. ## 请于周五前回复此邮件。
+E: We reminded the staff to submit their reports. ## 我们提醒员工交报告。
+T: 只按中文意思选，没看后面能不能直接接宾语（reply the e-mail ✗）。
+S: 四个动词意思接近，空格后紧跟名词、介词或 to do。
+@GR.VERB.SUBJUNCTIVE_DEMAND
+R: request / require / suggest / recommend / insist that 后面的动词用原形，不管主语是谁、不看时态。
+E: The manager requested that every member attend the session. ## 经理要求每位成员都参加。
+E: It is essential that the form be signed. ## 表格必须签字。
+T: 看到主语 every member 是单数就选 attends。
+S: 前面有 request / require / suggest / recommend / essential / important that。
+@GR.VERB.CONDITIONAL_INVERSION
+R: 省掉 if 时把 should / had / were 提到句首：Should you need…＝If you should need…；Had we known…＝If we had known…。
+E: Should you have any questions, please call us. ## 如有任何问题，请来电。
+E: Had we known about the delay, we would have rebooked. ## 早知道延误，我们就改订了。
+T: 句首选了 If 之外的连词，或看到 Should 以为是“应该”。
+S: 句首空格，后面主语＋动词原形/过去分词，没有 if。
+@GR.NONFIN.TO_INF
+R: 表“为了做…”用 to do；plan / want / decide / hope / need / ask 人 后面接 to do。
+E: She went to the plant to inspect the equipment. ## 她去工厂检查设备。
+E: We plan to open a new branch next year. ## 我们计划明年开新分店。
+T: 表目的选了动词原形 inspect 或 -ing。
+S: 句子已完整，后面还要补“目的”；或空格前是 plan / decide / hope / ask sb。
+@GR.NONFIN.GERUND
+R: 介词后、以及 recommend / consider / avoid / finish / suggest 后面接 -ing。
+E: The firm recommends booking early. ## 公司建议提前预订。
+E: Thank you for choosing our hotel. ## 感谢您选择本酒店。
+T: recommend 后选了 to book。
+S: 空格前是介词或 recommend / consider / avoid / finish / look forward to。
+@GR.NONFIN.PARTICIPLE_MODIFIER
+R: 名词后面跟一个分词短语做说明：名词自己在做用 -ing，名词被做用 -ed。
+E: Employees wishing to attend should sign up. ## 想参加的员工请报名。（员工自己想 → -ing）
+E: The report submitted yesterday contains errors. ## 昨天提交的报告有错误。（报告被提交 → -ed）
+T: 把 submitted 当成谓语，结果又在后面多找了一个动词。
+S: 空格紧跟在名词后，句子已有谓语。
+@GR.NONFIN.PARTICIPLE_CLAUSE
+R: 句首分词短语的逻辑主语是后面句子的主语：主语自己做用 -ing，被做用 -ed（Sent in a plain envelope, the contract…）。
+E: Located near the station, the hotel is popular. ## 酒店位于车站附近，很受欢迎。
+E: Before leaving the office, please turn off the lights. ## 离开办公室前请关灯。
+T: 主语是物却选了 -ing（Sending…, the contract）。
+S: 空格在句首，后面是短语加逗号再接完整句子。
+@GR.NONFIN.PARTICIPLE_ADJ
+R: 让人有感觉的东西用 -ing（an exciting plan），人自己的感受用 -ed（excited staff）。
+E: The results were very encouraging. ## 结果很鼓舞人心。
+E: The staff were pleased with the results. ## 员工对结果很满意。
+T: 说人时选了 -ing：The staff were pleasing（员工很讨人喜欢）。
+S: 选项里同时有 -ing 和 -ed 形容词（interesting/interested 等）。
+@QT.P5.PRONOUN
+R: 代词先看位置定形式（主格 he、宾格 him、所有格 his、自己 himself），再看指一个还是几个。
+E: Ms. Ito asked the designers to send her the file. ## 伊藤让设计师把文件发给她。
+E: Employees should notify their supervisor. ## 员工应通知自己的主管。
+T: 只想“指谁”没看位置，在动词后选了 she。
+S: 四个选项是同一个人称的 he/him/his/himself 或 they/them/their/themselves。
+@GR.PRON.CASE
+R: 动词前当主语用 I/he/they，动词或介词后用 me/him/them，名词前用 my/his/their。
+E: They will contact you tomorrow. ## 他们明天会联系你。
+E: Please send the invoice to them. ## 请把发票寄给他们。
+T: 名词前选了 them 或 they（them office ✗）。
+S: 看空格紧挨的是动词、介词还是名词。
+@GR.PRON.POSSESSIVE_PRONOUN
+R: mine / yours / his / hers / ours / theirs 自己就等于“某人的东西”，后面不再接名词。
+E: Your office is larger than ours. ## 你的办公室比我们的大。
+E: The decision is entirely yours. ## 这个决定完全由你来做。
+T: 在名词前选了 theirs（theirs supervisor ✗）。
+S: 空格后面没有名词，句末或接 than 后面。
+@GR.PRON.REFLEXIVE
+R: 强调“亲自、自己”或主语和宾语是同一个人时用 -self；by oneself＝独自。
+E: The technicians completed the work themselves. ## 技术员自己完成了工作。
+E: Mr. Novak checks every bill himself. ## 诺瓦克先生每张账单都亲自核对。
+T: 主语和宾语不是同一人也用 -self：asked the designers to send herself ✗。
+S: 句子已完整，空格在句尾，或前面有 by。
+@GR.PRON.DETERMINER_QUANT
+R: each / every / another ＋单数可数；all / most / several / many / few ＋复数；much / little ＋不可数。
+E: Each participant receives a certificate. ## 每位学员都会收到证书。
+E: Few of the guests left early. ## 几乎没有客人提前离开。
+T: 后面是单数却选了 all / most。
+S: 先看空格后的名词是单数、复数还是不可数。
+@GR.PRON.INDEFINITE
+R: 两个里的另一个是 the other；三个以上再来一个是 another；其余的全部是 the others；不特指的别的用 others。
+E: One room is booked, so we will use the other. ## 一间被订了，我们用另一间。
+E: Would you like another cup of coffee? ## 再来一杯咖啡吗？
+T: 只有两个却选了 another。
+S: 句中出现 one of the two / one…，或 another / the other / others 并列在选项中。
+@GR.PRON.DEMONSTRATIVE
+R: those who＝那些…的人；that of / those of 用来代替前面提到的名词，避免重复。
+E: Those who wish to attend should register now. ## 想参加的人请现在报名。
+E: Our prices are lower than those of our competitors. ## 我们的价格比竞争对手的低。
+T: 用 them who 或 these who。
+S: 空格后紧跟 who，或比较句里后半句缺一个和前面同类的名词。
+@QT.P5.RELATIVE
+R: 关系词题问两件事：前面有没有名词（先行词），后面的句子缺不缺成分。
+E: The supplier whose prices are lowest won the contract. ## 报价最低的供应商拿到了合同。
+E: The hotel where the dinner will be held is downtown. ## 举办晚宴的酒店在市中心。
+T: 后面句子完整还选 which。
+S: 空格前是名词，选项是 who/which/whose/where/what/that。
+@GR.REL.REL_PRONOUN
+R: 指人用 who，指物用 which，人物都行用 that；后面紧跟名词表示“谁的”用 whose；逗号后不用 that。
+E: Employees who work late can use the taxi service. ## 加班的员工可以用出租车服务。
+E: The Hartwell Building, which opened in 1998, will be renovated. ## 1998 年启用的哈特韦尔大楼将翻修。
+T: 逗号后面选 that。
+S: 空格前是名词，后面缺主语或宾语。
+@GR.REL.REL_ADVERB
+R: 先行词是地点、后面句子完整用 where；是时间用 when；也可以写成 in which / on which。
+E: This is the room where the interviews take place. ## 这是面试的房间。
+E: Friday is the day when the report is due. ## 周五是报告截止日。
+T: 先行词是地点就一律选 where，没看后面缺不缺宾语（the hotel which we visited ✓）。
+S: 空格前是地点/时间名词，后面句子主谓宾齐全。
+@GR.REL.REL_WHAT
+R: what＝the thing that，前面不能再有名词；前面有名词用 that/which。
+E: What the client needs is a faster delivery. ## 客户需要的是更快的交货。
+E: The menu reflects what local farms supply. ## 菜单反映本地农场供应的东西。
+T: 名词后面接了 what（the plan what we made ✗）。
+S: 空格前是动词或介词（没有名词），后面缺宾语。
+@GR.REL.NOUN_CLAUSE
+R: 整个小句当名词用：确定的事用 that，“是否”用 whether/if，问具体用 who/when/how。
+E: We are not sure whether the order will arrive today. ## 我们不确定订单今天到不到。
+E: The survey shows that customers prefer online ordering. ## 调查显示顾客更喜欢网上下单。
+T: “是否”选了 that；或在介词后用 if（介词后只能 whether）。
+S: 空格在 know / ask / decide / sure / depends on 后面，后面是完整句。
+@GR.REL.COMPOUND_REL
+R: whoever＝任何…的人，whatever＝任何…的东西，however＋形容词＝无论多么。
+E: Whoever finishes first can leave early. ## 谁先做完谁可以早走。
+E: However busy you are, please reply by Friday. ## 无论多忙，请周五前回复。
+T: 用 who 开头当主语（Who finishes first can leave ✗）。
+S: 空格在句首或动词后，前面没有先行词，意思是“任何/无论”。
+@QT.P5.COMPARATIVE
+R: 比较题看标志词：than 选比较级，the…of/in/ever 选最高级，as…as 选原级。
+E: This year's sales are much higher than last year's. ## 今年销量比去年高得多。
+E: It is the largest branch in the region. ## 这是该地区最大的分店。
+T: 看到 more 就选，没看后面有没有 than。
+S: 选项是同一个形容词的原级、比较级、最高级。
+@GR.COMP.COMPARATIVE
+R: 有 than 用比较级；加强比较级用 much / far / even / considerably，不用 very。
+E: The new model is far more efficient than the old one. ## 新型号比旧型号高效得多。
+E: Costs were even lower than expected. ## 成本比预期还低。
+T: 用 very 修饰比较级，或写成 more higher。
+S: 空格后或句中有 than；空格前是 much / far / even。
+@GR.COMP.SUPERLATIVE
+R: the＋最高级＋of/in/among/ever；one of the＋最高级＋复数名词。
+E: She is one of the most experienced engineers in the company. ## 她是公司最有经验的工程师之一。
+E: This is the lowest price we have ever offered. ## 这是我们给出过的最低价。
+T: 有 the…in the region 却选比较级。
+S: 空格前有 the，后面有 of / in / ever / of any。
+@GR.COMP.EQUATIVE
+R: as＋原级＋as 表示“一样”；as many/much as 表示“多达”。
+E: The new printer is as fast as the old one. ## 新打印机和旧的一样快。
+E: The event attracted as many as 500 visitors. ## 活动吸引了多达 500 名访客。
+T: as…as 中间填了比较级 faster。
+S: 空格前后有 as…as。
+@QT.P5.PAIR_GRAMMAR
+R: 成对或固定的语法搭配要找“另一半”：so…that、such…that、either…or、the number of＋单数动词。
+E: The tablet is so light that it fits in a small bag. ## 平板轻得能放进小包。
+E: It was such a long meeting that we missed lunch. ## 会开得太长，我们错过了午饭。
+T: so 和 such 混：so＋形容词，such＋（a）＋名词。
+S: 句中已经有 that / or / nor / and，或空格后是数量名词。
+@GR.SPECIAL.INVERSION_NEG
+R: never / rarely / not only / only＋时间 放句首时，后面像疑问句一样把助动词提前。
+E: Rarely has the company seen such strong sales. ## 公司很少见到如此强劲的销量。
+E: Only after the review will the budget be approved. ## 只有审核之后预算才会批准。
+T: 否定词在句首，后面仍按正常语序选 the company has。
+S: 句首是 Never / Rarely / Seldom / Not only / Only。
+@GR.SPECIAL.PARALLEL
+R: and / or / but / both…and 连接的两边要“长得一样”：名词对名词、形容词对形容词、-ing 对 -ing。
+E: The plan is both practical and affordable. ## 方案既实用又实惠。
+E: Duties include answering calls and scheduling meetings. ## 职责包括接电话和安排会议。
+T: 一边是形容词，另一边选了名词或副词。
+S: 空格紧挨 and / or / but，另一边词性清楚。
+@GR.SPECIAL.ELLIPSIS
+R: 公文里常省掉“主语＋be”：as requested、if necessary、when needed、unless otherwise noted。
+E: As requested, I have attached the invoice. ## 按您的要求，我附上了发票。
+E: Please contact us if necessary. ## 如有需要请联系我们。
+T: 在 as ___ 后面选了名词 request 或主动 requesting。
+S: 空格在 as / if / when / unless 后，后面没有主语。
+@QT.P5.VOCAB
+R: 词汇题先找搭配：看空格后面跟的名词、介词，搭不上的先划掉，再看意思。
+E: The hotel offers complimentary breakfast. ## 酒店提供免费早餐。（complimentary 和 complementary 只差一个字母）
+E: The new manager will address customer complaints. ## 新经理将处理客户投诉。（address＝处理）
+T: 按日常意思选熟词，忽略商务义（address 不是“地址”）。
+S: 四个选项同词性、意思不同；找空格后的名词或介词。
+@QT.P6.CLASSIFY
+R: P6 先分两类：本句就能定答案的（词性、介词、语态）按 P5 秒做；要看上下文的（时态、代词、连接副词、插入句）再放慢读。
+E: The paper forms will no longer be accepted. ## 纸质表格不再受理。（be ＋分词，本句可做）
+E: We will ship the order next week. ## 我们下周发货。（时态要看信的日期，需上下文）
+T: 每空都从头细读全文，或每空都只看本句。
+S: 选项是同一词的不同词尾 → 本句做；选项是不同时态 / 代词 / however 类 / 整句 → 看上下文。
+@QT.P6.INDEPENDENT
+R: 独立型空格和 P5 一模一样：看空格前后两三个词定词性、语态或介词。
+E: Thank you for your patience during the transition. ## 感谢大家在过渡期的耐心。
+E: Training sessions will be held in Room 2B. ## 培训课将在 2B 室举行。
+T: 以为 P6 题都要读全文，花太多时间。
+S: 四个选项同词根，或都是介词。
+@QT.P6.CTX_TENSE
+R: 时态题几个都通时，看信件日期和事情发生没发生：日期之后的事用将来，之前的事用过去。
+E: Our supplier will not deliver the chairs until March 17. ## 供应商要到 3 月 17 日才送椅子。（信写于 3 月 3 日）
+E: The new store will offer seating for 80 customers. ## 新店将提供 80 个座位。（店下个月才开）
+T: 只看本句，选了语法上也通的过去时。
+S: 选项是同一动词的不同时态，本句没有明确时间词。
+@QT.P6.CTX_PRONOUN
+R: 代词题往前找它指谁：一个人、几个人、公司（it/its）还是收信人（you/your）。
+E: Keep your receipts and bring them to the front desk. ## 保留收据，带到前台。（them＝receipts）
+E: We would like to offer you a free night on your next visit. ## 我们想在您下次入住时送您一晚免费住宿。
+T: 选了语法通但指错对象的代词（her / their）。
+S: 选项是 it / they / them / your / its 等，指代对象在前一两句。
+@QT.P6.CTX_VOCAB
+R: 语境词汇题本句几个词都说得通时，回头看整篇在讲什么再选。
+E: Space is limited, so early registration is recommended. ## 名额有限，建议尽早报名。
+E: The parking garage will be closed for repairs. ## 停车场将因维修关闭。
+T: 只看空格那一句，选了“也能说”的词。
+S: 四个选项同词性、意思不同，本句都通。
+@QT.P6.CTX_CONJ_ADV
+R: 接续副词题先判断前后两句是转折（However）、因果（Therefore）、补充（In addition）还是举例（For example）。
+E: Parking normally costs $12. However, the management will cover it. ## 停车通常 12 美元，不过物业会报销。
+E: The store will add a kitchen. In addition, it will hire 15 staff. ## 门店将增设厨房，另外还要招 15 人。
+T: 不看前一句，只凭“however 最常见”就选。
+S: 空格在句首，后面紧跟逗号，选项是 However / Therefore / In addition 等。
+@QT.P6.INSERTION
+R: 插入句看衔接：候选句里的 this / it / they / also / such 要能接住前一句，下一句也要接得住它。
+E: Our supplier cannot deliver until May. We can send you a similar model instead. ## 供应商五月前送不了货，我们可以给您换个类似款。
+E: Please speak to reception on arrival. ## 抵达时请联系前台。
+T: 选和上下文用词重复、但其实把前文原话又说一遍的句子。
+S: 空格单独占一句（整句选项）。
+@QT.P6.INS_OPENING
+R: 段首空格找“介绍主题”的开场句，下一句会用 the/this 回指它。
+E: Our department will hold a training workshop this fall. ## 我们部门今年秋天将举办培训工作坊。
+E: We are pleased to announce the opening of our new branch. ## 我们很高兴宣布新分店开业。
+T: 选了细节句当开场，后文的 The workshop 找不到出处。
+S: 空格在第一句，下一句以 The＋名词 或 It 开头。
+@QT.P6.INS_TRANSITION
+R: 段中空格的句子要承上启下：前一句讲 A，后一句讲 B，它要把 A 和 B 接起来。
+E: The new center has a quiet work area. It was created to meet both needs. ## 新中心有安静工作区，就是为满足这两种需求。
+E: Lodging takes ten minutes. However, repeat customers are faster. ## 首次登记十分钟，老客户更快。
+T: 选了只接得上前句、接不上后句的句子。
+S: 空格在段落中间，前后都有内容。
+@QT.P6.INS_CLOSING
+R: 结尾空格常是“欢迎联系 / 感谢 / 怎么使用”这类收尾句。
+E: Questions can be directed to the management office. ## 有疑问请联系管理处。
+E: To use the offer, simply mention this letter when booking. ## 使用优惠，订房时提及此信即可。
+T: 选了引出新话题、后面又没下文的句子。
+S: 空格在全文最后一句。
