@@ -1,0 +1,50 @@
+# b006 MXT01 P7 186-200, MXT02 P5 + P6B1
+MXC-T01-186 | D | At least two years' hands-on experience | 要求里写“至少两年实际操作经验”。 | A:只要学位，没说博士;B:没要求带团队;C:荷兰语是加分项，不是必须 | 逐项回原文核对 | hands-on experience=>practical experience
+MXC-T01-187 | C | Please do not send portfolios at this stage | 招聘写明现阶段别寄作品集。 | A:要写两位推荐人;B:就是发邮件申请;D:要附求职信 | NOT 题找 do not
+MXC-T01-188 | D | Desirable - Experience with polyethylene glycol treatment | 她做过 PEG 处理，这条在招聘里列在 Desirable（加分项）下。 | A:周末加班是必需项，她也没提;B:学位是必需项;C:摄影标准是必需项 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T01-189 | C | prefer to come in person and am free from 10 February | 她想当面面试，10 日以后都有空。 | A:没谈工资;B:没要求参观;D:没要目录 | 找 prefer/would like
+MXC-T01-190 | D | 11:00 Elise Solheim … am free from 10 February | 她 10 日后有空，面试排在 12 日，正是她能来的日子。 | A:排在周四不是周五;B:她 2 月 3–7 日才需要视频，12 日能来现场;C:每人都约 75 分钟 | 日期两篇对着看
+MXC-T01-191 | C | Two doors and two vestibules | 产品页写有两个门。 | A:写明不建议冬季登山;B:重 1.9 公斤;D:自带地布防水指标，不需另买 | 逐项回原文核对 | Two doors=>two entrances
+MXC-T01-192 | D | It did not move. The six guy points are not marketing | 时速 50 英里的大风里帐篷纹丝不动，他夸的是抗风稳定。 | A:没夸便宜;B:没夸体积;C:产品不适合冬季 | 找夸奖的句子 | It did not move=>stability in strong wind
+MXC-T01-193 | C | has now failed completely | 左前厅拉链卡住，现在彻底坏了。 | A:没漏水;B:杆没断;D:没缺绳 | 找 complaint 那句 | failed completely=>a zip that has failed
+MXC-T01-194 | D | I suspect I know which way it will go | 他猜公司会把拉链坏算作“正常磨损”，即不保修。 | A:他说还会再买，没说被迫买;B:免费修是公司后来答复的，不是他预料的;C:他说自己不是第一个 | 推断要看他的语气 @S2-P7-08
+MXC-T01-195 | C | we are treating it as a manufacturing issue | 公司把它算作制造缺陷，在保修内免费修或换，跟他以为的“算磨损”相反。 | A:公司承认有这个问题;B:明确不送去收费的 Mend;D:公司上门取件 | 两篇对比找差别 | at no cost to you=>cover the repair under its guarantee
+MXC-T01-196 | D | will issue invoices electronically only | 4 月 1 日起只发电子发票。 | A:付款期限不变;B:门店收据不受影响;C:2% 是提前付款的折扣，不是涨价 | 找 From 1 April 那句 | electronically only=>sent electronically
+MXC-T01-197 | C | applied as a credit on your following invoice | 2% 折扣记在下一张发票上，不是当场少付。 | A:原文说 rather than deducted from the payment;B:没有支票退款;D:和运费无关 | rather than 后面是错的那个
+MXC-T01-198 | D | we ordered twelve sheets of oak veneer, not fourteen | 她只订了 12 张，发票按 14 张收。 | A:没说运费贵;B:没说日期错;C:没说税算错 | 发票一篇、邮件一篇对数字 | twelve … not fourteen=>More … invoiced than ordered
+MXC-T01-199 | C | Early settlement (paid by 16 April): 2% credit | 发票写 16 日前付款享 2%，她 13 日付，所以还能拿到折扣。 | A:没说哪天来取货;B:到期日是 5 月 6 日;D:没提记账员休假 | 日期两篇对着看 @S2-P7-19
+MXC-T01-200 | D | It arrived by post … The address on our account is correct | 地址没错却还收到纸质发票，说明通知里的“只发电子版”没在她账户上生效。 | A:她说地址是对的;B:账户没关;C:她是在指出问题，没说想要纸质 | 推断也要原文撑腰 @S2-P7-08
+MXC-T02-101 | B | can plan their collections more ___ | more 修饰动词 plan，要副词 accurately。 | A:accurate 是形容词;C:accuracy 是名词;D:accurateness 是名词 | 修饰动词用 -ly
+MXC-T02-102 | D | By the time the new sorting hub opens in March | 三月开张时“将已经”投了 400 多万，用 will have invested。 | A:invests 是一般现在;B:is investing 是正在;C:was investing 是过去 | by the time＋将来→will have done
+MXC-T02-103 | A | must be confirmed ___ writing | in writing＝以书面形式，固定说法。 | B:on 不搭 writing;C:at 不搭;D:by writing 是“通过写作”，不是书面确认 | in writing＝书面
+MXC-T02-104 | A | arranged in several ___ | several 后要复数名词，configurations（布局）。 | B:configure 是动词;C:configured 是分词;D:configurable 是形容词 | several 后填复数名词
+MXC-T02-105 | C | to ___ the launch … until the author's tour dates were confirmed | 等巡回日期定了再发布，即“推迟”，postpone…until。 | A:decline 是拒绝;B:reduce 是减少;D:dismiss 是解雇/驳回 | until＋时间→postpone
+MXC-T02-106 | B | Damaged pallets ___ from the container | 托盘是“被移走”的，发生在过去，were removed。 | A:removed 是主动;C:have removed 是主动;D:removing 不能当谓语 | 主语是东西→先想被动
+MXC-T02-107 | D | receive a ___ discount | 名词 discount 前填形容词 substantial（可观的）。 | A:substance 是名词;B:substantially 是副词;C:substantiate 是动词 | 名词前填形容词
+MXC-T02-108 | C | recommends ___ perishable goods | recommend 后面接动名词 booking。 | A:recommend to do 不对;B:book 原形不对;D:to have booked 不对 | recommend＋-ing
+MXC-T02-109 | A | ___ the ferry crossing was delayed by fog, the delegates arrived in time | 轮渡晚了，代表“却”按时到，让步用 Although。 | B:Because 意思反了;C:So that 是目的;D:Unless 是“除非” | 前后相反→although
+MXC-T02-110 | C | with impressive ___ | 形容词 impressive 后要名词 composure（镇定）。 | A:compose 是动词;B:composed 是形容词;D:composedly 是副词 | 形容词后填名词
+MXC-T02-111 | B | since it was founded eight years ago | 有 since，从八年前到现在一直在带，用现在完成 has led。 | A:leads 一般现在;C:led 一般过去;D:is leading 正在 | since＋过去→现在完成
+MXC-T02-112 | D | The distribution centre ___ we visited last month | visited 后面缺宾语，指物，用 that。 | A:what 前面不能有名词;B:where 后要完整句，这里缺宾语;C:who 指人 | 缺宾语用 that/which
+MXC-T02-113 | C | is printed ___ on the outside | 修饰 printed，用副词 legibly（清楚可读地）。 | A:legible 是形容词;B:legibility 是名词;D:legibleness 是名词 | 修饰动词用 -ly
+MXC-T02-114 | A | must be dismantled ___ midnight on Sunday | 最迟在周日午夜前拆完，截止用 by。 | B:until 表持续，拆除不是持续动作;C:since 是“自从”;D:during 后接时间段 | 截止期限用 by
+MXC-T02-115 | D | eligible for a full ___ | 退回没卖掉的书，可以拿“全额退款”，full refund。 | A:reduction 是减少;B:revenue 是收入;C:receipt 是收据 | full refund＝全额退款
+MXC-T02-116 | B | for their ___ under pressure | their 后填名词，professionalism＝专业精神。 | A:profession 是职业，不是表现;C:professionally 是副词;D:professional 多作形容词/指人 | 所有格后填名词
+MXC-T02-117 | A | The list of approved freight carriers ___ reviewed | 主语是 list 单数，每季度一次用现在时 is。 | B:are 被 carriers 骗了;C:have been 是复数;D:were 是复数过去 | of 前面的才是主语
+MXC-T02-118 | C | When the courier arrived … the warehouse team ___ already sealed | 快递到（过去）之前已经封好，过去的过去用 had。 | A:has 是现在完成;B:will have 是将来完成;D:is having 不对 | 过去之前→had done
+MXC-T02-119 | B | found the keynote speaker's account … deeply ___ | 讲述“令人着迷”，说事物用 -ing：fascinating。 | A:fascinated 是人感到着迷;C:fascinate 是动词;D:fascination 是名词 | 事物让人→-ing
+MXC-T02-120 | D | announced the ___ of three boutique properties | the…of 之间填名词 acquisition（收购）。 | A:acquire 是动词;B:acquired 是分词;C:acquisitive 是形容词 | the ___ of → 填名词
+MXC-T02-121 | C | ___ of the two banquet rooms has its own service entrance | 两间里“每一间”都有，动词 has 单数，用 Each of。 | A:Both 后动词要用 have;B:All 用于三者以上;D:Every 不能直接接 of | each of＋复数＋单数动词
+MXC-T02-122 | A | The revised distribution agreement ___ by both parties | 协议“被签署”，后有 by，用被动 must be signed。 | B:must sign 是主动;C:is signing 主动;D:will sign 主动 | 有 by＋人→多半是被动
+MXC-T02-123 | D | have risen ___ since | 修饰动词 risen，用副词 steadily。 | A:steady 是形容词;B:steadier 是比较级形容词;C:steadiness 是名词 | 修饰动词用 -ly
+MXC-T02-124 | B | arranged for a second shuttle bus ___ guests | arrange for sb/sth to do＝安排……去做，to collect。 | A:collecting 不接这个结构;C:collect 原形接不上;D:collection 是名词 | arrange for…to do
+MXC-T02-125 | A | there are no exceptions | 没有例外，就是硬性规定，用 must。 | B:may 是可以;C:might 是也许;D:would 是假设 | 规定要求→must
+MXC-T02-126 | C | appears ___ Thursdays | 星期前用 on，每周四说 on Thursdays。 | A:in 用于月份年份;B:at 用于钟点;D:for 不表时间点 | 星期用 on
+MXC-T02-127 | B | apologised for the ___ caused by | the 后填名词 inconvenience（不便）。 | A:inconvenient 是形容词;C:inconveniently 是副词;D:inconveniencing 是动词 -ing | the 后填名词
+MXC-T02-128 | D | Next Monday the newsroom ___ | 下周一的事，用将来进行时 will be moving。 | A:moved 过去;B:has moved 现在完成;C:had moved 过去完成 | 看时间词定时态
+MXC-T02-129 | C | can be adapted for vegetarian guests, ___ the kitchen is notified | 只要提前一天告诉厨房就能改，provided that＝只要。 | A:in case 是以防万一;B:even if 是即使;D:as though 是好像 | provided that＝只要
+MXC-T02-130 | A | complimentary breakfast vouchers must be ___ | 兑换券“被兑换使用”用 redeem。 | B:recovered 是找回/恢复;C:restored 是修复;D:retrieved 是取回 | redeem a voucher＝兑券
+MXC-T02-131 | C | must ___ by an electronic customs declaration | 货物要“附带”电子报关单，后有 by，用被动 be accompanied。 | A:accompany 主动，货物不会陪报关单;B:accompanying 不能接在 must 后;D:have accompanied 主动完成 | must 后＋be done
+MXC-T02-132 | A | takes about ten minutes … ___, the system stores each exporter's details | 一般要 10 分钟，“不过”老客户系统存了资料会更快，转折用 However。 | B:Otherwise 是否则;C:For example 是举例;D:As a result 是因果 | 先判转折/因果/补充 @S2-P6-06
+MXC-T02-133 | B | Please raise them with your team leader | 下一句的 them 指“问题”，B 先说客户可能有疑问。 | A:试点和 them 接不上;C:海关来访不是“问题”;D:讲重量限制，接不上 raise them | 下一句的 them 指什么 @S2-P6-08
+MXC-T02-134 | D | not be permitted to leave the yard ___ a declaration reference is attached | 不贴报关号就不准走，unless＝除非。 | A:despite 是介词，后不接句子;B:in case 是以防;C:so that 是为了 | not…unless＝没有…就不

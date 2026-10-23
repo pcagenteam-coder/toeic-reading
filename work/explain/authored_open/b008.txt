@@ -1,0 +1,50 @@
+# b008 MXT02 P7 186-200, MXT03 P5 + P6B1
+MXC-T02-186 | C | 19:30 Forum dinner — Grand Ballroom | 行程表写论坛晚宴在 Grand Ballroom。 | A:Orangery 是欢迎酒会;B:Terrace 是午餐;D:Hall A 是全体会议 | 拿关键词 dinner 扫读 @S2-P7-02
+MXC-T02-187 | D | delegates landing later may book a car at €48 each way | 14 点前落地才免费接机，她 16:40 才到，要付 48 欧单程车费。 | A:房型没变;B:她是换课不是加课;C:周四那晚她自己付 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T02-188 | B | will make my own way to the airport on the Friday | 回程她自己去机场。 | A:她周五才走;C:她只要单程车;D:发票只有一程 48 欧，是去程 | own way＝自己想办法 | make my own way=>arrange it herself
+MXC-T02-189 | A | I would like to exchange my 11:00 workshop | 她要把 11 点的菜单成本课换掉，所以不会去那节。 | B:是她想换进去的课;C:下午招聘课她说保留;D:周四的论坛没说不去 | NOT 题逐项核对
+MXC-T02-190 | C | Accommodation, 2 nights, Executive Double | 只收两晚房费，她周四那晚是私人自费住，没算进论坛发票。 | A:房型还是 Executive Double;B:没有提前入住;D:没说和人合住 | 发票数字和邮件对着看
+MXC-T02-191 | D | Every price includes mastering to retail specification | 所有价格都含母带处理（达到零售标准）。 | A:三人试音只有 Signature 有;B:四周交付也只是 Signature;C:没说帮推广 | 盯住 every/all
+MXC-T02-192 | B | Series — €55 per finished hour on orders of four titles or more | 她付 55 欧/小时，正是“四本以上系列”的价格。 | A:Signature 是 62 欧;C:额外重录另收 140 欧;D:六周是 Standard 的 | 价格一篇、数字一篇 @S2-P7-19
+MXC-T02-193 | A | the promise that mattered most to us was kept: one narrator | 她最看重的是四本书同一个朗读者。 | B:恰好是没通知她延期;C:没提门户;D:她只说有竞争力，没说最低 | mattered most＝最看重
+MXC-T02-194 | C | one free re-record of up to fifteen minutes | 每个套餐都含一次 15 分钟内的免费重录，改地名就用的这条。 | A:没说朗读者免费干;B:免费重录不是系列订单才有;D:错误是交付后发现的 | 回复里的 the clause 指广告里那条
+MXC-T02-195 | D | every client receives an automatic message the moment a delivery date moves | 12 月起交付日期一变，自动通知客户。 | A:没涨价;B:没扩充朗读者;C:没缩短交期 | 找 Since December 那句 | an automatic message=>informs clients automatically
+MXC-T02-196 | B | The main yard will be resurfaced … For those two weeks | 通知讲两周修路期间的临时安排。 | A:不是永久搬迁;C:不是招聘;D:是不准过夜停，不是收费 | 主旨看第一段 @S2-P7-03 | For those two weeks=>temporary arrangements
+MXC-T02-197 | A | must hold a booked arrival slot … 24 hours in advance | 每辆车都要提前 24 小时预约到达时段。 | B:没要求先去司机休息区;C:没要求带打印件;D:没说自己卸货 | 找 must 那句 | at least 24 hours in advance=>at least a day beforehand
+MXC-T02-198 | D | Bays 7 to 12 are closed for the whole period | 她们一直用 9 号泊位，而 7–12 号整两周都关。 | A:没说专门留给冷链;B:预约不是只找她;C:没说离 4 号门最近 | 两篇对着看 @S2-P7-19
+MXC-T02-199 | C | First departure from Gate 4: 08:15 | 周六 7 点到，可周六首班车 8:15 才开，到得比首班车早。 | A:不用改到工作日;B:是早于首班，不是晚于末班;D:可以预约 | 时间两篇对着看
+MXC-T02-200 | B | No trailer may be left in the yard overnight | 她猜周四晚甩挂这两周暂停，通知确实说不许挂车过夜，她猜对了。 | A:1 号门关闭;C:没说换承运商;D:备用停车场没说收费 | correctly assume＝去另一篇验证
+MXC-T03-101 | C | record each incoming shipment ___ | 句子已完整，修饰动词 record，用副词 carefully。 | A:care 是名词/动词;B:careful 是形容词;D:caring 是“体贴的” | 修饰动词用 -ly
+MXC-T03-102 | A | By the time the new distribution centre opens in March | 到三月新中心开张时，团队“将已经”扩大近三分之一，用将来完成 will have expanded。 | B:expands 是一般现在;C:had expanded 是过去的过去，可这是将来的事;D:is expanding 是正在进行 | by the time＋将来→will have done
+MXC-T03-103 | D | ___ thirty minutes of arrival | 到货后 30 分钟“之内”，within＋时长。 | A:during 不跟“多少分钟 of”;B:among 是在一群中;C:since 是“自从” | within＋时长＝在…之内
+MXC-T03-104 | B | submitted a ___ report | 名词 report 前要形容词，detailed＝详细的。 | A:detail 是名词;C:details 是复数名词;D:detailing 意思是“正在详述” | 名词前填形容词
+MXC-T03-105 | A | Prescription records ___ by two members of staff | 记录“被审核”，有 by，用被动 are reviewed。 | B:review 主动;C:are reviewing 主动;D:have reviewed 主动 | 有 by＋人→多半是被动
+MXC-T03-106 | C | closing at 4:00 P.M. instead of 7:00 P.M. | 从 7 点关改成 4 点关，营业时间“缩短”了。 | A:extended 是延长，正好相反;B:advertised 是宣传;D:restored 是恢复 | 看后面的具体数字
+MXC-T03-107 | B | twice since the online store opened | since＋过去时间，用现在完成 has revised。 | A:revises 一般现在;C:revised 过去时不配 since;D:will revise 将来 | since＋过去→现在完成
+MXC-T03-108 | D | is ___ secure | 修饰形容词 secure，用副词 structurally（结构上）。 | A:structure 是名词;B:structural 是形容词;C:structures 是名词复数 | 修饰形容词用 -ly
+MXC-T03-109 | A | The architect ___ design won | 空后紧跟名词 design，“他的设计”，用 whose。 | B:who 后面接动词;C:which 指物;D:whom 后不接名词 | 空后紧跟名词→whose
+MXC-T03-110 | C | ___ the delivery van was held up by roadworks | 后面是完整句子，要连词；车被堵“但”疫苗温度没问题，转折用 Although。 | A:Because 意思反了;B:Despite 是介词，不接句子;D:Therefore 是副词 | 后面是句子→用连词
+MXC-T03-111 | D | guaranteed ___ a period of fifteen years | 保修期 15 年，一段时长用 for。 | A:since 接起点;B:during 一般不和 a period of 表示保修长度连用;C:by 是截止 | 时长用 for
+MXC-T03-112 | B | received formal ___ | 形容词 formal 后要名词 approval。 | A:approve 是动词;C:approvingly 是副词;D:approved 是分词 | 形容词后填名词
+MXC-T03-113 | A | should notify ___ supervisor | supervisor 前要所有格，employees 是复数，用 their。 | B:theirs 后不能接名词;C:them 是宾格;D:themselves 是反身 | 名词前用所有格
+MXC-T03-114 | C | When the inspector arrived … for two days | 检查员到（过去）时已经连续干了两天，过去完成进行 had been working on。 | A:are working 是现在;B:work 是一般现在;D:will have worked 是将来 | 过去某时之前一直在做→had been doing
+MXC-T03-115 | B | recommends ___ the tender documents | recommend 后接 -ing：submitting。 | A:recommend to do 不对;C:submission 是名词，后面接不了宾语;D:submit 原形不对 | recommend＋-ing
+MXC-T03-116 | D | as two items had been charged twice | 有两项重复收费，所以让供应商“改正”发票。 | A:approve 是批准;B:extend 是延长;C:postpone 是推迟 | 看 as 后面的原因
+MXC-T03-117 | A | ___ of the cold-storage units is carried out | 句首做主语，要名词 Inspection。 | B:Inspect 是动词;C:Inspected 是分词;D:Inspects 是动词三单 | 句首缺主语→填名词
+MXC-T03-118 | C | The contract … ___ to a firm based in Gdansk last month | 合同是“被授予”公司的，上个月，过去被动 was awarded。 | A:awarded 主动;B:has awarded 主动且不配 last month;D:is awarding 主动 | 主语是东西→先想被动
+MXC-T03-119 | D | far ___ to install than | 有 than，far 加强比较级，easier。 | A:easy 原级;B:easiest 最高级;C:as easy 要配 as | 看到 than 选比较级
+MXC-T03-120 | B | must comply ___ the storage standards | comply with＝遵守。 | A:comply to 是误用;C:for 不搭;D:on 不搭 | comply with＝遵守
+MXC-T03-121 | A | is ___ with the fire regulations | be consistent with＝与……一致，be 后填形容词。 | B:consistently 是副词;C:consistency 是名词;D:consist 是动词 | be consistent with
+MXC-T03-122 | C | will stay open throughout the refit ___ the paint fumes make it unsafe | 一直营业，“除非”油漆味不安全，unless。 | A:so that 是为了;B:in case 是以防，意思不对;D:whereas 是“而”，对比 | unless＝除非
+MXC-T03-123 | B | as soon as the client ___ the revised budget | as soon as 时间从句用现在时表将来，client 单数，approves。 | A:will approve 时间从句不用 will;C:approved 是过去;D:is approving 进行时不对 | 时间从句不用 will
+MXC-T03-124 | D | The refrigeration units ___ we ordered in April | ordered 缺宾语，先行词是物，用 that。 | A:what 前不能有名词;B:who 指人;C:whose 后要接名词 | 缺宾语用 that/which
+MXC-T03-125 | A | If the planning committee ___ the revised drawings next week | if 从句表将来用一般现在时，committee 单数，approves。 | B:will approve if 从句不用 will;C:had approved 是过去完成;D:would approve 是虚拟 | if 从句不用 will
+MXC-T03-126 | C | proof of professional ___ | professional 是形容词，后要名词 certification（资格证）。 | A:certify 是动词;B:certified 是分词;D:certifiable 是形容词 | 形容词后填名词
+MXC-T03-127 | D | Although the two shelving units look identical, one is … deeper than ___ | 两个里一个比“另一个”深，两者中的另一个用 the other。 | A:another 用于三个以上;B:other 后要接名词;C:each other 是“互相” | 两个中的另一个→the other
+MXC-T03-128 | B | makes ___ use of the limited floor space | make efficient use of＝高效利用。 | A:eager 是渴望的，形容人;C:urgent 是紧急的;D:willing 是愿意的，形容人 | make efficient use of
+MXC-T03-129 | A | The building's ___ with the new accessibility code | 所有格后要名词，compliance with＝符合（规定）。 | B:comply 是动词;C:complying 是动名词，一般不放所有格后这样用;D:compliant 是形容词 | 所有格后填名词
+MXC-T03-130 | C | ___ wear a high-visibility jacket at all times | 一直要穿反光衣，是硬性规定，用 must。 | A:might 是也许;B:would 是假设;D:used to 是过去常常 | 规定要求→must
+MXC-T03-131 | B | we have ___ the drawings | have 后面接过去分词，现在完成时 have revised。 | A:revise 是原形;C:revising 不能接在 have 后;D:revision 是名词 | have＋过去分词
+MXC-T03-132 | A | ___ the dispensary and the staff room | 两个房间之间，between A and B。 | B:among 用于三者以上;C:across 是横跨;D:within 是在…之内 | between A and B
+MXC-T03-133 | C | ___, the storage cupboard you asked about has been widened | 前面讲了两处改动，这里再加一处，补充用 In addition。 | A:Nevertheless 是转折;B:Instead 是取而代之;D:For example 是举例，加宽柜子不是前面的例子 | 再加一件事→In addition
+MXC-T03-134 | D | We will submit the package to the planning office on 26 October | 前句说 26 日提交规划局，接“一般提交后八周内出结果”最顺。 | A:没提之前被拒;B:扩建还没开工;C:没有取消会面 | 插入句接住前一句的话题

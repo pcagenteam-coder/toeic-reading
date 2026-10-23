@@ -1,0 +1,31 @@
+# b001 pilot P5 001-030
+PL5-001 | D | Please ___ the attached form | “填表”英文固定说 complete a form，填完再交回前台。 | A:attend 是去参加会议、活动，不能“参加表格”;B:achieve 是达成目标，跟表格搭不上;C:perform 是执行任务、表演，不说 perform a form | 填表＝complete a form @S2-P5-07
+PL5-002 | B | receive a 10 percent ___ on their next purchase | 消费满 50 美元，下次买东西打九折——“百分之十的折扣”就是 discount。 | A:receipt 是收据，没有“10% 的收据”;C:deposit 是押金/定金;D:budget 是预算，跟“下次购物”对不上 | 看到 percent 先想 discount
+PL5-003 | A | The hotel offers ___ breakfast | 酒店给直订的客人送早餐，“免费赠送的”就是 complimentary。 | B:complementary 是“互补的”，拼写只差一个字母，最容易看花;C:previous 是“之前的”;D:considerate 是“体贴的”，形容人 | complimentary＝免费送
+PL5-004 | C | arrived ___ after the presentation had started | 航班晚点，他在演讲开始后“不久”才到，shortly after＝……之后不久。 | A:highly 修饰程度（highly recommended），不修饰时间;B:closely 是“密切地/仔细地”;D:nearly after 不成搭配，nearly 是“差点、将近” | shortly after＝刚过一会儿
+PL5-005 | A | the ability to ___ several projects at the same time | 同时“管好”几个项目，manage a project 是最常见的搭配。 | B:contain 是“包含、装着”;C:attract 是“吸引”，吸引项目说不通;D:operate 多指操作机器、经营公司，不说同时 operate 几个项目 | manage＋项目/团队/预算
+PL5-006 | B | ___ for the marketing workshop has been extended | 报名期限被延长了，“报名”是 registration。 | A:attendance 是出席人数，“出席被延长到 4 月 12 日”说不通;C:location 是地点;D:invitation 是邀请函 | 期限延长→想 registration
+PL5-007 | C | are ___ for reimbursement | 交了收据就“有资格”报销，be eligible for＝有资格获得。 | A:aware 要接 of（意识到）;B:capable 要接 of（有能力），而且说人;D:responsible for 是“负责”，费用不会负责报销 | eligible for＝有资格拿
+PL5-008 | D | is ___ complete, and the main entrance will reopen | 大堂工程“快”完了，下周就重开，nearly complete＝差不多完成。 | A:hardly 是“几乎不”，跟下周重开矛盾;B:closely 是“密切地”;C:lately 是“最近”，不修饰 complete | nearly＋complete/finished
+PL5-009 | B | please ___ our customer service team | 包裹没到就“联系”客服，contact 后面直接跟人。 | A:reply 要说 reply to;C:inform 是“通知某人某事”，你去通知客服不合逻辑;D:respond 也要接 to，而且是“回复” | contact 直接加人，不加 to
+PL5-010 | A | report any ___ with their computers | 电脑出了“问题”报给 IT，problems with sth＝某东西有毛病。 | B:requirements 是要求;C:solutions 是解决办法，用不着报告;D:conditions 是条件/状况，不是故障 | 报给 IT 的是 problems
+PL5-011 | D | Thanks to its ___ growth in Asia | 在亚洲“快速”增长，所以明年开新办公室，rapid growth 是固定搭配。 | A:urgent 是“紧急的”;B:frequent 是“频繁的”，增长不说频繁;C:eager 是“渴望的”，形容人 | rapid＋growth/increase
+PL5-012 | C | has been ___ until next Thursday | 有成员出差，会议“推迟”到下周四，postpone…until 很常见。 | A:canceled 取消了就不会有 until next Thursday;B:attended 是出席;D:located 是位于 | until＋新时间→postponed
+PL5-013 | C | We apologize for any ___ caused by | 停车场临时关闭，“给您带来的不便敬请原谅”，固定句 apologize for any inconvenience。 | A:permission 是许可;B:advantage 是好处，不用道歉;D:occasion 是场合 | 道歉句＝any inconvenience
+PL5-014 | A | will be in ___ of the training program | in charge of＝负责，Kim 负责新销售的培训。 | B:in case of 是“万一”;C:in addition 后接 to，意思是“另外”;D:in order 后接 to do，表目的 | in charge of＝负责
+PL5-015 | D | to ___ customer complaints more quickly | address 在公司里是“处理”问题，address complaints＝处理投诉。 | A:talk 不能直接加 complaints;B:express 是“表达”，经理不是去表达投诉;C:reply 要加 to | address＝处理（商务义） @S2-P5-15
+PL5-016 | B | is open to members ___ until the end of May | 展览到五月底前“只”对会员开放，only 放名词后面限定范围。 | A:even 是“甚至”;C:almost 是“几乎”，没有“几乎会员”;D:quite 修饰形容词程度 | only 限定范围
+PL5-017 | A | The ___ of the new payment system | The 后面、of 前面要个名词，installation 就是名词“安装”。 | B:install 是动词;C:installs 是动词三单;D:installed 是过去式/过去分词 | the ___ of → 填名词
+PL5-018 | B | offers ___ tours | 名词 tours 前面缺形容词，informative＝信息量大的。 | A:information 是名词，也不能直接修饰 tours（information tours 不通）;C:inform 是动词;D:informatively 是副词 | 名词前填形容词
+PL5-019 | C | read the safety instructions ___ before | 句子已经完整，空格修饰动词 read，要副词 carefully。 | A:careful 是形容词，不能修饰动词;B:caring 是“关心人的”;D:care 是名词/动词 | 修饰动词用 -ly
+PL5-020 | D | found the new online ordering system very ___ | find＋东西＋形容词＝觉得它怎样，very 后面填形容词 convenient。 | A:conveniences 是名词复数;B:conveniently 是副词，不能放在“觉得系统很___”;C:convenience 是名词 | find＋东西＋形容词
+PL5-021 | B | All ___ at the conference must wear their name cards | 要戴胸牌的是“人”，All 后面要复数的人，attendees＝参会者。 | A:attendance 是出席这件事/人数，不会戴胸牌;C:attend 是动词;D:attended 是动词过去式 | 戴胸牌的是人→-ee
+PL5-022 | C | are ___ simple to follow | 空格修饰形容词 simple，要副词 surprisingly＝出奇地简单。 | A:surprised 是“感到吃惊的”;B:surprising 形容词不能修饰形容词;D:surprise 是名词/动词 | 修饰形容词也用 -ly
+PL5-023 | A | for her ___ to the company's recycling program | her 后面要名词，contribution to＝对……的贡献。 | B:contribute 是动词原形;C:contributed 是过去式;D:contributes 是动词三单 | 所有格后填名词
+PL5-024 | D | ___ for the summer internship must be received | 句子缺主语，要名词；“申请材料”被收到，Applications。 | A:Applicable 是形容词;B:Applied 是过去式/分词;C:Apply 是动词，不能当主语 | 句首缺主语→填名词
+PL5-025 | A | has ___ completed its review | 夹在 has 和 completed 中间，修饰动词，用副词 successfully。 | B:successful 是形容词;C:success 是名词;D:succeed 是动词 | has 和过去分词中间填副词
+PL5-026 | C | The head of the sales department ___ the monthly figures | 句子缺谓语动词；主语 head 是单数，又是“每次开会都”，用一般现在时 presents。 | A:presentation 是名词;B:presenting 不能单独当谓语;D:to present 也不能当谓语 | 缺谓语就补动词 @S2-P5-10
+PL5-027 | B | The staff were ___ by the number of | 员工“感到高兴”，人的感受用 -ed，be pleased by。 | A:please 是动词原形;C:pleasure 是名词，were pleasure by 不通;D:pleasing 是“令人高兴的”，说的是事物 | 人感到→-ed，事物让人→-ing
+PL5-028 | D | keep your ___ receipt | purchase receipt＝购物收据，名词＋名词的固定组合。 | A:purchaser 是购买者，不是收据的类型;B:purchases 复数不能放名词前当修饰;C:purchased receipt 意思是“被买的收据”，不通 | 复合名词：purchase receipt
+PL5-029 | B | ___, the shipment from our overseas supplier arrived | 句首加逗号，后面是完整句子，要修饰全句的副词 Fortunately＝幸运的是。 | A:Fortunes 是名词复数;C:Fortune 是名词;D:Fortunate 是形容词，不能单独放句首加逗号 | 句首＋逗号→副词
+PL5-030 | D | provide ___ on how to reduce | provide 后面要名词；advice 不可数，没有复数。 | A:advised 是动词过去式;B:advise 是动词;C:advices 错，advice 不加 s | advice 不可数，不加 s

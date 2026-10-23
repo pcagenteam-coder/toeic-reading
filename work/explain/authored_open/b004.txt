@@ -1,0 +1,47 @@
+# b004 MXT01 P5+P6
+MXC-T01-101 | C | approved the ___ of two additional distribution centres | the 和 of 中间缺名词，construction（建设）。 | A:construct 是动词;B:constructed 是动词过去式/分词;D:constructively 是副词 | the ___ of → 填名词
+MXC-T01-102 | A | By the time the auditors arrive next Monday | 下周一审计到之前，资料“将已经”整理好，将来某时之前完成用 will have compiled。 | B:compiles 是一般现在，表达不出“到那时已完成”;C:had compiled 是过去的过去，可这是下周的事;D:is compiling 是正在做 | by the time＋将来→will have done
+MXC-T01-103 | B | has worked … ___ more than fifteen years | 后面是一段时长“15 年多”，配完成时用 for。 | A:since 后接起点（since 2010）;C:during 不跟“多少年”这种时长数字;D:within 是“在……之内”，不配 has worked | 时长用 for，起点用 since
+MXC-T01-104 | B | The revised safety guidelines ___ to all warehouse personnel last Thursday | 守则是“被发给”员工，又是 last Thursday，用过去被动 were distributed。 | A:distributed 主动，守则不会自己发;C:have distributed 是主动现在完成，和 last Thursday 冲突;D:distributing 不能当谓语 | 主语是东西→先想被动
+MXC-T01-105 | C | Sales … grew ___ after the advertising campaign | 修饰动词 grew，用副词 sharply（猛增）。 | A:sharp 是形容词;B:sharper 是形容词比较级;D:sharpness 是名词 | 修饰动词用 -ly
+MXC-T01-106 | A | ___ the renovation took longer than planned, the restaurant reopened on schedule | 装修拖了，餐厅“却”按时开业，前后是让步，用 Although。 | B:Because 是因果，意思反了;C:Therefore 是副词，不能引导从句;D:Whether 是“是否” | 前后相反→although
+MXC-T01-107 | B | a supplier ___ delivery times are | 空后紧跟名词 delivery times，“它的交货时间”，用 whose。 | A:who 后面要直接接动词;C:which 后面要缺成分;D:that 同样后面要缺成分，这里句子是完整的 | 空后紧跟名词→whose
+MXC-T01-108 | C | before ___ the building | before 在这里当介词，后面动词用 -ing：leaving。 | A:leave 原形不能跟在介词后;B:left 是过去式;D:to leave 不跟在 before 后面 | 介词后动词加 -ing
+MXC-T01-109 | B | The list of approved contractors ___ updated | 主语是 list（单数），of 后面只是修饰，用 is；每季度都更新，用现在时。 | A:are 被 contractors 骗了;C:were 是复数过去;D:being 不能当谓语 | of 前面的才是主语
+MXC-T01-110 | C | considerably ___ than the previous one | 有 than，要比较级，efficient 是长词，用 more efficient；considerably 用来加强比较级。 | A:efficient 原级不能接 than;B:efficiently 是副词，makes … 后要形容词;D:most efficient 是最高级 | 看到 than 选比较级
+MXC-T01-111 | A | Please ___ the attached invoice to your accounting department | 把发票“转给”财务部，forward A to B。 | B:promote 是提拔/推广;C:proceed 是不及物，要说 proceed with;D:arrive 是不及物“到达” | forward sth to sb＝转交
+MXC-T01-112 | C | completed the installation ___ without any assistance | 没靠厂商帮忙，“自己”装完，主语 technicians，用 themselves。 | A:they 是主格，不能放这儿;B:them 是宾格，句子已有宾语;D:their 后面要跟名词 | 亲自→-self
+MXC-T01-113 | B | travelled to the Rotterdam plant ___ the new packaging equipment | 去工厂是“为了”检查设备，表目的用 to inspect。 | A:inspect 原形不能直接接在完整句子后;C:inspection 是名词，接不上后面的宾语;D:inspected 是过去式，句子已有谓语 | 表目的用 to do
+MXC-T01-114 | C | Applicants with ___ experience | 名词 experience 前要形容词，proven experience＝经证明的、确实有的经验。 | A:prove 是动词;B:proving 是“在证明”;D:proves 是动词三单 | proven experience 是固定说法
+MXC-T01-115 | A | If the shipment ___ delayed again, we will | if 从句讲将来的事用一般现在时，主语单数，is delayed。 | B:was 是过去;C:were 是假设语气，主句却是 will;D:had been 是过去完成 | if 从句不用 will，用现在时
+MXC-T01-116 | A | ___ of the participants left … so the room remained full | 房间一直满，说明“几乎没人”走，参与者可数，用 Few。 | B:Little 配不可数;C:Much 配不可数;D:Any 通常用在否定或疑问句 | few 修饰可数，little 修饰不可数
+MXC-T01-117 | B | both practical and ___ | both A and B 两边词性要一样，practical 是形容词，配 affordable（价格合理的）。 | A:afford 是动词;C:affordably 是副词;D:affordability 是名词 | and 两边同词性
+MXC-T01-118 | B | closed ___ 25 December | 具体日期前用 on。 | A:in 用于月份、年份;C:at 用于钟点;D:from 要和 to/until 配对 | 日期用 on，月年用 in
+MXC-T01-119 | A | Visitors ___ wear an identification badge at all times | 在车间必须一直戴胸牌，是规定，用 must。 | B:may 是“可以”，太弱;C:might 是“也许”;D:would 是假设，不是规定 | 规定要求→must
+MXC-T01-120 | A | Because of a scheduling ___, two departments reserved the same room | 两个部门订了同一时间同一间房，是“日程冲突”，scheduling conflict。 | B:contrast 是对比;C:contract 是合同，拼写很像;D:content 是内容 | 撞时间＝scheduling conflict
+MXC-T01-121 | B | Since ___ the sales team in 2019 | since 后面省掉了主语（since she joined），用 -ing 形式 joining。 | A:joins 前面缺主语;C:joined 前面也缺主语;D:join 原形接不上 | 连词后省主语→-ing
+MXC-T01-122 | B | All expense claims ___ by a department manager | 报销单是“被批准”的，后面还有 by，用被动 must be approved。 | A:must approve 是主动;C:must approving 情态动词后不能接 -ing;D:must have approve 形式错误 | 有 by＋人→多半是被动
+MXC-T01-123 | A | installed additional lighting ___ the parking area would be safer | 空后是完整句子，表示“为了让停车场更安全”，用 so that。 | B:in order to 后接动词原形，不接句子;C:due to 后接名词，意思是“由于”;D:as well as 是“以及” | so that＋句子，in order to＋动词
+MXC-T01-124 | C | is designed to ___ new hires with | to 后面要动词，familiarize A with B＝让 A 熟悉 B。 | A:familiar 是形容词;B:familiarity 是名词;D:familiarly 是副词 | to 后面填动词原形
+MXC-T01-125 | B | The Hartwell Building, ___ was completed in 1998 | 逗号后补充说明一栋楼，指物而且在逗号后，只能用 which。 | A:that 不能放在逗号后面;C:where 后面要完整句子，这里缺主语;D:who 指人 | 逗号后指物→which
+MXC-T01-126 | C | ___ of the two remaining candidates … reopen the search | 两人“都没有”证书，所以重新招，用 Neither；动词 holds 也是单数。 | A:Both 后动词要用复数 hold，而且意思反了;B:Either 是“两人中任一个”，有人有证就不用重招;D:None 用于三者以上 | 两者都不→neither
+MXC-T01-127 | A | has built a strong ___ for delivering projects ahead of schedule | 以提前交付“出名”，build a reputation for＝建立……的口碑。 | B:recognition 是认可，不和 build…for 搭;C:reference 是推荐信/参考;D:reaction 是反应 | reputation for＝因……出名
+MXC-T01-128 | B | ___ in a plain envelope, the contract arrived | 合同是“被寄出”的，主语是物，用过去分词 Sent 开头。 | A:Sending 表主动，合同不会自己寄;C:Sends 是谓语形式，不能放句首;D:To send 表目的，意思不通 | 主语被做→用 -ed 开头
+MXC-T01-129 | C | its careful ___ to detail | careful 是形容词，后面要名词，attention to detail＝注重细节。 | A:attend 是动词;B:attentive 是形容词;D:attentively 是副词 | 形容词后填名词
+MXC-T01-130 | B | Neither the supervisor nor the assistants ___ aware | neither A nor B 的动词跟离它近的 B 一致，assistants 是复数，用 were。 | A:was 是单数;C:is 是单数;D:has been 也是单数 | neither…nor 跟近的那个一致
+MXC-T01-131 | A | will no longer be ___ after that date | 纸质表格以后“不再被接受”，be＋过去分词，accepted。 | B:accepting 是主动，表格不会去接受;C:acceptance 是名词;D:acceptable 是形容词，可以说但意思是“可以接受的”，和“9 月起停用”的通知语气不配，被动更准确 | 主语是东西→be＋done
+MXC-T01-132 | A | photograph receipts with your phone and attach them directly | 前句说手机拍收据直接上传，所以“不用再留纸质复印件”，This 指拍照上传这件事。 | B:说纸质收据还要寄，和手机拍照矛盾;C:说只能在公司电脑上用，和用手机冲突;D:报销标准调整和上下文无关 | 盯住 This 指前面哪件事 @S2-P6-08
+MXC-T01-133 | A | we strongly ___ it for anyone who | 主语 we，现在时，要动词原形 recommend。 | B:recommended 是过去式，通知讲现在的建议;C:recommending 不能当谓语;D:recommendation 是名词 | 缺谓语就补动词
+MXC-T01-134 | B | Thank you for your ___ during the transition | your 后面要名词，“感谢耐心”是 patience。 | A:patient 是形容词;C:patiently 是副词;D:patients 是“病人” | 所有格后填名词
+MXC-T01-135 | B | is ___ out of stock until early May | 修饰后面的 out of stock，用副词 temporarily（暂时）。 | A:temporary 是形容词，不能修饰 out of stock;C:temporariness 是名词;D:temporaries 是名词复数（临时工） | 修饰短语用副词
+MXC-T01-136 | A | It is identical in design and carries the same five-year warranty | 下一句的 It 指一款“设计一样、保修一样”的东西，A 先提出替代型号。 | B:已全额退款，就不会再让她选;C:送错地址和缺货不是一回事;D:展厅营业时间接不上 It | 下一句的 It 指什么 @S2-P6-08
+MXC-T01-137 | A | hold your order and ___ the delivery charge | 为表歉意“免掉”运费，waive a charge。 | B:raise 是提高，不是赔礼;C:charge 是收费，和赔礼相反;D:require 是要求 | waive＝免掉（费用）
+MXC-T01-138 | A | We ___ your understanding | 主语 we，缺谓语，“感谢您的理解”用 appreciate。 | B:appreciated 是过去式，客套话用现在时;C:appreciating 不能当谓语;D:appreciation 是名词 | 缺谓语就补动词
+MXC-T01-139 | A | Crates that are not labelled ___ be placed in general storage | 没贴标签的箱子“将会”放进仓库，后面是动词原形 be，用 will。 | B:would 是假设或过去的将来;C:were be 语法不通;D:are be 语法不通 | 后面是原形→情态动词
+MXC-T01-140 | A | Anything you no longer need should be placed in the recycling bins | 下一句让大家扔掉不要的东西，前面接“正好借机减少存放的东西”，A 引出这层意思。 | B:新装修和清理物品接不上;C:前面说要自己贴标签，搬家公司不帮你打包;D:日期前面已定在 6 月 | 插入句要上下都接得住
+MXC-T01-141 | C | The company cannot accept ___ for valuables | accept 后面要名词，accept responsibility for＝对……负责。 | A:responsible 是形容词;B:responsibly 是副词;D:responsibilities 复数一般指职责，这个固定说法用单数 | accept responsibility for
+MXC-T01-142 | A | If your telephone or computer is not working when you ___ | when 时间从句，讲将来也用一般现在时，主语 you，用 arrive。 | B:arrived 是过去;C:arriving 不能当谓语;D:will arrive 时间从句里不用 will | 时间从句不用 will
+MXC-T01-143 | A | is ___ to apply | be eligible to do＝有资格做某事，be 后面要形容词。 | B:eligibly 是副词;C:eligibility 是名词;D:elect 是动词“选举” | be eligible to/for＝有资格
+MXC-T01-144 | B | priority ___ to courses that relate directly | 优先权是“被给予”课程的，用被动 is given。 | A:gives 主动，优先权不会给别人;C:giving 不能当谓语;D:to give 不能当谓语 | 主语是东西→先想被动
+MXC-T01-145 | A | Applications submitted without one are returned unread | 下一句说“没有 one 的申请不看就退”，one 要指前面某样文件，A 的经理推荐信正好。 | B:私人旅行和退回申请无关，也没有 one 可指;C:前面说一年只审两次，矛盾;D:去年暂停和下一句接不上 | 盯住 one 指什么
+MXC-T01-146 | B | This requirement is taken ___ | 修饰动词短语 is taken，用副词 seriously；take sth seriously＝认真对待。 | A:serious 是形容词;C:seriousness 是名词;D:more serious 是形容词比较级 | take…seriously＝认真对待

@@ -1,0 +1,40 @@
+# b005 MXT01 P7 147-185
+MXC-T01-147 | B | open at 6:00 A.M. on weekdays instead of 7:00 A.M. | 通知第一句：暑期工作日 6 点开门，比原来 7 点早一小时。 | A:没讲会员套餐;C:没提装修;D:没提新教练 | 目的题看第一段 @S2-P7-03 | open at 6:00 A.M. … instead of 7:00 A.M.=>earlier weekday opening hours
+MXC-T01-148 | B | must reserve a lane through the Hillcrest app | 早上那一小时要用 App 预约泳道。 | A:写的是 Members，没说非会员能来;C:只说是游泳道练习，没限制儿童;D:没提额外收费 | 逐项回原文核对 | reserve a lane=>requires a lane reservation
+MXC-T01-149 | B | The projector in the Aspen Room won't turn on | 她发消息是因为投影仪打不开，报设备故障。 | A:换房间是对方的建议，不是她联系的目的;C:没提椅子;D:客户照常 11 点来 | 第一条消息就是目的 | won't turn on=>not working
+MXC-T01-150 | A | Move to the Birch Room, it's free until two | 对方给了办法：换到 Birch 房间、送备用线，她说“你真是救星”，是感谢这个解决办法。 | B:没请他来开会;C:投影仪并没修好;D:是请前台帮忙转引，不是说前台出错 | 意图题看上一条消息 @S2-P7-18
+MXC-T01-151 | B | Baristas … paid four-week training provided | 咖啡师一栏写着提供带薪四周培训。 | A:写的是不需要经验;C:全职兼职都招;D:凌晨 4 点上班的是烘焙师 | 逐项核对，别串行 | paid four-week training=>paid training
+MXC-T01-152 | B | All employees receive … transit reimbursement of up to £70 per month | 所有员工都有每月最多 70 镑的交通补贴。 | A:医保只给全职，而且要 90 天后;C:没提私人办公室;D:没提十二月带薪假 | 盯住 every/all | transit reimbursement … per month=>A monthly transit allowance
+MXC-T01-153 | C | nine of our eleven current store managers began as baristas | 写“11 个店长里 9 个是咖啡师出身”，是为了说明“内部提拔、有晋升机会”。 | A:地点数量前面说过，这句不是列地点;B:没说管理层变动;D:没说谁面试 | 问“为什么提到”看它想证明什么 | We promote from within=>opportunities for advancement
+MXC-T01-154 | B | Could you send a revised quotation covering both changes by 18 October | 邮件的核心请求是按两处改动重新报价。 | A:委员会对方案很满意，没拒绝;C:没定安装日期;D:没要新设计样稿 | 目的题找“Could you…”那句 | a revised quotation=>an updated price quotation
+MXC-T01-155 | B | The renovation of the third floor has been deferred to next year | 三楼装修推迟到明年了。 | A:三楼的标识反而这期不做;C:没说永久关闭;D:标识数量是减少了 | deferred＝postponed | deferred=>postponed
+MXC-T01-156 | A | work in public areas must take place after 6:00 P.M. | 图书馆照常开放，公共区域施工必须晚上 6 点以后。 | B:没限定谁搬标牌;C:没说预算上限;D:22 日是董事会开会，不是完工期限 | 限制条件找 must | after 6:00 P.M.=>in the evening
+MXC-T01-157 | B | the first of them reopened as the Porthaven Makers' Yard | 文章讲码头空仓库改造成共享工坊重新开放。 | A:讲的是小作坊增多，不是制造业衰退;C:没有城市和银行的纠纷;D:是工坊，不是住宅 | 主旨看第一段
+MXC-T01-158 | A | Banks wanted a finished building before they would lend | 银行要楼建好才贷款，可没钱建不好，所以项目起步时拿不到银行贷款。 | B:没提便宜;C:三年租约是对租户的要求;D:城市给的是补助，不是安排贷款 | 推断也要原文撑腰 @S2-P7-08
+MXC-T01-159 | C | well below the £1,100 average … In exchange, they commit | 插入句“省钱是有条件的”，前面得刚讲完租金便宜，后面接“作为交换要签三年…”，所以放 [3]。 | A:[1] 前讲资金来源，还没讲租金;B:[2] 前是贷款难题;D:[4] 后讲新仓库改造，和省钱无关 | 先读待插句猜前文 @S2-P7-23
+MXC-T01-160 | B | I need them for the deck by Thursday | 她要第三季度数据做周四的演示文稿（deck）。 | A:没改会议时间;C:没说表格有错;D:同事缺席是别人告诉她的 | 第一条消息就是目的 | the deck=>a presentation
+MXC-T01-161 | D | the total could still move by half a percent | 九月退货数据周五才定，总数还可能变。 | A:正好相反，还没定;B:会放进去，只是标“暂定”;C:没说报错 | could still＝还可能 | could still move=>may still change
+MXC-T01-162 | D | Ravi got asked about a similar number … it was awkward | 他让标“暂定”，并举例七月 Ravi 因类似数字被追问很尴尬，说明以前没标出来出过问题。 | A:没让 Ravi 来做;B:没说推迟;C:没说七月数字错了，只说被问得尴尬 | 推断也要原文撑腰 @S2-P7-08
+MXC-T01-163 | D | to summarise my findings ahead of the full report | 正式报告前先概括检查结果，就是“初步结论”。 | A:检查已经做完了;B:没拒绝项目;C:没提收费 | 目的题看第一段 @S2-P7-03 | summarise my findings ahead of the full report=>provide preliminary findings
+MXC-T01-164 | D | the result of a blocked gutter | 墙上的污渍是排水沟堵了造成的。 | A:她说没发现锈蚀;B:原因找到了;C:说不是屋面本身的问题 | 答案常换个说法 @S2-P7-06 | a blocked gutter=>a drainage problem
+MXC-T01-165 | D | I would not recommend deferring their replacement beyond the next two years | 天窗变脆，建议两年内换掉。 | A:没要求月底前修;B:说目前没有安全隐患;C:建议要换，不是不动 | 双重否定读两遍 | not recommend deferring … beyond the next two years=>within two years
+MXC-T01-166 | A | a conference at the centre next door | 酒店就在会议中心隔壁，走 4 分钟。 | B:没说离市中心远;C:窗外是停车场，没提公园;D:没提火车站 | 逐项回原文核对 | the centre next door=>next to a conference venue
+MXC-T01-167 | D | a desk you can actually work at | 他特别夸桌子能真正办公，不像别家只有窄台面。 | A:没提电视;B:没提早餐;C:他的房间朝停车场，不满意 | 找表扬的句子 | a desk you can actually work at=>quality of the work space
+MXC-T01-168 | C | the restaurant closes at nine, which is early | 他嫌餐厅九点就关，太早。 | A:没说贵;B:没说菜少;D:没说要订位 | 找 reservations/but 后面的抱怨 | closes at nine, which is early=>closes relatively early
+MXC-T01-169 | D | If I were bringing my family … the Tovara Bayside | 带家人的话他会选 Bayside（听说有泳池），即更适合家庭。 | A:没比较价格;B:没提翻新;C:离会议中心近的是 Harbourside | 推断题找 if 句 | If I were bringing my family=>suit families better
+MXC-T01-170 | D | must be made in the electronic log at the moment of calibration | 从周一起，校准时当场录入，不能等下班再补。 | A:平板是新配好的，不是撤掉;B:没说一天校两次;C:没换审计员 | 找 Beginning Monday 那句 | at the moment of calibration=>as they are performed
+MXC-T01-171 | C | Do not continue to use them in parallel | 纸质记录别再同时用，重复记录是审计发现的问题。 | A:周一审核是组长做，继续保留;B:只说不必再走去办公室，没禁止;D:在工位校准本来就对 | 找 Do not 那句 | in parallel=>at the same time
+MXC-T01-172 | D | Shifts overlap by thirty minutes | 班次有意重叠 30 分钟，方便当面交接。 | A:没说各岗位班次不同或相同，三个班次对所有人;B:只有早班 8 点开始;C:没说能和别人换班 | 逐项回原文核对 | overlap by thirty minutes=>a deliberate overlap
+MXC-T01-173 | A | Box office … The Friday training session is required | 售票岗写着必须参加周五培训。 | B:引座员写明不用培训;C:接待岗要求 18 岁以上;D:接送岗要驾照 | 拿关键词 training 扫读 @S2-P7-02
+MXC-T01-174 | C | two meal vouchers per shift | 每班发两张餐券。 | A:志愿者没有现金;B:接送是给嘉宾的;D:没提停车 | 找 WHAT WE PROVIDE 一栏 | two meal vouchers=>Meal vouchers
+MXC-T01-175 | D | Telephone the volunteer line | 取消要打志愿者热线，别发邮件。 | A:明确说别发邮件;B:没说找接班人;C:没提网站 | 找 CANCELLATIONS 一栏
+MXC-T01-176 | D | the £1,240 option seems to be the one that fits | 她说 1240 镑那档合适，广告里 1240 镑是 Studio Plus。 | A:Hot Desk 是 145 镑;B:Resident Desk 是 260 镑;C:Studio 是 680 镑、只容 2–4 人 | 价格一篇、名称一篇 @S2-P7-19
+MXC-T01-177 | D | the dedicated meeting room is the deciding factor | 她直说专用会议室是决定性因素。 | A:24 小时她只是想确认;B:没提打印;C:没提地址 | deciding factor＝最影响选择 | the deciding factor=>most influenced
+MXC-T01-178 | D | Studio Plus … 24-hour access | 同事半夜到早 8 点上班，Studio Plus 是 24 小时开放，所以能用。 | A:不用改时间;B:同一套餐就覆盖;C:Studio Plus 会议室不限时，不用另约 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T01-179 | D | Members who pay twelve months in advance receive one month free | 一次付一年送一个月，这就是她说的 offer。 | A:会议室本来就不限;B:没提换大间;C:没提多打印 | your offer 回原文找 offer
+MXC-T01-180 | D | Is there anywhere secure to leave two desktop machines | 广告没说能不能放设备过夜，这是广告里没有的问题。 | A:会议室时间广告写了;B:网络写了;C:参观时间写了 | NOT 题逐项核对 @S2-P7-14 | anywhere secure to leave=>Secure equipment storage
+MXC-T01-181 | C | ending the service at Fenwick Interchange rather than continuing to Marley Green | 42 路以后只开到 Fenwick，不再到 Marley Green，即终点提前。 | A:正好相反，是缩短;B:没说只工作日开（工作日的是 42B）;D:只有最后一段改由小巴接驳 | 答案常换个说法 @S2-P7-06 | ending the service at Fenwick=>end at an earlier stop
+MXC-T01-182 | D | We are moving capacity to where the passengers are | 副主任说把运力挪到乘客多的地方，给 42 路早上加车。 | A:没提票价;B:没提新规定;C:没提旧车 | 问 why 找引语 | where the passengers are=>busier parts of the route
+MXC-T01-183 | C | The count was taken in the first week of August | 统计在八月工厂放假那周做的，平时人多得多，所以那周不具代表性。 | A:数字报纸登了，是公开的;B:没提换乘;D:没说是周日 | 推断也要原文撑腰 @S2-P7-08 | the first week of August … its annual holiday=>an unrepresentative week
+MXC-T01-184 | D | my shift starts at 6:45 A.M. | 她 6:45 上班，可小巴 7 点才开、一小时一班，赶不上。 | A:没提票价;B:没嫌车小;C:42B 就是从 Fenwick 接驳的 | 找 but 后面的担忧
+MXC-T01-185 | C | I do not dispute that the two extra morning departures are needed | 文章说要给 42 路早上加两班，读者信也说“这两班确实需要”，两边一致。 | A:文章说周日没车，信没要求保留;B:两边都说参会才 19 人;D:信里只是解释八月放假 | 两篇都找到才算“一致”

@@ -1,0 +1,10 @@
+{
+ "meta": {
+  "n_flagged": 0,
+  "reasons": {
+   "answer_conflict": "作者独立判断与 item.answer 不一致",
+   "author_flag": "题目/选项有缺陷或答案不唯一"
+  }
+ },
+ "items": {}
+}

@@ -1,0 +1,31 @@
+# b002 pilot P5 031-060
+PL5-031 | C | The new parking rules ___ to all employees by e-mail last Monday | 规则是“被发出去”的，而且是 last Monday，过去时被动 were sent。 | A:are sending 是进行时主动，规则不会自己发;B:sent 是主动，规则不能“发”别人;D:will send 是将来，和 last Monday 冲突 | 主语是东西→先想被动 @S2-P5-11
+PL5-032 | A | for over ten years before she joined our company | 加入我们公司（过去）之前已经在银行干了十年，过去的过去用 had worked。 | B:has worked 表示到现在还在干，可她已经跳槽了;C:works 是现在;D:will work 是将来 | before＋过去时→had done
+PL5-033 | D | The list of approved suppliers ___ updated | 真正的主语是 list（单数），of 后面是修饰，所以用 is。 | A:be 不能直接当谓语;B:being 也不能当谓语;C:are 被 suppliers 骗了，主语是 list | of 前面的才是主语
+PL5-034 | B | As soon as the director ___ the budget, we will | as soon as 引导时间从句，从句里用现在时表将来，approves。 | A:approval 是名词;C:approving 不能当谓语;D:will approve 错在时间从句里不用 will | 时间从句不用 will
+PL5-035 | C | ___ our new branch in Busan next month | next month 是将来，will visit。 | A:was visiting 是过去进行;B:has visited 是现在完成;D:visited 是过去 | 看时间词定时态
+PL5-036 | A | requested that every team member ___ the training session | request that… 里的动词用原形，不管主语是谁，attend。 | B:attended 是过去式;C:attends 加了 s，这种句型不加;D:attending 不能当谓语 | request that 后用原形 @S2-P5-25
+PL5-037 | C | Visitors must ___ at the front desk | must 后面跟动词原形 register。 | A:registers 加了 s;B:registering 是 -ing;D:registered 是过去式 | 情态动词后加原形
+PL5-038 | A | must be submitted ___ 5 P.M. on Friday | 截止时间用 by，表示“最晚在这之前”。 | B:during 后接一段时间，不接时间点;C:until 表示一直持续到，“提交”是一下子的动作;D:since 配完成时，表示从……以来 | 截止期限用 by
+PL5-039 | D | will remain open ___ the repair work | 维修期间“一直”营业，throughout＝在整个……期间。 | A:between 要两样东西;B:beside 是“在旁边”;C:among 是“在三者以上之中” | throughout＝从头到尾
+PL5-040 | B | located ___ the street from the city library | across the street from＝在……的街对面，固定说法。 | A:through 是穿过;C:among 是在一群中间;D:onto 是“到……上面” | across the street＝街对面
+PL5-041 | A | ___ the general manager, Ms. Davis thanked the team | Davis 是“代表”总经理致谢，on behalf of。 | B:As a result of 是“由于”;C:In spite of 是“尽管”;D:In case of 是“万一” | on behalf of＝代表
+PL5-042 | D | are required to comply ___ the new safety rules | comply with＝遵守，固定搭配。 | A:comply for 不存在;B:comply to 是常见误用;C:comply on 不存在 | comply with＝遵守
+PL5-043 | B | ___ the regular menu, the restaurant offers several daily specials | 除了常规菜单“还”有每日特价，besides＝除……之外还有。 | A:Among 是在一群之中;C:Beside 不带 s，是“在旁边”，只差一个字母;D:Between 要两样东西 | besides 有 s＝另外还有
+PL5-044 | C | ___ the heavy rain, the outdoor concert started on time | 空后是名词短语 the heavy rain，又是“尽管下雨还是准时开始”，用介词 Despite。 | A:However 是副词，后面不能直接跟名词;B:Although 是连词，后面要完整句子;D:Because of 是“因为”，意思反了 | 后面是名词→用介词 @S2-P5-08
+PL5-045 | A | arrived late; ___, the customer received a full refund | 分号后面是完整句子，前后是因果：到晚了→所以退运费，therefore。 | B:despite 是介词，不能放分号后加逗号;C:because 是连词，不能这样夹在分号逗号中间;D:although 是连词，而且意思是转折 | 两句都完整→接续副词
+PL5-046 | D | ___ Ms. Baker was on vacation, Mr. Lee handled | 空后是完整句子（Ms. Baker was…），要连词；意思“当……的时候”，While。 | A:During 是介词，后面接名词;B:Meanwhile 是副词，不能连两个句子;C:Despite 是介词 | 后面是句子→用连词
+PL5-047 | C | will not begin the repair ___ the customer approves | not…until＝直到……才，客户同意价格才开始修。 | A:although 是“虽然”，不合逻辑;B:so that 是“为了”;D:whether 是“是否” | not…until＝直到…才
+PL5-048 | B | within 30 days ___ it has not been used | 没用过“才”能退，provided that＝只要、前提是。 | A:as if 是“好像”;C:even though 是“即使”，意思反了;D:so that 是“为了” | provided that＝只要
+PL5-049 | A | The meeting room is small, ___ it has excellent lighting | 房间小，“但是”灯光好，前后转折用 but。 | B:nor 用在否定后面;C:or 是“或者”;D:so 是“所以”，没有因果关系 | 前后相反→but
+PL5-050 | D | to send ___ the final version | send 后面是接收人，动词后用宾格 her。 | A:herself 要主语也是她本人，这里主语是 designers;B:she 是主格;C:hers 是“她的东西” | 动词后用宾格
+PL5-051 | C | prefers to check all bills ___ rather than relying on an assistant | 不靠助理、“亲自”核对，用反身代词 himself 强调。 | A:him 是宾格，check 后已有 all bills;B:his 是所有格，后面缺名词;D:he 是主格 | 亲自→-self
+PL5-052 | B | ___ employee will receive a copy | 空后是单数 employee，只能用 Each。 | A:Several 后接复数;C:Most 后接复数;D:All 后接复数 | 单数名词前用 each/every @S2-P5-22
+PL5-053 | D | One of our two meeting rooms … we will use ___ | 两个里的一个在刷漆，用“另一个”，两者中的另一个是 the other。 | A:others 是复数“其他人/物”;B:each other 是“互相”;C:another 是“再一个”，用于三个以上 | 两个中的另一个→the other
+PL5-054 | A | Employees ___ cars are parked in Lot B | “他们的车”，空后紧跟名词 cars，用 whose 表示所属。 | B:which 指物，后面要缺主语或宾语;C:whom 是宾格，后面不跟名词;D:who 后面要接动词 | 空后紧跟名词→whose
+PL5-055 | B | The hotel ___ the awards dinner will be held | 先行词是地点 hotel，后面句子完整（晚宴将在那里举行），用 where。 | A:what 前面不能有名词;C:who 指人;D:which 后面句子要缺成分，这里不缺 | 地点＋完整句→where
+PL5-056 | C | were ___ higher than we had expected | 比较级 higher 前面加强语气用 much。 | A:very 不能修饰比较级;B:more higher 重复了;D:most 是最高级 | 比较级前用 much/far
+PL5-057 | D | the ___ interest rates of any bank in the region | the…of any bank in the region＝全地区最低，用最高级 lowest。 | A:more low 不是正确形式;B:lower 是比较级，前面没有 than;C:low 原级不配 the…of any | the…of/in →最高级
+PL5-058 | C | ___ by mail or through our Web site | 看到 or 就配 either，either A or B＝两者任选。 | A:not only 配 but also;B:neither 配 nor;D:both 配 and | 看到 or 找 either
+PL5-059 | B | is ___ light that it can be carried | so＋形容词＋that＝如此……以至于，light 是形容词。 | A:too…to 才配对，不配 that;C:very 后面不接 that 结果句;D:such 后面接名词短语 | so＋形容词＋that
+PL5-060 | A | The ___ of customers who shop | customers 可数，“顾客的数量”用 the number of。 | B:amount 配不可数名词;C:deal 是交易，a great deal of 才表量;D:level 是水平，不说顾客的水平翻倍 | 可数用 number，不可数用 amount

@@ -1,0 +1,48 @@
+# b003 pilot P6 + P7
+PL6-1-1 | D | our supplier ___ new chairs to us until March 17 | 信是 3 月 3 日写的，供应商要到 3 月 17 日才送货，是还没发生的事，用将来时 will not deliver（not…until＝直到…才）。 | A:was not delivering 讲过去某时正在做;B:did not deliver 是过去已经发生;C:has not delivered 到现在为止没送，和 until March 17 这个未来日期对不上 | 时态看写信日期 @S2-P6-05
+PL6-1-2 | C | If you would like the similar model | 下一句说“如果你想要那个类似款”，前面必须先提到“类似款”，只有 C 讲可以免费换同色类似款。 | A:新产品目录和缺货、换货无关;B:感谢订购是第一句已经说过的话;D:说椅子已发货，跟“缺货”矛盾 | 下一句的 the 指前面提过的 @S2-P6-08
+PL6-1-3 | B | as soon as it ___ | as soon as 是时间从句，到货是将来的事也用一般现在时，it 单数 → arrives。 | A:arrived 是过去;C:will arrive 时间从句里不用 will;D:arriving 不能当谓语 | 时间从句不用 will
+PL6-1-4 | A | We are sorry for the delay and thank you for your ___ | 道歉延误后“感谢您的耐心等待”，thank you for your patience 是固定客套话。 | B:experience 是经验/体验，不是在等的时候要感谢的;C:absence 是缺席;D:complaint 是投诉，顾客没投诉，也不会感谢投诉 | 延误道歉→感谢 patience
+PL6-2-1 | C | will be closed for ___ | 车库关一周，原因是“维修”，closed for repairs。 | A:returns 是退货;B:purchases 是购买;D:visits 是参观 | closed for repairs＝停业维修
+PL6-2-2 | D | Parking there normally costs $12 per day. ___, the building management | 前句说本来要交 12 美元，后句说物业替你出，前后转折，用 However。 | A:Similarly 是“同样地”;B:Therefore 是“所以”，交钱和物业出钱不是因果;C:For example 是举例 | 本来要付→但物业出：转折 @S2-P6-06
+PL6-2-3 | B | keep your parking receipts and bring ___ to the front desk | 要带去前台的是前面的 receipts（复数），用 them。 | A:it 是单数;C:themselves 是“它们自己”，主语不是收据;D:theirs 是“他们的东西” | 代词往前找指谁 @S2-P6-09
+PL6-2-4 | A | bring ___ to the front desk by June 19. ___ | 通知最后一句常是“有问题请联系管理处”，A 正好收尾。 | B:离得很近前面已经说过（five-minute walk）;C:说租户要自己付 12 美元，和物业报销矛盾;D:车库建了多少年与通知无关 | 结尾空常选“有问题请联系” @S2-P6-10
+PL6-3-1 | D | The workshop will focus on handling customer complaints | 第二句直接说 The workshop，前面要先介绍“有个工作坊”，D 正好是开场句。 | A:顾客表扬新产品和培训无关;B:报名期限后文已经说了;C:感谢参加“上周的”工作坊，时间不对 | 开头空找“介绍主题”的句子
+PL6-3-2 | B | Each session lasts two hours and ___ by Martin Hale | 课程是“被”讲师带的，而且课程在以后，用将来被动 will be led。 | A:led 单独用是过去式主动，跟 lasts 的现在时也不对;C:is leading 主动，课程不能带讲师;D:will lead 也是主动 | 主语是东西→先想被动
+PL6-3-3 | C | Staff members who ___ the workshop will receive a certificate | who 后面要谓语，先行词 staff members 是复数，用 complete。 | A:completing 不能当谓语;B:completes 是单数;D:completion 是名词 | who 后动词跟先行词一致
+PL6-3-4 | A | Space is ___, so early registration is recommended | 名额“有限”，所以建议早报名，limited 和后半句是因果。 | B:open 名额开放就不用急;C:free 是免费，和早报名没因果;D:available 有空位也不用赶 | so 前后要有因果
+PL6-4-1 | D | The new store ___ seating for up to 80 customers | 新店下个月才开（will open its third location next month），所以“将提供”座位，will offer。 | A:was offering 是过去;B:offered 是过去;C:has offered 表示已经提供了，可店还没开 | 时态看事情发生了没有 @S2-P6-05
+PL6-4-2 | B | the larger space will also include a training kitchen | 前句说有培训厨房，后句说 Classes will be…，中间要讲“用厨房给居民上烘焙课”，B 把两句接起来。 | A:原店要关门，文章没提;C:80 个座位前面已经说过了;D:去年获奖和厨房、上课都接不上 | 插入句要上下都接得住
+PL6-4-3 | C | Classes will be ___ on weekends | 课程“在周末举办”，hold a class 的被动 be held。 | A:hired 是雇人;B:ordered 是订购;D:closed 课程不说关闭，而且后面说第一课已安排 | 活动/会议/课程＋be held
+PL6-4-4 | A | ___, the bakery will hire about fifteen new employees | 前面讲了座位、厨房、课程，这里“另外”还要招 15 人，属于补充信息，In addition。 | B:Otherwise 是“否则”;C:Instead 是“反而”，没有替代关系;D:However 是转折，前后不相反 | 再加一件事→In addition
+PL6-5-1 | B | was not working ___ your stay | 空后是名词 your stay，在“入住期间”用介词 during。 | A:among 是在一群之中;C:while 是连词，后面要接句子;D:onto 表方向 | 后面是名词→during
+PL6-5-2 | D | offer you a free night on ___ next visit | 信是写给 Ms. Alvarez 的，“您下次入住”，前面也一直用 you，所以用 your。 | A:their 是他们的;B:her 是第三人称，信里直接称“你”;C:its 指物 | 信里对收信人一律用 you/your
+PL6-5-3 | A | This offer is valid ___ December 31 | 优惠“有效期到”12 月 31 日，valid until。 | B:since 是“自从”;C:by 表示“最晚在…之前完成某个动作”，有效期这种持续状态用 until;D:at 用于钟点 | 持续到→until，截止做完→by
+PL6-5-4 | C | offer you a free night … This offer is valid | 前面说送一晚免费、优惠有效期，最后自然讲“怎么用”：订房时提这封信，C 里的 it 指这个优惠。 | A:空调去年春天装的，和收尾无关;B:换空调前面已说过;D:说不能打折，和送免费一晚矛盾 | 盯住 it 指前面哪件事 @S2-P6-08
+PL7-S1-1 | C | the Lake Room instead, but it only seats six | Anna 说 Lake Room 只能坐 6 人，Tom 回“今天就 5 个人”，意思是那间够用。 | A:没说要取消会议;B:坐 6 人的是 Lake Room，不是 Garden Room;D:没提有人迟到 | 意图题看上一条消息 @S2-P7-18 | it only seats six=>The other room will be large enough
+PL7-S1-2 | B | it's still being cleaned after an event last night | 前台说 Garden Room 还在打扫，所以用不了。 | A:只能坐 6 人的是 Lake Room;C:活动是昨晚的，不是现在;D:没说被别人订了 | 同词选项要多看一眼 @S2-P7-06 | still being cleaned=>has not been cleaned yet
+PL7-S2-1 | A | the second-floor kitchen will be improved next week | 第一段就说二楼厨房下周要改造，目的是通知办公区的改动。 | B:调查是上个月做完的，不是让大家填;C:没提上班时间;D:三楼会议区本来就有，不是新开 | 目的题看第一段 @S2-P7-03 | the second-floor kitchen will be improved=>planned changes to a work area
+PL7-S2-2 | D | a direct result of the comments many of you made | 改造是因为上个月员工调查里大家提的意见。 | A:没说旧设备坏了;B:没有客户;C:没说人数增加 | 答案常换个说法 @S2-P7-06 | the comments many of you made=>Feedback from employees
+PL7-S2-3 | D | remove all personal items … by 5 P.M. on Friday, April 12 | 4 月 12 日前把食物、杯子等个人物品拿走。 | A:调查已经做完了;B:是扔掉留下的东西，不是让员工扔旧设备;C:用三楼咖啡机是施工期间的安排，不是 12 日前要做的事 | 拿日期当路标找 @S2-P7-02 | remove all personal items=>Take their belongings out
+PL7-S3-1 | B | The Lakeside Public Library opened its new Digital Learning Center | 文章讲图书馆新开的数字学习中心，是图书馆的新服务。 | A:不是企业开张;C:提到求职申请，但不是招聘会;D:没提开馆时间变化 | 主旨看第一句 | opened its new Digital Learning Center=>A new service at a public library
+PL7-S3-2 | A | the Harmon Foundation, along with gifts from several local businesses | 钱来自基金会和本地几家企业的捐助。 | B:没提卖借书证;C:课程是免费的;D:没提市政府 | 问“怎么付钱”找 paid for | several local businesses=>local companies
+PL7-S3-3 | C | Free classes will be held every Tuesday | 课程“被举办”，这里 held＝conducted（开展、举行）。 | A:carried 是搬运;B:kept 是保持、保留;D:owned 是拥有 | 同义词代回原句读 @S2-P7-09 | held=>conducted
+PL7-S3-4 | C | Others wanted a quiet place to work on job applications | 前面讲居民两种需求：学电脑、要安静地方写求职材料，[3] 后放“中心就是为满足这两种需求”，both of these needs 正好接上。 | A:[1] 前还没提任何需求;B:[2] 前讲的是资金来源;D:[4] 前讲报名，接“两种需求”太远 | 先读待插句猜前文 @S2-P7-23
+PL7-S4-1 | D | Simply show your room key | 能出示“房卡”，泳池在五楼，落款 Bayshore Hotel，读者是住店客人。 | A:保洁员不需要去对面健身房;B:不是写给对面健身房员工的;C:没有新会员 | 用细节反推读者 | ATTENTION GUESTS=>People staying at a hotel
+PL7-S4-2 | A | Simply show your room key at the Summit Gym front desk | 在对面健身房前台出示房卡就行。 | B:毛巾那边提供;C:没提收费;D:没说要先给酒店前台打电话 | 问 must do 找祈使句 | show your room key=>Present their room key
+PL7-S5-1 | C | Orders of $250 or more receive free delivery | 总价 270 含 20 运费；餐费 250 达到免运费线，运费会扣掉，实付 250。 | A:205 是把咖啡也扣了，算错;B:230 是又多扣了一次运费;D:270 没扣运费 | 表格题看底部小字 @S2-P7-19 | free delivery=>delivery charge will be removed
+PL7-S5-2 | C | Sandwich tray (serves 10) 3 | 三明治托盘每盘够 10 人，订了 3 盘，共 30 人份。 | A:3 是盘数;B:10 是每盘人数;D:50 没依据 | 数字题要乘一乘
+PL7-S6-1 | B | they have to be ready by 5:00 today | 纸 2 点才到，印要 4 个小时，5 点前肯定印不完。 | A:没说手册有错;C:展会没改期;D:印刷店能接单，没关门 | 问担心什么找 problem | ready by 5:00=>finished in time
+PL7-S6-2 | A | The delivery truck from Norland Paper | Norland 用卡车送纸来，最后还说让它下周再送纸，是纸的供应商。 | B:不是办展的;C:设计文件是 Shah 自己发;D:印刷店是 Elm Street 那家 | 从它“做什么”推身份 | bring the paper=>A supplier
+PL7-S6-3 | D | They'll need the final design files, though | Ortega 说印刷店要设计文件，Shah 回“交给我”，就是她来发文件。 | A:纸是印刷店自己有的;B:改到外面印了，不在办公室印;C:不是叫他别干了，是分工接手 | 意图题看上一条消息 @S2-P7-18
+PL7-S6-4 | B | call Norland and tell them to bring the paper next week | Grant 说要给 Norland（纸供应商）打电话改到下周送。 | A:不是取消，是改期到下周;C:文件是 Shah 发;D:印刷店是 Ortega 联系的 | 找“I'll…”那句 | call Norland=>Contact a supplier
+PL7-D1-1 | A | Could I switch that workshop for the one led by Kevin Moss | 邮件核心是问能不能把下午那场换成 Kevin Moss 的课。 | B:他是学员，不是来讲课的;C:没退会员;D:他认为不该再付钱，是说明，不是投诉价格 | 目的题看提问句 | switch that workshop=>change a workshop
+PL7-D1-2 | B | Hiring Your First Employee April 11 1:00–3:00 P.M. | 邮件说 4 月 11 日下午要见供应商；表里 11 日下午那场是 Hiring Your First Employee。 | A:是他想换进去的课;C:是 4 月 4 日上午的课，他没报;D:是 11 日上午的，他不用退 | 条件一篇、数据一篇 @S2-P7-19
+PL7-D1-3 | D | make changes at least three days before each workshop | 改课要提前 3 天；他 4 月 2 日写信，想换进 4 月 4 日的课，只差两天。 | A:他说已经付了会员价;B:他说自己是会员;C:文中没说满员 | 日期题两篇对着算
+PL7-D1-4 | D | All workshops are held at the Carlton Community Center | 网页写明都在 Carlton 社区中心上课。 | A:见供应商是他自己的事;B:没说线上;C:新店是他自己开的 | 题目点名哪篇就去哪篇 | Carlton Community Center=>a community center
+PL7-D1-5 | C | Could I switch that workshop for the one | switch A for B＝把 A 换成 B，相当于 exchange。 | A:share 是分享;B:check 是检查;D:turn on 是打开（开关），是 switch 的另一个意思，这里不对 | 别选最常见的那个意思 @S2-P7-09 | switch=>exchange
+PL7-T1-1 | A | Premium (thick, high-quality paper) | 网页写 Premium 用厚的高级纸。 | B:两天到是加急配送，跟卡片种类无关;C:30 美元/500 张是 Standard;D:设计费只有 2000 张以上才免 | 逐项回原文核对 | thick=>thicker paper
+PL7-T1-2 | A | I chose regular delivery because I was not in a hurry | 她选的是普通配送（免费），发票却收了 15 美元加急费。 | B:20 是设计费，她没质疑;C:90 是卡片钱，没问题;D:125 是总价，错的根源是 15 那一项 | 条件一篇、数据一篇 @S2-P7-19
+PL7-T1-3 | B | Premium business cards (1,000 cards) $90.00 | Premium 每 500 张 45 美元，1000 张正好 90，卡片价格没错，她只说配送费不对。 | A:发票写的是 Premium 厚纸;C:她说昨天收到很满意，没说晚;D:只有 1000 张 | suggest 题也要有数字撑腰
+PL7-T1-4 | A | 1,000 more cards on the cheaper paper | 便宜纸是 Standard，30×2＝60；沿用旧设计不收设计费，普通配送免费，共 60。 | B:75 是多算了加急 15;C:80 是加了设计费 20;D:90 是按 Premium 算的 | 计算题列出每一项
+PL7-T1-5 | D | three new staff members joined our office this month | 这个月来了三位新同事，要给他们印名片。 | A:她说很喜欢设计;B:地址电话不变，没搬家;C:没说名片丢了 | 问 why 找 because/so | three new staff members joined=>New employees have joined

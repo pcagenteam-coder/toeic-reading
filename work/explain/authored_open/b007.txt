@@ -1,0 +1,52 @@
+# b007 MXT02 P6 B2-B4, P7 147-185
+MXC-T02-135 | A | Signs at every landing will direct you to it | 下一句说“指示牌带你去 it”，it 得是个地方，A 的员工电梯正好是替代方案。 | B:检查过的电梯正在停用，不用指路;C:费用不需要指示牌;D:行李别放楼梯口，接不上 direct you to it | 下一句的 it 指什么 @S2-P6-08
+MXC-T02-136 | C | Guests who need assistance ___ their luggage | assistance with sth＝在某事上的帮助，固定搭配。 | A:assistance for 后多接人;B:of 不搭;D:on 不搭 | help/assistance with
+MXC-T02-137 | D | We ___ that this work would cause the least disruption | 后面用 would，说明决定是之前做的，用过去式 decided。 | A:decide 是现在，和 would 不配;B:are deciding 表示还没决定，可已经开工;C:will decide 同样还没决定 | would 提示前面是过去
+MXC-T02-138 | B | ___ to availability | subject to availability＝视空房情况而定，固定说法。 | A:related to 是“与…有关”;C:according to 是“根据”，不和 availability 连用这样表达;D:owing to 是“由于” | subject to＝视…而定
+MXC-T02-139 | A | no ___ than 24 February | no later than＝不晚于，后面有 than 要比较级。 | B:late 原级不接 than;C:latest 是最高级;D:lately 是“最近” | no later than＝最晚
+MXC-T02-140 | D | obtain ___ approval | 名词 approval 前填形容词，written approval＝书面批准。 | A:write 是动词;B:writes 是动词三单;C:writing approval 意思不对 | written approval＝书面批准
+MXC-T02-141 | C | that goodwill ___ on the rest of us | 主语 goodwill 单数、缺谓语，用 depends。 | A:depend 是复数形式;B:depending 不能当谓语;D:to depend 不能当谓语 | 单数主语动词加 s
+MXC-T02-142 | B | The full timetable is pinned in the shared calendar | 前面全是“提前、赶工”的要求，收尾说“知道很紧，感谢大家多出力”最自然。 | A:印刷厂承担费用文中没提;C:前文说约拍要先批，不是全面禁止;D:页数和截稿通知无关 | 结尾空常是致谢或联系 @S2-P6-10
+MXC-T02-143 | D | ___ reached by rail | 修饰过去分词 reached，用副词 easily。 | A:easy 是形容词;B:ease 是名词/动词;C:easiness 是名词 | 修饰分词用 -ly
+MXC-T02-144 | C | Day-delegate rates from €165 per person, including | 前句说日间价含茶歇午餐，接着说晚餐和住宿另外报价，最顺。 | A:换东家装修和价格段无关;B:停车不是这一段的话题;D:自带设备也接不上价格 | 插入句接住前一句的话题
+MXC-T02-145 | A | builds each menu around ___ the region's farms and boats supply | around 后面缺个名词，后面 supply 又缺宾语，what＝the things that。 | B:which 前面要有名词;C:that 前面也要有名词;D:whose 后要接名词 | 前面没名词、后面缺宾语→what
+MXC-T02-146 | B | Bookings of more than thirty rooms ___ a dedicated coordinator | 订单“被分配”一位协调员，用被动 are assigned。 | A:assign 主动，订单不会去分配人;C:assigning 不能当谓语;D:have assigned 主动 | 主语是东西→先想被动
+MXC-T02-147 | B | The eastern yard will be resurfaced from 16 to 27 March | 备忘录讲路面施工期间怎么安排车辆到港：预约时段、改时段。 | A:预约针对承运车，不是新仓储客户系统;C:泊位是临时关两周;D:没提成本 | 主旨看第一段 @S2-P7-03
+MXC-T02-148 | D | move the two afternoon container collections to the 6 A.M. slot | 下午两趟提柜挪到早上 6 点。 | A:没说分两个泊位;B:不是暂停;C:没提别的码头 | 拿关键词 afternoon 扫读 @S2-P7-02 | the 6 A.M. slot=>an early-morning slot
+MXC-T02-149 | A | The photographs would lose a lot of their depth | 换薄纸照片会失色，他说“照片就是这本书”，意思是照片太重要，不能用差纸。后面还说宁可推迟发布。 | B:没说文字少;C:没提署名;D:没说照片没交 | 意图题看上一条消息 @S2-P7-18
+MXC-T02-150 | C | I will speak to Marketing this afternoon | 他说下午去跟市场部谈改期。 | A:没找别家印刷;B:他拒绝换纸;D:展会让市场部去改订 | 找 I will 那句 | speak to Marketing=>Discuss the schedule with the marketing team
+MXC-T02-151 | D | a technician on site for the whole of your booking | 租任何房间都配全程技术员。 | A:不允许外部餐饮;B:没有住宿;C:露台只有 The Loft 有 | 盯住 any of the three rooms | a technician on site=>services of a technician
+MXC-T02-152 | B | The Loft — seated 120 | 坐席 100 人只有 Loft（坐 120）够。 | A:Vault 只坐 24;C:Mill Room 坐 60;D:三间不是都够 | 拿数字逐个比
+MXC-T02-153 | A | held at the current year's rates | 提前六个月以上订，按今年价格锁定。 | B:没提押金;C:停车是 30 个，固定;D:没提免费取消 | 逐项回原文核对 | the current year's rates=>this year's prices
+MXC-T02-154 | C | We have asked that partner for its own loading photographs | 邮件说明理赔怎么处理：查记录、要照片、派查勘员、21 天内赔。 | A:不是新货;B:让对方别扔箱子，没要退回;D:不是催款 | 回复投诉的邮件→讲怎么处理
+MXC-T02-155 | D | please do not dispose of the damaged cartons | 别扔坏箱子，15 日查勘员要来看。 | A:照片是向合作承运商要;B:是公司去联系;C:没要签条款 | 找 please 那句
+MXC-T02-156 | A | left our Gdansk depot intact | 货离开格但斯克时完好，在汉诺威换车，说明损坏可能发生在之后。 | B:12 托都有外包装损坏;C:手持设备只是记录;D:还没赔 | 推断也要原文撑腰 @S2-P7-08 | left our Gdansk depot intact=>after the goods left Gdansk
+MXC-T02-157 | B | a studio the company has built inside its Bergen offices | 前 12 部在公司自建的录音室里录。 | A:原文说不再按天租;C:有旧书也有新书;D:每月出两部 | rather than 后面是错的那个 | inside its Bergen offices=>on the company's own premises
+MXC-T02-158 | C | who joins from a broadcasting background | 他之前做广播。 | A:创始人没提;B:没说写过书;D:他负责挑配音员，不是亲自朗读 | 逐项回原文核对 | a broadcasting background=>worked in broadcasting
+MXC-T02-159 | D | The imprint will be led by Tomás Ferreira | “他 7 月 1 日上任”的 He 要指 Ferreira，紧跟介绍他的句子之后，[4]。 | A:[1] 前还没出现男性;B:[2] 前讲录音室;C:[3] 前是 Berntsen（女士）的话 | 盯住 He 指谁
+MXC-T02-160 | A | I sent the new list to your old address by mistake | 新名单发到了她的旧邮箱。 | B:她到场时桌子已摆好，但这不是原因;C:是早上改的，不是活动中;D:不怪会议中心 | 问 why 找解释那句 | your old address=>an address she no longer uses
+MXC-T02-161 | B | Ask the centre for their stacking chairs as a fallback | 让她向会议中心借叠椅当后备。 | A:没说推迟;C:食物够;D:车只跑一趟 | fallback＝后备 | as a fallback=>as a precaution
+MXC-T02-162 | D | He can be with you by half past five … Doors at six | 车 5:30 到，6 点开门，时间很紧，“Cutting it fine”＝留的余地很小。 | A:食物够;B:没说超载;C:没说砍名单 | 意图题看上一条消息 @S2-P7-18
+MXC-T02-163 | C | moved to equivalent rooms on floors 1 and 2 | 4–6 楼行动不便的客人免费换到低层同等房。 | A:没打折;B:不用提前退房;D:早餐改到一楼，不是送房 | 逐项核对 | at no extra cost=>at no extra cost
+MXC-T02-164 | A | A porter will operate it from 06:30 until midnight | 06:30 到午夜有门童开员工电梯。 | B:Harbour Room 是早餐地点;C:六楼餐厅不开;D:没提停车 | 拿时间当路标 @S2-P7-02
+MXC-T02-165 | B | Breakfast will be served in the Harbour Room | 早餐地点、换房、北楼电梯都提了，退房时间没提。 | A:早餐地点改了;C:有些客人换房;D:北楼电梯停用 | NOT 题逐项核对 @S2-P7-14
+MXC-T02-166 | D | are not taxed until they are released for sale | 保税仓的好处：货卖出前不交税，资金不被占用。 | A:没说送货快;B:装卸另收费;C:不是保鲜 | 找 which/so 说的好处 | not taxed until they are released for sale=>Tax is not due until the goods are sold
+MXC-T02-167 | C | Palletised dry goods, wines and spirits | 可存葡萄酒烈酒。 | A:冷冻不收;B:活植物不收;D:危险品不收 | 逐项回原文核对 | wines=>Bottled wine
+MXC-T02-168 | A | with the rate falling once a customer keeps more than 200 pallets | 超过 200 托后费率“下降”，falling＝decreasing。 | B:dropping out 是退出;C:collapsing 是倒塌、暴跌，太重;D:arriving 不对 | 同义词代回原句读 @S2-P7-09 | falling=>decreasing
+MXC-T02-169 | B | run the same report from the customer portal at any hour | 客户随时能在门户上自己出报表。 | A:是每晚一份;C:中午前提的是差异，不是报表;D:没说邮寄 | at any hour＝随时 | at any hour=>whenever they wish
+MXC-T02-170 | D | Balance received 22 November €2,262.00 | 22 日收到尾款 2262 欧。 | A:500 是 10 月 3 日付的定金;B:900 是服务员费用;C:1275 是小食费用 | 日期当路标找数字
+MXC-T02-171 | C | Please report breakages to accounts@lindvalldaughters.example | 打碎了要报给对方，别自己买来替换。 | A:原文说别自己替换;B:定金早付了;D:是归还，不是去取 | 找 Please 那句 | report breakages=>Notify the caterer of any breakages
+MXC-T02-172 | A | Print copies are posted in the last week of the preceding month | 纸质版在出版月的前一个月最后一周寄，三月刊就是二月底寄。 | B:3 月 1 日是电子版上线;C:是前一个月，不是当月;D:更晚了 | preceding＝前一个 | the last week of the preceding month=>late February
+MXC-T02-173 | B | Students … pay half the print-and-digital rate | 纸质加电子 74 欧，学生半价 37 欧。 | A:19 是电子版 38 的一半;C:62 是纸质版全价;D:74 是全价 | 计算题列出每一步
+MXC-T02-174 | D | a replacement costs €9 including postage | 退回的那期不免费补，补寄要付 9 欧。 | A:正好相反;B:网站存档是另一回事;C:不延长订阅 | 逐项回原文核对 | a replacement costs €9=>A replacement has to be paid for
+MXC-T02-175 | C | begin with the next issue to be published | 礼品订阅从下一期开始。 | A:没说便宜;B:没这个限制;D:卡片寄给收礼人 | 逐项回原文核对 | the next issue=>the following issue
+MXC-T02-176 | B | I would like to place an order for three of your services | 邮件是下单订三项编辑服务。 | A:没要改交付日期;C:还没付钱，也不是投诉发票;D:没要样稿 | 目的题看第一段 @S2-P7-03
+MXC-T02-177 | D | unlimited revisions of the concept you select | 封面设计：三个初稿，选定后无限次修改。 | A:是三个方案，不是三个设计师;B:没提样书;C:没提系列价 | 逐项回原文核对
+MXC-T02-178 | A | Assessments booked before 30 September are returned in 10 working days | 网页写 9 月 30 日前订的评估 10 天返回，他 9 月 12 日就发。 | B:没要求先付全款;C:9 万字限制是校对的;D:订三项是 15% 折扣的条件 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T02-179 | C | 20 working days for texts under 90,000 words | 他的稿子 8.2 万字，不到 9 万，校对 20 个工作日。 | A:没说先于评估;B:校对按字数计价;D:模板是排版用的 | 数字两篇对着看
+MXC-T02-180 | B | does it still apply when … priced per word | 他问三项折扣在其中一项按字计价时还算不算。 | A:模板问题他已说明不需要;C:没问分期;D:没问修改轮次 | 找 Could you confirm 那句 | priced per word=>covers a per-word price
+MXC-T02-181 | A | today opened its fourth inland terminal | 新闻稿宣布第四个内陆码头开业。 | B:没讲年报;C:招聘只是顺带;D:没有时刻表 | 主旨看标题和第一句 | opened its fourth inland terminal=>the opening of a new facility
+MXC-T02-182 | C | the second phase, a temperature-controlled warehouse | 二期是一个温控仓库。 | A:没提码头加泊位;B:现在就有两条轨道;D:没提公路连接 | 拿 second phase 当路标
+MXC-T02-183 | D | Petra Solheim, Chief Operating Officer | 第一篇写明她是首席运营官，第二篇她也接受采访。 | A:文章作者是 Marek Ostrowski;B:在 Bregge 开货代的是 Ruys;C:她不是管闸口的 | 身份看第一次出现的介绍
+MXC-T02-184 | B | ready for collection inland before breakfast | 公司说“早餐前就能提柜”，可闸口 6 点才开，Ruys 用“早餐”反讽说做不到。 | A:不是改火车时刻;C:她不满的是闸口;D:没说司机夜班 | 一句话两篇都出现→对着看
+MXC-T02-185 | A | any decision would rest on the volumes handled | 要不要 24 小时开闸，看头两个季度的货量。 | B:二期是仓库，与闸口无关;C:基金只出了建设钱;D:招人数和闸口无关 | rest on＝取决于 | rest on=>determine
