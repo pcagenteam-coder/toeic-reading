@@ -176,7 +176,7 @@ const Planner = (function () {
     if (nd && nd.reached) return nd.nodes ? `已够线，再稳 ${nd.nodes} 个考点留出余量` : '已经够到目标了 ✓ 现在只需每天复习保持';
     if (nd) return nd.nodes ? `离目标还差 ${nd.nodes} 个考点（${hoursText(nd.min)}）` : '目标考点已全部达标，进入维持模式';
     if (A.allAchieved) return '目标考点已全部达标，进入维持模式';
-    return `离目标还差 ${A.remainingNodes} 个考点、约 ${Math.max(0.1, Math.round(A.remainingMin / 6) / 10)} 小时`;
+    return `离目标还差 ${A.remainingNodes} 个考点（${hoursText(A.remainingMin)}）`;
   }
 
   return { BANDS, TARGET, NOVICE_DAYS, NOVICE_M, P7_EVERY, MIN_ITEMS, MIN_EVID, REVIEW_CAP, HIGH_W, SHARE, band, phaseOf, analyze, rhythm, today, reviewQueue, progressText, need, hoursText, NEED_MARGIN };
