@@ -9,7 +9,7 @@ import json, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 SRC = os.path.join(APP, 'src')
-JS_FILES = ['store.js', 'fsrs.js', 'mastery.js', 'personal.js', 'planner.js', 'engine.js', 'api.js', 'app.js']   # 按顺序拼接
+JS_FILES = ['store.js', 'fsrs.js', 'mastery.js', 'predict.js', 'personal.js', 'planner.js', 'engine.js', 'api.js', 'app.js']   # 按顺序拼接
 # C2：图谱排程字段（learn_cost_min / must_for_band + 2 个遗留节点），由 data/graph_v1_cost_build.py 生成；不存在则不合并
 GRAPH_COST = 'data/graph_v1_cost.json'
 # 开源题库（可公开发布）：(相对路径, src 标记)。题目字段与 items_pilot_v1 兼容
