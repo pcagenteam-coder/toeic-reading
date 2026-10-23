@@ -94,3 +94,33 @@ python3 app/build.py --public && node app/test/smoke.js && node app/test/fsrs.te
 python3 app/build.py && node app/test/smoke.js app/dist/index.private.html && node app/test/planner.test.js app/dist/index.private.html
 ```
 planner.test.js：600 档用户 30 天模拟（只学 must、达标进维持、每日复习 ≤20、mock 不进训练、回放一致）、积压平摊、考前 3 天、倒排放弃、学不动、用时/作息/FSRS 个性化、API 字段。
+
+## 5. 预测分（C3，predict.js）
+纯函数模块 `Predict`（全局 / Node `require('./predict.js')`），不改状态；前端尚未接入（旧 `E.predict()` 仍在）。方法与校准见 `docs/predict_calibration.md`。
+
+```js
+Predict.estimate({
+  log: st.log,                 // answer / answer_submit 事件（bulk_fill、未作答的模考题不计）
+  item: id => IT[id],          // {p, d, t, n}
+  exam: [...items],            // 可选：整套题（如 FORMS 合并）→ 各 Part 难度分布、节点每 100 题题数；缺省用内置分布
+  mocks: st.mocks,             // 可选：[{ts, ok, n, scaled}]，n≥50 才算整套；传入时 mode:'mock' 的逐题作答不再重复计
+  calib: st.predCalib,         // 可选：Predict.calibrate 的结果
+  target: 350,                 // 可选：阅读目标分 → gap
+  macc, nodes: D.nodes,        // 可选：Mastery 累加器 + 节点名（gap 考点用）；或传 mastery: id => Mastery.of(...)
+  now, draws: 600, seed        // 可复现（固定 seed 同输入同输出）
+}) → {
+  score, lo, hi,               // 点估计与 80% 区间（5–495，步长 5）；sd
+  approx: true,                // 换算表为近似，界面需注明
+  raw,                         // 期望原始分
+  parts: {5|6|7: {q, correct, acc, unreached, points, n, theta, pace}},   // points 各 Part 贡献（按期望答对分摊）
+  timeLoss: {q, points},       // 时间不够来不及做的题数与约丢分
+  confidence: {level:'low'|'mid'|'high', width, answers, mocks, calibrated, text},
+  gap: {target, diff, prob, needAcc, nodes:[{id,nm,m,seen,q,gain}], text},  // gain = 该考点补到所需正确率约 +分
+  model: {theta, thetaSd, T, modelT, modelWeight, mocks, offset, sSamp},   // 调试/解释用
+  uncal                        // 校准用的未偏移中心与方差
+}
+Predict.calibrate(prevCalib, realReadingScore, predictionAtThatTime) → {offset, v, n, last}
+```
+- 用户自报真实成绩时：取当时（或考试日）的 `estimate` 结果调用 `calibrate`，把返回值存 `st.predCalib`（可由 `setting_change` 事件记），以后每次 estimate 传入。
+- 其他导出：`scaledFromRaw / rawFromScaled`（近似换算表 `consts.CONV`）、`observations / fitAbility / fitPace / examOutcome`。
+- 测试：`node app/test/predict.test.js`（单测 + 快速模拟）；`--full` 跑完整校准。
