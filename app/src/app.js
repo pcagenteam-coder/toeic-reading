@@ -325,12 +325,11 @@ function vWordQuiz() {
 }
 
 /* ---------- 进度：离目标 N 个考点 · X 小时 · 预测区间 · 职级 · 每周绩效评估（不显示题数/正确率） ---------- */
-const RANKN = ['新同事', '专员', '资深专员', '主管', '经理'];
-function rankOf(g) {
-  const tot = Math.max(1, (g.achievedNodes || 0) + (g.remainingNodes || 0)), f = (g.achievedNodes || 0) / tot;
-  const i = g.mode === 'maintain' ? 4 : f >= 0.7 ? 3 : f >= 0.45 ? 2 : f >= 0.2 ? 1 : 0;
-  const need = i >= 4 ? 0 : i === 3 ? g.remainingNodes : Math.max(1, Math.ceil([0.2, 0.45, 0.7][i] * tot - (g.achievedNodes || 0)));
-  return { i, nm: RANKN[i], next: RANKN[i + 1], need };
+const RANKN = RANKS.map(x => x[1]);
+/* P1-2：职级按预测分档（UX §0.5，阈值同引擎 RANKS）；估算中时不给“还差几分” */
+function rankOf(pr) {
+  const i = pr.level === 'low' ? 0 : rIdx(pr.p), nx = RANKS[i + 1];
+  return { i, nm: RANKN[i], next: nx && nx[1], at: nx && nx[0], low: pr.level === 'low' };
 }
 function wkSnap(g, pr) {   // 每周第一次打开时记周初基线，用于绩效评估
   const k = E.wkKey(), W = E.st.wk = E.st.wk || {};
@@ -352,7 +351,7 @@ function vReviewWeek(g, pr) {
 function vProgress() {
   const hd = '<div class="hd"><h1>进度</h1></div>';
   if (!E.st.diag) return hd + `<div class="card empty"><h2>还没有进度</h2><p class="mut">做完入职测试（约 10 分钟），这里会显示离目标还差多少、大约要多少小时。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
-  const g = API.progress(), pr = API.predict(), rk = rankOf(g), n = g.need || {}, gl = gainLine(pr);
+  const g = API.progress(), pr = API.predict(), rk = rankOf(pr), n = g.need || {}, gl = gainLine(pr);
   // P0-1/P1-1：单一数据源 g.need（够达标的最少考点）；主数字用天/周，小时给区间，考点数降为次要
   const head = pr.level === 'low' ? `<div class="big">估算中</div><p class="mut">再练 2–3 次就能算出离目标还差多少。</p>`
     : n.reached ? (n.nodes ? `<div class="big">已够线 ✓</div><p>再稳 ${n.nodes} 个考点留出余量 · ${paceText(n.min)}</p>` : `<div class="big">已经够到目标了 ✓</div><p class="mut">现在只需每天复习保持。</p>`)
@@ -360,9 +359,10 @@ function vProgress() {
     : `<div class="mut sm">离目标 ${pr.tg}</div><div class="huge">${paceText(n.min).replace('照现在的节奏', '')}</div><p class="mut sm">照现在的节奏 · 先稳 ${n.nodes} 个考点（${n.hoursText}）</p>`;
   const main = `<div class="card hero">${head}${gl ? `<p class="sm">${gl}</p>` : ''}<div class="hr"></div>${predBlock(pr, 'big2')}</div>`;
   const rank = `<div class="card"><h2>职级 · ${rk.nm}</h2><div class="ladder">${RANKN.map((x, i) => `<i class="${i < rk.i ? 'd' : i === rk.i ? 'c' : ''}">${x}</i>`).join('')}</div>
-    ${rk.next ? `<p class="mut sm">再稳 ${rk.need} 个考点升${rk.next}</p>` : '<p class="mut sm">已经是经理了，保持住。</p>'}</div>`;
-  const cur = (g.next || []).map(x => { const pct = Math.max(5, Math.round(Math.min(0.92, (x.m || 0) / Math.max(0.01, g.targetMastery || 0.8)) * 100));   // 未达标最多到 92%（证据不够也算没稳）
-    return `<div class="li"><span>${esc(x.nm)}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`; }).join('');
+    ${rk.low ? '<p class="mut sm">再练几次，职级会按预测分定下来。</p>' : rk.next ? `<p class="mut sm">预测分到 ${rk.at} 升${rk.next}</p>` : '<p class="mut sm">已经是经理了，保持住。</p>'}</div>`;
+  const tm = g.targetMastery || 0.8, sc = v => Math.max(0, Math.min(100, Math.round((v - 0.3) / 0.7 * 100)));   // 条按掌握度 0.3–1 画，竖线 = 稳阈值
+  const cur = (g.next || []).map(x => { const nd = (g.nodes || []).find(y => y.id === x.id), pct = Math.max(4, Math.min(sc(tm) - 2, sc(x.m || 0)));
+    return `<div class="li"><span>${esc(x.nm)}${nd && nd.remainMin ? `<br><span class="mut sm">约 ${Math.max(3, Math.min(60, nd.remainMin))} 分钟可稳</span>` : ''}</span><span class="bar tkb" title="竖线 = 稳"><i style="width:${pct}%"></i><b class="tk" style="left:${sc(tm)}%"></b></span></div>`; }).join('');
   const nodes = `<div class="card"><h2>考点 <span class="mut sm">正在攻 ${(g.next || []).length} · 已稳 ${g.achievedNodes || 0}</span></h2>${cur || '<p class="mut sm">目标考点都稳了。</p>'}</div>`;
   const mk = (E.st.mocks || []).slice(-3).reverse().map(m => `<div class="li"><span>${new Date(m.ts).getMonth() + 1}月${new Date(m.ts).getDate()}日</span><span>约 ${m.scaled} 分</span></div>`).join('');
   const total = Object.keys(E.st.days || {}).length;

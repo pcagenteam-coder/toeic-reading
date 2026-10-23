@@ -202,7 +202,8 @@ input.tmi{width:9.5em}
 .sbh{font-size:12px;color:var(--mut);margin:0 0 6px;letter-spacing:.5px}
 .pop.bubble.mb{width:calc(100% - 16px)}
 .chip{white-space:nowrap}.li{flex-wrap:wrap;align-items:center}.li>span:first-child{flex:1 1 7em}
-/* P0-2 */
+/* P0-2 / P1-2 */
 .hr{height:1px;background:#ece9e2;margin:10px 0}
 details.pred summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:6px}
 details.pred summary::-webkit-details-marker{display:none}
+.bar.tkb{position:relative;overflow:visible}.bar.tkb i{border-radius:4px}.bar .tk{position:absolute;top:-3px;bottom:-3px;width:2px;background:#555;border-radius:1px}
