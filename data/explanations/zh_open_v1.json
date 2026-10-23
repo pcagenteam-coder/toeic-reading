@@ -10,7 +10,7 @@
    "paraphrase": "P7 同义替换对 [{text 原文短语, option 选项短语}]"
   },
   "n_items_pool": 1511,
-  "n_explained": 623,
+  "n_explained": 669,
   "n_flagged": 0,
   "generator": "work/explain/merge.py（文本由 agent 逐题自写，不含第三方解析原文）"
  },
@@ -9568,6 +9568,666 @@
    "tip_strategy_id": "S2-P5-09",
    "node": "QT.P5.VERB_FORM",
    "hash": "b3c5974d6576"
+  },
+  "MXC-T06-117": {
+   "answer_letter": "D",
+   "basis": "has appointed an external ___",
+   "why": "冠词+形容词后填指人的名词 auditor。",
+   "distractors": {
+    "A": "动名词",
+    "B": "分词",
+    "C": "audit 是审计这件事，不是人"
+   },
+   "tip": "appoint 后接人",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "73714fa44e81"
+  },
+  "MXC-T06-118": {
+   "answer_letter": "C",
+   "basis": "___ next Monday and closes on 30 September",
+   "why": "按日程安排的将来用一般现在，且与 closes 并列。",
+   "distractors": {
+    "A": "过去",
+    "B": "现在完成",
+    "D": "过去完成"
+   },
+   "tip": "时刻表将来→一般现在",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "e793d156049f"
+  },
+  "MXC-T06-119": {
+   "answer_letter": "A",
+   "basis": "The engineer ___ designed the new extraction system",
+   "why": "先行词是人，从句缺主语，用 who。",
+   "distractors": {
+    "B": "which 指物",
+    "C": "whose 后接名词",
+    "D": "whom 作宾语"
+   },
+   "tip": "指人作主语→who",
+   "tip_strategy_id": "S2-P5-18",
+   "node": "QT.P5.RELATIVE",
+   "hash": "4b933adf4cee"
+  },
+  "MXC-T06-120": {
+   "answer_letter": "B",
+   "basis": "feeling thoroughly ___",
+   "why": "人“感到困惑”用 -ed 形容词 confused。",
+   "distractors": {
+    "A": "-ing 指令人困惑的事物",
+    "C": "动词",
+    "D": "名词"
+   },
+   "tip": "人感到→-ed",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "68bef18b38c4"
+  },
+  "MXC-T06-121": {
+   "answer_letter": "C",
+   "basis": "praised the site team's ___ of the shutdown",
+   "why": "所有格后、of 前填名词 management。",
+   "distractors": {
+    "A": "动词",
+    "B": "形容词",
+    "D": "形容词"
+   },
+   "tip": "'s ___ of → 名词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "893ff8d3cadb"
+  },
+  "MXC-T06-122": {
+   "answer_letter": "D",
+   "basis": "scheduled to finish ___ the end of the second quarter",
+   "why": "在某时间点“之前”完成用 by。",
+   "distractors": {
+    "A": "until 用于持续动作",
+    "B": "in 不接 the end of",
+    "C": "on 接具体日"
+   },
+   "tip": "finish by＋期限",
+   "tip_strategy_id": "S2-P5-08",
+   "node": "QT.P5.PREP",
+   "hash": "210a948c43b9"
+  },
+  "MXC-T06-123": {
+   "answer_letter": "A",
+   "basis": "Neither the ventilation upgrade ___ the lighting replacement",
+   "why": "neither…nor 固定搭配。",
+   "distractors": {
+    "B": "or 配 either",
+    "C": "and 配 both",
+    "D": "but 配 not only"
+   },
+   "tip": "neither…nor",
+   "tip_strategy_id": "S2-P5-08",
+   "node": "QT.P5.CONJ",
+   "hash": "c578186466c4"
+  },
+  "MXC-T06-124": {
+   "answer_letter": "B",
+   "basis": "Of the three sites shortlisted",
+   "why": "三者之中选最好，用最高级 the best。",
+   "distractors": {
+    "A": "the better 用于两者",
+    "C": "比较级",
+    "D": "原级"
+   },
+   "tip": "三者以上→最高级",
+   "tip_strategy_id": "S2-P5-19",
+   "node": "QT.P5.COMPARATIVE",
+   "hash": "0b27a6ec6c94"
+  },
+  "MXC-T06-125": {
+   "answer_letter": "C",
+   "basis": "has shown a ___ improvement",
+   "why": "修饰名词 improvement 用形容词 noticeable。",
+   "distractors": {
+    "A": "名词/动词",
+    "B": "动名词",
+    "D": "副词"
+   },
+   "tip": "名词前填形容词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "d65d903d3834"
+  },
+  "MXC-T06-126": {
+   "answer_letter": "A",
+   "basis": "should submit the form ___ rather than send it through the letting agent",
+   "why": "强调“亲自”提交，用反身代词 themselves。",
+   "distractors": {
+    "B": "宾格会重复宾语",
+    "C": "形容词性物主",
+    "D": "名词性物主"
+   },
+   "tip": "亲自做→反身代词",
+   "tip_strategy_id": "S2-P5-13",
+   "node": "QT.P5.PRONOUN",
+   "hash": "e10ea440e14c"
+  },
+  "MXC-T06-127": {
+   "answer_letter": "D",
+   "basis": "when the power to the building failed",
+   "why": "停电那一刻正在检查，用过去进行时。",
+   "distractors": {
+    "A": "一般现在",
+    "B": "现在完成",
+    "C": "将来"
+   },
+   "tip": "when＋过去时→was doing",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "d7dee49c33fe"
+  },
+  "MXC-T06-128": {
+   "answer_letter": "C",
+   "basis": "the main ___ to expanding the night shift",
+   "why": "缺人是扩夜班的“障碍”，obstacle to。",
+   "distractors": {
+    "A": "拒绝",
+    "B": "不情愿",
+    "D": "减少"
+   },
+   "tip": "obstacle to doing",
+   "tip_strategy_id": "S2-P5-07",
+   "node": "QT.P5.VOCAB",
+   "hash": "d65090538387"
+  },
+  "MXC-T06-129": {
+   "answer_letter": "B",
+   "basis": "Only qualified electricians may ___ the distribution boards",
+   "why": "may 后接动词原形 access。",
+   "distractors": {
+    "A": "形容词",
+    "C": "副词",
+    "D": "名词"
+   },
+   "tip": "情态动词＋原形",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "e12c8cbcafeb"
+  },
+  "MXC-T06-130": {
+   "answer_letter": "D",
+   "basis": "___ used for staff parking since the lease was renegotiated",
+   "why": "since 要现在完成，地块“被使用”，has been used。",
+   "distractors": {
+    "A": "has used 主动",
+    "B": "一般现在",
+    "C": "一般过去"
+   },
+   "tip": "since＋被动→has been done",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "f9fa8285d0fd"
+  },
+  "MXC-T06-131": {
+   "answer_letter": "C",
+   "basis": "and is ___ to take eleven weeks",
+   "why": "be expected to do＝预计。",
+   "distractors": {
+    "A": "进行时缺语义",
+    "B": "三单动词",
+    "D": "名词"
+   },
+   "tip": "be expected to",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "9711f936e283"
+  },
+  "MXC-T06-132": {
+   "answer_letter": "A",
+   "basis": "allow extra time ___ the morning rush",
+   "why": "名词 the morning rush 前用介词 during。",
+   "distractors": {
+    "B": "while 接从句",
+    "C": "since 表自从",
+    "D": "among 用于群体"
+   },
+   "tip": "名词前用介词",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "f8fd7cbf990a"
+  },
+  "MXC-T06-133": {
+   "answer_letter": "D",
+   "basis": "must be booked … at least twenty-four hours ahead",
+   "why": "前句要求提前 24 小时预约，接“当天申请一般不受理”。",
+   "distractors": {
+    "A": "与只开一台冲突",
+    "B": "与后句前台受理矛盾",
+    "C": "与“任何时候只一台”矛盾"
+   },
+   "tip": "插入句补充前一规则",
+   "tip_strategy_id": "S2-P6-02",
+   "node": "QT.P6.INSERTION",
+   "hash": "bfe93c23431d"
+  },
+  "MXC-T06-134": {
+   "answer_letter": "B",
+   "basis": "by the end of June both lifts ___ back in service",
+   "why": "6 月底是将来，用 will be。",
+   "distractors": {
+    "A": "现在进行",
+    "C": "现在完成",
+    "D": "过去"
+   },
+   "tip": "时间线索 by the end of June",
+   "tip_strategy_id": "S2-P5-11",
+   "node": "QT.P6.CTX_TENSE",
+   "hash": "afe29543bda2"
+  },
+  "MXC-T06-135": {
+   "answer_letter": "B",
+   "basis": "every place must be filled by 26 February",
+   "why": "前说 26 日前满员、后说下周末交名单，中间补“机构需两周确认”说明原因。",
+   "distractors": {
+    "A": "与三月课程矛盾",
+    "C": "与提前提名矛盾",
+    "D": "与后文费用已定矛盾"
+   },
+   "tip": "后句 therefore 要前因",
+   "tip_strategy_id": "S2-P6-02",
+   "node": "QT.P6.INSERTION",
+   "hash": "d97d15dc110e"
+  },
+  "MXC-T06-136": {
+   "answer_letter": "D",
+   "basis": "The course is run at the Ferrow Institute and ___ both",
+   "why": "and 并列谓语，主语单数，用 includes。",
+   "distractors": {
+    "A": "分词",
+    "B": "缺三单",
+    "C": "不定式"
+   },
+   "tip": "并列谓语保持一致",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "141542152094"
+  },
+  "MXC-T06-137": {
+   "answer_letter": "A",
+   "basis": "Supervisors are reminded ___ their team rotas",
+   "why": "be reminded to do＝被提醒做某事。",
+   "distractors": {
+    "B": "动名词",
+    "C": "原形",
+    "D": "分词"
+   },
+   "tip": "remind sb to do",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "bbb83ce9dd45"
+  },
+  "MXC-T06-138": {
+   "answer_letter": "C",
+   "basis": "priority ___ to supervisors",
+   "why": "优先权“被给予”，将来被动 will be given。",
+   "distractors": {
+    "A": "主动",
+    "B": "主动完成",
+    "D": "主动进行"
+   },
+   "tip": "主语是物→被动",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "b7c2865571c0"
+  },
+  "MXC-T06-139": {
+   "answer_letter": "D",
+   "basis": "The new plant is ___ larger than the one",
+   "why": "修饰比较级 larger 用副词 considerably。",
+   "distractors": {
+    "A": "as 要配 as",
+    "B": "very 不修饰比较级",
+    "C": "much more 与 larger 重复"
+   },
+   "tip": "比较级前用 much/considerably",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "dda157daf606"
+  },
+  "MXC-T06-140": {
+   "answer_letter": "C",
+   "basis": "cut energy consumption … by roughly a third ___ shortening",
+   "why": "while＋doing 表“同时”。",
+   "distractors": {
+    "A": "表让步",
+    "B": "表原因",
+    "D": "接从句"
+   },
+   "tip": "while doing＝同时",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "73fabc069968"
+  },
+  "MXC-T06-141": {
+   "answer_letter": "B",
+   "basis": "design a foundry ___ will still be competitive",
+   "why": "先行词 foundry 指物，从句缺主语，用 that。",
+   "distractors": {
+    "A": "what 不带先行词",
+    "C": "who 指人",
+    "D": "where 表地点要完整句"
+   },
+   "tip": "指物作主语→that/which",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "037fdb507519"
+  },
+  "MXC-T06-142": {
+   "answer_letter": "A",
+   "basis": "with full production expected in September",
+   "why": "新闻稿结尾常附媒体联系方式，接“记者可预约参观”。",
+   "distractors": {
+    "B": "与换电炉矛盾",
+    "C": "与新增 40 岗矛盾",
+    "D": "工厂已建成"
+   },
+   "tip": "新闻稿结尾惯例",
+   "tip_strategy_id": "S2-P6-02",
+   "node": "QT.P6.INSERTION",
+   "hash": "886db6713f9f"
+  },
+  "MXC-T06-143": {
+   "answer_letter": "A",
+   "basis": "___ of the four departments will have a meeting room of its own",
+   "why": "each of＋复数，谓语单数，配 its own。",
+   "distractors": {
+    "B": "all 配 their",
+    "C": "both 只指两者",
+    "D": "every 不接 of"
+   },
+   "tip": "each of 配单数",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "6679255adf90"
+  },
+  "MXC-T06-144": {
+   "answer_letter": "B",
+   "basis": "A shuttle bus will run from the station",
+   "why": "后句讲车站接驳车，前句应提“离车站更远”。",
+   "distractors": {
+    "A": "无关",
+    "C": "交通方便就不需要班车",
+    "D": "与租约不续矛盾"
+   },
+   "tip": "插入句为下文铺垫",
+   "tip_strategy_id": "S2-P6-02",
+   "node": "QT.P6.INSERTION",
+   "hash": "34e02c7005b2"
+  },
+  "MXC-T06-145": {
+   "answer_letter": "C",
+   "basis": "Personal items left … ___ be recovered, since the keys are handed",
+   "why": "钥匙交还后东西“无法”取回，用 cannot。",
+   "distractors": {
+    "A": "must not 是禁止",
+    "B": "need not 是不必",
+    "D": "should not 是不该"
+   },
+   "tip": "since 给出不可能的原因",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "9687cab32bf5"
+  },
+  "MXC-T06-146": {
+   "answer_letter": "D",
+   "basis": "taken into account ___ the layout is fixed",
+   "why": "后接从句，在布局定下“之前”考虑，用 before。",
+   "distractors": {
+    "A": "during 接名词",
+    "B": "in advance of 接名词",
+    "C": "as soon as 语义不对"
+   },
+   "tip": "从句前用连词",
+   "tip_strategy_id": "S2-P5-01",
+   "node": "QT.P6.INDEPENDENT",
+   "hash": "4e5c43e334bb"
+  },
+  "MXC-T06-147": {
+   "answer_letter": "B",
+   "basis": "line 4 will not run that day",
+   "why": "通知主管 4 号线校准当天停线。",
+   "distractors": {
+    "A": "不是新程序",
+    "C": "校准还没做",
+    "D": "不是永久改班"
+   },
+   "tip": "主旨看首段",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MEMO",
+   "hash": "c8ef5f554832"
+  },
+  "MXC-T06-148": {
+   "answer_letter": "D",
+   "basis": "draws on the same compressed-air supply",
+   "why": "校准设备和 3 号线共用压缩空气，3 号线会变慢，说明供气不够同时满足两边。",
+   "distractors": {
+    "A": "没说更换",
+    "B": "没说监控",
+    "C": "校准设备也用"
+   },
+   "tip": "推断看因果",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "f66a2e0e731e"
+  },
+  "MXC-T06-149": {
+   "answer_letter": "A",
+   "basis": "It is a ground-floor unit",
+   "why": "一楼的门锁不上，不想过夜敞着，因为外面能进来。",
+   "distractors": {
+    "B": "没说搬走",
+    "C": "费用已免",
+    "D": "检查是她后提的"
+   },
+   "tip": "推断看 ground-floor",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "7f7ab6a2741a"
+  },
+  "MXC-T06-150": {
+   "answer_letter": "C",
+   "basis": "Let us have the whole row looked at before the winter",
+   "why": "她要检查整排门，他让维修方顺便报价。",
+   "distractors": {
+    "A": "费用已免",
+    "B": "没提租户批准",
+    "D": "是现场顺便报价"
+   },
+   "tip": "quote＝报价",
+   "tip_strategy_id": "S2-P7-18",
+   "paraphrase": [],
+   "node": "QT.P7X.INTENT.CHAT",
+   "hash": "ee5bfec3e251"
+  },
+  "MXC-T06-151": {
+   "answer_letter": "D",
+   "basis": "Technical Drawing (CAD) — Wednesdays, 16 weeks",
+   "why": "CAD 16 周最长。",
+   "distractors": {
+    "A": "14 周",
+    "B": "12 周",
+    "C": "8 周"
+   },
+   "tip": "列表比数字",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.DETAIL",
+   "hash": "6c3b2d4cad3b"
+  },
+  "MXC-T06-152": {
+   "answer_letter": "A",
+   "basis": "invoiced when the course ends rather than in advance",
+   "why": "雇主付费的课程结束后开票。",
+   "distractors": {
+    "B": "没减价",
+    "C": "日期是免手续费",
+    "D": "考试照考"
+   },
+   "tip": "rather than 前是正解",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.TRUE_INDICATED",
+   "hash": "5a90723e178f"
+  },
+  "MXC-T06-153": {
+   "answer_letter": "B",
+   "basis": "open free of charge to anyone enrolled in a Wednesday course",
+   "why": "周三课程学员免费，周三上的是 CAD。",
+   "distractors": {
+    "A": "22 日前是免手续费",
+    "C": "协会是认证方",
+    "D": "与付费方无关"
+   },
+   "tip": "周三→查课表",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.INFERENCE",
+   "hash": "01de90fb6562"
+  },
+  "MXC-T06-154": {
+   "answer_letter": "C",
+   "basis": "can be reserved for your exclusive use … at no cost",
+   "why": "邮件之一目的是免费提供货运入口。",
+   "distractors": {
+    "A": "没涨费",
+    "B": "没续租",
+    "D": "没要付款"
+   },
+   "tip": "at no cost＝免费",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.EMAIL",
+   "hash": "0b3086b63775"
+  },
+  "MXC-T06-155": {
+   "answer_letter": "D",
+   "basis": "both cars will be down for four days",
+   "why": "两台电梯同时停四天。",
+   "distractors": {
+    "A": "9 周是总工期",
+    "B": "无依据",
+    "C": "无依据"
+   },
+   "tip": "both 才是全停",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.DETAIL_NUMBER",
+   "hash": "1a7595708937"
+  },
+  "MXC-T06-156": {
+   "answer_letter": "B",
+   "basis": "The owners have now released funds",
+   "why": "release funds＝拨出资金，即 made available。",
+   "distractors": {
+    "A": "发布",
+    "C": "放手",
+    "D": "松开"
+   },
+   "tip": "代回原句验证",
+   "tip_strategy_id": "S2-P7-09",
+   "paraphrase": [],
+   "node": "QT.P7X.SYNONYM.EMAIL",
+   "hash": "0ed68ccf83e6"
+  },
+  "MXC-T06-157": {
+   "answer_letter": "A",
+   "basis": "formed a cooperative to buy testing equipment",
+   "why": "文章讲小厂合作共享检测设备。",
+   "distractors": {
+    "B": "不是合并",
+    "C": "不是实验室分部",
+    "D": "学院合作只是附带"
+   },
+   "tip": "主旨看首段",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.ARTICLE",
+   "hash": "d880f48071b2"
+  },
+  "MXC-T06-158": {
+   "answer_letter": "C",
+   "basis": "waiting nine days for a report … Now it is the same afternoon",
+   "why": "拿到检测报告从九天变成当天下午。",
+   "distractors": {
+    "A": "没提价格变化",
+    "B": "没提产量",
+    "D": "没提人数"
+   },
+   "tip": "Now 前后对比",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.ARTICLE",
+   "hash": "9981591e32dc"
+  },
+  "MXC-T06-159": {
+   "answer_letter": "D",
+   "basis": "A second unit, for surface-roughness measurement, is expected",
+   "why": "句子说“不止扫描仪”，放 [4]，后接第二台设备和学院合作。",
+   "distractors": {
+    "A": "[1] 还在介绍扫描仪",
+    "B": "[2] 是引语结尾",
+    "C": "[3] 讲费用"
+   },
+   "tip": "插入句引出下文",
+   "tip_strategy_id": "S2-P7-23",
+   "paraphrase": [],
+   "node": "QT.P7X.INSERTION.ARTICLE",
+   "hash": "493b048e120f"
+  },
+  "MXC-T06-160": {
+   "answer_letter": "B",
+   "basis": "reads 14 metres per second … Our limit … is 12",
+   "why": "风速 14 超过吊装上限 12。",
+   "distractors": {
+    "A": "操作员在",
+    "C": "没说没到货",
+    "D": "同区两工种是另一话题"
+   },
+   "tip": "数字对比找原因",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.REASON",
+   "hash": "6966b79e56c7"
+  },
+  "MXC-T06-161": {
+   "answer_letter": "D",
+   "basis": "the plant-room drawings in the site office are revision C",
+   "why": "现场图纸是旧版 C，她要大家等她发 D 版再动。",
+   "distractors": {
+    "A": "吊车已不用",
+    "B": "她是发图纸",
+    "C": "是图纸版本问题"
+   },
+   "tip": "it 指 revision D",
+   "tip_strategy_id": "S2-P7-18",
+   "paraphrase": [],
+   "node": "QT.P7X.INTENT.TEXT_MSG",
+   "hash": "42245c95fe91"
+  },
+  "MXC-T06-162": {
+   "answer_letter": "A",
+   "basis": "The blockwork gang is not on site until Wednesday",
+   "why": "砌块班组周三才到。",
+   "distractors": {
+    "B": "还没做",
+    "C": "图纸问题是机房",
+    "D": "不用吊车"
+   },
+   "tip": "not until＝直到…才",
+   "tip_strategy_id": "S2-P7-02",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TEXT_MSG",
+   "hash": "54a846264046"
   }
  }
 }
