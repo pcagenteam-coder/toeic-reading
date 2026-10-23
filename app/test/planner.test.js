@@ -79,7 +79,7 @@ t('600 档：所有 must 考点达标后进入维持模式，进度显示 0 个�
   assert(k > 0 && k < 29, '30 天内未进入维持模式');
   assert(days.slice(-3).every(x => x.mode === 'maintain'), '最后 3 天应为维持模式');
   const p = days[29].prog; assert.strictEqual(p.remainingNodes, 0); assert.strictEqual(p.mode, 'maintain');
-  assert(/离目标还差 \d+ 个考点、约 [\d.]+ 小时/.test(days[0].progress), days[0].progress);
+  assert(/离目标还差 \d+ 个考点（(约 [\d.–]+ 小时|不到 1 小时)）/.test(days[0].progress), days[0].progress);
   assert(days[k].units.length > 0 && days[k].units.every(u => u.kind !== 'learn'), '维持模式不应再有 learn 单元');
 });
 t('每日复习（题卡+生词合并）≤ 20', () => {
