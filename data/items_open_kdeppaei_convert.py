@@ -117,7 +117,7 @@ COLLO_PREP = re.compile(r'\b(of|for|with|to|in|on|at|from|about)\b')
 
 def family(opts):
     """四个选项是否同一词族（词性题）"""
-    ws = [o.lower() for o in opts]
+    ws = [o.lower().split()[-1] if o.strip() else o.lower() for o in opts]   # A2-QC：more careful → careful
     if any(' ' in w for w in ws):
         return False
     stem = min(ws, key=len)[:4]
@@ -143,19 +143,40 @@ def p5_tag(q, stem, ans, opts):
 def tag_p5(q, stem, ans, opts):
     t = p5_tag(q, stem, ans, opts)
     a = ans.lower(); tags = set(q.get('tags') or [])
+    NEG_FRONT = r'^\s*(rarely|seldom|never|not until|not only|at no time|only|hardly|little|under no|in no|nowhere|neither|nor|no sooner|scarcely|so)\b'
+    VERB_OPTS = {'is', 'are', 'was', 'were', 'has', 'have', 'had', 'does', 'do', 'did'}
+    if a in VERB_OPTS and sum(o.lower() in VERB_OPTS for o in opts) >= 3 and re.search(r'\b(either|neither|both|not only)\b', stem, re.I) \
+            and t != 'inversion' or 'subject-verb' in tags and t != 'inversion':
+        # A2：either/neither … or/nor + 动词 = 就近一致（主谓一致），不是连词题
+        ns = ['GR.VERB.AGREE_SV'] + (['GR.CONN.CONJ_CORRELATIVE'] if re.search(r'\b(either|neither|both|not only)\b', stem, re.I) else [])
+        return 'QT.P5.VERB_FORM', ns + cm.scenes(stem, top=1), 'subject-verb-agreement'
+    if t == 'collocation' and family(opts) and any(o.lower().startswith('to ') or o.lower().endswith('ing') for o in opts):
+        # A2：scheduled ------- (to begin/begin/began/beginning) 选项同词族 → 非谓语形式题
+        pre = cm.pre_blank(stem)
+        n = 'GR.NONFIN.TO_INF' if a.startswith('to ') or pre == 'to' else 'GR.NONFIN.GERUND' if a.endswith('ing') else \
+            'GR.VERB.MODAL_BASE' if pre in ('will', 'can', 'must', 'should', 'may', 'might', 'would', 'could') else 'GR.VERB.VERB_PATTERN'
+        return 'QT.P5.VERB_FORM', [n] + (['VO.COLLO.FIXED_PHRASE'] if a.startswith('to ') else []) + cm.scenes(stem, top=1), 'gerund-infinitive'
     if t == 'inversion':
-        if re.search(r'^(had|should|were)\b', a) or re.match(r'\s*-------\s', stem) and a in ('had', 'should', 'were') or 'conditional-inversion' in tags:
+        neg = 'negative-fronting' in tags or re.search(NEG_FRONT, stem, re.I)
+        if not neg and (re.search(r'^(had|should|were)\b', a) or re.match(r'\s*-------\s', stem) and a in ('had', 'should', 'were') or 'conditional-inversion' in tags):
             prim, ns = 'QT.P5.VERB_FORM', ['GR.VERB.CONDITIONAL_INVERSION']
         else:
             prim, ns = 'QT.P5.PAIR_GRAMMAR', ['GR.SPECIAL.INVERSION_NEG']
+    elif t == 'conditional' and a in ('unless', 'if', 'provided', 'providing', 'as long as', 'in case', 'provided that', 'only if', 'even if', 'once'):
+        prim, ns = cm.gram_nodes('conjunction', stem, ans, opts)   # A2-QC：选连词（unless/if）是连词题，不是假设语气
     elif t == 'conditional':
-        prim, ns = 'QT.P5.VERB_FORM', ['GR.VERB.SUBJUNCTIVE_DEMAND' if ('要求' in q.get('category', '') or 'mandative-subjunctive' in tags) else 'GR.VERB.CONDITIONAL_INVERSION']
+        dem = re.search(r'\b(ask|asked|asks|request\w*|requir\w*|recommend\w*|suggest\w*|insist\w*|demand\w*|propos\w*|urg\w*|essential|imperative|important|vital|necessary|mandatory|advis\w*)\s+that\b', stem, re.I)
+        prim, ns = 'QT.P5.VERB_FORM', ['GR.VERB.SUBJUNCTIVE_DEMAND' if ('要求' in q.get('category', '') or 'mandative-subjunctive' in tags or dem) else 'GR.VERB.CONDITIONAL_INVERSION']   # A2-QC：asked that + 原形 = 要求类虚拟
     elif t == 'participle-clause':
         prim, ns = 'QT.P5.VERB_FORM', ['GR.NONFIN.PARTICIPLE_CLAUSE', 'FD.SENT.CLAUSE_COUNT']
     elif t == 'participle':
-        prim, ns = 'QT.P5.VERB_FORM', ['GR.NONFIN.PARTICIPLE_MODIFIER']
+        clause = re.match(r'\s*-------\s+[^,]{2,80},', stem)   # A2-QC：句首分词短语 + 逗号 = 分词构句
+        prim, ns = 'QT.P5.VERB_FORM', ['GR.NONFIN.PARTICIPLE_CLAUSE' if clause else 'GR.NONFIN.PARTICIPLE_MODIFIER']
     elif t == 'reduced':
-        prim, ns = 'QT.P5.PAIR_GRAMMAR', ['GR.SPECIAL.ELLIPSIS', 'GR.NONFIN.PARTICIPLE_MODIFIER' if '關係' in q.get('category', '') else 'GR.NONFIN.PARTICIPLE_CLAUSE']
+        if re.search(r"\b(once|while|when|whenever|unless|if|although|though|until|before|after|as|than)\s*-------", stem, re.I):
+            prim, ns = 'QT.P5.PAIR_GRAMMAR', ['GR.SPECIAL.ELLIPSIS', 'GR.NONFIN.PARTICIPLE_CLAUSE']   # 连词 + 分词（Once approved / While installing）
+        else:   # A2-QC：Employees ------- at …（省略关系词的后置分词）= 分词修饰，不是省略结构
+            prim, ns = 'QT.P5.VERB_FORM', ['GR.NONFIN.PARTICIPLE_MODIFIER']
     elif t == 'parallel':
         prim, ns = 'QT.P5.PAIR_GRAMMAR', ['GR.SPECIAL.PARALLEL']
     elif t == 'noun-clause':
@@ -165,7 +186,8 @@ def tag_p5(q, stem, ans, opts):
     elif t == 'collocation':
         pre = cm.pre_blank(stem); post = cm.post_blank(stem)
         if ' ' not in a and a in ('of', 'for', 'with', 'to', 'in', 'on', 'at', 'from', 'about', 'by'):
-            prim, ns = 'QT.P5.PREP', ['VO.COLLO.ADJ_PREP' if pre and cm.pos_of(pre) == 'adj' or pre in ('responsible', 'interested', 'eligible', 'aware', 'capable') else 'VO.COLLO.VERB_PREP']
+            prim, ns = 'QT.P5.PREP', ['VO.COLLO.ADJ_PREP' if pre and cm.pos_of(pre) == 'adj' or pre in cm.ADJ_PREP_HEADS else
+                                      'VO.COLLO.BE_PP_PREP' if pre.endswith('ed') else 'VO.COLLO.VERB_PREP']   # A2-QC：familiar/similar with = 形容词+介词
         else:
             n = cm.lex_node(stem, ans, opts)
             prim, ns = 'QT.P5.VOCAB', ['VO.COLLO.FIXED_PHRASE'] + ([n] if n else [])
@@ -175,6 +197,14 @@ def tag_p5(q, stem, ans, opts):
             n = cm.lex_node(stem, ans, opts)
             prim, ns = 'QT.P5.VOCAB', [n] if n else []
     return prim, ns + cm.scenes(stem, top=1), t
+
+
+def p7_diff(kind, nwords, qt, cross, src):
+    """A2：P7 难度重估。原库 P7 没有 400 档、800 档占 2/3（三句话的单篇细节题也标 800），直接映射会把 P7 整体抬到 4。
+    规则分 = 篇章形态 + 设问类型 + 篇幅；再与原档 2:1 加权，四舍五入到 1–5。"""
+    r = cm.p7_rule_diff(kind, nwords, qt, cross)
+    d = DIFF.get(str(src), 3)
+    return max(1, min(5, int((2 * r + d) / 3 + 0.5)))
 
 
 # ---------- P6 ----------
@@ -188,8 +218,16 @@ def p6_srctags(q, ans, opts):
     if all(len(o.split()) >= 4 for o in opts):
         return ['sentence-insertion']
     lo = [o.lower().rstrip(',') for o in opts]
+    REL = {'who', 'whom', 'whose', 'which', 'that', 'where', 'when', 'what'}
+    if ans.lower() in REL and sum(o in REL for o in lo) >= 3:
+        return ['relative-clause']   # A2：who/whom/whose/which 不是词性题
+    QUANT = {'every', 'each', 'all', 'another', 'other', 'others', 'each of', 'many', 'much', 'few', 'little', 'several', 'any', 'some', 'most'}
+    if ans.lower() in QUANT and sum(o in QUANT for o in lo) >= 3:
+        return ['quantifier']
     if ans.lower().rstrip(',') in cm.CONJ_ADV or sum(o in cm.CONJ_ADV or o in cm.PURE_CONJ or o in cm.PREP_LIKE for o in lo) >= 2:
         return ['conjunction']
+    if len({cm.pos_of(o) for o in opts} - {None}) >= 3:
+        return ['word-form']   # A2：strengthen/strength/strongly/stronger 词性各异 → 词性题
     if family(opts):
         if any(re.search(r'\b(ed|ing)$', o) for o in lo) and any(o.endswith(('s',)) for o in lo) and cm.pos_of(ans) not in ('adj', 'adv', 'noun'):
             return ['verb-tense']
@@ -203,7 +241,7 @@ def p6_srctags(q, ans, opts):
     if ans.lower() in ('it', 'they', 'them', 'their', 'its', 'this', 'these', 'those', 'he', 'she', 'his', 'her', 'we', 'our', 'us'):
         return ['pronoun']
     for k, t in P6_TAG_FROM_TAGS:
-        if k in tags:
+        if k in tags and not (t == 'sentence-insertion' and any(len(o.split()) < 4 for o in opts)):   # A2-QC：组级 tag，选项不是句子就不是插入题
             return [t]
     return ['vocabulary']
 
@@ -263,6 +301,11 @@ def build_p6(qs):
             head, bodies = '', ps
         else:
             return None, 'P6 片段信头不一致'
+        # A2-QC：部分题组每个片段都重复同一句开场白（G05–G07）→ 只在第一个片段保留
+        cp = os.path.commonprefix([b.strip() for b in (bodies[1:] if len(bodies) > 2 else bodies)]) if len(bodies) > 1 else ''
+        cut = max((m.end() for m in re.finditer(r'(?<![A-Z]\.[A-Z])(?<!\b[A-Z])(?<!Mr)(?<!Ms)(?<!Dr)[.!?]\s+(?=[A-Z])', cp + 'X')), default=0)
+        if cut and not re.search(r'_{3,}', cp[:cut]):
+            bodies = [bodies[0]] + [b.strip()[cut:] for b in bodies[1:]]
         body = ' '.join(bodies[i].strip().replace(blanks(bodies[i])[0], '[%d]' % (i + 1), 1) for i in range(len(qs)))
         return head + body, {q['id']: i + 1 for i, q in enumerate(qs)}
     # 形式 B/C：同一篇章 + 裸 _____；用每题题干句定位空位（篇章缺空时按题干把答案词替换成空）
@@ -571,7 +614,11 @@ def main():
         lines = body.split('\n')
         if not hdr and lines and is_title(lines[0]) or (not hdr and lines and len(lines[0].split()) <= 6 and not lines[0].strip().endswith(('.', ',', ':', '?')) and len(lines) > 1):
             title, body = lines[0].strip(), '\n'.join(lines[1:]).strip()
+            if not hdr:   # A2-QC：标题行之后才是 To/From/Subject 信头（G34）
+                hdr, body = cm.split_header(body)
         tx = tx_of(title, text, qs[0].get('category', ''))
+        if hdr and tx == 'TX.NOTICE' and re.search(r'^Subject:', hdr, re.M):
+            tx = 'TX.MEMO' if re.search(r'memo', title, re.I) or not re.search(r'e-?mail', title, re.I) else 'TX.EMAIL'
         bid = 'KDP-' + gid
         order = sorted(qs, key=lambda q: mp[q['id']])
         qn = [base + mp[q['id']] - 1 for q in order]
@@ -650,11 +697,12 @@ def main():
             need = {'inference': r'suggest|impl|infer|likely|probabl', 'sentence-insertion': r'position', 'vocabulary': r'closest in meaning',
                     'purpose': r'purpose|why was .* (sent|written)', 'main-idea': r'main|mainly|primarily', 'not-question': r'\bNOT\b'}
             tags = [t for t in tags if t not in need or re.search(need[t], q['prompt'], re.I if t != 'not-question' else 0)]
-            prim, ns, qt = cm.tag_p7(q['prompt'].strip(), tags, btx, txs, kind)
+            prim, ns, qt = cm.tag_p7(q['prompt'].strip(), tags, btx, txs, kind, opts[a])
+            dest = p7_diff(kind, len(words(alltext)), qt, prim.startswith('QT.P7X.CROSS') or prim == 'QT.P7.CROSS_REF', q.get('difficulty'))
             it = {'id': 'KDP-' + q['id'], 'part': 7, 'form': form, 'qnum': n, 'bundle_id': bid, 'q': q['prompt'].strip(), 'options': opts,
                   'answer': a, 'answer_letter': 'ABCD'[a], 'node': prim, 'node_ids': cm.uniq([prim] + ns + bsc[:1]),
                   'explain_en': '', 'explain_zh': ez(q), 'src_tags': q.get('tags') or [], 'src_id': q['id'],
-                  'difficulty_src': q.get('difficulty'), 'difficulty_est': DIFF.get(str(q.get('difficulty')), 3), 'template_id': None, 'source': SOURCE, 'format_version': 'current'}
+                  'difficulty_src': q.get('difficulty'), 'difficulty_est': dest, 'template_id': None, 'source': SOURCE, 'format_version': 'current'}
             it.update(extra(q))
             if dr:
                 it['distractor_reasons'] = dr
@@ -684,7 +732,7 @@ def main():
             'excluded': 'modules/part5-exercise-guides.js + modules/reading-exercise-guides.js 共 336 题（ESL Lounge Student，原站禁止转载）整体未读入；见 data/items_open_kdeppaei_audit.md',
             'compat': '与 items_open_maximcuynat 同 schema；explain_zh=原繁体解析经 %s 转简体，explain_en 留空；另有 translation_zh / evidence_en / src_id / src_category / difficulty_src（原 400/600/800）；difficulty_est 由原难度档映射 400→2、600→3、800→4' % T2S,
             'forms': sorted(fc), 'forms_note': '非整套：P5 每卷 30 题（101–130）、P6 每卷 4 篇（131–146）、P7 每卷 ≤54 题（147 起，单篇在前）；每卷 <90 题，engine 不当模考卷',
-            'node_tagging': '规则粗打（data/items_open_kdeppaei_convert.py：原类别/tags + 复用 work/convert_maximcuynat.py 题干/选项规则 + 场景关键词），未人工校对',
+            'node_tagging': '规则打标（data/items_open_kdeppaei_convert.py + work/convert_maximcuynat.py 规则函数）+ A2 全量人工复核修正（data/items_open_qc_fixes.json，由 work/qc/apply_qc_fixes.py 应用）',
             'counts': dict(cnt)}
     out = {'meta': meta, 'items': out_items, 'bundles': out_bundles}
     with open(OUT, 'w', encoding='utf-8') as f:

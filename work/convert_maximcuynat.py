@@ -32,44 +32,48 @@ TX_SUFFIX = {'TX.INVOICE': ['INVOICE', 'FORM'], 'TX.SCHEDULE': ['SCHEDULE', 'FOR
              'TX.DOUBLE': ['DOUBLE', 'MULTI'], 'TX.TRIPLE': ['TRIPLE', 'MULTI']}
 
 # ---------- 场景词包（关键词粗打，命中 ≥2 个不同关键词才打） ----------
-SCENES = {
-    'VO.SCENE.OFFICE_ADMIN': r'\b(form|paperwork|file|filing|document|office|stationery|photocop\w*|printer|desk|staff|personnel)\b',
-    'VO.SCENE.MEETING_SCHEDULE': r'\b(meeting|agenda|schedul\w*|reschedul\w*|appointment|postpone\w*|conference call|minutes)\b',
-    'VO.SCENE.RECRUIT': r'\b(applicant|candidate|hiring|hire|résumé|resume|interview\w*|vacanc\w*|position|job posting|recruit\w*|qualification)\b',
-    'VO.SCENE.HR_TRAINING': r'\b(training|workshop|promot\w*|benefit|performance review|employee|orientation|mentor\w*|appraisal)\b',
-    'VO.SCENE.PURCHASE_QUOTE': r'\b(quote|quotation|purchase order|supplier|vendor|procure\w*|bulk)\b',
-    'VO.SCENE.ORDER_SHIP': r'\b(order|shipment|ship\w*|deliver\w*|courier|parcel|package|tracking|dispatch\w*)\b',
-    'VO.SCENE.INVENTORY_PRODUCTION': r'\b(inventory|stock|warehouse|factory|plant|production|assembly|manufactur\w*)\b',
-    'VO.SCENE.MARKETING_AD': r'\b(marketing|advertis\w*|campaign|promotion\w*|brand|survey|launch)\b',
-    'VO.SCENE.SALES_DEAL': r'\b(contract|negotiat\w*|sales|client|deal|proposal|agreement)\b',
-    'VO.SCENE.CUSTOMER_SERVICE': r'\b(complain\w*|refund|exchange|warranty|customer service|customer care|apolog\w*|return\w*)\b',
-    'VO.SCENE.FINANCE_ACCOUNT': r'\b(budget|expense\w*|accounting|audit\w*|revenue|profit|finance|financial|reimburs\w*|tax)\b',
-    'VO.SCENE.BANK_PAYMENT': r'\b(invoice|payment|bank|account number|credit card|balance|deposit|bill\w*|fee)\b',
-    'VO.SCENE.CORP_STRATEGY': r'\b(merger|acqui\w*|expan\w*|branch\w*|headquarters|shareholder|quarter\w*|board)\b',
-    'VO.SCENE.TECH_IT': r'\b(software|system|portal|password|server|app|online|website|upgrade|technical|IT|laptop|computer)\b',
-    'VO.SCENE.RND_PRODUCT': r'\b(prototype|research|product\w*|design\w*|laborator\w*|develop\w*)\b',
-    'VO.SCENE.TRAVEL_FLIGHT': r'\b(flight|airport|travel\w*|trip|itinerar\w*|boarding|airline|train|luggage)\b',
-    'VO.SCENE.HOTEL_LODGING': r'\b(hotel|room|reservation|check-in|check-out|guest|lodging|suite|booking)\b',
-    'VO.SCENE.DINING_CATERING': r'\b(restaurant|menu|catering|chef|dinner|lunch|meal|café|cafe|food)\b',
-    'VO.SCENE.EVENT_CONFERENCE': r'\b(conference|event|festival|exhibit\w*|seminar|venue|register\w*|registration|attendee\w*|speaker)\b',
-    'VO.SCENE.REAL_ESTATE': r'\b(lease|tenant|rent\w*|landlord|property|apartment|office space|premises)\b',
-    'VO.SCENE.CONSTRUCTION_MAINT': r'\b(renovat\w*|construct\w*|repair\w*|maintenance|contractor|install\w*|building work|plumb\w*)\b',
-    'VO.SCENE.LEGAL_COMPLIANCE': r'\b(regulation\w*|complian\w*|legal|policy|law|permit|licen[cs]e\w*|certif\w*)\b',
-    'VO.SCENE.SAFETY': r'\b(safety|hazard\w*|inspection|protective|emergency|evacuat\w*|accident)\b',
-    'VO.SCENE.HEALTH_MEDICAL': r'\b(clinic|patient|doctor|medical|health|dental|pharmac\w*|hospital)\b',
-    'VO.SCENE.MEDIA_PUBLISH': r'\b(magazine|publish\w*|editor|article|journal\w*|newspaper|press|subscri\w*|author)\b',
-    'VO.SCENE.COMMUNITY_CULTURE': r'\b(community|museum|librar\w*|volunteer\w*|resident\w*|council|gallery|concert|pool|park)\b',
-    'VO.SCENE.RETAIL_SHOPPING': r'\b(store|shop\w*|retail\w*|discount|customer\w*|membership|purchase\w*|sale)\b',
-    'VO.SCENE.ENVIRONMENT_ENERGY': r'\b(energy|power|electricity|recycl\w*|environment\w*|sustainab\w*|emission\w*|solar|outage)\b',
-    'VO.SCENE.TRANSPORT_COMMUTE': r'\b(parking|commut\w*|bus|traffic|transport\w*|road|vehicle|bicycle|shuttle)\b',
+SCENES = {   # A2-QC：去掉歧义大的词（customer/purchase/room/policy/power/order 的 in order to/board/position/resume/IT 大小写等）
+    'VO.SCENE.OFFICE_ADMIN': r'\b(paperwork|filing|stationery|photocop\w*|printers?|copiers?|office supplies|supply (room|closet|cabinet)|front desk|reception desk|mail ?room|filing cabinets?)\b',
+    'VO.SCENE.MEETING_SCHEDULE': r'\b(meetings?|agendas?|reschedul\w*|appointments?|postpone\w*|conference call|meeting minutes|calendar)\b',
+    'VO.SCENE.RECRUIT': r'\b(applicants?|candidates?|hiring|résumés?|interview\w*|vacanc\w*|job (posting|opening|offer)s?|recruit\w*|qualifications?|job applications?)\b',
+    'VO.SCENE.HR_TRAINING': r'\b(training|workshops?|promoted|promotion to|performance reviews?|orientation|mentor\w*|appraisals?|benefits package|human resources|new hires?|onboarding)\b',
+    'VO.SCENE.PURCHASE_QUOTE': r'\b(quotes?|quotation|purchase orders?|suppliers?|vendors?|procure\w*|bulk orders?)\b',
+    'VO.SCENE.ORDER_SHIP': r'\b(orders?|ordered|shipments?|shipp\w*|deliver\w*|couriers?|parcels?|tracking number|dispatch\w*)\b',
+    'VO.SCENE.INVENTORY_PRODUCTION': r'\b(inventory|in stock|out of stock|stock levels?|warehouses?|factor(y|ies)|manufacturing plant|production line|assembly|manufactur\w*)\b',
+    'VO.SCENE.MARKETING_AD': r'\b(marketing|advertis\w*|campaigns?|promotional|brand(ing)?|market research|focus groups?|launch(es|ed)?)\b',
+    'VO.SCENE.SALES_DEAL': r'\b(contracts?|negotiat\w*|sales (team|figures|representative|department)|clients?|business deals?|proposals?|agreements?)\b',
+    'VO.SCENE.CUSTOMER_SERVICE': r'\b(complain\w*|refunds?|warrant(y|ies)|customer service|customer care|customer support|apolog\w*|return policy|replacement)\b',
+    'VO.SCENE.FINANCE_ACCOUNT': r'\b(budgets?|expense\w*|accounting|accountants?|audit\w*|revenue|profits?|financ\w*|reimburs\w*|tax(es)?)\b',
+    'VO.SCENE.BANK_PAYMENT': r'\b(invoices?|payments?|bank\w*|account number|credit card|balance due|deposits?|billing|bills?|fees?|paid)\b',
+    'VO.SCENE.CORP_STRATEGY': r'\b(mergers?|acqui(re|red|sition)\w*|expan(d|sion)\w*|branch(es)?|headquarters|shareholders?|quarterly|board of directors|annual report)\b',
+    'VO.SCENE.TECH_IT': r'\b(software|portal|passwords?|servers?|network|IT department|IT|upgrade[sd]?|technical support|tech support|log ?in|database|app|cybersecurity|firewall)\b',
+    'VO.SCENE.RND_PRODUCT': r'\b(prototypes?|research(ers)?|laborator(y|ies)|R&D|product development|engineers?|engineering|patents?|testing phase|new product line)\b',
+    'VO.SCENE.TRAVEL_FLIGHT': r'\b(flights?|airport|business trip|trips?|itinerar\w*|boarding|airlines?|train|luggage|baggage|travel(ers|ling|ing)?)\b',
+    'VO.SCENE.HOTEL_LODGING': r'\b(hotels?|check-in|check-out|guests?|lodging|suites?|room reservations?|front desk|inn)\b',
+    'VO.SCENE.DINING_CATERING': r'\b(restaurants?|menus?|catering|caterer|chefs?|dinner|lunch(eon)?|meals?|café|cafe|food|dining|banquet)\b',
+    'VO.SCENE.EVENT_CONFERENCE': r'\b(conferences?|events?|festivals?|exhibit\w*|seminars?|venues?|registration|register(ed)?|attendees?|speakers?|keynote|trade show)\b',
+    'VO.SCENE.REAL_ESTATE': r'\b(leases?|tenants?|rent|rented|renting|landlords?|propert(y|ies)|apartments?|office space|premises|real estate)\b',
+    'VO.SCENE.CONSTRUCTION_MAINT': r'\b(renovat\w*|construct\w*|repair\w*|maintenance|contractors?|install\w*|plumb\w*|elevators?|resurfac\w*)\b',
+    'VO.SCENE.LEGAL_COMPLIANCE': r'\b(regulations?|regulatory|complian\w*|legal|law|lawyers?|permits?|licen[cs]e[sd]?|certif\w*|attorneys?)\b',
+    'VO.SCENE.SAFETY': r'\b(safety|hazard\w*|inspection|inspectors?|protective|emergency|evacuat\w*|accidents?|fire drill)\b',
+    'VO.SCENE.HEALTH_MEDICAL': r'\b(clinics?|patients?|doctors?|medical|health|dental|dentist|pharmac\w*|hospitals?)\b',
+    'VO.SCENE.MEDIA_PUBLISH': r'\b(magazines?|publish(er|ers|ing)|editors?|journal\w*|newspapers?|press release|press|subscribers?|readers|authors?|reporters?|broadcast\w*)\b',
+    'VO.SCENE.COMMUNITY_CULTURE': r'\b(community|museums?|librar(y|ies)|volunteer\w*|residents?|city council|council|galler(y|ies)|concerts?|swimming pool|(?<!car )(?<!business )(?<!industrial )park|art)\b',
+    'VO.SCENE.RETAIL_SHOPPING': r'\b(stores?|shops|shopping|shoppers?|retail\w*|discounts?|on sale|sales event|checkout|coupons?|cashiers?|merchandise)\b',
+    'VO.SCENE.ENVIRONMENT_ENERGY': r'\b(energy|electricity|recycl\w*|environment\w*|sustainab\w*|emissions?|solar|power outages?|power cuts?|carbon|renewable)\b',
+    'VO.SCENE.TRANSPORT_COMMUTE': r'\b(parking|commut\w*|bus(es)?|traffic|public transport\w*|roads?|vehicles?|bicycles?|shuttle|subway)\b',
 }
 SCENE_RE = {k: re.compile(v, re.I) for k, v in SCENES.items()}
+CASE_SENS = {'IT', 'R&D'}   # A2-QC：IT 不能忽略大小写（否则 it 全命中）
+
 
 
 def scenes(text, top=2, min_hits=2):
     sc = []
+    text = re.sub(r'\bin order (to|for)\b', ' ', text, flags=re.I)   # A2-QC：in order to 不是订单
     for k, rx in SCENE_RE.items():
-        hits = {m.group(0).lower() for m in rx.finditer(text)}
+        hits = {m.group(0) if m.group(0).upper() in CASE_SENS else m.group(0).lower() for m in rx.finditer(text)}
+        hits = {h for h in hits if h.upper() not in CASE_SENS or h in CASE_SENS}
         if len(hits) >= min_hits:
             sc.append((len(hits), k))
     sc.sort(reverse=True)
@@ -77,7 +81,7 @@ def scenes(text, top=2, min_hits=2):
 
 
 # ---------- P5/P6 语法细分 ----------
-DETS = r'(the|a|an|its|their|his|her|our|your|my|this|that|these|those|each|every|any|some|no)'
+DETS = r'(the|a|an|its|their|his|her|our|your|my|this|that|these|those|each|every|any|some|no|several|many|few|various|both|all|numerous)'  # A2: + 数量限定词
 PREPS = r'(of|for|in|on|at|by|with|without|from|to|about|after|before|during|through|upon|into|despite|within|regarding)'
 TIME_PREPS = {'since', 'for', 'during', 'within', 'by', 'until', 'till', 'at', 'on', 'in', 'throughout', 'prior to', 'ahead of'}
 PLACE_PREPS = {'across', 'throughout', 'along', 'beside', 'among', 'between', 'near', 'opposite', 'behind', 'above', 'below', 'inside', 'outside'}
@@ -86,7 +90,7 @@ CONJ_ADV = {'however', 'therefore', 'moreover', 'furthermore', 'consequently', '
             'for example', 'for instance', 'in fact', 'in contrast', 'on the other hand', 'even so', 'after all',
             'in the meantime', 'afterward', 'afterwards', 'still', 'then', 'also', 'as well', 'nonetheless', 'hence', 'indeed'}
 PURE_CONJ = {'although', 'though', 'even though', 'because', 'whereas', 'unless', 'as soon as', 'so that', 'provided that',
-             'now that', 'even if', 'whether', 'while'}
+             'now that', 'even if', 'whether', 'while', 'if', 'once', 'as long as', 'in case', 'provided', 'providing'}   # A2-QC: + if/once
 PREP_LIKE = {'despite', 'in spite of', 'because of', 'due to', 'owing to', 'during', 'regardless of', 'instead of',
              'according to', 'prior to', 'in addition to', 'except for', 'without', 'following', 'given'}
 
@@ -101,6 +105,11 @@ def post_blank(stem):
     return m.group(1).lower() if m else ''
 
 
+AL_NOUNS = {'approval', 'approvals', 'proposal', 'proposals', 'arrival', 'arrivals', 'renewal', 'renewals', 'removal', 'rental', 'rentals',
+            'referral', 'referrals', 'withdrawal', 'disposal', 'survival', 'trial', 'trials', 'dismissal', 'refusal', 'retrieval',
+            'appraisal', 'tutorial', 'manual', 'manuals', 'interval', 'intervals', 'festival', 'portal', 'deal', 'meal', 'signal', 'journal'}
+
+
 def pos_of(word):
     w = word.lower().strip()
     if ' ' in w:
@@ -111,17 +120,40 @@ def pos_of(word):
         return 'noun'
     if re.search(r'(able|ible|ive|ful|ous|al|ent|ant|ic|ary|less|ish|ical)$', w):
         return 'adj'
+    if w in AL_NOUNS:   # A2：approval/proposal/arrival 是名词，不是 -al 形容词
+        return 'noun'
+    if w.endswith(('cise', 'wise')):   # A2: concise/precise/otherwise 不是动词
+        return 'adj' if w.endswith('cise') else 'adv'
+    if w in ADJ_ATE or w.endswith('ulate') and w in ('immaculate',):   # A2-QC：accurate/appropriate 是形容词
+        return 'adj'
     if re.search(r'(ize|ise|ify|ate|en)$', w):
         return 'verb'
     return None
+
+
+ADJ_ATE = {'accurate', 'appropriate', 'adequate', 'separate', 'fortunate', 'unfortunate', 'immediate', 'private', 'considerate',
+           'moderate', 'deliberate', 'legitimate', 'ultimate', 'intricate', 'elaborate', 'approximate', 'inaccurate', 'inappropriate',
+           'compassionate', 'passionate', 'desperate', 'delicate', 'intimate', 'innate', 'ornate', 'corporate', 'literate', 'affordable'}
+PART_ADJ = {'pleased', 'interested', 'satisfied', 'excited', 'delighted', 'disappointed', 'surprised', 'concerned', 'worried',
+            'impressed', 'qualified', 'confused', 'amazed', 'thrilled', 'frustrated', 'encouraged', 'committed', 'dedicated'}
 
 
 def word_form_nodes(stem, ans, opts):
     out = ['FD.VOC.AFFIX']
     pre, post = pre_blank(stem), post_blank(stem)
     p = pos_of(ans)
+    a = ans.lower()
+    BE = ('be', 'is', 'are', 'was', 'were', 'been', 'being')
+    # A2：has/have/had + 过去分词 = 完成时；be + -ed/-en = 被动（选项同词族时属动词形态，不是词性槽）
+    if pre in ('has', 'have', 'had') and re.search(r'(ed|en|wn)$', a) and p != 'adv':
+        return out + ['GR.VERB.TENSE_PERFECT']
+    if pre in BE and a in PART_ADJ:
+        return out + ['GR.NONFIN.PARTICIPLE_ADJ']   # A2：be pleased/interested = 情感分词形容词
+    if pre in BE and re.search(r'(ed|en|wn)$', a) and p not in ('adv', 'adj', 'noun'):
+        return out + ['GR.VERB.VOICE_PASSIVE']
     if p == 'adv':
-        if post and pos_of(post) == 'adj' or post.endswith('ed') and pre in ('be', 'is', 'are', 'was', 'were', 'been', 'being'):
+        if post and pos_of(post) == 'adj' or post.endswith('ed') and pre in BE \
+                or pre in BE and post and not re.search(r'(ed|ing|en)$', post) and not re.fullmatch(PREPS, post):   # A2: is deceptively simple
             out.append('GR.POS.ADV_ADJ')
         elif pre in ('will', 'has', 'have', 'had', 'can', 'should', 'must', 'may', 'would', 'could', 'is', 'are', 'was', 'were', 'be', 'been'):
             out.append('GR.POS.ADV_AUX_SLOT')
@@ -149,17 +181,29 @@ def word_form_nodes(stem, ans, opts):
         out.append('GR.POS.VERB_SLOT')
     elif re.search(r'(er|or|ant|ist)s?$', ans.lower()):
         out.append('GR.POS.NOUN_PERSON_THING')
+    elif p is None and re.fullmatch(DETS, pre or '-'):   # A2-QC：its ------- response → 形容词；the ------- of → 名词
+        out.append('GR.POS.NOUN_AFTER_DET' if not post or re.fullmatch(PREPS, post) else 'GR.POS.ADJ_BEFORE_NOUN')
+    elif p is None and pre in ('more', 'most', 'less', 'least', 'very', 'highly', 'and', 'extremely', 'so', 'too'):   # A2-QC：a more ------- analysis / highly ------- with
+        out.append('GR.POS.ADJ_COMPLEMENT' if not post or re.fullmatch(PREPS + r'|than|and|or|enough', post) else 'GR.POS.ADJ_BEFORE_NOUN')
     return out
 
 
 def tense_nodes(stem, ans):
     a = ans.lower()
-    if re.search(r'\b(has|have|had|will have)\b', a) or re.search(r'\b(since|by the time|already|so far|for the past|yet)\b', stem, re.I):
+    if pre_blank(stem) in ('has', 'have', 'had') or re.search(r'\b(has|have|had|will have)\b', a) or re.search(r'\b(since|by the time|already|so far|for the past|yet)\b', stem, re.I):
         return ['GR.VERB.TENSE_PERFECT']
     if re.search(r'\b(as soon as|once|when|before|after|until|if|unless)\b', stem, re.I) and not a.startswith('will') \
             and re.search(r'\b(will|next|tomorrow)\b', stem, re.I):
         return ['GR.VERB.TENSE_FUTURE_CLAUSE']
     return ['GR.VERB.TENSE_SIMPLE']
+
+
+ADJ_PREP_HEADS = {'responsible', 'interested', 'eligible', 'aware', 'capable', 'familiar', 'compatible', 'consistent', 'subject',
+                  'dependent', 'accustomed', 'comparable', 'equivalent', 'exempt', 'proud', 'similar', 'satisfied', 'concerned',
+                  'committed', 'dedicated', 'accountable', 'suitable', 'appropriate', 'available', 'essential', 'relevant',
+                  'different', 'inclusive', 'due', 'acceptable', 'grateful', 'superior', 'inferior', 'opposed', 'related', 'free',
+                  'beneficial', 'sensitive', 'resistant', 'typical', 'critical', 'close', 'full', 'involved', 'unaware', 'ineligible',
+                  'accessible', 'applicable', 'mindful', 'confident', 'skilled', 'experienced', 'renowned', 'famous', 'known'}   # A2-QC
 
 
 def prep_nodes(stem, ans, opts):
@@ -168,7 +212,11 @@ def prep_nodes(stem, ans, opts):
         return ['GR.CONN.PREP_VS_CONJ'], 'mix'
     if len(a.split()) >= 2:
         return ['GR.CONN.PREP_PHRASE_MULTI'], None
-    if a in TIME_PREPS and re.search(r'\b(\d|year|month|week|day|hour|minute|morning|afternoon|evening|monday|tuesday|wednesday|thursday|friday|saturday|sunday|january|february|march|april|may|june|july|august|september|october|november|december|noon|quarter|period|season|summer|winter|deadline)', stem, re.I):
+    if pre_blank(stem) in ADJ_PREP_HEADS:   # A2: responsible for / familiar with …
+        return ['VO.COLLO.ADJ_PREP'], None
+    after = ' '.join(re.split(r'-------', stem, 1)[1].split()[:4]) if '-------' in stem else stem
+    if a in TIME_PREPS and (re.search(r'(\d|\b(the end|years?|months?|weeks?|days?|hours?|minutes?|mornings?|afternoons?|evenings?|nights?|mondays?|tuesdays?|wednesdays?|thursdays?|fridays?|saturdays?|sundays?|january|february|march|april|june|july|august|september|october|november|december|noon|midnight|quarter|period|season|summer|winter|spring|autumn|deadline|weekend|today|tomorrow|yesterday|next|last|this|the (first|second|third|last|past|previous|coming)|a (period|week|month|year|day))\b)', after, re.I)
+                            or re.search(r'\bMay\b', after)):   # A2：只看空格后 4 个词（on the basis of … five years 不是时间介词）
         return ['GR.CONN.PREP_TIME'], None
     if a in PLACE_PREPS:
         return ['GR.CONN.PREP_PLACE'], None
@@ -182,6 +230,9 @@ def conj_nodes(stem, ans, opts):
         return ['GR.CONN.CONJ_CORRELATIVE'], None
     if a in CONJ_ADV:
         return ['GR.CONN.CONJ_ADVERB'], 'adv'
+    if a in ('before', 'after', 'since', 'until', 'upon', 'without', 'despite', 'during') and post_blank(stem).endswith('ing') \
+            or all(o in PREP_LIKE or o in PLACE_PREPS or o in ('among', 'besides', 'beside', 'upon', 'within', 'throughout') for o in lo):
+        return ['GR.CONN.PREP_TIME' if a in TIME_PREPS | {'before', 'after'} else 'GR.CONN.PREP_MEANING'], 'prep'   # A2: before closing = 介词+动名词
     if any(o in PREP_LIKE for o in lo) and any(o in PURE_CONJ or o in CONJ_ADV for o in lo):
         return ['GR.CONN.PREP_VS_CONJ'], 'mix'
     if a in ('and', 'but', 'or', 'yet', 'so', 'nor'):
@@ -231,6 +282,13 @@ def lex_node(stem, ans, opts):
     p = pos_of(ans)
     if p and ps.count(p) >= 3:
         return {'adv': 'VO.LEX.ADV', 'noun': 'VO.LEX.NOUN', 'adj': 'VO.LEX.ADJ', 'verb': 'VO.LEX.VERB'}[p]
+    if pre_blank(stem) in ('to', 'will', 'can', 'should', 'must', 'may', 'would', 'could', 'please'):
+        return 'VO.LEX.VERB'
+    cnt = Counter(x for x in ps if x).most_common()
+    if cnt and cnt[0][1] >= 2 and (len(cnt) == 1 or cnt[1][1] < cnt[0][1]) and p in (None, cnt[0][0]):   # A2-QC：已知词性多数即取之
+        return {'adv': 'VO.LEX.ADV', 'noun': 'VO.LEX.NOUN', 'adj': 'VO.LEX.ADJ', 'verb': 'VO.LEX.VERB'}[cnt[0][0]]
+    if all(re.fullmatch(r'[a-z]+ed', o.lower()) for o in opts):   # A2-QC：四个 -ed 选项 = 动词（被动/完成）
+        return 'VO.LEX.VERB'
     pre = pre_blank(stem)
     if pre in ('to', 'will', 'can', 'should', 'must', 'may', 'would', 'could', 'please', 'not') or \
             all(re.fullmatch(r'[a-z]+(ed|s)?', o.lower()) for o in opts) and pre in ('has', 'have', 'had', 'been'):
@@ -247,7 +305,7 @@ def gram_nodes(tag, stem, ans, opts):
     if tag == 'verb-tense':
         return 'QT.P5.VERB_FORM', tense_nodes(stem, ans)
     if tag == 'passive-voice':
-        return 'QT.P5.VERB_FORM', ['GR.VERB.VOICE_PASSIVE']
+        return 'QT.P5.VERB_FORM', ['GR.VERB.VOICE_PASSIVE'] + (['GR.VERB.TENSE_PERFECT'] if re.search(r'\b(has|have|had) been\b', ans.lower()) else [])
     if tag == 'subject-verb-agreement':
         return 'QT.P5.VERB_FORM', ['GR.VERB.AGREE_SV'] + (['FD.SENT.MODIFIER_STRIP'] if re.search(r'\b(of|with|in)\b', stem.split('-------')[0]) else [])
     if tag == 'modal':
@@ -258,13 +316,15 @@ def gram_nodes(tag, stem, ans, opts):
         a = ans.lower()
         return 'QT.P5.VERB_FORM', ['GR.NONFIN.TO_INF' if a.startswith('to ') else 'GR.NONFIN.GERUND' if a.endswith('ing') else 'GR.VERB.VERB_PATTERN']
     if tag == 'participle-adjective':
+        if re.match(r'\s*-------\s+[^,]{2,60},', stem):   # A2：句首 “Sent in a plain envelope, …” = 分词构句
+            return 'QT.P5.VERB_FORM', ['GR.NONFIN.PARTICIPLE_CLAUSE']
         return 'QT.P5.WORD_FORM', ['GR.NONFIN.PARTICIPLE_ADJ']
     if tag == 'preposition':
         ns, k = prep_nodes(stem, ans, opts)
         return ('QT.P5.CONNECTOR_MIX' if k == 'mix' else 'QT.P5.PREP'), ns
     if tag == 'conjunction':
         ns, k = conj_nodes(stem, ans, opts)
-        return ('QT.P5.CONNECTOR_MIX' if k in ('mix', 'adv') else 'QT.P5.CONJ'), ns
+        return ('QT.P5.CONNECTOR_MIX' if k in ('mix', 'adv') else 'QT.P5.PREP' if k == 'prep' else 'QT.P5.CONJ'), ns
     if tag == 'relative-clause':
         return 'QT.P5.RELATIVE', rel_nodes(ans)
     if tag == 'comparative':
@@ -313,6 +373,8 @@ def tag_p6(q, text, qnum, ans, opts, tx):
         gr += n2
     if t0 == 'conjunction' and ans.lower().rstrip(',') in CONJ_ADV:
         prim = 'QT.P6.CTX_CONJ_ADV'; gr = ['GR.CONN.CONJ_ADVERB', 'FD.READ.DISCOURSE']
+    elif t0 == 'verb-tense' and pre_blank(sent) in ('has', 'have', 'had', 'be', 'been', 'being', 'is', 'are', 'was', 'were', 'will', 'would', 'can', 'could', 'must', 'should', 'may', 'might', 'to'):
+        prim = 'QT.P6.INDEPENDENT'   # A2：空格紧跟助动词，只考形式，不需上下文判时态
     elif t0 in P6_QT:
         prim = P6_QT[t0]
         if t0 == 'pronoun':
@@ -322,31 +384,56 @@ def tag_p6(q, text, qnum, ans, opts, tx):
     return prim, ns + gr + [tx]
 
 
-def p7_type(q, tags):
-    t = q
+def p7_type(q, tags, ans=None):
+    # A2：去掉 “According to (the notice|Document 1), …” 前缀后再判题型
+    t = re.sub(r'^\s*(according to|based on|in) (the )?[^,?]{1,60},\s*', '', q, flags=re.I)
+    t = t[:1].upper() + t[1:]
     if 'sentence-insertion' in tags or re.search(r'positions marked \[1\]', t):
         return 'INSERTION'
     if 'vocabulary' in tags or re.search(r'closest in meaning', t, re.I):
         return 'SYNONYM'
-    if re.search(r'mean when (he|she|they) (writes?|says?)|most likely mean', t, re.I):
+    if re.search(r'(mean|imply|suggest|indicate) when (he|she|they) (writes?|says?)|most likely mean', t, re.I):   # A2-QC：imply when he writes “…” 也是意图题
         return 'INTENT'
     if 'not-question' in tags or re.search(r'\bNOT\b', t):
         return 'NOT_TRUE'
-    if 'purpose' in tags or 'main-idea' in tags or re.search(r'\b(purpose|main (topic|idea|subject)|mainly (about|discuss)|primarily (about|discuss)|why was .* (written|sent))', t, re.I):
-        return 'MAIN_PURPOSE'
-    if re.search(r'\b(for whom|who most likely|who (is|are) .* most likely|most likely (work|an?|the) |intended (for|audience)|what (kind of|type of) (business|company|organi[sz]ation)|what (is|was) .* (job|occupation|profession|position)|what industry)', t, re.I):
-        return 'INFER_WHO'
-    if re.search(r'(most likely|probably) (do|happen|take place) next|will .* most likely (do|happen)|what will .* (probably|most likely)|what (is|are) .* (likely|expected) to (do|happen)', t, re.I):
-        return 'INFER_NEXT'
-    if re.search(r'\b(asked|requested|advised|encouraged|instructed|invited|reminded|told|required|expected|recommended) to\b|what (does|do|did) .* (ask|request|recommend|suggest|advise|instruct)\b.* to do|what .* (suggest|recommend)s? .* do', t, re.I):
-        return 'REQUEST_ACTION'
-    if 'inference' in tags or re.search(r'\b(suggested|implied|inferred|most likely|probably)\b', t, re.I):
+    # A2：“Why does X mention/include/say …” 问的是某处细节的用意 → 推断，不是全文主旨
+    if re.search(r'^\s*why (does|do|did|might|would) .*\b(mention|say|says|note|point out|refer to|ask about)\b', t, re.I):
         return 'INFERENCE'
-    if re.search(r'\b(indicated|stated|true|mentioned|noted|said|reported)\b.*\babout\b|\bwhat is (indicated|stated|true|mentioned)\b', t, re.I):
+    # A2：“Why did X write/contact …”“What is being announced/advertised” = 全文目的/主题
+    if 'purpose' in tags or 'main-idea' in tags or re.search(
+            r'\b(purpose|main (topic|idea|subject)|mainly (about|discuss)|primarily (about|discuss)|why was .* (written|sent))'
+            r'|^\s*what (is|was) (being )?(advertised|announced|described|offered|promoted|reported)\?'
+            r'|^\s*what (service|product|event|change|program|opportunity) is (being )?(advertised|announced|described|offered|promoted)\?'
+            r'|^\s*what (is|are|was) [^?]* announcing\b|^\s*what did [^?]* announce\b|^\s*what is the [^?]{1,40} (mainly )?about\?', t, re.I):
+        return 'MAIN_PURPOSE'
+    # A2：“Why did X write/contact Y?” 答案是 “To …” 时问的是来信目的；答案是原因陈述时仍算原因题
+    if re.search(r'^\s*why (did|does|is|has) [^?]*\b(write|writing|written|contact|contacting|contacted)\b', t, re.I) and (ans is None or re.match(r'\s*to\b', ans, re.I)) and not re.search(r'most likely|probably', t, re.I):
+        return 'MAIN_PURPOSE'
+    # A2：“What does the paragraph/report suggest?” = 暗示（推断），不是建议
+    if re.search(r'^\s*what (does|do|did) [^?]*\b(paragraph|article|notice|e-?mail|letter|report|data|survey|chart|table|results?|review|page|information|figures?|memo|message|line|invoice|schedule|agenda|form|receipt|graph|entry|record|statement|summary)\b[^?]* (suggest|imply|indicate)\??$', t, re.I):
+        return 'INFERENCE'
+    # A2：“What is indicated/stated about the position” 是照合题，不是身份推断（“most likely true” 仍算推断）
+    if not re.search(r'most likely|probably', t, re.I) and re.search(r'\b(indicated|stated|true|mentioned|noted|said|reported)\b.*\babout\b|^\s*what is (indicated|stated|true|mentioned)\b', t, re.I):
         return 'TRUE_INDICATED'
+    if re.search(r"\b(for whom|who most likely|who (is|are) .* most likely|most likely (work|an?|the) |intended (for|audience)|what (kind of|type of) (business|company|organi[sz]ation)|what (is|was) (most likely )?[^?]*'s? (job|occupation|profession)\b|what (job|occupation|profession)\b|what industry)", t, re.I):   # A2-QC：listed in the job posting 不是身份题
+        return 'INFER_WHO'
+    if re.search(r'(most likely|probably) (do|happen|take place) next|what will (most likely|probably) happen|^\s*what will [^?]* do next|will .* most likely (do|happen)|what will .* (probably|most likely)|what (is|are) .* (likely|expected) to (do|happen)', t, re.I):
+        return 'INFER_NEXT'
+    # A2：去掉 expected（“expected to be at its noisiest” 不是要求行动）；补 suggest/recommend/request/ask X to
+    if re.search(r'\b(asked|requested|advised|encouraged|instructed|invited|reminded|told|required|recommended) to\b'
+                 r'|what (does|do|did) .* (ask|request|recommend|suggest|advise|instruct)\b.* to do'
+                 r'|what .* (suggest|recommend)s? .* do|^\s*what (does|do|did) [^?]* (suggest|recommend|request|propose)\??$'
+                 r'|^\s*what (does|do|did) [^?]* (ask|tell|remind|instruct)s? [^?]* to\b', t, re.I):
+        return 'REQUEST_ACTION'
+    if 'inference' in tags or re.search(r'\b(suggested|implied|inferred|most likely|probably|likely|might|best (be )?described)\b', t, re.I):
+        return 'INFERENCE'
     if re.search(r'^\s*why\b', t, re.I):
         return 'REASON'
-    if re.search(r'^\s*(when|how much|how many|how long|how often|what time|on what (date|day)|by what date|what (date|day|year|percentage|amount|price|fee|discount))\b', t, re.I):
+    TIMEY = r'\d|\b(a\.m|p\.m|noon|midnight|morning|afternoon|evening|night|today|tomorrow|yesterday|weeks?|months?|years?|days?|hours?|minutes?|quarter|season|spring|summer|autumn|fall|winter|monday|tuesday|wednesday|thursday|friday|saturday|sunday|january|february|march|april|may|june|july|august|september|october|november|december|weekend|weekday|immediately|annually|daily|weekly|monthly)\b'
+    if re.search(r'^\s*(when|by when)\b', t, re.I) and ans is not None and not re.search(TIMEY, ans, re.I):
+        return 'DETAIL'   # A2-QC：When may tools be renewed? → 答“条件”而非时间，归细节题
+    if re.search(r'^\s*(when|how much|how many|how long|how often|how far in advance|what time|at what time|by when|on what (date|day)|by what (date|time)|what (date|day|year|percentage|amount|price|fee|discount))\b'
+                 r'|^\s*what (is|was|will be) the [^?]*(maximum|minimum|total|amount|charge|fee|cost|price|number of|deadline)\b', t, re.I):
         return 'DETAIL_NUMBER'
     return 'DETAIL'
 
@@ -368,8 +455,8 @@ PARA_HINT = {'SYNONYM': ['VO.CONF.POLYSEMY_CONTEXT', 'VO.PARA.WORD_SYNONYM'], 'I
 QT_P7 = {'REASON': 'QT.P7.REASON'}
 
 
-def tag_p7(qtext, tags, bundle_tx, doc_txs, kind):
-    qt = p7_type(qtext, tags)
+def tag_p7(qtext, tags, bundle_tx, doc_txs, kind, ans=None):
+    qt = p7_type(qtext, tags, ans)
     group = QT_P7.get(qt, 'QT.P7.' + qt)
     ns = []
     x = p7x(qt, bundle_tx if kind != 'single' else doc_txs[0])
@@ -379,19 +466,52 @@ def tag_p7(qtext, tags, bundle_tx, doc_txs, kind):
         ns.append(doc_txs[0])
     else:
         ns += [bundle_tx] + sorted(set(doc_txs))
+    calc = None
     if qt == 'DETAIL_NUMBER' and any(t in ('TX.INVOICE', 'TX.SCHEDULE', 'TX.APP_FORM') for t in doc_txs):
         c = p7x('CALC_LOOKUP', next(t for t in doc_txs if t in ('TX.INVOICE', 'TX.SCHEDULE', 'TX.APP_FORM')))
         ns.append(c or 'QT.P7.CALC_LOOKUP')
-    if 'cross-reference' in tags:
-        cr = 'QT.P7X.CROSS_REF.' + ('TRIPLE' if kind == 'triple' else 'DOUBLE')
-        if kind == 'single':
-            cr = 'QT.P7.CROSS_REF'
-        prim = cr
+        if c and re.search(r'\b(in total|total|altogether|combined|how much more|how much less|difference|save|saved|after (the )?discount)\b', qtext, re.I):
+            calc = c   # A2-QC：需要计算（合计/差额/折后）→ 计算对照题为主节点
+    if calc and not ('cross-reference' in tags and kind != 'single'):
+        prim = calc
+        ns = [group] + [n for n in ns if n != calc]
+    elif 'cross-reference' in tags and kind != 'single':   # A2-QC：单篇不可能跨篇
+        prim = 'QT.P7X.CROSS_REF.' + ('TRIPLE' if kind == 'triple' else 'DOUBLE')
         ns = [group] + ns
+    elif x:
+        prim = x   # A2-QC：主节点用叶节点（题型×文本 交叉节点，与 pilot 一致），分组节点放 node_ids
+        ns = [group] + [n for n in ns if n != x]
     else:
-        prim = group
+        prim = group   # 该题型×文本无交叉叶节点（QT.P7.REASON 本身是叶节点）
     ns += PARA_HINT.get(qt, [])
     return prim, ns, qt
+
+
+BAND_D = {400: 2, 600: 3, 700: 3, 800: 4, 900: 5}
+
+
+def p7_rule_diff(kind, nwords, qt, cross):
+    """P7 规则难度 1–5：篇章形态 + 设问类型 + 篇幅（kdeppaei 的 p7_diff 与原难度档 2:1 加权；maximcuynat 无原档，直接用规则分）"""
+    r = 2 if kind == 'single' else 3
+    if qt in ('INFERENCE', 'INFER_WHO', 'INFER_NEXT', 'INTENT', 'INSERTION', 'NOT_TRUE'):
+        r += 1
+    if cross:   # A2-QC：跨篇与高阶设问分别加分（三篇跨篇推断 = 5）
+        r += 1
+    if nwords > (250 if kind == 'single' else 550):   # A2-QC：多篇本来就长，篇幅加分门槛提高
+        r += 1
+    if kind == 'single' and nwords < 90 and qt in ('DETAIL', 'DETAIL_NUMBER', 'MAIN_PURPOSE', 'REASON', 'REQUEST_ACTION'):
+        r -= 1
+    return max(1, min(5, r))
+
+
+def p56_rule_diff(part, node_ids, nwords):
+    """P5/P6 规则难度 1–5：取考点节点（GR/VO.LEX/VO.COLLO/QT.P6）的最高 target_band → 2/3/3/4/5；
+    P5 题干 ≥ 25 词 +1；P6 句子插入至少 3。"""
+    bands = [G[n]['target_band'] for n in node_ids if n.startswith(('GR.', 'VO.LEX', 'VO.COLLO', 'QT.P6.INS', 'QT.P6.CTX')) and n in G]
+    d = BAND_D.get(max(bands), 3) if bands else 3
+    if part == 5 and nwords >= 25:
+        d += 1
+    return max(1, min(5, d))
 
 
 def split_header(content):
@@ -436,6 +556,7 @@ def main():
                     items.append({'id': '%s-%d' % (pre, q['number']), 'part': 5, 'form': form, 'qnum': q['number'],
                                   'stem': stem, 'options': opts, 'answer': a, 'answer_letter': q['answer'],
                                   'node': prim, 'node_ids': uniq([prim] + ns),
+                                  'difficulty_est': p56_rule_diff(5, uniq([prim] + ns), len(re.findall(r"[A-Za-z']+", stem))),
                                   'explain_en': q['explanation'], 'explain_zh': '', 'src_tags': q['tags'],
                                   'template_id': None, 'source': 'maximcuynat_mit', 'format_version': 'current'})
                 continue
@@ -483,6 +604,7 @@ def main():
                           'bundle_id': bid, 'options': opts, 'answer': a, 'answer_letter': q['answer']}
                     if p == 6:
                         prim, ns = tag_p6(q, alltext, q['number'], ans, opts, btx)
+                        it['difficulty_est'] = p56_rule_diff(6, [prim] + ns, 0)
                         it['blank_n'] = blank[q['number']]
                         if q.get('text'):
                             it['stem'] = q['text']
@@ -490,8 +612,9 @@ def main():
                         qtext = (q.get('text') or '').strip()
                         if not qtext:
                             skipped.append((pre, q['number'], 'P7 缺题干')); continue
-                        prim, ns, _ = tag_p7(qtext, q['tags'], btx, doc_txs, kind)
+                        prim, ns, qt = tag_p7(qtext, q['tags'], btx, doc_txs, kind, ans)
                         it['q'] = qtext
+                        it['difficulty_est'] = p7_rule_diff(kind, len(re.findall(r"[A-Za-z']+", alltext)), qt, prim.startswith('QT.P7X.CROSS'))
                     it.update({'node': prim, 'node_ids': uniq([prim] + ns + bsc[:1]),
                                'explain_en': q['explanation'], 'explain_zh': '', 'src_tags': q['tags'],
                                'template_id': None, 'source': 'maximcuynat_mit', 'format_version': 'current'})
@@ -510,9 +633,9 @@ def main():
         'source_desc': 'github.com/maximcuynat/toeic-practice data/reading-test-1..6.json（6 套新制完整阅读，各 100 题）',
         'license': 'MIT, © 2026 Maxim Cuynat（见 data/open_items/maximcuynat_toeic-practice/LICENSE）',
         'compat': 'items_pilot_v1 字段 id/part/form/qnum/stem|q/options/answer/answer_letter/explain_zh/bundle_id/node/node_ids/blank_n；'
-                  '新增 explain_en（原英文解析）、src_tags（原题型标签）、source；无 difficulty_est/target_time_sec/distractor_reasons（build.py 用默认值）',
+                  '新增 explain_en（原英文解析）、src_tags（原题型标签）、source、difficulty_est（A2-QC 规则估计：P5/P6 按考点节点 target_band，P7 按篇章形态+设问类型+篇幅）；无 target_time_sec/distractor_reasons（build.py 用默认值）',
         'forms': ['MXT%02d' % t for t in range(1, 7)],
-        'node_tagging': '规则粗打（work/convert_maximcuynat.py：原 tags + 题干/选项规则 + 场景关键词），未人工校对',
+        'node_tagging': '规则打标（work/convert_maximcuynat.py）+ A2 全量人工复核修正（data/items_open_qc_fixes.json，由 work/qc/apply_qc_fixes.py 应用）',
         'counts': dict(cnt), 'skipped': [{'form': s[0], 'qnum': s[1], 'reason': s[2]} for s in skipped]},
         'items': items, 'bundles': bundles}
     with open(OUT, 'w', encoding='utf-8') as f:

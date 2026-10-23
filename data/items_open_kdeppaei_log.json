@@ -37,48 +37,64 @@
  },
  "primary_nodes": [
   [
-   "QT.P7.DETAIL",
-   175
-  ],
-  [
    "QT.P5.VERB_FORM",
-   89
+   93
   ],
   [
    "QT.P6.INDEPENDENT",
-   86
+   93
   ],
   [
    "QT.P5.WORD_FORM",
-   54
-  ],
-  [
-   "QT.P7.REASON",
-   54
+   56
   ],
   [
    "QT.P5.PAIR_GRAMMAR",
    46
   ],
   [
+   "QT.P7.REASON",
+   46
+  ],
+  [
+   "QT.P7X.DETAIL.DOUBLE",
+   42
+  ],
+  [
    "QT.P5.PREP",
-   34
+   35
   ],
   [
    "QT.P7.DETAIL_NUMBER",
+   35
+  ],
+  [
+   "QT.P5.CONNECTOR_MIX",
    29
   ],
   [
    "QT.P5.RELATIVE",
-   27
+   26
+  ],
+  [
+   "QT.P7.DETAIL",
+   26
   ],
   [
    "QT.P5.VOCAB",
-   27
+   21
   ],
   [
-   "QT.P5.CONNECTOR_MIX",
-   25
+   "QT.P7X.DETAIL.TRIPLE",
+   20
+  ],
+  [
+   "QT.P7X.DETAIL.NOTICE",
+   19
+  ],
+  [
+   "QT.P7X.DETAIL.ARTICLE",
+   19
   ],
   [
    "QT.P7.INFERENCE",
@@ -93,15 +109,19 @@
    17
   ],
   [
+   "QT.P7X.MAIN_PURPOSE.MULTI",
+   16
+  ],
+  [
    "QT.P6.INSERTION",
-   15
+   13
   ],
   [
-   "QT.P7.MAIN_PURPOSE",
-   15
+   "QT.P7X.DETAIL.INSTRUCTIONS",
+   13
   ],
   [
-   "QT.P5.CONJ",
+   "QT.P7X.DETAIL.EMAIL",
    11
   ],
   [
@@ -109,27 +129,27 @@
    9
   ],
   [
-   "QT.P7.NOT_TRUE",
-   9
-  ],
-  [
    "QT.P5.COMPARATIVE",
    8
+  ],
+  [
+   "QT.P7.NOT_TRUE",
+   8
+  ],
+  [
+   "QT.P5.CONJ",
+   7
   ],
   [
    "QT.P5.PRONOUN",
    7
   ],
   [
-   "QT.P7.INFER_WHO",
-   6
-  ],
-  [
    "QT.P7.REQUEST_ACTION",
-   6
+   7
   ],
   [
-   "QT.P6.CTX_TENSE",
+   "QT.P7.INFER_NEXT",
    5
   ],
   [
@@ -137,15 +157,75 @@
    4
   ],
   [
+   "QT.P7X.MAIN_PURPOSE.EMAIL",
+   4
+  ],
+  [
+   "QT.P7X.DETAIL.WEB",
+   4
+  ],
+  [
+   "QT.P7X.MAIN_PURPOSE.NOTICE",
+   3
+  ],
+  [
    "QT.P7.TRUE_INDICATED",
    3
   ],
   [
-   "QT.P7.INFER_NEXT",
+   "QT.P7X.MAIN_PURPOSE.ARTICLE",
    2
   ],
   [
-   "QT.P7.INTENT",
+   "QT.P7X.MAIN_PURPOSE.LETTER",
+   2
+  ],
+  [
+   "QT.P7X.INFERENCE.EMAIL",
+   2
+  ],
+  [
+   "QT.P7.MAIN_PURPOSE",
+   2
+  ],
+  [
+   "QT.P7.INFER_WHO",
+   2
+  ],
+  [
+   "QT.P7X.MAIN_PURPOSE.AD",
+   1
+  ],
+  [
+   "QT.P7X.CALC_LOOKUP.INVOICE",
+   1
+  ],
+  [
+   "QT.P7X.DETAIL_NUMBER.FORM",
+   1
+  ],
+  [
+   "QT.P7X.NOT_TRUE.ARTICLE",
+   1
+  ],
+  [
+   "QT.P7X.MAIN_PURPOSE.MEMO",
+   1
+  ],
+  [
+   "QT.P7X.INFER_WHO.NOTICE",
+   1
+  ],
+  [
+   "QT.P7X.REQUEST_ACTION.MEMO",
+   1
+  ],
+  [
+   "QT.P7X.INFERENCE.ARTICLE",
+   1
+  ],
+  [
+   "QT.P7X.INTENT.TEXT_MSG",
    1
   ],
   [
@@ -153,7 +233,7 @@
    1
   ],
   [
-   "QT.P7.SYNONYM",
+   "QT.P7X.SYNONYM.MULTI",
    1
   ]
  ],

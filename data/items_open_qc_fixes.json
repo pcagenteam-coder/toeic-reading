@@ -1,0 +1,1577 @@
+{
+ "meta": {},
+ "fixes": {
+  "KDP-P5-013": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_SUBJ_OBJ"
+   ],
+   "cat": "node",
+   "reason": "Final ------- from … is required：形容词后作主语的名词，不是形容词补语"
+  },
+  "KDP-P5-018": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_COMPOUND",
+    "GR.SPECIAL.PARALLEL"
+   ],
+   "cat": "node",
+   "reason": "选项同词族，考 time management 复合名词（并列结构为次节点）"
+  },
+  "KDP-P5-019": {
+   "node": "QT.P5.VERB_FORM",
+   "node_ids": [
+    "QT.P5.VERB_FORM",
+    "GR.VERB.AGREE_SV"
+   ],
+   "cat": "node",
+   "reason": "information（不可数）+ is：主谓一致，不是动词句型"
+  },
+  "KDP-P5-032": {
+   "node": "QT.P5.PRONOUN",
+   "node_ids": [
+    "QT.P5.PRONOUN",
+    "GR.PRON.INDEFINITE"
+   ],
+   "cat": "node",
+   "reason": "another/other/others/the others = 不定代词辨析"
+  },
+  "KDP-P5-087": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_PERSON_THING"
+   ],
+   "cat": "node",
+   "reason": "planning vs planner：无冠词宾语须用不可数名词（人/物名词辨析）；原缺语法节点"
+  },
+  "KDP-P5-092": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.NOUN_PREP"
+   ],
+   "cat": "node",
+   "reason": "concern about = 名词+介词"
+  },
+  "KDP-P5-095": {
+   "stem": "The research team ------- the survey results next week before publishing its report.",
+   "translation_zh": "研究团队将在下周发布报告前核实调查结果。",
+   "explain_zh": "next week 表示将来，用未来式 will verify。",
+   "cat": "answer",
+   "reason": "答案不唯一（无时间标记时 verified/verifies 也成立）→ 题干加 next week"
+  },
+  "KDP-P5-105": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.TIME_EXPR"
+   ],
+   "cat": "node",
+   "reason": "in advance = 时间固定表达"
+  },
+  "KDP-P5-106": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.FIXED_PHRASE"
+   ],
+   "cat": "node",
+   "reason": "in accordance with = 固定短语"
+  },
+  "KDP-P5-131": {
+   "stem": "------- material prices rose sharply, the final cost remained within the approved budget.",
+   "translation_zh": "尽管材料价格大幅上涨，最终成本仍在核准预算内。",
+   "cat": "text",
+   "reason": "原句“初步估算偏低→成本仍在预算内”不构成让步，语义不通 → 改让步前提"
+  },
+  "KDP-P5-133": {
+   "node": "QT.P5.VERB_FORM",
+   "node_ids": [
+    "QT.P5.VERB_FORM",
+    "GR.VERB.TENSE_SIMPLE",
+    "FD.SENT.MODIFIER_STRIP",
+    "GR.REL.NOUN_CLAUSE"
+   ],
+   "cat": "node",
+   "reason": "同位语从句后找主句谓语（took），考谓语形式，不是名词从句连接词"
+  },
+  "KDP-P5-156": {
+   "stem": "Please contact the facilities department if any ------- are detected in the conference room equipment.",
+   "translation_zh": "如果在会议室设备中发现任何故障，请联络设施部门。",
+   "explain_zh": "any 后接名词，且谓语 are 为复数，选复数名词 malfunctions。",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_AFTER_DET",
+    "GR.POS.NOUN_COUNT"
+   ],
+   "cat": "answer",
+   "reason": "答案不唯一（notice any malfunction 单数也对）→ 改为 any ------- are detected 锁定复数"
+  },
+  "KDP-P5-161": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "notification/notice/notify/notified 同词族，will 后填动词原形 = 词性题"
+  },
+  "KDP-P5-165": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.VERB_PREP"
+   ],
+   "cat": "node",
+   "reason": "apply to = 动词+介词"
+  },
+  "KDP-P5-172": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.NOUN_PREP"
+   ],
+   "cat": "node",
+   "reason": "control over = 名词+介词"
+  },
+  "KDP-P5-176": {
+   "node": "QT.P5.VOCAB",
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.NOUN",
+    "VO.CONF.FORM_NOUN"
+   ],
+   "cat": "node",
+   "reason": "trial/trail/trailer/trailing 是形近词（不同词族），考名词词义，不是形容词补语"
+  },
+  "KDP-P5-185": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "从句主语 they 后缺谓语动词；原缺语法节点"
+  },
+  "KDP-P5-202": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.NOUN_PREP"
+   ],
+   "cat": "node",
+   "reason": "coverage for = 名词+介词"
+  },
+  "KDP-P5-219": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "GR.POS.ADJ_COMPLEMENT",
+    "VO.CONF.SO_SUCH_TOO"
+   ],
+   "cat": "node",
+   "reason": "was + too dark：形容词补语 + too；原缺语法节点"
+  },
+  "KDP-P5-220": {
+   "stem": "Conference ------- are printed with a QR code that attendees scan at the check-in kiosk.",
+   "translation_zh": "会议门票上印有二维码，与会者在报到机扫描即可。",
+   "explain_zh": "空格与 Conference 构成复合名词作主语，谓语 are 为复数，选 tickets。",
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_COMPOUND",
+    "GR.VERB.AGREE_SV"
+   ],
+   "cat": "answer",
+   "reason": "答案不唯一（on their ticket 单数也通）→ 改题干，用复数谓语 are 锁定 tickets"
+  },
+  "KDP-P5-227": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "node",
+   "reason": "photo identification 复合名词，选项同词族 = 词性题"
+  },
+  "KDP-P5-228": {
+   "node": "QT.P5.VERB_FORM",
+   "node_ids": [
+    "QT.P5.VERB_FORM",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "recommend + doing = 动名词"
+  },
+  "KDP-P5-229": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.VERB_PREP"
+   ],
+   "cat": "node",
+   "reason": "apply to = 动词+介词"
+  },
+  "KDP-P5-240": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "VO.COLLO.TIME_EXPR",
+    "GR.CONN.PREP_PHRASE_MULTI"
+   ],
+   "cat": "node",
+   "reason": "ahead of schedule = 时间表达（复合介词），不是词汇题"
+  },
+  "KDP-P5-247": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_SUBJ_OBJ"
+   ],
+   "cat": "node",
+   "reason": "a clearer ------- of：冠词+形容词后填名词，选项同词族 = 词性题"
+  },
+  "KDP-P5-256": {
+   "node": "QT.P5.PREP",
+   "node_ids": [
+    "QT.P5.PREP",
+    "GR.CONN.PREP_MEANING"
+   ],
+   "cat": "node",
+   "reason": "returned for correction：选项全是介词，考介词义，不是被动语态"
+  },
+  "KDP-P5-259": {
+   "node": "QT.P5.WORD_FORM",
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.NONFIN.PARTICIPLE_ADJ"
+   ],
+   "cat": "node",
+   "reason": "a clearly ------- button：副词修饰的名词前分词形容词；原缺语法节点"
+  },
+  "KDP-P5-260": {
+   "node": "QT.P5.VERB_FORM",
+   "node_ids": [
+    "QT.P5.VERB_FORM",
+    "GR.NONFIN.PARTICIPLE_MODIFIER"
+   ],
+   "cat": "node",
+   "reason": "employees ------- remotely：现在分词后置修饰，不是假设语气"
+  },
+  "KDP-P6-005": {
+   "node": "QT.P6.CTX_TENSE",
+   "node_ids": [
+    "QT.P6.CTX_TENSE",
+    "GR.VERB.TENSE_SIMPLE",
+    "FD.READ.DISCOURSE"
+   ],
+   "cat": "node",
+   "reason": "will provide/provided/have provided 需靠上下文（8/12 将举行）定时态 = 语境时态题"
+  },
+  "KDP-P6-013": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.PARTICIPLE_MODIFIER"
+   ],
+   "cat": "node",
+   "reason": "sessions offered this week：过去分词后置修饰；原缺语法节点"
+  },
+  "KDP-P6-014": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.SPECIAL.PARALLEL",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "how to upload … and track：并列动词原形，不是名词前形容词"
+  },
+  "KDP-P6-015": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.CONN.PREP_TIME",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "before submitting：介词+动名词，句内即可判断，不是语境词汇题"
+  },
+  "KDP-P6-018": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.TO_INF",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "opportunity to give：选项是 give 的各形态，to 后接原形 = 独立型形式题"
+  },
+  "KDP-P6-022": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.CONN.CONJ_ADVERBIAL"
+   ],
+   "cat": "node",
+   "reason": "before + 从句：句内连词题，不是语境词汇"
+  },
+  "KDP-P6-025": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.CONN.PREP_TIME",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "before arriving：介词+动名词，句内即可判断"
+  },
+  "KDP-P6-033": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "stop using：动名词；原缺语法节点"
+  },
+  "KDP-P6-035": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET"
+   ],
+   "cat": "node",
+   "reason": "a full refund：冠词+形容词后填名词；原缺语法节点"
+  },
+  "KDP-P6-037": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_AFTER_DET",
+    "VO.COLLO.FIXED_PHRASE"
+   ],
+   "cat": "node",
+   "reason": "at no additional charge 固定短语；原缺语法节点"
+  },
+  "KDP-P6-038": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.CONN.CONJ_COORD"
+   ],
+   "cat": "node",
+   "reason": "…, but …：并列连词"
+  },
+  "KDP-P6-042": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.SPECIAL.PARALLEL",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "download…, update…, and schedule：并列动词原形，不是名词前形容词"
+  },
+  "KDP-P6-043": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.VERB_SLOT",
+    "GR.VERB.MODAL_BASE"
+   ],
+   "cat": "node",
+   "reason": "should first clear：情态动词后动词原形；原缺语法节点"
+  },
+  "KDP-P6-045": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "node",
+   "reason": "Thursday afternoon 名词；原缺语法节点"
+  },
+  "KDP-P6-049": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "node",
+   "reason": "packaging materials 复合名词；原缺语法节点"
+  },
+  "KDP-P6-051": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "by submitting：介词+动名词；原缺语法节点"
+  },
+  "KDP-P6-052": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "node",
+   "reason": "supply shortages 复合名词"
+  },
+  "KDP-P6-055": {
+   "options": [
+    "recorder",
+    "records",
+    "recorded",
+    "recording"
+   ],
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "answer",
+   "reason": "答案不唯一（their professional development record 单数也对）→ 干扰项 record 换成 recorder"
+  },
+  "KDP-P6-056": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.VERB_SLOT",
+    "GR.NONFIN.TO_INF"
+   ],
+   "cat": "node",
+   "reason": "expected to strengthen：to 后动词原形（选项词性各异），不是时态"
+  },
+  "KDP-P6-057": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_COMPOUND"
+   ],
+   "cat": "node",
+   "reason": "edge computing site 复合名词；原缺语法节点"
+  },
+  "KDP-P6-058": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.GERUND"
+   ],
+   "cat": "node",
+   "reason": "without exposing：介词+动名词；原缺语法节点"
+  },
+  "KDP-P6-063": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.VERB.AGREE_SV",
+    "GR.VERB.TENSE_FUTURE_CLAUSE"
+   ],
+   "cat": "node",
+   "reason": "unless a project manager requests：条件从句现在时 + 单数主谓一致；原缺语法节点"
+  },
+  "KDP-P6-068": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.ADJ_BEFORE_NOUN",
+    "GR.COMP.COMPARATIVE"
+   ],
+   "cat": "node",
+   "reason": "ready for wider use：名词前比较级形容词，不是人/物名词"
+  },
+  "KDP-P6-G12": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "Building Access Update 是内部通知，不是文章"
+  },
+  "KDP-P6-G17-Q2": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.VERB_SLOT",
+    "GR.VERB.AGREE_SV"
+   ],
+   "cat": "node",
+   "reason": "The warranty covers：主语后缺谓语（单数），不是人/物名词"
+  },
+  "KDP-P6-G17-Q4": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.CONN.PREP_TIME"
+   ],
+   "cat": "node",
+   "reason": "within one business day：时间介词，句内可判"
+  },
+  "KDP-P6-G18-Q4": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.NOUN_SUBJ_OBJ",
+    "VO.COLLO.NOUN_PREP"
+   ],
+   "cat": "node",
+   "reason": "early access to：形容词后名词（access to）；原缺语法节点"
+  },
+  "KDP-P6-G19-Q2": {
+   "node": "QT.P6.CTX_TENSE",
+   "node_ids": [
+    "QT.P6.CTX_TENSE",
+    "GR.VERB.TENSE_SIMPLE",
+    "FD.READ.DISCOURSE"
+   ],
+   "cat": "node",
+   "reason": "will focus vs focused：论坛 6/18 尚未举行，靠上下文定时态"
+  },
+  "KDP-P6-G24-Q3": {
+   "options": [
+    "The mobile-app layout",
+    "The thermostat's response to open windows",
+    "The temperature adjustment function",
+    "The device's software version"
+   ],
+   "cat": "answer",
+   "reason": "答案不唯一（support page / installation start time 也都不受更新影响）→ 两个干扰项换成更新确实会改变的项"
+  },
+  "KDP-P6-G28": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "INTERNAL NOTICE 是通知，不是说明书"
+  },
+  "KDP-P6-G28-Q4": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.VERB.VOICE_PASSIVE"
+   ],
+   "cat": "node",
+   "reason": "a broader launch will be scheduled：被动语态；原缺语法节点"
+  },
+  "KDP-P6-G32-Q2": {
+   "node_ids": [
+    "QT.P6.CTX_VOCAB",
+    "VO.LEX.VERB",
+    "VO.COLLO.VERB_NOUN"
+   ],
+   "cat": "node",
+   "reason": "develop an understanding 动名搭配"
+  },
+  "KDP-P6-G34-Q4": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.VERB_SLOT",
+    "GR.SPECIAL.PARALLEL"
+   ],
+   "cat": "node",
+   "reason": "record it … and notify：并列谓语动词原形"
+  },
+  "KDP-P6-G35-Q1": {
+   "node": "QT.P6.CTX_VOCAB",
+   "node_ids": [
+    "QT.P6.CTX_VOCAB",
+    "VO.COLLO.PHRASAL_VERB"
+   ],
+   "cat": "node",
+   "reason": "temporarily shut down 是短语动词词汇题，不是句子插入"
+  },
+  "KDP-P6-G35-Q2": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.REL.REL_ADVERB"
+   ],
+   "cat": "node",
+   "reason": "after midnight, when demand is lowest：关系副词 when"
+  },
+  "KDP-P6-G36-Q4": {
+   "node": "QT.P6.CTX_VOCAB",
+   "node_ids": [
+    "QT.P6.CTX_VOCAB",
+    "VO.LEX.NOUN"
+   ],
+   "cat": "node",
+   "reason": "provide feedback 是单词词汇题，不是句子插入"
+  },
+  "KDP-P7-R100": {
+   "bundle": true,
+   "doc_types": [
+    "TX.ARTICLE",
+    "TX.MEMO"
+   ],
+   "cat": "text",
+   "reason": "MANAGER'S NOTE 是内部备忘，不是说明书"
+  },
+  "KDP-P7-R101": {
+   "bundle": true,
+   "doc_types": [
+    "TX.NOTICE",
+    "TX.INVOICE",
+    "TX.EMAIL"
+   ],
+   "cat": "text",
+   "reason": "PACKING SLIP 是装箱单（订单类）"
+  },
+  "KDP-P7-R101-Q3": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 1 篇“替换需客户批准”对照第 3 篇“我只批准了 Stand S”"
+  },
+  "KDP-P7-R102": {
+   "bundle": true,
+   "doc_types": [
+    "TX.SCHEDULE",
+    "TX.TEXT_MSG"
+   ],
+   "cat": "text",
+   "reason": "INNOVATION FORUM 是议程表"
+  },
+  "KDP-P7-R102-Q3": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7X.CALC_LOOKUP.SCHEDULE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：11:30（第 1 篇）提前 10 分钟（第 2 篇）= 11:20"
+  },
+  "KDP-P7-R103": {
+   "bundle": true,
+   "doc_types": [
+    "TX.INSTRUCTIONS",
+    "TX.APP_FORM",
+    "TX.MEMO"
+   ],
+   "cat": "text",
+   "reason": "CLAIM #T-206 是报销申请表；MANAGER'S NOTE 是备忘"
+  },
+  "KDP-P7-R103-Q1": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.DETAIL_NUMBER",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 3 篇“降到每日上限”+ 第 1 篇上限 $45"
+  },
+  "KDP-P7-R103-Q4": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7.CALC_LOOKUP",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇+计算：$45（政策上限）+ $38（出租车）= $83，订阅移走"
+  },
+  "KDP-P7-R104-Q1": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFER_NEXT",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 1 篇自动续约条款 + 第 2 篇打算续约（未发通知）"
+  },
+  "KDP-P7-R104-Q3": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.DETAIL_NUMBER",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：7/15 启用（第 2 篇）+ 启用后第一个完整月起计费（第 1 篇）→ 8 月"
+  },
+  "KDP-P7-R105-Q1": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7.CALC_LOOKUP",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇+计算：学费 $420 + 考试 $80（第 1 篇）按第 2 篇政策可报，差旅不可报"
+  },
+  "KDP-P7-R105-Q2": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.REASON",
+    "VO.PARA.CAUSE_EFFECT"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：$60 是差旅（第 1 篇）+ 差旅不报（第 2 篇）"
+  },
+  "KDP-P7-R105-Q3": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.TRUE_INDICATED",
+    "VO.PARA.WORD_SYNONYM"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：全职 14 个月（第 1 篇）对照“至少 6 个月”（第 2 篇）"
+  },
+  "KDP-P7-R107": {
+   "bundle": true,
+   "doc_types": [
+    "TX.ARTICLE",
+    "TX.MEMO"
+   ],
+   "cat": "text",
+   "reason": "MARKETING NOTE 是内部备忘"
+  },
+  "KDP-P7-R107-Q2": {
+   "node_ids": [
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7.CALC_LOOKUP",
+    "FD.READ.SCAN",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "260+255+300 需合计 → 补计算节点"
+  },
+  "KDP-P7-R108-Q3": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：十楼（第 2 篇）在 8–12 楼试点范围内（第 1 篇）"
+  },
+  "KDP-P7-R109-Q1": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.DETAIL",
+    "QT.P7X.CALC_LOOKUP.INVOICE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 1 篇 idle-time 不报销 → 对照第 2 篇收据"
+  },
+  "KDP-P7-R109-Q3": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.DETAIL",
+    "QT.P7X.CALC_LOOKUP.INVOICE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 1 篇要求的收据要素对照第 2 篇收据"
+  },
+  "KDP-P7-R109-Q4": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.DETAIL_NUMBER",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：行程 11/15 结束（第 3 篇）+ 结束后十个工作日内（第 1 篇）"
+  },
+  "KDP-P7-R110": {
+   "bundle": true,
+   "doc_types": [
+    "TX.ARTICLE",
+    "TX.TEXT_MSG"
+   ],
+   "cat": "text",
+   "reason": "PILOT RESULTS 数据表是报告"
+  },
+  "KDP-P7-R110-Q2": {
+   "node_ids": [
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7.CALC_LOOKUP",
+    "FD.READ.SCAN",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "45/60 = 75% 需计算 → 补计算节点"
+  },
+  "KDP-P7-R35": {
+   "bundle": true,
+   "doc_types": [
+    "TX.EMAIL",
+    "TX.TEXT_MSG",
+    "TX.INVOICE"
+   ],
+   "cat": "text",
+   "reason": "DELIVERY NOTE（客户/品项清单）是送货单，归发票/订单类"
+  },
+  "KDP-P7-R35-Q6": {
+   "node": "QT.P7.INFERENCE",
+   "node_ids": [
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "给定 8:30 预约、8:20 到达，需结合 8:15 开门推理 → 推断题，不是照合题"
+  },
+  "KDP-P7-R40-Q3": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：答案只在第 3 篇（e-mail）里，单篇即可作答"
+  },
+  "KDP-P7-R43-Q5": {
+   "node": "QT.P7.INFERENCE",
+   "node_ids": [
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只需读短信本身（driver arrive after 9 A.M.）"
+  },
+  "KDP-P7-R44-Q3": {
+   "node": "QT.P7.REASON",
+   "node_ids": [
+    "QT.P7.REASON",
+    "VO.PARA.CAUSE_EFFECT"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：答案原句在第 2 篇（Since you handle payment information），单篇可答"
+  },
+  "KDP-P7-R46-Q3": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 3 篇聊天即可"
+  },
+  "KDP-P7-R46-Q4": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 project update 即可"
+  },
+  "KDP-P7-R47-Q3": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 e-mail 即可"
+  },
+  "KDP-P7-R48-Q3": {
+   "node": "QT.P7.REQUEST_ACTION",
+   "node_ids": [
+    "QT.P7.REQUEST_ACTION",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：第 3 篇 Naomi 直接说 switch to a desk with a blue icon；题型是建议行动"
+  },
+  "KDP-P7-R52-Q3": {
+   "node": "QT.P7.REQUEST_ACTION",
+   "node_ids": [
+    "QT.P7.REQUEST_ACTION",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "What does Marcus suggest for … = 提议行动，不是推断"
+  },
+  "KDP-P7-R52-Q4": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：题干限定 According to the production note，单篇可答"
+  },
+  "KDP-P7-R59-Q1": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 1 篇通知"
+  },
+  "KDP-P7-R59-Q3": {
+   "node": "QT.P7.DETAIL_NUMBER",
+   "node_ids": [
+    "QT.P7.DETAIL_NUMBER",
+    "FD.READ.SCAN",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇（10 A.M. Monday）"
+  },
+  "KDP-P7-R59-Q4": {
+   "node": "QT.P7.REQUEST_ACTION",
+   "node_ids": [
+    "QT.P7.REQUEST_ACTION",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇；题型是提议/建议"
+  },
+  "KDP-P7-R60-Q1": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "问职位职责（招聘广告原文），是细节题不是身份推断"
+  },
+  "KDP-P7-R60-Q4": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.TRUE_INDICATED",
+    "QT.P7X.DETAIL.DOUBLE",
+    "VO.PARA.WORD_SYNONYM"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：要拿第 1 篇的任职要求对照第 2 篇的经历"
+  },
+  "KDP-P7-R61": {
+   "bundle": true,
+   "doc_types": [
+    "TX.INSTRUCTIONS",
+    "TX.CHAT"
+   ],
+   "cat": "text",
+   "reason": "Warranty Card 是保修条款"
+  },
+  "KDP-P7-R62-Q1": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "问 keynote 主题（议程表查找），是细节题不是全文主旨"
+  },
+  "KDP-P7-R62-Q3": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：要用第 2 篇“已有无障碍支付软件”排除第 1 篇议程中的 Breakout A"
+  },
+  "KDP-P7-R63-Q1": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 1 篇发票说明"
+  },
+  "KDP-P7-R63-Q2": {
+   "node": "QT.P7.REQUEST_ACTION",
+   "node_ids": [
+    "QT.P7.REQUEST_ACTION",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 e-mail"
+  },
+  "KDP-P7-R63-Q3": {
+   "node": "QT.P7.DETAIL_NUMBER",
+   "node_ids": [
+    "QT.P7.DETAIL_NUMBER",
+    "FD.READ.SCAN",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 e-mail"
+  },
+  "KDP-P7-R63-Q4": {
+   "node": "QT.P7.INFERENCE",
+   "node_ids": [
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：第 2 篇 before we process payment 即可推出"
+  },
+  "KDP-P7-R66-Q1": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 1 篇通知"
+  },
+  "KDP-P7-R66-Q2": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 e-mail"
+  },
+  "KDP-P7-R66-Q3": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇 e-mail"
+  },
+  "KDP-P7-R66-Q4": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 3 篇表格说明"
+  },
+  "KDP-P7-R67-Q4": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：把第 3 篇退换政策套到第 2 篇评论者的颜色错误订单上"
+  },
+  "KDP-P7-R69-Q4": {
+   "options": [
+    "Recent boarding data",
+    "Measurements taken in each train car",
+    "Weight sensors",
+    "Passenger phone locations"
+   ],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.NOT_TRUE",
+    "ST.ELIM.OPTIONS"
+   ],
+   "cat": "answer",
+   "reason": "答案不唯一（Train car fullness estimates 是输出不是输入，也算“未被使用”）→ 换成第 1 篇的改写项；需第 1 篇+第 2 篇对照 → 跨篇"
+  },
+  "KDP-P7-R70": {
+   "bundle": true,
+   "doc_types": [
+    "TX.ARTICLE",
+    "TX.NOTICE",
+    "TX.EMAIL"
+   ],
+   "cat": "text",
+   "reason": "Newsletter 是文章不是信件；Volunteer Sign-up Note 是公告"
+  },
+  "KDP-P7-R70-Q1": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 1 篇"
+  },
+  "KDP-P7-R70-Q2": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇"
+  },
+  "KDP-P7-R70-Q4": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 3 篇"
+  },
+  "KDP-P7-R73-Q2": {
+   "node": "QT.P7.DETAIL_NUMBER",
+   "node_ids": [
+    "QT.P7.DETAIL_NUMBER",
+    "FD.READ.SCAN",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 2 篇（from 8:30 to 10:30）"
+  },
+  "KDP-P7-R73-Q3": {
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.DOUBLE",
+    "QT.P7.DETAIL",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：只看第 1 篇（urgent medical and food shipments）"
+  },
+  "KDP-P7-R73-Q4": {
+   "node": "QT.P7.INFER_NEXT",
+   "node_ids": [
+    "QT.P7.INFER_NEXT",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：第 2 篇 10 A.M. 送货、10:30 到场即可推出；题型为推断下一步"
+  },
+  "KDP-P7-R75": {
+   "bundle": true,
+   "text_type": "TX.EMAIL",
+   "doc_types": [
+    "TX.EMAIL"
+   ],
+   "cat": "text",
+   "reason": "标题为 E-MAIL，误判为信件"
+  },
+  "KDP-P7-R77-Q2": {
+   "node": "QT.P7.INFERENCE",
+   "node_ids": [
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：第 2 篇末句直接说明来信目的"
+  },
+  "KDP-P7-R79-Q1": {
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "node_ids": [
+    "QT.P7X.DETAIL.TRIPLE",
+    "QT.P7.DETAIL",
+    "FD.READ.SCAN"
+   ],
+   "cat": "node",
+   "reason": "跨篇误标：第 1 篇 streamed online only 即可"
+  },
+  "KDP-P7-R81": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "Staff Notice 是通知，不是说明书"
+  },
+  "KDP-P7-R84": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "Process Update 是内部流程变更通知，不是说明书"
+  },
+  "KDP-P7-R90": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "展示板使用须知是公告，不是说明书"
+  },
+  "KDP-P7-R91-Q3": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 2 篇 Express shipping + 第 1 篇 express 两个工作日内送达"
+  },
+  "KDP-P7-R92-Q4": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.NOT_TRUE",
+    "ST.ELIM.OPTIONS"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：选项来自第 1 篇服务清单，要与第 2 篇需求逐项对照"
+  },
+  "KDP-P7-R92-Q5": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFER_NEXT"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 1 篇“一个工作日内回复询价”+ 第 2 篇已发询价；题型为推断下一步"
+  },
+  "KDP-P7-R93": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "DELIVERY ACCESS NOTICE 是通知，不是说明书"
+  },
+  "KDP-P7-R96": {
+   "bundle": true,
+   "text_type": "TX.NOTICE",
+   "doc_types": [
+    "TX.NOTICE"
+   ],
+   "cat": "text",
+   "reason": "工作坊时间表+报名须知是通知/日程，不是文章"
+  },
+  "KDP-P7-R98-Q1": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.REASON",
+    "VO.PARA.CAUSE_EFFECT"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：L18 到站 8:50（第 1 篇）晚于报到截止 8:40（第 2 篇）"
+  },
+  "KDP-P7-R98-Q2": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFERENCE",
+    "QT.P7X.CALC_LOOKUP.SCHEDULE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 2 篇 earlier express → 第 1 篇时刻表的 E12"
+  },
+  "KDP-P7-R98-Q4": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.DETAIL",
+    "QT.P7X.CALC_LOOKUP.SCHEDULE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：先由第 2 篇推出 E12，再查第 1 篇站台"
+  },
+  "KDP-P7-R99-Q1": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.REASON",
+    "VO.PARA.CAUSE_EFFECT"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：发票 $34 + 政策（超 2 小时退 10%）+ 邮件（2 小时 18 分）"
+  },
+  "KDP-P7-R99-Q2": {
+   "node": "QT.P7X.CALC_LOOKUP.INVOICE",
+   "node_ids": [
+    "QT.P7X.CALC_LOOKUP.INVOICE",
+    "QT.P7.DETAIL_NUMBER",
+    "QT.P7.CALC_LOOKUP",
+    "VO.PARA.NUMBER_TIME"
+   ],
+   "cat": "node",
+   "reason": "$60 ÷ 4 = $15 需计算 → 计算/表格对照题"
+  },
+  "MXC-T01-105": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.ADV_VERB"
+   ],
+   "cat": "node",
+   "reason": "grew sharply：副词修饰动词；原缺语法节点"
+  },
+  "MXC-T01-114": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.NONFIN.PARTICIPLE_ADJ",
+    "GR.POS.ADJ_BEFORE_NOUN"
+   ],
+   "cat": "node",
+   "reason": "with proven experience：名词前分词形容词，不是动词位"
+  },
+  "MXC-T01-120": {
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.NOUN",
+    "VO.CONF.FORM_NOUN"
+   ],
+   "cat": "node",
+   "reason": "scheduling conflict 名词词义（选项形近）；原缺词汇节点"
+  },
+  "MXC-T01-133": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "we strongly recommend：主语+副词后缺谓语动词；原缺语法节点"
+  },
+  "MXC-T01-139": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.VERB.MODAL_BASE"
+   ],
+   "cat": "node",
+   "reason": "will + be placed：句内即可判断（are/were 后不能接 be），不是语境时态"
+  },
+  "MXC-T01-142": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.VERB.TENSE_FUTURE_CLAUSE"
+   ],
+   "cat": "node",
+   "reason": "when you arrive：时间从句现在代将来，句内可判"
+  },
+  "MXC-T01-178": {
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.DOUBLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 2 篇午夜到早八工作 + 第 1 篇 Studio Plus 24 小时开放"
+  },
+  "MXC-T01-200": {
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "node_ids": [
+    "QT.P7X.CROSS_REF.TRIPLE",
+    "QT.P7.INFERENCE",
+    "VO.PARA.GENERALIZE"
+   ],
+   "cat": "node",
+   "reason": "漏标跨篇：第 3 篇“发票仍邮寄”对照第 1 篇“4/1 起只发电子发票”"
+  },
+  "MXC-T02-115": {
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.NOUN"
+   ],
+   "cat": "node",
+   "reason": "a full refund 名词词义；原缺词汇节点"
+  },
+  "MXC-T02-136": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "VO.COLLO.NOUN_PREP"
+   ],
+   "cat": "node",
+   "reason": "assistance with = 名词+介词搭配"
+  },
+  "MXC-T02-137": {
+   "node": "QT.P6.INDEPENDENT",
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.VERB.TENSE_SIMPLE"
+   ],
+   "cat": "node",
+   "reason": "从句 would 决定主句用过去式 decided，句内可判"
+  },
+  "MXC-T02-138": {
+   "node_ids": [
+    "QT.P6.CTX_VOCAB",
+    "VO.COLLO.FIXED_PHRASE"
+   ],
+   "cat": "node",
+   "reason": "subject to availability 固定短语"
+  },
+  "MXC-T02-139": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "VO.COLLO.NUM_EXPR",
+    "GR.COMP.COMPARATIVE"
+   ],
+   "cat": "node",
+   "reason": "no later than 固定表达"
+  },
+  "MXC-T03-112": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_SUBJ_OBJ"
+   ],
+   "cat": "node",
+   "reason": "received formal approval：形容词后作宾语的名词，不是表语形容词"
+  },
+  "MXC-T03-155": {
+   "node": "QT.P7.REASON",
+   "node_ids": [
+    "QT.P7.REASON",
+    "VO.PARA.CAUSE_EFFECT"
+   ],
+   "cat": "node",
+   "reason": "Why has … held the work at stage C? 问局部原因，不是来信目的（原 tag purpose 误标）"
+  },
+  "MXC-T04-104": {
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.ADJ"
+   ],
+   "cat": "node",
+   "reason": "instant access 形容词词义；原缺词汇节点"
+  },
+  "MXC-T04-114": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_PERSON_THING"
+   ],
+   "cat": "node",
+   "reason": "an experienced analyst：人/物名词辨析；原缺语法节点"
+  },
+  "MXC-T04-131": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.SPECIAL.PARALLEL",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "will read … and direct：并列动词原形，不是名词前形容词"
+  },
+  "MXC-T04-136": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.SPECIAL.PARALLEL",
+    "GR.POS.VERB_SLOT"
+   ],
+   "cat": "node",
+   "reason": "Take … and label：并列祈使动词，不是名词前形容词"
+  },
+  "MXC-T04-143": {
+   "node": "QT.P6.CTX_TENSE",
+   "node_ids": [
+    "QT.P6.CTX_TENSE",
+    "GR.VERB.TENSE_SIMPLE",
+    "FD.READ.DISCOURSE"
+   ],
+   "cat": "node",
+   "reason": "is/was/will be 句内都合语法，须看上文（将停机）定时态"
+  },
+  "MXC-T05-109": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.ADJ_BEFORE_NOUN"
+   ],
+   "cat": "node",
+   "reason": "satisfactory proof：名词前形容词；原缺语法节点"
+  },
+  "MXC-T05-116": {
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.VERB",
+    "VO.COLLO.VERB_PREP"
+   ],
+   "cat": "node",
+   "reason": "adhere to：唯一能接 to 的动词，动介搭配"
+  },
+  "MXC-T05-129": {
+   "node_ids": [
+    "QT.P5.VOCAB",
+    "VO.LEX.NOUN",
+    "VO.COLLO.FIXED_PHRASE"
+   ],
+   "cat": "node",
+   "reason": "boarding pass 固定搭配；原缺词汇节点"
+  },
+  "MXC-T05-130": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_SUBJ_OBJ"
+   ],
+   "cat": "node",
+   "reason": "Growth 作主语；原缺语法节点"
+  },
+  "MXC-T05-141": {
+   "node": "QT.P6.CTX_CONJ_ADV",
+   "node_ids": [
+    "QT.P6.CTX_CONJ_ADV",
+    "GR.CONN.CONJ_ADVERB",
+    "FD.READ.DISCOURSE"
+   ],
+   "cat": "node",
+   "reason": "Specifically/Nevertheless/Otherwise/Meanwhile = 接续副词题"
+  },
+  "MXC-T05-145": {
+   "node_ids": [
+    "QT.P6.CTX_VOCAB",
+    "VO.LEX.VERB"
+   ],
+   "cat": "node",
+   "reason": "exploring the possibility 动词词义；原缺词汇节点"
+  },
+  "MXC-T06-101": {
+   "node_ids": [
+    "QT.P5.WORD_FORM",
+    "FD.VOC.AFFIX",
+    "GR.POS.NOUN_SUBJ_OBJ"
+   ],
+   "cat": "node",
+   "reason": "a significant increase in：形容词后作宾语的名词；原缺语法节点"
+  },
+  "MXC-T06-139": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.POS.ADV_ADJ",
+    "GR.COMP.COMPARATIVE"
+   ],
+   "cat": "node",
+   "reason": "considerably larger：副词修饰比较级"
+  },
+  "MXC-T06-140": {
+   "node_ids": [
+    "QT.P6.INDEPENDENT",
+    "GR.NONFIN.PARTICIPLE_CLAUSE",
+    "GR.CONN.PREP_VS_CONJ"
+   ],
+   "cat": "node",
+   "reason": "while shortening：连词 + 分词"
+  }
+ }
+}
