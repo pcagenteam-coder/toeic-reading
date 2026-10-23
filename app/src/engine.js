@@ -332,13 +332,18 @@ const E = {
       nodes: nodes.map(id => ({ id, nm: nm(id), m: G[id] ? Math.round(G[id].m * 100) / 100 : null, stuck: false })), progress: Planner.progressText(A), tip: this.getProfile().circadian.tip };
   },
   /* 进度：离目标还差 N 个考点、约 X 小时；维持模式；倒排放弃；作战卡 */
-  getProgress(state) {
-    if (state && state !== this.st) { const k = this.st; this.st = state; try { return this.getProgress(state); } finally { this.st = k; } }
+  /* opts.pred = {score, lo, hi, target}（前端 API.predict 的结果）；缺省用旧 predict()。need = 够达标的最少考点（UX §11.2） */
+  getProgress(state, opts) {
+    if (state && state !== this.st) { const k = this.st; this.st = state; try { return this.getProgress(state, opts); } finally { this.st = k; } }
     const A = Planner.analyze(this.pctx()), nm = id => (ND[id] ? ND[id].nm : id);
+    let pred = opts && opts.pred;
+    if (!pred) { const o = this.predict(); pred = { score: o.p, lo: o.lo, hi: o.hi, target: o.tg }; }
+    const need = Planner.need(A, pred);
     const next = A.goal.filter(x => !x.achieved && !x.dropped && x.unlocked).sort((a, b) => b.roi - a.roi).slice(0, 3);
-    return { band: A.band, target: this.st.target, targetMastery: A.target, mode: A.allAchieved ? 'maintain' : 'learn', phase: A.phase, daysLeft: A.daysLeft,
+    return { band: A.band, target: this.st.target, targetMastery: A.target, mode: A.allAchieved || need.reached ? 'maintain' : 'learn', phase: A.phase, daysLeft: A.daysLeft,
       remainingNodes: A.remainingNodes, remainingHours: Math.round(A.remainingMin / 6) / 10, achievedNodes: A.achievedNodes, totalNodes: A.totalNodes,
-      text: Planner.progressText(A), next: next.map(x => ({ id: x.id, nm: nm(x.id), m: Math.round(x.m * 100) / 100, roi: x.roi })),
+      need: { nodes: need.nodes, min: need.min, hours: Math.round(need.min / 30) / 2, hoursText: Planner.hoursText(need.min), reached: need.reached, safe: need.safe, ids: need.ids },
+      text: Planner.progressText(A, need), next: next.map(x => ({ id: x.id, nm: nm(x.id), m: Math.round(x.m * 100) / 100, roi: x.roi })),
       stuck: A.goal.filter(x => x.stuck).map(x => x.id), dropped: A.dropped.map(id => ({ id, nm: nm(id) })),
       ruleNodes: A.untrainable.length, nodes: A.goal.map(x => ({ id: x.id, m: Math.round(x.m * 1000) / 1000, achieved: x.achieved, stuck: x.stuck, dropped: !!x.dropped, unlocked: x.unlocked, remainMin: Math.round(x.remainMin) })),
       battle: Personal.battleCard(A.band, this.paceProfile()) };

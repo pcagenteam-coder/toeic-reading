@@ -271,5 +271,19 @@ t('入职测试起始难度随词汇量：低词汇从 1 级起步，高词汇�
   E1.st.vocab = 1200; assert.strictEqual(Y.IT[E1.diagPlan()[0].ids[0]].d, 1);
 });
 
+t('P0-1 need：预测已达标不再报“还差全部考点”；未达标按 ROI 只计最少考点；小时给区间', () => {
+  const P = require(path.join(SRC, 'planner.js'));
+  const goal = Array.from({ length: 28 }, (_, i) => ({ id: 'n' + i, w: 1 + (i % 3), m: 0.5, achieved: false, dropped: false, remainMin: 2, roi: 28 - i }));
+  const A = { goal, target: 0.8 };
+  const r1 = P.need(A, { score: 370, lo: 330, target: 300 });
+  assert(r1.reached && r1.safe && r1.nodes === 0, 'lo ≥ 目标−10 → 维持'); assert(/够到目标/.test(P.progressText(A, r1)));
+  const r2 = P.need(A, { score: 320, lo: 260, target: 300 });
+  assert(r2.reached && r2.nodes > 0 && r2.nodes < 28, '已达标但下沿低 → 再稳几个留余量: ' + r2.nodes); assert(/已够线/.test(P.progressText(A, r2)));
+  const r3 = P.need(A, { score: 290, lo: 250, target: 300 }), r4 = P.need(A, { score: 200, lo: 160, target: 300 });
+  assert(r3.nodes >= 1 && r3.nodes < r4.nodes && r4.nodes <= 28, `差 10 分少于差 100 分: ${r3.nodes} vs ${r4.nodes}`);
+  assert.deepStrictEqual(r3.ids, goal.slice(0, r3.nodes).map(x => x.id), '按 ROI 顺序');
+  assert.strictEqual(P.hoursText(20), '不到 1 小时'); assert.strictEqual(P.hoursText(120), '约 1.5–3 小时');
+});
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

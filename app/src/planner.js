@@ -140,11 +140,45 @@ const Planner = (function () {
       words: todayL.filter(x => x.type === 'word').map(x => x.id), backlog: backlog.length - takeB.length, spreadDays, share, done, cap, plan };
   }
 
-  function progressText(A) {
+  /* 够达标的最少考点数（UX §11.2）：按 ROI 从高到低累加未稳考点，直到它们全部达稳后预测中值 ≥ 目标。
+   * pred = {score, lo, target}（预测分点估计/下沿/阅读目标）。每个考点稳下来的提分按 w × (稳阈值 − m) 比例分摊：
+   * 假定目标档全部考点达稳 ≈ 目标 + MARGIN 分（档位 must 集合即“够这一档”的定义），且全部从 0 学到稳 ≈ NEED_SPAN 分，K 取两者大者。
+   * 预测中值已 ≥ 目标：reached=true；下沿 < 目标 − 10 时仍给“再稳 X 个留余量”（按下沿补齐）；否则 safe=true（只需维持）。 */
+  const NEED_MARGIN = 30, NEED_SPAN = 300;
+  function need(A, pred) {
+    const open = (A.goal || []).filter(x => !x.achieved && !x.dropped).sort((a, b) => b.roi - a.roi);
+    const raw = x => (x.w || 1) * Math.max(0.05, (A.target || 0.8) - (x.m || 0));
+    const tot = open.reduce((s, x) => s + raw(x), 0);
+    const out = { nodes: 0, min: 0, ids: [], reached: false, safe: false, diff: null };
+    if (!pred || pred.score == null || !pred.target) { out.nodes = open.length; out.min = Math.round(open.reduce((s, x) => s + x.remainMin, 0)); out.ids = open.map(x => x.id); return out; }
+    const tg = pred.target, lo = pred.lo != null ? pred.lo : pred.score;
+    out.reached = pred.score >= tg; out.diff = tg - pred.score;
+    const gapPts = out.reached ? (tg - 10) - lo : tg - pred.score;   // 已达标：补齐下沿余量；未达标：补到中值
+    if (gapPts <= 0 || !open.length) { out.safe = out.reached; return out; }
+    // 两个口径取大：①目标档全部考点从 0 学到稳 ≈ NEED_SPAN 分；②当前未稳的全部稳下来 ≈ 目标 + MARGIN
+    const all = (A.goal || []).filter(x => !x.dropped).reduce((s, x) => s + (x.w || 1) * (A.target || 0.8), 0);
+    const K = Math.max(NEED_SPAN / Math.max(1e-9, all), (tg + NEED_MARGIN - pred.score) / Math.max(1e-9, tot));
+    let cum = 0;
+    for (const x of open) { if (cum >= gapPts) break; cum += K * raw(x); out.ids.push(x.id); out.min += x.remainMin; }
+    out.nodes = out.ids.length; out.min = Math.round(out.min);
+    return out;
+  }
+
+  /* 小时给区间（P1-1）：0.75×–1.5× 预计分钟，取 0.5 小时步长；< 1 小时写“不到 1 小时” */
+  function hoursText(min) {
+    if (!min) return '';
+    const h = min / 60, r = x => Math.max(0.5, Math.round(x * 2) / 2), lo = r(h * 0.75), hi = r(h * 1.5);
+    if (hi <= 1) return '不到 1 小时';
+    return lo === hi ? `约 ${lo} 小时` : `约 ${lo}–${hi} 小时`;
+  }
+
+  function progressText(A, nd) {
+    if (nd && nd.reached) return nd.nodes ? `已够线，再稳 ${nd.nodes} 个考点留出余量` : '已经够到目标了 ✓ 现在只需每天复习保持';
+    if (nd) return nd.nodes ? `离目标还差 ${nd.nodes} 个考点（${hoursText(nd.min)}）` : '目标考点已全部达标，进入维持模式';
     if (A.allAchieved) return '目标考点已全部达标，进入维持模式';
     return `离目标还差 ${A.remainingNodes} 个考点、约 ${Math.max(0.1, Math.round(A.remainingMin / 6) / 10)} 小时`;
   }
 
-  return { BANDS, TARGET, NOVICE_DAYS, NOVICE_M, P7_EVERY, MIN_ITEMS, MIN_EVID, REVIEW_CAP, HIGH_W, SHARE, band, phaseOf, analyze, rhythm, today, reviewQueue, progressText };
+  return { BANDS, TARGET, NOVICE_DAYS, NOVICE_M, P7_EVERY, MIN_ITEMS, MIN_EVID, REVIEW_CAP, HIGH_W, SHARE, band, phaseOf, analyze, rhythm, today, reviewQueue, progressText, need, hoursText, NEED_MARGIN };
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = Planner;
