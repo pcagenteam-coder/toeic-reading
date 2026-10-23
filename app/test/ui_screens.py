@@ -121,7 +121,7 @@ def run(br, tag, w, h):
     shot(pg, d, '13_review_empty'); check('挺好' in pg.inner_text('#main'), f'{tag}: review empty state')
     # 进度
     pg.evaluate("tab = 'progress'; render()"); shot(pg, d, '14_progress')
-    txt = pg.inner_text('#main'); check('职级' in txt and '绩效评估' in txt and '个考点' in txt, f'{tag}: progress content')
+    txt = pg.inner_text('#main'); check('职级' in txt and '本周小结' in txt and re.search('个考点|估算中|够到目标|已够线', txt) and '绩效' not in txt, f'{tag}: progress content')
     check(not re.search(r'正确率|\d+\s*/\s*\d+|做了 \d+ 题', txt), f'{tag}: progress shows counts/accuracy')
     pg.evaluate("window.scrollTo(0, 99999)"); shot(pg, d, '14b_progress_bottom'); pg.evaluate("window.scrollTo(0, 0)")
     # 我的

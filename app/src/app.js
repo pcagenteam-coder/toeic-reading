@@ -260,6 +260,13 @@ function circTip() {
   if (!u.circAt || u.circTip !== c.best) { u.circAt = Date.now(); u.circTip = c.best; }
   return `<div class="card tipc"><span>⏰ ${esc(c.tip)}</span><span class="row"><button class="link" data-act="circX">知道了</button><button class="link mut" data-act="circOff">不再提示</button></span></div>`;
 }
+/* P2-1：完成态给“明天还会来”的理由：明天先攻的考点 + 明天到期的复习数（题卡 + 生词，上限 20） */
+function tmrLine() {
+  const d = fxToday() + 1, due = o => Object.values(o || {}).filter(c => c && c.due != null && c.due <= d && c.rv !== fxToday()).length;
+  const g = API.progress(), nr = Math.min(20, due(E.st.cards) + due(E.st.words)), nx = (g.next || [])[0];
+  const t = [nx && `${g.mode === 'maintain' ? '巩固' : '先攻'}「${esc(nx.nm)}」`, nr && `复习 ${nr} 个`].filter(Boolean).join(' + ');
+  return t ? `<div class="li"><span>明天</span><span>${t}</span></div>` : '';
+}
 function vToday() {
   const d = new Date(), wd = '日一二三四五六'[d.getDay()];
   const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
@@ -270,7 +277,8 @@ function vToday() {
   const min = (E.st.settings && E.st.settings.daily_min) || 5;
   let main;
   if (S && S.paused) main = `<div class="card task"><h2>做到一半的活</h2><p class="sum">进度都在，接着上次的位置继续。</p><button class="btn full lg" data-act="start">继续</button></div>`;
-  else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p><button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
+  else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p>
+    <div class="li"><span>本周</span><span><b>${Math.min(7, weekDays())}</b> / 5 天${weekDays() >= 5 ? ' ✓' : ''}</span></div>${tmrLine()}<button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
   else {
     const p = API.plan(min);
     main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
@@ -285,7 +293,7 @@ function vToday() {
     ${nt ? `<p class="sm">${nt}</p>` : ''}${gl ? `<p class="mut sm">${gl}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
   const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
-  return top + `<div class="grid2"><div>${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+  return top + `<div class="grid2${done && !(S && S.paused) ? ' solo' : ''}"><div>${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
 }
 function examLeft() { return E.st.exam ? Math.round((new Date(E.st.exam + 'T00:00') - new Date(today() + 'T00:00')) / 864e5) : null; }
 

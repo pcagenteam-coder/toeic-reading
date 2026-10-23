@@ -207,3 +207,4 @@ input.tmi{width:9.5em}
 details.pred summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:6px}
 details.pred summary::-webkit-details-marker{display:none}
 .bar.tkb{position:relative;overflow:visible}.bar.tkb i{border-radius:4px}.bar .tk{position:absolute;top:-3px;bottom:-3px;width:2px;background:#555;border-radius:1px}
+.grid2.solo{grid-template-columns:1fr;max-width:640px;margin:0 auto}
