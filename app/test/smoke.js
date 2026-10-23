@@ -21,9 +21,18 @@ const test = `
 const el = (o) => ({ dataset: o || {} });
 $('#sName').value = 'A'; $('#sDate').value = '2026-12-20';
 A.setupGo(el({ d: '1' }));
-let n = 0; while (S && S.mode === 'diag') { vQuiz(); answer(Math.floor(Math.random() * 4)); n++; }
-console.log('diag answered', n, 'pred', R && R.p1.p, R && R.p1.lo, R && R.p1.hi); vResult(); A.closeR();
-if (!E.st.diag) throw new Error('diag not done');
+if (E.st.rtg !== 270 || E.st.ob.step !== 'vocab') throw new Error('S1 goal: rtg ' + E.st.rtg);
+render(); if (!/词汇摸底/.test($('#main').innerHTML)) throw new Error('vocab intro');
+A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt; render(); if (vt.chk) A.vchk(el({ i: String(vt.chk.a) })); else A.vk(el({ y: vt.q[vt.i][1] ? '1' : '0' })); vk++; if (vk === 10) { A.vpause(); A.vresume(); } }
+console.log('vocab', JSON.stringify(E.st.ob.voc), 'steps', vk); if (!(E.st.ob.voc.n > 1000)) throw new Error('vocab estimate');
+render(); A.diag();
+let n = 0; while (S && S.mode === 'diag') { vQuiz(); if (n === 3) { A.pause(); render(); A.diag(); } answer(Math.floor(Math.random() * 4)); n++; }
+if (!E.st.diag || E.st.ob.step !== 'result' || R) throw new Error('diag not done');
+render(); const rh = $('#main').innerHTML, bl = (rh.match(/<li>/g) || []).length;
+console.log('diag answered', n, 'pred', E.predict().p, 'result battle lines', bl, 'weak', E.st.ob.res.weak.length);
+if (!/作战卡/.test(rh) || bl < 1 || bl > 8 || !/第 1 天/.test(rh)) throw new Error('S6 result');
+if (/正确率/.test(rh)) throw new Error('S6 shows accuracy');
+A.obDone(); if (E.st.doneDay !== today()) throw new Error('day 1 not counted');
 for (const m of [5, 15]) { A.start(el({ m })); let k = 0, saw = 0;
   while (S) { const h = vQuiz(); if (!h.includes('class="opt')) throw new Error('no options'); if (bundle()) saw++;
     if (k === 2) { A.pause(); if (!E.st.run || $('#main').innerHTML.indexOf('继续') < 0) throw new Error('pause lost'); A.start(el({ m })); }
@@ -40,11 +49,18 @@ A.mock(); console.log('mock form', S.form); if (!S || S.mode !== 'mock') throw n
 const mf = S.form; for (let i = 0; i < 40; i++) { vQuiz(); answer(i % 4); } finish(); console.log('mock scaled', R.scaled); A.closeR();
 if (!E.st.used.includes(mf) || E.pool().some(i => i.f === mf)) throw new Error('used mock form still in pool');
 for (const f of Object.keys(FORMS)) { const pl = E.mockPlan(f), n = pl.reduce((s, u) => s + u.ids.length, 0); if (n !== FORMS[f].length || n < FULL_MIN) throw new Error('mockPlan ' + f + ' ' + n); }
-for (const t of ['today', 'review', 'progress', 'me']) { tab = t; render(); console.log('tab', t, $('#main').innerHTML.length); }
+for (const t of ['today', 'review', 'progress', 'me']) { tab = t; render(); const h = $('#main').innerHTML; console.log('tab', t, h.length); if (/出了点问题/.test(h)) throw new Error('render error ' + t + ' ' + A._err); }
+tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做了 \\d+ 题|\\d+\\s*\\/\\s*\\d+ 题/.test(h) || !/职级/.test(h) || !/绩效评估/.test(h)) throw new Error('progress page'); }
+['apple', 'invoice', 'deadline', 'budget'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).slice(0, 30).forEach(k => E.st.cards[k].due = 0);
+{ const a = revAlloc(); console.log('review alloc items', a.ni, 'words', a.nw); if (a.ni + a.nw > 20) throw new Error('review > 20');
+  A.rev(); let k = 0; while (WQ) { render(); A.wqA(el({ i: String(k % 2 ? WQ.q.a : -1) })); if (WQ && WQ.ans != null) A.wqN(); k++; } while (S) { answer(0); if (S && S.fb) next(); } A.closeR(); }
+tab = 'me'; render(); A.fz(el({ v: '1.25' })); A.tgl(el({ k: 'nostory' })); A.circ(); if ((E.st.settings || {}).circadian !== false) throw new Error('circadian off');
+A._mtg = 800; $('#mLs').value = '420'; $('#mDate').value = '2027-01-10'; A.saveGoal(); if (E.st.rtg !== 380 || E.st.exam !== '2027-01-10' || E.band() !== '860+') throw new Error('saveGoal ' + E.st.rtg + ' ' + E.band());
+$('#mLs').value = ''; $('#mDate').value = '2027-01-10'; A._mtg = 600; A.saveGoal(); A.dl();
 E.addWord('Invoice', 'Please send the invoice.'); A.wg(el({ w: 'invoice', g: '2' })); A.unword(el({ w: 'invoice' })); if (E.st.words.invoice) throw new Error('unword');
 A.newp(); $('#sName').value = 'B'; A.setupGo(el({ d: '0' })); E.st.diag = true; A.start(el({ m: 5 })); while (S) { answer(2); if (S && S.fb) next(); } A.closeR();
 const code = Code.enc({ app: 'toeic-r-v2', name: 'B', st: E.st }); $('#codeBox').value = code; A.imp(); console.log('profiles', Profiles.list().length, 'code KB', (code.length/1024).toFixed(1));
-A.delp(el({ id: Profiles.cur() })); console.log('after delete', Profiles.list().length, 'log', E.st.log.length, 'storage', Store.kind);
+tab = 'me'; A.clr1(); if (!/确定清空/.test($('#main').innerHTML)) throw new Error('clear confirm'); A.clr0(); A.clr1(); const nP = Profiles.list().length; A.clr2(); if (Profiles.list().length !== nP - 1) throw new Error('clear'); console.log('after clear', Profiles.list().length, 'log', E.st ? E.st.log.length : 0, 'storage', Store.kind);
 console.log('SMOKE OK');
 `;
 vm.runInContext(scripts[1].replace(/boot\(\);\s*$/, 'boot();') + '\n' + test, Object.assign(ctx, { mk }));

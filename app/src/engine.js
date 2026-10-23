@@ -22,7 +22,8 @@ const sig = x => 1 / (1 + Math.exp(-x));
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const diffB = d => (d - 3) * 0.7;               // difficulty_est(1–5) → logit 难度
 const RT = { 600: 300, 700: 350, 800: 400, 900: 450 }; // 总分目标 → 阅读分目标（按一半估）
-const RANKS = [[0, '实习生'], [200, '专员'], [300, '主管'], [375, '经理'], [430, '总监']];
+const RANKS = [[0, '新同事'], [200, '专员'], [275, '资深专员'], [350, '主管'], [420, '经理']];
+const rtgOf = s => s.rtg || RT[s.target] || Math.round(s.target * 0.45 / 5) * 5;   // 阅读目标：首日按 总分−听力（无则×0.45）存 st.rtg
 const SCALE = [[0, 5], [10, 5], [20, 60], [30, 110], [40, 165], [50, 220], [60, 275], [70, 330], [80, 385], [90, 440], [95, 470], [100, 495]];
 
 function newState(target, exam) {
@@ -76,7 +77,7 @@ const E = {
   /* 预测阅读分：点估计 + 区间（答题越多越窄） + 达标概率 */
   predict() {
     const s = this.st, p = this.scaled(this.rawFromTheta(s.th)), hw = Math.max(20, 150 / Math.sqrt(1 + s.N / 8));
-    const r5 = x => Math.round(clamp(x, 5, 495) / 5) * 5, tg = RT[s.target] || s.target / 2;
+    const r5 = x => Math.round(clamp(x, 5, 495) / 5) * 5, tg = rtgOf(s);
     const z = (p - tg) / (hw / 1.645), prob = 1 / (1 + Math.exp(-1.702 * z));
     return { p: r5(p), lo: r5(p - hw), hi: r5(p + hw), tg, prob };
   },
@@ -125,9 +126,14 @@ const E = {
     const s = this.st.streak, d = today();
     if (s.d === d) return;
     const y = new Date(Date.now() - DAY); const yd = y.getFullYear() + '-' + String(y.getMonth() + 1).padStart(2, '0') + '-' + String(y.getDate()).padStart(2, '0');
-    s.n = s.d === yd ? s.n + 1 : 1; s.d = d;
+    const gap = s.d ? Math.round((new Date(d) - new Date(s.d)) / DAY) : 0;
+    if (gap === 2 && this.freezeOk()) { this.st.fz = { wk: this.wkKey(), d }; s.n += 2; this.log('streak_freeze', {}); }   // ❄ 断签保护：每周自动补 1 天
+    else s.n = s.d === yd ? s.n + 1 : 1;
+    s.d = d;
   },
-  streakNow() { const s = this.st.streak; if (!s.d) return 0; const gap = (new Date(today()) - new Date(s.d)) / DAY; return gap <= 1 ? s.n : 0; },
+  wkKey(t) { const x = new Date(t || Date.now()); x.setHours(0, 0, 0, 0); x.setDate(x.getDate() - (x.getDay() + 6) % 7); return x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0'); },
+  freezeOk() { return !(this.st.fz && this.st.fz.wk === this.wkKey()); },
+  streakNow() { const s = this.st.streak; if (!s.d) return 0; const gap = Math.round((new Date(today()) - new Date(s.d)) / DAY); return gap <= 1 || (gap === 2 && this.freezeOk()) ? s.n : 0; },
   /* 训练池：去掉模考用过的套；私有题 u==='mock'（留作模考）永不进训练 */
   pool() {
     const k = this.st.used.join(',');
@@ -218,7 +224,8 @@ const E = {
     return D.strats.filter(s => s.pm && s.ns.some(x => keys.has(x))).sort((a, b) => b.w - a.w).slice(0, 2);
   },
   /* ================= C2：ROI 排程 + 个性化（对前端的 API，见 docs/engine_api.md） ================= */
-  band() { return Planner.band(this.st.target); },
+  band() { const r = this.st.rtg; return r ? (r <= 225 ? '≤500' : r <= 300 ? '600' : r <= 370 ? '730' : '860+') : Planner.band(this.st.target); },
+  rtg() { return rtgOf(this.st); },
   pctx(minutesPerDay) {
     return { nodes: ND, practice: this.practice(), acc: this.macc(), now: Date.now(), band: this.band(), day: fxToday(),
       examDay: FSRS.examDayIndex(this.st.exam), minutesPerDay: minutesPerDay || (this.st.settings && this.st.settings.daily_min) || 5 };

@@ -15,7 +15,7 @@ const SCENE = { 5: ['Ken 在群里 @你：帮我看下这几句～', 'Ken：这�
 const SAY = ['Ken：“改得很干净，省了我不少事。”', 'Dana：“辛苦了，明天见。”', 'Mia：“这版可以发了。”', 'Leo：“客户那边回得很快，谢谢。”'];
 
 let tab = 'today', S = null, R = null, setupNew = false, popW = null;
-const ui = () => (E.st.ui = E.st.ui || {});
+const UI0 = {}, ui = () => (E.st ? (E.st.ui = E.st.ui || {}) : UI0);
 const save = () => { if (E.st) { E.st.run = S && !S.done ? S : null; Profiles.save(E.st); } };
 
 function banner() {
@@ -41,47 +41,185 @@ function render() {
   $('#app').classList.toggle('quiz', inRun);
   $$('#nav button').forEach(b => b.classList.toggle('on', b.dataset.tab === tab));
   if (E.st) { const n = E.dueItems().length + E.dueWords().length; $('#revN').textContent = n ? String(n) : ''; }
-  if (setupNew) m.innerHTML = wrap(vSetup());
-  else if (inRun) m.innerHTML = vQuiz();
-  else m.innerHTML = wrap(({ today: vToday, review: vReview, progress: vProgress, me: vMe })[tab]());
+  const o = !setupNew && !inRun && ob();
+  $('#app').classList.toggle('onbm', !!(setupNew || o));
+  if (WQ && !inRun && !setupNew) $('#app').classList.add('quiz');
+  applyFz();
+  try {
+    if (setupNew) m.innerHTML = wrap(vSetup());
+    else if (inRun) m.innerHTML = vQuiz();
+    else if (o) m.innerHTML = wrap(vOnboard(o));
+    else if (WQ) m.innerHTML = vWordQuiz();
+    else m.innerHTML = wrap(({ today: vToday, review: vReview, progress: vProgress, me: vMe })[tab]());
+  } catch (e) { console.error(e); A._err = String(e && e.stack || e); m.innerHTML = wrap(vError()); }
+  if (setupNew) s1Upd();
   modal(R ? vResult() : '');
   hidePop();
   restoreScroll();
 }
 const wrap = h => `<div class="wrap">${h}</div>`;
+/* 出错：先说进度已保存，再给能继续的按钮 */
+function vError() { return `<div class="card empty"><h2>出了点问题，你的进度已保存。</h2><button class="btn full lg" data-act="recover">接着做</button><p></p><button class="link mut" data-act="errCopy">复制错误信息</button></div>`; }
 function modal(h) { $('#sheet').innerHTML = h; $('#modal').classList.toggle('hide', !h); }
 
-/* ---------- 首日（简版，第 2 段做完整 S1–S6） ---------- */
-function vSetup() {
-  const t = (E.st && E.st.target) || 700;
-  return `<div class="card"><h2>入职登记 · Halvorsen</h2><p class="mut">选目标和考试日期，做一次约 5 分钟的入职测试，系统按你的情况排每天的活。</p>
-  <h3>怎么称呼你</h3><input id="sName" placeholder="例如：我" value="${esc(Profiles.list().length ? '' : '我')}">
-  <h3>目标总分</h3><div class="row wrapr">${[600, 700, 800, 900].map(v => `<button class="chip ${v === t ? 'on' : ''}" data-act="tg" data-v="${v}">${v}</button>`).join('')}</div>
-  <h3>考试日期（可不填）</h3><input id="sDate" type="date">
-  <p></p><button class="btn full lg" data-act="setupGo" data-d="1">开始入职测试</button>
-  ${Profiles.list().length ? '<p></p><button class="btn ghost full" data-act="setupCancel">取消</button>' : ''}</div>`;
+/* ---------- 首日 S1–S6：目标 → 词汇摸底 → 入职测试 → 结果+作战卡 ---------- */
+const r5 = x => Math.round(x / 5) * 5;
+const OBS = ['目标', '词汇', '测试', '结果'];
+const ob = () => E.st && E.st.ob && E.st.ob.step !== 'done' ? E.st.ob : null;
+function steps(k) {
+  return `<div class="steps">${OBS.map((x, i) => `<i class="${i < k ? 'd' : i === k ? 'c' : ''}"><span>${x}</span></i>`).join('')}</div>`;
 }
+const obStory = t => ui().plain || ui().nostory ? '' : `<p class="scene">«入职第一天 · ${esc(t)}»</p>`;
+function rtgCalc(total, listen) { return Math.max(5, Math.min(495, r5(listen ? total - listen : total * 0.45))); }
+function examTip(dt) {
+  if (!dt) return '';
+  const d = Math.round((new Date(dt + 'T00:00') - new Date(today() + 'T00:00')) / 864e5);
+  if (d < 0) return '<span class="warn">这个日期已经过了，换一个吧</span>';
+  return `还有 ${d} 天，` + (d > 60 ? '时间充裕，每天 5 分钟够用' : d >= 15 ? '每天 5–20 分钟比较稳' : '进入冲刺，只练最能提分的部分');
+}
+function s1Vals() {
+  const v = id => (($('#' + id) || {}).value || '').trim();
+  const total = +v('sTotOther') || A._tg || 600, ls = A._lsU ? 0 : +v('sLs') || 0, man = +v('sRtg') || 0;
+  return { total: Math.max(10, Math.min(990, total)), listen: ls, rtg: man ? Math.max(5, Math.min(495, r5(man))) : rtgCalc(total, ls), exam: A._noDate ? '' : v('sDate') };
+}
+function vSetup() {
+  const t = A._tg || 600, first = !Profiles.list().length, lu = A._lsU !== false;
+  return `<div class="onb">${steps(0)}${obStory('Dana：先认识一下你')}<div class="card">
+  ${first ? '' : '<h3>新档案名</h3><input id="sName" placeholder="例如：小王">'}
+  <h3>你想考到多少总分？</h3><div class="row wrapr">${[500, 600, 700, 800, 900].map(v => `<button class="chip ${v === t ? 'on' : ''}" data-act="tg" data-v="${v}">${v}</button>`).join('')}
+    <input id="sTotOther" class="inl" inputmode="numeric" placeholder="其他"></div>
+  <h3>听力大概能考多少？</h3><div class="row wrapr"><button class="chip ${lu ? 'on' : ''}" data-act="lsU" data-v="1">不确定</button>
+    <button class="chip ${lu ? '' : 'on'}" data-act="lsU" data-v="0">约</button><input id="sLs" class="inl" inputmode="numeric" placeholder="___ 分" ${lu ? 'disabled' : ''}></div>
+  <p class="out" id="rtgOut"></p>
+  <details id="rtgMan"><summary>改一下阅读目标</summary><input id="sRtg" inputmode="numeric" placeholder="阅读目标（5–495）"></details>
+  <h3>什么时候考？</h3><div class="row"><input id="sDate" type="date" ${A._noDate ? 'disabled' : ''}><button class="chip ${A._noDate ? 'on' : ''}" data-act="noDate">还没定</button></div>
+  <p class="out mut sm" id="dateOut"></p></div>
+  <div class="thumb"><button class="btn full lg" data-act="setupGo" data-d="1">下一步</button>
+  ${first ? '<button class="link" data-act="impOpen">我有进度码 → 导入</button>' : '<button class="btn ghost full" data-act="setupCancel">取消</button>'}</div></div>`;
+}
+function s1Upd() {
+  const o = s1Vals(), r = $('#rtgOut'), d = $('#dateOut');
+  if (r) r.innerHTML = `→ 你的阅读目标：约 <b>${o.rtg}</b> 分${o.listen ? '' : '<span class="mut sm">（听力不确定，按总分 ×0.45 估）</span>'}`;
+  if (d) d.innerHTML = examTip(o.exam);
+}
+/* S2–S3 词汇摸底：约 40 真词（四档各 10）+ 7 假词 + ≤6 次四选一抽查，3 分钟到点自动结束 */
+const VT_MS = 180e3, VT_SIZE = { core: 2000, 600: 1500, 730: 1500, 860: 2000 };
+function vtNew() {
+  const V = (D.voc || []).map(v => ({ w: v[0], r: v[1], t: v[2], zh: v[3] })), sh = a => a.map(x => [Math.random(), x]).sort((a, b) => a[0] - b[0]).map(x => x[1]);
+  const q = [];
+  ['core', '600', '730', '860'].forEach(t => q.push(...sh(V.filter(v => v.r && v.t === t)).slice(0, 10)));
+  q.push(...sh(V.filter(v => !v.r)).slice(0, 7));
+  return { q: sh(q).map(v => [v.w, v.r, v.t, v.zh]), i: 0, a: [], el: 0, chk: null, nc: 0 };
+}
+function vtLeft(vt) { return Math.max(0, VT_MS - vt.el - (vt.t0 ? Date.now() - vt.t0 : 0)); }
+function vtClock(vt) { const s = Math.ceil(vtLeft(vt) / 1000); return `约 ${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; }
+function vtScore(vt) {
+  const by = {}, fk = { n: 0, y: 0 };
+  vt.a.forEach(([i, y]) => { const [, r, t] = vt.q[i]; if (!r) { fk.n++; fk.y += y; return; } const b = by[t] = by[t] || { n: 0, y: 0 }; b.n++; b.y += y; });
+  const fa = fk.n ? Math.min(0.9, fk.y / fk.n) : 0, adj = t => by[t] && by[t].n ? Math.max(0, (by[t].y / by[t].n - fa) / (1 - fa)) : null;
+  let n = 0; Object.keys(VT_SIZE).forEach(t => { const a = adj(t); n += VT_SIZE[t] * (a == null ? 0.4 : a); });
+  const biz = ['600', '730', '860'].map(adj).filter(x => x != null);
+  return { n: Math.round(n / 100) * 100, biz: biz.length ? Math.round(biz.reduce((s, x) => s + x, 0) / biz.length * 100) : null, k: vt.a.length };
+}
+function vVocab(o) {
+  if (o.step === 'vocab') return `<div class="onb">${steps(1)}${obStory('Ken：先看看你认识多少词')}<div class="card"><h2>入职词汇摸底 · 约 3 分钟</h2>
+    <ul class="ln"><li>认识就点「认识」，不确定就点「不认识」</li><li>里面有几个编出来的假词</li><li>偶尔让你选一下意思</li><li>3 分钟到点自动结束</li></ul></div>
+    <div class="thumb"><button class="btn full lg" data-act="vstart">开始</button><button class="link" data-act="vskip">跳过（先按 3,000 词估）</button></div></div>`;
+  const vt = o.vt;
+  if (o.step === 'vtest') {
+    const top = `<div class="vtop"><button class="x" data-act="vpause" aria-label="暂停">✕</button><span class="mut" id="vClock">${vtClock(vt)}</span></div>`;
+    if (vt.paused) return `<div class="onb vt">${top}<div class="card"><h2>暂停了</h2><p class="mut">答过的都记下了。</p></div><div class="thumb">
+      <button class="btn full lg" data-act="vresume">继续</button>${vt.a.length >= 20 ? '<button class="btn ghost full" data-act="vend">结束测试，看结果</button>' : ''}
+      <button class="link" data-act="vskip">跳过（先按 3,000 词估）</button></div></div>`;
+    if (vt.chk) {
+      const c = vt.chk;
+      return `<div class="onb vt">${top}<div class="vw sm2"><b>${esc(c.w)}</b> 是什么意思？</div><div class="thumb vopts">${c.o.map((x, i) => `<button class="opt" data-act="vchk" data-i="${i}"><span>${esc(x)}</span></button>`).join('')}
+        <button class="opt" data-act="vchk" data-i="-1"><span class="mut">不知道</span></button></div></div>`;
+    }
+    const w = vt.q[vt.i] || [''];
+    return `<div class="onb vt">${top}<div class="vw" id="vWord">${esc(w[0])}</div><div class="thumb two"><button class="btn ghost lg" data-act="vk" data-y="0">不认识<span class="kb">←</span></button>
+      <button class="btn lg" data-act="vk" data-y="1">认识<span class="kb">→</span></button></div></div>`;
+  }
+  const sc = o.voc || { n: 3000, biz: null };
+  return `<div class="onb">${steps(2)}${obStory('Dana：词汇摸底做完了')}<div class="card">
+    ${o.vskip ? '<h2>先按约 3,000 个常用词来排</h2><p class="mut">之后在今天页可以补测，推荐会更准。</p>'
+      : `<h2>你大约认识 ${sc.n.toLocaleString('en-US')} 个常用词</h2><p>${sc.biz != null ? `商务词认识约 ${sc.biz}%。` : ''}文章里的生词会控制在你读得顺的范围。</p>`}</div>
+    ${E.st.diag ? '<div class="thumb"><button class="btn full lg" data-act="obDone">好</button></div></div>' : `<div class="card"><h2>入职测试 · 约 12 题</h2><ul class="ln"><li>6 句审稿 + 1 段改稿 + 1 封短邮件</li><li>不显示对错，不会就选一个，继续下一题</li><li>中途离开会保存，下次接着做</li></ul></div>
+    <div class="thumb"><button class="btn full lg" data-act="diag">${S && S.mode === 'diag' ? '继续入职测试' : '开始入职测试（约 5 分钟）'}</button></div></div>`}`;
+}
+/* 作战卡：每档 ≤8 条行动句（UX §6.1 选定的 strategies_v2 id），数字按个人画像（Personal.battleCard）算 */
+function battleLines() {
+  const bc = API.profile().battle || API.progress().battle, band = E.band();
+  if (!bc) return [];
+  const fl = bc.finishLine.personal, k = Math.max(0, Math.min(100, bc.skipBudget.personal)), p56 = bc.p56Min, cut = bc.p5CutSec;
+  const L = {
+    '≤500': [`认真做约 ${100 - k} 题，其余 ${k} 题统一涂 B`, `P5+P6 用约 ${p56} 分钟，不用赶`, `P7 做到第 ${fl} 题就停，多篇整组涂`, '短通知、短信认真做，长新闻整篇涂',
+      '读不完的篇看开头，只答第一题', 'P6 插入句直接涂', '一句读三遍没思路就涂、走', '跳过的当场先涂；最后 5 分钟全部涂满，别空着'],
+    600: [`认真做约 ${100 - k} 题，其余统一涂 B`, `P5+P6 用约 ${p56} 分钟，不用赶`, `P7 做到第 ${fl} 题就停`, 'P6 插入句直接涂', '一句读三遍没思路就涂、走',
+      '短的认真做，长新闻整篇涂', '跳过的当场先涂；最后 5 分钟全涂满', '涂满后再做“意思最接近”的词义题'],
+    730: [`P5+P6 控制在 ${p56} 分钟内`, `最多放弃约 ${k} 题`, `P7 做到第 ${fl} 题`, `P5 一题超过 ${cut} 秒就涂最像的，走`, '插入句放最后，30 秒没思路就猜',
+      '多篇只挑词义题和单篇细节题', '只在 P6 开头、第 147、176 题看表', '跳过的当场先涂；最后 5 分钟全涂满'],
+    '860+': [`P5+P6 用约 ${p56} 分钟`, `放弃不超过 ${Math.min(k, 5)} 题`, '多篇组内先做看一篇就能答的题', `卡住超过 ${cut} 秒先涂最像的，做完回头看`, '插入句放最后，30 秒没思路就猜',
+      '只在 P6 开头、第 147、176 题看表', '跳过的当场先涂；最后 5 分钟全涂满', 'NOT 题放到该篇最后']
+  };
+  return (L[band] || L[600]).slice(0, 8);
+}
+const BANDN = { '≤500': '入门档', 600: '600 档', 730: '730 档', '860+': '800+ 档' };
+function battleCardHTML(open) {
+  const ls = battleLines();
+  return `<div class="card bc"><details ${open ? 'open' : ''}><summary><h2>你的考场作战卡 <span class="mut sm">${BANDN[E.band()]} · ${ls.length} 条</span></h2></summary>
+    <ol>${ls.map(x => `<li>${esc(x)}</li>`).join('')}</ol><p class="mut sm">没做完是计划内的，不是失败。</p></details></div>`;
+}
+function weeksText(hrs) {
+  const m = (E.st.settings && E.st.settings.daily_min) || 5;
+  return hrs ? `照每天 ${m} 分钟约 ${Math.max(1, Math.round(hrs * 60 / m / 7))} 周` : '';
+}
+function vObResult(o) {
+  const pr = E.predict(), g = API.progress(), res = o.res || {};
+  const head = o.vskip && !E.st.diag ? '' : '';
+  return `<div class="onb">${steps(3)}<div class="card"><h2>入职测试完成 ✓</h2>
+    <p>预测阅读分 <b class="big2">${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}）</span></p>
+    ${g.remainingNodes != null ? `<p>离目标 ${pr.tg} 还差 <b>${g.remainingNodes} 个考点</b> · 约 <b>${g.remainingHours} 小时</b>${weeksText(g.remainingHours) ? `<br><span class="mut sm">${weeksText(g.remainingHours)}到目标</span>` : ''}</p>` : ''}
+    ${res.strong && res.strong.length ? `<p class="sm">你拿得稳的：${res.strong.map(esc).join('、')}</p>` : ''}
+    ${res.weak && res.weak.length ? `<p class="sm">最快涨分的 ${res.weak.length} 个：${res.weak.map(esc).join(' · ')}</p>` : ''}${head}</div>
+    ${battleCardHTML(true)}
+    <div class="thumb"><p class="ok sm">今天已算第 1 天 ✓</p><button class="btn full lg" data-act="obDone">明天见</button><button class="link" data-act="obMore">现在再做 5 分钟（可选）</button></div></div>`;
+}
+function vOnboard(o) { return o.step === 'result' ? vObResult(o) : vVocab(o); }
 
 /* ---------- 今天 ---------- */
 function dayName() { const h = new Date().getHours(); return h < 12 ? '上午' : h < 18 ? '下午' : '傍晚'; }
-function weekDays() { const d0 = Date.now() - 6 * 864e5; return Object.keys(E.st.days || {}).filter(d => new Date(d).getTime() >= d0 - 864e5).length; }
+function weekDays() { const k = E.wkKey(); return Object.keys(E.st.days || {}).filter(d => E.wkKey(new Date(d + 'T12:00').getTime()) === k).length; }
 function planSummary(p) {
   const c = { 5: 0, 6: 0, 7: 0, r: 0 };
   p.units.forEach(u => { if (u.kind === 'review') c.r += u.ids.length; else if (u.b) c[IT[u.ids[0]].p]++; else c[5] += u.ids.length; });
   c.r += (p.words || []).length;
   return [c[7] && `${c[7]} 封邮件`, c[5] && `${c[5]} 句审稿`, c[6] && `${c[6]} 段改稿`, c.r && `复习 ${c.r} 个`].filter(Boolean).join(' · ') || '今天的活已经排好';
 }
+function streakHTML() {
+  const n = E.streakNow(), fz = E.freezeOk();
+  return `<span class="mut sm streak">${n ? `连续 ${n} 天` : `本周 ${weekDays()} 天`} <b class="fz ${fz ? '' : 'used'}" title="${fz ? '断签保护：本周漏 1 天会自动补上' : '本周的断签保护已用过'}">❄${fz ? '' : '✓'}</b></span>`;
+}
+/* 作息建议：引擎给出 tip 才显示，每 2 周最多 1 次，可关 */
+function circTip() {
+  const set = E.st.settings || {}, u = ui(); if (set.circadian === false) return '';
+  const c = API.profile().circadian; if (!c || !c.tip) return '';
+  if (u.circAt && Date.now() - u.circAt < 14 * 864e5 && u.circTip !== c.best) return '';
+  if (u.circClosed === c.best) return '';
+  if (!u.circAt || u.circTip !== c.best) { u.circAt = Date.now(); u.circTip = c.best; }
+  return `<div class="card tipc"><span>⏰ ${esc(c.tip)}</span><span class="row"><button class="link" data-act="circX">知道了</button><button class="link mut" data-act="circOff">不再提示</button></span></div>`;
+}
 function vToday() {
   const d = new Date(), wd = '日一二三四五六'[d.getDay()], pr = E.predict();
-  const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1><span class="mut sm">本周 ${weekDays()} 天</span></div>
-  <p class="scene">«${dayName()} · Halvorsen 运营部»</p>`;
-  if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先做一次入职测试（约 5 分钟），之后每天的活由系统来排。</p>
+  const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
+  ${ui().plain || ui().nostory ? '' : `<p class="scene">«${dayName()} · Halvorsen 运营部»</p>`}`;
+  if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先认识一下你，再做一次入职测试（约 10 分钟），之后每天的活由系统来排。</p>
     <button class="btn full lg" data-act="diag">开始</button></div>`;
   const done = E.st.doneDay === today();
   const min = (E.st.settings && E.st.settings.daily_min) || 5;
   let main;
   if (S && S.paused) main = `<div class="card task"><h2>做到一半的活</h2><p class="sum">进度都在，接着上次的位置继续。</p><button class="btn full lg" data-act="start">继续</button></div>`;
-  else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">Dana：辛苦了，明天见。</p><button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
+  else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p><button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
   else {
     const p = API.plan(min);
     main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(planSummary(p))}</p>
@@ -92,37 +230,123 @@ function vToday() {
   const g = API.progress();
   const side = `<div class="card"><div class="mut sm">预测阅读分</div><div class="big">${pr.p}</div><div class="mut sm">（${pr.lo}–${pr.hi}）· 目标 ${pr.tg}</div>
     ${g.text ? `<p class="sm">${esc(g.text)}</p>` : ''}</div>`;
-  return top + `<div class="grid2">${main}${side}</div>`;
+  const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
+  const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
+  return top + `<div class="grid2"><div>${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+}
+function examLeft() { return E.st.exam ? Math.round((new Date(E.st.exam + 'T00:00') - new Date(today() + 'T00:00')) / 864e5) : null; }
+
+/* ---------- 复习：题卡 + 生词合计 ≤20；生词四选一自动评分 ---------- */
+let WQ = null;
+function revAlloc() {
+  const it = E.dueItems(), ws = E.dueWords(), ni = Math.min(it.length, Math.max(20 - ws.length, 12)), nw = Math.min(ws.length, 20 - ni);
+  return { it, ws, ni, nw };
+}
+function vReview() {
+  const hd = '<div class="hd"><h1>复习</h1></div>';
+  if (!E.st.diag) return hd + `<div class="card empty"><p>做完入职测试后，做错的题和你点过的生词会按记忆曲线出现在这里。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
+  const a = revAlloc(), n = a.ni + a.nw, g = API.progress();
+  const main = n ? `<div class="card task"><h2>今天该复习 ${n} 个 · 约 ${Math.max(1, Math.round((a.ni * 40 + a.nw * 6) / 60))} 分钟</h2>
+      <p class="sum">${[a.ni && `错题 ${a.ni}`, a.nw && `生词 ${a.nw}`].filter(Boolean).join(' · ')}</p><button class="btn full lg" data-act="rev">开始复习</button>
+      <p class="mut sm">这些也会放进今天的活，不单独做也行。</p></div>`
+    : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的活</button></div>`;
+  const nx = (g.next || []).map(x => { const nd = (g.nodes || []).find(y => y.id === x.id); return `<div class="li"><span>${esc(x.nm)}</span><span class="row"><span class="mut sm">${nd && nd.remainMin ? `约 ${Math.max(3, Math.min(30, nd.remainMin))} 分钟` : ''}</span><button class="chip" data-act="weak" data-n="${esc(x.id)}">开始</button></span></div>`; }).join('');
+  const W = Object.keys(E.st.words || {}), tips = (E.st.tips || []).filter(t => t.t);
+  const lists = `<div class="card"><details><summary>生词本 · ${W.length} ›</summary>${W.length ? W.slice(-30).reverse().map(w => `<div class="li"><b>${esc(w)}</b><span class="mut sm">${esc(API.lookup(w).zh.slice(0, 24))}</span></div>`).join('') : '<p class="mut sm">做题时点生词，会自动加进来。</p>'}</details>
+    <details><summary>我记下的招 · ${tips.length} ›</summary>${tips.length ? tips.slice(-20).reverse().map(t => `<div class="li"><span class="sm">${esc(t.t)}</span></div>`).join('') : '<p class="mut sm">答错时点「记一招」会存到这里。</p>'}</details></div>`;
+  return hd + `<div class="grid2"><div>${main}${nx ? `<div class="card"><h2>${ui().plain ? '最快涨分' : '主管带你练（最快涨分）'}</h2>${nx}</div>` : ''}</div><div>${lists}</div></div>`;
+}
+function wqOpts(w) {
+  const zh = x => (API.lookup(x).zh || '').split(/[；;，,]/)[0].trim();
+  const right = zh(w) || w, keys = Object.keys(D.dict || {}), out = new Set([right]);
+  for (let k = 0; out.size < 4 && k < 200; k++) { const z = zh(keys[Math.floor(Math.random() * keys.length)]); if (z && z.length <= 12) out.add(z); }
+  const o = [...out].sort(() => Math.random() - 0.5);
+  return { o, a: o.indexOf(right) };
+}
+function vWordQuiz() {
+  const w = WQ.ws[WQ.i], q = WQ.q || (WQ.q = wqOpts(w)), a = WQ.ans;
+  return `<div class="qz"><div class="qh"><button class="x" data-act="wqX" aria-label="暂停">✕</button><div class="tt">复习 · 生词<small>${WQ.i + 1}/${WQ.ws.length}</small></div></div>
+    <div class="qb pane"><div class="wq"><div class="vw">${esc(w)}</div><div class="thumb vopts">${q.o.map((x, i) => `<button class="opt ${a != null ? (i === q.a ? 'ok' : i === a ? 'no' : '') : ''}" data-act="wqA" data-i="${i}" ${a != null ? 'disabled' : ''}><b>${L4[i]}</b><span>${esc(x)}</span></button>`).join('')}
+    <button class="opt ${a === -1 ? 'no' : ''}" data-act="wqA" data-i="-1" ${a != null ? 'disabled' : ''}><b>?</b><span class="mut">不知道</span></button>
+    ${a != null && a !== q.a ? '<button class="btn full lg" data-act="wqN">下一个</button>' : ''}</div></div></div></div>`;
 }
 
-/* ---------- 复习 / 进度 / 我的（简版占位，第 2 段完善） ---------- */
-function vReview() {
-  const it = E.dueItems(), ws = E.dueWords();
-  const wl = ws.slice(0, 20).map(w => { const x = API.lookup(w); return `<div class="li"><span><b>${esc(w)}</b> <span class="mut sm">${esc(x.zh)}</span></span>
-    <span class="row"><button class="chip" data-act="wg" data-w="${esc(w)}" data-g="2">认识</button><button class="chip" data-act="wg" data-w="${esc(w)}" data-g="0">不认识</button></span></div>`; }).join('');
-  return `<div class="hd"><h1>复习</h1></div><div class="card"><h2>题目</h2><p class="mut">${it.length ? `今天有 ${it.length} 道题该回头看看。` : '今天没有要复习的题。'}</p>
-    ${it.length ? '<button class="btn full" data-act="rev">开始复习</button>' : ''}</div>
-    <div class="card"><h2>生词</h2>${wl || '<p class="mut">做题时点生词，会自动加进来。</p>'}</div>`;
+/* ---------- 进度：离目标 N 个考点 · X 小时 · 预测区间 · 职级 · 每周绩效评估（不显示题数/正确率） ---------- */
+const RANKN = ['新同事', '专员', '资深专员', '主管', '经理'];
+function rankOf(g) {
+  const tot = Math.max(1, (g.achievedNodes || 0) + (g.remainingNodes || 0)), f = (g.achievedNodes || 0) / tot;
+  const i = g.mode === 'maintain' ? 4 : f >= 0.7 ? 3 : f >= 0.45 ? 2 : f >= 0.2 ? 1 : 0;
+  const need = i >= 4 ? 0 : i === 3 ? g.remainingNodes : Math.max(1, Math.ceil([0.2, 0.45, 0.7][i] * tot - (g.achievedNodes || 0)));
+  return { i, nm: RANKN[i], next: RANKN[i + 1], need };
+}
+function wkSnap(g, pr) {   // 每周第一次打开时记周初基线，用于绩效评估
+  const k = E.wkKey(), W = E.st.wk = E.st.wk || {};
+  if (!W[k]) { W[k] = { rem: g.remainingNodes, p: pr.p, ach: (g.nodes || []).filter(x => x.achieved).map(x => x.id) }; Object.keys(W).sort().slice(0, -8).forEach(x => delete W[x]); }
+  return W[k];
+}
+function vReviewWeek(g, pr) {
+  const b = wkSnap(g, pr), k = E.wkKey(), d0 = new Date(k + 'T00:00'), d1 = new Date(d0.getTime() + 6 * 864e5);
+  const fmt = d => `${d.getMonth() + 1}月${d.getDate()}日`, got = (g.nodes || []).filter(x => x.achieved && !b.ach.includes(x.id)).map(x => (ND[x.id] || {}).nm || x.id).slice(0, 3);
+  const nx = (g.next || [])[0], days = weekDays(), say = got.length ? `“这周${esc(got[0])}稳多了，靠谱。”` : days ? '“这周的活都按时交了，稳。”' : '“休假回来，先处理几件简单的。”';
+  return `<div class="card"><h2>绩效评估 <span class="mut sm">${fmt(d0)}–${fmt(d1)}</span></h2>
+    ${ui().plain ? '' : `<p class="say">Dana：${say}</p>`}
+    <div class="li"><span>本周出勤</span><span>${days} 天${days >= 4 ? ' ✓' : ''}</span></div>
+    ${g.remainingNodes != null ? `<div class="li"><span>离目标还差</span><span>${g.remainingNodes} 个考点${b.rem != null && b.rem !== g.remainingNodes ? `<span class="mut sm">（周初 ${b.rem}）</span>` : ''}</span></div>` : ''}
+    <div class="li"><span>预测阅读分</span><span>${b.p !== pr.p ? `${b.p} → ` : ''}${pr.p}</span></div>
+    ${got.length ? `<div class="li"><span>这周拿下</span><span>${got.map(esc).join(' · ')}</span></div>` : ''}
+    ${nx ? `<div class="li"><span>下周只盯一件事</span><span>${esc(nx.nm)}</span></div>` : ''}</div>`;
 }
 function vProgress() {
-  const g = API.progress(), pr = E.predict();
-  const nx = (g.next || []).map(n => `<div class="li"><span>${esc(n.nm)}</span><span class="mut sm">接下来练</span></div>`).join('');
-  return `<div class="hd"><h1>进度</h1></div><div class="card"><div class="mut sm">离目标</div>
-    <div class="big">${g.remainingNodes != null ? `还差 ${g.remainingNodes} 个考点` : '—'}</div>
-    <p class="mut">${g.remainingHours != null ? `约 ${g.remainingHours} 小时 · ` : ''}预测阅读分 ${pr.p}（${pr.lo}–${pr.hi}）</p></div>
-    ${nx ? `<div class="card"><h2>接下来</h2>${nx}</div>` : ''}`;
+  const hd = '<div class="hd"><h1>进度</h1></div>';
+  if (!E.st.diag) return hd + `<div class="card empty"><h2>还没有进度</h2><p class="mut">做完入职测试（约 10 分钟），这里会显示离目标还差多少、大约要多少小时。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
+  const g = API.progress(), pr = E.predict(), rk = rankOf(g), prob = Math.round((pr.prob || 0) * 100);
+  const pw = prob >= 70 ? '很有把握' : prob >= 40 ? '有希望，继续' : '慢慢来，每天一点就行';
+  const main = `<div class="card hero">${g.mode === 'maintain' ? `<div class="big">目标考点已全部达标 ✓</div><p class="mut">进入维持模式，每天少量复习就够。</p>`
+    : `<div class="mut sm">离目标 ${pr.tg} 还差</div><div class="huge">${g.remainingNodes != null ? g.remainingNodes : '—'} <small>个考点</small></div>
+    <p>约 ${g.remainingHours} 小时${weeksText(g.remainingHours) ? ' · ' + weeksText(g.remainingHours) : ''}</p>`}
+    <p>预测阅读分 <b>${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}）</span></p><p class="mut sm">达标把握 ${prob}% · ${pw}</p></div>`;
+  const rank = `<div class="card"><h2>职级 · ${rk.nm}</h2><div class="ladder">${RANKN.map((x, i) => `<i class="${i < rk.i ? 'd' : i === rk.i ? 'c' : ''}">${x}</i>`).join('')}</div>
+    ${rk.next ? `<p class="mut sm">再稳 ${rk.need} 个考点升${rk.next}</p>` : '<p class="mut sm">已经是经理了，保持住。</p>'}</div>`;
+  const cur = (g.next || []).map(x => { const pct = Math.round(Math.min(1, (x.m || 0) / Math.max(0.01, g.targetMastery || 0.8)) * 100);
+    return `<div class="li"><span>${esc(x.nm)}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`; }).join('');
+  const nodes = `<div class="card"><h2>考点 <span class="mut sm">正在攻 ${(g.next || []).length} · 已稳 ${g.achievedNodes || 0}</span></h2>${cur || '<p class="mut sm">目标考点都稳了。</p>'}</div>`;
+  const mk = (E.st.mocks || []).slice(-3).reverse().map(m => `<div class="li"><span>${new Date(m.ts).getMonth() + 1}月${new Date(m.ts).getDate()}日</span><span>约 ${m.scaled} 分</span></div>`).join('');
+  const total = Object.keys(E.st.days || {}).length;
+  return hd + `<div class="grid2"><div>${main}${rank}${nodes}</div><div>${battleCardHTML(wide())}${vReviewWeek(g, pr)}
+    ${mk ? `<div class="card"><h2>紧急项目记录</h2>${mk}</div>` : ''}<p class="mut sm ctr">累计学习 ${total} 天</p></div></div>`;
 }
+
+/* ---------- 我的 ---------- */
+const FZ = [[0.9, '小'], [1, '标准'], [1.12, '大'], [1.25, '特大']];
+function applyFz() { try { document.documentElement.style.setProperty('--fz', String(ui().fz || 1)); } catch (e) { } }
 function vMe() {
-  const u = ui(), L = Profiles.list();
-  return `<div class="hd"><h1>我的</h1><span class="mut sm">${esc(Profiles.name())} · 目标 ${E.st.target}</span></div>
-  <div class="card"><h2>做题</h2>
-    <div class="li"><span>用时环</span><button class="chip ${u.hideRing ? '' : 'on'}" data-act="set" data-k="hideRing">${u.hideRing ? '已隐藏' : '显示'}</button></div>
-    <div class="li"><span>简洁外壳（不显示同事和剧情）</span><button class="chip ${u.plain ? 'on' : ''}" data-act="set" data-k="plain">${u.plain ? '已开' : '关'}</button></div>
-    <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${((E.st.settings || {}).daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
-  <div class="card"><h2>档案与进度码</h2>${L.map(p => `<div class="li"><span>${esc(p.name)}${p.id === Profiles.cur() ? ' ✓' : ''}</span>
-    <span class="row">${p.id === Profiles.cur() ? '' : `<button class="chip" data-act="usep" data-id="${p.id}">切换</button>`}<button class="chip" data-act="delp" data-id="${p.id}">删除</button></span></div>`).join('')}
-    <p></p><div class="row wrapr"><button class="btn ghost" data-act="newp">新档案</button><button class="btn ghost" data-act="exp">复制进度码</button></div>
-    <p></p><input id="codeBox" placeholder="粘贴进度码导入"><p></p><button class="btn ghost full" data-act="imp">导入</button></div>`;
+  const u = ui(), L = Profiles.list(), set = E.st.settings || {}, pf = API.profile(), on = x => x ? '开' : '关';
+  const sw = (k, v, act) => `<button class="chip ${v ? 'on' : ''}" data-act="${act || 'set'}" data-k="${k}">${on(v)}</button>`;
+  const ls = E.st.listen;
+  return `<div class="hd"><h1>我的</h1><span class="mut sm">${esc(Profiles.name())} · 阅读目标 ${E.rtg()}</span></div><div class="grid2"><div>
+  <div class="card"><h2>阅读体验</h2>
+    <div class="li"><span>字号</span><span class="row wrapr">${FZ.map(([v, n]) => `<button class="chip ${(u.fz || 1) === v ? 'on' : ''}" data-act="fz" data-v="${v}">${n}</button>`).join('')}</span></div>
+    <div class="li"><span>剧情过渡（同事的一句话）</span>${sw('nostory', !u.nostory, 'tgl')}</div>
+    <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
+    <div class="li"><span>用时环</span>${sw('hideRing', !u.hideRing, 'tgl')}</div>
+    <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
+  <div class="card"><h2>越用越贴合</h2>
+    <div class="li"><span>复习间隔</span><span class="mut sm">${pf.fsrs && pf.fsrs.personal ? '已按你的记忆速度调整' : '先用通用间隔，做得多了会按你的记忆速度调'}</span></div>
+    <div class="li"><span>考点掌握</span><span class="mut sm">每做一题都会更新</span></div>
+    <div class="li"><span>作息建议</span>${sw('circadian', set.circadian !== false, 'circ')}</div>
+    <div class="li"><span>重置个性化（不删作答记录）</span><button class="chip" data-act="pReset">重置</button></div>
+    <p class="mut sm">这些都只在你的设备上计算。</p></div></div><div>
+  <div class="card"><h2>目标与考试</h2>
+    <h3>目标总分</h3><div class="row wrapr">${[500, 600, 700, 800, 900].map(v => `<button class="chip ${v === (A._mtg || E.st.target) ? 'on' : ''}" data-act="mtg" data-v="${v}">${v}</button>`).join('')}</div>
+    <h3>听力估分（可空）</h3><input id="mLs" inputmode="numeric" value="${ls || ''}" placeholder="不确定就空着">
+    <h3>考试日期</h3><input id="mDate" type="date" value="${esc(E.st.exam || '')}"><p class="mut sm" id="mOut">${examTip(E.st.exam)}</p>
+    <button class="btn ghost full" data-act="saveGoal">保存</button></div>
+  <div class="card"><h2>数据</h2><div class="row wrapr"><button class="btn ghost" data-act="dl">导出数据（文件）</button><button class="btn ghost" data-act="exp">复制进度码</button></div>
+    <p></p><input id="codeBox" placeholder="粘贴进度码导入"><p></p><button class="btn ghost full" data-act="imp">导入</button>
+    <p></p>${u.clrArm ? `<div class="warnbox"><p>确定清空「${esc(Profiles.name())}」的全部进度？清空后不能恢复，建议先导出。</p><div class="row"><button class="btn danger" data-act="clr2">确定清空</button><button class="btn ghost" data-act="clr0">取消</button></div></div>` : '<button class="link mut" data-act="clr1">清空这个档案的数据…</button>'}</div>
+  <div class="card"><h2>档案</h2>${L.map(p => `<div class="li"><span>${esc(p.name)}${p.id === Profiles.cur() ? ' ✓' : ''}</span>
+    <span class="row">${p.id === Profiles.cur() ? '' : `<button class="chip" data-act="usep" data-id="${p.id}">切换</button><button class="chip" data-act="delp" data-id="${p.id}">删除</button>`}</span></div>`).join('')}
+    <p></p><button class="btn ghost" data-act="newp">新档案</button></div></div></div>`;
 }
 
 /* ---------- 会话 ---------- */
@@ -174,11 +398,17 @@ function finish() {
   const p5 = ids.filter(id => IT[id].p === 5 && S.ans[id].ms), p5s = p5.reduce((s, id) => s + S.ans[id].ms, 0) / Math.max(1, p5.length) / 1000, p5t = p5.reduce((s, id) => s + IT[id].t, 0) / Math.max(1, p5.length);
   R = { mode: S.mode, n: ids.length, ok, ms, p0: S.pred0, p1, nodes, rem0: S.rem0, rem1: g.remainingNodes, hrs: g.remainingHours, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
   if (S.mode === 'mock') { R.scaled = Math.round(E.scaled(ok / Math.max(1, ids.length) * 100) / 5) * 5; E.st.mocks.push({ ts: Date.now(), form: S.form, ok, n: ids.length, scaled: R.scaled, ms }); }
-  if (S.mode === 'diag') E.st.diag = true;
+  if (S.mode === 'diag') {
+    E.st.diag = true; const o = E.st.ob = E.st.ob || {};
+    const seen = Object.keys(S.nd0).map(n => ({ n, m: E.mastery(n) })).filter(x => x.m != null && ND[x.n]);
+    o.step = 'result'; o.res = { strong: seen.filter(x => x.m >= 0.62).sort((a, b) => b.m - a.m).slice(0, 2).map(x => ND[x.n].nm),
+      weak: (g.next || []).slice(0, 3).map(x => x.nm) };
+    if (!o.res.weak.length) o.res.weak = seen.sort((a, b) => a.m - b.m).slice(0, 3).map(x => ND[x.n].nm);
+  }
   if (S.mode === 'train' || S.mode === 'diag') E.st.doneDay = today();
   E.st.hist.push([Date.now(), p1.p]);
   E.log('end', { mode: S.mode, n: ids.length, ok, ms });
-  S.done = true; S = null; tab = 'today'; save(); render();
+  const wasDiag = S.mode === 'diag'; S.done = true; S = null; tab = 'today'; if (wasDiag) R = null; save(); render();
 }
 /* 10 秒结算：写 2–3 条具体进步，不显示题数和正确率 */
 function vResult() {
@@ -270,7 +500,7 @@ function vQuiz() {
   const lab = S.mode === 'mock' ? '紧急项目' : S.mode === 'diag' ? '入职测试' : part === 5 ? '审稿' : part === 6 ? '改稿' : '收件箱';
   const sub = part === 7 && b ? (b.docs.length > 1 ? `Part 7 ${b.docs.length === 2 ? '双篇' : '三篇'}` : 'Part 7 单篇') : 'Part ' + part;
   const tot = S.units.length, dots = tot <= 12 ? `<div class="dots">${S.units.map((x, i) => `<i class="${i < S.ui ? 'd' : i === S.ui ? 'c' : ''}"></i>`).join('')}</div>` : `<span class="mut sm">${S.ui + 1}/${tot}</span>`;
-  const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part], story = !ui().plain && S.mode !== 'mock' && !S.noStory ? `<div class="story"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>` : '';
+  const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part], story = !ui().plain && !ui().nostory && S.mode !== 'mock' && !S.noStory ? `<div class="story"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>` : '';
   const head = `<div class="qh"><button class="x" data-act="pause" aria-label="暂停">✕</button><div class="tt">${lab}<small>${sub}</small></div>${dots}${ringSvg(id)}<button class="mm" data-act="menu" aria-label="更多">⋯</button></div>${story}`;
   if (!b) return `<div class="qz">${head}<div class="qb pane" id="pq">${vP5(it, id)}</div></div>`;
   const multi = b.docs.length > 1, refs = refsOf(it, b), di = S.docPinned != null ? S.doc : (refs.doc >= 0 && !S.ans[id] ? refs.doc : S.doc);
@@ -325,7 +555,7 @@ function vOpts(it, id) {
   return `<div class="opts">${it.o.map((o, i) => {
     const cls = show ? (i === it.a ? 'ok' : i === a.c ? 'no' : '') : (a && a.c === i ? 'ok' : '');
     return `<button class="opt ${cls}" data-act="ans" data-c="${i}" ${a ? 'disabled' : ''}><b>${L4[i]}</b><span>${esc(o)}</span><span class="k">${i + 1}</span></button>`;
-  }).join('')}</div>`;
+  }).join('')}</div>${S.mode === 'diag' ? '<p class="mut sm hint">不会就选一个，继续下一题</p>' : ''}`;
 }
 function vFb(it, id) {
   const a = S.ans[id]; if (!a || S.mode === 'mock') return '';
@@ -402,6 +632,8 @@ function lookupWord(el) {
 
 /* ---------- 计时环 ---------- */
 function tick() {
+  const o = E.st && ob();
+  if (o && o.step === 'vtest' && o.vt && !o.vt.paused && !S) { const c = $('#vClock'); if (c) c.textContent = vtClock(o.vt); if (!vtLeft(o.vt) && !o.vt.chk) A.vend(); return; }
   if (!S || S.done || S.paused) return;
   const f = $('#ringFg'); if (!f || !f.setAttribute) return;
   if (S.mode === 'mock') { const left = Math.max(0, S.end - Date.now()); f.setAttribute('stroke-dashoffset', String(94.25 * left / 4.5e6)); if (!left) finish(); return; }
@@ -411,14 +643,82 @@ function tick() {
 
 /* ---------- 动作 ---------- */
 const A = {
-  tg(el) { $$('[data-act=tg]').forEach(b => b.classList.toggle('on', b === el)); A._tg = +el.dataset.v; },
+  tg(el) { $$('[data-act=tg]').forEach(b => b.classList.toggle('on', b === el)); A._tg = +el.dataset.v; const o = $('#sTotOther'); if (o) o.value = ''; s1Upd(); },
+  lsU(el) { A._lsU = el.dataset.v === '1'; $$('[data-act=lsU]').forEach(b => b.classList.toggle('on', b === el)); const i = $('#sLs'); if (i) { i.disabled = A._lsU; if (!A._lsU && i.focus) i.focus(); } s1Upd(); },
+  noDate(el) { A._noDate = !A._noDate; el.classList.toggle('on', A._noDate); const i = $('#sDate'); if (i) i.disabled = A._noDate; s1Upd(); },
+  impOpen() { const c = prompt('粘贴进度码'); if (!c) return; try { const o = Code.dec(c); if (!o || !o.st) throw 0; Profiles.create(o.name || '导入'); E.st = o.st; setupNew = false; save(); boot(); } catch (e) { alert('进度码不对'); } },
   setupGo(el) {
-    const nm = ($('#sName').value || '').trim() || '我', dt = $('#sDate').value || '';
-    Profiles.create(nm); E.st = newState(A._tg || 700, dt); setupNew = false; Profiles.save(E.st);
-    if (el && el.dataset.d === '1') A.diag(); else render();
+    const o = s1Vals();
+    if (o.exam && examTip(o.exam).indexOf('已经过了') >= 0) return s1Upd();
+    const nm = ((($('#sName') || {}).value) || '').trim() || (Profiles.list().length ? '档案 ' + (Profiles.list().length + 1) : '我');
+    Profiles.create(nm); E.st = newState(o.total, o.exam); E.st.rtg = o.rtg; E.st.listen = o.listen || null; setupNew = false;
+    E.log('goal_set', { total: o.total, listen: o.listen || null, rtg: o.rtg });
+    if (el && el.dataset.d === '1') E.st.ob = { step: 'vocab' };
+    A._tg = A._lsU = A._noDate = undefined; save(); render();
   },
   setupCancel() { setupNew = false; render(); },
-  diag() { startSession('diag', E.diagPlan()); },
+  diag() {
+    const o = E.st.ob;
+    if (S && S.mode === 'diag') { S.paused = false; S.qt0 = Date.now(); save(); return render(); }
+    if (!E.st.diag && (!o || o.step === 'done')) { E.st.ob = { step: 'vocab' }; save(); return render(); }
+    if (o && (o.step === 'vocab' || o.step === 'vtest')) return render();
+    if (o) o.step = 'diag'; startSession('diag', E.diagPlan());
+  },
+  /* 词汇摸底 */
+  vstart() { const o = E.st.ob; o.vt = o.vt || vtNew(); o.vt.t0 = Date.now(); o.vt.paused = false; o.step = 'vtest'; save(); render(); },
+  vk(el) {
+    const o = E.st.ob, vt = o.vt, y = +el.dataset.y, w = vt.q[vt.i]; if (!w) return A.vend();
+    vt.a.push([vt.i, y]);
+    if (y && w[1] && vt.nc < 6 && (vt.a.length % 6 === 3 || Math.random() < 0.12)) {   // 抽查：只抽点了“认识”的真词
+      const others = vt.q.filter(x => x[1] && x[0] !== w[0] && x[3]).map(x => x[3].split(/[；;，,]/)[0]).filter((x, i, a) => a.indexOf(x) === i).sort(() => Math.random() - 0.5).slice(0, 3);
+      const right = (w[3] || '').split(/[；;，,]/)[0], opts = [right].concat(others).sort(() => Math.random() - 0.5);
+      if (right && others.length === 3) { vt.chk = { w: w[0], o: opts, a: opts.indexOf(right), k: vt.a.length - 1 }; vt.nc++; }
+    }
+    vt.i++; E.log('vocab_ans', { w: w[0], y });
+    if (!vt.chk && (vt.i >= vt.q.length || !vtLeft(vt))) return A.vend();
+    save(); render();
+  },
+  vchk(el) { const vt = E.st.ob.vt, c = vt.chk, i = +el.dataset.i; if (i !== c.a) vt.a[c.k][1] = 0; E.log('vocab_chk', { w: c.w, ok: i === c.a }); vt.chk = null;
+    if (vt.i >= vt.q.length || !vtLeft(vt)) return A.vend(); save(); render(); },
+  vpause() { const vt = E.st.ob.vt; vt.el += Date.now() - vt.t0; vt.t0 = 0; vt.paused = true; save(); render(); },
+  vresume() { const vt = E.st.ob.vt; vt.t0 = Date.now(); vt.paused = false; save(); render(); },
+  vend() { const o = E.st.ob, vt = o.vt; if (vt.t0) { vt.el += Date.now() - vt.t0; vt.t0 = 0; } o.voc = vtScore(vt); o.vskip = false; E.st.vocab = o.voc.n; o.step = 'dintro'; delete o.vt;
+    E.log('vocab_done', o.voc); save(); render(); },
+  vskip() { const o = E.st.ob; o.vskip = true; o.voc = { n: 3000, biz: null }; E.st.vocab = E.st.vocab || 3000; delete o.vt; o.step = E.st.diag ? 'done' : 'dintro'; if (E.st.diag) tab = 'today'; save(); render(); },
+  vretest() { E.st.ob = { step: 'vocab', again: 1 }; save(); render(); },
+  vreX() { ui().vreX = 1; save(); render(); },
+  obDone() { E.st.ob.step = 'done'; tab = 'today'; save(); render(); },
+  obMore() { E.st.ob.step = 'done'; save(); A.start({ dataset: { m: 5 } }); },
+  goTab(el) { tab = el.dataset.t; render(); },
+  weak(el) { const u = E.weakPlan(el.dataset.n); startSession('train', u); },
+  circX() { save(); render(); ui().circClosed = (API.profile().circadian || {}).best; save(); render(); },
+  circOff() { E.setSetting('circadian', false); save(); render(); },
+  circ() { E.setSetting('circadian', (E.st.settings || {}).circadian === false); save(); render(); },
+  pReset() { if (!confirm('重置个性化？作答记录不会删。')) return; delete E.st.fsrsFit; const u = ui(); delete u.circAt; delete u.circTip; delete u.circClosed; E.log('personal_reset', {}); E.fxReplay(); save(); render(); },
+  tgl(el) { const k = el.dataset.k; ui()[k] = !ui()[k]; save(); render(); },
+  fz(el) { ui().fz = +el.dataset.v; save(); render(); },
+  mtg(el) { A._mtg = +el.dataset.v; render(); },
+  saveGoal() {
+    const t = A._mtg || E.st.target, ls = +(($('#mLs') || {}).value) || 0, dt = ($('#mDate') || {}).value || '';
+    if (dt && examTip(dt).indexOf('已经过了') >= 0) { const o = $('#mOut'); if (o) o.innerHTML = examTip(dt); return; }
+    E.st.target = t; E.st.listen = ls || null; E.st.rtg = rtgCalc(t, ls);
+    if (dt !== (E.st.exam || '')) { E.st.exam = dt; E.log('exam_date_set', { tz: -new Date().getTimezoneOffset(), exam_date: dt }); }
+    E.log('goal_set', { total: t, listen: ls || null, rtg: E.st.rtg }); A._mtg = null; save(); render();
+  },
+  dl() {
+    const blob = JSON.stringify({ app: 'toeic-r-v2', name: Profiles.name(), exported: new Date().toISOString(), st: E.st });
+    try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([blob], { type: 'application/json' })); a.download = 'toeic-reading-' + today() + '.json'; document.body.appendChild(a); a.click(); a.remove(); } catch (e) { A.exp(); }
+  },
+  clr1() { ui().clrArm = 1; render(); },
+  clr0() { ui().clrArm = 0; render(); },
+  clr2() { const id = Profiles.cur(); E.st.ui.clrArm = 0; S = null; WQ = null; Profiles.remove(id); E.st = null; if (Profiles.cur()) return boot(); setupNew = true; render(); },
+  recover() { if (S) { S.paused = true; } WQ = null; R = null; tab = 'today'; save(); render(); },
+  errCopy() { try { navigator.clipboard.writeText(A._err || ''); } catch (e) { } },
+  /* 生词四选一 */
+  wqA(el) { const i = +el.dataset.i, w = WQ.ws[WQ.i], ok = i === WQ.q.a; WQ.ans = i; E.scheduleWord(w, ok ? 2 : 0); E.log('wordrev', { w, g: ok ? 2 : 0, mc: 1, tz: -new Date().getTimezoneOffset() }); save(); render();
+    if (ok) { const k = WQ.i; setTimeout(() => { if (WQ && WQ.i === k && WQ.ans != null) A.wqN(); }, 700); } },
+  wqN() { WQ.i++; WQ.q = null; WQ.ans = null; if (WQ.i >= WQ.ws.length) { const ni = WQ.ni; WQ = null; $('#app').classList.remove('quiz'); if (ni) return startSession('review', E.reviewUnits(ni)); modal('<div class="res"><h2>复习做完了 ✓</h2><p class="mut">这些词会在快忘的时候再回来。</p><button class="btn full" data-act="closeM">好</button></div>'); return render(); } render(); },
+  wqX() { WQ = null; $('#app').classList.remove('quiz'); render(); },
   start(el) {
     if (S) { S.paused = false; S.qt0 = Date.now(); save(); return render(); }
     const m = +(el && el.dataset.m) || 5, p = API.plan(m);
@@ -427,7 +727,7 @@ const A = {
   },
   more() { R = null; A.start({ dataset: { m: 5 } }); },
   mock() { const f = E.nextForm(); if (!f) return alert('整套题都做过了'); startSession('mock', E.mockPlan(f), { form: f }); },
-  rev() { startSession('review', E.reviewUnits(20)); },
+  rev() { const a = revAlloc(); if (a.nw) { WQ = { ws: a.ws.slice(0, a.nw), i: 0, ni: a.ni, q: null, ans: null }; return render(); } startSession('review', E.reviewUnits(a.ni || 20)); },
   ans(el) { answer(+el.dataset.c); },
   next() { next(); },
   pause() { leaveQ(); S.paused = true; tab = 'today'; save(); render(); },
@@ -462,7 +762,7 @@ const A = {
   wg(el) { E.scheduleWord(el.dataset.w, +el.dataset.g); E.log('wordrev', { w: el.dataset.w, g: +el.dataset.g, tz: -new Date().getTimezoneOffset() }); save(); render(); },
   newp() { save(); setupNew = true; render(); },
   usep(el) { save(); Profiles.use(el.dataset.id); boot(); },
-  delp(el) { if (!confirm('删除这个档案？')) return; Profiles.remove(el.dataset.id); if (!Profiles.cur()) { E.st = null; setupNew = true; return render(); } boot(); },
+  delp(el) { if (!confirm('删除这个档案？删除后不能恢复。')) return; Profiles.remove(el.dataset.id); if (!Profiles.cur()) { E.st = null; setupNew = true; return render(); } boot(); },
   exp() { const c = Code.enc({ app: 'toeic-r-v2', name: Profiles.name(), st: E.st }); $('#codeBox').value = c; try { navigator.clipboard.writeText(c); } catch (e) { } },
   imp() {
     try { const o = Code.dec($('#codeBox').value); if (!o || !o.st) throw 0; Profiles.create(o.name || '导入'); E.st = o.st; save(); boot(); }
@@ -480,7 +780,12 @@ if (typeof document !== 'undefined' && document.addEventListener) {
     const nb = t.closest('#nav button'); if (nb) { tab = nb.dataset.tab; render(); }
     if (t.id === 'modal' && !R) modal('');
   });
+  document.addEventListener('input', e => { if (setupNew && e.target && /^s/.test(e.target.id || '')) s1Upd(); if (e.target && e.target.id === 'mDate') { const o = $('#mOut'); if (o) o.innerHTML = examTip(e.target.value); } });
   document.addEventListener('keydown', e => {
+    const o = ob(); if (o && o.step === 'vtest' && o.vt && !o.vt.paused) {
+      if (o.vt.chk) { const i = '1234'.indexOf(e.key); if (i >= 0) A.vchk({ dataset: { i: i < o.vt.chk.o.length ? i : -1 } }); return; }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); A.vk({ dataset: { y: e.key === 'ArrowRight' ? '1' : '0' } }); } return; }
+    if (WQ && !S) { const i = '1234'.indexOf(e.key); if (WQ.ans == null && i >= 0) A.wqA({ dataset: { i } }); else if (WQ.ans != null && e.key === 'Enter') A.wqN(); return; }
     if (!S || S.done || S.paused) { if (R && e.key === 'Enter') A.closeR(); return; }
     if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
     const k = e.key, id = curId();
