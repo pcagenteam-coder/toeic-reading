@@ -62,9 +62,9 @@ const wrap = h => `<div class="wrap">${h}</div>`;
 function vError() { return `<div class="card empty"><h2>出了点问题，你的进度已保存。</h2><button class="btn full lg" data-act="recover">接着做</button><p></p><button class="link mut" data-act="errCopy">复制错误信息</button></div>`; }
 function modal(h) { $('#sheet').innerHTML = h; $('#modal').classList.toggle('hide', !h); }
 
-/* ---------- 首日 S1–S6：目标 → 词汇摸底 → 入职测试 → 结果+作战卡 ---------- */
+/* ---------- 首日 S1–S6：目标 → 入职测试 → 结果+作战卡 → 提醒（P0-3：词汇摸底移到诊断后、可选，从今天页“补测词汇”进入） ---------- */
 const r5 = x => Math.round(x / 5) * 5;
-const OBS = ['目标', '词汇', '测试', '结果', '提醒'];
+const OBS = ['目标', '测试', '结果', '提醒'];
 const ob = () => E.st && E.st.ob && E.st.ob.step !== 'done' ? E.st.ob : null;
 function steps(k) {
   return `<div class="steps">${OBS.map((x, i) => `<i class="${i < k ? 'd' : i === k ? 'c' : ''}"><span>${x}</span></i>`).join('')}</div>`;
@@ -94,7 +94,7 @@ function vSetup() {
   <details id="rtgMan"><summary>改一下阅读目标</summary><input id="sRtg" inputmode="numeric" placeholder="阅读目标（5–495）"></details>
   <h3>什么时候考？</h3><div class="row"><input id="sDate" type="date" ${A._noDate ? 'disabled' : ''}><button class="chip ${A._noDate ? 'on' : ''}" data-act="noDate">还没定</button></div>
   <p class="out mut sm" id="dateOut"></p></div>
-  <div class="thumb"><button class="btn full lg" data-act="setupGo" data-d="1">下一步</button>
+  <div class="thumb"><button class="btn full lg" data-act="setupGo" data-d="1">下一步 · 入职测试（约 5 分钟）</button>
   ${first ? '<button class="link" data-act="impOpen">我有进度码 → 导入</button>' : '<button class="btn ghost full" data-act="setupCancel">取消</button>'}</div></div>`;
 }
 function s1Upd() {
@@ -122,15 +122,15 @@ function vtScore(vt) {
   return { n: Math.round(n / 100) * 100, biz: biz.length ? Math.round(biz.reduce((s, x) => s + x, 0) / biz.length * 100) : null, k: vt.a.length };
 }
 function vVocab(o) {
-  if (o.step === 'vocab') return `<div class="onb">${steps(1)}${obStory('Ken：先看看你认识多少词')}<div class="card"><h2>入职词汇摸底 · 约 3 分钟</h2>
+  if (o.step === 'vocab') return `<div class="onb">${obStory('Ken：再看看你认识多少词')}<div class="card"><h2>补测词汇 · 约 3 分钟</h2>
     <ul class="ln"><li>认识就点「认识」，不确定就点「不认识」</li><li>里面有几个编出来的假词</li><li>偶尔让你选一下意思</li><li>3 分钟到点自动结束</li></ul></div>
-    <div class="thumb"><button class="btn full lg" data-act="vstart">开始</button><button class="link" data-act="vskip">跳过（先按 3,000 词估）</button></div></div>`;
+    <div class="thumb"><button class="btn full lg" data-act="vstart">开始</button><button class="link" data-act="vskip">先不测</button></div></div>`;
   const vt = o.vt;
   if (o.step === 'vtest') {
     const top = `<div class="vtop"><button class="x" data-act="vpause" aria-label="暂停">✕</button><span class="mut" id="vClock">${vtClock(vt)}</span></div>`;
     if (vt.paused) return `<div class="onb vt">${top}<div class="card"><h2>暂停了</h2><p class="mut">答过的都记下了。</p></div><div class="thumb">
       <button class="btn full lg" data-act="vresume">继续</button>${vt.a.length >= 20 ? '<button class="btn ghost full" data-act="vend">结束测试，看结果</button>' : ''}
-      <button class="link" data-act="vskip">跳过（先按 3,000 词估）</button></div></div>`;
+      <button class="link" data-act="vskip">先不测</button></div></div>`;
     if (vt.chk) {
       const c = vt.chk;
       return `<div class="onb vt">${top}<div class="vw sm2"><b>${esc(c.w)}</b> 是什么意思？</div><div class="thumb vopts">${c.o.map((x, i) => `<button class="opt" data-act="vchk" data-i="${i}"><span>${esc(x)}</span></button>`).join('')}
@@ -140,12 +140,12 @@ function vVocab(o) {
     return `<div class="onb vt">${top}<div class="vw" id="vWord">${esc(w[0])}</div><div class="thumb two"><button class="btn ghost lg" data-act="vk" data-y="0">不认识<span class="kb">←</span></button>
       <button class="btn lg" data-act="vk" data-y="1">认识<span class="kb">→</span></button></div></div>`;
   }
-  const sc = o.voc || { n: 3000, biz: null };
-  return `<div class="onb">${steps(2)}${obStory('Dana：词汇摸底做完了')}<div class="card">
-    ${o.vskip ? '<h2>先按约 3,000 个常用词来排</h2><p class="mut">之后在今天页可以补测，推荐会更准。</p>'
-      : `<h2>你大约认识 ${sc.n.toLocaleString('en-US')} 个常用词</h2><p>${sc.biz != null ? `商务词认识约 ${sc.biz}%。` : ''}文章里的生词会控制在你读得顺的范围。</p>`}</div>
-    ${E.st.diag ? '<div class="thumb"><button class="btn full lg" data-act="obDone">好</button></div></div>' : `<div class="card"><h2>入职测试 · 约 12 题</h2><ul class="ln"><li>6 句审稿 + 1 段改稿 + 1 封短邮件</li><li>不显示对错，不会就选一个，继续下一题</li><li>中途离开会保存，下次接着做</li></ul></div>
-    <div class="thumb"><button class="btn full lg" data-act="diag">${S && S.mode === 'diag' ? '继续入职测试' : '开始入职测试（约 5 分钟）'}</button></div></div>`}`;
+  if (!E.st.diag) return `<div class="onb">${steps(1)}${obStory('Ken：做一次入职测试')}<div class="card"><h2>入职测试 · 约 5 分钟</h2><ul class="ln"><li>约 12 题：6 句审稿 + 1 段改稿 + 1 封短邮件</li><li>不显示对错，不会就选一个，继续下一题</li><li>中途离开会保存，下次接着做</li></ul></div>
+    <div class="thumb"><button class="btn full lg" data-act="diag">${S && S.mode === 'diag' ? '继续入职测试' : '开始入职测试'}</button></div></div>`;
+  const sc = o.voc || { n: 3000, biz: null };   // 诊断后补测词汇的结果
+  return `<div class="onb">${obStory('Dana：词汇补测做完了')}<div class="card">
+    <h2>你大约认识 ${sc.n.toLocaleString('en-US')} 个常用词</h2><p>${sc.biz != null ? `商务词认识约 ${sc.biz}%。` : ''}文章里的生词会控制在你读得顺的范围。</p></div>
+    <div class="thumb"><button class="btn full lg" data-act="obDone">好</button></div></div>`;
 }
 /* 作战卡：每档 ≤8 条行动句（UX §6.1 选定的 strategies_v2 id），数字按个人画像（Personal.battleCard）算 */
 function battleLines() {
@@ -204,7 +204,7 @@ function needText(g, pr) {
 function vObResult(o) {
   const pr = API.predict(), g = API.progress(), res = o.res || {}, nt = needText(g, pr);
   const head = o.vskip && !E.st.diag ? '' : '';
-  return `<div class="onb">${steps(3)}<div class="card"><h2>入职测试完成 ✓</h2>
+  return `<div class="onb">${steps(2)}<div class="card"><h2>入职测试完成 ✓</h2>
     <p>${predLine(pr)}</p>
     ${nt ? `<p>${nt}</p>` : ''}
     ${res.strong && res.strong.length ? `<p class="sm">你拿得稳的：${res.strong.map(esc).join('、')}</p>` : ''}
@@ -223,7 +223,7 @@ function rmSuggest() {
 const rmOk = v => /^([01]\d|2[0-3]):[0-5]\d$/.test(v || '');
 function vRemind(o) {
   const sg = rmSuggest(), sel = o.rm || sg, opts = [...new Set([sg, '08:00', '12:30', '21:00'])];
-  return `<div class="onb">${steps(4)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
+  return `<div class="onb">${steps(3)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
     <p class="mut sm">到点后打开应用，今天页会提示你还没做的活。随时可在「我的」里改。</p>
     <div class="row wrapr">${opts.map(t => `<button class="chip ${t === sel ? 'on' : ''}" data-act="rmPick" data-v="${t}">${t === sg ? '建议 ' : ''}${t}</button>`).join('')}</div>
     <h3>或者自己定</h3><input id="obRm" class="inl tmi" type="time" value="${sel}"></div>
@@ -271,7 +271,7 @@ function vToday() {
   const d = new Date(), wd = '日一二三四五六'[d.getDay()];
   const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
   ${ui().plain || ui().nostory ? '' : `<p class="scene">«${dayName()} · Halvorsen 运营部»</p>`}`;
-  if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先认识一下你，再做一次入职测试（约 10 分钟），之后每天的活由系统来排。</p>
+  if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先定目标，再做一次入职测试（约 5 分钟 · 共 2 步），之后每天的活由系统来排。</p>
     <button class="btn full lg" data-act="diag">开始</button></div>`;
   const done = E.st.doneDay === today();
   const min = (E.st.settings && E.st.settings.daily_min) || 5;
@@ -292,7 +292,7 @@ function vToday() {
   const side = `<div class="card"><details class="pred"><summary><span class="mut sm">预测阅读分 · 本周趋势</span> <b>${trend}</b> ›</summary>${predBlock(pr, 'big')}</details>
     ${nt ? `<p class="sm">${nt}</p>` : ''}${gl ? `<p class="mut sm">${gl}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
-  const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
+  const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（约 3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
   return top + `<div class="grid2${done && !(S && S.paused) ? ' solo' : ''}"><div>${examCard()}${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
 }
 /* P1-8 考前节奏：≤21 天一行倒计时 + 本周重点；T-14/T-7 各推荐一次模考（可拆 P5+6 约 25 分钟 / P7 约 50 分钟两段）；
@@ -372,7 +372,7 @@ function vReviewWeek(g, pr) {
 }
 function vProgress() {
   const hd = '<div class="hd"><h1>进度</h1></div>';
-  if (!E.st.diag) return hd + `<div class="card empty"><h2>还没有进度</h2><p class="mut">做完入职测试（约 10 分钟），这里会显示离目标还差多少、大约要多少小时。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
+  if (!E.st.diag) return hd + `<div class="card empty"><h2>还没有进度</h2><p class="mut">做完入职测试（约 5 分钟），这里会显示离目标还差多少、大约要多少小时。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
   const g = API.progress(), pr = API.predict(), rk = rankOf(pr), n = g.need || {}, gl = gainLine(pr);
   // P0-1/P1-1：单一数据源 g.need（够达标的最少考点）；主数字用天/周，小时给区间，考点数降为次要
   const head = pr.level === 'low' ? `<div class="big">估算中</div><p class="mut">再练 2–3 次就能算出离目标还差多少。</p>`
@@ -762,14 +762,14 @@ const A = {
     const nm = ((($('#sName') || {}).value) || '').trim() || (Profiles.list().length ? '档案 ' + (Profiles.list().length + 1) : '我');
     Profiles.create(nm); E.st = newState(o.total, o.exam); E.st.rtg = o.rtg; E.st.listen = o.listen || null; setupNew = false;
     E.log('goal_set', { total: o.total, listen: o.listen || null, rtg: o.rtg });
-    if (el && el.dataset.d === '1') E.st.ob = { step: 'vocab' };
+    if (el && el.dataset.d === '1') E.st.ob = { step: 'dintro', vskip: true };   // P0-3：先诊断（起始难度用默认序列），词汇补测可选
     A._tg = A._lsU = A._noDate = undefined; save(); render();
   },
   setupCancel() { setupNew = false; render(); },
   diag() {
     const o = E.st.ob;
     if (S && S.mode === 'diag') { S.paused = false; S.qt0 = Date.now(); save(); return render(); }
-    if (!E.st.diag && (!o || o.step === 'done')) { E.st.ob = { step: 'vocab' }; save(); return render(); }
+    if (!E.st.diag && (!o || o.step === 'done')) { E.st.ob = { step: 'dintro', vskip: true }; save(); return render(); }
     if (o && (o.step === 'vocab' || o.step === 'vtest')) return render();
     if (o) o.step = 'diag'; startSession('diag', E.diagPlan());
   },

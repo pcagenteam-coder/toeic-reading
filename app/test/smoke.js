@@ -21,10 +21,9 @@ const test = `
 const el = (o) => ({ dataset: o || {} });
 $('#sName').value = 'A'; $('#sDate').value = '2026-12-20';
 A.setupGo(el({ d: '1' }));
-if (E.st.rtg !== 270 || E.st.ob.step !== 'vocab') throw new Error('S1 goal: rtg ' + E.st.rtg);
-render(); if (!/词汇摸底/.test($('#main').innerHTML)) throw new Error('vocab intro');
-A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt; render(); if (vt.chk) A.vchk(el({ i: String(vt.chk.a) })); else A.vk(el({ y: vt.q[vt.i][1] ? '1' : '0' })); vk++; if (vk === 10) { A.vpause(); A.vresume(); } }
-console.log('vocab', JSON.stringify(E.st.ob.voc), 'steps', vk); if (!(E.st.ob.voc.n > 1000)) throw new Error('vocab estimate');
+if (E.st.rtg !== 270 || E.st.ob.step !== 'dintro') throw new Error('S1 goal → diag intro: rtg ' + E.st.rtg + ' step ' + E.st.ob.step);
+render(); { const h = $('#main').innerHTML; if (!/入职测试 · 约 5 分钟/.test(h) || /词汇/.test(h)) throw new Error('P0-3 diag intro first'); }
+if (E.st.vocab != null || E.diagLevels().join() !== '2,2,3,3,4,4') throw new Error('P0-3 default diag levels');
 render(); A.diag();
 let n = 0; while (S && S.mode === 'diag') { vQuiz(); if (n === 3) { A.pause(); render(); A.diag(); } answer(Math.floor(Math.random() * 4)); n++; }
 if (!E.st.diag || E.st.ob.step !== 'result' || R) throw new Error('diag not done');
@@ -35,6 +34,11 @@ if (/正确率/.test(rh)) throw new Error('S6 shows accuracy');
 A.obDone(); if (E.st.doneDay !== today()) throw new Error('day 1 not counted');
 if (E.st.ob.step !== 'remind') throw new Error('S7 remind step missing'); render(); if (!/每天几点提醒你/.test($('#main').innerHTML) || !/跳过/.test($('#main').innerHTML)) throw new Error('S7 remind view');
 $('#obRm').value = '21:30'; A.rmSave(); if (E.st.settings.remind !== '21:30' || E.st.ob.step !== 'done') throw new Error('remind save ' + E.st.settings.remind);
+tab = 'today'; render(); if (!/补测词汇/.test($('#main').innerHTML)) throw new Error('P0-3 optional vocab entry');
+A.vretest(); render(); if (!/补测词汇 · 约 3 分钟/.test($('#main').innerHTML)) throw new Error('vocab intro');
+A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt; render(); if (vt.chk) A.vchk(el({ i: String(vt.chk.a) })); else A.vk(el({ y: vt.q[vt.i][1] ? '1' : '0' })); vk++; if (vk === 10) { A.vpause(); A.vresume(); } }
+console.log('vocab', JSON.stringify(E.st.ob.voc), 'steps', vk); if (!(E.st.ob.voc.n > 1000) || E.st.vocab !== E.st.ob.voc.n) throw new Error('vocab estimate');
+render(); if (!/个常用词/.test($('#main').innerHTML)) throw new Error('vocab result'); A.obDone(); if (E.st.ob.step !== 'done') throw new Error('vocab done');
 { const fp = API.plan(5), b = fp.units.filter(u => u.b); if (!fp.first || fp.units.length - b.length !== 2 || b.length !== 1 || IT[b[0].ids[0]].p !== 7 || b[0].ids.length > 3) throw new Error('first-day plan ' + JSON.stringify(fp.units)); console.log('first-day plan', fp.units.map(u => u.b || u.ids[0]).join(' '), fp.estSec + 's'); }
 { const dd = E.st.doneDay; E.st.doneDay = ''; E.st.settings.remind = '00:00'; tab = 'today'; render(); if (!/rmtip/.test($('#main').innerHTML)) throw new Error('remind tip'); A.rmX(); if (/rmtip/.test($('#main').innerHTML)) throw new Error('remind tip dismiss'); E.st.doneDay = dd; }
 for (const m of [5, 15]) { A.start(el({ m })); let k = 0, saw = 0;
