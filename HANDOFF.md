@@ -42,7 +42,7 @@ NGSL 1.2 + TSL 1.2 约 4,000 词为主。600 前高频商务词，800+ 补 TSL�
 1. ~~合并五路技巧成统一技巧库~~（已完成：strategy_library_v1，82 条）。后续：graph v1.1 考虑新增 8 个建议 strategy 节点（见 strategy_library_v1.md §4），补 QT.P7X.DETAIL.INSTRUCTIONS / TX.APP_FORM 的技巧。
 2. ~~每种题型的出题模板 + 自动审题~~（已完成：templates + item_audit.py + 试点 107 题）。
 3. 按模板扩到约 500 题：补未覆盖高权重节点（VO.TITLES_DEPTS、VO.SCENE.SALES_DEAL、TX.AD、VO.SCENE.RND_PRODUCT、VO.SCENE.MEDIA_PUBLISH、TX.APP_FORM），P6 篇幅加长到 100–150 词，P7 补满单篇 10 篇/多篇 5 组的整套结构，接入原型 v2；自用目标约 2,500 题 + 4 套模考。
-4. ~~原型 v2 独立网页~~（已完成 app/，见上）。待：真机点测、预测分校准、点词释义、每周绩效评估。
+4. ~~原型 v2 独立网页~~（已完成 app/，见上）。B2 第 2 段已完成首日 S1–S6/复习/进度/我的/页面状态；待：真机点测、预测分校准、提醒设置、诊断起始难度按词汇量调。
 5. 引擎：EdNet 先验设初始难度/用时（P5 中位 26.4s、P6 33.8s、P7 67.4s）；305 节点知识追踪；FSRS；预测分区间按模考校准。
 
 ## 规则

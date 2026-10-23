@@ -200,3 +200,4 @@ input.inl{width:6.5em;padding:6px 10px;border-radius:20px}
 .sbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:start}.sbs .doc{max-width:none;margin:0}
 .sbh{font-size:12px;color:var(--mut);margin:0 0 6px;letter-spacing:.5px}
 .pop.bubble.mb{width:calc(100% - 16px)}
+.chip{white-space:nowrap}.li{flex-wrap:wrap;align-items:center}.li>span:first-child{flex:1 1 7em}

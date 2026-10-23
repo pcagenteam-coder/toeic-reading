@@ -307,7 +307,7 @@ function vProgress() {
     <p>预测阅读分 <b>${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}）</span></p><p class="mut sm">达标把握 ${prob}% · ${pw}</p></div>`;
   const rank = `<div class="card"><h2>职级 · ${rk.nm}</h2><div class="ladder">${RANKN.map((x, i) => `<i class="${i < rk.i ? 'd' : i === rk.i ? 'c' : ''}">${x}</i>`).join('')}</div>
     ${rk.next ? `<p class="mut sm">再稳 ${rk.need} 个考点升${rk.next}</p>` : '<p class="mut sm">已经是经理了，保持住。</p>'}</div>`;
-  const cur = (g.next || []).map(x => { const pct = Math.round(Math.min(1, (x.m || 0) / Math.max(0.01, g.targetMastery || 0.8)) * 100);
+  const cur = (g.next || []).map(x => { const pct = Math.max(5, Math.round(Math.min(0.92, (x.m || 0) / Math.max(0.01, g.targetMastery || 0.8)) * 100));   // 未达标最多到 92%（证据不够也算没稳）
     return `<div class="li"><span>${esc(x.nm)}</span><span class="bar"><i style="width:${pct}%"></i></span></div>`; }).join('');
   const nodes = `<div class="card"><h2>考点 <span class="mut sm">正在攻 ${(g.next || []).length} · 已稳 ${g.achievedNodes || 0}</span></h2>${cur || '<p class="mut sm">目标考点都稳了。</p>'}</div>`;
   const mk = (E.st.mocks || []).slice(-3).reverse().map(m => `<div class="li"><span>${new Date(m.ts).getMonth() + 1}月${new Date(m.ts).getDate()}日</span><span>约 ${m.scaled} 分</span></div>`).join('');
@@ -614,7 +614,7 @@ function lookupWord(el) {
   const r = el.getBoundingClientRect(), pane = el.closest('.pane') || $('#main'), pr = pane.getBoundingClientRect();
   const hitOpt = () => { const q = p.getBoundingClientRect(); return $$('.opt').some(o => { const x = o.getBoundingClientRect(); return !(x.bottom <= q.top || x.top >= q.bottom || x.right <= q.left || x.left >= q.right); }); };
   if (!wide() && el.closest('.paper')) {   // 手机 P5：选项在拇指区，浮层贴在词下方的空白里，盖住选项就翻到词上方
-    p.classList.add('bubble', 'mb'); p.style.left = '8px'; p.style.top = (r.bottom + 6) + 'px';
+    p.classList.add('bubble', 'mb'); p.style.left = '8px'; const pb = el.closest('.paper').getBoundingClientRect(); p.style.top = (pb.bottom + 8) + 'px';
     requestAnimationFrame(() => { if (hitOpt()) p.style.top = Math.max(8, r.top - p.offsetHeight - 6) + 'px'; });
   } else if (!wide()) {
     const inQ = !!el.closest('#pq') || !el.closest('#pa');
