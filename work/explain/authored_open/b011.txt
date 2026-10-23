@@ -1,0 +1,51 @@
+# b011 MXT04 P6, P7 147-180
+MXC-T04-131 | A | will read each request and ___ it to the queue | will 后面并列两个动词原形：read 和 direct。 | B:directs 加了 s，will 后不行;C:directing 不能和 read 并列;D:direction 是名词 | and 两边同形式
+MXC-T04-132 | C | to ___ the first-response time | 缩短响应“时间”用 shorten。 | A:shrink 多指物体缩小;B:abbreviate 是缩写单词;D:compress 是压缩文件/物体 | 缩短时间＝shorten
+MXC-T04-133 | B | please make a note of any ticket that reaches the wrong queue | 前句让大家记下分错的工单，接“内网上有个表格专门报这种情况”，these cases 正好指它们。 | A:说继续手动分配，和新系统矛盾;C:说六月关掉系统，和后文月底重新训练不符;D:说厂商不支持，和厂商同意重训矛盾 | 盯住 these 指什么 @S2-P6-08
+MXC-T04-134 | D | the ___ of a ticket is still decided | the…of 之间填名词 priority（优先级）。 | A:prior 是形容词;B:prioritised 是分词;C:prioritise 是动词 | the ___ of → 填名词
+MXC-T04-135 | A | free soil testing is now open to every member farm | 前句说所有会员农场都能参加，接“9 月后入会的也第一次有资格”最顺。 | B:说暂停，和“已开放”矛盾;C:说收费，和 free 矛盾;D:说只限北区，和 every 矛盾 | 插入句不能和前文打架
+MXC-T04-136 | B | Take one sample … and ___ the tubes clearly | and 连两个祈使句，和 Take 一样用原形 label。 | A:labelling 不对;C:labelled 不对;D:labels 加了 s | 祈使句并列→原形
+MXC-T04-137 | D | the report also ___ an estimate | 主语 report 单数，现在时 includes。 | A:include 是复数形式;B:including 不能当谓语;C:have included 是复数形式 | 单数主语动词加 s
+MXC-T04-138 | C | Results are sent ___ e-mail only | 通过邮件发送，by e-mail。 | A:in e-mail 不是方式;B:on 不对;D:with 不对 | 方式：by e-mail/post
+MXC-T04-139 | C | ___ it does, the confirmation e-mail … serves as proof | 新卡到“之前”，确认邮件可当凭证，Until。 | A:Although 是虽然;B:Whether 是是否;D:Unless 是除非，逻辑不对 | 在…之前一直→until
+MXC-T04-140 | A | the opening weekend of a ___ exhibition | 名词 exhibition 前填形容词 temporary（临时展）。 | B:temporarily 是副词;C:temporariness 是名词;D:temporaries 是名词 | 名词前填形容词
+MXC-T04-141 | D | Places … ___ to members a week before | 名额“被提供”给会员，用被动 are offered。 | A:offer 主动;B:are offering 主动;C:offering 不能当谓语 | 主语是东西→先想被动
+MXC-T04-142 | B | please write to members@ardmoreinstitute.example | 前句说没收到卡就写邮件，接“请写上卡寄去的邮编”最自然。 | A:说不能补卡，和后句免费补卡矛盾;C:续会已经办好;D:访客券和补卡无关 | 插入句接住前一句的话题
+MXC-T04-143 | D | from 22:00 on Friday 6 June | 维护是以后的事，将来时 will be affected。 | A:is 现在;B:has been 已经;C:was 过去 | 时态看事情发生了没有 @S2-P6-05
+MXC-T04-144 | C | print the Saturday morning picking lists before they leave on Friday | 前句让周五先打印，接“22 点后打出来的不是最终数据”解释原因。 | A:七月装硬件和打印无关;B:说随时能用 App 生成，那就不用提前打印;D:说周六配送取消，和周六拣货矛盾 | 插入句解释前一句为什么
+MXC-T04-145 | A | it is the ___ period of the week | the＋最高级，一周里最清闲的时段，quietest。 | B:quieter 比较级没 than;C:quiet 原级;D:more quiet 是比较级 | the＋…of the week→最高级
+MXC-T04-146 | B | Ingrid Halvorsen, ___ will monitor | 逗号后补充说明人，后面缺主语，用 who。 | A:she 不能连接两个句子;C:which 指物;D:whom 是宾格 | 指人缺主语→who
+MXC-T04-147 | B | this week's potatoes come from Bendik Aasen's farm | 自家土豆晚熟，这周的土豆来自邻谷的这家农场，解释来源。 | A:没说关闭;C:不是推荐商店;D:没新档次 | 问“为什么提到”看它想说明什么 | come from=>where one item … came from
+MXC-T04-148 | D | Recipe cards are no longer printed | 菜谱卡不再印，全放网上了。 | A:还是周二包装;B:原文说不涨价;C:确认还是靠消息 | no longer＝变化 | no longer printed=>online rather than on paper
+MXC-T04-149 | A | Hosting rotated the storage credentials overnight | 托管商半夜换了存储凭证，部署密钥失效。 | B:明确说不是代码问题;C:没说空间满;D:没提维护 | 找原因句 | rotated the storage credentials=>changed the storage credentials
+MXC-T04-150 | C | I will run it from the build already on production | Priya 说用生产环境上已有的版本演示，Ferreira 回“可以”，就是同意用旧版本。 | A:新密钥还没生成;B:工单刚开;D:Daniel 周四才回 | 意图题看上一条消息 @S2-P7-18
+MXC-T04-151 | D | the quarterly journal by post | 每种会员都包含季刊邮寄。 | A:预展只给 Patron;B:没提停车;C:只有 Patron 能带一位客人去预展 | 盯住 Every membership
+MXC-T04-152 | B | Cards … received after that date will be waiting at the front desk | 9 月 20 日后入会，卡放在前台自取。 | A:没说涨价;C:常设展照常能进;D:不用重新申请 | 找 after that date
+MXC-T04-153 | A | The permanent galleries are free to everyone on the first Sunday | 每月第一个周日常设展免费。 | B:重开是 10 月 3 日;C:特展另算;D:寄卡看 9 月 20 日 | 题干词回原文定位
+MXC-T04-154 | C | exports started by hand from the Reports screen are unaffected | 19 日修复前，急用就手动从报表页导出。 | A:没让减少记录;B:没让改时间;D:有问题回邮件即可 | 找 please use that route
+MXC-T04-155 | D | placed them in your account's Files area | 两个坏文件已重新生成，放在 Files 区，名字加了 -corrected。 | A:原文说什么都没删;B:没当附件;C:不是换成 6 日版本 | 逐项回原文核对 | regenerated both=>Corrected copies
+MXC-T04-156 | B | You do not need to request this | 五月账单自动半价，不用申请。 | A:是减半，不是免;C:没说推迟;D:没额外收费 | 推断也要原文撑腰 | do not need to request=>without … having to ask
+MXC-T04-157 | A | reports soil moisture, temperature and salinity | 系统报告土壤湿度、温度、盐度。 | B:没测产量;C:没报价格;D:没记工时 | 答案常换个说法 @S2-P7-06 | soil moisture, temperature and salinity=>Conditions in the soil
+MXC-T04-158 | C | has so far declined to subsidise it | 合作社“拒绝”补贴，declined＝refused。 | A:reduced 是减少，decline 的另一个意思;B:descended 是下降;D:postponed 是推迟 | 别选最常见的那个意思 @S2-P7-09 | declined=>refused
+MXC-T04-159 | D | Installation runs to roughly $9,000 per hectare | 每公顷约 9000 美元又没补贴，小农户可能装不起。 | A:没说逐年降;B:合作社拒绝补贴;C:原文说省的不是人工 | 推断也要原文撑腰 @S2-P7-08
+MXC-T04-160 | B | The lift there has been out since February | Mill Street 的升降机二月起就坏了。 | A:没说施工;C:没有别的车;D:没说太小 | 找 out＝停用
+MXC-T04-161 | A | I will meet him at Carrow Lane and sign for it myself | 他去 Carrow Lane 接货签收。 | B:没给物流公司打电话;C:司机 10:30 有别的单，不等;D:他明确说别在走廊拆 | 找 I will 那句
+MXC-T04-162 | C | Nothing gets unwrapped in the corridor again | 用 again 说明以前在走廊拆箱出过问题。 | A:没说刷漆;B:没说修复师怕人看;D:还没检查过 | again＝以前发生过
+MXC-T04-163 | D | the wash is what this memo is about | 备忘录讲换产品时清洗流程的改动。 | A:燕麦奶、杏仁奶不是新产品线公告;B:没有检查报告;C:不是招志愿者 | 主旨找 this memo is about
+MXC-T04-164 | A | produced a line signed off as clean when it was not | 两班交接清洗，两次把没洗干净的线签成了干净。 | B:没说重复付钱;C:没说装错;D:没说记录两次 | 找 That arrangement has… | signed off as clean when it was not=>signed off as clean when it was not
+MXC-T04-165 | B | collect the revised sheets from my office this week | 这周去她办公室领新的记录单。 | A:协议已经谈好;C:没要求培训;D:加班费已同意，没让申报 | 拿 this week 当路标
+MXC-T04-166 | C | The Halversen lends objects from its permanent collection | 网页讲博物馆出借藏品的条件。 | A:不是展览开幕;B:没讲门票;D:不是招聘 | 主旨看第一段 @S2-P7-03 | lends objects=>lends objects
+MXC-T04-167 | D | at least nine months before the opening date of the exhibition | 至少在展览开幕前九个月提出。 | A:二、六、十月是委员会开会;B:是开幕前，不是开会后;C:评估在提交之后 | 拿 must 当路标
+MXC-T04-168 | A | name the objects by catalogue number, state the dates | 要写编号、外借日期、展柜说明，没要求策展人姓名。 | B:要写编号;C:要写日期;D:要写展柜 | NOT 题逐项核对 @S2-P7-14
+MXC-T04-169 | B | at least nine months before the opening date | “晚于这个时间的申请顺延下季”，this 指前一句的九个月期限，[2]。 | A:[1] 前讲不借给谁;C:[3] 前讲评审;D:[4] 前讲费用 | 先读待插句猜前文 @S2-P7-23
+MXC-T04-170 | C | Door badges will still work | 门禁卡照常能用，单独线路。 | A:共享盘用不了;B:座机用不了;D:底座会断电 | 逐项回原文核对 | Door badges will still work=>door badge readers
+MXC-T04-171 | D | book a desk on floor 2 … by Thursday | 周六要上班就周四前订二楼工位。 | A:没让拷到共享盘;B:拔电脑是周五晚;C:发消息是设施部 | 拿 Thursday 当路标
+MXC-T04-172 | A | One crate, marked 88, showed bruising | 抽查 12 箱，88 号箱约四分之一果子有磕伤。 | B:车温 4°C 低于 6°C;C:等级没错;D:订单号没问题 | 找 Findings
+MXC-T04-173 | C | the balance will follow on 5 August at no extra carriage cost | 差的 350 公斤 8 月 5 日补，不加运费。 | A:没取消;B:没找别的供应商;D:不加运费 | 找 shortfall 那句
+MXC-T04-174 | B | Line 1 has enough fruit for today's run | 一号线当天果子够用，生产照常。 | A:没换线;C:没停;D:没用别家 | 推断也要原文撑腰 | enough fruit for today's run=>went ahead as planned
+MXC-T04-175 | D | Crate 88 rejected and left on the vehicle | 88 号箱拒收，留在车上。 | A:没拆开挑;B:没进冷库;C:没去别的线 | 拿编号当路标 @S2-P7-02
+MXC-T04-176 | A | Rentals begin and end on a Monday | 租期周一开始、周一结束。 | B:没说最长两周;C:没说免费延期;D:所有机器一样 | 逐项回原文核对
+MXC-T04-177 | B | Deliveries beyond the 60 km zone are charged | 她的农场离 75 公里，超出 60 公里免费范围，要另收运费。 | A:只含 60 公里内;C:提前三周是订收获设备;D:没限周六 | 距离一篇、规则一篇 @S2-P7-19
+MXC-T04-178 | C | an operator to come with it for the first two days | 操作员每天 180，她要两天，360。 | A:只算了一天;B:310 是拖拉机周租;D:540 是打捆机周租 | 计算题列出每一步
+MXC-T04-179 | B | Bookings placed before 1 April receive a 15 percent early-season reduction | 她 3 月 12 日订，4 月 1 日前，享 15% 早订优惠。 | A:没有免费远途配送;C:没送一天;D:没说优先 | 日期两篇对着看
+MXC-T04-180 | D | Could someone come out and look at it before the delivery date | 她请人提前来看看进场路和大门拐弯。 | A:没要报价;B:是要操作员，不是培训;C:没问营业时间 | 找 Could someone 那句 | look at it=>Examine the entrance

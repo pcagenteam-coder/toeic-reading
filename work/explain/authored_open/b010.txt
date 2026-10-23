@@ -1,0 +1,51 @@
+# b010 MXT03 P7 181-200, MXT04 P5
+MXC-T03-181 | A | Work on the north atrium begins on Monday 3 June | 通知讲中庭施工期间对租户的影响：入口、送货、电梯、租金。 | B:经理只是联系人;C:没招租;D:没说欠租 | 主旨看第一段 @S2-P7-03
+MXC-T03-182 | C | Shoppers should be directed to the east entrance | 让顾客走东门。 | A:B 层停车场关了;B:服务通道是送货用的;D:打电话是给租户的 | 拿 Shoppers 当路标
+MXC-T03-183 | B | Deliveries to units 12 to 28 … through the service corridor | 她的店是 19 号，在 12–28 号之间，送货要走服务通道。 | A:没暂停送货;C:北门关了;D:没说中心代收 | 编号一篇、范围一篇 @S2-P7-19
+MXC-T03-184 | D | Our furniture supplier will only unload in the afternoon | 送货只许早 6–9 点，可供应商上午都没空、只能下午卸货。 | A:租金没涨;B:三趟已经订好，没取消;C:没嫌东门远 | 两篇对着看时间
+MXC-T03-185 | A | Must a request be made for each delivery, or once | 她问电梯是每次送货都申请，还是整个期间申请一次。 | B:没问收费;C:通知已说货梯可用;D:没问载重 | 找问号那句
+MXC-T03-186 | B | Hand the parcel in at any post office and keep your receipt | 退货在邮局寄出，留好收据。 | A:标签是预付的;C:不用先打电话;D:没说要自己写地址，用预付标签 | 逐项回原文核对
+MXC-T03-187 | D | The colour is far darker than it appeared on the website | 颜色比网上看到的深很多。 | A:没说晚到;B:尺寸没错;C:没损坏 | 找 Customer comments
+MXC-T03-188 | B | Return postage is free on orders over $60 | 订单总额 71.5 超过 60，运费免，全额退桌旗 38 美元。 | A:33.5 是扣了 4.5 运费，但他不用扣;C:67 是总额减 4.5;D:71.5 是整单金额 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T03-189 | C | Your remark about the colour has gone to the studio | 他提的颜色问题转给摄影棚重拍，是针对他意见采取的措施。 | A:退款没延误;B:摄影棚不是织布的;D:没请他上目录 | 问“为什么提到”看它想说明什么
+MXC-T03-190 | A | I can post you a fabric sample of either at no charge | 可以免费寄另外两种颜色的布样。 | B:没说寄新桌旗;C:没给折扣;D:标签已经用过了 | 找 at no charge
+MXC-T03-191 | D | a floor can be assembled in days rather than in weeks | 板材预制好，几天就能装一层，比混凝土快。 | A:没说单价便宜;B:恰好有的地方还要额外防火模拟;C:保险反而难定价 | 逐项回原文核对 | in days rather than in weeks=>goes up faster
+MXC-T03-192 | B | No — 44% | 第二题回答最多的是“不愿多付租金”，44%。 | A:多付 5% 以上只有 9%;C:不知道 9%;D:最多 5% 是 38% | 表格找最大的数
+MXC-T03-193 | A | Environmental credentials — 11% | 他说别强调环保，调查里环保只有 11%。 | B:21% 是交通距离;C:29% 是租金;D:34% 是采光装修 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T03-194 | C | anything that lightens the building helps us at foundation level | 地块是填海地，建筑越轻地基越省。文章也说木结构只有混凝土的五分之一重。 | A:恰好要再做防火模拟;B:还没出租，只是计划提前招租;D:没提水运 | 推断也要原文撑腰 @S2-P7-08
+MXC-T03-195 | D | We should assume the same authority will want it again | 他估计当局还会要防火模拟；文章说有的城市要求超出规范的防火模拟。 | A:没说会拒批;B:没说要换保险;C:没说改规范 | 两篇对着看
+MXC-T03-196 | B | Every shipper leaves us with two sets of coolant packs | 每个保温箱都配两套冰袋。 | A:写明不用外接电源;C:不用退回;D:三年是盖子的保修 | 盯住 every
+MXC-T03-197 | C | Payment terms: 30 days from the invoice date | 开票日 9 月 11 日，加 30 天，10 月 11 日前付。 | A:11 日是开票日;B:24 日是她写邮件;D:没依据 | 日期题要算一算
+MXC-T03-198 | D | arrived with one set of coolant packs each rather than two | 广告说每箱两套冰袋，她只收到一套。 | A:没说晚到;B:运费是 0;C:没说损坏 | 广告承诺对照实际
+MXC-T03-199 | C | goes out to the coast and back over four days | 要撑四天（96 小时），72 小时不够，下一档 TL-48 正好 96 小时。 | A:TL-12 只 48 小时;B:TL-24 就是她说不够的 72 小时款;D:TL-72 比“下一档”还大 | 数字两篇对着看
+MXC-T03-200 | A | six will not reach your threshold for the volume rate | 批量价要同型号 10 个以上，她只要 6 个，拿不到优惠。 | B:9 月订了 12 个，这次 6 个更少;C:这次是大一号的型号;D:没说下单时付款 | 条件一篇、数据一篇 @S2-P7-19
+MXC-T04-101 | C | is ___ simple | 修饰形容词 simple，用副词 deceptively（看着简单）。 | A:deceive 是动词;B:deception 是名词;D:deceptive 是形容词 | 修饰形容词用 -ly
+MXC-T04-102 | B | By the time the autumn harvest begins | 秋收开始前“将已经”装完，will have completed。 | A:completes 一般现在;C:had completed 是过去;D:is completing 是正在 | by the time＋将来→will have done
+MXC-T04-103 | A | must reach the design office ___ 15 March | 最晚 3 月 15 日送到，截止用 by。 | B:until 表持续;C:over 不表截止;D:since 是自从 | 截止期限用 by
+MXC-T04-104 | D | gives packhouse supervisors ___ access to yield figures | instant access＝即时查看，固定搭配。 | A:abrupt 是突然的（贬义）;B:hasty 是草率的;C:brisk 是轻快的 | instant access＝即时访问
+MXC-T04-105 | B | recommended ___ the textile display | recommend 后接 -ing：postponing。 | A:recommend to do 不对;C:postpone 原形不对;D:postponement 是名词，后面接不了宾语 | recommend＋-ing
+MXC-T04-106 | C | operates ___ during opening hours | 修饰动词 operates，用副词 automatically。 | A:automatic 是形容词;B:automation 是名词;D:automate 是动词 | 修饰动词用 -ly
+MXC-T04-107 | A | ___ of the two candidates … has worked | 两人中“任一个”，动词 has 单数，用 Either。 | B:Both 后动词要用 have;C:Any 多用于三者以上;D:Every 不接 of | either of＋单数动词
+MXC-T04-108 | A | three times since the plant opened | since＋过去时间，用现在完成 has changed。 | B:changed 不配 since;C:changes 一般现在;D:will change 将来 | since＋过去→现在完成
+MXC-T04-109 | D | Ticket holders were ___ to learn | 人“感到失望”，用 -ed：disappointed。 | A:disappointing 是令人失望的;B:disappoint 是动词;C:disappointment 是名词 | 人感到→-ed
+MXC-T04-110 | B | found the conference app surprisingly ___ | find＋东西＋形容词，surprisingly 后填形容词 reliable。 | A:reliability 是名词;C:reliably 是副词;D:rely 是动词 | find＋东西＋形容词
+MXC-T04-111 | C | rose sharply ___ the second quarter | 在第二季度“期间”，during＋时间段。 | A:among 是在一群中;B:between 要两样;D:along 是沿着 | 一段时间内→during
+MXC-T04-112 | D | The list of approved seed varieties ___ updated every January | 主语是 list 单数，每年一次用现在时 is。 | A:are 被 varieties 骗了;B:have been 复数;C:were 复数过去 | of 前面的才是主语
+MXC-T04-113 | A | has ___ a grant of $85,000 | 争取到一笔拨款，secure a grant。 | B:gathered 是收集;C:collected 是收集东西;D:reached 是到达 | secure＝争取到
+MXC-T04-114 | C | an experienced ___ to lead | 领导项目的是“人”，an experienced 后填名词 analyst。 | A:analyse 是动词;B:analytical 是形容词;D:analysis 是事情，不能去领导 | 名词再分人/物 @S2-P5-14
+MXC-T04-115 | B | Photographs … ___ in the east corridor until the end of the year | 照片“被展出”，一直到年底，用将来被动 will be displayed。 | A:are displaying 主动，照片不会展出别的;C:have displayed 主动;D:display 主动 | 主语是东西→先想被动
+MXC-T04-116 | D | When the auditors arrived on Tuesday … for six hours | 审计到（过去）时已经连看了六小时，had been reviewing。 | A:reviews 一般现在;B:has reviewed 现在完成;C:will review 将来 | 过去某时之前一直在做→had been doing
+MXC-T04-117 | A | the irrigation contract was signed late, the pilot plots were planted | 后面是句子，合同签晚了“但”按时种了，Although。 | B:Despite 是介词;C:However 是副词，不能连两个句子;D:Because 意思反了 | 后面是句子→用连词
+MXC-T04-118 | C | has arranged ___ every workstation | arrange 后接 to do：to update。 | A:arrange 不接 -ing;B:update 原形不对;D:updated 不对 | arrange＋to do
+MXC-T04-119 | B | a significant ___ in water use | 形容词 significant 后填名词 reduction。 | A:reduce 是动词;C:reduced 是分词;D:reducing 不作名词这样用 | 形容词后填名词
+MXC-T04-120 | D | very ___ evidence | evidence 不可数，very little＝几乎没有。 | A:few 修饰可数;B:many 修饰可数;C:several 修饰可数复数 | 不可数用 little
+MXC-T04-121 | A | installed ___ up to five devices | 软件装“在”设备上，install on a device。 | B:in 不和 device 这样搭;C:at 不对;D:to 不对 | install on＋设备
+MXC-T04-122 | C | was ___ after new evidence … came to light | 有新证据后，目录条目被“修订”了。 | A:revoked 是吊销;B:reversed 是翻转;D:restored 是修复 | revise＝修改
+MXC-T04-123 | B | under the ___ of an agronomist | under the supervision of＝在……指导下，the 后填名词。 | A:supervise 是动词;C:supervisory 是形容词;D:supervisor 是人，under the supervisor of 不通 | under the supervision of
+MXC-T04-124 | A | last Thursday | 上周四的事，一般过去时 handled。 | B:has handled 不和具体过去时间连用;C:handles 一般现在;D:will have handled 将来 | 看时间词定时态
+MXC-T04-125 | D | ___ to assemble than | 有 than，用比较级，far 加强：far easier。 | A:easy 原级;B:easiest 最高级;C:as easy 要配 as | 看到 than 选比较级
+MXC-T04-126 | C | The samples ___ from the northern plots | 样本是“被采集”的，名词后用过去分词 collected。 | A:collecting 表主动;B:collect 原形不对;D:collection 是名词 | 名词后被做→-ed
+MXC-T04-127 | B | The festival's ___ director | 名词 director 前填形容词，artistic director＝艺术总监。 | A:art director 是“美术指导”，不是这个职务;C:artistically 是副词;D:artist 是人 | 名词前填形容词
+MXC-T04-128 | D | Neither the projector nor the speakers ___ working | 动词跟近的 speakers（复数）一致，过去时 were。 | A:was 单数;B:has been 单数;C:is 单数现在 | neither…nor 跟近的那个一致
+MXC-T04-129 | C | no exceptions will be made | 没有例外，硬性规定，用 must。 | A:might 是也许;B:may 是可以;D:can 是能 | 规定要求→must
+MXC-T04-130 | A | notified of the panel's ___ | 所有格后填名词 decision。 | B:decide 是动词;C:decisive 是形容词;D:decisively 是副词 | 所有格后填名词

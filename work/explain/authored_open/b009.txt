@@ -1,0 +1,47 @@
+# b009 MXT03 P6 B2-B4, P7 147-180
+MXC-T03-135 | A | Our click-and-collect service goes live in every branch on 1 March | 前句说 3 月 1 日全店上线，接“三家大店试点以来很顺利”，给上线做铺垫。 | B:前句说每家分店都上，和“只限北区”矛盾;C:说不再接受网单，和网上下单矛盾;D:退货给供应商和自提无关 | 插入句不能和前文打架
+MXC-T03-136 | C | cleared ___ the delivery arrives | 货到“之前”把柜台区清空，before 后接句子。 | A:during 是介词，后不接句子;B:so that 是为了，逻辑不通;D:unless 是除非 | 先后顺序→before
+MXC-T03-137 | B | Parcels ___ within four hours | 包裹“被备好”，用被动 must be prepared。 | A:must prepare 主动，包裹不会自己准备;C:are preparing 主动;D:have prepared 主动 | 主语是东西→先想被动
+MXC-T03-138 | D | By the end of that month we expect that every branch | 说的是 3 月底的预期，将来的事，用 will be handling。 | A:handles 一般现在，不表预期的将来;B:handled 过去;C:has handled 现在完成 | 时态看事情发生了没有 @S2-P6-05
+MXC-T03-139 | C | Repeat prescriptions ___ are issued by any surgery | 先行词是物（处方），后面缺主语，用 that。 | A:who 指人;B:what 前面不能有名词;D:they 是代词，不能连接两个句子 | 名词后缺主语→that/which
+MXC-T03-140 | D | Once your details ___ by our team | 资料“被核实”，有 by，用被动 have been verified。 | A:verify 主动;B:verifying 不能当谓语;C:will verify 主动，once 从句也不用 will | 有 by＋人→被动
+MXC-T03-141 | A | Deliveries run Monday to Saturday between 9 A.M. and 6 P.M. | 前句讲配送时间段，接“下单时可选两小时时段”最自然。 | B:前面说周一到周六，周日不配送;C:下一句说冷藏品会送，矛盾;D:药店关门和配送说明无关 | 插入句不能和前后打架
+MXC-T03-142 | B | you can ___ a delivery to the following day | 不在家可以把配送“推迟”到第二天，postpone…to。 | A:cancel 取消就不会到第二天;C:confirm 是确认;D:repeat 是重复 | 改到以后→postpone
+MXC-T03-143 | D | for five days from Monday 22 June | 备忘录 6 月 9 日写，停车场 22 日起关，是将来的事，will be closed。 | A:closes 一般现在;B:has closed 已经关了;C:was closed 过去 | 时态看写信日期 @S2-P6-05
+MXC-T03-144 | B | staff should use the overflow area behind the laundry building | 前句说去洗衣房后面的停车区，接“那里每 15 分钟有班车到正门”最顺。 | A:洗衣房关了就没法停;C:访客能停主停车场，和施工矛盾;D:前面说施工五天 | 插入句接住前一句的话题
+MXC-T03-145 | C | Noise will be ___ noticeable | 修饰形容词 noticeable，用副词 particularly。 | A:particular 是形容词;B:particulars 是名词;D:particularity 是名词 | 修饰形容词用 -ly
+MXC-T03-146 | A | so that one can be ___ | can be＋过去分词，车位“被安排”，arranged。 | B:arranging 不接在 be 后表被动;C:arrangement 是名词;D:arrange 原形不接在 be 后 | be＋过去分词
+MXC-T03-147 | B | will be closed from 11 to 22 May | 领取窗口这段时间关闭，改到 B 号装卸台，是临时变更。 | A:不是新订货系统;C:不是招人;D:没提涨价 | 主旨看第一段 @S2-P7-03 | will be closed from 11 to 22 May=>a temporary change
+MXC-T03-148 | D | telephone extension 4180 before 3:00 P.M. | 下午 3 点前打 4180 分机，当天下午就送到。 | A:一楼窗口关了;B:常规订单另有安排;C:没说中午前去取 | 拿时间当路标 @S2-P7-02
+MXC-T03-149 | A | The driver's paperwork says 60 boxes, but our manifest says 48 | 送来 60 箱，单子上只订了 48，多了。 | B:没说迟到;C:没说损坏;D:订单下过 | 找 but 后面的问题 | 60 boxes … 48=>more boxes than expected
+MXC-T03-150 | C | I will take the twelve across in the van tomorrow | 她明天开车把 12 箱送去 Fenwick 工地。 | A:不让司机带回;B:Fenwick 的人周四在自己工地开工;D:箱子不拆，放着别动 | 找 tomorrow 那句
+MXC-T03-151 | B | Willingness to be on call one weekend in five | 每五个周末要值班一次，即偶尔要周末待命。 | A:没说临时合同;C:是和两个排班员共事，不是管他们;D:在 Vantaa 上班 | 逐项回原文核对 | one weekend in five=>occasional weekend availability
+MXC-T03-152 | D | a second European language is an advantage | 第二外语是加分项，不是必须。 | A:没要证书;B:没说考核;C:没说加薪 | advantage＝加分，不是硬性 | an advantage=>useful but not required
+MXC-T03-153 | A | does not yet hold a certificate … enrolled in a funded course | 没证书的人入职后公司出钱培训，说明招聘时不要求有证。 | B:和薪水无关;C:只针对没证书的人;D:不是面试条件 | 推断也要原文撑腰 @S2-P7-08
+MXC-T03-154 | C | the north wall can carry the proposed second storey | 勘测图确认北墙能承受加盖二层。 | A:没说拆;B:原文说不需要额外打桩;D:没说边界记错 | 答案常换个说法 @S2-P7-06 | carry the proposed second storey=>support another storey
+MXC-T03-155 | D | so that we do not have to redraw the ground floor twice | 排水管问题没定，一楼可能要改，先停在 C 阶段免得重画。 | A:没提欠款;B:工程师已经看完;C:还没提交 | 问 why 找 so that
+MXC-T03-156 | B | submitting the annexe and the drainage works as two separate applications | 超过一个月就建议分成两份申请。 | A:没说去掉二层;C:没说买停车场;D:没说再勘测 | 找 If…, I would suggest | two separate applications=>two separate planning applications
+MXC-T03-157 | A | converting two levels of stockrooms into a parcel hub | 把两层库房改成了包裹发货中心。 | B:恰好不是销售区;C:没说关店九个月，九个月是改造时间;D:正好相反，是放在店里 | 答案常换个说法 @S2-P7-06 | stockrooms into a parcel hub=>storage areas into a dispatch centre
+MXC-T03-158 | C | while home deliveries were flat | 自提增长 34%，送货上门“持平”，flat＝没变化。 | A:平坦是字面义;B:不是大降;D:不是便宜 | 同义词代回原句读 @S2-P7-09 | flat=>unchanged
+MXC-T03-159 | D | Not every site can be converted … lifts too small | “限制多来自建筑本身而非预算”放在“不是每家店都能改”之后、“老楼电梯太小”之前，[4]。 | A:[1] 处讲花钱最多的地方;B:[2] 讲行业趋势;C:[3] 讲自提增长 | 先读待插句猜前文 @S2-P7-23
+MXC-T03-160 | B | two ward clerks for the June rota, not the three | 中介只给了两个文员，要的是三个。 | A:没人辞职;C:是这两个晚班缺人，不是关闭;D:排班表还没发 | 第一条消息就是问题 | two … not the three=>Fewer agency staff than requested
+MXC-T03-161 | A | move Farida to evenings … bring her weekend hours down | 把 Farida 调到晚班，减少她的周末班。 | B:正好相反;C:没换楼层;D:没提合同 | 找 I can 那句
+MXC-T03-162 | D | can you publish the rota by Friday | 周五很赶，但他答应能做到。 | A:没说已经过期;B:他答应自己发;C:他是把周六标暂定，不是取消 | tight＝时间紧，but yes＝还是行
+MXC-T03-163 | C | We have ordered a replacement panel | 邮件说明怎么处理投诉：换侧板、或可选整件换/退款、再送 25 美元。 | A:不是发货确认;B:没要照片;D:没改退货政策 | 回复投诉的邮件→讲怎么解决
+MXC-T03-164 | B | it will reach you far sooner than a whole unit would | 只换侧板 10 月 9 日就到，整件要月底，快得多。 | A:没说停产;C:是公司决定的;D:接受侧板不用退回，但这不是原因 | 问 why 找比较句 | far sooner=>considerably earlier
+MXC-T03-165 | A | has no expiry date | 25 美元抵用金结账自动用，永不过期。 | B:6 日是选退款的期限;C:是账户抵用，不是纸券;D:只是道歉金 | 推断也要原文撑腰 | no expiry date=>at any time in the future
+MXC-T03-166 | D | upload one document confirming your business address | 开户要上传一份证明营业地址的文件。 | A:5000 是信用额度，不是押金;B:没要推荐;C:没要送货计划 | 找 Opening an account 一栏
+MXC-T03-167 | C | Gold … plus a named account manager | 只有金卡有专属客户经理。 | A:月结发票所有账户都有;B:次日送货所有人都有;D:规格库所有账户都能用 | 盯住 plus 后的额外福利
+MXC-T03-168 | B | paint mixed to order and special orders cannot be returned | 按客户颜色调的漆不能退。 | A:未拆封、28 天内可退;C:未拆封标准门 10 天可退;D:未拆封三周可退 | NOT 题逐项核对 @S2-P7-14 | paint mixed to order=>paint mixed to a customer's colour
+MXC-T03-169 | D | Silver — 6% below trade prices, from $30,000 a year | 一年 4 万，达到银卡（3 万起），比标准价低 6%。 | A:没说关户;B:前三个月有额度;C:40 公里外没说免费 | 数字落在哪一档
+MXC-T03-170 | A | display your permit on the dashboard | 施工期间把停车证放在仪表台上，外面能看到。 | B:没要求登记;C:访客区一直只给访客;D:只是 8:30 后来的人可考虑备用区 | 找 please 那句 | display your permit=>Place their permits where they can be seen
+MXC-T03-171 | C | we are not able to cancel those notices on your behalf | 罚单诊所不能帮你撤销。 | A:没说转给运营部;B:没说只限周末;D:没说在入口交 | 逐项回原文核对 | not able to cancel=>will not withdraw them
+MXC-T03-172 | D | Places are allocated when you collect your badge … arrive early | 名额在领胸牌时分配，想选就早到。 | A:不能网上订;B:没说找讲师;C:没提加钱 | 找 if you have a preference
+MXC-T03-173 | B | a delegate may attend one of them | A 和 B 同时段只能选一个，再加下午的 C，最多两个。 | A:还能去下午 C;C:A、B 不能都去;D:一天只有三个工作坊 | 计算题列出每一项
+MXC-T03-174 | C | the lift serves Levels 1 and 3 only | Terrace Room 在 2 楼，电梯只到 1 楼和 3 楼，坐电梯到不了。 | A:闭幕在 Auditorium;B:30 人是工作坊上限;D:它在 3 号房旁楼梯上去 | 推断题把两条信息连起来
+MXC-T03-175 | A | Slides from every session will be posted on the forum website | 18 日把所有幻灯片放到论坛网站。 | B:证书当天发;C:论坛不是三天;D:没提招标文件 | 拿日期当路标 @S2-P7-02 | Slides=>Presentation materials
+MXC-T03-176 | B | I am writing to apply for the post | 他是写信应聘。 | A:没问课程;C:还没定面试;D:不是推荐别人 | 目的题看第一句 @S2-P7-03
+MXC-T03-177 | A | Plan the daily delivery runs to the fourteen clinic sites | 职责之一是安排每天去 14 家诊所的送货。 | B:没说面试别人;C:没提预算;D:没说培训医护 | 题目点名哪篇就去哪篇 | Plan the daily delivery runs=>Arranging the daily deliveries
+MXC-T03-178 | B | My certificate is in transport management | 招聘要物流或药学证书，他的是运输管理。 | A:他有六年，超过三年;C:他做冷链，还上过课;D:他附了两封推荐信 | 要求一篇、条件一篇 @S2-P7-19
+MXC-T03-179 | D | I will be abroad until 12 May | 面试在五月第一周，他 12 日前都在国外。 | A:他 4 月 22 日就申请了;B:没提审计;C:推荐信已随信附上 | 日期两篇对着看
+MXC-T03-180 | C | Enclosures: two references | 信末写附件是两封推荐信。 | A:没附证书;B:没附温度记录;D:没附雇主清单 | Enclosures＝附件
