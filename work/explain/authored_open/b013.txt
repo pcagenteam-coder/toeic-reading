@@ -1,0 +1,47 @@
+# b013 MXT05 P5 126-130, P6, P7 147-171
+MXC-T05-126 | C | cleared the backlog with remarkable ___ | 介词 with+形容词 remarkable 后填名词 efficiency。 | A:形容词;B:副词;D:比较级形容词 | 形容词后填名词
+MXC-T05-127 | A | Contractors ___ wear high-visibility clothing at all times | 安全规定“必须”穿反光服，用 must。 | B:might 是可能;C:would 是会;D:could 是能 | at all times→强制
+MXC-T05-128 | B | for six hours before they found the discrepancy | 发现（过去）之前已持续工作六小时，用过去完成进行时。 | A:现在完成进行;C:现在进行;D:将来完成 | 过去某点之前持续→had been doing
+MXC-T05-129 | D | a printed or digital boarding ___ | 登机牌固定说法 boarding pass。 | A:permit 是许可证;B:licence 是执照;C:boarding ticket 不地道 | boarding pass 固定搭配
+MXC-T05-130 | C | ___ in renewable capacity has slowed | 句首作主语用名词 Growth。 | A:动词;B:growing 作主语不搭 in capacity 的语义;D:分词 | 主语位置填名词
+MXC-T05-131 | B | Papers posted to the branch will still be ___ | will be+过去分词构成被动，文件“被处理”。 | A:原形;C:进行;D:名词指处理器 | be 后＋分词表被动
+MXC-T05-132 | A | the portal ___ its status until the review is complete | 主语 the portal 单数，谓语用 displays。 | B:缺三单;C:非谓语;D:不定式不能作谓语 | 单数主语＋动词 s
+MXC-T05-133 | C | the portal ___ its status until the review is complete | 前句讲门户显示审核状态，接“每份通过后还会收邮件”顺。 | A:不再发纸质对账单，无关;B:维护时间与上下文无关;D:律师认证和“上传一分钟”冲突 | 插入句接住前句话题
+MXC-T05-134 | D | our client desk will ___ it with you first | 不确定是否合格时，客服先和你一起“审查”。 | A:remind 不接 it with;B:submit 是提交;C:replace 是替换 | 看前文 unsure whether
+MXC-T05-135 | A | carries out scheduled maintenance on the distribution network | 前句讲计划维护，接“部分要停电几小时”，引出通知政策。 | B:紧急维修与计划停电无关;C:扩建年份无关;D:换供应商无关 | 插入句衔接下文 outage
+MXC-T05-136 | D | at least fourteen days ___ the work begins | 施工开始“之前”至少 14 天通知。 | A:during 不接从句;B:until 语义不对;C:since 表自从 | at least…before
+MXC-T05-137 | B | Registration is free and ___ be completed at any time | at any time 表“可以”随时完成，用 can。 | A:should 是应该;C:must 是必须;D:need 作情态多用于否定 | 看语义是可能
+MXC-T05-138 | C | customers are contacted ___ by telephone | 修饰动词 contacted 用副词 directly。 | A:形容词/动词;B:名词;D:分词 | 修饰动词用副词
+MXC-T05-139 | D | I am pleased to enclose a summary of what they found | 已附上分析结果，说明已查完，用现在完成时。 | A:一般现在;B:进行中与 found 矛盾;C:将来与已附结果矛盾 | 看上下文时态线索 found
+MXC-T05-140 | C | within seven days of departure, ___ raises the average fare | 逗号后指代前面整件事，用非限定 which。 | A:what 不跟逗号;B:that 不用于逗号后;D:it 会造成逗号连句 | 逗号后指前句→which
+MXC-T05-141 | A | ___, we would suggest a preferred-hotel list of four properties | 前句说可改善，后句给具体办法，用 Specifically。 | B:表转折;C:表否则;D:表同时 | 具体说明→Specifically
+MXC-T05-142 | B | I will telephone you next week to arrange a meeting | 接“若哪天上午更方便可联系我助理”，承接约见面。 | A:催款与信件无关;C:与前文酒店建议矛盾;D:与后续联系无关 | 结尾句接前句约会面
+MXC-T05-143 | C | its highest figure ___ the railway reopened in 2011 | 自 2011 年重开“以来”最高，用 since。 | A:before 语义反;B:while 表同时;D:until 表直到 | highest since＋时间点
+MXC-T05-144 | B | Operators credit a combined ticket … for much of the rise | 前句提联票，接“4 月推出，18 欧往返”，后句 It 也指它。 | A:博物馆关闭和联票矛盾;C:客流下降与创纪录矛盾;D:司机人数无关 | 插入句后 It 指什么
+MXC-T05-145 | D | The regional tourism board says it is ___ the possibility | 正在“研究”接驳车的可能，用 exploring。 | A:拒绝;B:否认;C:推迟，都与积极回应不符 | explore the possibility 搭配
+MXC-T05-146 | A | before the timetable for next season ___ in January | 时间状语从句用一般现在表将来，时刻表“被发布”用被动。 | B:主动;C:从句不用 will;D:主动进行 | before 从句主将从现＋被动
+MXC-T05-147 | C | Power to floors 1 through 9 will be interrupted | 通知告诉租户周六临时停电。 | A:没改营业时间;B:没换承包商;D:没收费 | 标题 Planned electrical maintenance
+MXC-T05-148 | A | asked to shut it down before leaving on Friday 17 April | 租户要在周五离开前关掉设备。 | B:4 楼是服务器机房;C:装卸口锁闭;D:没要去设施办 | 找 are asked to
+MXC-T05-149 | D | have come back to us unsigned | 送去的审计文件没签字就退回来了。 | A:没取消会议;B:截止日没提前;C:办公室没关 | unsigned＝没签字
+MXC-T05-150 | B | the filing deadline is Friday and Ms. Hallberg travels on Thursday | 截止周五而她周四一早出差，签字时间所剩无几。 | A:截止还没到;C:没让她改行程;D:他自己掉头回去 | 意图题看前一句
+MXC-T05-151 | A | draw its heat from the aluminium works | 热源来自园区北边的铝厂。 | B:没有燃气电站;C:港口是排水去处;D:会议中心办说明会 | 找 draw its heat from
+MXC-T05-152 | D | eighteen competing tenants agreed to sign a single shared supply contract | 她说特别之处是 18 家竞争租户签同一份合同。 | A:水温只是事实;B:没提速度;C:省钱不是她说的特别点 | 找 unusual 那句
+MXC-T05-153 | B | The network will draw its heat from the aluminium works | draw heat from＝从…获取热量，即 take。 | A:attract 吸引;C:sketch 画;D:extend 延伸 | 代回原句验证
+MXC-T05-154 | C | Your commercial property policy … renews on 1 April | 信件说明续保保费和条款变化。 | A:没逾期;B:没有索赔;D:保障没撤销 | 主旨看首段
+MXC-T05-155 | A | the excess payable on glass claims has risen from €250 to €400 | 玻璃理赔的自付额从 250 涨到 400。 | B:仍在保;C:没提 30 天;D:没提另收保费 | excess＝自付额
+MXC-T05-156 | D | The flood exclusion … has been removed, following the drainage works | 做了排水工程后取消洪水除外条款，说明淹水风险降低。 | A:同一保单;B:没说检查;C:仍是储藏室 | 推断看原因
+MXC-T05-157 | B | carried 4.1 million passengers last year — the highest figure since 2004 | 文章讲夜间列车需求回升。 | A:机票便宜是对比;C:没厂关闭;D:没提酒店连锁 | 标题和首句
+MXC-T05-158 | C | a night that does not have to be spent in a hotel | 运营方说乘客图的是省一晚酒店。 | A:比机票贵一倍;B:没提常客折扣;D:没提班次 | not driven by price 排除 A
+MXC-T05-159 | A | typically booked eleven weeks ahead | 单人包厢通常提前 11 周订满。 | B:没比价格;C:没说只两条线;D:2028 是交付卧铺车 | ahead＝提前
+MXC-T05-160 | D | goes read-only at 18:00 tonight | 18 点系统变只读，不能再录入。 | A:没关网点;B:补卡是午前处理;C:没约会议 | read-only＝只能看不能改
+MXC-T05-161 | B | Half of them will not know it is there | 很多网点员工不知道保险柜里有 BR-12 表。 | A:她是从发布说明得知，员工没被告知;C:没提加班;D:没提多订卡 | 推断看 will not know
+MXC-T05-162 | D | Then I will say so explicitly. Draft with you both by 10:30 | 她会起草发给网点的通知，10:30 前给两人看。 | A:清队列是 Marek;B:没改发布说明;C:没去网点 | 最后一句定下一步
+MXC-T05-163 | C | so we have rebuilt the second half of the tour | 渡轮取消，说明已订行程的调整。 | A:酒店不变;B:不是新线路;D:是退款不是收款 | 主旨看首段
+MXC-T05-164 | A | The drive adds ninety minutes to the day | 改走公路，当天多 90 分钟。 | B:酒店不变;C:导游不变;D:返程航班不变 | Nothing else changes 排除
+MXC-T05-165 | B | Please confirm by 20 October | 请他 10 月 20 日前确认。 | A:退款无需申请;C:航班不变;D:改期免费 | Please 后是要求
+MXC-T05-166 | D | a two-person practice … with a single client | 起步是两人小所、一个客户。 | A:不是分部;B:现在才三处;C:他们不安装设备 | began in 那句
+MXC-T05-167 | C | Our only revenue is the fee our clients pay us | 唯一收入是客户付的费用。 | A:不收供应商佣金;B:不卖设备;D:不做安装 | only revenue 定位
+MXC-T05-168 | A | We now employ forty-one people across three offices | 文中有创立年份、人数、城市，没提顾问资质。 | B:2009 年;C:41 人;D:三个城市 | NOT 题逐项排除
+MXC-T05-169 | D | On average, the answer is eleven percent of the bill | 400 万的 11% 正是 44 万，放在 [4] 紧接其后。 | A:[1] 还没提比例;B:[2] 讲规模;C:[3] 讲失去业务 | 数字句找数字来源
+MXC-T05-170 | B | please destroy it rather than returning it to this office | 旧卡要销毁，不要寄回。 | A:明说不要寄回;C:3 月 5 日是报销截止;D:没说寄给新机构 | rather than 前是正解
+MXC-T05-171 | C | from the telephone number we hold for you in the staff directory | 激活要用通讯录里登记的号码，号码过期就可能无法激活。 | A:卡照寄;B:寄到家;D:额度不变 | 条件推结果
