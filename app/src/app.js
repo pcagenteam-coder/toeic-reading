@@ -207,19 +207,21 @@ function markIn(x, phrase, k) {   // 在原文里给短语加哨兵（大小写/
 function rich(t, o) {   // 转义 → 词可点 → 哨兵/空位/插入点
   o = o || {};
   let h = esc(t).replace(/[A-Za-z][A-Za-z'’-]*/g, w => `<span class="w">${w}</span>`);
-  h = h.replace(/\u0001(\w)\u0002/g, (m, k) => o.mk ? o.mk(k) : '').replace(/\u0003/g, o.mkEnd || '</mark>');
+  h = h.replace(/\u0001(\d)\u0002/g, (m, k) => o.mk ? o.mk(k) : '').replace(/\u0003/g, o.mkEnd || '</mark>');
   if (o.blank) h = h.replace(/\{\{(\d+)\}\}/g, (m, q) => o.blank(+q));
   if (o.ins) h = h.replace(/\[([1-4])\]/g, (m, n) => `<span class="ins" id="ins${n}">[${n}]</span>`);
   return h;
 }
 function paras(x) { return x.split(/\n\s*\n/).map(p => p.replace(/^\n+|\n+$/g, '')).filter(p => p.trim()); }
+const GENERIC = /^(article|e-?mail|notice|memo|letter|web ?page|advertisement|text[- ]message chain|online chat discussion|schedule|invoice|review|form|instructions|job posting)$/i;
 const CHAT_RE = /^(.{1,48}?)\s*[\[(](\d{1,2}[:.]\d{2}\s*(?:[AaPp]\.?\s?[Mm]\.?)?)[\])]\s*:?\s*(.*)$/;
 function docHTML(d, di, o) {
   const k = KIND(d.t), hdr = d.h || '', x = o.x != null ? o.x : d.x;
   let head = '';
   if (/^(To|From|Date|Subject|Re|Sent|Cc)\s*:/im.test(hdr)) {
     head = `<div class="mh">${hdr.split('\n').filter(l => l.trim()).map(l => { const m = l.match(/^([A-Za-z]+)\s*:\s*(.*)$/); return m ? `<b>${esc(m[1])}</b><span>${rich(m[2], o)}</span>` : `<b></b><span>${rich(l, o)}</span>`; }).join('')}</div>`;
-  } else if (hdr.trim()) head = `<div class="ttl">${rich(hdr, o)}</div>`;
+  } else if (GENERIC.test(hdr.trim())) head = `<div class="mut sm" style="margin:0 0 8px">${esc(hdr.trim())}</div>`;
+  else if (hdr.trim()) head = `<div class="ttl">${rich(hdr, o)}</div>`;
   let body = '', pn = 0;
   if (k === 'chat') {
     let who0 = null, cur = null; const out = [];
@@ -297,10 +299,10 @@ function vPassage(b, it, id, refs, multi) {
   const show = multi && wide() && ui().sideBySide && typeof window !== 'undefined' && window.innerWidth >= 1440 ? b.docs.map((d, i) => i) : [S.doc];
   return tabs + show.map(i => {
     const d = b.docs[i]; let x = d.x;
-    if (refs.q && !done) x = markIn(x, refs.q, 'r') || x;
-    if (bp) x = markIn(x, bp, 'b') || x;
+    if (refs.q && !done) x = markIn(x, refs.q, '1') || x;
+    if (bp) x = markIn(x, bp, '2') || x;
     return docHTML(d, i, { x, blank: b.p === 6 && qs.size ? blank : null, ins: b.p === 7,
-      mk: k => k === 'r' ? '<mark class="ref" id="mref">' : '<mark class="basis" id="mbasis">' });
+      mk: k => k === '1' ? '<mark class="ref" id="mref">' : '<mark class="basis" id="mbasis">' });
   }).join('');
 }
 function bundleIds(b) { return b.qs.filter(q => IT[q]); }
@@ -309,7 +311,7 @@ function vQs(b, u, it, id, refs) {
   let stem;
   if (b.p === 6) stem = `<p class="stem"><b>第 ${it.q} 空</b>${it.s ? '：' + rich(it.s) : '：选最合适的一项'} <a class="ref" data-act="jump" data-to="blank">看原文</a></p>`;
   else {
-    let s = it.s; if (refs.q) s = markIn(s, refs.q, 'q') || s;
+    let s = it.s; if (refs.q) s = markIn(s, refs.q, '3') || s;
     stem = `<p class="stem"><b>${it.q}.</b> ${rich(s, { mk: () => '<a class="ref" data-act="jump" data-to="ref">', mkEnd: '</a>' })}`;
     if (!refs.q && refs.para) stem += ` <a class="ref" data-act="jump" data-to="para">第 ${refs.para} 段</a>`;
     if (!refs.q && refs.ins) stem += ' <a class="ref" data-act="jump" data-to="ins">看 [1]–[4]</a>';
@@ -391,7 +393,10 @@ function lookupWord(el) {
     p.classList.add('bubble');
     const w = 300, left = Math.max(pr.left + 8, Math.min(r.left, pr.right - w - 8));
     p.style.left = left + 'px'; p.style.top = (r.bottom + 6) + 'px';
-    requestAnimationFrame(() => { if (r.bottom + 6 + p.offsetHeight > innerHeight - 8) p.style.top = Math.max(8, r.top - p.offsetHeight - 6) + 'px'; });
+    requestAnimationFrame(() => {   // 盖住选项或出屏 → 翻到词上方
+      const hit = () => { const q = p.getBoundingClientRect(); return $$('.opt').some(o => { const x = o.getBoundingClientRect(); return !(x.bottom <= q.top || x.top >= q.bottom || x.right <= q.left || x.left >= q.right); }); };
+      if (r.bottom + 6 + p.offsetHeight > innerHeight - 8 || hit()) p.style.top = Math.max(8, r.top - p.offsetHeight - 6) + 'px';
+    });
   }
 }
 

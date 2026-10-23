@@ -126,7 +126,7 @@ table.tb{border-collapse:collapse;width:100%;font-size:15px;margin:0 0 .9em}
 .qnav button{min-width:34px;height:30px;border:1px solid var(--line);background:#fff;border-radius:8px;font-size:13px}
 .qnav button.on{border-color:var(--ac);color:var(--ac);font-weight:700}.qnav button.d{background:var(--ac2)}
 .stem{font-size:16.5px;margin:0 0 12px}
-a.ref{color:var(--ac);text-decoration:none;border-bottom:1px dashed var(--ac);cursor:pointer;white-space:normal}
+a.ref{color:var(--ac);text-decoration:none;border-bottom:1px dashed var(--ac);cursor:pointer;white-space:nowrap}
 a.ref:after{content:" ↗";font-size:12px}
 .opts{display:grid;gap:8px}
 .opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;min-height:50px;font-size:16px}
