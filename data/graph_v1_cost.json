@@ -1,0 +1,3280 @@
+{
+ "version": "graph_v1_cost 1.0",
+ "built_by": "data/graph_v1_cost_build.py",
+ "graph": "data/graph_v1.json 2026-10-21",
+ "bands": [
+  "≤500",
+  "600",
+  "730",
+  "860+"
+ ],
+ "band_from_total": {
+  "≤500": "目标总分 ≤550",
+  "600": "551–665",
+  "730": "666–795",
+  "860+": "≥796"
+ },
+ "mastery_target": {
+  "≤500": 0.6,
+  "600": 0.7,
+  "730": 0.8,
+  "860+": 0.88
+ },
+ "cost_note": "learn_cost_min = 从 0 练到本档目标掌握度的估计分钟（含练习与复习），按层/类型规则 × 段位系数；分组节点的值是“作为练习目标时自身的成本”，不含子节点。计划器用 剩余成本 = learn_cost_min × 缺口比例。",
+ "extra_nodes": [
+  {
+   "id": "ST.ORDER.TEXT_TYPE_TRIAGE",
+   "name_zh": "按文体决定做不做（跳篇不跳序）",
+   "layer": "strategy",
+   "parent": "ST.ORDER",
+   "prereqs": [
+    "ST.GIVEUP.NO_BLANK",
+    "FD.READ.SKIM"
+   ],
+   "target_band": 400,
+   "is_group": false,
+   "parts": [
+    7
+   ],
+   "exam_weight": 0.3,
+   "exam_weight_source": {
+    "type": "impact_estimate",
+    "type_zh": "影响面估计（无直接题数的能力/技巧节点）",
+    "est_items_per_test": null,
+    "note": "低分档跳过长篇报道（P7 article 约 9 题/卷）换时间给短篇；按影响面估计"
+   },
+   "description_zh": "低中分档按文体决定做不做：短信/群聊、通知、表格、广告认真做；长篇报道（article）整篇涂掉往下走，不回头挑（S2-P7-05 / SL11-11）。",
+   "example_pattern": "Questions 165-168 refer to the following article. → 600 档整篇涂 B，继续 169 题",
+   "mapped_from_v0": [],
+   "delivery": "user",
+   "added_by": "C2 (graph_v1_cost.json)"
+  },
+  {
+   "id": "ST.REVIEW.PARAPHRASE_LOG",
+   "name_zh": "记“改写对”（原文↔选项同义替换本）",
+   "layer": "strategy",
+   "parent": "ST.REVIEW",
+   "prereqs": [
+    "ST.REVIEW.VOCAB_FROM_ITEMS",
+    "VO.PARA.WORD_SYNONYM"
+   ],
+   "target_band": 400,
+   "is_group": false,
+   "parts": [
+    7
+   ],
+   "exam_weight": 0.3,
+   "exam_weight_source": {
+    "type": "impact_estimate",
+    "type_zh": "影响面估计（无直接题数的能力/技巧节点）",
+    "est_items_per_test": null,
+    "note": "正确选项约 70% 为原文改写；由 App 自动生成改写对卡片（delivery=engine）"
+   },
+   "description_zh": "做错/做慢的 P7 题，把原文说法和正确选项说法记成一对（purchase ↔ buy），用 FSRS 复习（S2-P7-12 / SL11-15）。",
+   "example_pattern": "complimentary breakfast ↔ free morning meal",
+   "mapped_from_v0": [],
+   "delivery": "engine",
+   "added_by": "C2 (graph_v1_cost.json)"
+  }
+ ],
+ "nodes": {
+  "FD": {
+   "learn_cost_min": 40,
+   "cost_basis": "基础能力默认",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.SENT": {
+   "learn_cost_min": 40,
+   "cost_basis": "基础能力默认",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.SENT.CORE": {
+   "learn_cost_min": 40,
+   "cost_basis": "句型识别：约 4 次 10 分钟练习",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.SENT.CLAUSE_COUNT": {
+   "learn_cost_min": 30,
+   "cost_basis": "规则少",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.SENT.MODIFIER_STRIP": {
+   "learn_cost_min": 30,
+   "cost_basis": "规则少",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.SENT.LONG": {
+   "learn_cost_min": 90,
+   "cost_basis": "长难句需大量精读",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ": {
+   "learn_cost_min": 40,
+   "cost_basis": "基础能力默认",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.CHUNK": {
+   "learn_cost_min": 60,
+   "cost_basis": "意群顺读需反复练",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.SPEED_150": {
+   "learn_cost_min": 600,
+   "cost_basis": "阅读提速是长期量变（约 10 小时有效阅读）",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.SPEED_200": {
+   "learn_cost_min": 900,
+   "cost_basis": "长期量变",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.SCAN": {
+   "learn_cost_min": 30,
+   "cost_basis": "技巧型",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.SKIM": {
+   "learn_cost_min": 30,
+   "cost_basis": "技巧型",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.UNKNOWN_WORD": {
+   "learn_cost_min": 20,
+   "cost_basis": "习惯型",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.READ.REFERENCE": {
+   "learn_cost_min": 40,
+   "cost_basis": "指代追踪",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：前置 GR.PRON.CASE 已按放弃规则移出，豁免"
+   ]
+  },
+  "FD.READ.DISCOURSE": {
+   "learn_cost_min": 40,
+   "cost_basis": "逻辑信号词",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.VOC": {
+   "learn_cost_min": 40,
+   "cost_basis": "基础能力默认",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.VOC.NGSL_CORE": {
+   "learn_cost_min": 1500,
+   "cost_basis": "约 2,800 词 × 约 0.5 分钟（含复习）",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "FD.VOC.AFFIX": {
+   "learn_cost_min": 60,
+   "cost_basis": "常用词缀约 40 个",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_AFTER_DET": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_AFTER_PREP": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_SUBJ_OBJ": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_COUNT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_PERSON_THING": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.NOUN_COMPOUND": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.ADJ_BEFORE_NOUN": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.ADJ_COMPLEMENT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-02 提入"
+   ]
+  },
+  "GR.POS.ADV_VERB": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.POS.ADV_ADJ": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-02 提入"
+   ]
+  },
+  "GR.POS.ADV_AUX_SLOT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-02 提入"
+   ]
+  },
+  "GR.POS.ADV_SENTENCE": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P5-02 提入"
+   ]
+  },
+  "GR.POS.VERB_SLOT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.VERB": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.VERB.AGREE_SV": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）",
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.AGREE_QUANT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.TENSE_SIMPLE": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）",
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.TENSE_PERFECT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.TENSE_FUTURE_CLAUSE": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.VOICE_PASSIVE": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）",
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.MODAL_BASE": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）",
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.VERB.VERB_PATTERN": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.VERB.SUBJUNCTIVE_DEMAND": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.VERB.CONDITIONAL_INVERSION": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.NONFIN": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.NONFIN.TO_INF": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.NONFIN.GERUND": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.NONFIN.PARTICIPLE_MODIFIER": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.NONFIN.PARTICIPLE_CLAUSE": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.NONFIN.PARTICIPLE_ADJ": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.PRON": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.PRON.CASE": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）",
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.PRON.POSSESSIVE_PRONOUN": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.PRON.REFLEXIVE": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.PRON.DETERMINER_QUANT": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.PRON.INDEFINITE": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.PRON.DEMONSTRATIVE": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.PREP_TIME": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.PREP_PLACE": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.PREP_MEANING": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.PREP_PHRASE_MULTI": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.PREP_VS_CONJ": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.CONJ_ADVERBIAL": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.CONJ_COORD": {
+   "learn_cost_min": 25,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.CONN.CONJ_CORRELATIVE": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.CONN.CONJ_ADVERB": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.REL": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：前置 GR.PRON.CASE 已按放弃规则移出，豁免"
+   ]
+  },
+  "GR.REL.REL_PRONOUN": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.REL.REL_ADVERB": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.REL.REL_WHAT": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.REL.NOUN_CLAUSE": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.REL.COMPOUND_REL": {
+   "learn_cost_min": 60,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.4",
+   "must_for_band": [],
+   "must_note": []
+  },
+  "GR.COMP": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.COMP.COMPARATIVE": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.COMP.SUPERLATIVE": {
+   "learn_cost_min": 32,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：600 及以下语法只练词性位置 + 介词/连词，其余语法移到 730+）"
+   ]
+  },
+  "GR.COMP.EQUATIVE": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.SPECIAL": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.SPECIAL.INVERSION_NEG": {
+   "learn_cost_min": 60,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.4",
+   "must_for_band": [],
+   "must_note": []
+  },
+  "GR.SPECIAL.PARALLEL": {
+   "learn_cost_min": 40,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 1.6",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "GR.SPECIAL.ELLIPSIS": {
+   "learn_cost_min": 50,
+   "cost_basis": "语法考点 25 分钟 × 段位系数 2.0",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.OFFICE_ADMIN": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.MEETING_SCHEDULE": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.RECRUIT": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.HR_TRAINING": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.PURCHASE_QUOTE": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.ORDER_SHIP": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.INVENTORY_PRODUCTION": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.MARKETING_AD": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.SALES_DEAL": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.CUSTOMER_SERVICE": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.FINANCE_ACCOUNT": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.BANK_PAYMENT": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.CORP_STRATEGY": {
+   "learn_cost_min": 58,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.TECH_IT": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.RND_PRODUCT": {
+   "learn_cost_min": 58,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.TRAVEL_FLIGHT": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.HOTEL_LODGING": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.DINING_CATERING": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.EVENT_CONFERENCE": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.REAL_ESTATE": {
+   "learn_cost_min": 58,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.CONSTRUCTION_MAINT": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.LEGAL_COMPLIANCE": {
+   "learn_cost_min": 68,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.5",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.SAFETY": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.HEALTH_MEDICAL": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.MEDIA_PUBLISH": {
+   "learn_cost_min": 58,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.COMMUNITY_CULTURE": {
+   "learn_cost_min": 52,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.RETAIL_SHOPPING": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.ENVIRONMENT_ENERGY": {
+   "learn_cost_min": 58,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.TRANSPORT_COMMUTE": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.SCENE.CORRESPONDENCE": {
+   "learn_cost_min": 45,
+   "cost_basis": "场景词包约 40–60 词 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.VERB_NOUN": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.ADJ_NOUN": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.ADV_VERB_ADJ": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P5-07 提入"
+   ]
+  },
+  "VO.COLLO.VERB_PREP": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.NOUN_PREP": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.ADJ_PREP": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.BE_PP_PREP": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.FIXED_PHRASE": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.TIME_EXPR": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.NUM_EXPR": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.PHRASAL_VERB": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.COLLO.REQUEST_EXPR": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.FORM_ADJ": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P5-04 提入"
+   ]
+  },
+  "VO.CONF.FORM_NOUN": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-04 提入"
+   ]
+  },
+  "VO.CONF.FORM_VERB": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.SYN_VERB_PATTERN": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.SYN_NOUN": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.SYN_ADJ": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.ADV_TIME": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.ADV_FOCUS": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.SO_SUCH_TOO": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.QUANT_WORDS": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.PREP_LOOKALIKE": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.CONF.BUSINESS_SENSE": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-09 提入"
+   ]
+  },
+  "VO.CONF.POLYSEMY_CONTEXT": {
+   "learn_cost_min": 32,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-09 提入"
+   ]
+  },
+  "VO.CONF.PREFIX_NEG": {
+   "learn_cost_min": 29,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.WORD_SYNONYM": {
+   "learn_cost_min": 15,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.WORD_TO_PHRASE": {
+   "learn_cost_min": 17,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.GENERALIZE": {
+   "learn_cost_min": 17,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.SPECIFY": {
+   "learn_cost_min": 20,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.POS_SHIFT": {
+   "learn_cost_min": 17,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.VOICE_SHIFT": {
+   "learn_cost_min": 20,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.NEGATION_SHIFT": {
+   "learn_cost_min": 22,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.5",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "730：由最小技巧集 S2-ALL-20 提入"
+   ]
+  },
+  "VO.PARA.CAUSE_EFFECT": {
+   "learn_cost_min": 17,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：作为 QT.P7.REASON 的前置补入"
+   ]
+  },
+  "VO.PARA.NUMBER_TIME": {
+   "learn_cost_min": 15,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.SUMMARY_NOMINAL": {
+   "learn_cost_min": 17,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.PARA.ROLE_REFERENCE": {
+   "learn_cost_min": 20,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-06 提入"
+   ]
+  },
+  "VO.PARA.IDIOM_EXPR": {
+   "learn_cost_min": 22,
+   "cost_basis": "改写类型 15 分钟 × 段位系数 1.5",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.LEX": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.LEX.VERB": {
+   "learn_cost_min": 30,
+   "cost_basis": "同词性词汇题：找搭配法 + 高频词",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.LEX.NOUN": {
+   "learn_cost_min": 30,
+   "cost_basis": "同词性词汇题：找搭配法 + 高频词",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.LEX.ADJ": {
+   "learn_cost_min": 30,
+   "cost_basis": "同词性词汇题：找搭配法 + 高频词",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.LEX.ADV": {
+   "learn_cost_min": 30,
+   "cost_basis": "同词性词汇题：找搭配法 + 高频词",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.BAND": {
+   "learn_cost_min": 25,
+   "cost_basis": "搭配/易混 25 分钟 × 段位系数 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.BAND.B600": {
+   "learn_cost_min": 900,
+   "cost_basis": "600 段词表（约 1,500 词）",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.BAND.B730": {
+   "learn_cost_min": 1200,
+   "cost_basis": "730 段词表",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.BAND.B860": {
+   "learn_cost_min": 1500,
+   "cost_basis": "860 段词表",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.BAND.B990": {
+   "learn_cost_min": 1800,
+   "cost_basis": "990 段词表",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "VO.TITLES_DEPTS": {
+   "learn_cost_min": 30,
+   "cost_basis": "约 60 个职位/部门名",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.EMAIL": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.LETTER": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.MEMO": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.NOTICE": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.AD": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.JOB_POSTING": {
+   "learn_cost_min": 17,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.ARTICLE": {
+   "learn_cost_min": 17,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（S2-P7-05：600 及以下遇长篇报道整篇涂掉（跳篇不跳序））"
+   ]
+  },
+  "TX.FORM": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.INVOICE": {
+   "learn_cost_min": 12,
+   "cost_basis": "文本类型熟悉 12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.SCHEDULE": {
+   "learn_cost_min": 12,
+   "cost_basis": "文本类型熟悉 12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.APP_FORM": {
+   "learn_cost_min": 14,
+   "cost_basis": "文本类型熟悉 12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.TEXT_MSG": {
+   "learn_cost_min": 15,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.CHAT": {
+   "learn_cost_min": 17,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.WEB": {
+   "learn_cost_min": 17,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：作为 QT.P7X.DETAIL.WEB 的前置补入"
+   ]
+  },
+  "TX.REVIEW": {
+   "learn_cost_min": 17,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.INSTRUCTIONS": {
+   "learn_cost_min": 20,
+   "cost_basis": "文本类型熟悉 15 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "TX.MULTI": {
+   "learn_cost_min": 40,
+   "cost_basis": "多篇总述",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C2/S2-ALL-02：600 及以下 P7 终点线 Q175（单篇做完），多篇统一涂）"
+   ]
+  },
+  "TX.DOUBLE": {
+   "learn_cost_min": 40,
+   "cost_basis": "双篇：结构+对照",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C2/S2-ALL-02：600 及以下 P7 终点线 Q175（单篇做完），多篇统一涂）"
+   ]
+  },
+  "TX.TRIPLE": {
+   "learn_cost_min": 60,
+   "cost_basis": "三篇：结构+对照+图表",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": [
+    "730：移出（C2/S2-ALL-02：730 档终点线 Q185（双篇做完），三篇统一涂）"
+   ]
+  },
+  "QT": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5.IDENTIFY": {
+   "learn_cost_min": 10,
+   "cost_basis": "看选项判题型：一条规则",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5.WORD_FORM": {
+   "learn_cost_min": 15,
+   "cost_basis": "P5 题型 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5.VERB_FORM": {
+   "learn_cost_min": 15,
+   "cost_basis": "P5 题型 15 分钟 × 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）",
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P5.PREP": {
+   "learn_cost_min": 15,
+   "cost_basis": "P5 题型 15 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5.CONNECTOR_MIX": {
+   "learn_cost_min": 17,
+   "cost_basis": "P5 题型 15 分钟 × 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-03 提入"
+   ]
+  },
+  "QT.P5.CONJ": {
+   "learn_cost_min": 17,
+   "cost_basis": "P5 题型 15 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P5.PRONOUN": {
+   "learn_cost_min": 15,
+   "cost_basis": "P5 题型 15 分钟 × 1.0",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）",
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P5.RELATIVE": {
+   "learn_cost_min": 17,
+   "cost_basis": "P5 题型 15 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P5.COMPARATIVE": {
+   "learn_cost_min": 17,
+   "cost_basis": "P5 题型 15 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P5.PAIR_GRAMMAR": {
+   "learn_cost_min": 17,
+   "cost_basis": "P5 题型 15 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P5.VOCAB": {
+   "learn_cost_min": 40,
+   "cost_basis": "词汇题：靠词量，单独练只学“找搭配/一眼不会就涂”",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.CLASSIFY": {
+   "learn_cost_min": 10,
+   "cost_basis": "两类分流：一条规则",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.INDEPENDENT": {
+   "learn_cost_min": 20,
+   "cost_basis": "P6 题型 20 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.CTX_TENSE": {
+   "learn_cost_min": 23,
+   "cost_basis": "P6 题型 20 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P6.CTX_PRONOUN": {
+   "learn_cost_min": 23,
+   "cost_basis": "P6 题型 20 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C8/S2-P5-03：该题型依赖动词形态/代词/关系词/比较等，600 及以下按限时规则猜）"
+   ]
+  },
+  "QT.P6.CTX_VOCAB": {
+   "learn_cost_min": 23,
+   "cost_basis": "P6 题型 20 分钟 × 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-06 提入"
+   ]
+  },
+  "QT.P6.CTX_CONJ_ADV": {
+   "learn_cost_min": 23,
+   "cost_basis": "P6 题型 20 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.INSERTION": {
+   "learn_cost_min": 45,
+   "cost_basis": "插入句：最难题，需篇章理解",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.INS_OPENING": {
+   "learn_cost_min": 20,
+   "cost_basis": "P6 题型 15 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.INS_TRANSITION": {
+   "learn_cost_min": 20,
+   "cost_basis": "P6 题型 15 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P6.INS_CLOSING": {
+   "learn_cost_min": 20,
+   "cost_basis": "P6 题型 15 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.MAIN_PURPOSE": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.DETAIL": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.DETAIL_NUMBER": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.REASON": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P7-01 提入"
+   ]
+  },
+  "QT.P7.REQUEST_ACTION": {
+   "learn_cost_min": 30,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.TRUE_INDICATED": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.NOT_TRUE": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.INFERENCE": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.INFER_WHO": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.INFER_NEXT": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.INTENT": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.INSERTION": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.SYNONYM": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-09 提入"
+   ]
+  },
+  "QT.P7.CALC_LOOKUP": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问类型 30 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7.CROSS_REF": {
+   "learn_cost_min": 45,
+   "cost_basis": "跨篇对照",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.MAIN_PURPOSE.EMAIL": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.MAIN_PURPOSE.LETTER": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.MAIN_PURPOSE.NOTICE": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.MAIN_PURPOSE.MEMO": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.MAIN_PURPOSE.ARTICLE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（S2-P7-05：600 及以下遇长篇报道整篇涂掉（跳篇不跳序））"
+   ]
+  },
+  "QT.P7X.MAIN_PURPOSE.AD": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL.EMAIL": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL.ARTICLE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（S2-P7-05：600 及以下遇长篇报道整篇涂掉（跳篇不跳序））"
+   ]
+  },
+  "QT.P7X.DETAIL.NOTICE": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL.WEB": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P7-02 提入"
+   ]
+  },
+  "QT.P7X.DETAIL_NUMBER.FORM": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL_NUMBER.SCHEDULE": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.REQUEST_ACTION.EMAIL": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.REQUEST_ACTION.MEMO": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.TRUE_INDICATED.ARTICLE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（S2-P7-05：600 及以下遇长篇报道整篇涂掉（跳篇不跳序））"
+   ]
+  },
+  "QT.P7X.TRUE_INDICATED.WEB": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.TRUE_INDICATED.REVIEW": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.TRUE_INDICATED.JOB_POSTING": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.NOT_TRUE.AD": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.NOT_TRUE.ARTICLE": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.NOT_TRUE.JOB_POSTING": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFERENCE.ARTICLE": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFERENCE.EMAIL": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFER_WHO.NOTICE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFER_WHO.JOB_POSTING": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFER_WHO.CHAT": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFER_NEXT.CHAT": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INTENT.TEXT_MSG": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INTENT.CHAT": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INSERTION.ARTICLE": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INSERTION.EMAIL": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INSERTION.LETTER": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.SYNONYM.ARTICLE": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.SYNONYM.EMAIL": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-09 提入"
+   ]
+  },
+  "QT.P7X.SYNONYM.MULTI": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）30 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.CALC_LOOKUP.INVOICE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.CALC_LOOKUP.SCHEDULE": {
+   "learn_cost_min": 14,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.15",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.CROSS_REF.DOUBLE": {
+   "learn_cost_min": 40,
+   "cost_basis": "跨篇对照（双）",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.CROSS_REF.TRIPLE": {
+   "learn_cost_min": 60,
+   "cost_basis": "跨篇对照（三）",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL.TRIPLE": {
+   "learn_cost_min": 39,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）30 分钟 × 1.3",
+   "must_for_band": [
+    "860+"
+   ],
+   "must_note": [
+    "730：移出（C2/S2-ALL-02：730 档终点线 Q185（双篇做完），三篇统一涂）"
+   ]
+  },
+  "QT.P7X.DETAIL.DOUBLE": {
+   "learn_cost_min": 23,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）20 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C2/S2-ALL-02：600 及以下 P7 终点线 Q175（单篇做完），多篇统一涂）"
+   ]
+  },
+  "QT.P7X.MAIN_PURPOSE.MULTI": {
+   "learn_cost_min": 34,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）30 分钟 × 1.15",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：移出（C2/S2-ALL-02：600 及以下 P7 终点线 Q175（单篇做完），多篇统一涂）"
+   ]
+  },
+  "QT.P7X.DETAIL.TEXT_MSG": {
+   "learn_cost_min": 12,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.0",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.INFERENCE.REVIEW": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "QT.P7X.DETAIL.INSTRUCTIONS": {
+   "learn_cost_min": 16,
+   "cost_basis": "P7 设问×文本组合（父题型已学，只学增量）12 分钟 × 1.3",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.TIME": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ORDER": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.LOCATE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ELIM": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.GIVEUP": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.BUBBLE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.TIME.TOTAL_PLAN": {
+   "learn_cost_min": 30,
+   "cost_basis": "配速：需 1–2 次限时练",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-ALL-03 提入",
+    "≤500：前置 FD.READ.SPEED_150 是长期能力（≥300 分钟，靠日常练习自然提升），豁免"
+   ]
+  },
+  "ST.TIME.PER_ITEM_P5": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-05 提入"
+   ]
+  },
+  "ST.TIME.PER_SET_P7": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-ALL-15 提入"
+   ]
+  },
+  "ST.TIME.CHECKPOINTS": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ORDER.PART_SEQUENCE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：作为 ST.ORDER.WITHIN_P7 的前置补入"
+   ]
+  },
+  "ST.ORDER.WITHIN_P7": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：作为 ST.ORDER.HARD_ITEMS_LAST 的前置补入"
+   ]
+  },
+  "ST.ORDER.HARD_ITEMS_LAST": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P7-07 提入"
+   ]
+  },
+  "ST.LOCATE.QUESTION_FIRST": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.LOCATE.KEYWORD_SCAN": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.LOCATE.PARAPHRASE_MATCH": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.LOCATE.QUESTION_ORDER": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.LOCATE.DEPTH_BY_QTYPE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "600：由最小技巧集 S2-P5-01 提入"
+   ]
+  },
+  "ST.ELIM.OPTIONS": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ELIM.TRAP_TYPES": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ELIM.SCOPE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.GIVEUP.NO_BLANK": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.GIVEUP.CUTOFF_RULE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-P5-05 提入"
+   ]
+  },
+  "ST.GIVEUP.TARGET_BASED": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": [
+    "≤500：由最小技巧集 S2-ALL-01 提入"
+   ]
+  },
+  "ST.BUBBLE.BATCH": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.BUBBLE.FINAL_MINUTES": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.DIAGNOSE_BY_TYPE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.ERROR_CAUSE_LOG": {
+   "learn_cost_min": 20,
+   "cost_basis": "错因分类",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.EXPLAIN_DISTRACTORS": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.TIMED_MOCK": {
+   "learn_cost_min": 90,
+   "cost_basis": "一次整卷 75 分钟 + 复盘",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.AUDIO_SHADOW": {
+   "learn_cost_min": 60,
+   "cost_basis": "跟读",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.VOCAB_FROM_ITEMS": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.SPEED_REPEAT": {
+   "learn_cost_min": 60,
+   "cost_basis": "复读提速",
+   "must_for_band": [
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.ORDER.TEXT_TYPE_TRIAGE": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  },
+  "ST.REVIEW.PARAPHRASE_LOG": {
+   "learn_cost_min": 10,
+   "cost_basis": "工作规则卡：读懂 + 2–3 次练习中用上",
+   "must_for_band": [
+    "≤500",
+    "600",
+    "730",
+    "860+"
+   ],
+   "must_note": []
+  }
+ }
+}

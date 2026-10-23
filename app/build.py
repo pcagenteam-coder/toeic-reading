@@ -9,7 +9,9 @@ import json, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 SRC = os.path.join(APP, 'src')
-JS_FILES = ['store.js', 'fsrs.js', 'engine.js', 'app.js']   # 按顺序拼接
+JS_FILES = ['store.js', 'fsrs.js', 'mastery.js', 'personal.js', 'planner.js', 'engine.js', 'app.js']   # 按顺序拼接
+# C2：图谱排程字段（learn_cost_min / must_for_band + 2 个遗留节点），由 data/graph_v1_cost_build.py 生成；不存在则不合并
+GRAPH_COST = 'data/graph_v1_cost.json'
 # 开源题库（可公开发布）：(相对路径, src 标记)。题目字段与 items_pilot_v1 兼容
 OPEN_SETS = [('data/items_open_maximcuynat.json', 'open'), ('data/items_open_kdeppaei.json', 'open')]
 # EdNet 先验 + 新制节奏：xdf/open 题没有 target_time_sec / difficulty_est 时用这里的默认值
@@ -80,8 +82,14 @@ def load_strats():
     return load(p)
 
 
+EXTRA_IDS = set()   # graph_v1_cost.json 补的遗留节点；strategies_v2 用 suggested_new_node 指向它们
+
+
 def conv_strat(e):
     ns = e['qtype_nodes'] + e['texttype_nodes'] + e['strategy_nodes'] + e['skill_nodes']
+    sn = (e.get('suggested_new_node') or '').split('（')[0]
+    if sn in EXTRA_IDS and sn not in ns:
+        ns = ns + [sn]
     if 'plain_zh' in e:   # v2
         return {'id': e['id'], 'ti': e['title_zh'], 'wr': e['plain_zh'], 'r': e['detail_zh'], 'ns': ns, 'p': e['parts'],
                 'w': e['weight'], 'pm': 1 if e['practice_mode'] else 0, 'roi': e['roi'], 'bd': e['bands'], 'ms': e['min_set_bands']}
@@ -103,6 +111,10 @@ def main():
         print('private items:', os.path.relpath(xp, ROOT))
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
     G = load('data/graph_v1.json'); S = load_strats()
+    GC = load(GRAPH_COST) if os.path.exists(os.path.join(ROOT, GRAPH_COST)) else None
+    if GC:
+        G['nodes'] = G['nodes'] + GC['extra_nodes']; EXTRA_IDS.update(n['id'] for n in GC['extra_nodes'])
+        print('graph cost:', GRAPH_COST, '+%d extra nodes' % len(GC['extra_nodes']))
     OPEN = {'items': [], 'bundles': []}
     for path, tag in OPEN_SETS:
         if os.path.exists(os.path.join(ROOT, path)):
@@ -129,8 +141,13 @@ def main():
             if src == 'priv' and i.get('use'):
                 items[-1]['u'] = i['use']   # 私有题用途：mock 只做模考 / train 训练
     nodes = [{'id': n['id'], 'nm': n['name_zh'], 'l': n['layer'], 'pa': n['parent'],
-              'w': n['exam_weight'], 'bd': n['target_band'], 'g': 1 if n['is_group'] else 0}
+              'w': n['exam_weight'], 'bd': n['target_band'], 'g': 1 if n['is_group'] else 0, 'pr': n.get('prereqs') or []}
              for n in G['nodes']]
+    if GC:   # lc 学会估计分钟，mb 必须掌握的目标档
+        for n in nodes:
+            c = GC['nodes'].get(n['id'])
+            if c:
+                n['lc'] = c['learn_cost_min']; n['mb'] = c['must_for_band']
     strats = [conv_strat(e) for e in S['entries']]
     data = {'v': 'v2-' + G.get('built', ''), 'items': items, 'bundles': bundles, 'nodes': nodes, 'strats': strats}
     js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')

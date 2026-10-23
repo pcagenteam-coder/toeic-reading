@@ -10,6 +10,8 @@ python3 app/build.py          # → app/dist/index.private.html（私有：另�
 node --check app/src/*.js     # 语法检查
 node app/test/smoke.js                               # 冒烟测试公开构建（DOM 桩 + 诊断/训练/攻克/复习/模考/档案/进度码）
 node app/test/smoke.js app/dist/index.private.html   # 冒烟测试私有构建
+node app/test/fsrs.test.js                           # FSRS 单元测试
+node app/test/planner.test.js                        # C2 排程/个性化测试（600 档 30 天模拟等）
 python3 work/convert_maximcuynat.py                  # 重新生成 data/items_open_maximcuynat.json
 python3 work/item_audit.py data/items_open_maximcuynat.json   # 审题（无 template_id 的导入题自动用导入题模式）
 ```
@@ -28,7 +30,7 @@ app/
   dist/index.html   构建产物（约 0.9 MB，其中代码约 46 KB）
   DESIGN.md         产品设计、引擎算法、界面清单
 ```
-build.py 按 `store.js → engine.js → app.js` 顺序拼接。
+build.py 按 `store.js → fsrs.js → mastery.js → personal.js → planner.js → engine.js → app.js` 顺序拼接。C2 排程/个性化 API 见 `docs/engine_api.md`；图谱排程字段由 `data/graph_v1_cost.json` 合并（`lc` 学会分钟、`mb` 必须档、`pr` 前置）。
 
 ## 数据来源与统一（build.py）
 | 源文件 | 用法 |
