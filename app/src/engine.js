@@ -197,11 +197,14 @@ const E = {
     [6, 7].forEach(p => { if (has.has(p)) { const b = this.pickBundle(p, [nodeId], used, null, true); if (b) out.unshift(b); } });
     return out;
   },
-  diagPlan(min) {
-    const P = D.items.filter(i => i.src === 'pilot' && i.p === 5), used = new Set(), out = [];
-    [2, 2, 3, 3, 4, 4].forEach(d => { const c = P.filter(i => i.d === d && !used.has(i.id)); const i = c[Math.floor(Math.random() * c.length)] || P.find(i => !used.has(i.id)); used.add(i.id); out.push({ ids: [i.id] }); });
+  /* 入职测试：6 道 P5 由易到难 + 1 段 P6 + 1 篇短 P7；起始难度按词汇摸底调整（<2500 词 → 1 起步，≥5000 → 偏难） */
+  diagLevels(vocab) { const v = vocab != null ? vocab : this.st.vocab; return v == null ? [2, 2, 3, 3, 4, 4] : v < 2500 ? [1, 1, 2, 2, 3, 3] : v >= 5000 ? [2, 3, 3, 4, 4, 4] : [2, 2, 3, 3, 4, 4]; },
+  diagPlan(min, vocab) {
+    const P = D.items.filter(i => i.src === 'pilot' && i.p === 5), used = new Set(), out = [], lv = this.diagLevels(vocab), low = lv[0] === 1;
+    lv.forEach(d => { const c = P.filter(i => i.d === d && !used.has(i.id)); const i = c[Math.floor(Math.random() * c.length)] || P.find(i => !used.has(i.id)); used.add(i.id); out.push({ ids: [i.id] }); });
     const pb = D.bundles.filter(b => b.qs[0] && b.qs[0].startsWith('PL'));
-    const b6 = pb.find(b => b.p === 6), b7 = pb.filter(b => b.p === 7 && b.k === 'single' && b.qs.length <= 3)[0];
+    const b6 = pb.find(b => b.p === 6), b7s = pb.filter(b => b.p === 7 && b.k === 'single' && b.qs.length <= 3), avgD = b => b.qs.reduce((s, q) => s + ((IT[q] && IT[q].d) || 3), 0) / b.qs.length,
+      b7 = low ? b7s.slice().sort((x, y) => avgD(x) - avgD(y))[0] : b7s[0];
     if (b6) out.push({ b: b6.id, ids: b6.qs.slice() }); if (b7) out.push({ b: b7.id, ids: b7.qs.slice() });
     return out;
   },
@@ -228,12 +231,30 @@ const E = {
   rtg() { return rtgOf(this.st); },
   pctx(minutesPerDay) {
     return { nodes: ND, practice: this.practice(), acc: this.macc(), now: Date.now(), band: this.band(), day: fxToday(),
-      examDay: FSRS.examDayIndex(this.st.exam), minutesPerDay: minutesPerDay || (this.st.settings && this.st.settings.daily_min) || 5 };
+      examDay: FSRS.examDayIndex(this.st.exam), minutesPerDay: minutesPerDay || (this.st.settings && this.st.settings.daily_min) || 5,
+      startDay: FSRS.dayIndex(this.st.created || Date.now(), fxTz()), lastP7Day: this.lastP7Day() };
+  },
+  /* 最近一次练 P7（非入职测试）的日序号；没有返回 null */
+  lastP7Day() {
+    const L = this.st.log || [];
+    for (let k = L.length - 1; k >= 0; k--) { const x = L[k]; if (x.e === 'answer' && x.mode !== 'diag' && IT[x.id] && IT[x.id].p === 7) return FSRS.dayIndex(x.t, x.tz != null ? x.tz : fxTz()); }
+    return null;
+  },
+  /* 还没做过任何训练题（只做过入职测试）→ 首日计划 */
+  isFirstPlan() { return !!this.st.diag && !(this.st.log || []).some(x => x.e === 'answer' && x.mode !== 'diag'); },
+  /* 短 P7：单篇、≤3 题，优先含给定考点、未做过、题少 */
+  pickP7(nodes, used, maxSec, pc) {
+    const ns = nodes || [], seen = this.st.seen, u = new Set(this.st.used), rank = q => { const i = ns.findIndex(n => IT[q].n === n || IT[q].ns.includes(n)); return i < 0 ? 99 : i; };
+    const c = D.bundles.filter(b => b.p === 7 && b.k === 'single' && b.qs.length && b.qs.length <= 3 && !(FORMS[b.f] && u.has(b.f)) && !b.qs.some(q => !IT[q] || IT[q].u === 'mock' || used.has(q)))
+      .map(b => ({ b, est: b.qs.reduce((s, q) => s + this.estSec(q, pc), 0) + 30, r: Math.min(...b.qs.map(rank)), sn: b.qs.filter(q => seen[q]).length }))
+      .filter(x => x.est <= maxSec).sort((x, y) => x.sn - y.sn || x.r - y.r || x.b.qs.length - y.b.qs.length || x.est - y.est || (x.b.id < y.b.id ? -1 : 1));
+    if (!c[0]) return null; const b = c[0].b, node = c[0].r < 99 ? ns[c[0].r] : IT[b.qs[0]].n;
+    return { b: b.id, ids: b.qs.slice(), node, est: Math.round(c[0].est), p7: true };
   },
   paceProfile() { return Personal.pace(this.macc()); },
   estSec(id, pc) { const it = IT[id]; return it.t * ((pc || this.paceProfile())[it.p] || { ratio: 1 }).ratio + 10; },  // 作答 + 看反馈约 10 秒
   /* 为节点挑一个练习单元：优先 P5 单题（主节点优先、未做过、难度贴近该节点能力），否则含该节点的 P6/P7 篇章（按档位终点线限制篇型） */
-  pickFor(node, used, maxSec, pc) {
+  pickFor(node, used, maxSec, pc, noBundle) {
     const mu = (this.macc().nd[node] || {}).mu || 0, seen = this.st.seen;
     const bd = this.band(), inBand = n => !ND[n] || !ND[n].mb || ND[n].mb.includes(bd);   // 题目主考点也须在目标档内（不借道练档外考点）
     const P = this.pool().filter(i => i.p === 5 && !used.has(i.id) && (i.n === node || i.ns.includes(node)) && inBand(i.n));
@@ -241,6 +262,7 @@ const E = {
       P.sort((a, b) => ((seen[a.id] ? 5 : 0) + (a.n === node ? 0 : 0.5) + Math.abs(diffB(a.d) - mu)) - ((seen[b.id] ? 5 : 0) + (b.n === node ? 0 : 0.5) + Math.abs(diffB(b.d) - mu)));
       const i = P[0]; return this.estSec(i.id, pc) <= maxSec ? { ids: [i.id], node, est: Math.round(this.estSec(i.id, pc)) } : null;
     }
+    if (noBundle) return null;
     const kinds = bd === '≤500' || bd === '600' ? ['single'] : bd === '730' ? ['single', 'double'] : null, u = new Set(this.st.used);
     const c = D.bundles.filter(b => b.qs.length && (b.p === 6 || b.p === 7) && (b.p === 6 || !kinds || kinds.includes(b.k)) && !(FORMS[b.f] && u.has(b.f)) &&
       !b.qs.some(q => !IT[q] || IT[q].u === 'mock' || used.has(q)) && b.qs.some(q => IT[q].n === node || IT[q].ns.includes(node)) && b.qs.filter(q => inBand(IT[q].n)).length * 2 >= b.qs.length)
@@ -264,21 +286,50 @@ const E = {
     for (const w of rq.words) { if (rsec + 6 > T.reviewSec) break; words.push(w); rsec += 6; }
     let left = T.totalSec - rsec;
     const kind = T.mode === 'learn' ? 'learn' : 'maintain';
-    let pool = T.mode === 'review_only' ? T.analysis.goal.filter(x => x.seen && x.w >= Planner.HIGH_W && !x.dropped).sort((a, b) => a.margin - b.margin).map(x => x.id) : T.ranked.map(x => x.id);
-    const K = minutes <= 5 ? 2 : minutes <= 20 ? 3 : 4, act = pool.slice(0, K); let nx = K;
-    while (left >= 25 && act.length) {
-      let any = false;
-      for (let k = 0; k < act.length && left >= 25; k++) {
-        const u = this.pickFor(act[k], used, left + (units.length ? 0 : 60), pc);
-        if (!u) { act.splice(k, 1); k--; if (nx < pool.length) act.push(pool[nx++]); continue; }
-        u.kind = kind; units.push(u); u.ids.forEach(q => used.add(q)); left -= u.est; any = true;
-      }
-      if (!any) break;
+    if (this.isFirstPlan() && T.mode !== 'review_only') return this.firstDayPlan(T, minutes, pc, units, words, left);
+    let nb = 0;   // 篇章单元数（新手期上限 T.maxBundles）
+    if (T.needP7) {   // 每 3 天至少 1 篇 P7：先占位
+      const u = this.pickP7(T.ranked.map(x => x.id).concat(T.analysis.goal.map(x => x.id)), used, left + 120, pc);
+      if (u) { u.kind = kind; units.push(u); u.ids.forEach(q => used.add(q)); left -= u.est; nb++; }
     }
+    let pool = T.mode === 'review_only' ? T.analysis.goal.filter(x => x.seen && x.w >= Planner.HIGH_W && !x.dropped).sort((a, b) => a.margin - b.margin).map(x => x.id) : T.ranked.map(x => x.id);
+    const K = minutes <= 5 ? 2 : minutes <= 20 ? 3 : 4;
+    // 新手期：先只排 P5 单题（篇章 ≤ maxBundles）；P5 可练的考点用完、时间还剩一半以上才放开篇章
+    const fill = cap => {
+      const act = pool.slice(0, K); let nx = K;
+      while (left >= 25 && act.length) {
+        let any = false;
+        for (let k = 0; k < act.length && left >= 25; k++) {
+          const u = this.pickFor(act[k], used, left + (units.length ? 0 : 60), pc, cap != null && nb >= cap);
+          if (!u) { act.splice(k, 1); k--; if (nx < pool.length) act.push(pool[nx++]); continue; }
+          u.kind = kind; units.push(u); u.ids.forEach(q => used.add(q)); left -= u.est; any = true; if (u.b) nb++;
+        }
+        if (!any) break;
+      }
+    };
+    fill(T.maxBundles);
+    if (T.maxBundles != null && left >= T.totalSec / 2) fill(null);
     const A = T.analysis, nodes = T.nodes.map(id => { const g = A.goal.find(x => x.id === id); return { id, nm: ND[id] && ND[id].nm, m: g ? Math.round(g.m * 100) / 100 : null, stuck: g ? g.stuck : false }; });
-    return { mode: T.mode, phase: T.phase, daysLeft: T.daysLeft, minutes, band: A.band, units, words,
+    return { mode: T.mode, phase: T.phase, daysLeft: T.daysLeft, minutes, band: A.band, units, words, first: false, novice: T.novice, needP7: T.needP7,
       reviewCount: units.filter(u => u.kind === 'review').length + words.length, backlog: rq.backlog,
       estSec: Math.round(T.totalSec - left), nodes, progress: Planner.progressText(A), tip: this.getProfile().circadian.tip };
+  },
+  /* 首日计划（UX：首日 5 分钟）：入职测试里最薄弱的前 2 个考点各 1 道 P5 + 1 篇短 P7（单篇 ≤3 题），不受时长装填限制 */
+  firstDayPlan(T, minutes, pc, units, words, left) {
+    const A = T.analysis, G = {}; A.goal.forEach(x => { G[x.id] = x; });
+    const dz = (this.st.log || []).filter(x => x.e === 'answer' && x.mode === 'diag' && IT[x.id]), used = new Set(dz.map(x => x.id));
+    units.forEach(u => u.ids.forEach(q => used.add(q)));
+    const seenN = [...new Set(dz.map(x => IT[x.id].n))].filter(n => G[n] && !G[n].dropped);
+    const mOf = n => (G[n] ? G[n].m : 0.5), wrong = n => dz.filter(x => IT[x.id].n === n && !x.ok).length;
+    const weak = seenN.sort((a, b) => mOf(a) - mOf(b) || wrong(b) - wrong(a) || G[b].w - G[a].w).concat(T.ranked.map(x => x.id).filter(n => !seenN.includes(n)));
+    const nodes = [];
+    for (const n of weak) { if (nodes.length >= 2) break; const u = this.pickFor(n, used, 600, pc, true); if (!u) continue; u.kind = 'learn'; units.push(u); u.ids.forEach(q => used.add(q)); left -= u.est; nodes.push(n); }
+    const p7 = this.pickP7(nodes.concat(weak), used, 900, pc);
+    if (p7) { p7.kind = 'learn'; units.push(p7); left -= p7.est; }
+    const nm = id => (ND[id] && ND[id].nm);
+    return { mode: T.mode, phase: T.phase, daysLeft: T.daysLeft, minutes, band: A.band, units, words, first: true, novice: true, needP7: false,
+      reviewCount: units.filter(u => u.kind === 'review').length + words.length, backlog: 0, estSec: Math.round(T.totalSec - left),
+      nodes: nodes.map(id => ({ id, nm: nm(id), m: G[id] ? Math.round(G[id].m * 100) / 100 : null, stuck: false })), progress: Planner.progressText(A), tip: this.getProfile().circadian.tip };
   },
   /* 进度：离目标还差 N 个考点、约 X 小时；维持模式；倒排放弃；作战卡 */
   getProgress(state) {

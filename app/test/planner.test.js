@@ -223,5 +223,53 @@ t('API：getTodayPlan / getProgress / recordAnswer / getProfile 字段齐全；�
   assert.strictEqual(Y.Planner.band(450), '≤500'); assert.strictEqual(Y.Planner.band(700), '730'); assert.strictEqual(Y.Planner.band(900), '860+');
 });
 
+/* ================= B2 遗留：新手期 / P7 节奏 / 首日计划 / 诊断起始难度 ================= */
+const isP7 = u => u.b && IT[u.ids[0]].p === 7;
+t('每 3 天至少 1 篇 P7（30 天模拟，任意连续 3 天）', () => {
+  for (let d = 0; d + 2 < 30; d++) assert(days.slice(d, d + 3).some(x => x.units.some(isP7)), 'day ' + d + '–' + (d + 2) + ' 没有 P7');
+});
+t('新手期（前 7 天）P5 为主：P5 单题占新学多数；有 P5 可练时篇章 ≤1', () => {
+  let s5 = 0, sb = 0;
+  days.slice(0, 7).forEach(x => {
+    const nu = x.units.filter(u => u.kind !== 'review'), nb = nu.filter(u => u.b).length; s5 += nu.length - nb; sb += nb;
+    if (x.d < 3) assert(nb <= 1, 'day ' + x.d + ' 篇章 ' + nb);
+    const i = nu.findIndex(u => u.b && !u.p7), j = nu.map(u => !u.b).lastIndexOf(true);
+    if (nb > 1) assert(i > j || j < 0, 'day ' + x.d + ' 篇章排在 P5 前');
+  });
+  assert(s5 > 3 * sb, 'P5 ' + s5 + ' vs 篇章 ' + sb);
+  const Y = makeEngine(); Y.E.st = Y.newState(600, ''); const pl = Y.E.getTodayPlan(Y.E.st, 15);
+  assert(pl.novice && pl.units.filter(u => u.b).length <= 1, '新用户 15 分钟篇章 ' + pl.units.filter(u => u.b).length);
+});
+t('Planner.rhythm：新手期按天数/掌握度判定；needP7 按距上次 P7 天数', () => {
+  const P = X.Planner, g = m => ({ goal: [{ n: 3, m }, { n: 2, m }] });
+  assert(P.rhythm({ day: 103, startDay: 100 }, g(0.7)).novice);                  // 第 4 天
+  assert(!P.rhythm({ day: 110, startDay: 100 }, g(0.7)).novice);                 // 第 11 天、掌握度高
+  assert(P.rhythm({ day: 110, startDay: 100 }, g(0.3)).novice);                  // 掌握度低仍算新手
+  assert(!P.rhythm({ day: 101, startDay: 100, lastP7Day: null }, g(0.6)).needP7);
+  assert(P.rhythm({ day: 102, startDay: 100, lastP7Day: null }, g(0.6)).needP7);
+  assert(!P.rhythm({ day: 112, startDay: 100, lastP7Day: 110 }, g(0.6)).needP7);
+  assert(P.rhythm({ day: 113, startDay: 100, lastP7Day: 110 }, g(0.6)).needP7);
+});
+t('首日计划：入职测试最薄弱的前 2 个考点 P5 + 1 篇短 P7（单篇 ≤3 题）', () => {
+  const Y = makeEngine(), { E: E1, IT: I1 } = Y; E1.st = Y.newState(600, '');
+  E1.diagPlan().forEach((u, k) => u.ids.forEach((id, j) => E1.recordAnswer({ item_id: id, choice: (k + j) % 3 ? I1[id].a : (I1[id].a + 1) % 4, ms: 30000, mode: 'diag' })));
+  E1.st.diag = true;
+  const pl = E1.getTodayPlan(E1.st, 5), p5 = pl.units.filter(u => !u.b), b = pl.units.filter(u => u.b);
+  assert(pl.first === true, 'first'); assert.strictEqual(p5.length, 2); assert.strictEqual(b.length, 1);
+  const bu = Y.ctx.window.TDATA.bundles.find(x => x.id === b[0].b); assert(bu.p === 7 && bu.k === 'single' && bu.qs.length <= 3, JSON.stringify([bu.p, bu.k, bu.qs.length]));
+  const A = E1.getProgress(), G = {}; A.nodes.forEach(x => { G[x.id] = x.m; });
+  const dn = [...new Set(E1.st.log.filter(x => x.e === 'answer' && x.mode === 'diag').map(x => I1[x.id].n))].filter(n => G[n] != null).sort((a, c) => G[a] - G[c]);
+  assert(p5.every(u => G[u.node] <= G[dn[Math.min(2, dn.length - 1)]] + 1e-9), JSON.stringify(p5.map(u => [u.node, G[u.node]])) + ' vs ' + JSON.stringify(dn.slice(0, 3).map(n => G[n])));
+  E1.recordAnswer({ item_id: p5[0].ids[0], choice: 0, ms: 20000, mode: 'train' });
+  assert(E1.getTodayPlan(E1.st, 5).first === false, '做过训练后不再是首日计划');
+});
+t('入职测试起始难度随词汇量：低词汇从 1 级起步，高词汇更难', () => {
+  const Y = makeEngine(), E1 = Y.E; E1.st = Y.newState(600, '');
+  const d0 = v => Y.IT[E1.diagPlan(5, v)[0].ids[0]].d;
+  assert.strictEqual(JSON.stringify(E1.diagLevels(1500).slice(0, 2)), '[1,1]'); assert.strictEqual(d0(1500), 1);
+  assert(d0(3000) === 2 && d0(6000) >= 2); assert(E1.diagLevels(6000).reduce((a, b) => a + b) > E1.diagLevels(3000).reduce((a, b) => a + b));
+  E1.st.vocab = 1200; assert.strictEqual(Y.IT[E1.diagPlan()[0].ids[0]].d, 1);
+});
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

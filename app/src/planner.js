@@ -20,6 +20,7 @@ const Planner = (function () {
   const TARGET = { '≤500': 0.6, '600': 0.7, '730': 0.8, '860+': 0.88 };   // 达标掌握度（中等难度题预期答对率）
   const MIN_ITEMS = 3, MIN_EVID = 3, HYST = 0.05, UNLOCK_M = 0.5, UNLOCK_ATT = 6, STUCK_MULT = 3;
   const REVIEW_CAP = 20, HIGH_W = 0.12, WORD_W = 0.15;
+  const NOVICE_DAYS = 7, NOVICE_M = 0.45, P7_EVERY = 3;   // 新手期：开始后前 7 天，或已练考点平均掌握度 < 0.45 → P5 为主；任意连续 3 天至少 1 篇 P7
   const SHARE = { base: 0.5, strengthen: 0.5, sprint: 0.6, final3: 1, examday: 1, none: 0.5, maintain: 0.7 };
 
   /* 目标总分 → 档位（graph_v1_cost.json band_from_total） */
@@ -83,6 +84,18 @@ const Planner = (function () {
     };
   }
 
+  /* 新手期与 P7 节奏（纯函数）。ctx.startDay = 开始训练那天的日序号，ctx.lastP7Day = 最近一次练 P7 的日序号（无则 null）
+   * novice：开始后 < 7 天，或有证据的目标考点平均掌握度 < 0.45 → 新学以 P5 单题为主（篇章只留必需的那 1 篇 P7）
+   * needP7：从未练过 P7 且已到第 3 天（首日计划自带 1 篇），或距上次 P7 已 ≥3 天 → 今天必须排 1 篇 P7 */
+  function rhythm(ctx, A) {
+    const day = ctx.day, sd = ctx.startDay != null ? ctx.startDay : day;
+    const ev = (A.goal || []).filter(x => x.n > 0), avgM = ev.length ? ev.reduce((s, x) => s + x.m, 0) / ev.length : null;
+    const novice = day - sd < NOVICE_DAYS || (avgM != null && avgM < NOVICE_M);
+    const lp = ctx.lastP7Day;
+    const needP7 = lp == null ? day - sd >= P7_EVERY - 1 : day - lp >= P7_EVERY;
+    return { novice, needP7, sinceStart: day - sd, avgM };
+  }
+
   /* 今日配比与考点顺序（不挑题） */
   function today(ctx, minutes) {
     const A = analyze(ctx), sec = (minutes || ctx.minutesPerDay || 5) * 60;
@@ -93,8 +106,8 @@ const Planner = (function () {
     let learn = [];
     if (mode === 'learn') learn = A.goal.filter(x => !x.achieved && !x.dropped && x.unlocked).sort((a, b) => b.roi - a.roi);
     else if (mode === 'maintain') learn = A.goal.filter(x => !x.dropped && (A.phase !== 'sprint' || x.w >= HIGH_W)).sort((a, b) => a.margin - b.margin || b.w - a.w);
-    const K = minutes <= 5 ? 2 : minutes <= 20 ? 3 : 4;
-    return { mode, phase: A.phase, daysLeft: A.daysLeft, reviewSec: Math.round(sec * share), newSec: Math.round(sec * (1 - share)), totalSec: sec,
+    const K = minutes <= 5 ? 2 : minutes <= 20 ? 3 : 4, R = rhythm(ctx, A);
+    return { mode, phase: A.phase, novice: R.novice, needP7: mode !== 'review_only' && R.needP7, maxBundles: R.novice ? 1 : null, daysLeft: A.daysLeft, reviewSec: Math.round(sec * share), newSec: Math.round(sec * (1 - share)), totalSec: sec,
       nodes: learn.slice(0, K).map(x => x.id), ranked: learn.map(x => ({ id: x.id, roi: x.roi, m: x.m, stuck: x.stuck })), analysis: A };
   }
 
@@ -132,6 +145,6 @@ const Planner = (function () {
     return `离目标还差 ${A.remainingNodes} 个考点、约 ${Math.max(0.1, Math.round(A.remainingMin / 6) / 10)} 小时`;
   }
 
-  return { BANDS, TARGET, MIN_ITEMS, MIN_EVID, REVIEW_CAP, HIGH_W, SHARE, band, phaseOf, analyze, today, reviewQueue, progressText };
+  return { BANDS, TARGET, NOVICE_DAYS, NOVICE_M, P7_EVERY, MIN_ITEMS, MIN_EVID, REVIEW_CAP, HIGH_W, SHARE, band, phaseOf, analyze, rhythm, today, reviewQueue, progressText };
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = Planner;

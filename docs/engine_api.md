@@ -14,7 +14,7 @@
 | `getProgress(state)` | 进度 | “离目标还差 N 个考点、约 X 小时”、维持模式、作战卡 |
 | `recordAnswer(event)` | `{correct, node, mastery}` | 记一次作答（写日志 + FSRS + 掌握度） |
 | `getProfile(state)` | 个人画像 | 用时、作战卡、作息建议、FSRS 参数来源 |
-| `setSetting(key, value)` | — | 追加 `setting_change` 事件；`circadian:false` 关作息建议；`daily_min` 默认时长 |
+| `setSetting(key, value)` | — | 追加 `setting_change` 事件；`circadian:false` 关作息建议；`daily_min` 默认时长；`remind:'HH:MM'|false` 每日提醒时间（false=不提醒，仅应用内提示） |
 | `dueItems()` / `dueWords()` | id 数组 | 今天该复习的题卡 / 生词（两者合计 ≤20） |
 
 `state` 可省略（默认 `E.st`）；传入别的档案状态时只读计算，不改当前档案。
@@ -23,11 +23,15 @@
 ```js
 { mode: 'learn'|'maintain'|'review_only', phase: 'none'|'base'|'strengthen'|'sprint'|'final3'|'examday',
   daysLeft, minutes, band: '≤500'|'600'|'730'|'860+',
-  units: [ { ids:[itemId…], b?: bundleId, kind:'review'|'learn'|'maintain', node, est /*秒*/ } ],
+  units: [ { ids:[itemId…], b?: bundleId, kind:'review'|'learn'|'maintain', node, est /*秒*/, p7?: true /*节奏要求的短 P7*/ } ],
   words: ['invoice', …],          // 今天要复习的生词（与 units 里的复习共用每日上限 20）
   reviewCount, backlog,           // 复习条数；顺延到以后几天的积压数（不显示“逾期”）
-  estSec, nodes:[{id,nm,m,stuck}], progress: '离目标还差 …', tip /* 作息建议或 null */ }
+  estSec, nodes:[{id,nm,m,stuck}], progress: '离目标还差 …', tip /* 作息建议或 null */,
+  first, novice, needP7 }          // 首日计划？新手期？今天是否按节奏强制排了 P7
 ```
+- **首日计划**（`first:true`）：做完入职测试、还没做过任何训练题时，计划固定为「测试里最薄弱的前 2 个考点各 1 道 P5 + 1 篇短 P7（单篇、≤3 题）」，不按时长装填；做过一道训练题后恢复正常排程。
+- **新手期**（`novice:true`）：开始后前 7 天，或有证据的目标考点平均掌握度 < 0.45。新学先只排 P5 单题，篇章 ≤1；P5 可练考点用完且时间剩一半以上才放开篇章。
+- **P7 节奏**（`needP7:true`）：任意连续 3 天至少 1 篇 P7——从未练过 P7 且已到第 3 天，或距上次 P7（不含入职测试）≥3 天，则先占位 1 篇短 P7。`review_only` 不排。纯函数见 `Planner.rhythm(ctx, analysis)`（ctx 需 `day/startDay/lastP7Day`）。
 - 单元格式与 v2 的 `E.plan()` 一致（`{ids, b?}`），旧 app.js 直接可用；`E.plan(m)` 现在就是 `getTodayPlan(E.st, m).units`。
 - 时长按个人用时估：每题 `目标秒 × 本 Part 个人用时比 + 10 秒反馈`；P6/P7 复习另加 30 秒重读。到时就停（UX §3：做完当前篇再结算由前端负责）。
 - 配比：复习占 50%（冲刺期 60%，维持模式 70%，考前 3 天 100%），复习不满则余时给新学。
@@ -78,8 +82,10 @@
 - 作息：按本地时段（早上/上午/中午/下午/晚上/深夜）统计“实际 − 模型预期”的残差（控制难度与能力），收缩估计；总 ≥60 题、≥2 个时段各 ≥15 题、最佳与最差差 ≥0.04 才建议。`setSetting('circadian', false)` 关闭。
 - FSRS 个人参数：每多 100 次作答检查一次；可计损失的复习（隔天以上）≥300 次才用坐标搜索 + L2 先验重拟合 17 个 w，拟合后 log loss 比默认至少低 0.002 才采用，并按新参数重放全部卡片。结果缓存在 `st.fsrsFit`（派生，可删）。
 
+- 入职测试 `diagPlan(min, vocab=st.vocab)`：6 道 P5 难度序列按词汇量——<2500 词 `[1,1,2,2,3,3]`，2500–4999 `[2,2,3,3,4,4]`，≥5000 `[2,3,3,4,4,4]`；低词汇时 P7 选平均难度最低的短篇。
+
 ## 3. 状态新增字段（派生，可由日志重算）
-- `st.settings`：`{circadian, daily_min}`（同时写 `setting_change` 事件）
+- `st.settings`：`{circadian, daily_min, remind}`（同时写 `setting_change` 事件）
 - `st.fsrsFit`：`{at, use, w, n, before, after}`
 
 ## 4. 测试
