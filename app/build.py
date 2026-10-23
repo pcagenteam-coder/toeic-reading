@@ -34,7 +34,7 @@ def conv_bundle(b, items_of_bundle, src):
         h = (d.get('header') or d.get('title') or '').strip()   # 信头优先（open 题同时有 title=文本类型名 和 header=To/From）
         x = d.get('text') or ''
         if b['part'] == 6:
-            if src in ('pilot', 'open'):
+            if src in ('pilot', 'open', 'priv'):
                 # pilot 用 [n]（n=blank_n，第 n 个空），换成对应题号
                 m = {str(i.get('blank_n')): i['qnum'] for i in items_of_bundle if i.get('blank_n')}
                 x = re.sub(r'\[(\d)\]', lambda g: '{{%s}}' % m.get(g.group(1), g.group(1)), x)
@@ -93,9 +93,14 @@ def main():
     # 私有题库（无授权，只自用）：private_data/ 存在就一起打包，否则只用公开题。
     # 公开构建：python3 app/build.py --public   （强制不打私有题，可发布到 GitHub Pages）
     P = load('data/items_pilot_v1.json')
-    xp = os.path.join(ROOT, 'private_data', 'items', 'items_xdf1000.json')
+    # 私有题库优先读统一版 items_private_v1.json（xdf+GrittingLeo+ETS+其他，P6 空位 [n]，带 use=mock|train），没有则回退 items_xdf1000.json
+    xp1 = os.path.join(ROOT, 'private_data', 'items', 'items_private_v1.json')
+    xp = xp1 if os.path.exists(xp1) else os.path.join(ROOT, 'private_data', 'items', 'items_xdf1000.json')
+    psrc = 'priv' if xp == xp1 else 'xdf'
     use_private = os.path.exists(xp) and '--public' not in sys.argv
     X = load(xp) if use_private else {'items': [], 'bundles': []}
+    if use_private:
+        print('private items:', os.path.relpath(xp, ROOT))
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
     G = load('data/graph_v1.json'); S = load_strats()
     OPEN = {'items': [], 'bundles': []}
@@ -103,7 +108,7 @@ def main():
         if os.path.exists(os.path.join(ROOT, path)):
             o = load(path); OPEN['items'] += o['items']; OPEN['bundles'] += o['bundles']
     items, bundles, skipped = [], [], 0
-    for src, d in (('pilot', P), ('open', OPEN), ('xdf', X)):
+    for src, d in (('pilot', P), ('open', OPEN), (psrc, X)):
         by_b = {}
         for i in d['items']:
             if i.get('bundle_id'):
@@ -121,6 +126,8 @@ def main():
             if len(i.get('options') or []) != 4 or not isinstance(i.get('answer'), int):
                 skipped += 1; continue
             items.append(conv_item(i, src, kinds.get(i.get('bundle_id'))))
+            if src == 'priv' and i.get('use'):
+                items[-1]['u'] = i['use']   # 私有题用途：mock 只做模考 / train 训练
     nodes = [{'id': n['id'], 'nm': n['name_zh'], 'l': n['layer'], 'pa': n['parent'],
               'w': n['exam_weight'], 'bd': n['target_band'], 'g': 1 if n['is_group'] else 0}
              for n in G['nodes']]
@@ -143,7 +150,7 @@ def main():
     print('by src', dict(Counter(i['src'] for i in items)), 'by part', dict(Counter(i['p'] for i in items)))
     print('mock forms (>=90 题)', full)
     if not use_private:
-        assert not any(i['src'] == 'xdf' for i in items), '公开构建混入了私有题'
+        assert not any(i['src'] in ('xdf', 'priv') for i in items), '公开构建混入了私有题'
     print('code KB', round(len(code.encode()) / 1024, 1), 'css KB', round(len(css.encode()) / 1024, 1),
           'dist KB', round(os.path.getsize(dst) / 1024, 1))
 
