@@ -270,7 +270,7 @@ function vQuiz() {
   const lab = S.mode === 'mock' ? '紧急项目' : S.mode === 'diag' ? '入职测试' : part === 5 ? '审稿' : part === 6 ? '改稿' : '收件箱';
   const sub = part === 7 && b ? (b.docs.length > 1 ? `Part 7 ${b.docs.length === 2 ? '双篇' : '三篇'}` : 'Part 7 单篇') : 'Part ' + part;
   const tot = S.units.length, dots = tot <= 12 ? `<div class="dots">${S.units.map((x, i) => `<i class="${i < S.ui ? 'd' : i === S.ui ? 'c' : ''}"></i>`).join('')}</div>` : `<span class="mut sm">${S.ui + 1}/${tot}</span>`;
-  const sc = SCENE[part], story = !ui().plain && S.mode !== 'mock' && !S.noStory ? `<div class="story"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>` : '';
+  const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part], story = !ui().plain && S.mode !== 'mock' && !S.noStory ? `<div class="story"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>` : '';
   const head = `<div class="qh"><button class="x" data-act="pause" aria-label="暂停">✕</button><div class="tt">${lab}<small>${sub}</small></div>${dots}${ringSvg(id)}<button class="mm" data-act="menu" aria-label="更多">⋯</button></div>${story}`;
   if (!b) return `<div class="qz">${head}<div class="qb pane" id="pq">${vP5(it, id)}</div></div>`;
   const multi = b.docs.length > 1, refs = refsOf(it, b), di = S.docPinned != null ? S.doc : (refs.doc >= 0 && !S.ans[id] ? refs.doc : S.doc);

@@ -155,7 +155,7 @@ a.ref:after{content:" ↗";font-size:12px}
 .modal{position:fixed;inset:0;background:rgba(20,24,28,.38);display:flex;align-items:flex-end;justify-content:center;z-index:30}
 .sheet{background:#fff;width:100%;max-width:560px;border-radius:18px 18px 0 0;padding:20px;max-height:88vh;overflow:auto}
 @media (min-width:768px){.modal{align-items:center}.sheet{border-radius:18px}}
-.res{max-width:480px;margin:8vh auto 0}
+.res{max-width:480px;margin:0 auto}
 .res ul{padding-left:18px;margin:10px 0}.res li{margin:4px 0}
 .say{color:var(--mut);font-style:italic;margin:10px 0}
 .skel{height:14px;border-radius:7px;background:#ece9e2;margin:10px 0}
