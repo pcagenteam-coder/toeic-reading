@@ -1,0 +1,46 @@
+# b012 MXT04 P7 181-200, MXT05 P5 101-125
+MXC-T04-181 | A | welcomed 41,600 visitors between February and April | 整篇报道春季参观人数创纪录及原因。 | B:博物馆 1998 年就开了;C:App 只是原因之一;D:馆长没换 | 主旨看标题和首段
+MXC-T04-182 | C | withdrew its printed guide in favour of a free mobile application | 3 月撤掉纸质导览，换成免费 App。 | A:周五夜场是 1 月;B:纸质导览被撤了;D:降价是聊天里的提议 | 按月份定位
+MXC-T04-183 | D | I do not want people paying the full price for two thirds | 东翼关闭后展品少了三分之一，她不想让人付全价。 | A:没提成本;B:阅览室照常开;C:近半数人用 App | 找 worries me 后面的话
+MXC-T04-184 | B | close its east wing on 1 September for eight months | 优惠持续到东翼重开；9 月 1 日起关 8 个月，约次年 5 月。 | A:1 月是周五夜场开始;C:9 月是开始关闭;D:10 月是周四夜场开始 | 9 月+8 个月＝5 月
+MXC-T04-185 | A | Better still, the tour on the application. It runs ninety minutes | 她提议给晚间观众推荐 App 上 90 分钟的导览。 | B:捕鲸馆正在重建;C:没提咖啡馆;D:没提纸质地图 | Better still 后是她的提议
+MXC-T04-186 | B | We moved up from the entry plan to the $79 one | 每月 79 美元的是 Harvest 套餐。 | A:Sprout 是原来的入门版;C:Estate 是 149;D:已用七个月不是试用 | 价格对上套餐名
+MXC-T04-187 | A | the reader itself was not part of what I had bought | 他升级为了扫码，却发现扫码器不含在套餐里。 | B:记录能导出;C:检查员一分钟就拿到;D:没提计费问题 | 找 frustrations 后第一条
+MXC-T04-188 | D | You are right about the reader. The list … has been moved | 回复逐条说明针对差评做了哪些改进。 | A:没再要细节;B:没提退款;C:检查并没失败 | 回复信看做了什么改动
+MXC-T04-189 | C | from 1 October it will stay open until 8 P.M. | 10 月 1 日起周一到周四电话支持延长到晚 8 点。 | A:没提涨价;B:列表是挪位置，不是首次;D:没加邮件支持 | Monday to Thursday＝四天
+MXC-T04-190 | D | Customers on the plan above yours can produce that history | 比他高一级的套餐有一键审计导出，暗示升级到 Estate。 | A:没提减人;B:他早已在用;C:导出表格各套餐都有 | plan above yours＝Estate
+MXC-T04-191 | B | ASHGROVE GALLERY TO HOST "PAPER AND SALT" THIS AUTUMN | 新闻稿宣布展览开幕及配套活动。 | A:没卖藏品;C:工作坊只是一项;D:没改开放时间 | 标题即主旨
+MXC-T04-192 | C | The workshop is $45, is limited to twelve places | 周六工作坊要另付 45 美元。 | A:唯独它不免费;B:材料全提供;D:在 Studio 2 | except 引出例外
+MXC-T04-193 | A | puts us in the city on the Wednesday and the Thursday only | 策展人介绍在周二，他们周三、周四才在城里。 | B:只有预览夜限会员;C:没说满员;D:有展票就免费 | 日程对上可用日期
+MXC-T04-194 | D | photography of any kind is prohibited throughout the exhibition | 禁止拍照，她会让学生带别的记录工具，即速写本。 | A:相机被禁;B:学生不是会员;C:没提要打印票 | 先查规定再推断
+MXC-T04-195 | C | The studios are reached from the Marlow Street entrance, which is step-free | 周三演示在 Studio 1，工作室入口无台阶，轮椅可到。 | A:没说重复;B:Lindqvist 主讲周二;D:限 12 人是工作坊 | step-free＝不用走楼梯
+MXC-T04-196 | B | you will not be asked to write new features | 招聘写明不用写新功能。 | A:四天在办公室;C:交通背景只是加分;D:没说汇报给客户部 | 原文 not required 别误读
+MXC-T04-197 | C | our two largest customers correspond with us in it | 要求会德语是因为两大客户用德语沟通。 | A:没说办公室用德语;B:练习是故障报告;D:团队在 Lindholm | 日程项回招聘要求找原因
+MXC-T04-198 | B | There is nothing to prepare. | Haugen 说练习无需准备。 | A:没说谁打分;C:不是编程测试;D:在午饭后 | 看 Two notes 第一条
+MXC-T04-199 | D | Annika Sjoberg, who runs our release team | 发布团队负责人是 Sjoberg，日程上她 14:30 面谈。 | A:10:00 是平台主管;B:11:15 是德语对话;C:13:00 是练习 | 邮件给人名，日程给时间
+MXC-T04-200 | A | a permit is issued at reception on request | 停车位要许可证，可到前台申领。 | B:地面层是食堂;C:9:30 是到达时间;D:Kruger 负责德语对话 | 找 parking 那句
+MXC-T05-101 | C | will receive a substantial ___ on the conference fee | 形容词 substantial 后填名词 reduction。 | A:reduce 是动词;B:reduced 是分词;D:reducing 是动名词/分词 | 形容词后填名词
+MXC-T05-102 | A | By the time the audit team arrives on Monday | By the time+将来的时间，主句用将来完成时。 | B:进行时不表完成;C:过去时不对;D:过去完成时用于过去 | by the time+现在时→will have done
+MXC-T05-103 | B | check in online ___ 24 hours of their scheduled departure | within+时间段，表示“在…之内”。 | A:during 后接事件;C:among 用于三者以上之间;D:toward 表方向 | within 24 hours 固定用法
+MXC-T05-104 | D | to ___ the Lisbon branch | 代表分行出席论坛用 represent。 | A:attend 后接会议，不接分行;B:present 是展示;C:remind 是提醒 | 代表某机构＝represent
+MXC-T05-105 | A | Claims submitted after the 31 May deadline ___ | 索赔是“被处理”，用被动 will be processed。 | B:主动语态;C:主动进行;D:主动完成 | 主语是物→多用被动
+MXC-T05-106 | C | worked ___ through the night | 修饰动词 worked 用副词 steadily。 | A:steady 是形容词;B:比较级;D:steadiness 是名词 | 修饰动词用副词
+MXC-T05-107 | B | will remain offline ___ the replacement gearboxes clear customs | 保持停机“直到”清关，用 until 接从句。 | A:so that 表目的;C:despite 接名词;D:in case of 接名词 | remain…until 搭配
+MXC-T05-108 | D | The agency recommends ___ travel insurance | recommend 后接动名词。 | A:recommend 不接 to do;B:不能直接接原形;C:不接不定式完成式 | recommend doing
+MXC-T05-109 | A | must supply ___ proof of address | 修饰名词 proof 用形容词 satisfactory。 | B:名词;C:动词;D:副词 | 名词前填形容词
+MXC-T05-110 | C | Guests ___ leave luggage at the front desk … at no additional charge | 免费寄存是“允许”，用 may。 | A:must 是必须;B:had better 是最好;D:ought to 是应该 | 看语义是许可
+MXC-T05-111 | D | calculated ___ the basis of the driver's claims history | on the basis of 固定搭配。 | A:in;B:by;C:at 都不搭 basis | on the basis of
+MXC-T05-112 | B | Since the tariff changed in January | since+过去时间点，主句用现在完成时。 | A:一般现在;C:现在进行;D:一般过去 | since → have done
+MXC-T05-113 | A | is ___ simpler than the one it replaces | 修饰比较级 simpler 用副词 considerably。 | B:形容词;C:动词;D:名词 | 比较级前用副词
+MXC-T05-114 | C | The emergency generators ___ twice since the substation was upgraded | 发电机“被测试”，且有 since，用现在完成被动。 | A:主动;B:主动进行;D:过去进行 | since+被动→have been done
+MXC-T05-115 | B | Travellers ___ passports expire | 旅客“的”护照，用 whose。 | A:which 指物;C:who 后缺主语不符;D:of them 不能引导从句 | 名词前缺“的”→whose
+MXC-T05-116 | D | expected to ___ strictly to the revised lending guidelines | 后接 to，用 adhere to。 | A:observe 直接接宾语;B:follow 不接 to;C:comply 接 with | adhere to／comply with
+MXC-T05-117 | A | appointed an external ___ | 冠词+形容词后填名词，指人用 adviser。 | B:动词;C:advisory 多作形容词;D:副词 | an external+名词
+MXC-T05-118 | C | ___ the storm damaged three substations, service was restored | 后接完整从句且前后转折，用 Although。 | A:despite 接名词;B:because of 接名词且非转折;D:owing to 接名词 | 从句用连词，名词用介词
+MXC-T05-119 | B | When the delegation ___ tomorrow | 时间状语从句用一般现在表将来。 | A:从句不用 will;C:过去时;D:虚拟 | when 从句主将从现
+MXC-T05-120 | A | Very ___ information was available | information 不可数，用 little。 | B:few 修饰可数;C:many 修饰可数;D:several 修饰可数 | 不可数名词→little
+MXC-T05-121 | D | has proved highly ___ with customers | proved 后接形容词作表语。 | A:动词;B:名词;C:副词 | 系动词后接形容词
+MXC-T05-122 | C | The regional operator has agreed ___ the timetable | agree 后接 to do。 | A:agree 不接 doing;B:名词;D:原形 | agree to do
+MXC-T05-123 | A | Delegates travelling ___ rail | by rail 表示交通方式，不加冠词。 | B:on 要接 the train;C:with 不表方式;D:in 不搭 rail | by+交通方式
+MXC-T05-124 | B | Policyholders ___ by e-mail | 投保人“被通知”，用被动 are notified。 | A:主动且缺宾语;C:非谓语;D:主动进行 | 后有 by→被动
+MXC-T05-125 | D | the wind farm would have opened on schedule | 与过去相反的虚拟，if 从句用 had done。 | A:与现在相反;B:非虚拟;C:从句不用 would | would have done ↔ had done

@@ -10,7 +10,7 @@
    "paraphrase": "P7 同义替换对 [{text 原文短语, option 选项短语}]"
   },
   "n_items_pool": 1511,
-  "n_explained": 487,
+  "n_explained": 532,
   "n_flagged": 0,
   "generator": "work/explain/merge.py（文本由 agent 逐题自写，不含第三方解析原文）"
  },
@@ -7590,6 +7590,656 @@
    ],
    "node": "QT.P7.REQUEST_ACTION",
    "hash": "84821d3b7b5d"
+  },
+  "MXC-T04-181": {
+   "answer_letter": "A",
+   "basis": "welcomed 41,600 visitors between February and April",
+   "why": "整篇报道春季参观人数创纪录及原因。",
+   "distractors": {
+    "B": "博物馆 1998 年就开了",
+    "C": "App 只是原因之一",
+    "D": "馆长没换"
+   },
+   "tip": "主旨看标题和首段",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MULTI",
+   "hash": "ca0372dd6d35"
+  },
+  "MXC-T04-182": {
+   "answer_letter": "C",
+   "basis": "withdrew its printed guide in favour of a free mobile application",
+   "why": "3 月撤掉纸质导览，换成免费 App。",
+   "distractors": {
+    "A": "周五夜场是 1 月",
+    "B": "纸质导览被撤了",
+    "D": "降价是聊天里的提议"
+   },
+   "tip": "按月份定位",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "hash": "2fcdd0a017d6"
+  },
+  "MXC-T04-183": {
+   "answer_letter": "D",
+   "basis": "I do not want people paying the full price for two thirds",
+   "why": "东翼关闭后展品少了三分之一，她不想让人付全价。",
+   "distractors": {
+    "A": "没提成本",
+    "B": "阅览室照常开",
+    "C": "近半数人用 App"
+   },
+   "tip": "找 worries me 后面的话",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "hash": "34067b529b8d"
+  },
+  "MXC-T04-184": {
+   "answer_letter": "B",
+   "basis": "close its east wing on 1 September for eight months",
+   "why": "优惠持续到东翼重开；9 月 1 日起关 8 个月，约次年 5 月。",
+   "distractors": {
+    "A": "1 月是周五夜场开始",
+    "C": "9 月是开始关闭",
+    "D": "10 月是周四夜场开始"
+   },
+   "tip": "9 月+8 个月＝5 月",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.DOUBLE",
+   "hash": "b576ba915825"
+  },
+  "MXC-T04-185": {
+   "answer_letter": "A",
+   "basis": "Better still, the tour on the application. It runs ninety minutes",
+   "why": "她提议给晚间观众推荐 App 上 90 分钟的导览。",
+   "distractors": {
+    "B": "捕鲸馆正在重建",
+    "C": "没提咖啡馆",
+    "D": "没提纸质地图"
+   },
+   "tip": "Better still 后是她的提议",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.DOUBLE",
+   "hash": "be743f15f1bd"
+  },
+  "MXC-T04-186": {
+   "answer_letter": "B",
+   "basis": "We moved up from the entry plan to the $79 one",
+   "why": "每月 79 美元的是 Harvest 套餐。",
+   "distractors": {
+    "A": "Sprout 是原来的入门版",
+    "C": "Estate 是 149",
+    "D": "已用七个月不是试用"
+   },
+   "tip": "价格对上套餐名",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "e8c74a10f00e"
+  },
+  "MXC-T04-187": {
+   "answer_letter": "A",
+   "basis": "the reader itself was not part of what I had bought",
+   "why": "他升级为了扫码，却发现扫码器不含在套餐里。",
+   "distractors": {
+    "B": "记录能导出",
+    "C": "检查员一分钟就拿到",
+    "D": "没提计费问题"
+   },
+   "tip": "找 frustrations 后第一条",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "3e43b84f88fe"
+  },
+  "MXC-T04-188": {
+   "answer_letter": "D",
+   "basis": "You are right about the reader. The list … has been moved",
+   "why": "回复逐条说明针对差评做了哪些改进。",
+   "distractors": {
+    "A": "没再要细节",
+    "B": "没提退款",
+    "C": "检查并没失败"
+   },
+   "tip": "回复信看做了什么改动",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MULTI",
+   "hash": "d741bdd86f5e"
+  },
+  "MXC-T04-189": {
+   "answer_letter": "C",
+   "basis": "from 1 October it will stay open until 8 P.M.",
+   "why": "10 月 1 日起周一到周四电话支持延长到晚 8 点。",
+   "distractors": {
+    "A": "没提涨价",
+    "B": "列表是挪位置，不是首次",
+    "D": "没加邮件支持"
+   },
+   "tip": "Monday to Thursday＝四天",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "2ee0f4f2c445"
+  },
+  "MXC-T04-190": {
+   "answer_letter": "D",
+   "basis": "Customers on the plan above yours can produce that history",
+   "why": "比他高一级的套餐有一键审计导出，暗示升级到 Estate。",
+   "distractors": {
+    "A": "没提减人",
+    "B": "他早已在用",
+    "C": "导出表格各套餐都有"
+   },
+   "tip": "plan above yours＝Estate",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "532065023d48"
+  },
+  "MXC-T04-191": {
+   "answer_letter": "B",
+   "basis": "ASHGROVE GALLERY TO HOST \"PAPER AND SALT\" THIS AUTUMN",
+   "why": "新闻稿宣布展览开幕及配套活动。",
+   "distractors": {
+    "A": "没卖藏品",
+    "C": "工作坊只是一项",
+    "D": "没改开放时间"
+   },
+   "tip": "标题即主旨",
+   "tip_strategy_id": "S2-P7-03",
+   "paraphrase": [],
+   "node": "QT.P7X.MAIN_PURPOSE.MULTI",
+   "hash": "f2495c78cbe2"
+  },
+  "MXC-T04-192": {
+   "answer_letter": "C",
+   "basis": "The workshop is $45, is limited to twelve places",
+   "why": "周六工作坊要另付 45 美元。",
+   "distractors": {
+    "A": "唯独它不免费",
+    "B": "材料全提供",
+    "D": "在 Studio 2"
+   },
+   "tip": "except 引出例外",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.TRUE_INDICATED",
+   "hash": "089e3f191caa"
+  },
+  "MXC-T04-193": {
+   "answer_letter": "A",
+   "basis": "puts us in the city on the Wednesday and the Thursday only",
+   "why": "策展人介绍在周二，他们周三、周四才在城里。",
+   "distractors": {
+    "B": "只有预览夜限会员",
+    "C": "没说满员",
+    "D": "有展票就免费"
+   },
+   "tip": "日程对上可用日期",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "5fcc621116d5"
+  },
+  "MXC-T04-194": {
+   "answer_letter": "D",
+   "basis": "photography of any kind is prohibited throughout the exhibition",
+   "why": "禁止拍照，她会让学生带别的记录工具，即速写本。",
+   "distractors": {
+    "A": "相机被禁",
+    "B": "学生不是会员",
+    "C": "没提要打印票"
+   },
+   "tip": "先查规定再推断",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "457ccc317fc5"
+  },
+  "MXC-T04-195": {
+   "answer_letter": "C",
+   "basis": "The studios are reached from the Marlow Street entrance, which is step-free",
+   "why": "周三演示在 Studio 1，工作室入口无台阶，轮椅可到。",
+   "distractors": {
+    "A": "没说重复",
+    "B": "Lindqvist 主讲周二",
+    "D": "限 12 人是工作坊"
+   },
+   "tip": "step-free＝不用走楼梯",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "7d3307d84d21"
+  },
+  "MXC-T04-196": {
+   "answer_letter": "B",
+   "basis": "you will not be asked to write new features",
+   "why": "招聘写明不用写新功能。",
+   "distractors": {
+    "A": "四天在办公室",
+    "C": "交通背景只是加分",
+    "D": "没说汇报给客户部"
+   },
+   "tip": "原文 not required 别误读",
+   "tip_strategy_id": "S2-P7-06",
+   "paraphrase": [],
+   "node": "QT.P7.TRUE_INDICATED",
+   "hash": "53b837303010"
+  },
+  "MXC-T04-197": {
+   "answer_letter": "C",
+   "basis": "our two largest customers correspond with us in it",
+   "why": "要求会德语是因为两大客户用德语沟通。",
+   "distractors": {
+    "A": "没说办公室用德语",
+    "B": "练习是故障报告",
+    "D": "团队在 Lindholm"
+   },
+   "tip": "日程项回招聘要求找原因",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "e9c4dda47c19"
+  },
+  "MXC-T04-198": {
+   "answer_letter": "B",
+   "basis": "There is nothing to prepare.",
+   "why": "Haugen 说练习无需准备。",
+   "distractors": {
+    "A": "没说谁打分",
+    "C": "不是编程测试",
+    "D": "在午饭后"
+   },
+   "tip": "看 Two notes 第一条",
+   "tip_strategy_id": "S2-P7-20",
+   "paraphrase": [],
+   "node": "QT.P7X.DETAIL.TRIPLE",
+   "hash": "e385f092e5df"
+  },
+  "MXC-T04-199": {
+   "answer_letter": "D",
+   "basis": "Annika Sjoberg, who runs our release team",
+   "why": "发布团队负责人是 Sjoberg，日程上她 14:30 面谈。",
+   "distractors": {
+    "A": "10:00 是平台主管",
+    "B": "11:15 是德语对话",
+    "C": "13:00 是练习"
+   },
+   "tip": "邮件给人名，日程给时间",
+   "tip_strategy_id": "S2-P7-19",
+   "paraphrase": [],
+   "node": "QT.P7X.CROSS_REF.TRIPLE",
+   "hash": "b6a4a1785271"
+  },
+  "MXC-T04-200": {
+   "answer_letter": "A",
+   "basis": "a permit is issued at reception on request",
+   "why": "停车位要许可证，可到前台申领。",
+   "distractors": {
+    "B": "地面层是食堂",
+    "C": "9:30 是到达时间",
+    "D": "Kruger 负责德语对话"
+   },
+   "tip": "找 parking 那句",
+   "tip_strategy_id": "S2-P7-01",
+   "paraphrase": [],
+   "node": "QT.P7.REQUEST_ACTION",
+   "hash": "82546f9c83b3"
+  },
+  "MXC-T05-101": {
+   "answer_letter": "C",
+   "basis": "will receive a substantial ___ on the conference fee",
+   "why": "形容词 substantial 后填名词 reduction。",
+   "distractors": {
+    "A": "reduce 是动词",
+    "B": "reduced 是分词",
+    "D": "reducing 是动名词/分词"
+   },
+   "tip": "形容词后填名词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "534f2db2ef88"
+  },
+  "MXC-T05-102": {
+   "answer_letter": "A",
+   "basis": "By the time the audit team arrives on Monday",
+   "why": "By the time+将来的时间，主句用将来完成时。",
+   "distractors": {
+    "B": "进行时不表完成",
+    "C": "过去时不对",
+    "D": "过去完成时用于过去"
+   },
+   "tip": "by the time+现在时→will have done",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "ae2a74b14b4a"
+  },
+  "MXC-T05-103": {
+   "answer_letter": "B",
+   "basis": "check in online ___ 24 hours of their scheduled departure",
+   "why": "within+时间段，表示“在…之内”。",
+   "distractors": {
+    "A": "during 后接事件",
+    "C": "among 用于三者以上之间",
+    "D": "toward 表方向"
+   },
+   "tip": "within 24 hours 固定用法",
+   "tip_strategy_id": "S2-P5-08",
+   "node": "QT.P5.PREP",
+   "hash": "31c514650152"
+  },
+  "MXC-T05-104": {
+   "answer_letter": "D",
+   "basis": "to ___ the Lisbon branch",
+   "why": "代表分行出席论坛用 represent。",
+   "distractors": {
+    "A": "attend 后接会议，不接分行",
+    "B": "present 是展示",
+    "C": "remind 是提醒"
+   },
+   "tip": "代表某机构＝represent",
+   "tip_strategy_id": "S2-P5-07",
+   "node": "QT.P5.VOCAB",
+   "hash": "67d838cd3877"
+  },
+  "MXC-T05-105": {
+   "answer_letter": "A",
+   "basis": "Claims submitted after the 31 May deadline ___",
+   "why": "索赔是“被处理”，用被动 will be processed。",
+   "distractors": {
+    "B": "主动语态",
+    "C": "主动进行",
+    "D": "主动完成"
+   },
+   "tip": "主语是物→多用被动",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "e406c514f7f0"
+  },
+  "MXC-T05-106": {
+   "answer_letter": "C",
+   "basis": "worked ___ through the night",
+   "why": "修饰动词 worked 用副词 steadily。",
+   "distractors": {
+    "A": "steady 是形容词",
+    "B": "比较级",
+    "D": "steadiness 是名词"
+   },
+   "tip": "修饰动词用副词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "19d58d279a9c"
+  },
+  "MXC-T05-107": {
+   "answer_letter": "B",
+   "basis": "will remain offline ___ the replacement gearboxes clear customs",
+   "why": "保持停机“直到”清关，用 until 接从句。",
+   "distractors": {
+    "A": "so that 表目的",
+    "C": "despite 接名词",
+    "D": "in case of 接名词"
+   },
+   "tip": "remain…until 搭配",
+   "tip_strategy_id": "S2-P5-03",
+   "node": "QT.P5.CONNECTOR_MIX",
+   "hash": "7dfa74616d54"
+  },
+  "MXC-T05-108": {
+   "answer_letter": "D",
+   "basis": "The agency recommends ___ travel insurance",
+   "why": "recommend 后接动名词。",
+   "distractors": {
+    "A": "recommend 不接 to do",
+    "B": "不能直接接原形",
+    "C": "不接不定式完成式"
+   },
+   "tip": "recommend doing",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "51c7c42505c6"
+  },
+  "MXC-T05-109": {
+   "answer_letter": "A",
+   "basis": "must supply ___ proof of address",
+   "why": "修饰名词 proof 用形容词 satisfactory。",
+   "distractors": {
+    "B": "名词",
+    "C": "动词",
+    "D": "副词"
+   },
+   "tip": "名词前填形容词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "ebf3c8d024e4"
+  },
+  "MXC-T05-110": {
+   "answer_letter": "C",
+   "basis": "Guests ___ leave luggage at the front desk … at no additional charge",
+   "why": "免费寄存是“允许”，用 may。",
+   "distractors": {
+    "A": "must 是必须",
+    "B": "had better 是最好",
+    "D": "ought to 是应该"
+   },
+   "tip": "看语义是许可",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "34d90cc6da86"
+  },
+  "MXC-T05-111": {
+   "answer_letter": "D",
+   "basis": "calculated ___ the basis of the driver's claims history",
+   "why": "on the basis of 固定搭配。",
+   "distractors": {
+    "A": "in",
+    "B": "by",
+    "C": "at 都不搭 basis"
+   },
+   "tip": "on the basis of",
+   "tip_strategy_id": "S2-P5-08",
+   "node": "QT.P5.PREP",
+   "hash": "fdd85ada8f38"
+  },
+  "MXC-T05-112": {
+   "answer_letter": "B",
+   "basis": "Since the tariff changed in January",
+   "why": "since+过去时间点，主句用现在完成时。",
+   "distractors": {
+    "A": "一般现在",
+    "C": "现在进行",
+    "D": "一般过去"
+   },
+   "tip": "since → have done",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "0e5bcb870e44"
+  },
+  "MXC-T05-113": {
+   "answer_letter": "A",
+   "basis": "is ___ simpler than the one it replaces",
+   "why": "修饰比较级 simpler 用副词 considerably。",
+   "distractors": {
+    "B": "形容词",
+    "C": "动词",
+    "D": "名词"
+   },
+   "tip": "比较级前用副词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "3605387dd6f5"
+  },
+  "MXC-T05-114": {
+   "answer_letter": "C",
+   "basis": "The emergency generators ___ twice since the substation was upgraded",
+   "why": "发电机“被测试”，且有 since，用现在完成被动。",
+   "distractors": {
+    "A": "主动",
+    "B": "主动进行",
+    "D": "过去进行"
+   },
+   "tip": "since+被动→have been done",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "a56e0225737c"
+  },
+  "MXC-T05-115": {
+   "answer_letter": "B",
+   "basis": "Travellers ___ passports expire",
+   "why": "旅客“的”护照，用 whose。",
+   "distractors": {
+    "A": "which 指物",
+    "C": "who 后缺主语不符",
+    "D": "of them 不能引导从句"
+   },
+   "tip": "名词前缺“的”→whose",
+   "tip_strategy_id": "S2-P5-18",
+   "node": "QT.P5.RELATIVE",
+   "hash": "de337640dd5f"
+  },
+  "MXC-T05-116": {
+   "answer_letter": "D",
+   "basis": "expected to ___ strictly to the revised lending guidelines",
+   "why": "后接 to，用 adhere to。",
+   "distractors": {
+    "A": "observe 直接接宾语",
+    "B": "follow 不接 to",
+    "C": "comply 接 with"
+   },
+   "tip": "adhere to／comply with",
+   "tip_strategy_id": "S2-P5-07",
+   "node": "QT.P5.VOCAB",
+   "hash": "1f4d06c75c95"
+  },
+  "MXC-T05-117": {
+   "answer_letter": "A",
+   "basis": "appointed an external ___",
+   "why": "冠词+形容词后填名词，指人用 adviser。",
+   "distractors": {
+    "B": "动词",
+    "C": "advisory 多作形容词",
+    "D": "副词"
+   },
+   "tip": "an external+名词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "7bf1ac031fb4"
+  },
+  "MXC-T05-118": {
+   "answer_letter": "C",
+   "basis": "___ the storm damaged three substations, service was restored",
+   "why": "后接完整从句且前后转折，用 Although。",
+   "distractors": {
+    "A": "despite 接名词",
+    "B": "because of 接名词且非转折",
+    "D": "owing to 接名词"
+   },
+   "tip": "从句用连词，名词用介词",
+   "tip_strategy_id": "S2-P5-03",
+   "node": "QT.P5.CONNECTOR_MIX",
+   "hash": "a586232ad36f"
+  },
+  "MXC-T05-119": {
+   "answer_letter": "B",
+   "basis": "When the delegation ___ tomorrow",
+   "why": "时间状语从句用一般现在表将来。",
+   "distractors": {
+    "A": "从句不用 will",
+    "C": "过去时",
+    "D": "虚拟"
+   },
+   "tip": "when 从句主将从现",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "36043edf13d0"
+  },
+  "MXC-T05-120": {
+   "answer_letter": "A",
+   "basis": "Very ___ information was available",
+   "why": "information 不可数，用 little。",
+   "distractors": {
+    "B": "few 修饰可数",
+    "C": "many 修饰可数",
+    "D": "several 修饰可数"
+   },
+   "tip": "不可数名词→little",
+   "tip_strategy_id": "S2-P5-25",
+   "node": "QT.P5.PAIR_GRAMMAR",
+   "hash": "128ad509896e"
+  },
+  "MXC-T05-121": {
+   "answer_letter": "D",
+   "basis": "has proved highly ___ with customers",
+   "why": "proved 后接形容词作表语。",
+   "distractors": {
+    "A": "动词",
+    "B": "名词",
+    "C": "副词"
+   },
+   "tip": "系动词后接形容词",
+   "tip_strategy_id": "S2-P5-02",
+   "node": "QT.P5.WORD_FORM",
+   "hash": "34576415194d"
+  },
+  "MXC-T05-122": {
+   "answer_letter": "C",
+   "basis": "The regional operator has agreed ___ the timetable",
+   "why": "agree 后接 to do。",
+   "distractors": {
+    "A": "agree 不接 doing",
+    "B": "名词",
+    "D": "原形"
+   },
+   "tip": "agree to do",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "ffe6be953e9e"
+  },
+  "MXC-T05-123": {
+   "answer_letter": "A",
+   "basis": "Delegates travelling ___ rail",
+   "why": "by rail 表示交通方式，不加冠词。",
+   "distractors": {
+    "B": "on 要接 the train",
+    "C": "with 不表方式",
+    "D": "in 不搭 rail"
+   },
+   "tip": "by+交通方式",
+   "tip_strategy_id": "S2-P5-08",
+   "node": "QT.P5.PREP",
+   "hash": "c780a70c58e0"
+  },
+  "MXC-T05-124": {
+   "answer_letter": "B",
+   "basis": "Policyholders ___ by e-mail",
+   "why": "投保人“被通知”，用被动 are notified。",
+   "distractors": {
+    "A": "主动且缺宾语",
+    "C": "非谓语",
+    "D": "主动进行"
+   },
+   "tip": "后有 by→被动",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "16d3dcd10a2f"
+  },
+  "MXC-T05-125": {
+   "answer_letter": "D",
+   "basis": "the wind farm would have opened on schedule",
+   "why": "与过去相反的虚拟，if 从句用 had done。",
+   "distractors": {
+    "A": "与现在相反",
+    "B": "非虚拟",
+    "C": "从句不用 would"
+   },
+   "tip": "would have done ↔ had done",
+   "tip_strategy_id": "S2-P5-09",
+   "node": "QT.P5.VERB_FORM",
+   "hash": "3b0704672f55"
   }
  }
 }
