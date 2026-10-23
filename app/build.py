@@ -9,7 +9,7 @@ import json, re, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
 SRC = os.path.join(APP, 'src')
-JS_FILES = ['store.js', 'fsrs.js', 'mastery.js', 'personal.js', 'planner.js', 'engine.js', 'app.js']   # 按顺序拼接
+JS_FILES = ['store.js', 'fsrs.js', 'mastery.js', 'personal.js', 'planner.js', 'engine.js', 'api.js', 'app.js']   # 按顺序拼接
 # C2：图谱排程字段（learn_cost_min / must_for_band + 2 个遗留节点），由 data/graph_v1_cost_build.py 生成；不存在则不合并
 GRAPH_COST = 'data/graph_v1_cost.json'
 # 开源题库（可公开发布）：(相对路径, src 标记)。题目字段与 items_pilot_v1 兼容
@@ -97,6 +97,67 @@ def conv_strat(e):
             'ns': ns, 'p': e['parts'], 'w': e['weight'], 'pm': 1 if e['practice_mode'] else 0}
 
 
+# B2：可选内联（缺失则跳过）——中文解析、语法 60 秒微讲解、词典（只收题库出现过的词）、词汇摸底池
+EXPL = 'data/explanations/zh_open_v1.json'
+GRAM = 'data/lessons/grammar_v1.json'
+LEX = 'data/wordlists/lexicon_v1.json'
+LEX_SA = 'data/wordlists/lexicon_v1_sa.json'
+VPOOL = 'data/wordlists/vocab_test_pool.json'
+TOK = re.compile(r"[a-z]+(?:[-'][a-z]+)*")
+
+
+def exists(p):
+    return os.path.exists(os.path.join(ROOT, p))
+
+
+def extras(items, bundles):
+    out, ids = {}, {i['id'] for i in items}
+    if exists(EXPL):
+        ex = {}
+        for k, v in load(EXPL)['items'].items():
+            if k not in ids:
+                continue
+            o = {'b': v.get('basis', ''), 'w': v.get('why', '')}
+            if v.get('distractors'):
+                o['d'] = v['distractors']
+            if v.get('tip'):
+                o['t'] = v['tip']
+            if v.get('paraphrase'):
+                o['pp'] = [[x.get('text', ''), x.get('option', '')] for x in v['paraphrase']][:2]
+            ex[k] = o
+        out['exp'] = ex
+    if exists(GRAM):
+        out['gr'] = {L['node']: {'nm': L['name_zh'], 'r': L['rule'], 'ex': [[e['en'], e['zh']] for e in L.get('examples', [])][:2],
+                                 'tr': L.get('trap', ''), 'sg': L.get('signal', '')} for L in load(GRAM)['lessons']}
+    if exists(LEX):
+        toks = set()
+        for i in items:
+            for t in [i['s']] + i['o']:
+                toks.update(TOK.findall(t.lower()))
+        for b in bundles:
+            for d in b['docs']:
+                toks.update(TOK.findall((d['h'] + ' ' + d['x']).lower()))
+        dic, forms = {}, {}
+        for e in load(LEX)['entries']:
+            if e.get('kind') != 'word':
+                continue
+            h = e['headword'].lower(); fs = [f.lower() for f in (e.get('forms') or [])]
+            hit = [f for f in fs if f in toks and f != h]
+            if h in toks or hit:
+                dic[h] = [e['zh'][:40], ' '.join(e.get('pos') or [])[:12], 1 if e.get('tier') else 0]
+                for f in hit:
+                    forms.setdefault(f, h)
+        if exists(LEX_SA):
+            for e in load(LEX_SA)['entries']:
+                h = e['headword'].lower()
+                if h in toks and h not in dic:
+                    dic[h] = [e['zh'][:40], '', 0]
+        out['dict'] = dic; out['forms'] = forms
+    if exists(VPOOL):
+        out['voc'] = [[v['word'], 1 if v.get('real') else 0, v.get('tier') or '', v.get('zh', '')[:24]] for v in load(VPOOL)['items']]
+    return out
+
+
 def main():
     # 私有题库（无授权，只自用）：private_data/ 存在就一起打包，否则只用公开题。
     # 公开构建：python3 app/build.py --public   （强制不打私有题，可发布到 GitHub Pages）
@@ -150,6 +211,8 @@ def main():
                 n['lc'] = c['learn_cost_min']; n['mb'] = c['must_for_band']
     strats = [conv_strat(e) for e in S['entries']]
     data = {'v': 'v2-' + G.get('built', ''), 'items': items, 'bundles': bundles, 'nodes': nodes, 'strats': strats}
+    X2 = extras(items, bundles); data.update(X2)
+    print('extras', {k: len(v) for k, v in X2.items()}, 'KB', {k: round(len(json.dumps(v, ensure_ascii=False, separators=(',', ':')).encode()) / 1024) for k, v in X2.items()})
     js = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
     html = open(os.path.join(SRC, 'index.html'), encoding='utf-8').read()
