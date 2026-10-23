@@ -324,14 +324,14 @@ function vWordQuiz() {
     ${a != null && a !== q.a ? '<button class="btn full lg" data-act="wqN">下一个</button>' : ''}</div></div></div></div>`;
 }
 
-/* ---------- 进度：离目标 N 个考点 · X 小时 · 预测区间 · 职级 · 每周绩效评估（不显示题数/正确率） ---------- */
+/* ---------- 进度：离目标 N 个考点 · X 小时 · 预测区间 · 职级 · 本周小结（不显示题数/正确率） ---------- */
 const RANKN = RANKS.map(x => x[1]);
 /* P1-2：职级按预测分档（UX §0.5，阈值同引擎 RANKS）；估算中时不给“还差几分” */
 function rankOf(pr) {
   const i = pr.level === 'low' ? 0 : rIdx(pr.p), nx = RANKS[i + 1];
   return { i, nm: RANKN[i], next: nx && nx[1], at: nx && nx[0], low: pr.level === 'low' };
 }
-function wkSnap(g, pr) {   // 每周第一次打开时记周初基线，用于绩效评估
+function wkSnap(g, pr) {   // 每周第一次打开时记周初基线，用于本周小结
   const k = E.wkKey(), W = E.st.wk = E.st.wk || {};
   if (!W[k]) { W[k] = { rem: g.need ? g.need.nodes : g.remainingNodes, p: pr.p, ach: (g.nodes || []).filter(x => x.achieved).map(x => x.id) }; Object.keys(W).sort().slice(0, -8).forEach(x => delete W[x]); }
   return W[k];
@@ -340,9 +340,9 @@ function vReviewWeek(g, pr) {
   const b = wkSnap(g, pr), k = E.wkKey(), d0 = new Date(k + 'T00:00'), d1 = new Date(d0.getTime() + 6 * 864e5);
   const fmt = d => `${d.getMonth() + 1}月${d.getDate()}日`, got = (g.nodes || []).filter(x => x.achieved && !b.ach.includes(x.id)).map(x => (ND[x.id] || {}).nm || x.id).slice(0, 3);
   const nx = (g.next || [])[0], days = weekDays(), say = got.length ? `“这周${esc(got[0])}稳多了，靠谱。”` : days ? '“这周的活都按时交了，稳。”' : '“休假回来，先处理几件简单的。”';
-  return `<div class="card"><h2>绩效评估 <span class="mut sm">${fmt(d0)}–${fmt(d1)}</span></h2>
+  return `<div class="card"><h2>本周小结 <span class="mut sm">${fmt(d0)}–${fmt(d1)}</span></h2>
     ${ui().plain ? '' : `<p class="say">Dana：${say}</p>`}
-    <div class="li"><span>本周出勤</span><span>${days} 天${days >= 4 ? ' ✓' : ''}</span></div>
+    <div class="li"><span>本周来了</span><span>${days} 天${days >= 4 ? ' ✓' : ''}</span></div>
     ${g.need && !g.need.reached && pr.level !== 'low' ? `<div class="li"><span>离目标还差</span><span>${g.need.nodes} 个考点${b.rem != null && b.rem > g.need.nodes ? `<span class="mut sm">（周初 ${b.rem}）</span>` : ''}</span></div>` : ''}
     <div class="li"><span>预测阅读分</span><span>${pr.level === 'low' ? '估算中' : pr.p - b.p >= 5 ? `${b.p} → ${pr.p}` : pr.p - b.p > -5 ? `${pr.level === 'mid' ? `约 ${pr.lo}–${pr.hi}` : pr.p} · 持平` : '小幅波动，正常'}</span></div>
     ${got.length ? `<div class="li"><span>这周拿下</span><span>${got.map(esc).join(' · ')}</span></div>` : ''}

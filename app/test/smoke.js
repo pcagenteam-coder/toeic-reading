@@ -54,7 +54,7 @@ const mf = S.form; for (let i = 0; i < 40; i++) { vQuiz(); answer(i % 4); } fini
 if (!E.st.used.includes(mf) || E.pool().some(i => i.f === mf)) throw new Error('used mock form still in pool');
 for (const f of Object.keys(FORMS)) { const pl = E.mockPlan(f), n = pl.reduce((s, u) => s + u.ids.length, 0); if (n !== FORMS[f].length || n < FULL_MIN) throw new Error('mockPlan ' + f + ' ' + n); }
 for (const t of ['today', 'review', 'progress', 'me']) { tab = t; render(); const h = $('#main').innerHTML; console.log('tab', t, h.length); if (/出了点问题/.test(h)) throw new Error('render error ' + t + ' ' + A._err); }
-tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做了 \\d+ 题|\\d+\\s*\\/\\s*\\d+ 题/.test(h) || !/职级/.test(h) || !/绩效评估/.test(h)) throw new Error('progress page'); }
+tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做了 \\d+ 题|\\d+\\s*\\/\\s*\\d+ 题/.test(h) || !/职级/.test(h) || !/本周小结/.test(h) || /绩效|出勤/.test(h)) throw new Error('progress page'); }
 ['apple', 'invoice', 'deadline', 'budget'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).slice(0, 30).forEach(k => E.st.cards[k].due = 0);
 { const a = revAlloc(); console.log('review alloc items', a.ni, 'words', a.nw); if (a.ni + a.nw > 20) throw new Error('review > 20');
   A.rev(); let k = 0; while (WQ) { render(); A.wqA(el({ i: String(k % 2 ? WQ.q.a : -1) })); if (WQ && WQ.ans != null) A.wqN(); k++; } while (S) { answer(0); if (S && S.fb) next(); } A.closeR(); }
