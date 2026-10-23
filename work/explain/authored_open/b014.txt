@@ -1,0 +1,46 @@
+# b014 MXT05 P7 172-200, MXT06 P5 101-116
+MXC-T05-172 | A | free of charge up to 18:00 on the day before arrival | 灵活价到店前一天 18:00 前免费取消。 | B:是前一天不是当天;C:7 天是团体规则;D:21 天是团体规则 | 按房价类型定位
+MXC-T05-173 | D | Dates may be moved once … for a fee of €25 per room | 特惠价可改一次日期，每间收 25 欧。 | A:不退款;B:没说可转酒店;C:8 天是团体规则 | once＋fee＝改一次要付费
+MXC-T05-174 | B | Between 20 and 8 days before arrival, half the value | 10 间属团体，提前 12 天在 20–8 天之间，收一半。 | A:免费要提前 21 天;C:一晚是灵活价;D:全额要 7 天内 | 先判类别再套区间
+MXC-T05-175 | C | governed by that partner's terms rather than by this policy | 通过网络平台订的按平台条款，本政策不适用。 | A:没说不能改;B:20% 是团体减房;D:21 天是团体 | rather than 后被排除
+MXC-T05-176 | B | Each building will lose mains electricity for one working day | 通知租户各楼将停电一天。 | A:租约没改;C:发电机是租不是卖;D:没提服务费 | 首段即目的
+MXC-T05-177 | C | occupies the third and fourth floors of Building C | 他公司在 C 栋，C 栋 3 月 5 日停电。 | A:A 栋;B:B 栋;D:D 栋 | 邮件给楼栋，通知给日期
+MXC-T05-178 | A | would also like to keep working and would share the cost | 他提一楼招聘公司，是因为对方愿分摊发电机费用。 | B:没投诉;C:没要求搬走;D:是分摊不是全付 | share the cost 定位
+MXC-T05-179 | D | whether the generator will support it | 通知有日期、费用、期限，没说发电机能否带动制冷机。 | A:通知列了日期;B:列了 340 欧;C:列了十个工作日 | NOT 题逐项回原文核对
+MXC-T05-180 | B | does not provide compensation for planned interruptions of this kind | 计划停电不提供补偿。 | A:没说租发电机有补偿;C:没按楼层算;D:十个工作日是申请发电机期限 | not provide＝没有
+MXC-T05-181 | C | introduce a visitor levy of €2.50 per guest per night | 文章讲开征过夜游客税。 | A:步道还没建;B:游客人数在增长;D:没讲纠纷 | 标题和首句
+MXC-T05-182 | A | Roughly two-thirds is earmarked for the long-delayed coastal path | 约三分之二用于海岸步道。 | B:班车只分到剩余部分;C:垃圾也是剩余部分;D:没提发执照 | most＝two-thirds
+MXC-T05-183 | C | more than fourteen consecutive nights … exempt from the fifteenth night | 连住超过两周，从第 15 晚起免税。 | A:短租照收;B:免的是就医不是商务;D:没这条 | fourteen nights＝two weeks
+MXC-T05-184 | B | I become an unpaid tax collector | 他反对的是小业主要自己代收和申报。 | A:他说客人愿意付;C:他支持建步道;D:没说酒店免税 | My objection is 定位
+MXC-T05-185 | B | A consultation on the collection procedure closes on 30 June | 他希望咨询期结束前考虑，即 6 月 30 日。 | A:5 月 12 日是报道日期;C:10 月 1 日是开征日;D:没提 | before the consultation closes→查日期
+MXC-T05-186 | D | pay the Standard rate on every job, whatever the delivery speed | 量包协议不论交付速度都按最低的标准价。 | A:没免最低收费;B:认证照收;C:不限金融文本 | whatever＝无论
+MXC-T05-187 | A | every order should be billed at your lowest per-word rate | 签了量包协议，应按标准价每词 0.14 欧。 | B:0.19 是被误收的加急价;C:0.28 是当日价;D:45 是认证费 | lowest rate→查广告价表
+MXC-T05-188 | D | Could you reissue the invoice with that line corrected? | 她要求改正后重开发票。 | A:没下新单;B:她说不要贷记单;C:没要更快 | reissue＝重新开具
+MXC-T05-189 | B | Please confirm which two documents you certified | 她还要求确认认证的是哪两份文件。 | A:日期她自己说了;C:没问字数;D:没问税率 | One further question 定位
+MXC-T05-190 | D | We signed the volume agreement on 8 January | 签量包协议即承诺全年 10 万词。 | A:才 4 万多词;B:协议客户按月开票;C:不是每份都要宣誓译员 | 协议条款回广告查
+MXC-T05-191 | C | baggage transfer between huts | 价格含小屋间的行李运送。 | A:防水衣不提供;B:保险不含;D:没提回起点交通 | 列举 includes 定位
+MXC-T05-192 | A | offer you a transfer to another date or a full refund | 不足四人就改期或全额退款。 | B:没提加导游;C:没说并团;D:没说降价 | fewer than four 定位
+MXC-T05-193 | D | The balance is due 30 days before departure | 改到九月最后一团 26 日，尾款提前 30 天即 8 月 27 日。 | A:无依据;B:无依据;C:26 日是出发日不是 8 月 | 日期题一步步推
+MXC-T05-194 | B | One change of date may be made free of charge | 第一次改期且距出发超过 30 天，免费。 | A:第二次或过晚才算取消;C:无需再交订金;D:没这条 | 对照条件逐一核
+MXC-T05-195 | C | We do not cancel for rain. | 下雨不取消，照常出发。 | A:退款是路线被封;B:没说缩短;D:换路线也是封路时 | 区分下雨和封路
+MXC-T05-196 | A | its telephone service centre will stay open until 21:00 on weekdays | 新闻稿宣布电话服务延长到 21 点。 | B:调查是原因;C:没新计费系统;D:招人只是附带 | 标题即主旨
+MXC-T05-197 | A | 1. Longer telephone service hours — 34% | 延长电话时间是首选，占 34%。 | B:27% 是账单更清楚;C:19% 是缩短等待;D:12% 是读表 App | 两篇对应找数字
+MXC-T05-198 | D | the allowance is €4.20 per hour worked after 18:00 | 转晚班 18 点后每小时多 4.2 欧。 | A:没减工作日;B:没提周六优先;C:11 月培训是新人 | allowance＝津贴
+MXC-T05-199 | B | The second item on the survey list is not being ignored | 调查第二项是更清楚的账单，3 月寄到。 | A:App 是第四项;C:付款日是第五项;D:没寄调查结果 | second item→回表格查
+MXC-T05-200 | C | No one currently on the team is required | 现有员工都不必上新晚班。 | A:培训是新人;B:周日仍不营业;D:没说涨津贴 | No one＝None of them
+MXC-T06-101 | B | reported a significant ___ in output | 冠词+形容词后填名词 increase。 | A:分词;C:副词;D:分词/动名词 | a＋形容词＋名词
+MXC-T06-102 | A | By the time the safety audit begins next month | by the time+将来，主句用将来完成。 | B:过去;C:现在完成;D:进行 | by the time 现在时→will have done
+MXC-T06-103 | D | The tenants association objected ___ the proposed increase | object to 固定搭配。 | A:against 不搭 object;B:for;C:with | object to sth
+MXC-T06-104 | C | readings had drifted out of tolerance | 读数偏离误差，需要重新校准 recalibrate。 | A:搬迁;B:加固;D:复制 | 看因果：偏差→校准
+MXC-T06-105 | A | for responding so ___ to the flooding | 修饰动词 responding 用副词 quickly。 | B:形容词;C:名词;D:动词 | so＋副词修饰动词
+MXC-T06-106 | C | ___ the zoning application was submitted on time | 后接完整从句且前后转折，用 Although。 | A:despite 接名词;B:in spite of 接名词;D:owing to 接名词且表原因 | 从句→连词
+MXC-T06-107 | B | The apprentices ___ portfolios were submitted | 学徒“的”作品集，用 whose。 | A:who 后缺主语不符;C:which 指物;D:whom 作宾语 | 名词前缺“的”→whose
+MXC-T06-108 | D | The vacant retail unit … ___ into two smaller offices next spring | 店铺“被分割”，将来被动。 | A:主动;B:主动进行;C:主动完成 | 主语是物→被动
+MXC-T06-109 | A | was unusually ___, running to fewer than two pages | was 后接形容词 concise。 | B:副词;C:名词;D:名词 | 系动词＋形容词
+MXC-T06-110 | A | runs far ___ than the model it replaced | than 要比较级，修饰 runs 用副词，more quietly。 | B:最高级;C:原级;D:as 要配 as | far＋比较级＋than
+MXC-T06-111 | C | since the plant opened in 1998 | since+过去时间点，用现在完成时。 | A:一般现在;B:一般过去;D:将来 | since → have done
+MXC-T06-112 | B | The surveyor's fee is payable ___ receipt of | on receipt of＝一收到就。 | A:in;C:for;D:by 都不搭 | on receipt of 固定搭配
+MXC-T06-113 | D | complained about the ___ of the lift | the…of 之间填名词 reliability。 | A:形容词;B:副词;C:动词 | the ___ of → 名词
+MXC-T06-114 | C | The apprenticeship board recommends ___ a logbook | recommend 后接动名词 keeping。 | A:不接 to do;B:不接原形;D:过去分词 | recommend doing
+MXC-T06-115 | B | Demand … has ___ sharply | 需求“上升”是不及物，has risen。 | A:raised 是及物;C:arisen 是出现;D:aroused 是唤起 | rise 不及物，raise 及物
+MXC-T06-116 | A | The list of approved subcontractors ___ reviewed | 主语中心词 list 单数，用 is。 | B:复数;C:过去复数;D:复数完成 | 主语看 of 前的中心词
