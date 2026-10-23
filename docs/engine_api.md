@@ -96,7 +96,7 @@ python3 app/build.py && node app/test/smoke.js app/dist/index.private.html && no
 planner.test.js：600 档用户 30 天模拟（只学 must、达标进维持、每日复习 ≤20、mock 不进训练、回放一致）、积压平摊、考前 3 天、倒排放弃、学不动、用时/作息/FSRS 个性化、API 字段。
 
 ## 5. 预测分（C3，predict.js）
-纯函数模块 `Predict`（全局 / Node `require('./predict.js')`），不改状态；前端尚未接入（旧 `E.predict()` 仍在）。方法与校准见 `docs/predict_calibration.md`。
+纯函数模块 `Predict`（全局 / Node `require("./predict.js")`），不改状态。前端经 `API.predict()` 接入（按日志长度缓存，`E.predict()` 仅作回退）；`API.calibrate(real)` 写 `st.predCalib`；`API.progress()` 把预测传给 `getProgress(state, {pred})` 算 `need`（够达标的最少考点）。方法与校准见 `docs/predict_calibration.md`。
 
 ```js
 Predict.estimate({

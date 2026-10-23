@@ -170,16 +170,43 @@ function battleCardHTML(open) {
   return `<div class="card bc"><details ${open ? 'open' : ''}><summary><h2>你的考场作战卡 <span class="mut sm">${BANDN[E.band()]} · ${ls.length} 条</span></h2></summary>
     <ol>${ls.map(x => `<li>${esc(x)}</li>`).join('')}</ol><p class="mut sm">没做完是计划内的，不是失败。</p></details></div>`;
 }
-function weeksText(hrs) {
-  const m = (E.st.settings && E.st.settings.daily_min) || 5;
-  return hrs ? `照每天 ${m} 分钟约 ${Math.max(1, Math.round(hrs * 60 / m / 7))} 周` : '';
+/* P1-1：主数字用天/周（照每天分钟数换算），小时只给区间（Planner.hoursText） */
+function paceText(min) {
+  if (!min) return '';
+  const m = (E.st.settings && E.st.settings.daily_min) || 5, d = Math.max(1, Math.ceil(min / m));
+  return `照现在的节奏约 ${d <= 10 ? d + ' 天' : Math.max(2, Math.round(d / 7)) + ' 周'}`;
+}
+/* P0-2 预测分呈现：low 不给数字（再做约 N 题）；mid 只给区间；high 给中值 + 区间；一律注“近似”。达标把握只在 mid/high 显示 */
+const PROBW = p => p > 0.7 ? '很稳了' : p >= 0.3 ? '有希望，继续' : '还需要一段时间';
+function predLine(pr) {
+  if (pr.level === 'low') return `预测阅读分：估算中，再做约 ${pr.need} 题给出`;
+  return pr.level === 'mid' ? `预测阅读分约 ${pr.lo}–${pr.hi}（近似）` : `预测阅读分 <b>${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}，近似）</span>`;
+}
+function predBlock(pr, cls) {
+  const lab = '<div class="mut sm">预测阅读分</div>';
+  if (pr.level === 'low') return lab + `<div class="${cls}">估算中</div><p class="mut sm">再做约 ${pr.need} 题给出预测分 · 目标 ${pr.tg}</p>`;
+  const prob = pr.prob != null ? `<p class="mut sm">达标把握 ${Math.round(pr.prob * 100)}% · ${PROBW(pr.prob)}</p>` : '';
+  return lab + (pr.level === 'mid' ? `<div class="${cls}">约 ${pr.lo}–${pr.hi}</div><div class="mut sm">近似 · 目标 ${pr.tg}</div>`
+    : `<div class="${cls}">${pr.p}</div><div class="mut sm">（${pr.lo}–${pr.hi}）近似 · 目标 ${pr.tg}</div>`) + prob;
+}
+/* 用 gap.nodes[].gain 替代考点数：“先补「X」「Y」，约 +N 分” */
+function gainLine(pr) {
+  const ns = pr.level !== 'low' && pr.gap && pr.gap.diff > 0 ? (pr.gap.nodes || []).filter(n => n.gain > 0).slice(0, 2) : [];
+  return ns.length ? `先补${ns.map(n => `「${esc(n.nm)}」`).join('')}，约 +${ns.reduce((a, n) => a + n.gain, 0)} 分` : '';
+}
+/* 进度主句（今天页/入职结果共用，单一数据源 g.need） */
+function needText(g, pr) {
+  const n = g.need; if (!n || pr.level === 'low') return '';
+  if (n.reached) return n.nodes ? `已够线，再稳 ${n.nodes} 个考点留出余量` : '已经够到目标了 ✓ 现在只需每天复习保持';
+  if (!n.nodes) return '目标考点已全部达标，进入维持模式';
+  return `离目标 ${pr.tg}：${paceText(n.min)}（先稳 ${n.nodes} 个考点，${n.hoursText}）`;
 }
 function vObResult(o) {
-  const pr = E.predict(), g = API.progress(), res = o.res || {};
+  const pr = API.predict(), g = API.progress(), res = o.res || {}, nt = needText(g, pr);
   const head = o.vskip && !E.st.diag ? '' : '';
   return `<div class="onb">${steps(3)}<div class="card"><h2>入职测试完成 ✓</h2>
-    <p>预测阅读分 <b class="big2">${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}）</span></p>
-    ${g.remainingNodes != null ? `<p>离目标 ${pr.tg} 还差 <b>${g.remainingNodes} 个考点</b> · 约 <b>${g.remainingHours} 小时</b>${weeksText(g.remainingHours) ? `<br><span class="mut sm">${weeksText(g.remainingHours)}到目标</span>` : ''}</p>` : ''}
+    <p>${predLine(pr)}</p>
+    ${nt ? `<p>${nt}</p>` : ''}
     ${res.strong && res.strong.length ? `<p class="sm">你拿得稳的：${res.strong.map(esc).join('、')}</p>` : ''}
     ${res.weak && res.weak.length ? `<p class="sm">最快涨分的 ${res.weak.length} 个：${res.weak.map(esc).join(' · ')}</p>` : ''}${head}</div>
     ${battleCardHTML(true)}
@@ -234,7 +261,7 @@ function circTip() {
   return `<div class="card tipc"><span>⏰ ${esc(c.tip)}</span><span class="row"><button class="link" data-act="circX">知道了</button><button class="link mut" data-act="circOff">不再提示</button></span></div>`;
 }
 function vToday() {
-  const d = new Date(), wd = '日一二三四五六'[d.getDay()], pr = E.predict();
+  const d = new Date(), wd = '日一二三四五六'[d.getDay()];
   const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
   ${ui().plain || ui().nostory ? '' : `<p class="scene">«${dayName()} · Halvorsen 运营部»</p>`}`;
   if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先认识一下你，再做一次入职测试（约 10 分钟），之后每天的活由系统来排。</p>
@@ -251,9 +278,11 @@ function vToday() {
       <details><summary>今天时间多？ ˅</summary><div class="row wrapr"><button class="chip" data-act="start" data-m="15">多做 15 分钟</button>
       <button class="chip" data-act="mock">紧急项目（全真模考）</button></div></details></div>`;
   }
-  const g = API.progress();
-  const side = `<div class="card"><div class="mut sm">预测阅读分</div><div class="big">${pr.p}</div><div class="mut sm">（${pr.lo}–${pr.hi}）· 目标 ${pr.tg}</div>
-    ${g.text ? `<p class="sm">${esc(g.text)}</p>` : ''}</div>`;
+  const pr = API.predict(), g = API.progress(), b = wkSnap(g, pr), nt = needText(g, pr), gl = gainLine(pr);
+  // P0-2：今天页不常驻分数，只给本周趋势（稳 / 上升，不写下降），点开才看数字
+  const trend = pr.level === 'low' ? '估算中' : pr.p - (b.p || pr.p) >= 5 ? '上升' : '稳';
+  const side = `<div class="card"><details class="pred"><summary><span class="mut sm">预测阅读分 · 本周趋势</span> <b>${trend}</b> ›</summary>${predBlock(pr, 'big')}</details>
+    ${nt ? `<p class="sm">${nt}</p>` : ''}${gl ? `<p class="mut sm">${gl}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
   const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
   return top + `<div class="grid2"><div>${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
@@ -305,7 +334,7 @@ function rankOf(g) {
 }
 function wkSnap(g, pr) {   // 每周第一次打开时记周初基线，用于绩效评估
   const k = E.wkKey(), W = E.st.wk = E.st.wk || {};
-  if (!W[k]) { W[k] = { rem: g.remainingNodes, p: pr.p, ach: (g.nodes || []).filter(x => x.achieved).map(x => x.id) }; Object.keys(W).sort().slice(0, -8).forEach(x => delete W[x]); }
+  if (!W[k]) { W[k] = { rem: g.need ? g.need.nodes : g.remainingNodes, p: pr.p, ach: (g.nodes || []).filter(x => x.achieved).map(x => x.id) }; Object.keys(W).sort().slice(0, -8).forEach(x => delete W[x]); }
   return W[k];
 }
 function vReviewWeek(g, pr) {
@@ -315,20 +344,21 @@ function vReviewWeek(g, pr) {
   return `<div class="card"><h2>绩效评估 <span class="mut sm">${fmt(d0)}–${fmt(d1)}</span></h2>
     ${ui().plain ? '' : `<p class="say">Dana：${say}</p>`}
     <div class="li"><span>本周出勤</span><span>${days} 天${days >= 4 ? ' ✓' : ''}</span></div>
-    ${g.remainingNodes != null ? `<div class="li"><span>离目标还差</span><span>${g.remainingNodes} 个考点${b.rem != null && b.rem !== g.remainingNodes ? `<span class="mut sm">（周初 ${b.rem}）</span>` : ''}</span></div>` : ''}
-    <div class="li"><span>预测阅读分</span><span>${b.p !== pr.p ? `${b.p} → ` : ''}${pr.p}</span></div>
+    ${g.need && !g.need.reached && pr.level !== 'low' ? `<div class="li"><span>离目标还差</span><span>${g.need.nodes} 个考点${b.rem != null && b.rem > g.need.nodes ? `<span class="mut sm">（周初 ${b.rem}）</span>` : ''}</span></div>` : ''}
+    <div class="li"><span>预测阅读分</span><span>${pr.level === 'low' ? '估算中' : pr.p - b.p >= 5 ? `${b.p} → ${pr.p}` : pr.p - b.p > -5 ? `${pr.level === 'mid' ? `约 ${pr.lo}–${pr.hi}` : pr.p} · 持平` : '小幅波动，正常'}</span></div>
     ${got.length ? `<div class="li"><span>这周拿下</span><span>${got.map(esc).join(' · ')}</span></div>` : ''}
     ${nx ? `<div class="li"><span>下周只盯一件事</span><span>${esc(nx.nm)}</span></div>` : ''}</div>`;
 }
 function vProgress() {
   const hd = '<div class="hd"><h1>进度</h1></div>';
   if (!E.st.diag) return hd + `<div class="card empty"><h2>还没有进度</h2><p class="mut">做完入职测试（约 10 分钟），这里会显示离目标还差多少、大约要多少小时。</p><button class="btn full" data-act="diag">去做入职测试</button></div>`;
-  const g = API.progress(), pr = E.predict(), rk = rankOf(g), prob = Math.round((pr.prob || 0) * 100);
-  const pw = prob >= 70 ? '很有把握' : prob >= 40 ? '有希望，继续' : '慢慢来，每天一点就行';
-  const main = `<div class="card hero">${g.mode === 'maintain' ? `<div class="big">目标考点已全部达标 ✓</div><p class="mut">进入维持模式，每天少量复习就够。</p>`
-    : `<div class="mut sm">离目标 ${pr.tg} 还差</div><div class="huge">${g.remainingNodes != null ? g.remainingNodes : '—'} <small>个考点</small></div>
-    <p>约 ${g.remainingHours} 小时${weeksText(g.remainingHours) ? ' · ' + weeksText(g.remainingHours) : ''}</p>`}
-    <p>预测阅读分 <b>${pr.p}</b> <span class="mut">（${pr.lo}–${pr.hi}）</span></p><p class="mut sm">达标把握 ${prob}% · ${pw}</p></div>`;
+  const g = API.progress(), pr = API.predict(), rk = rankOf(g), n = g.need || {}, gl = gainLine(pr);
+  // P0-1/P1-1：单一数据源 g.need（够达标的最少考点）；主数字用天/周，小时给区间，考点数降为次要
+  const head = pr.level === 'low' ? `<div class="big">估算中</div><p class="mut">再练 2–3 次就能算出离目标还差多少。</p>`
+    : n.reached ? (n.nodes ? `<div class="big">已够线 ✓</div><p>再稳 ${n.nodes} 个考点留出余量 · ${paceText(n.min)}</p>` : `<div class="big">已经够到目标了 ✓</div><p class="mut">现在只需每天复习保持。</p>`)
+    : !n.nodes ? `<div class="big">目标考点已全部达标 ✓</div><p class="mut">进入维持模式，每天少量复习就够。</p>`
+    : `<div class="mut sm">离目标 ${pr.tg}</div><div class="huge">${paceText(n.min).replace('照现在的节奏', '')}</div><p class="mut sm">照现在的节奏 · 先稳 ${n.nodes} 个考点（${n.hoursText}）</p>`;
+  const main = `<div class="card hero">${head}${gl ? `<p class="sm">${gl}</p>` : ''}<div class="hr"></div>${predBlock(pr, 'big2')}</div>`;
   const rank = `<div class="card"><h2>职级 · ${rk.nm}</h2><div class="ladder">${RANKN.map((x, i) => `<i class="${i < rk.i ? 'd' : i === rk.i ? 'c' : ''}">${x}</i>`).join('')}</div>
     ${rk.next ? `<p class="mut sm">再稳 ${rk.need} 个考点升${rk.next}</p>` : '<p class="mut sm">已经是经理了，保持住。</p>'}</div>`;
   const cur = (g.next || []).map(x => { const pct = Math.max(5, Math.round(Math.min(0.92, (x.m || 0) / Math.max(0.01, g.targetMastery || 0.8)) * 100));   // 未达标最多到 92%（证据不够也算没稳）
@@ -340,6 +370,13 @@ function vProgress() {
     ${mk ? `<div class="card"><h2>紧急项目记录</h2>${mk}</div>` : ''}<p class="mut sm ctr">累计学习 ${total} 天</p></div></div>`;
 }
 
+/* P0-2：考完了？填真实阅读分 → Predict.calibrate，存 st.predCalib，以后的预测按它校准 */
+function calibCard() {
+  const c = E.st.predCalib;
+  return `<div class="card" id="calib"><h2>考完了？填分数</h2><p class="mut sm">填上真实的阅读分，之后的预测会按你的实际情况校准。</p>
+    <div class="row"><input id="mReal" class="inl" inputmode="numeric" placeholder="阅读分 5–495"><button class="chip" data-act="calib">保存</button></div>
+    ${c && c.last ? `<p class="mut sm">已校准 ${c.n} 次 · 上次填 ${c.last.real} 分</p>` : ''}</div>`;
+}
 /* ---------- 我的 ---------- */
 const FZ = [[0.9, '小'], [1, '标准'], [1.12, '大'], [1.25, '特大']];
 function applyFz() { try { document.documentElement.style.setProperty('--fz', String(ui().fz || 1)); } catch (e) { } }
@@ -366,6 +403,7 @@ function vMe() {
     <h3>听力估分（可空）</h3><input id="mLs" inputmode="numeric" value="${ls || ''}" placeholder="不确定就空着">
     <h3>考试日期</h3><input id="mDate" type="date" value="${esc(E.st.exam || '')}"><p class="mut sm" id="mOut">${examTip(E.st.exam)}</p>
     <button class="btn ghost full" data-act="saveGoal">保存</button></div>
+  ${calibCard()}
   <div class="card"><h2>数据</h2><div class="row wrapr"><button class="btn ghost" data-act="dl">导出数据（文件）</button><button class="btn ghost" data-act="exp">复制进度码</button></div>
     <p></p><input id="codeBox" placeholder="粘贴进度码导入"><p></p><button class="btn ghost full" data-act="imp">导入</button>
     <p></p>${u.clrArm ? `<div class="warnbox"><p>确定清空「${esc(Profiles.name())}」的全部进度？清空后不能恢复，建议先导出。</p><div class="row"><button class="btn danger" data-act="clr2">确定清空</button><button class="btn ghost" data-act="clr0">取消</button></div></div>` : '<button class="link mut" data-act="clr1">清空这个档案的数据…</button>'}</div>
@@ -379,8 +417,8 @@ function startSession(mode, units, extra) {
   if (!units || !units.length) { alert('没有可用的题目了'); return; }
   const nd0 = {}; units.forEach(u => u.ids.forEach(id => { const i = IT[id]; nd0[i.n] = E.mastery(i.n); }));
   const g = API.progress();
-  S = Object.assign({ mode, units, ui: 0, qi: 0, ans: {}, lu: {}, mt: {}, t0: Date.now(), qt0: Date.now(), day: fxToday(), pred0: E.predict(), nd0,
-    rem0: g.remainingNodes, fb: null, v: 'q', doc: 0, sc: {}, ppn: 0, tipN: 0 }, extra || {});
+  S = Object.assign({ mode, units, ui: 0, qi: 0, ans: {}, lu: {}, mt: {}, t0: Date.now(), qt0: Date.now(), day: fxToday(), pred0: API.predict(), nd0,
+    rem0: g.need ? g.need.nodes : null, fb: null, v: 'q', doc: 0, sc: {}, ppn: 0, tipN: 0 }, extra || {});
   if (mode === 'mock') { S.end = Date.now() + 75 * 6e4; S.v = 'a'; }
   E.log('start', { mode, n: units.reduce((s, u) => s + u.ids.length, 0), form: S.form });
   save(); render();
@@ -418,10 +456,10 @@ function finish() {
     if (S.form && !E.st.used.includes(S.form)) E.st.used.push(S.form);
   }
   const ids = Object.keys(S.ans), ok = ids.filter(id => S.ans[id].c === IT[id].a).length;
-  const ms = Date.now() - S.t0, p1 = E.predict(), g = API.progress();
+  const ms = Date.now() - S.t0, p1 = API.predict(), g = API.progress();
   const nodes = Object.keys(S.nd0).map(n => ({ n, a: S.nd0[n], b: E.mastery(n) })).filter(x => x.b != null).map(x => Object.assign(x, { d: x.b - (x.a == null ? 0.5 : x.a) }));
   const p5 = ids.filter(id => IT[id].p === 5 && S.ans[id].ms), p5s = p5.reduce((s, id) => s + S.ans[id].ms, 0) / Math.max(1, p5.length) / 1000, p5t = p5.reduce((s, id) => s + IT[id].t, 0) / Math.max(1, p5.length);
-  R = { mode: S.mode, n: ids.length, ok, ms, p0: S.pred0, p1, nodes, rem0: S.rem0, rem1: g.remainingNodes, hrs: g.remainingHours, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
+  R = { mode: S.mode, n: ids.length, ok, ms, p0: S.pred0, p1, nodes, rem0: S.rem0, need: g.need, rem1: g.need ? g.need.nodes : null, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
   if (S.mode === 'mock') { R.scaled = Math.round(E.scaled(ok / Math.max(1, ids.length) * 100) / 5) * 5; E.st.mocks.push({ ts: Date.now(), form: S.form, ok, n: ids.length, scaled: R.scaled, ms }); }
   if (S.mode === 'diag') {
     E.st.diag = true; const o = E.st.ob = E.st.ob || {};
@@ -435,18 +473,26 @@ function finish() {
   E.log('end', { mode: S.mode, n: ids.length, ok, ms });
   const wasDiag = S.mode === 'diag'; S.done = true; S = null; tab = 'today'; if (wasDiag) R = null; save(); render();
 }
+/* P0-2：结算默认不显示分数；只在上涨 ≥5 分或跨职级档时显示一行；下降不显示（放进周报写“小幅波动”）；估算中不显示 */
+const rIdx = p => Math.max(0, RANKS.filter(x => p >= x[0]).length - 1);   // 预测分 → 职级档（UX §0.5，阈值同引擎 RANKS）
+function resPred(r) {
+  const a = r.p0, b = r.p1; if (!a || !b || b.level === 'low' || r.mode === 'mock') return '';
+  const up = b.p - a.p, ra = rIdx(a.level === 'low' ? 0 : a.p), rb = rIdx(b.p);
+  if (rb > ra) return `<p class="say">${ui().plain ? '' : 'Dana：'}下周起你是${RANKS[rb][1]}了。</p><p class="sm">${predLine(b)}</p>`;
+  return up >= 5 ? `<p class="sm">${predLine(b)} <span class="ok">↑ ${up}</span></p>` : '';
+}
 /* 10 秒结算：写 2–3 条具体进步，不显示题数和正确率 */
 function vResult() {
   const r = R, ls = [];
   if (r.mode === 'mock') ls.push(`紧急项目交付：预估阅读 ${r.scaled} 分`);
   r.nodes.filter(x => x.d > 0.02).sort((a, b) => b.d - a.d).slice(0, 2).forEach(x => ls.push(`${esc((ND[x.n] || {}).nm || x.n)}：又稳了一点`));
   if (r.p5 && r.p5[0] <= r.p5[1]) ls.push(`审稿 ${r.p5[0]} 秒/句（目标 ${r.p5[1]}）`);
-  if (r.rem1 != null) ls.push(`离目标还差 ${r.rem1} 个考点${r.rem0 != null && r.rem0 > r.rem1 ? `（−${r.rem0 - r.rem1}）` : ''}${r.hrs != null ? ` · 约 ${r.hrs} 小时` : ''}`);
+  // P0-1：只计够达标的最少考点；N 下降才写“−k”，上升静默（UX §11.2）；预测估算中不写
+  if (r.need && r.p1.level !== 'low') { if (r.need.reached) { if (r.rem0 > r.rem1) ls.push('离目标又近了一步：已够线'); } else if (r.rem1) ls.push(`离目标还差 ${r.rem1} 个考点${r.rem0 != null && r.rem0 > r.rem1 ? `（−${r.rem0 - r.rem1}）` : ''} · ${r.need.hoursText}`); }
   if (ls.length < 2 && !r.nodes.some(x => x.d > 0.02)) ls.unshift('碰到几个新考点，已经记下，明天换更顺手的题。');
   const t = Math.round(r.ms / 1000), title = r.mode === 'diag' ? '入职测试做完了 ✓' : `${dayName()}的活干完了 ✓`;
   return `<div class="res"><div class="hd"><h1>${title}</h1><span class="mut sm">用时 ${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}</span></div>
-  <ul>${ls.slice(0, 3).map(x => `<li>${x}</li>`).join('')}</ul>
-  <p>预测阅读分 <b>${r.p1.p}</b> <span class="mut">（${r.p1.lo}–${r.p1.hi}）</span></p>
+  <ul>${ls.slice(0, 3).map(x => `<li>${x}</li>`).join('')}</ul>${resPred(r)}
   ${ui().plain ? '' : `<p class="say">${pick(SAY)}</p>`}
   <button class="btn full lg" data-act="closeR">完成</button><p></p><button class="link" data-act="more">再来 5 分钟</button></div>`;
 }
@@ -770,6 +816,12 @@ const A = {
   next() { next(); },
   pause() { leaveQ(); S.paused = true; tab = 'today'; save(); render(); },
   closeR() { R = null; render(); },
+  calib() {
+    const v = parseInt(($('#mReal') || {}).value, 10);
+    if (!(v >= 5 && v <= 495)) return alert('阅读分在 5–495 之间');
+    if (!API.calibrate(Math.round(v / 5) * 5)) return alert('预测模块没加载，暂时不能校准');
+    ui().calibAt = Date.now(); save(); render();
+  },
   closeM() { modal(R ? vResult() : ''); },
   nostory() { S.noStory = true; save(); render(); },
   view(el) { S.v = el.dataset.v; save(); render(); },

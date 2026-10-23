@@ -59,6 +59,11 @@ tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做
 { const a = revAlloc(); console.log('review alloc items', a.ni, 'words', a.nw); if (a.ni + a.nw > 20) throw new Error('review > 20');
   A.rev(); let k = 0; while (WQ) { render(); A.wqA(el({ i: String(k % 2 ? WQ.q.a : -1) })); if (WQ && WQ.ans != null) A.wqN(); k++; } while (S) { answer(0); if (S && S.fb) next(); } A.closeR(); }
 tab = 'me'; render(); if (!/mRm/.test($('#main').innerHTML)) throw new Error('me remind'); $('#mRm').value = '07:45'; A.rmSet(); if (E.st.settings.remind !== '07:45') throw new Error('me remind set'); A.rmOff(); if (E.st.settings.remind !== false) throw new Error('me remind off'); A.fz(el({ v: '1.25' })); A.tgl(el({ k: 'nostory' })); A.circ(); if ((E.st.settings || {}).circadian !== false) throw new Error('circadian off');
+{ const pr = API.predict(); if (!pr.level || !pr.est || !/^(low|mid|high)$/.test(pr.level)) throw new Error('API.predict ' + JSON.stringify([pr.level, !!pr.est]));
+  tab = 'progress'; render(); const h = $('#main').innerHTML; if (pr.level !== 'high' && new RegExp('>' + pr.p + '<').test(h) && pr.level === 'low') throw new Error('low confidence shows number');
+  tab = 'me'; render(); if (!/考完了？填分数/.test($('#main').innerHTML)) throw new Error('calib entry'); $('#mReal').value = '300'; A.calib();
+  if (!E.st.predCalib || E.st.predCalib.n !== 1 || E.st.predCalib.last.real !== 300) throw new Error('predCalib ' + JSON.stringify(E.st.predCalib));
+  if (!API.predict().est.confidence.calibrated) throw new Error('calib not applied'); }
 A._mtg = 800; $('#mLs').value = '420'; $('#mDate').value = '2027-01-10'; A.saveGoal(); if (E.st.rtg !== 380 || E.st.exam !== '2027-01-10' || E.band() !== '860+') throw new Error('saveGoal ' + E.st.rtg + ' ' + E.band());
 $('#mLs').value = ''; $('#mDate').value = '2027-01-10'; A._mtg = 600; A.saveGoal(); A.dl();
 E.addWord('Invoice', 'Please send the invoice.'); A.wg(el({ w: 'invoice', g: '2' })); A.unword(el({ w: 'invoice' })); if (E.st.words.invoice) throw new Error('unword');
