@@ -527,13 +527,15 @@ function vPassage(b, it, id, refs, multi) {
     return `<span class="blank ${q === cur ? 'cur' : ''}" data-act="goq" data-q="${q}">${q}${q === cur ? ' 当前' : ''}</span>`;
   };
   const show = multi && wide() && ui().sideBySide && typeof window !== 'undefined' && window.innerWidth >= 1440 ? b.docs.map((d, i) => i) : [S.doc];
-  return tabs + show.map(i => {
+  const sbs = show.length > 1;
+  return (sbs ? '' : tabs) + (sbs ? '<div class="sbs">' : '') + show.map(i => {
     const d = b.docs[i]; let x = d.x;
     if (refs.q && !done) x = markIn(x, refs.q, '1') || x;
     if (bp) x = markIn(x, bp, '2') || x;
-    return docHTML(d, i, { x, blank: b.p === 6 && qs.size ? blank : null, ins: b.p === 7,
+    const h = docHTML(d, i, { x, blank: b.p === 6 && qs.size ? blank : null, ins: b.p === 7,
       mk: k => k === '1' ? '<mark class="ref" id="mref">' : '<mark class="basis" id="mbasis">' });
-  }).join('');
+    return sbs ? `<div><div class="sbh">${TXN[d.t] || '文本'} ${i + 1}/${b.docs.length}</div>${h}</div>` : h;
+  }).join('') + (sbs ? '</div>' : '');
 }
 function bundleIds(b) { return b.qs.filter(q => IT[q]); }
 function vQs(b, u, it, id, refs) {
@@ -610,7 +612,11 @@ function lookupWord(el) {
     <div class="hi">${x.hi ? '★ 托业高频 · ' : ''}已加入生词本 <button class="link" data-act="unword" data-w="${esc(x.w)}">移除</button></div>`;
   p.className = 'pop'; p.style.cssText = '';
   const r = el.getBoundingClientRect(), pane = el.closest('.pane') || $('#main'), pr = pane.getBoundingClientRect();
-  if (!wide()) {
+  const hitOpt = () => { const q = p.getBoundingClientRect(); return $$('.opt').some(o => { const x = o.getBoundingClientRect(); return !(x.bottom <= q.top || x.top >= q.bottom || x.right <= q.left || x.left >= q.right); }); };
+  if (!wide() && el.closest('.paper')) {   // 手机 P5：选项在拇指区，浮层贴在词下方的空白里，盖住选项就翻到词上方
+    p.classList.add('bubble', 'mb'); p.style.left = '8px'; p.style.top = (r.bottom + 6) + 'px';
+    requestAnimationFrame(() => { if (hitOpt()) p.style.top = Math.max(8, r.top - p.offsetHeight - 6) + 'px'; });
+  } else if (!wide()) {
     const inQ = !!el.closest('#pq') || !el.closest('#pa');
     p.classList.add(inQ && !!el.closest('.stem, .paper') ? 'top' : 'bottom');
     if (p.classList.contains('top') && el.closest('.paper')) { p.classList.remove('top'); p.classList.add('bottom'); }

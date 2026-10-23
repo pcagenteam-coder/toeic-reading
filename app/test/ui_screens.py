@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""UI 截图自检：今天 → 一组 P5 → P6 → 一组 P7 多篇 → 结算，4 种视口。
+"""UI 截图自检：首日 S1–S6 → 今天 → P5 → P6 → P7 多篇/并排/快捷键 → 结算 → 复习 → 进度 → 我的 → 状态页，4 种视口。
 用法：bash work/setup_browser.sh（打印 CHROME=…）后  python3 app/test/ui_screens.py [dist]
 截图存 work/screens/<视口>/；检查：无横向溢出、查词浮层不盖住选项、关键元素存在。"""
 import os, sys, re, subprocess
@@ -32,14 +32,35 @@ def run(br, tag, w, h):
     pg = br.new_page(viewport={'width': w, 'height': h}, device_scale_factor=1)
     errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
     pg.goto('file://' + DIST)
-    pg.fill('#sName', 'UI'); pg.click('text=开始入职测试')
+    # 首日 S1：目标 + 听力 + 考试日期
+    pg.wait_for_selector('#rtgOut'); check('270' in pg.inner_text('#rtgOut'), f'{tag}: S1 reading target default 600×0.45')
+    pg.click('[data-act=lsU][data-v="0"]'); pg.fill('#sLs', '300'); pg.fill('#sDate', '2026-12-13'); shot(pg, d, '00a_s1_goal')
+    check('300' in pg.inner_text('#rtgOut'), f'{tag}: S1 total−listening')
+    pg.fill('#sDate', '2020-01-01'); check('已经过了' in pg.inner_text('#dateOut'), f'{tag}: past date not flagged')
+    pg.fill('#sDate', '2026-12-13'); pg.click('[data-act=setupGo]'); shot(pg, d, '00b_vocab_intro')
+    check(pg.locator('#nav').is_hidden(), f'{tag}: nav visible during first day')
+    pg.click('[data-act=vstart]'); shot(pg, d, '00c_vocab_word')
+    pg.evaluate("(() => { let k = 0; while (!E.st.ob.vt.chk && k++ < 60) A.vk({ dataset: { y: '1' } }); })()"); shot(pg, d, '00d_vocab_check')
+    if w >= 1024:   # PC：← / → 答词汇
+        pg.evaluate("A.vchk({ dataset: { i: String(E.st.ob.vt.chk.a) } })"); n0 = pg.evaluate('E.st.ob.vt.a.length'); pg.keyboard.press('ArrowRight')
+        check(pg.evaluate('E.st.ob.vt ? E.st.ob.vt.a.length : 99') == n0 + 1, f'{tag}: vocab arrow key')
+    pg.evaluate("(() => { let k = 0; while (E.st.ob.step === 'vtest' && k++ < 80) { const vt = E.st.ob.vt; if (vt.chk) A.vchk({ dataset: { i: String(vt.chk.a) } }); else A.vk({ dataset: { y: vt.q[vt.i][1] && k % 4 ? '1' : '0' } }); } })()")
+    shot(pg, d, '00e_vocab_result'); check('个常用词' in pg.inner_text('#main'), f'{tag}: vocab result')
+    pg.click('[data-act=diag]'); shot(pg, d, '00f_diag_p5')
+    check(pg.locator('.hint').count() == 1, f'{tag}: diag hint missing')
     pg.evaluate("while (S && S.mode === 'diag') answer(IT[curId()].a)")
-    pg.wait_for_selector('#modal:not(.hide) .res'); shot(pg, d, '00_diag_result')
-    pg.click('[data-act=closeR]'); shot(pg, d, '01_today')
+    pg.wait_for_selector('.bc'); shot(pg, d, '00g_diag_result')
+    txt = pg.inner_text('#main'); check(not re.search(r'正确率|\d+\s*/\s*\d+ 题', txt), f'{tag}: S6 shows counts')
+    check(1 <= pg.locator('.bc li').count() <= 8, f'{tag}: battle card lines'); check('第 1 天' in txt, f'{tag}: day 1 not shown')
+    pg.click('[data-act=obDone]'); shot(pg, d, '01_today')
+    check(pg.locator('.fz').count() == 1, f'{tag}: streak freeze ❄ missing')
     check(pg.locator('.task .btn.lg').count() <= 1, f'{tag}: today has >1 main button')
     # P5 一组
     pg.evaluate("startSession('train', D.items.filter(i => i.p === 5 && D.exp && D.exp[i.id] && /-{3,}/.test(i.s)).slice(0, 3).map(i => ({ ids: [i.id] })))")
     shot(pg, d, '02_p5')
+    if w < 768:
+        oz = pg.evaluate("(() => { const o = [...document.querySelectorAll('.opt')].map(x => x.getBoundingClientRect()); return [o[0].top, o[o.length - 1].bottom]; })()")
+        check(oz[0] >= h * 0.5 and oz[1] <= h, f'{tag}: P5 options not in thumb zone {oz}')
     pg.locator('.paper .w').nth(2).click(); pg.wait_for_timeout(200); shot(pg, d, '03_p5_lookup')
     pr = pg.evaluate("(() => { const p = document.querySelector('#pop').getBoundingClientRect(); return [...document.querySelectorAll('.opt')].some(o => { const r = o.getBoundingClientRect(); return !(r.bottom <= p.top || r.top >= p.bottom || r.right <= p.left || r.left >= p.right); }); })()")
     check(not pr, f'{tag}: lookup popover covers options')
@@ -60,6 +81,12 @@ def run(br, tag, w, h):
       const qi = b.qs.findIndex(q => /["“]/.test(IT[q].s));
       startSession('train', [{ b: b.id, ids: b.qs.slice() }]); if (qi > 0) { S.qi = qi; render(); } })()""")
     shot(pg, d, '06_p7_multi')
+    if w >= 1440:
+        pg.evaluate("ui().sideBySide = true; render()"); shot(pg, d, '06b_p7_side_by_side')
+        cols = pg.evaluate("(() => { const x = [...document.querySelectorAll('.sbs > div')].map(e => e.getBoundingClientRect()); return x.length >= 2 && Math.abs(x[0].top - x[1].top) < 4 && x[1].left > x[0].right - 1; })()")
+        check(cols, f'{tag}: multi docs not side by side'); pg.evaluate("ui().sideBySide = false; render()")
+        sp0 = pg.evaluate('ui().split || 55'); pg.keyboard.press('Alt+ArrowLeft'); check(pg.evaluate('ui().split') == sp0 - 5, f'{tag}: Alt+← split')
+        pg.keyboard.press('Alt+ArrowRight')
     if pg.locator('#pq a.ref').count():
         pg.locator('#pq a.ref').first.click(); pg.wait_for_timeout(300); shot(pg, d, '07_p7_jump')
         vis = pg.evaluate("(() => { const m = document.querySelector('#mref,.p.on,.ins.on'); if (!m) return null; const r = m.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight; })()")
@@ -76,8 +103,36 @@ def run(br, tag, w, h):
     txt = pg.inner_text('#sheet')
     check(not re.search(r'正确率|\d+\s*/\s*\d+', txt), f'{tag}: result shows counts/accuracy')
     pg.click('[data-act=closeR]')
+    if w >= 1024:   # PC 快捷键：1–4 作答、Enter 下一题、← 回上一题、Esc
+        pg.evaluate("startSession('train', D.items.filter(i => i.p === 5).slice(10, 13).map(i => ({ ids: [i.id] })))")
+        a0 = pg.evaluate('IT[curId()].a'); pg.keyboard.press(str((a0 + 1) % 4 + 1)); check(pg.evaluate('!!S.ans[curId()]'), f'{tag}: key 1–4 no answer')
+        pg.keyboard.press('Enter'); check(pg.evaluate('S && S.ui') == 1, f'{tag}: Enter next')
+        pg.keyboard.press('Escape'); pg.evaluate("S = null; E.st.run = null; R = null; render()")
+    # 复习：题卡 + 生词四选一（合计 ≤20）
+    pg.evaluate("(() => { ['invoice', 'deadline', 'budget', 'shipment', 'warranty'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).forEach(k => E.st.cards[k].due = 0); tab = 'review'; render(); })()")
+    shot(pg, d, '11_review'); check(pg.evaluate('(a => a.ni + a.nw)(revAlloc())') <= 20, f'{tag}: review > 20')
+    pg.click('[data-act=rev]'); shot(pg, d, '12_review_word')
+    pg.evaluate("A.wqA({ dataset: { i: String((WQ.q.a + 1) % 4) } })"); shot(pg, d, '12b_review_word_wrong')
+    pg.evaluate("while (WQ) { if (WQ.ans == null) A.wqA({ dataset: { i: String(WQ.q.a) } }); else A.wqN(); } while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); } R = null; modal(''); render()")
+    pg.evaluate("Object.keys(E.st.cards).forEach(k => E.st.cards[k].due = 1e9); Object.keys(E.st.words).forEach(k => E.st.words[k].due = 1e9); tab = 'review'; render()")
+    shot(pg, d, '13_review_empty'); check('挺好' in pg.inner_text('#main'), f'{tag}: review empty state')
+    # 进度
+    pg.evaluate("tab = 'progress'; render()"); shot(pg, d, '14_progress')
+    txt = pg.inner_text('#main'); check('职级' in txt and '绩效评估' in txt and '个考点' in txt, f'{tag}: progress content')
+    check(not re.search(r'正确率|\d+\s*/\s*\d+|做了 \d+ 题', txt), f'{tag}: progress shows counts/accuracy')
+    pg.evaluate("window.scrollTo(0, 99999)"); shot(pg, d, '14b_progress_bottom'); pg.evaluate("window.scrollTo(0, 0)")
+    # 我的
+    pg.evaluate("tab = 'me'; render()"); shot(pg, d, '15_me')
+    pg.click('[data-act=clr1]'); pg.locator('.warnbox').scroll_into_view_if_needed(); shot(pg, d, '16_me_clear_confirm'); pg.click('[data-act=clr0]')
+    pg.click('[data-act=fz][data-v="1.25"]'); pg.evaluate("startSession('train', [{ ids: [D.items.find(i => i.p === 5).id] }])"); shot(pg, d, '17_p5_bigfont')
+    pg.evaluate("S = null; E.st.run = null; ui().fz = 1; tab = 'today'; render()")
+    # 出错 / 首次（复习、进度在入职前）
+    pg.evaluate("tab = 'nope'; render()"); shot(pg, d, '18_error'); check('进度已保存' in pg.inner_text('#main'), f'{tag}: error state')
+    pg.click('[data-act=recover]')
     # 刷新后数据仍在
     pg.reload(); check(pg.evaluate('E.st && E.st.log.length > 10'), f'{tag}: state lost after reload')
+    pg.evaluate("Profiles.create('新人'); E.st = newState(600, ''); save(); tab = 'progress'; render()"); shot(pg, d, '19_progress_first')
+    check('还没有进度' in pg.inner_text('#main'), f'{tag}: progress first state')
     check(not errs, f'{tag}: page errors {errs[:2]}')
     pg.close()
 
