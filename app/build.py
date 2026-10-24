@@ -99,6 +99,7 @@ def conv_strat(e):
 
 # B2：可选内联（缺失则跳过）——中文解析、语法 60 秒微讲解、词典（只收题库出现过的词）、词汇摸底池
 EXPL = 'data/explanations/zh_open_v1.json'
+EXPL_PRIV = 'private_data/explanations/zh_private_v1.json'  # 私有题中文解析（仅私有构建）
 GRAM = 'data/lessons/grammar_v1.json'
 LEX = 'data/wordlists/lexicon_v1.json'
 LEX_SA = 'data/wordlists/lexicon_v1_sa.json'
@@ -112,9 +113,10 @@ def exists(p):
 
 def extras(items, bundles):
     out, ids = {}, {i['id'] for i in items}
+    srcs = [EXPL] + ([EXPL_PRIV] if '--public' not in sys.argv and exists(EXPL_PRIV) else [])
     if exists(EXPL):
         ex = {}
-        for k, v in load(EXPL)['items'].items():
+        for k, v in [kv for s_ in srcs for kv in load(s_)['items'].items()]:
             if k not in ids:
                 continue
             o = {'b': v.get('basis', ''), 'w': v.get('why', '')}
