@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>托业阅读提分 · UX v2 关键屏线框稿</title>
+<!-- 复用 v1 原型的设计基底（tokens、字体、圆角）；下方只补线框所需组件。题目文字均为本项目原创示例。 -->
+<link rel="stylesheet" href="../../../demo/prototype_v1/hark.css">
+<style>
+:root{color-scheme:light;--ink:var(--text-primary,#1d1d1f);--mut:var(--text-secondary,#636366);--card:var(--fill-tertiary,#e8e8ea);--line:var(--stroke-primary,#1d1d1f24);--ok:var(--fill-system-green,#00a665);--bad:var(--fill-system-red,#da2f35);--warn:#b26a00;--orange:var(--fill-system-orange,#ff4d00)}
+body{margin:0;background:#d9d9de;font-family:var(--sans,-apple-system,"PingFang SC","Noto Sans CJK SC",sans-serif);color:var(--ink)}
+.wall{display:flex;flex-wrap:wrap;gap:40px;padding:40px;align-items:flex-start}
+.board{display:flex;flex-direction:column;gap:10px;padding:12px}
+.cap{font:600 15px/1.3 var(--sans,sans-serif);color:#3a3a3c}
+.cap small{display:block;font-weight:400;color:#636366;font-size:12px;margin-top:2px}
+.phone{width:390px;height:844px;background:#fff;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 10px #1d1d1f,0 20px 40px #0003;position:relative}
+.pc{width:1280px;height:800px;background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 1px #0002,0 20px 40px #0003}
+.status{height:44px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 26px;font:600 14px/1 var(--sans,sans-serif)}
+.top{flex:none;padding:6px 18px 10px;border-bottom:1px solid var(--line)}
+.top h1{margin:0;font:700 20px/1.3 var(--sans,sans-serif)}
+.top .sbt{color:var(--mut);font-size:13px;margin-top:2px}
+.body{flex:1;overflow:hidden;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.tab{flex:none;height:76px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:16px;background:#fafafa}
+.tab div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;color:var(--mut);position:relative}
+.tab div i{width:22px;height:22px;border-radius:6px;border:2px solid currentColor;display:block}
+.tab div.on{color:var(--ink);font-weight:700}
+.tab b.bd{position:absolute;top:8px;left:calc(50% + 6px);min-width:16px;height:16px;border-radius:8px;background:var(--bad);color:#fff;font-size:10px;line-height:16px;text-align:center;padding:0 4px}
+.card{background:var(--card);border-radius:18px;padding:14px 16px}
+.card.w{background:#fff;border:1px solid var(--line)}
+.rw{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.big{font:800 52px/1 var(--sans,sans-serif);letter-spacing:-1px}
+.mid{font:700 24px/1.1 var(--sans,sans-serif)}
+.mut{color:var(--mut);font-size:13px}
+.sm{font-size:13px}
+.bar{height:8px;border-radius:4px;background:#0000001a;overflow:hidden;position:relative}
+.bar>i{position:absolute;left:0;top:0;bottom:0;background:var(--ink);border-radius:4px}
+.bar.g>i{background:var(--ok)}
+.tick{position:absolute;top:-3px;width:2px;height:14px;background:var(--orange)}
+.bt{height:52px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:600 16px/1 var(--sans,sans-serif);flex:none}
+.bt.sec{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.bt small{font-weight:400;opacity:.75;margin-left:6px;font-size:13px}
+.tg{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:12px;white-space:nowrap}
+.tg.k{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tg.o{color:var(--orange);border-color:var(--stroke-system-orange,#ff4d0040)}
+.task{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--stroke-secondary,#1d1d1f12)}
+.task:last-child{border-bottom:0}
+.av{width:36px;height:36px;border-radius:50%;background:#c7c7cc;flex:none;display:flex;align-items:center;justify-content:center;font:700 14px/1 var(--sans,sans-serif);color:#fff}
+.av.d{background:#5b6b8c}.av.k{background:#7a8c5b}.av.m{background:#8c5b7a}.av.l{background:#8c7a5b}.av.h{background:#1d1d1f}
+.t1{font-weight:600;font-size:15px}
+.t2{color:var(--mut);font-size:12.5px;margin-top:2px}
+.gain{color:var(--ok);font-weight:700;font-size:13px;white-space:nowrap}
+.mail{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--stroke-secondary,#1d1d1f12)}
+.mail.unread .t1::before{content:"";display:inline-block;width:8px;height:8px;border-radius:4px;background:#0a84ff;margin-right:6px;vertical-align:2px}
+.mail .t1{flex:1}
+.qhead{flex:none;padding:6px 18px 10px;border-bottom:1px solid var(--line)}
+.dots{display:flex;gap:5px}
+.dots i{width:18px;height:5px;border-radius:3px;background:#0000001f}
+.dots i.d{background:var(--ink)}.dots i.c{background:var(--orange)}
+.timer{font:600 13px/1 var(--sans,sans-serif);font-variant-numeric:tabular-nums}
+.timer.warn{color:var(--warn)}
+.stem{font:400 17px/1.55 Georgia,"Times New Roman",serif;padding:14px 16px;background:#fffdf5;border:1px solid #e8e0c8;border-radius:12px}
+.blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--ink);text-align:center}
+.opt{display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:14px;font-size:16px;font-family:Georgia,serif}
+.opt b{width:28px;height:28px;border-radius:14px;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 13px/1 var(--sans,sans-serif);flex:none}
+.opt.ok{border-color:var(--ok);background:#00a66514}.opt.ok b{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{border-color:var(--bad);background:#da2f3512}.opt.bad b{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt .tag{margin-left:auto;font:600 12px/1 var(--sans,sans-serif)}
+.opt.ok .tag{color:var(--ok)}.opt.bad .tag{color:var(--bad)}
+.hint{font-size:12.5px;color:var(--mut);display:flex;gap:6px;align-items:center}
+.sg{display:flex;background:var(--card);border-radius:10px;padding:3px;gap:3px}
+.sg div{flex:1;text-align:center;height:32px;line-height:32px;border-radius:8px;font-size:13px;color:var(--mut)}
+.sg div.on{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 2px #0002}
+.doc{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.doc .dh{background:#f2f2f4;padding:10px 14px;font-size:12.5px;line-height:1.6;border-bottom:1px solid var(--line)}
+.doc .db{padding:12px 14px;font:400 15px/1.6 Georgia,serif}
+.hl{background:#ffe58f}
+.drawer{position:absolute;left:0;right:0;bottom:0;background:#fff;border-top-left-radius:20px;border-top-right-radius:20px;box-shadow:0 -8px 24px #0002;padding:10px 18px 26px;display:flex;flex-direction:column;gap:8px}
+.grab{width:40px;height:5px;border-radius:3px;background:#0002;margin:0 auto 4px}
+.stamp{width:64px;height:64px;border-radius:50%;border:3px solid var(--orange);color:var(--orange);display:flex;align-items:center;justify-content:center;font:800 13px/1.1 var(--sans,sans-serif);text-align:center;transform:rotate(-12deg);flex:none}
+.stamp.off{border-color:#c7c7cc;color:#aeaeb2;border-style:dashed}
+.st{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5}
+.st b{width:22px;height:22px;border-radius:11px;background:var(--ink);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;flex:none;margin-top:1px}
+.lv{display:flex;gap:6px}
+.lv div{flex:1;height:44px;border-radius:10px;border:1.5px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;color:var(--mut)}
+.lv div.d{background:var(--ok);border-color:var(--ok);color:#fff}
+.lv div.x{background:var(--bad);border-color:var(--bad);color:#fff}
+.lv div.n{border-color:var(--ink);color:var(--ink);font-weight:700}
+.ch{height:130px;position:relative;border-left:1px solid var(--line);border-bottom:1px solid var(--line);margin:6px 0 0 26px}
+.ch svg{position:absolute;inset:0;width:100%;height:100%}
+.ylab{position:absolute;left:-28px;font-size:10px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--card);border-radius:14px;padding:10px 12px}
+.kpi .mid{font-size:22px}
+.split{flex:1;display:grid;grid-template-columns:1fr 440px;overflow:hidden}
+.split>div{overflow:hidden;padding:20px 28px}
+.split>div+div{border-left:1px solid var(--line);background:#fafafa;display:flex;flex-direction:column;gap:12px}
+.pctop{flex:none;height:60px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 28px}
+.side{width:200px;flex:none;border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:4px;background:#fafafa}
+.side div{height:40px;border-radius:10px;display:flex;align-items:center;padding:0 12px;font-size:14px;color:var(--mut);gap:10px}
+.side div.on{background:#fff;color:var(--ink);font-weight:700;box-shadow:0 1px 2px #0001}
+.note{font-size:11px;color:#8e8e93;border:1px dashed #c7c7cc;border-radius:8px;padding:6px 8px;line-height:1.4}
+
+.cap{max-width:390px;padding-right:4px}#s9 .cap{max-width:none}
+</style>
+</head>
+<body>
+<div class="wall">
+
+<!-- 1 工作台首页 -->
+<section class="board" id="s1"><div class="cap">① 工作台首页<small>预测分卡 + 唯一主按钮 + 今日 3 项（为什么 + 分/时）</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="top"><div class="rw"><h1>早上好，Qing</h1><span class="tg">专员 · Lv2</span></div><div class="sbt">Halvorsen · 运营部 · 入职第 12 天</div></div>
+ <div class="body">
+  <div class="card">
+   <div class="rw"><span class="mut">预测阅读分</span><span class="tg o">距考试 38 天</span></div>
+   <div class="rw" style="align-items:flex-end;margin-top:6px"><div><span class="big">345</span> <span class="mut">±25</span></div><div style="text-align:right"><div class="mut">目标 400</div><div class="gain">本周 +15</div></div></div>
+   <div class="bar" style="margin-top:12px"><i style="width:69%"></i><span class="tick" style="left:80%"></span></div>
+   <div class="rw mut" style="margin-top:6px;font-size:12px"><span>还差 55 分 · 约 6 个考点</span><span>每天 10 分钟约 5 周达标</span></div>
+  </div>
+  <div class="bt">开始今天的工作<small>约 8 分钟</small></div>
+  <div class="mut" style="text-align:center;margin-top:-4px">2 封邮件 · 6 句审稿 · 1 份退回稿</div>
+  <div class="card w" style="padding:4px 14px">
+   <div class="task"><div class="av k">K</div><div style="flex:1"><div class="t1">Ken 的审稿 · 6 句</div><div class="t2">词性判断掌握度 52%，命中率最高的题型</div></div><span class="gain">+9 分/时</span></div>
+   <div class="task"><div class="av l">L</div><div style="flex:1"><div class="t1">客户邮件 · 2 封</div><div class="t2">同义替换还没稳，考试占 54 题</div></div><span class="gain">+6 分/时</span></div>
+   <div class="task"><div class="av d">D</div><div style="flex:1"><div class="t1">Dana 退回 1 份</div><div class="t2">3 天前错过的时态题，今天该复习</div></div><span class="gain">+4 分/时</span></div>
+  </div>
+  <div class="card rw" style="padding:12px 16px"><div><div class="t1">紧急任务 · 全真模考</div><div class="t2">考前 14 天自动推送，也可手动开始</div></div><span class="tg">75 分钟</span></div>
+ </div>
+ <div class="tab"><div class="on"><i></i>工作台</div><div><i></i>收件箱<b class="bd">2</b></div><div><i></i>改稿<b class="bd">6</b></div><div><i></i>绩效</div></div>
+</div></section>
+
+<!-- 2 收件箱 -->
+<section class="board" id="s2"><div class="cap">② 收件箱列表（P7）<small>今日分配的邮件/群聊/公告，未读红点，做完归档</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="top"><div class="rw"><h1>收件箱</h1><span class="mut">今日 2 / 4</span></div>
+  <div class="sg" style="margin-top:10px"><div class="on">待处理 2</div><div>已归档 2</div></div></div>
+ <div class="body" style="gap:0;padding-top:4px">
+  <div class="mail unread"><div class="av l">L</div><div style="flex:1;min-width:0"><div class="rw"><span class="t1">Leo · 转客户邮件</span><span class="mut">09:12</span></div><div class="sm" style="margin-top:2px">Re: Change to the delivery schedule</div><div class="t2">单篇 · 3 题 · 约 2 分钟 · <span style="color:var(--ok)">进阶</span></div></div></div>
+  <div class="mail unread"><div class="av h">#</div><div style="flex:1;min-width:0"><div class="rw"><span class="t1"># 运营部群聊</span><span class="mut">09:05</span></div><div class="sm" style="margin-top:2px">关于周五展台搬运的讨论（4 人）</div><div class="t2">群聊 · 意图题 · 4 题 · 约 3 分钟 · <span style="color:var(--ok)">进阶</span></div></div></div>
+  <div class="mail"><div class="av h">H</div><div style="flex:1;min-width:0;opacity:.55"><div class="rw"><span class="t1">Halvorsen 总部 · 公告</span><span class="mut">昨天</span></div><div class="sm" style="margin-top:2px">Parking garage maintenance notice</div><div class="t2">已归档 · 2/2 对 · 用时 74s / 参考 90s</div></div></div>
+  <div class="mail"><div class="av l">L</div><div style="flex:1;min-width:0;opacity:.55"><div class="rw"><span class="t1">Leo · 双篇</span><span class="mut">昨天</span></div><div class="sm" style="margin-top:2px">Order form + follow-up email</div><div class="t2">已归档 · 4/5 对 · 错 1 题已排复习</div></div></div>
+  <div class="note" style="margin-top:14px">做完自动归档；Dana 退回的复习稿以“退回”标签混入待处理，不单设复习 tab。</div>
+ </div>
+ <div class="tab"><div><i></i>工作台</div><div class="on"><i></i>收件箱<b class="bd">2</b></div><div><i></i>改稿<b class="bd">6</b></div><div><i></i>绩效</div></div>
+</div></section>
+
+<!-- 3 做题 P5 -->
+<section class="board" id="s3"><div class="cap">③ 做题 · P5 审稿<small>场景+人物、总用时、本题 Xs/参考 Ys（80% 变琥珀）、进度点、档位小标</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="qhead">
+  <div class="rw"><span style="font-size:20px">✕</span><span class="t1">待审稿件 · Ken 发来</span><span style="font-size:20px">⋯</span></div>
+  <div class="rw" style="margin-top:10px"><div class="dots"><i class="d"></i><i class="d"></i><i class="c"></i><i></i><i></i><i></i></div><span class="timer">总 01:46</span></div>
+ </div>
+ <div class="body">
+  <div class="rw"><span class="tg">第 3 / 6 句</span><span class="tg">进阶</span><span class="timer warn">本题 17s / 参考 20s</span></div>
+  <div class="hint">手册 · 第 1 章：先看空格前后</div>
+  <div class="stem">The new scheduling system has made it much <span class="blank">&nbsp;</span> for staff to request time off.</div>
+  <div class="mut">Ken：“这句帮我挑个词，客户下午要看。”</div>
+  <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+   <div class="opt"><b>A</b>easy</div>
+   <div class="opt"><b>B</b>easily</div>
+   <div class="opt"><b>C</b>easier</div>
+   <div class="opt"><b>D</b>ease</div>
+  </div>
+  <div style="flex:1"></div>
+  <div class="rw mut" style="font-size:12px"><span>☆ 记下</span><span>点任意单词查义</span><span>稍后处理 ›</span></div>
+ </div>
+</div></section>
+
+<!-- 4 答后反馈 -->
+<section class="board" id="s4"><div class="cap">④ 答后反馈<small>对错 + 用时 → 一句话为什么 → 掌握度变化 → 预测分变化（3 秒闭环）</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="qhead">
+  <div class="rw"><span style="font-size:20px">✕</span><span class="t1">待审稿件 · Ken 发来</span><span style="font-size:20px">⋯</span></div>
+  <div class="rw" style="margin-top:10px"><div class="dots"><i class="d"></i><i class="d"></i><i class="d"></i><i></i><i></i><i></i></div><span class="timer">总 01:58</span></div>
+ </div>
+ <div class="body" style="gap:10px">
+  <div class="stem" style="font-size:15px;padding:10px 14px">The new scheduling system has made it much <span class="blank" style="color:var(--ok)">easier</span> for staff to request time off.</div>
+  <div class="opt bad" style="min-height:40px"><b>A</b>easy<span class="tag">✗ 你选的</span></div>
+  <div class="opt" style="min-height:40px;opacity:.5"><b>B</b>easily</div>
+  <div class="opt ok" style="min-height:40px"><b>C</b>easier<span class="tag">✓ 正确</span></div>
+  <div class="opt" style="min-height:40px;opacity:.5"><b>D</b>ease</div>
+  <div class="card" style="padding:12px 14px">
+   <div class="t1" style="color:var(--bad);font-size:17px">答错了 · 正确答案 C · 用时 18s</div>
+   <div class="rw" style="margin-top:8px;align-items:flex-start;justify-content:flex-start"><div class="av k" style="width:28px;height:28px;font-size:12px">K</div><div class="sm" style="line-height:1.5">前面有 much，much 修饰比较级，所以选 easier。</div></div>
+  </div>
+  <div class="card w" style="padding:12px 14px">
+   <div class="rw sm"><span>比较级判断 · 掌握度</span><span><b>48% → 44%</b></span></div>
+   <div class="bar" style="margin-top:8px"><i style="width:44%"></i><span class="tick" style="left:70%"></span></div>
+   <div class="rw sm" style="margin-top:10px"><span>预测分</span><span style="color:var(--mut)"><b style="color:var(--ink)">345</b> ±0 · 计划已调整</span></div>
+  </div>
+  <div class="rw sm"><span>▸ 看详细解析</span><span class="mut">依据 · 排除干扰 · 一招 · 手册第 1 章</span></div>
+  <div style="flex:1"></div>
+  <div class="grid2"><div class="bt sec">看原文</div><div class="bt">下一题</div></div>
+  <div class="note">答对时：绿色“答对了 · 用时 12s”，掌握度 50%→58%，预测分 +2（数字滚动 300ms）。不自动跳题。</div>
+ </div>
+</div></section>
+
+<!-- 5 P7 邮件 + 题目切换 -->
+<section class="board" id="s5"><div class="cap">⑤ P7 邮件 + 题目切换（手机）<small>邮件客户端样式；底部常驻当前题干，点开半屏抽屉作答</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="qhead">
+  <div class="rw"><span style="font-size:20px">✕</span><span class="t1">客户邮件 · Leo 转来</span><span class="timer">1/3 · 22s / 60s</span></div>
+  <div class="sg" style="margin-top:10px"><div class="on">邮件</div><div>题目 1/3</div></div>
+ </div>
+ <div class="body" style="padding-bottom:0">
+  <div class="doc">
+   <div class="dh"><b>From:</b> Rachel Moore &lt;r.moore@brightline.co&gt;<br><b>To:</b> Orders Team, Halvorsen<br><b>Subject:</b> Change to the delivery schedule</div>
+   <div class="db">Dear Orders Team,<br><br>Because our warehouse will be closed for inspection next week, <span class="hl">we would like the shipment of office chairs moved from Tuesday to Thursday</span>. All other items in the order can still arrive as planned.<br><br>Please confirm the new date by Friday so that I can inform our staff.<br><br>Best regards,<br>Rachel Moore</div>
+  </div>
+ </div>
+ <div class="drawer">
+  <div class="grab"></div>
+  <div class="rw"><span class="tg">第 1 题 · 进阶</span><span class="hint">手册 · 第 8 章：先看题再定位</span></div>
+  <div class="t1" style="font-family:Georgia,serif;font-weight:400;font-size:15.5px;line-height:1.45">Why did Ms. Moore write the e-mail?</div>
+  <div class="opt" style="min-height:42px;font-size:14px"><b>A</b>To place a new order</div>
+  <div class="opt" style="min-height:42px;font-size:14px"><b>B</b>To change a delivery date</div>
+  <div class="mut" style="text-align:center;font-size:12px">上滑展开 C / D</div>
+ </div>
+</div></section>
+
+<!-- 6 手册章节 -->
+<section class="board" id="s6"><div class="cap">⑥ 手册章节页<small>一招（≤3 行口诀）+ 示范 + 5 题梯度进度 + 通关盖章</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="top"><div class="rw"><span style="font-size:20px">‹</span><span class="mut">《新人工作手册》第 1 章 / 12</span><span></span></div></div>
+ <div class="body">
+  <div class="rw" style="align-items:flex-start"><div><div class="mid">Ken 的 3 秒校对法</div><div class="mut" style="margin-top:4px">P5 · 词性秒判 · Dana 递来</div></div><div class="stamp off">未盖章</div></div>
+  <div class="card">
+   <div class="t1">一招</div>
+   <div class="sm" style="line-height:1.6;margin-top:4px">选项长得像兄弟（-ly / -tion / -ive）→ 不读全句，<b>只看空格前后两个词</b>：冠词后填名词，动词后修饰用副词，much 后接比较级。</div>
+  </div>
+  <div class="card w">
+   <div class="t1">示范</div>
+   <div class="st" style="margin-top:8px"><b>1</b><span>扫选项：easy / easily / easier / ease → 词性题</span></div>
+   <div class="st"><b>2</b><span>看空格前：<span class="hl">much ___</span> → much 后接比较级</span></div>
+   <div class="st"><b>3</b><span>选 easier，用时 3 秒，不用读完整句</span></div>
+  </div>
+  <div class="t1">练 5 题 · 由易到难</div>
+  <div class="lv"><div class="d">基础 ✓</div><div class="d">基础 ✓</div><div class="x">进阶 ✗</div><div class="n">进阶</div><div>真考</div></div>
+  <div class="mut">通关：4/5 对，且平均用时 ≤ 参考 20s · 当前 2/3 对，平均 14s</div>
+  <div style="flex:1"></div>
+  <div class="bt">继续第 4 题</div>
+ </div>
+</div></section>
+
+<!-- 7 日结 -->
+<section class="board" id="s7"><div class="cap">⑦ 日结<small>答对 N/M、用时、预测分变化、职级进度、盖章、明天预告、Dana 点评</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="top"><h1>今天的工作完成了</h1><div class="sbt">周四 · 本周第 4 天</div></div>
+ <div class="body">
+  <div class="grid2">
+   <div class="kpi"><div class="mut">答对</div><div class="mid">9 / 11</div></div>
+   <div class="kpi"><div class="mut">用时</div><div class="mid">8:20</div><div class="mut" style="font-size:11px">参考 9:30，快 1:10</div></div>
+  </div>
+  <div class="card">
+   <div class="rw"><span class="mut">预测分</span><span class="gain">+4</span></div>
+   <div class="rw" style="align-items:flex-end;margin-top:4px"><span class="big" style="font-size:44px">349</span><span class="mut">目标 400</span></div>
+   <div class="rw sm" style="margin-top:12px"><span>专员 → 资深专员</span><span class="mut">还差 21 分</span></div>
+   <div class="bar g" style="margin-top:6px"><i style="width:62%"></i></div>
+  </div>
+  <div class="card w rw" style="justify-content:flex-start;gap:14px"><div class="stamp">第1章<br>通关</div><div><div class="t1">Ken 的 3 秒校对法</div><div class="t2">5 题 4 对 · 平均 13s</div></div></div>
+  <div class="card w"><div class="t1">明天预告</div><div class="t2" style="font-size:13px;margin-top:4px">Mia 的草稿 · 时态看全文时间线（新章）＋ 2 份到期退回稿</div></div>
+  <div class="rw" style="justify-content:flex-start;align-items:flex-start"><div class="av d" style="width:30px;height:30px;font-size:12px">D</div><div class="sm" style="line-height:1.5">“词性题已经稳了，明天带你看 Mia 的稿子。”</div></div>
+  <div style="flex:1"></div>
+  <div class="bt sec">再做 5 分钟</div>
+ </div>
+</div></section>
+
+<!-- 8 绩效 -->
+<section class="board" id="s8"><div class="cap">⑧ 绩效页<small>预测分曲线、职级、手册全本、复习到期、设置入口</small></div>
+<div class="phone">
+ <div class="status"><span>9:41</span><span>●●● ▮</span></div>
+ <div class="top"><div class="rw"><h1>绩效</h1><span class="mut">⚙ 设置</span></div></div>
+ <div class="body">
+  <div class="card">
+   <div class="rw"><span class="t1">预测分 · 近 4 周</span><span class="gain">+40</span></div>
+   <div class="ch"><span class="ylab" style="top:-4px">400</span><span class="ylab" style="bottom:-4px">300</span>
+    <svg viewBox="0 0 300 130" preserveAspectRatio="none"><line x1="0" y1="26" x2="300" y2="26" stroke="#ff4d00" stroke-dasharray="4 4" stroke-width="1.5"/><polygon points="0,110 50,104 100,92 150,86 200,74 250,66 300,60 300,40 250,46 200,54 150,66 100,72 50,84 0,90" fill="#1d1d1f14"/><polyline points="0,100 50,94 100,82 150,76 200,64 250,56 300,50" fill="none" stroke="#1d1d1f" stroke-width="2.5"/></svg>
+   </div>
+   <div class="rw mut" style="font-size:11px;margin-top:4px;padding-left:26px"><span>9/28</span><span>目标线 400</span><span>今天</span></div>
+  </div>
+  <div class="grid2">
+   <div class="kpi"><div class="mut">职级</div><div class="mid">专员</div><div class="mut" style="font-size:11px">下一级 370</div></div>
+   <div class="kpi"><div class="mut">本周累计</div><div class="mid">41 分钟</div><div class="mut" style="font-size:11px">来了 4 / 5 天</div></div>
+  </div>
+  <div class="card w">
+   <div class="rw"><span class="t1">《新人工作手册》</span><span class="mut">盖章 2 / 12</span></div>
+   <div class="rw" style="margin-top:10px;justify-content:flex-start;gap:8px;flex-wrap:wrap">
+    <span class="tg k">1 词性</span><span class="tg k">8 先题后文</span><span class="tg">2 时态</span><span class="tg">3 介/连</span><span class="tg">4 代词</span><span class="tg">6 插入句</span><span class="tg">9 同义替换</span><span class="tg">…</span>
+   </div>
+  </div>
+  <div class="card rw"><div><div class="t1">攻下的考点 · 7</div><div class="t2">本周新增：比较级、介词 by/until</div></div><span>›</span></div>
+  <div class="card rw"><div><div class="t1">复习到期 · 3</div><div class="t2">会以“Dana 退回”混入明天的工作</div></div><span>›</span></div>
+ </div>
+ <div class="tab"><div><i></i>工作台</div><div><i></i>收件箱</div><div><i></i>改稿</div><div class="on"><i></i>绩效</div></div>
+</div></section>
+
+<!-- 9 PC P7 -->
+<section class="board" id="s9"><div class="cap">⑨ PC 1280 · P7 左文右题<small>多篇文档标签；右栏题目、计时、答后反馈同一位置</small></div>
+<div class="pc">
+ <div class="pctop"><span style="font-size:20px">✕</span><span class="t1">客户邮件 · Leo 转来（双篇）</span><span class="tg">进阶</span><div style="flex:1"></div><div class="dots"><i class="d"></i><i class="d"></i><i class="c"></i><i></i><i></i></div><span class="timer">总 03:12</span><span class="timer warn">本题 50s / 参考 60s</span></div>
+ <div style="flex:1;display:flex;overflow:hidden">
+  <div class="side"><div class="on">工作台</div><div>收件箱 · 2</div><div>改稿 · 6</div><div>绩效</div></div>
+  <div class="split" style="flex:1">
+   <div>
+    <div class="sg" style="width:320px;margin-bottom:14px"><div class="on">订单表 1</div><div>邮件 2</div></div>
+    <div class="doc">
+     <div class="dh"><b>Brightline Office Supply — Order Form</b> · Order No. 4471 · Customer: Halvorsen Logistics</div>
+     <div class="db">
+      <table style="width:100%;border-collapse:collapse;font-size:15px">
+       <tr style="border-bottom:1px solid #ddd"><th align="left">Item</th><th align="left">Qty</th><th align="left">Delivery</th></tr>
+       <tr><td>Ergonomic office chair</td><td>12</td><td><span class="hl">Tuesday, May 6</span></td></tr>
+       <tr><td>Standing desk (large)</td><td>4</td><td>Tuesday, May 6</td></tr>
+       <tr><td>Printer paper, 10 boxes</td><td>1</td><td>Monday, May 5</td></tr>
+      </table>
+      <p style="margin:14px 0 0">Orders over $2,000 qualify for free delivery. Changes to delivery dates must be requested at least three business days in advance.</p>
+     </div>
+    </div>
+   </div>
+   <div>
+    <div class="rw"><span class="tg">第 3 题 / 5</span><span class="hint">手册 · 第 11 章：多篇跨文定位</span></div>
+    <div style="font:400 17px/1.5 Georgia,serif">What item will most likely arrive on Thursday?</div>
+    <div class="opt"><b>A</b>Ergonomic office chairs</div>
+    <div class="opt"><b>B</b>Standing desks</div>
+    <div class="opt"><b>C</b>Printer paper</div>
+    <div class="opt"><b>D</b>All items in the order</div>
+    <div class="note">答后：右栏原位显示对错+用时+一句为什么+掌握度/预测分变化，左栏高亮两篇依据句。键盘 A–D 作答、← → 切文档、Enter 下一题。</div>
+    <div style="flex:1"></div>
+    <div class="rw mut sm"><span>☆ 记下</span><span>稍后处理 ›</span></div>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+</div>
+</body>
+</html>
