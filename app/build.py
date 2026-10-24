@@ -223,7 +223,21 @@ def main():
     os.makedirs(os.path.join(APP, 'dist'), exist_ok=True)
     dst = os.path.join(APP, 'dist', 'index.html' if not use_private else 'index.private.html')
     open(dst, 'w', encoding='utf-8').write(out)
-    shutil.copyfile(os.path.join(SRC, 'sw.js'), os.path.join(APP, 'dist', 'sw.js'))   # P0-4：本地通知用的最小 SW（需与 index.html 同目录、https 部署）
+    # P0-4 通知 + D2 离线：sw.js 注入版本号（dist 各页面内容哈希，页面一变 SW 就变 → 浏览器装新版并提示刷新）；manifest + 图标同目录
+    import hashlib
+    hv = hashlib.sha1()
+    for f in ('index.html', 'index.private.html', 'manifest.webmanifest'):
+        fp = os.path.join(APP, 'dist', f) if f != 'manifest.webmanifest' else os.path.join(SRC, f)
+        if os.path.exists(fp):
+            hv.update(open(fp, 'rb').read())
+    for f in ('icon-192.png', 'icon-512.png', 'apple-touch-icon.png'):
+        shutil.copyfile(os.path.join(SRC, 'icons', f), os.path.join(APP, 'dist', f))
+    shutil.copyfile(os.path.join(SRC, 'manifest.webmanifest'), os.path.join(APP, 'dist', 'manifest.webmanifest'))
+    ver = hv.hexdigest()[:10]
+    sw = open(os.path.join(SRC, 'sw.js'), encoding='utf-8').read()
+    assert '__VERSION__' in sw
+    open(os.path.join(APP, 'dist', 'sw.js'), 'w', encoding='utf-8').write(sw.replace('__VERSION__', ver))
+    print('sw version', ver)
     from collections import Counter
     allf = Counter(i['f'] for i in items)
     full = {f: n for f, n in sorted(allf.items()) if n >= 90}   # 整套（模考可用），与 engine.js FULL_MIN 一致

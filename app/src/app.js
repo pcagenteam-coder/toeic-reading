@@ -19,8 +19,9 @@ const UI0 = {}, ui = () => (E.st ? (E.st.ui = E.st.ui || {}) : UI0);
 const save = () => { if (E.st) { E.st.run = S && !S.done ? S : null; Profiles.save(E.st); } };
 
 function banner() {
-  if (Store.kind !== 'memory') return;
-  const b = $('#banner'); b.textContent = '当前环境不能自动保存，离开前请到「我的」复制进度码。'; b.classList.remove('hide');
+  const b = $('#banner'); if (!b) return;
+  if (Store.kind !== 'memory') { if (b.dataset.k === 'mem') b.classList.add('hide'); return; }
+  b.dataset.k = 'mem'; b.textContent = '当前环境不能自动保存，离开前请到「我的」导出进度文件。'; b.classList.remove('hide');
 }
 Store.onFallback = banner;
 
@@ -269,7 +270,27 @@ function ntShow(title, body) {
   const fb = () => { try { new Notification(title, o); } catch (e) { } };
   try { if (navigator.serviceWorker && navigator.serviceWorker.getRegistration) navigator.serviceWorker.getRegistration().then(r => r ? r.showNotification(title, o) : fb(), fb); else fb(); } catch (e) { fb(); }
 }
-function swInit() { try { if (navigator.serviceWorker && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(() => { }); } catch (e) { } }
+/* D2：SW 负责离线缓存（cache-first + 构建版本号）+ 本地通知。新版装好后等待（waiting），
+ * 不在做题时温和提示「有新版 · 刷新获取」，点了才切换并刷新；不点则下次全部关闭后自动生效。 */
+let swWait = null, swReloading = false;
+function swInit() {
+  try {
+    if (!navigator.serviceWorker || !/^https?:$/.test(location.protocol)) return;
+    navigator.serviceWorker.register('sw.js').then(r => {
+      const watch = w => { if (!w) return; w.addEventListener('statechange', () => { if (w.state === 'installed' && navigator.serviceWorker.controller) { swWait = w; updTip(); } }); };
+      if (r.waiting && navigator.serviceWorker.controller) { swWait = r.waiting; updTip(); }
+      watch(r.installing); r.addEventListener('updatefound', () => watch(r.installing));
+      setInterval(() => { try { if (navigator.onLine) r.update(); } catch (e) { } }, 3600e3);
+    }).catch(() => { });
+    navigator.serviceWorker.addEventListener('controllerchange', () => { if (swReloading) location.reload(); });
+  } catch (e) { }
+}
+function updTip() {
+  const el = $('#upd'); if (!el) return;
+  const show = !!swWait && !(S && !S.done);   // 做题中不提示，做完再说
+  el.classList.toggle('hide', !show);
+}
+function netTip() { const el = $('#offl'); if (el) el.classList.toggle('hide', !(typeof navigator !== 'undefined' && navigator.onLine === false)); }
 function vRemind(o) {
   const sg = rmSuggest(), sel = o.rm || sg, opts = [...new Set([sg, '08:00', '12:30', '21:00'])];
   return `<div class="onb">${steps(3)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
@@ -480,7 +501,8 @@ function vMe() {
     <h3>考试日期</h3><input id="mDate" type="date" value="${esc(E.st.exam || '')}"><p class="mut sm" id="mOut">${examTip(E.st.exam)}</p>
     <button class="btn ghost full" data-act="saveGoal">保存</button></div>
   ${calibCard()}
-  <div class="card"><h2>数据</h2><div class="row wrapr"><button class="btn ghost" data-act="dl">导出数据（文件）</button><button class="btn ghost" data-act="exp">复制进度码</button></div>
+  <div class="card"><h2>数据</h2><div class="row wrapr"><button class="btn ghost" data-act="dl">导出数据（文件）</button><button class="btn ghost" data-act="exp">复制进度码</button><button class="btn ghost" data-act="impF">从文件导入</button><input type="file" id="impFile" accept=".json,application/json" class="hide"></div>
+    <p class="mut sm">进度保存在这台设备的浏览器里（${Store.kind === 'idb' ? '本机数据库' : Store.kind === 'local' ? '本机存储' : '仅本次打开，离开前请导出'}）。换设备或清浏览器前，先导出文件备份。</p>
     <p></p><input id="codeBox" placeholder="粘贴进度码导入"><p></p><button class="btn ghost full" data-act="imp">导入</button>
     <p></p>${u.clrArm ? `<div class="warnbox"><p>确定清空「${esc(Profiles.name())}」的全部进度？清空后不能恢复，建议先导出。</p><div class="row"><button class="btn danger" data-act="clr2">确定清空</button><button class="btn ghost" data-act="clr0">取消</button></div></div>` : '<button class="link mut" data-act="clr1">清空这个档案的数据…</button>'}</div>
   <div class="card"><h2>档案</h2>${L.map(p => `<div class="li"><span>${esc(p.name)}${p.id === Profiles.cur() ? ' ✓' : ''}</span>
@@ -820,6 +842,7 @@ function lookupWord(el) {
 
 /* ---------- 计时环 ---------- */
 function tick() {
+  if (swWait) updTip();
   const o = E.st && ob();
   if (o && o.step === 'vtest' && o.vt && !o.vt.paused && !S) { const c = $('#vClock'); if (c) c.textContent = vtClock(o.vt); if (!vtLeft(o.vt) && !o.vt.chk) A.vend(); return; }
   if (!S || S.done || S.paused) return;
@@ -913,6 +936,8 @@ const A = {
     if (dt !== (E.st.exam || '')) { E.st.exam = dt; E.log('exam_date_set', { tz: -new Date().getTimezoneOffset(), exam_date: dt }); }
     E.log('goal_set', { total: t, listen: ls || null, rtg: E.st.rtg }); A._mtg = null; save(); render();
   },
+  impF() { const f = $('#impFile'); if (f) f.click(); },
+  updGo() { if (!swWait) return location.reload(); save(); Store.flush(); swReloading = true; try { swWait.postMessage('skipWaiting'); } catch (e) { location.reload(); } setTimeout(() => location.reload(), 3000); },
   dl() {
     const blob = JSON.stringify({ app: 'toeic-r-v2', name: Profiles.name(), exported: new Date().toISOString(), st: E.st });
     try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([blob], { type: 'application/json' })); a.download = 'toeic-reading-' + today() + '.json'; document.body.appendChild(a); a.click(); a.remove(); } catch (e) { A.exp(); }
@@ -1034,8 +1059,25 @@ if (typeof document !== 'undefined' && document.addEventListener) {
   });
   document.addEventListener('pointerup', () => { if (drag) { drag = false; save(); } });
   document.addEventListener('dblclick', e => { if (e.target && e.target.id === 'dv') { ui().split = 55; save(); render(); } });
-  document.addEventListener('visibilitychange', () => { if (S && !S.paused) leaveQ(); save(); });
-  if (typeof window !== 'undefined' && window.addEventListener) { window.addEventListener('pagehide', () => { if (S && !S.paused) leaveQ(); save(); }); window.addEventListener('resize', () => { hidePop(); }); }
+  document.addEventListener('visibilitychange', () => { if (S && !S.paused) leaveQ(); save(); if (document.visibilityState === 'hidden') Store.flush(); });
+  document.addEventListener('change', e => { if (e.target && e.target.id === 'impFile') impFile(e.target); });
+  if (typeof window !== 'undefined' && window.addEventListener) { window.addEventListener('online', netTip); window.addEventListener('offline', netTip); }
+  if (typeof window !== 'undefined' && window.addEventListener) { window.addEventListener('pagehide', () => { if (S && !S.paused) leaveQ(); save(); Store.flush(); }); window.addEventListener('resize', () => { hidePop(); }); }
   setInterval(tick, 1000);
 }
-swInit(); boot();
+/* 从 JSON 文件导入（我的 → 从文件导入）：接受导出文件 {app,name,st}；导入为新档案，不覆盖现有 */
+function impFile(inp) {
+  const f = inp.files && inp.files[0]; if (!f) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try {
+      const o = JSON.parse(rd.result); if (!o || !o.st || typeof o.st !== 'object' || !Array.isArray(o.st.log)) throw 0;
+      save(); Profiles.create(o.name || '导入'); E.st = o.st; S = null; setupNew = false; save(); Store.flush(); tab = 'today'; boot();
+    } catch (e) { alert('这个文件不是本应用导出的进度'); }
+    inp.value = '';
+  };
+  rd.readAsText(f);
+}
+swInit(); boot(); netTip();
+/* IDB 就绪：若 IDB 里的数据比 localStorage 新（LS 被清/配额满），以 IDB 恢复并重新启动 */
+Store.ready(() => { if (Store.restored) { Profiles.reload(); S = null; boot(); } else banner(); });

@@ -248,3 +248,8 @@ details summary{padding:11px 0}
 @media (max-width:767px){.seg button{min-height:44px}}
 .slowh{color:var(--ink);background:#fbfaf7;border-radius:8px;padding:6px 10px;margin:6px 0 0}
 .chip:disabled{opacity:.4;cursor:default}
+
+/* D2 离线 / 更新提示：极简，不挡操作 */
+.offl{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:45;background:#eef0ea;color:#555;font-size:12px;padding:3px 12px;border-radius:0 0 10px 10px;pointer-events:none}
+.upd{position:fixed;right:12px;bottom:calc(76px + env(safe-area-inset-bottom));z-index:45;background:#fff;border:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,.12);border-radius:20px;padding:6px 6px 6px 14px;font-size:13px}
+.upd .link{margin-left:4px;min-height:32px;padding:4px 10px}
