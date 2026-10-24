@@ -322,8 +322,10 @@ function vToday() {
   else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p>
     <div class="li"><span>本周</span><span><b>${Math.min(7, weekDays())}</b> / 5 天${weekDays() >= 5 ? ' ✓' : ''}</span></div>${tmrLine()}<button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
   else {
-    const p = API.plan(min);
-    main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
+    const p = API.plan(min), pm = Math.max(1, Math.round((p.estSec || min * 60) / 60));
+    if (p.comeback) main = `<div class="card task"><h2>欢迎回来</h2><p class="sum">${ui().plain ? '' : 'Dana：'}今天先 ${pm} 分钟热身，进度都在。</p>
+      <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始热身'}</button></div>`;   // R21：不提断了几天、不显示积压
+    else main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
       <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始'}</button>
       <details><summary>今天时间多？ ˅</summary><div class="row wrapr"><button class="chip" data-act="start" data-m="15">多做 15 分钟</button>
       ${examLeft() != null && examLeft() >= 0 && examLeft() <= 1 ? '' : '<button class="chip" data-act="mock">紧急项目（全真模考）</button>'}</div></details></div>`;

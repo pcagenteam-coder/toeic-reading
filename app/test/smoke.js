@@ -43,6 +43,8 @@ A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt
 console.log('vocab', JSON.stringify(E.st.ob.voc), 'steps', vk); if (!(E.st.ob.voc.n > 1000) || E.st.vocab !== E.st.ob.voc.n) throw new Error('vocab estimate');
 render(); if (!/个常用词/.test($('#main').innerHTML)) throw new Error('vocab result'); A.obDone(); if (E.st.ob.step !== 'done') throw new Error('vocab done');
 { const fp = API.plan(5), b = fp.units.filter(u => u.b); if (!fp.first || fp.units.length - b.length !== 2 || b.length !== 1 || IT[b[0].ids[0]].p !== 7 || b[0].ids.length > 3) throw new Error('first-day plan ' + JSON.stringify(fp.units)); console.log('first-day plan', fp.units.map(u => u.b || u.ids[0]).join(' '), fp.estSec + 's'); }
+{ const dd = E.st.doneDay, dy = E.st.days; E.st.doneDay = ''; E.st.days = { '2020-01-01': 1 }; tab = 'today'; render(); const h = $('#main').innerHTML;
+  if (!/欢迎回来/.test(h) || !/进度都在/.test(h) || /天没|断了|积压/.test(h) || !API.plan(10).comeback) throw new Error('R21 comeback card'); E.st.days = dy; E.st.doneDay = dd; }
 { const dd = E.st.doneDay; E.st.doneDay = ''; E.st.settings.remind = '00:00'; tab = 'today'; render(); if (!/rmtip/.test($('#main').innerHTML)) throw new Error('remind tip'); A.rmX(); if (/rmtip/.test($('#main').innerHTML)) throw new Error('remind tip dismiss'); E.st.doneDay = dd; }
 for (const m of [5, 15]) { A.start(el({ m })); let k = 0, saw = 0;
   while (S) { const h = vQuiz(); if (!h.includes('class="opt')) throw new Error('no options'); if (bundle()) saw++;

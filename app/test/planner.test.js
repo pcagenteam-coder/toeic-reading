@@ -288,5 +288,20 @@ t('P0-1 need：预测已达标不再报“还差全部考点”；未达标按 R
   assert.strictEqual(P.hoursText(20), '不到 1 小时'); assert.strictEqual(P.hoursText(120), '约 1.5–3 小时');
 });
 
+t('R21 断签回流：≥3 天没学 → 欢迎回来计划（时长减半、只排 P5、复习 ≤5、不报积压）；做完或第 2 天恢复', () => {
+  const Y = makeEngine(), { E: E1, IT: I1 } = Y, DAYMS = 864e5; E1.st = Y.newState(600, '');
+  E1.diagPlan().forEach(u => u.ids.forEach(id => E1.recordAnswer({ item_id: id, choice: (I1[id].a + 1) % 4, ms: 30000, mode: 'diag' }))); E1.st.diag = true;
+  for (let d = 0; d < 3; d++) { E1.getTodayPlan(E1.st, 10).units.forEach(u => u.ids.forEach(id => E1.recordAnswer({ item_id: id, choice: (I1[id].a + 1) % 4, ms: 30000, mode: 'train' }))); Y.setNow(Y.now() + DAYMS); }
+  assert(!E1.comeback(), '连续学习不算回流');
+  Y.setNow(Y.now() + 6 * DAYMS);
+  const n = E1.getTodayPlan(E1.st, 10);
+  assert(E1.comeback() && n.comeback === true, 'comeback flag'); assert.strictEqual(n.minutes, 5); assert.strictEqual(n.backlog, 0);
+  assert(n.units.every(u => !u.b || u.kind === 'review'), '回流日新学只排 P5'); assert(n.reviewCount <= 5, 'review ' + n.reviewCount);
+  assert(E1.reviewQueue().today.length <= 5, '复习页也 ≤5');
+  n.units.forEach(u => u.ids.forEach(id => E1.recordAnswer({ item_id: id, choice: I1[id].a, ms: 20000, mode: 'train' })));
+  E1.st.doneDay = require('vm').runInContext('today()', Y.ctx); assert(!E1.comeback() && !E1.getTodayPlan(E1.st, 10).comeback, '做完后恢复');
+  Y.setNow(Y.now() + DAYMS); E1.st.doneDay = ''; assert(!E1.comeback(), '第 2 天恢复常规');
+});
+
 console.log(`\n${pass} passed, ${fail} failed`);
 if (fail) process.exit(1);

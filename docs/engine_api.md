@@ -26,6 +26,7 @@
   units: [ { ids:[itemId…], b?: bundleId, kind:'review'|'learn'|'maintain', node, est /*秒*/, p7?: true /*节奏要求的短 P7*/ } ],
   words: ['invoice', …],          // 今天要复习的生词（与 units 里的复习共用每日上限 20）
   reviewCount, backlog,           // 复习条数；顺延到以后几天的积压数（不显示“逾期”）
+  comeback,                       // R21 回流日（距上次学习 ≥3 天且今天未完成）才有 true：时长减半(≥3 分钟)、难度降一档、只排 P5、复习 ≤5、backlog 置 0
   estSec, nodes:[{id,nm,m,stuck}], progress: '离目标还差 …', tip /* 作息建议或 null */,
   first, novice, needP7 }          // 首日计划？新手期？今天是否按节奏强制排了 P7
 ```

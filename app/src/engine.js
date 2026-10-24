@@ -166,7 +166,14 @@ const E = {
     this.fxEnsure();
     const day = fxToday(), ex = FSRS.examDayIndex(this.st.exam), left = ex != null ? ex - day : null;
     return Planner.reviewQueue(this.st.cards, this.st.words, day, { params: this.fxParams(), filter: id => !!IT[id],
-      weight: id => this.cardWeight(id), highOnly: left != null && left >= 0 && left <= 3 });
+      weight: id => this.cardWeight(id), highOnly: left != null && left >= 0 && left <= 3, cap: this.comeback() ? 5 : undefined });
+  },
+  /* R21 断签回流（P0-6）：距上次学习 ≥3 天、今天的活还没做 → 回流日：首个任务时长减半（≥3 分钟）、难度降一档、只排 P5、复习先砍到 5；
+   * 不暴露断签天数和积压数。今天做完（doneDay）或第 2 天自动恢复常规。 */
+  comeback() {
+    const st = this.st, t = today(); if (!st || !st.diag || st.doneDay === t) return false;
+    const ds = Object.keys(st.days || {}).filter(d => d < t).sort(); if (!ds.length) return false;
+    return Math.round((new Date(t) - new Date(ds[ds.length - 1])) / DAY) >= 3;
   },
   dueItems() { return this.reviewQueue().items; },
   dueWords() { return this.reviewQueue().words; },
@@ -255,7 +262,7 @@ const E = {
   estSec(id, pc) { const it = IT[id]; return it.t * ((pc || this.paceProfile())[it.p] || { ratio: 1 }).ratio + 10; },  // 作答 + 看反馈约 10 秒
   /* 为节点挑一个练习单元：优先 P5 单题（主节点优先、未做过、难度贴近该节点能力），否则含该节点的 P6/P7 篇章（按档位终点线限制篇型） */
   pickFor(node, used, maxSec, pc, noBundle) {
-    const mu = (this.macc().nd[node] || {}).mu || 0, seen = this.st.seen;
+    const mu = ((this.macc().nd[node] || {}).mu || 0) - (this._ease || 0), seen = this.st.seen;
     const bd = this.band(), inBand = n => !ND[n] || !ND[n].mb || ND[n].mb.includes(bd);   // 题目主考点也须在目标档内（不借道练档外考点）
     const P = this.pool().filter(i => i.p === 5 && !used.has(i.id) && (i.n === node || i.ns.includes(node)) && inBand(i.n));
     if (P.length) {
@@ -274,6 +281,11 @@ const E = {
   getTodayPlan(state, minutes) {
     if (state && state !== this.st) { const k = this.st; this.st = state; try { return this.getTodayPlan(state, minutes); } finally { this.st = k; } }
     minutes = minutes || (this.st.settings && this.st.settings.daily_min) || 5;
+    const cb = this.comeback();
+    if (cb) { minutes = Math.max(3, Math.ceil(minutes / 2)); this._ease = 0.7; }   // 难度降一档 = difficulty_est −1（diffB 每档 0.7）
+    try { return Object.assign(this.planFor(minutes, cb), cb ? { comeback: true, backlog: 0 } : {}); } finally { this._ease = 0; }
+  },
+  planFor(minutes, cb) {
     const T = Planner.today(this.pctx(), minutes), pc = this.paceProfile(), rq = this.reviewQueue(), used = new Set(), units = [];
     rq.items.forEach(id => used.add(id));
     Object.keys(this.st.cards).forEach(id => { const c = this.st.cards[id]; if (c.due <= fxToday()) used.add(id); });   // 到期但排到以后的卡不拿来当新题（保证复习 ≤20/天）
@@ -288,7 +300,7 @@ const E = {
     const kind = T.mode === 'learn' ? 'learn' : 'maintain';
     if (this.isFirstPlan() && T.mode !== 'review_only') return this.firstDayPlan(T, minutes, pc, units, words, left);
     let nb = 0;   // 篇章单元数（新手期上限 T.maxBundles）
-    if (T.needP7) {   // 每 3 天至少 1 篇 P7：先占位
+    if (T.needP7 && !cb) {   // 每 3 天至少 1 篇 P7：先占位（回流日不排）
       const u = this.pickP7(T.ranked.map(x => x.id).concat(T.analysis.goal.map(x => x.id)), used, left + 120, pc);
       if (u) { u.kind = kind; units.push(u); u.ids.forEach(q => used.add(q)); left -= u.est; nb++; }
     }
@@ -307,8 +319,8 @@ const E = {
         if (!any) break;
       }
     };
-    fill(T.maxBundles);
-    if (T.maxBundles != null && left >= T.totalSec / 2) fill(null);
+    fill(cb ? 0 : T.maxBundles);
+    if (!cb && T.maxBundles != null && left >= T.totalSec / 2) fill(null);
     const A = T.analysis, nodes = T.nodes.map(id => { const g = A.goal.find(x => x.id === id); return { id, nm: ND[id] && ND[id].nm, m: g ? Math.round(g.m * 100) / 100 : null, stuck: g ? g.stuck : false }; });
     return { mode: T.mode, phase: T.phase, daysLeft: T.daysLeft, minutes, band: A.band, units, words, first: false, novice: T.novice, needP7: T.needP7,
       reviewCount: units.filter(u => u.kind === 'review').length + words.length, backlog: rq.backlog,
