@@ -72,3 +72,10 @@ strats[]  {id, ti 标题, wr 工作规则一句话, r 规则说明, ns 绑定节
 4. 公开版本已可用（pilot + open 600 题，模考用 MXT01–06）；open 题补中文解析 explain_zh、校对节点粗打。
 5. 云端同步：实现 store.js 里预留的 SupabaseAdapter（同接口 get/set/del）。
 6. 精读：恢复 translation_zh（按需懒加载或分文件）。
+
+## 离线 / 存储（D2）
+- `src/sw.js`：同源 GET cache-first，预缓存应用壳（页面、manifest、图标）；build.py 注入 `VERSION`（dist 页面内容哈希）。新版装好后 waiting，页面在不做题时右下角提示「刷新获取新版」，点了才 skipWaiting+刷新。另含本地通知点击。需 https（或 localhost）部署，dist 下全部文件同目录。
+- `src/manifest.webmanifest` + `src/icons/`：可添加到主屏幕；iOS 用 apple-touch-icon / apple-mobile-web-app-* meta。
+- `store.js`：内存缓存为真相，同步双写 localStorage + 节流（400ms）写 IndexedDB `toeic-r/kv`，页面隐藏/关闭时 flush；双方记 `t2:__ts`，启动时 IDB 更新（或 LS 丢了索引）则从 IDB 恢复；旧 LS 数据首启自动镜像进 IDB；IDB 不可用/超时 1.5s → 只用 LS；都不可用 → 内存 + 顶部提示导出。启动调用 `navigator.storage.persist()`。
+- 我的 → 数据：导出文件（JSON）/ 从文件导入（新建档案，不覆盖）/ 进度码。
+- 测试：`python3 app/test/offline.py`（自起 http.server；断网刷新、中途刷新、IDB 恢复与迁移、导出导入往返、新版提示、IDB 不可用降级）。

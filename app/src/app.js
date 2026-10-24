@@ -1080,4 +1080,4 @@ function impFile(inp) {
 }
 swInit(); boot(); netTip();
 /* IDB 就绪：若 IDB 里的数据比 localStorage 新（LS 被清/配额满），以 IDB 恢复并重新启动 */
-Store.ready(() => { if (Store.restored) { Profiles.reload(); S = null; boot(); } else banner(); });
+Store.ready(() => { if (Store.restored) { Profiles.reload(); S = null; setupNew = false; boot(); } else banner(); });

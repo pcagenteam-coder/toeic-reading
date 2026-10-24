@@ -43,12 +43,12 @@ const Store = (() => {
           cur.onsuccess = () => {
             const c = cur.result; if (c) { all[c.key] = c.value; return c.continue(); }
             if (fin) return;
-            const restore = (+all[TS] || 0) > (+C[TS] || 0);
+            const restore = (+all[TS] || 0) > (+C[TS] || 0) || (!C['t2:index'] && !!all['t2:index']);
             if (restore) {   // IDB 更新：以 IDB 为准，并回写 LS
               Object.keys(C).forEach(k => delete C[k]); Object.assign(C, all);
               if (lsOk) Object.keys(C).forEach(k => { try { ls.setItem(k, C[k]); } catch (e) { } });
             } else {          // 迁移/对齐：LS → IDB 全量镜像
-              Object.keys(all).forEach(k => { if (!(k in C)) dirty[k] = 1; }); Object.keys(C).forEach(k => { dirty[k] = 1; });
+              Object.keys(C).forEach(k => { dirty[k] = 1; });   // IDB 里多出的旧键不删（防 LS 部分丢失时误删）
             }
             fin = true; idbOk = true; flush(); Store.restored = restore; done();
           };
