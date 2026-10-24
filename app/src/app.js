@@ -647,7 +647,14 @@ function vQuiz() {
   const seg = `<div class="seg"><button class="${S.v === 'a' ? 'on' : ''}" data-act="view" data-v="a">文章</button><button class="${S.v === 'q' ? 'on' : ''}" data-act="view" data-v="q">题目 ${S.qi + 1}/${u.ids.length}</button></div>`;
   return `<div class="qz">${head}${seg}<div class="qb"><div class="split" id="split" data-v="${S.v}" style="--sp:${ui().split || 55}%">
     <div class="pane pa" id="pa">${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
-    <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div>${S.ans[id] && S.v !== 'a' ? '' : '<button class="fab" data-act="flip" aria-label="切换">⇄</button>'}</div>`;
+    <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div>${S.v === 'a' ? vDrawer(b, u, it, id) : S.ans[id] ? '' : '<button class="fab" data-act="flip" aria-label="切换">⇄</button>'}</div>`;
+}
+/* P1-4：手机文章视图底部常驻当前题干，点开成半屏抽屉直接作答（≥768 不显示；切换保留各自滚动位置） */
+function vDrawer(b, u, it, id) {
+  const a = S.ans[id], open = !!S.dr, show = a && S.mode !== 'mock';
+  const short = b.p === 6 ? `第 ${it.q} 空${it.s ? '：' + it.s : ''}` : `${it.q}. ${it.s || ''}`;
+  const body = open ? `<div class="qdb">${b.p === 6 ? '' : `<p class="stem">${rich(it.s || '')}</p>`}${vOpts(it, id)}${show ? `<div class="qdf"><b>${a.c === it.a ? '答对了' : '正确答案'} (${L4[it.a]})</b><span class="row"><button class="btn ghost" data-act="view" data-v="q">看解析</button><button class="btn" data-act="next">下一题</button></span></div>` : ''}</div>` : '';
+  return `<div class="qd ${open ? 'open' : ''}"><div class="qdh"><button class="qdt" data-act="dr" aria-expanded="${open}"><span class="qdn">${open ? '▾' : '▴'} 题目 ${S.qi + 1}/${u.ids.length}${a ? ' ✓' : ''}</span><span class="qds">${esc(short)}</span></button><button class="qdq" data-act="view" data-v="q" aria-label="去题目页">⇄</button></div>${body}</div>`;
 }
 /* P1-9：同类题（同主考点）出现时，在题干上方提示 1 次记下的招；每条招只提示一次（t.hinted） */
 function tipHint(it, id) {
@@ -920,6 +927,7 @@ const A = {
   closeM() { modal(R ? vResult() : ''); },
   nostory() { S.noStory = true; save(); render(); },
   view(el) { S.v = el.dataset.v; save(); render(); },
+  dr() { S.dr = !S.dr; save(); render(); },
   flip() { S.v = S.v === 'a' ? 'q' : 'a'; save(); render(); },
   doc(el) { S.doc = +el.dataset.i; S.docPinned = 1; S.sc.pa = 0; save(); render(); },
   goi(el) { S.docPinned = null; goQ(+el.dataset.i); },

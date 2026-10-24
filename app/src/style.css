@@ -216,3 +216,18 @@ details.pred summary::-webkit-details-marker{display:none}
   #pq .nextbar .btn{padding:12px 12px}
 }
 @media (min-width:768px){.mo{display:none!important}}
+/* P1-4：文章视图底部题目抽屉（手机） */
+.qd{display:none}
+@media (max-width:767px){
+  .qd{display:block;flex:none;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom)}
+  .qdh{display:flex;align-items:stretch}
+  .qdt{flex:1;min-width:0;border:0;background:none;text-align:left;padding:8px 6px 8px 14px;min-height:52px;display:flex;flex-direction:column;justify-content:center}
+  .qdn{font-size:13px;color:var(--ac);font-weight:600}
+  .qds{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px}
+  .qdq{flex:none;width:52px;border:0;border-left:1px solid var(--line);background:none;font-size:20px}
+  .qdb{max-height:50vh;max-height:50dvh;overflow:auto;padding:4px 14px 12px}
+  .qd.open .qds{display:none}
+  .qdf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:10px 0 0}
+  .qdf .row .btn{min-height:44px;padding:8px 14px}
+  .split[data-v=a] .pa{padding-bottom:24px}
+}

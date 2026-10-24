@@ -10,6 +10,7 @@ DIST = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT,
 OUT = os.path.join(ROOT, 'work/screens')
 CH = os.environ.get('CHROME') or re.search(r'CHROME=(\S+)', subprocess.run(['bash', os.path.join(ROOT, 'work/setup_browser.sh')], capture_output=True, text=True).stdout).group(1)
 VPS = [('m390', 390, 844), ('t820', 820, 1180), ('t1180', 1180, 820), ('pc1440', 1440, 900)]
+if os.environ.get('VP'): VPS = [v for v in VPS if v[0] in os.environ['VP'].split(',')]   # 例：VP=m390 只跑手机
 fails = []
 
 
@@ -98,9 +99,16 @@ def run(br, tag, w, h):
         pg.locator('#pq a.ref').first.click(); pg.wait_for_timeout(300); shot(pg, d, '07_p7_jump')
         vis = pg.evaluate("(() => { const m = document.querySelector('#mref,.p.on,.ins.on'); if (!m) return null; const r = m.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight; })()")
         check(vis is not False, f'{tag}: jump target not visible')
-    if w < 768:
-        pg.click('.fab'); pg.wait_for_timeout(200)
-    pg.locator('.opt').nth(pg.evaluate("(IT[curId()].a + 1) % 4")).click(); shot(pg, d, '08_p7_feedback')
+    if w < 768:  # P1-4：文章视图底部抽屉直接作答，再去题目页看解析（P0-5 操作栏贴底）
+        check(pg.locator('.qd .qdt').count() == 1 and pg.locator('.fab').count() == 0, f'{tag}: P1-4 drawer in article view')
+        pg.click('.qd .qdt'); pg.wait_for_timeout(200); shot(pg, d, '07b_p7_drawer')
+        pg.locator('.qd .opt').nth(pg.evaluate("(IT[curId()].a + 1) % 4")).click(); shot(pg, d, '08_p7_feedback')
+        pg.click('.qdf [data-v=q]'); pg.wait_for_timeout(200); pg.evaluate("document.querySelector('#pq').scrollTop = 99999"); shot(pg, d, '08b_p7_feedback_q')
+        check(pg.locator('.fab').count() == 0, f'{tag}: P0-5 fab hidden after answer')
+        nb = pg.evaluate("(() => { const r = document.querySelector('#pq .nextbar').getBoundingClientRect(); return r.bottom <= innerHeight + 1 && r.top >= 0; })()")
+        check(nb, f'{tag}: P0-5 nextbar visible')
+    else:
+        pg.locator('.opt').nth(pg.evaluate("(IT[curId()].a + 1) % 4")).click(); shot(pg, d, '08_p7_feedback')
     # 群聊单篇
     pg.evaluate("(() => { const b = D.bundles.find(b => b.p === 7 && b.docs.length === 1 && /CHAT|TEXT_MSG/.test(b.docs[0].t) && b.qs.every(q => IT[q])); S = null; startSession('train', [{ b: b.id, ids: b.qs.slice() }]); S.v = 'a'; render(); })()")
     shot(pg, d, '09_chat')
