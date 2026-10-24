@@ -132,6 +132,10 @@ def run(br, tag, w, h):
     pg.evaluate("Object.keys(E.st.cards).forEach(k => E.st.cards[k].due = 1e9); Object.keys(E.st.words).forEach(k => E.st.words[k].due = 1e9); tab = 'review'; render()")
     shot(pg, d, '13_review_empty'); check('挺好' in pg.inner_text('#main'), f'{tag}: review empty state')
     # 进度
+    # fix_b 遗留：断签回流（≥3 天没学）今天页——欢迎回来、热身时长减半、难度降一档
+    pg.evaluate("window._cb = [E.st.doneDay, E.st.days]; E.st.doneDay = ''; E.st.days = { '2020-01-01': 1 }; tab = 'today'; render()"); shot(pg, d, '20_today_comeback')
+    t = pg.inner_text('#main'); check('欢迎回来' in t and '进度都在' in t and not re.search('积压|天没|断了', t), f'{tag}: R21 comeback today')
+    pg.evaluate("[E.st.doneDay, E.st.days] = window._cb; render()")
     pg.evaluate("tab = 'progress'; render()"); shot(pg, d, '14_progress')
     txt = pg.inner_text('#main'); check('职级' in txt and '本周小结' in txt and re.search('个考点|估算中|够到目标|已够线', txt) and '绩效' not in txt, f'{tag}: progress content')
     check(not re.search(r'正确率|\d+\s*/\s*\d+|做了 \d+ 题', txt), f'{tag}: progress shows counts/accuracy')
