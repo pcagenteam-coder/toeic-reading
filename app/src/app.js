@@ -639,12 +639,21 @@ function vQuiz() {
   const lab = S.mode === 'mock' ? '紧急项目' : S.mode === 'diag' ? '入职测试' : part === 5 ? '审稿' : part === 6 ? '改稿' : '收件箱';
   const sub = part === 7 && b ? (b.docs.length > 1 ? `Part 7 ${b.docs.length === 2 ? '双篇' : '三篇'}` : 'Part 7 单篇') : 'Part ' + part;
   const tot = S.units.length, dots = tot <= 12 ? `<div class="dots">${S.units.map((x, i) => `<i class="${i < S.ui ? 'd' : i === S.ui ? 'c' : ''}"></i>`).join('')}</div>` : `<span class="mut sm">${S.ui + 1}/${tot}</span>`;
-  const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part], story = !ui().plain && !ui().nostory && S.mode !== 'mock' && !S.noStory ? `<div class="story"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>` : '';
+  const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part];
+  // P1-3：剧情句只在 Part 切换时出现，浮在顶部 2.5 秒后淡出，不占阅读区
+  let story = '';
+  if (!ui().plain && !ui().nostory && S.mode !== 'mock' && !S.noStory) {
+    if (S.stP !== part) { S.stP = part; S.stAt = Date.now(); }
+    const el = Date.now() - (S.stAt || 0);
+    if (el < 2600) story = `<div class="story${b ? '' : ' p5s'}" style="animation-delay:-${el}ms"><span>«${esc(sc[S.ui % 2])}»</span><button data-act="nostory" aria-label="关闭">✕</button></div>`;
+  }
   const head = `<div class="qh"><button class="x" data-act="pause" aria-label="暂停">✕</button><div class="tt">${lab}<small>${sub}</small></div>${dots}${ringSvg(id)}<button class="mm" data-act="menu" aria-label="更多">⋯</button></div>${story}`;
   if (!b) return `<div class="qz">${head}<div class="qb pane" id="pq">${vP5(it, id)}</div></div>`;
   const multi = b.docs.length > 1, refs = refsOf(it, b), di = S.docPinned != null ? S.doc : (refs.doc >= 0 && !S.ans[id] ? refs.doc : S.doc);
   S.doc = Math.min(di, b.docs.length - 1);
-  const seg = `<div class="seg"><button class="${S.v === 'a' ? 'on' : ''}" data-act="view" data-v="a">文章</button><button class="${S.v === 'q' ? 'on' : ''}" data-act="view" data-v="q">题目 ${S.qi + 1}/${u.ids.length}</button></div>`;
+  // P1-3：手机上文章切换和文档标签合成一行：[报道 1][群聊 2]｜[题目 1/5]
+  const segA = multi ? b.docs.map((d, i) => `<button class="${S.v === 'a' && i === S.doc ? 'on' : ''}" data-act="docv" data-i="${i}">${TXN[d.t] || '文本'} ${i + 1}${i === refs.doc && S.v !== 'a' ? '<b>•</b>' : ''}</button>`).join('') : `<button class="${S.v === 'a' ? 'on' : ''}" data-act="view" data-v="a">文章</button>`;
+  const seg = `<div class="seg">${segA}<button class="${S.v === 'q' ? 'on' : ''}" data-act="view" data-v="q">题目 ${S.qi + 1}/${u.ids.length}</button></div>`;
   return `<div class="qz">${head}${seg}<div class="qb"><div class="split" id="split" data-v="${S.v}" style="--sp:${ui().split || 55}%">
     <div class="pane pa" id="pa">${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
     <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div>${S.v === 'a' ? vDrawer(b, u, it, id) : S.ans[id] ? '' : '<button class="fab" data-act="flip" aria-label="切换">⇄</button>'}</div>`;
@@ -929,6 +938,7 @@ const A = {
   view(el) { S.v = el.dataset.v; save(); render(); },
   dr() { S.dr = !S.dr; save(); render(); },
   flip() { S.v = S.v === 'a' ? 'q' : 'a'; save(); render(); },
+  docv(el) { if (S.v === 'a' && S.doc === +el.dataset.i) return; S.v = 'a'; A.doc(el); },
   doc(el) { S.doc = +el.dataset.i; S.docPinned = 1; S.sc.pa = 0; save(); render(); },
   goi(el) { S.docPinned = null; goQ(+el.dataset.i); },
   goq(el) { const q = +el.dataset.q, i = unit().ids.findIndex(x => IT[x].q === q); if (i >= 0) { goQ(i); if (!wide()) { S.v = 'q'; render(); } } },

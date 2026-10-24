@@ -231,3 +231,12 @@ details.pred summary::-webkit-details-marker{display:none}
   .qdf .row .btn{min-height:44px;padding:8px 14px}
   .split[data-v=a] .pa{padding-bottom:24px}
 }
+/* P1-3：剧情句浮层（不占位，2.5 秒淡出） */
+.qz{position:relative}
+.story{position:absolute;top:60px;left:50%;transform:translateX(-50%);z-index:12;max-width:calc(100% - 24px);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 4px 14px rgba(0,0,0,.1);padding:0 4px 0 16px;align-items:center;white-space:nowrap;animation:storyout 2.6s ease forwards;pointer-events:none}
+.story button{pointer-events:auto}
+@media (max-width:767px){.qz>.story{top:116px}.qz>.story.p5s{top:60px}}
+.story span{overflow:hidden;text-overflow:ellipsis}
+.story button{width:44px;height:44px;flex:none}
+@keyframes storyout{0%,80%{opacity:1}100%{opacity:0;visibility:hidden}}
+@media (max-width:767px){.pa>.dtabs{display:none}.seg button b{color:var(--warn);margin-left:3px}.seg button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}}
