@@ -145,6 +145,8 @@ def run(br, tag, w, h):
     pg.evaluate("S = null; E.st.run = null; ui().fz = 1; tab = 'today'; render()")
     # 出错 / 首次（复习、进度在入职前）
     pg.evaluate("tab = 'nope'; render()"); shot(pg, d, '18_error'); check('进度已保存' in pg.inner_text('#main'), f'{tag}: error state')
+    check(pg.locator('[data-act=retry]').count() == 1 and pg.locator('[data-act=recover]').count() == 1, f'{tag}: P2-6 retry + today buttons')
+    pg.click('[data-act=retry]'); shot(pg, d, '18b_error_twice'); check('明天再来' in pg.inner_text('#main') and '进度都在' in pg.inner_text('#main'), f'{tag}: P2-6 rest after 2 errors')
     pg.click('[data-act=recover]')
     # 刷新后数据仍在
     pg.reload(); check(pg.evaluate('E.st && E.st.log.length > 10'), f'{tag}: state lost after reload')

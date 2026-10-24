@@ -51,7 +51,8 @@ function render() {
     else if (o) m.innerHTML = wrap(vOnboard(o));
     else if (WQ) m.innerHTML = vWordQuiz();
     else m.innerHTML = wrap(({ today: vToday, review: vReview, progress: vProgress, me: vMe })[tab]());
-  } catch (e) { console.error(e); A._err = String(e && e.stack || e); m.innerHTML = wrap(vError()); }
+    A._errN = 0;
+  } catch (e) { console.error(e); A._err = String(e && e.stack || e); A._errN = (A._errN || 0) + 1; m.innerHTML = wrap(vError()); }
   if (setupNew) s1Upd();
   modal(R ? vResult() : '');
   hidePop();
@@ -59,7 +60,13 @@ function render() {
 }
 const wrap = h => `<div class="wrap">${h}</div>`;
 /* 出错：先说进度已保存，再给能继续的按钮 */
-function vError() { return `<div class="card empty"><h2>出了点问题，你的进度已保存。</h2><button class="btn full lg" data-act="recover">接着做</button><p></p><button class="link mut" data-act="errCopy">复制错误信息</button></div>`; }
+function vError() {   // P2-6：重试 / 回今天页 / 离线说明；连续出错 2 次改为“先休息”，不再反复让人点“接着做”
+  const off = typeof navigator !== 'undefined' && navigator.onLine === false;
+  const note = `<p class="mut sm">题库和进度都存在这台设备上，离线也能做题${off ? '（现在没联网，不影响）' : ''}。</p>`;
+  const tail = `<p></p><button class="link mut" data-act="errCopy">复制错误信息</button>`;
+  if ((A._errN || 0) >= 2) return `<div class="card empty"><h2>先休息一下，明天再来，进度都在。</h2><p>连着出了两次问题，可能是浏览器一时不稳。今天的进度已经保存好了。</p>${note}<button class="btn full lg" data-act="recover">回今天页</button><button class="link" data-act="reload">刷新页面</button>${tail}</div>`;
+  return `<div class="card empty"><h2>出了点问题，你的进度已保存。</h2>${note}<button class="btn full lg" data-act="retry">再试一次</button><p></p><button class="btn full ghost" data-act="recover">回今天页</button>${tail}</div>`;
+}
 function modal(h) { $('#sheet').innerHTML = h; $('#modal').classList.toggle('hide', !h); }
 
 /* ---------- 首日 S1–S6：目标 → 入职测试 → 结果+作战卡 → 提醒（P0-3：词汇摸底移到诊断后、可选，从今天页“补测词汇”进入） ---------- */
@@ -914,6 +921,8 @@ const A = {
   clr0() { ui().clrArm = 0; render(); },
   clr2() { const id = Profiles.cur(); E.st.ui.clrArm = 0; S = null; WQ = null; Profiles.remove(id); E.st = null; if (Profiles.cur()) return boot(); setupNew = true; render(); },
   recover() { if (S) { S.paused = true; } WQ = null; R = null; tab = 'today'; save(); render(); },
+  retry() { render(); },
+  reload() { try { location.reload(); } catch (e) { render(); } },
   errCopy() { try { navigator.clipboard.writeText(A._err || ''); } catch (e) { } },
   /* 生词四选一 */
   wqA(el) { const i = +el.dataset.i, w = WQ.ws[WQ.i], ok = i === WQ.q.a; WQ.ans = i; E.scheduleWord(w, ok ? 2 : 0); E.log('wordrev', { w, g: ok ? 2 : 0, mc: 1, tz: -new Date().getTimezoneOffset() }); save(); render();
