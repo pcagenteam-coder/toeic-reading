@@ -34,7 +34,9 @@ if (!/作战卡/.test(rh) || bl < 1 || bl > 8 || !/第 1 天/.test(rh)) throw ne
 if (/正确率/.test(rh)) throw new Error('S6 shows accuracy');
 A.obDone(); if (E.st.doneDay !== today()) throw new Error('day 1 not counted');
 if (E.st.ob.step !== 'remind') throw new Error('S7 remind step missing'); render(); if (!/每天几点提醒你/.test($('#main').innerHTML) || !/跳过/.test($('#main').innerHTML)) throw new Error('S7 remind view');
-if (/type="time"/.test($('#main').innerHTML) || !/obRmH/.test($('#main').innerHTML)) throw new Error('P2-4 24h picker'); $('#obRmH').value = '21'; $('#obRmM').value = '30'; A.rmSave(); if (E.st.settings.remind !== '21:30' || E.st.ob.step !== 'done') throw new Error('remind save ' + E.st.settings.remind);
+if (/type="time"/.test($('#main').innerHTML) || !/obRmH/.test($('#main').innerHTML)) throw new Error('P2-4 24h picker'); if (!/rmCal/.test($('#main').innerHTML) || !/不支持应用通知/.test($('#main').innerHTML)) throw new Error('P0-4 calendar/notify fallback');
+{ const t = icsText('21:30'); if (!/RRULE:FREQ=DAILY/.test(t) || !/DTSTART:\\d{8}T213000/.test(t) || !/BEGIN:VALARM/.test(t)) throw new Error('P0-4 ics ' + t); }
+$('#obRmH').value = '21'; $('#obRmM').value = '30'; A.rmSave(); if (E.st.settings.remind !== '21:30' || E.st.ob.step !== 'done') throw new Error('remind save ' + E.st.settings.remind);
 tab = 'today'; render(); if (!/补测词汇/.test($('#main').innerHTML)) throw new Error('P0-3 optional vocab entry');
 A.vretest(); render(); if (!/补测词汇 · 约 3 分钟/.test($('#main').innerHTML)) throw new Error('vocab intro');
 A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt; render(); if (vt.chk) A.vchk(el({ i: String(vt.chk.a) })); else A.vk(el({ y: vt.q[vt.i][1] ? '1' : '0' })); vk++; if (vk === 10) { A.vpause(); A.vresume(); } }

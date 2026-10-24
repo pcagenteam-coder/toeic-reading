@@ -4,7 +4,7 @@
 用法：python3 app/build.py --public  → dist/index.html（只含公开题：pilot 自编 + open 开源 MIT 题）
       python3 app/build.py           → private_data/ 存在时 dist/index.private.html（另含 xdf 私有题，禁止公开）
 """
-import json, re, os, sys
+import json, re, os, sys, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, 'app')
@@ -223,6 +223,7 @@ def main():
     os.makedirs(os.path.join(APP, 'dist'), exist_ok=True)
     dst = os.path.join(APP, 'dist', 'index.html' if not use_private else 'index.private.html')
     open(dst, 'w', encoding='utf-8').write(out)
+    shutil.copyfile(os.path.join(SRC, 'sw.js'), os.path.join(APP, 'dist', 'sw.js'))   # P0-4：本地通知用的最小 SW（需与 index.html 同目录、https 部署）
     from collections import Counter
     allf = Counter(i['f'] for i in items)
     full = {f: n for f, n in sorted(allf.items()) if n >= 90}   # 整套（模考可用），与 engine.js FULL_MIN 一致

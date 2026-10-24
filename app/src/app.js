@@ -31,7 +31,7 @@ function boot() {
   S = E.st.run || null;
   if (S && S.day !== fxToday()) S = null;            // 任务保留到次日 4 点
   if (S) { S.paused = false; S.qt0 = Date.now(); }   // 断点续做：打开即回到原位置
-  render();
+  render(); rmArm();
 }
 
 /* ---------- 外壳 ---------- */
@@ -228,12 +228,47 @@ function tmPick(id, v) {
   return `<span class="row tmp" id="${id}">${sel(id + 'H', [...Array(24).keys()].map(p2), h, '时')}<span>:</span>${sel(id + 'M', ms, m, '分')}</span>`;
 }
 const tmVal = id => { const h = ($('#' + id + 'H') || {}).value, m = ($('#' + id + 'M') || {}).value; return h && m ? h + ':' + m : ''; };
+/* P0-4 提醒真正生效：(a) 加到手机日历——每日重复 .ics（RRULE:FREQ=DAILY，到点系统提醒，链接回应用）；
+ * (b) 支持 Notification 的浏览器：应用开着（含后台）时到点用 SW showNotification / new Notification 弹本地通知；不支持就如实说明，引导用日历 */
+const UA = () => (typeof navigator !== 'undefined' && navigator.userAgent) || '';
+function appUrl() { try { return String(location.href).split('#')[0]; } catch (e) { return ''; } }
+function icsText(hm) {
+  const [h, m] = hm.split(':').map(Number), d = new Date(); if (d.getHours() * 60 + d.getMinutes() >= h * 60 + m) d.setDate(d.getDate() + 1);
+  const ymd = d.getFullYear() + p2(d.getMonth() + 1) + p2(d.getDate()), n = new Date(), st = n.getUTCFullYear() + p2(n.getUTCMonth() + 1) + p2(n.getUTCDate()) + 'T' + p2(n.getUTCHours()) + p2(n.getUTCMinutes()) + '00Z', url = appUrl();
+  return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//toeic-reading//remind//ZH', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', 'UID:toeic-reading-daily-' + Date.now() + '@local', 'DTSTAMP:' + st,
+    'DTSTART:' + ymd + 'T' + p2(h) + p2(m) + '00', 'DURATION:PT5M', 'RRULE:FREQ=DAILY', 'SUMMARY:托业阅读 · 今天的 5 分钟', 'DESCRIPTION:打开应用做今天的活（约 5 分钟）' + (url ? '\\n' + url : ''),
+    url ? 'URL:' + url : '', 'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:托业阅读 · 今天的 5 分钟', 'TRIGGER:PT0M', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n') + '\r\n';
+}
+function ntSt() { if (typeof Notification === 'undefined') return 'no'; return Notification.permission === 'granted' ? ((E.st.settings || {}).notify === false ? 'off' : 'on') : Notification.permission === 'denied' ? 'denied' : 'ask'; }
+function rmHow(v) {   // 提醒页 / 我的：日历按钮 + 通知状态（如实）
+  const n = ntSt(), t = rmOk(v) ? v : '';
+  const nl = n === 'no' ? '<span class="mut sm">这个浏览器不支持应用通知（iPhone 需先“添加到主屏幕”），用日历提醒最稳。</span>'
+    : n === 'denied' ? '<span class="mut sm">通知被浏览器拦了，用日历提醒最稳。</span>'
+    : n === 'on' ? `<span class="ok sm">✓ 通知已开：应用开着（含切到后台）时${t ? ' ' + t + ' ' : '到点'}弹出；关掉应用后靠日历提醒</span>`
+    : '<button class="link" data-act="ntOn">同时开启通知（应用开着时到点弹出）</button>';
+  return `<p class="rmhow"><button class="link" data-act="rmCal">加到手机日历（每天准时提醒）</button><br>${nl}</p>`;
+}
+let rmT = 0;
+function rmArm() {   // 应用开着时排下一次本地通知；到点今天的活已做完就不弹
+  try {
+    if (rmT) { clearTimeout(rmT); rmT = 0; }
+    const v = E.st && (E.st.settings || {}).remind; if (!rmOk(v) || ntSt() !== 'on') return;
+    const [h, m] = v.split(':').map(Number), now = new Date(), at = new Date(now); at.setHours(h, m, 0, 0); if (at <= now) at.setDate(at.getDate() + 1);
+    rmT = setTimeout(() => { rmT = 0; if (E.st && E.st.doneDay !== today()) ntShow('托业阅读 · 今天的 5 分钟', '今天的活还没做，点开接着来。'); rmArm(); }, Math.min(at - now, 2147483000));
+  } catch (e) { }
+}
+function ntShow(title, body) {
+  const o = { body, tag: 'toeic-daily', renotify: true };
+  const fb = () => { try { new Notification(title, o); } catch (e) { } };
+  try { if (navigator.serviceWorker && navigator.serviceWorker.getRegistration) navigator.serviceWorker.getRegistration().then(r => r ? r.showNotification(title, o) : fb(), fb); else fb(); } catch (e) { fb(); }
+}
+function swInit() { try { if (navigator.serviceWorker && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(() => { }); } catch (e) { } }
 function vRemind(o) {
   const sg = rmSuggest(), sel = o.rm || sg, opts = [...new Set([sg, '08:00', '12:30', '21:00'])];
   return `<div class="onb">${steps(3)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
-    <p class="mut sm">到点后打开应用，今天页会提示你还没做的活。随时可在「我的」里改。</p>
+    <p class="mut sm">每天 ${sel} 叫你一声（约 5 分钟）。随时可在「我的」里改。</p>
     <div class="row wrapr">${opts.map(t => `<button class="chip ${t === sel ? 'on' : ''}" data-act="rmPick" data-v="${t}">${t === sg ? '建议 ' : ''}${t}</button>`).join('')}</div>
-    <h3>或者自己定</h3>${tmPick('obRm', sel)}</div>
+    <h3>或者自己定</h3>${tmPick('obRm', sel)}${rmHow(sel)}</div>
     <div class="thumb"><button class="btn full lg" data-act="rmSave">就这个时间</button><button class="link" data-act="rmSkip">先不设，跳过</button></div></div>`;
 }
 /* 今天页：到了提醒时间、今天的活还没做 → 一条应用内提示（当天可关） */
@@ -420,6 +455,7 @@ function vMe() {
     <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
     <div class="li"><span>用时环</span>${sw('hideRing', !u.hideRing, 'tgl')}</div>
     <div class="li"><span>每日提醒</span><span class="row">${tmPick('mRm', set.remind)}<button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
+    ${rmOk(set.remind) ? rmHow(set.remind) : ''}
     <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
   <div class="card"><h2>越用越贴合</h2>
     <div class="li"><span>复习间隔</span><span class="mut sm">${pf.fsrs && pf.fsrs.personal ? '已按你的记忆速度调整' : '先用通用间隔，做得多了会按你的记忆速度调'}</span></div>
@@ -805,12 +841,25 @@ const A = {
   obDone() { const o = E.st.ob; if (o.step === 'result' && (E.st.settings || {}).remind === undefined) { o.step = 'remind'; o.then = 'done'; save(); return render(); } o.step = 'done'; tab = 'today'; save(); render(); },
   obMore() { const o = E.st.ob; if (o.step === 'result' && (E.st.settings || {}).remind === undefined) { o.step = 'remind'; o.then = 'more'; save(); return render(); } o.step = 'done'; save(); A.start({ dataset: { m: 5 } }); },
   rmPick(el) { E.st.ob.rm = el.dataset.v; save(); render(); },
-  rmEnd(v) { const o = E.st.ob; E.setSetting('remind', v); const more = o.then === 'more'; o.step = 'done'; delete o.then; delete o.rm; tab = 'today'; save(); if (more) return A.start({ dataset: { m: 5 } }); render(); },
+  rmEnd(v) { const o = E.st.ob; E.setSetting('remind', v); rmArm(); const more = o.then === 'more'; o.step = 'done'; delete o.then; delete o.rm; tab = 'today'; save(); if (more) return A.start({ dataset: { m: 5 } }); render(); },
   rmSave() { const v = tmVal('obRm') || E.st.ob.rm || rmSuggest(); A.rmEnd(rmOk(v) ? v : rmSuggest()); },
   rmSkip() { A.rmEnd(false); },
-  rmSet() { const v = tmVal('mRm'); if (!rmOk(v)) return; E.setSetting('remind', v); delete ui().rmX; save(); render(); },
-  rmOff() { E.setSetting('remind', false); save(); render(); },
+  rmSet() { const v = tmVal('mRm'); if (!rmOk(v)) return; E.setSetting('remind', v); delete ui().rmX; save(); rmArm(); render(); },
+  rmOff() { E.setSetting('remind', false); save(); rmArm(); render(); },
   rmX() { ui().rmX = today(); save(); render(); },
+  rmCal() {
+    const v = tmVal('obRm') || tmVal('mRm') || (E.st.settings || {}).remind; if (!rmOk(v)) return;
+    if (/MicroMessenger/i.test(UA())) return modal('<div class="res"><h2>请先用浏览器打开</h2><p class="mut">微信里加不了日历：点右上角 ··· → 「在浏览器打开」，再点「加到手机日历」。</p><button class="btn full" data-act="closeM">好</button></div>');
+    const txt = icsText(v); E.log('remind_ics', { t: v });
+    if (/iP(hone|ad|od)/.test(UA())) { location.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(txt); return; }   // iOS Safari 直接弹“添加到日历”
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/calendar;charset=utf-8' })); a.download = 'toeic-daily-' + v.replace(':', '') + '.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+    modal('<div class="res"><h2>已生成日历文件</h2><p class="mut">打开下载的 .ics 文件，选「添加到日历」，之后每天 ' + v + ' 系统会准时提醒你。</p><button class="btn full" data-act="closeM">好</button></div>');
+  },
+  ntOn() {
+    if (typeof Notification === 'undefined') return render();
+    Notification.requestPermission().then(p => { E.setSetting('notify', p === 'granted'); save(); rmArm(); render(); if (p === 'granted') ntShow('通知已开启', '到点会在这里叫你一声。'); }).catch(() => render());
+  },
   goTab(el) { tab = el.dataset.t; render(); },
   weak(el) { const u = E.weakPlan(el.dataset.n); startSession('train', u); },
   circX() { save(); render(); ui().circClosed = (API.profile().circadian || {}).best; save(); render(); },
@@ -946,4 +995,4 @@ if (typeof document !== 'undefined' && document.addEventListener) {
   if (typeof window !== 'undefined' && window.addEventListener) { window.addEventListener('pagehide', () => { if (S && !S.paused) leaveQ(); save(); }); window.addEventListener('resize', () => { hidePop(); }); }
   setInterval(tick, 1000);
 }
-boot();
+swInit(); boot();
