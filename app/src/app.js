@@ -455,7 +455,7 @@ function vMe() {
     <div class="li"><span>字号</span><span class="row wrapr">${FZ.map(([v, n]) => `<button class="chip ${(u.fz || 1) === v ? 'on' : ''}" data-act="fz" data-v="${v}">${n}</button>`).join('')}</span></div>
     <div class="li"><span>剧情过渡（同事的一句话）</span>${sw('nostory', !u.nostory, 'tgl')}</div>
     <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
-    <div class="li"><span>用时环</span>${sw('hideRing', !u.hideRing, 'tgl')}</div>
+    <div class="li"><span>用时环</span>${sw('showRing', !!u.showRing, 'tgl')}</div>
     <div class="li"><span>每日提醒</span><span class="row">${tmPick('mRm', set.remind)}<button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
     ${rmOk(set.remind) ? rmHow(set.remind) : ''}
     <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
@@ -554,12 +554,12 @@ function vResult() {
   const r = R, ls = [];
   if (r.mode === 'mock') ls.push(r.part ? `模考${r.part === '56' ? '第 1 段（P5+6）' : '第 2 段（P7）'}交付：按这一段推算约 ${r.scaled} 分` : `紧急项目交付：预估阅读 ${r.scaled} 分`);
   r.nodes.filter(x => x.d > 0.02).sort((a, b) => b.d - a.d).slice(0, 2).forEach(x => ls.push(`${esc((ND[x.n] || {}).nm || x.n)}：又稳了一点`));
-  if (r.p5 && r.p5[0] <= r.p5[1]) ls.push(`审稿 ${r.p5[0]} 秒/句（目标 ${r.p5[1]}）`);
+  if (r.p5 && r.p5[0] <= r.p5[1]) ls.push(`审稿节奏稳在考场节奏内：平均 ${r.p5[0]} 秒/句`);
   // P0-1：只计够达标的最少考点；N 下降才写“−k”，上升静默（UX §11.2）；预测估算中不写
   if (r.need && r.p1.level !== 'low') { if (r.need.reached) { if (r.rem0 > r.rem1) ls.push('离目标又近了一步：已够线'); } else if (r.rem1) ls.push(`离目标还差 ${r.rem1} 个考点${r.rem0 != null && r.rem0 > r.rem1 ? `（−${r.rem0 - r.rem1}）` : ''} · ${r.need.hoursText}`); }
   if (ls.length < 2 && !r.nodes.some(x => x.d > 0.02)) ls.unshift('碰到几个新考点，已经记下，明天换更顺手的题。');
   const t = Math.round(r.ms / 1000), title = r.mode === 'diag' ? '入职测试做完了 ✓' : `${dayName()}的活干完了 ✓`;
-  return `<div class="res"><div class="hd"><h1>${title}</h1><span class="mut sm">用时 ${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}</span></div>
+  return `<div class="res"><div class="hd"><h1>${title}</h1>${t >= 60 ? `<span class="mut sm">用时约 ${Math.round(t / 60)} 分钟</span>` : ''}</div>
   <ul>${ls.slice(0, 3).map(x => `<li>${x}</li>`).join('')}</ul>${resPred(r)}
   ${ui().plain ? '' : `<p class="say">${pick(SAY)}</p>`}
   <button class="btn full lg" data-act="closeR">完成</button><p></p><button class="link" data-act="more">再来 5 分钟</button></div>`;
@@ -631,7 +631,7 @@ function basisPhrase(id) {
 
 /* ---------- 做题页 ---------- */
 function ringSvg(id) {
-  if (ui().hideRing && S.mode !== 'mock') return '';
+  if (!ui().showRing && S.mode !== 'mock') return '';   // P1-7：计时环默认隐藏（模考除外），可在设置里打开
   return `<svg class="ring" viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15"/><circle id="ringFg" class="fg" cx="18" cy="18" r="15" stroke-dasharray="94.25" stroke-dashoffset="94.25" transform="rotate(-90 18 18)"/></svg>`;
 }
 function vQuiz() {
@@ -723,10 +723,19 @@ function vOpts(it, id) {
     return `<button class="opt ${cls}" data-act="ans" data-c="${i}" ${a ? 'disabled' : ''}><b>${L4[i]}</b><span>${esc(o)}</span><span class="k">${i + 1}</span></button>`;
   }).join('')}</div>${S.mode === 'diag' ? '<p class="mut sm hint">不会就选一个，继续下一题</p>' : ''}`;
 }
+/* P1-7：不显示每题秒数/目标；只有连续 3 题都 ≥1.5 倍参考用时，才温和提示一次（每次练习最多一次） */
+function slowHint(id) {
+  if (S.slowH && S.slowH !== id) return '';
+  if (!S.slowH) {
+    const xs = Object.keys(S.ans).filter(q => IT[q] && IT[q].t && S.ans[q].ms).slice(-3);
+    if (xs.length < 3 || xs[2] !== id || !xs.every(q => S.ans[q].ms >= IT[q].t * 1500)) return '';
+    S.slowH = id;
+  }
+  return '<p class="sm slowh">最近几题想得比较久。卡住时先选最像的，做完再回头看，正确率通常不掉。</p>';
+}
 function vFb(it, id) {
   const a = S.ans[id]; if (!a || S.mode === 'mock') return '';
-  const sec = Math.round(a.ms / 1000);
-  if (S.fb === 'fast') return `<p class="fast">✓ 对 · ${sec} 秒（目标 ${it.t}）</p>`;
+  if (S.fb === 'fast') return `<p class="fast">✓ 对</p>`;
   const x = API.explain(id), wrong = a.c !== it.a, mine = wrong && a.c >= 0 ? x.dis[L4[a.c]] : '';
   const L = API.lesson(it.n), nm = (ND[it.n] || {}).nm || '';
   const saved = (E.st.tips || []).some(t => t.id === id);
@@ -735,7 +744,7 @@ function vFb(it, id) {
   if (it.p === 7 && x.pp.length && (S.ppShown === id || S.ppn < 2)) { if (S.ppShown !== id) { S.ppn++; S.ppShown = id; } const p = x.pp[0];
     pp = `<div class="pp">${ui().plain ? '' : 'Leo 的备忘：'}这两个说法是一回事<br>原文 <b>${esc(p[0])}</b> ↔ 选项 <b>${esc(p[1])}</b></div>`; }
   const bj = it.p === 7 && basisPhrase(id) ? ` <a class="ref" data-act="jump" data-to="basis">在原文里看</a>` : '';
-  return `<div class="fb"><div class="ans">${wrong ? '正确答案' : '答对了'} (${L4[it.a]}) ${esc(it.o[it.a])}</div><div class="mut sm">${sec} 秒 · 目标 ${it.t} 秒</div>
+  return `<div class="fb"><div class="ans">${wrong ? '正确答案' : '答对了'} (${L4[it.a]}) ${esc(it.o[it.a])}</div>${slowHint(id)}
     <dl>${x.basis ? `<dt>依据</dt><dd>${esc(x.basis)}${bj}</dd>` : ''}${x.why ? `<dt>为什么</dt><dd>${esc(x.why)}</dd>` : ''}${mine ? `<dt>你选的</dt><dd>(${L4[a.c]}) ${esc(mine)}</dd>` : ''}</dl>
     ${tip}${pp}${nm ? `<p class="mut sm">考点：${esc(nm)}</p>` : ''}
     <div class="nextbar">${it.p !== 5 ? '<button class="btn ghost mo" data-act="view" data-v="a">看原文</button>' : ''}${L && wrong ? `<button class="btn ghost" data-act="lesson">60 秒小讲解</button>` : ''}<button class="btn" style="flex:1" data-act="next">下一题</button></div></div>`;
@@ -955,7 +964,7 @@ const A = {
   unword(el) { const w = el.dataset.w; delete E.st.words[w]; E.log('word_remove', { lemma: w }); save(); hidePop(); },
   menu() {
     const u = ui();
-    modal(`<h2>设置</h2><div class="li"><span>用时环</span><button class="chip" data-act="set" data-k="hideRing">${u.hideRing ? '显示' : '隐藏'}</button></div>
+    modal(`<h2>设置</h2><div class="li"><span>用时环</span><button class="chip" data-act="set" data-k="showRing">${u.showRing ? '隐藏' : '显示'}</button></div>
       <div class="li"><span>简洁外壳</span><button class="chip" data-act="set" data-k="plain">${u.plain ? '关' : '开'}</button></div>
       ${typeof window !== 'undefined' && window.innerWidth >= 1440 ? `<div class="li"><span>多篇并排看</span><button class="chip" data-act="set" data-k="sideBySide">${u.sideBySide ? '关' : '开'}</button></div>` : ''}
       <p class="mut sm">快捷键：A–D / 1–4 选，Enter 下一题，← → 换题，G 跳到引用，Space 切文章/题目，Alt+← → 调中缝</p><button class="btn full" data-act="closeM">好</button>`);

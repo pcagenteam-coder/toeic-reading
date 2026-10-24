@@ -74,7 +74,7 @@ def run(br, tag, w, h):
     check(not pr, f'{tag}: lookup popover covers options')
     pg.keyboard.press('Escape'); pg.mouse.click(5, h - 5) if w < 768 else None
     wrong = pg.evaluate("(IT[curId()].a + 1) % 4")
-    pg.locator('.opt').nth(wrong).click(); shot(pg, d, '04_p5_feedback')
+    pg.locator('.opt').nth(wrong).click(); shot(pg, d, '04_p5_feedback'); check(not re.search(r'目标 ?\d+ ?秒|\d+ 秒 ·', pg.inner_text('#main')) and pg.locator('.ring').count() == 0, f'{tag}: P1-7 no per-item seconds / ring hidden')
     check(pg.locator('.fb').count() == 1, f'{tag}: no feedback panel')
     pg.evaluate("while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); }"); pg.evaluate('R = null; render()')
     # P6

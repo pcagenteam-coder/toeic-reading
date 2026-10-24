@@ -250,3 +250,4 @@ a.ref:before,.blank:after{top:-10px;bottom:-10px}
 .link{min-height:44px}
 details summary{padding:11px 0}
 @media (max-width:767px){.seg button{min-height:44px}}
+.slowh{color:var(--ink);background:#fbfaf7;border-radius:8px;padding:6px 10px;margin:6px 0 0}
