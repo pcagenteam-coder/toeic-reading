@@ -31,7 +31,7 @@ function boot() {
   E.st = Profiles.load() || newState();
   S = E.st.run || null;
   if (S && S.day !== fxToday()) S = null;            // 任务保留到次日 4 点
-  if (S) { S.paused = false; S.qt0 = Date.now(); }   // 断点续做：打开即回到原位置
+  if (S) { S.paused = false; S.qt0 = Date.now(); S.a0 = Date.now(); }   // 断点续做：打开即回到原位置
   render(); rmArm();
 }
 
@@ -212,6 +212,7 @@ function vObResult(o) {
   const pr = API.predict(), g = API.progress(), res = o.res || {}, nt = needText(g, pr);
   const head = o.vskip && !E.st.diag ? '' : '';
   return `<div class="onb">${steps(2)}<div class="card"><h2>入职测试完成 ✓</h2>
+    ${res.n ? `<div class="score2"><div><b>${res.ok}</b><small> / ${res.n}</small><span>答对</span></div>${res.ms ? `<div><b>${mmss(res.ms)}</b><span>用时</span></div>` : ''}</div>` : ''}
     <p>${predLine(pr)}</p>
     ${nt ? `<p>${nt}</p>` : ''}
     ${res.strong && res.strong.length ? `<p class="sm">你拿得稳的：${res.strong.map(esc).join('、')}</p>` : ''}
@@ -339,24 +340,22 @@ function tmrLine() {
 }
 function vToday() {
   const d = new Date(), wd = '日一二三四五六'[d.getDay()];
-  const top = `<div class="hd"><h1>今天 · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
-  ${ui().plain || ui().nostory ? '' : `<p class="scene">«${dayName()} · Halvorsen 运营部»</p>`}`;
+  const top = `<div class="hd"><h1>${ui().plain ? '今天' : '工作台'} · ${d.getMonth() + 1}月${d.getDate()}日 周${wd}</h1>${E.st.diag ? streakHTML() : ''}</div>
+  ${ui().plain || ui().nostory ? '' : `<p class="scene">«${dayName()} · Halvorsen 运营部 · 主管 Dana»</p>`}`;
   if (!E.st.diag) return top + `<div class="card task"><h2>入职第一天</h2><p class="sum">先定目标，再做一次入职测试（约 5 分钟 · 共 2 步），之后每天的活由系统来排。</p>
     <button class="btn full lg" data-act="diag">开始</button></div>`;
   const done = E.st.doneDay === today();
   const min = (E.st.settings && E.st.settings.daily_min) || 5;
   let main;
-  if (S && S.paused) main = `<div class="card task"><h2>做到一半的活</h2><p class="sum">进度都在，接着上次的位置继续。</p><button class="btn full lg" data-act="start">继续</button></div>`;
-  else if (done) main = `<div class="card task"><h2>今天的活干完了 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p>
-    <div class="li"><span>本周</span><span><b>${Math.min(7, weekDays())}</b> / 5 天${weekDays() >= 5 ? ' ✓' : ''}</span></div>${tmrLine()}<button class="link" data-act="start" data-m="5">想再做 5 分钟</button></div>`;
+  if (S && S.paused) main = `<div class="card task"><h2>做到一半的活</h2><p class="sum">进度都在，接着上次的位置继续。</p><button class="btn full lg" data-act="start">继续今天的工作</button></div>`;
+  else if (done) main = `<div class="card task"><h2>今天的工作完成 ✓</h2><p class="sum">${ui().plain ? '明天见。' : 'Dana：辛苦了，明天见。'}</p>
+    <div class="li"><span>本周</span><span><b>${Math.min(7, weekDays())}</b> / 5 天${weekDays() >= 5 ? ' ✓' : ''}</span></div>${tmrLine()}<button class="btn ghost full" data-act="start" data-m="5">再做 5 分钟</button></div>`;
   else {
     const p = API.plan(min), pm = Math.max(1, Math.round((p.estSec || min * 60) / 60));
     if (p.comeback) main = `<div class="card task"><h2>欢迎回来</h2><p class="sum">${ui().plain ? '' : 'Dana：'}今天先 ${pm} 分钟热身，进度都在。</p>
       <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始热身'}</button></div>`;   // R21：不提断了几天、不显示积压
-    else main = `<div class="card task"><h2>今天的活 · 约 ${Math.max(1, Math.round((p.estSec || min * 60) / 60))} 分钟</h2><p class="sum">${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p>
-      <button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续' : '开始'}</button>
-      <details><summary>今天时间多？ ˅</summary><div class="row wrapr"><button class="chip" data-act="start" data-m="15">多做 15 分钟</button>
-      ${examLeft() != null && examLeft() >= 0 && examLeft() <= 1 ? '' : '<button class="chip" data-act="mock">紧急项目（全真模考）</button>'}</div></details></div>`;
+    else main = `<div class="card task main1">${ui().plain ? '' : '<p class="say">Dana：今天的工作排好了，做完就收工。</p>'}<button class="btn full lg" data-act="start" data-m="${min}">${S ? '继续今天的工作' : '开始今天的工作'}</button>
+      <p class="sum c">约 ${pm} 分钟 · ${esc(p.first ? '先练入职测试里最弱的 2 个考点，再读 1 封短邮件' : planSummary(p))}</p></div>`;
   }
   const pr = API.predict(), g = API.progress(), b = wkSnap(g, pr), nt = needText(g, pr), gl = gainLine(pr);
   // P0-2：今天页不常驻分数，只给本周趋势（稳 / 上升，不写下降），点开才看数字
@@ -365,7 +364,17 @@ function vToday() {
     ${nt ? `<p class="sm">${nt}</p>` : ''}${gl ? `<p class="mut sm">${gl}</p>` : ''}</div>`;
   const ex = E.st.exam && examLeft() >= 0 && examLeft() <= 3 ? battleCardHTML(false) : '';
   const vre = E.st.ob && E.st.ob.vskip && !ui().vreX ? `<div class="card tipc"><span>补测词汇（约 3 分钟），推荐会更准</span><span class="row"><button class="link" data-act="vretest">去测</button><button class="link mut" data-act="vreX">关</button></span></div>` : '';
-  return top + `<div class="grid2${done && !(S && S.paused) ? ' solo' : ''}"><div>${examCard()}${rmTip(done || (S && S.paused))}${main}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+  return top + `<div class="grid2"><div>${examCard()}${main}${moreList()}${rmTip(done || (S && S.paused))}${circTip() || vre}</div><div>${side}${ex}</div></div>`;
+}
+/* v1.2：主按钮之外的入口，统一放一张「其他练习」列表，名称直白、各一句说明 */
+function moreList() {
+  const a = revAlloc(), n = a.ni + a.nw, g = API.progress(), nx = (g.next || [])[0], L = examLeft();
+  const row = (act, extra, t, d, r) => `<button class="mrow" data-act="${act}" ${extra}><span><b>${t}</b><small>${d}</small></span><em>${r || '›'}</em></button>`;
+  return `<div class="card more"><h2>其他练习</h2>
+    ${row('goTab', 'data-t="review"', '复习', n ? `错题和生词，今天到期 ${n} 个` : '目前没有到期的', n ? `<i class="cnt">${n}</i>` : '')}
+    ${nx ? row('weak', `data-n="${esc(nx.id)}"`, '专项练习', `练最快涨分的考点「${esc(nx.nm)}」`) : ''}
+    ${L != null && L >= 0 && L <= 1 ? '' : row('mock', '', '全真模考', '75 分钟 · 100 题 · 倒计时，像真考一样')}
+    ${row('goTab', 'data-t="progress"', '进度', '预测分、职级和本周小结')}</div>`;
 }
 /* P1-8 考前节奏：≤21 天一行倒计时 + 本周重点；T-14/T-7 各推荐一次模考（可拆 P5+6 约 25 分钟 / P7 约 50 分钟两段）；
  * T-1 只做作战卡和轻复习；考试当天作战卡 +“考完回来填分数”；考后 14 天内未填分数时提示回填（接 API.calibrate） */
@@ -397,13 +406,11 @@ function vReview() {
   const main = n ? `<div class="card task"><h2>今天该复习 ${n} 个 · 约 ${Math.max(1, Math.round((a.ni * 40 + a.nw * 6) / 60))} 分钟</h2>
       <p class="sum">${[a.ni && `错题 ${a.ni}`, a.nw && `生词 ${a.nw}`].filter(Boolean).join(' · ')}</p><button class="btn full lg" data-act="rev">开始复习</button>
       <p class="mut sm">这些也会放进今天的活，不单独做也行。</p>${tl}</div>`
-    : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的活</button>${tl}</div>`;
+    : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的工作</button>${tl}</div>`;
   // P2-2：只露 ROI 最高的 1 项、一个按钮（有复习任务时用次按钮，避免两个主按钮）；其余折叠成纯文字
-  const nxs = g.next || [], mins = x => { const nd = (g.nodes || []).find(y => y.id === x.id); return nd && nd.remainMin ? Math.max(3, Math.min(30, nd.remainMin)) : 0; };
-  const nx = nxs.length ? `<p class="sum">先练 <b>${esc(nxs[0].nm)}</b>${mins(nxs[0]) ? `（约 ${mins(nxs[0])} 分钟）` : ''}</p><button class="btn full ${n ? 'ghost' : ''}" data-act="weak" data-n="${esc(nxs[0].id)}">开始</button>${nxs.length > 1 ? `<details><summary>之后排着 · ${nxs.length - 1} ›</summary>${nxs.slice(1).map(x => `<div class="li"><span>${esc(x.nm)}</span>${mins(x) ? `<span class="mut sm">约 ${mins(x)} 分钟</span>` : ''}</div>`).join('')}</details>` : ''}` : '';
   const W = Object.keys(E.st.words || {});
   const lists = `<div class="card"><details><summary>生词本 · ${W.length} ›</summary>${W.length ? W.slice(-30).reverse().map(w => `<div class="li"><b>${esc(w)}</b><span class="mut sm">${esc(API.lookup(w).zh.slice(0, 24))}</span></div>`).join('') : '<p class="mut sm">做题时点生词，会自动加进来。</p>'}</details></div>`;
-  return hd + `<div class="grid2"><div>${main}${nx ? `<div class="card"><h2>${ui().plain ? '最快涨分' : '主管带你练（最快涨分）'}</h2>${nx}</div>` : ''}</div><div>${lists}</div></div>`;
+  return hd + `<div class="grid2"><div>${main}</div><div>${lists}</div></div>`;   // v1.2：专项练习只在首页「其他练习」里
 }
 function wqOpts(w) {
   const zh = x => (API.lookup(x).zh || '').split(/[；;，,]/)[0].trim();
@@ -480,12 +487,12 @@ function vMe() {
   const u = ui(), L = Profiles.list(), set = E.st.settings || {}, pf = API.profile(), on = x => x ? '开' : '关';
   const sw = (k, v, act) => `<button class="chip ${v ? 'on' : ''}" data-act="${act || 'set'}" data-k="${k}">${on(v)}</button>`;
   const ls = E.st.listen;
-  return `<div class="hd"><h1>我的</h1><span class="mut sm">${esc(Profiles.name())} · 阅读目标 ${E.rtg()}</span></div><div class="grid2"><div>
+  return `<div class="hd"><h1>设置</h1><span class="mut sm">${esc(Profiles.name())} · 阅读目标 ${E.rtg()}</span></div><div class="grid2"><div>
   <div class="card"><h2>阅读体验</h2>
     <div class="li"><span>字号</span><span class="row wrapr">${FZ.map(([v, n]) => `<button class="chip ${(u.fz || 1) === v ? 'on' : ''}" data-act="fz" data-v="${v}">${n}</button>`).join('')}</span></div>
     <div class="li"><span>剧情过渡（同事的一句话）</span>${sw('nostory', !u.nostory, 'tgl')}</div>
     <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
-    <div class="li"><span>用时环</span>${sw('showRing', !!u.showRing, 'tgl')}</div>
+    <div class="li"><span>做题计时（总用时 + 每题用时）</span>${sw('hideTimer', !u.hideTimer, 'tgl')}</div>
     <div class="li"><span>每日提醒</span><span class="row">${tmPick('mRm', set.remind)}<button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
     ${rmOk(set.remind) ? rmHow(set.remind) : ''}
     <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
@@ -516,7 +523,7 @@ function startSession(mode, units, extra) {
   const nd0 = {}; units.forEach(u => u.ids.forEach(id => { const i = IT[id]; nd0[i.n] = E.mastery(i.n); }));
   const g = API.progress();
   S = Object.assign({ mode, units, ui: 0, qi: 0, ans: {}, lu: {}, mt: {}, t0: Date.now(), qt0: Date.now(), day: fxToday(), pred0: API.predict(), nd0,
-    rem0: g.need ? g.need.nodes : null, fb: null, v: 'q', doc: 0, sc: {}, ppn: 0, tipN: 0 }, extra || {});
+    rem0: g.need ? g.need.nodes : null, act: 0, a0: Date.now(), fb: null, v: 'q', doc: 0, sc: {}, ppn: 0, tipN: 0 }, extra || {});
   if (mode === 'mock') { S.end = Date.now() + (S.part === '56' ? 25 : S.part === '7' ? 50 : 75) * 6e4; S.v = 'a'; }
   E.log('start', { mode, n: units.reduce((s, u) => s + u.ids.length, 0), form: S.form });
   save(); render();
@@ -526,6 +533,20 @@ const curId = () => unit().ids[S.qi];
 const bundle = () => unit().b ? BU[unit().b] : null;
 function spent(id) { return (S.mt[id] || 0) + (S.ans[id] ? 0 : Date.now() - S.qt0); }
 function leaveQ() { const id = curId(); if (!S.ans[id]) S.mt[id] = (S.mt[id] || 0) + (Date.now() - S.qt0); S.qt0 = Date.now(); }
+/* v1.2：本次任务的有效用时（暂停/离开不计）+ 计时显示 */
+function actStop() { if (S && S.a0 != null) { S.act = (S.act || 0) + (Date.now() - S.a0); S.a0 = null; } }
+function actMs() { return S.a0 === undefined ? Date.now() - S.t0 : (S.act || 0) + (S.a0 ? Date.now() - S.a0 : 0); }
+const mmss = ms => { const t = Math.max(0, Math.round(ms / 1000)); return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; };
+function tmrQ(id) {   // 每题用时 / 参考时长；≥80% 温和变色，超时再深一档
+  const it = IT[id], s = Math.round(spent(id) / 1000), t = it.t || 0, r = t ? s / t : 0;
+  return { txt: t ? `本题 ${s}s / ${t}s` : `本题 ${s}s`, cls: r > 1 ? 'over' : r >= 0.8 ? 'near' : '' };
+}
+function tmrHTML(id) {
+  if (S.mode === 'mock') { const l = S.end - Date.now(); return `<span class="tmr mock ${l < 5 * 6e4 ? 'over' : l < 15 * 6e4 ? 'near' : ''}" id="tmr" role="timer"><b id="tmT">${mmss(l)}</b><small>剩余</small></span>`; }
+  if (ui().hideTimer) return '';
+  const q = tmrQ(id);
+  return `<span class="tmr ${q.cls}" id="tmr" role="timer" title="本次用时 · 本题用时/参考时长"><b id="tmT">${mmss(actMs())}</b><small id="tmQ">${q.txt}</small></span>`;
+}
 function goQ(i) { if (i < 0 || i >= unit().ids.length || i === S.qi) return; leaveQ(); S.qi = i; S.fb = S.ans[curId()] ? 'old' : null; save(); render(); }
 
 function answer(c) {
@@ -535,9 +556,8 @@ function answer(c) {
   const r = API.record({ item_id: id, choice: c, ms, lookups: S.lu[id] || 0, mode: S.mode === 'diag' ? 'diag' : S.mode });
   a.ok = r ? !!r.correct : c === it.a;
   if (S.mode === 'mock' || S.mode === 'diag') { S.fb = null; return next(); }
-  S.fb = a.ok && ms <= it.t * 1000 ? 'fast' : 'full';
+  S.fb = 'full';   // v1.2：练习/今日任务每题都停下给结论，不自动跳题
   save(); render();
-  if (S.fb === 'fast') { const k = id; setTimeout(() => { if (S && S.fb === 'fast' && curId() === k) next(); }, 800); }
 }
 function next() {
   if (!S) return;
@@ -557,13 +577,13 @@ function finish() {
   const ms = Date.now() - S.t0, p1 = API.predict(), g = API.progress();
   const nodes = Object.keys(S.nd0).map(n => ({ n, a: S.nd0[n], b: E.mastery(n) })).filter(x => x.b != null).map(x => Object.assign(x, { d: x.b - (x.a == null ? 0.5 : x.a) }));
   const p5 = ids.filter(id => IT[id].p === 5 && S.ans[id].ms), p5s = p5.reduce((s, id) => s + S.ans[id].ms, 0) / Math.max(1, p5.length) / 1000, p5t = p5.reduce((s, id) => s + IT[id].t, 0) / Math.max(1, p5.length);
-  R = { mode: S.mode, n: ids.length, ok, ms, p0: S.pred0, p1, nodes, rem0: S.rem0, need: g.need, rem1: g.need ? g.need.nodes : null, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
+  R = { mode: S.mode, n: ids.length, ok, ms, act: actMs(), items: ids.map(id => [id, S.ans[id].c]), p0: S.pred0, p1, nodes, rem0: S.rem0, need: g.need, rem1: g.need ? g.need.nodes : null, p5: p5.length ? [Math.round(p5s), Math.round(p5t)] : null, form: S.form };
   if (S.mode === 'mock') { R.scaled = Math.round(E.scaled(ok / Math.max(1, ids.length) * 100) / 5) * 5; E.st.mocks.push(Object.assign({ ts: Date.now(), form: S.form, ok, n: ids.length, scaled: R.scaled, ms }, S.part ? { part: S.part } : {}));
     R.part = S.part || null; const mh = ui().mockHalf; ui().mockHalf = S.part && !(mh && mh.f === S.form && mh.done && mh.done !== S.part) ? { f: S.form, done: S.part } : null; }
   if (S.mode === 'diag') {
     E.st.diag = true; const o = E.st.ob = E.st.ob || {};
     const seen = Object.keys(S.nd0).map(n => ({ n, m: E.mastery(n) })).filter(x => x.m != null && ND[x.n]);
-    o.step = 'result'; o.res = { strong: seen.filter(x => x.m >= 0.62).sort((a, b) => b.m - a.m).slice(0, 2).map(x => ND[x.n].nm),
+    o.step = 'result'; o.res = { ok, n: ids.length, ms: actMs(), strong: seen.filter(x => x.m >= 0.62).sort((a, b) => b.m - a.m).slice(0, 2).map(x => ND[x.n].nm),
       weak: (g.next || []).slice(0, 3).map(x => x.nm) };
     if (!o.res.weak.length) o.res.weak = seen.sort((a, b) => a.m - b.m).slice(0, 3).map(x => ND[x.n].nm);
   }
@@ -585,15 +605,38 @@ function vResult() {
   const r = R, ls = [];
   if (r.mode === 'mock') ls.push(r.part ? `模考${r.part === '56' ? '第 1 段（P5+6）' : '第 2 段（P7）'}交付：按这一段推算约 ${r.scaled} 分` : `紧急项目交付：预估阅读 ${r.scaled} 分`);
   r.nodes.filter(x => x.d > 0.02).sort((a, b) => b.d - a.d).slice(0, 2).forEach(x => ls.push(`${esc((ND[x.n] || {}).nm || x.n)}：又稳了一点`));
-  if (r.p5 && r.p5[0] <= r.p5[1]) ls.push(`审稿节奏稳在考场节奏内：平均 ${r.p5[0]} 秒/句`);
+  if (r.p5 && r.p5[0] > 0 && r.p5[0] <= r.p5[1]) ls.push(`审稿节奏稳在考场节奏内：平均 ${r.p5[0]} 秒/句`);
   // P0-1：只计够达标的最少考点；N 下降才写“−k”，上升静默（UX §11.2）；预测估算中不写
   if (r.need && r.p1.level !== 'low') { if (r.need.reached) { if (r.rem0 > r.rem1) ls.push('离目标又近了一步：已够线'); } else if (r.rem1) ls.push(`离目标还差 ${r.rem1} 个考点${r.rem0 != null && r.rem0 > r.rem1 ? `（−${r.rem0 - r.rem1}）` : ''} · ${r.need.hoursText}`); }
   if (ls.length < 2 && !r.nodes.some(x => x.d > 0.02)) ls.unshift('碰到几个新考点，已经记下，明天换更顺手的题。');
-  const t = Math.round(r.ms / 1000), title = r.mode === 'diag' ? '入职测试做完了 ✓' : `${dayName()}的活干完了 ✓`;
-  return `<div class="res"><div class="hd"><h1>${title}</h1>${t >= 60 ? `<span class="mut sm">用时约 ${Math.round(t / 60)} 分钟</span>` : ''}</div>
-  <ul>${ls.slice(0, 3).map(x => `<li>${x}</li>`).join('')}</ul>${resPred(r)}
-  ${ui().plain ? '' : `<p class="say">${pick(SAY)}</p>`}
+  const am = r.act != null ? r.act : r.ms, rate = r.n ? r.ok / r.n : 0;
+  const title = r.mode === 'mock' ? '全真模考交卷 ✓' : r.mode === 'review' ? '复习做完了 ✓' : r.mode === 'diag' ? '入职测试做完了 ✓' : `${dayName()}的工作完成 ✓`;
+  const cheer = rate >= 0.9 ? '几乎全对，状态很好。' : rate >= 0.7 ? '大部分都拿下了。' : rate >= 0.5 ? '过半拿下，错的已经排进复习。' : '这组有点难，错的已经排进复习，明天会再见到。';
+  return `<div class="res"><div class="hd"><h1>${title}</h1></div>
+  <div class="score2"><div><b>${r.ok}</b><small> / ${r.n}</small><span>答对</span></div><div><b>${mmss(am)}</b><span>用时</span></div></div>
+  <p class="sm">${cheer}</p>
+  <ul>${ls.slice(0, 3).map(x => `<li>${x}</li>`).join('')}</ul>${resPred(r)}${wrongList(r)}
+  ${ui().plain || rate < 0.7 || r.mode === 'mock' ? '' : `<p class="say">${pick(SAY)}</p>`}
   <button class="btn full lg" data-act="closeR">完成</button><p></p><button class="link" data-act="more">再来 5 分钟</button></div>`;
+}
+
+/* v1.2：结算页逐题回看（错题默认列出；模考另可展开全部题目逐题解析） */
+function wrongList(r) {
+  const its = (r.items || []).filter(x => IT[x[0]]), bad = its.filter(x => x[1] !== IT[x[0]].a);
+  const row = x => { const it = IT[x[0]], ok = x[1] === it.a; return `<button class="mrow wr" data-act="rvw" data-id="${esc(x[0])}" data-c="${x[1]}"><span><b>${ok ? '✓' : '✗'} Part ${it.p} · 第 ${it.q} 题</b><small>${x[1] < 0 ? '没作答' : `你选 (${L4[x[1]]})`} · 正确 (${L4[it.a]})</small></span><em>回看 ›</em></button>`; };
+  const head = bad.length ? `<h3>本次错题 · ${bad.length}</h3><p class="mut sm">${r.mode === 'diag' ? '' : '已自动加入复习，快忘的时候会再出现。'}点开逐题回看。</p>${bad.slice(0, r.mode === 'mock' ? 100 : 30).map(row).join('')}` : '<p class="ok sm">这次没有错题 ✓</p>';
+  const all = r.mode === 'mock' && its.length ? `<details><summary>逐题解析 · 全部 ${its.length} 题 ›</summary>${its.map(row).join('')}</details>` : '';
+  return `<div class="wl">${head}${all}</div>`;
+}
+function bundleOf(id) { return (D.bundles || []).find(b => b.qs.includes(id)); }
+function vItemReview(id, c) {
+  const it = IT[id], x = API.explain(id), a = { c, ms: 0 }, b = bundleOf(id), bp = basisPhrase(id);
+  const ctx = it.p === 5 ? `<div class="paper sm">${rich((it.s || '').replace(/-{3,}|_{3,}/, '_____'))}</div>` : bp ? `<div class="paper sm"><span class="mut sm">原文依据（${b ? (TXN[b.docs[0].t] || '原文') : '原文'}）</span><br><mark class="basis">${esc(bp)}</mark></div>` : '';
+  return `<h2>Part ${it.p} · 第 ${it.q} 题</h2>${ctx}${it.p === 5 || (it.p === 6 && !it.s) ? '' : `<p class="stem">${esc(it.s || '')}</p>`}
+  <div class="opts">${it.o.map((o, i) => `<div class="opt ${i === it.a ? 'ok' : i === c ? 'no' : ''}"><b>${L4[i]}</b><span>${esc(o)}</span>${i === it.a ? '<i class="vm">✓ 正确</i>' : i === c ? '<i class="vm">✗ 你选的</i>' : ''}</div>`).join('')}</div>
+  ${verdict(it, a)}<p class="one">${esc(oneLine(it, a, x))}</p>
+  <dl class="exl">${x.basis ? `<dt>依据</dt><dd>${esc(x.basis)}</dd>` : ''}${x.why ? `<dt>为什么</dt><dd>${esc(x.why)}</dd>` : ''}${disHTML(it, a, x)}${x.tip ? `<dt>一招</dt><dd>${esc(x.tip)}</dd>` : ''}</dl>
+  <button class="btn full" data-act="closeM">返回结算</button>`;
 }
 
 /* ---------- 文本渲染 ---------- */
@@ -618,9 +661,13 @@ const CHAT_RE = /^(.{1,48}?)\s*[\[(](\d{1,2}[:.]\d{2}\s*(?:[AaPp]\.?\s?[Mm]\.?)?
 function docHTML(d, di, o) {
   const k = KIND(d.t), hdr = d.h || '', x = o.x != null ? o.x : d.x;
   let head = '';
-  if (/^(To|From|Date|Subject|Re|Sent|Cc)\s*:/im.test(hdr)) {
+  const hm = {}; hdr.split('\n').forEach(l => { const m = l.match(/^([A-Za-z]+)\s*:\s*(.*)$/); if (m) hm[m[1].toLowerCase()] = m[2]; });
+  if (k === 'mail' && hm.from) {   // v1.2：像真的邮件客户端——头像、发件人、收件人/日期、主题
+    const nm = hm.from.replace(/<.*?>/g, '').trim(), av = (nm.match(/[A-Za-z]/) || ['?'])[0].toUpperCase();
+    head = `${hm.subject || hm.re ? `<div class="subj">${rich(hm.subject || hm.re, o)}</div>` : ''}<div class="mhd"><span class="av" aria-hidden="true">${av}</span><div><b>${rich(nm, o)}</b><small>${hm.to ? `收件人：${rich(hm.to, o)}` : ''}${hm.date || hm.sent ? ` · ${esc(hm.date || hm.sent)}` : ''}</small></div></div>`;
+  } else if (/^(To|From|Date|Subject|Re|Sent|Cc)\s*:/im.test(hdr)) {
     head = `<div class="mh">${hdr.split('\n').filter(l => l.trim()).map(l => { const m = l.match(/^([A-Za-z]+)\s*:\s*(.*)$/); return m ? `<b>${esc(m[1])}</b><span>${rich(m[2], o)}</span>` : `<b></b><span>${rich(l, o)}</span>`; }).join('')}</div>`;
-  } else if (GENERIC.test(hdr.trim())) head = `<div class="mut sm" style="margin:0 0 8px">${esc(hdr.trim())}</div>`;
+  } else if (GENERIC.test(hdr.trim())) head = ui().plain || o.draft ? `<div class="mut sm" style="margin:0 0 8px">${esc(hdr.trim())}</div>` : '';
   else if (hdr.trim()) head = `<div class="ttl">${rich(hdr, o)}</div>`;
   let body = '', pn = 0;
   if (k === 'chat') {
@@ -639,7 +686,9 @@ function docHTML(d, di, o) {
       pn++; return `<p class="p" id="p${di}-${pn}">${rich(p, o).replace(/\n/g, '<br>')}</p>`;
     }).join('');
   }
-  return `<div class="doc ${k}">${head}${body}</div>`;
+  const bar = ui().plain || o.draft ? '' : k === 'mail' ? `<div class="wbar"><i>✉</i>${/MEMO/.test(d.t) ? '内部备忘' : /LETTER/.test(d.t) ? '来信' : 'Halvorsen Mail · 收件箱'}</div>` : k === 'chat' ? `<div class="wbar"><i>#</i>运营部群聊 · ${new Set((x.match(new RegExp(CHAT_RE.source, 'gm')) || []).map(l => l.split(/[\[(]/)[0].trim())).size || ''} 人</div>`
+    : k === 'notice' ? '<div class="wbar"><i>📌</i>公告栏</div>' : k === 'article' ? '<div class="wbar"><i>▤</i>行业新闻</div>' : '';
+  return `<div class="doc ${k}${bar ? ' win' : ''}">${bar}<div class="wb">${head}${body}</div></div>`;
 }
 /* 题干里的引用：引号短语 / 第 N 段 / 插入句 [1]–[4] / 点名的文本类型 */
 function refsOf(it, b) {
@@ -661,14 +710,11 @@ function basisPhrase(id) {
 }
 
 /* ---------- 做题页 ---------- */
-function ringSvg(id) {
-  if (!ui().showRing && S.mode !== 'mock') return '';   // P1-7：计时环默认隐藏（模考除外），可在设置里打开
-  return `<svg class="ring" viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15"/><circle id="ringFg" class="fg" cx="18" cy="18" r="15" stroke-dasharray="94.25" stroke-dashoffset="94.25" transform="rotate(-90 18 18)"/></svg>`;
-}
 function vQuiz() {
   const u = unit(), id = curId(), it = IT[id], b = bundle(), part = it.p;
   const lab = S.mode === 'mock' ? '紧急项目' : S.mode === 'diag' ? '入职测试' : part === 5 ? '审稿' : part === 6 ? '改稿' : '收件箱';
-  const sub = part === 7 && b ? (b.docs.length > 1 ? `Part 7 ${b.docs.length === 2 ? '双篇' : '三篇'}` : 'Part 7 单篇') : 'Part ' + part;
+  const who = ui().plain || S.mode === 'mock' || S.mode === 'diag' ? '' : part === 5 ? ' · Ken 的稿件' : part === 6 ? ' · Mia 的草稿' : ' · Leo 转来';
+  const sub = (part === 7 && b ? (b.docs.length > 1 ? `Part 7 ${b.docs.length === 2 ? '双篇' : '三篇'}` : 'Part 7 单篇') : 'Part ' + part) + who;
   const tot = S.units.length, dots = tot <= 12 ? `<div class="dots">${S.units.map((x, i) => `<i class="${i < S.ui ? 'd' : i === S.ui ? 'c' : ''}"></i>`).join('')}</div>` : `<span class="mut sm">${S.ui + 1}/${tot}</span>`;
   const sc = part === 7 && b && b.docs.some(d => KIND(d.t) === 'chat') ? ['运营部群里有几条新消息', 'Leo 把你拉进了一个群聊'] : SCENE[part];
   // P1-3：剧情句只在 Part 切换时出现，放在标题副标题位置 2.5 秒后淡出换回 Part 标签，不占阅读区、不盖内容
@@ -678,7 +724,7 @@ function vQuiz() {
     const el = Date.now() - (S.stAt || 0);
     if (el < 2600) story = `<span class="sts" style="animation-delay:-${el}ms">«${esc(sc[S.ui % 2])}»</span>`;
   }
-  const head = `<div class="qh"><button class="x" data-act="pause" aria-label="暂停">✕</button><div class="tt">${lab}<small>${story}<span class="${story ? 'stb' : ''}"${story ? ` style="animation-delay:-${Date.now() - S.stAt}ms"` : ''}>${sub}</span></small></div>${dots}${ringSvg(id)}<button class="mm" data-act="menu" aria-label="更多">⋯</button></div>`;
+  const head = `<div class="qh"><button class="x" data-act="pause" aria-label="暂停">✕</button><div class="tt">${lab}<small>${story}<span class="${story ? 'stb' : ''}"${story ? ` style="animation-delay:-${Date.now() - S.stAt}ms"` : ''}>${sub}</span></small></div>${dots}${tmrHTML(id)}<button class="mm" data-act="menu" aria-label="更多">⋯</button></div>`;
   if (!b) return `<div class="qz">${head}<div class="qb pane" id="pq">${vP5(it, id)}</div></div>`;
   const multi = b.docs.length > 1, refs = refsOf(it, b), di = S.docPinned != null ? S.doc : (refs.doc >= 0 && !S.ans[id] ? refs.doc : S.doc);
   S.doc = Math.min(di, b.docs.length - 1);
@@ -686,14 +732,14 @@ function vQuiz() {
   const segA = multi ? b.docs.map((d, i) => `<button class="${S.v === 'a' && i === S.doc ? 'on' : ''}" data-act="docv" data-i="${i}">${TXN[d.t] || '文本'} ${i + 1}${i === refs.doc && S.v !== 'a' ? '<b>•</b>' : ''}</button>`).join('') : `<button class="${S.v === 'a' ? 'on' : ''}" data-act="view" data-v="a">文章</button>`;
   const seg = `<div class="seg">${segA}<button class="${S.v === 'q' ? 'on' : ''}" data-act="view" data-v="q">题目 ${S.qi + 1}/${u.ids.length}</button></div>`;
   return `<div class="qz">${head}${seg}<div class="qb"><div class="split" id="split" data-v="${S.v}" style="--sp:${ui().split || 55}%">
-    <div class="pane pa" id="pa">${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
+    <div class="pane pa${b.p === 6 ? ' p6' : ''}" id="pa">${b.p === 6 && !ui().plain ? `<div class="drafthd">✎ Mia 的草稿 · 待改 ${bundleIds(b).filter(q => !S.ans[q]).length} 处</div>` : ''}${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
     <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div>${S.v === 'a' ? vDrawer(b, u, it, id) : S.ans[id] ? '' : '<button class="fab" data-act="flip" aria-label="切换">⇄</button>'}</div>`;
 }
 /* P1-4：手机文章视图底部常驻当前题干，点开成半屏抽屉直接作答（≥768 不显示；切换保留各自滚动位置） */
 function vDrawer(b, u, it, id) {
   const a = S.ans[id], open = !!S.dr, show = a && S.mode !== 'mock';
   const short = b.p === 6 ? `第 ${it.q} 空${it.s ? '：' + it.s : ''}` : `${it.q}. ${it.s || ''}`;
-  const body = open ? `<div class="qdb">${b.p === 6 ? '' : `<p class="stem">${rich(it.s || '')}</p>`}${vOpts(it, id)}${show ? `<div class="qdf"><b>${a.c === it.a ? '答对了' : '正确答案'} (${L4[it.a]})</b><span class="row"><button class="btn ghost" data-act="view" data-v="q">看解析</button><button class="btn" data-act="next">下一题</button></span></div>` : ''}</div>` : '';
+  const body = open ? `<div class="qdb">${b.p === 6 ? '' : `<p class="stem">${rich(it.s || '')}</p>`}${vOpts(it, id)}${show ? `<div class="qdf"><b class="${a.c === it.a ? 'okc' : 'noc'}">${a.c === it.a ? '✓ 答对了' : `✗ 答错了 · 正确 (${L4[it.a]})`}</b><span class="row"><button class="btn ghost" data-act="view" data-v="q">看解析</button><button class="btn" data-act="next">下一题</button></span></div>` : ''}</div>` : '';
   return `<div class="qd ${open ? 'open' : ''}"><div class="qdh"><button class="qdt" data-act="dr" aria-expanded="${open}"><span class="qdn">${open ? '▾' : '▴'} 题目 ${S.qi + 1}/${u.ids.length}${a ? ' ✓' : ''}</span><span class="qds">${esc(short)}</span></button><button class="qdq" data-act="view" data-v="q" aria-label="去题目页">⇄</button></div>${body}</div>`;
 }
 /* P1-9：同类题（同主考点）出现时，在题干上方提示 1 次记下的招；每条招只提示一次（t.hinted） */
@@ -709,7 +755,7 @@ function vP5(it, id) {
   const a = S.ans[id], s = (it.s || '').replace(/-{3,}|_{3,}|\(\s*\)/, '\u0004');
   const doc = rich(s).replace('\u0004', `<span class="gap">${a ? esc(it.o[a.c] || '') : '&nbsp;'}</span>`);
   const who = ui().plain ? '选择' : '批注 · Ken：这里用哪个？';
-  return `${tipHint(it, id)}<div class="p5"><div class="paper"><div class="lab">文档 · 第 ${it.q} 句</div>${doc}</div>
+  return `${tipHint(it, id)}<div class="p5"><div class="paper"><div class="lab">${ui().plain ? '文档' : '待审稿件 · Ken 发来'} · 第 ${it.q} 句</div>${doc}</div>
     <div class="anno"><div class="ah">${who}</div>${vOpts(it, id)}${vFb(it, id)}</div></div>`;
 }
 function vPassage(b, it, id, refs, multi) {
@@ -727,7 +773,7 @@ function vPassage(b, it, id, refs, multi) {
     const d = b.docs[i]; let x = d.x;
     if (refs.q && !done) x = markIn(x, refs.q, '1') || x;
     if (bp) x = markIn(x, bp, '2') || x;
-    const h = docHTML(d, i, { x, blank: b.p === 6 && qs.size ? blank : null, ins: b.p === 7,
+    const h = docHTML(d, i, { x, blank: b.p === 6 && qs.size ? blank : null, draft: b.p === 6, ins: b.p === 7,
       mk: k => k === '1' ? '<mark class="ref" id="mref">' : '<mark class="basis" id="mbasis">' });
     return sbs ? `<div><div class="sbh">${TXN[d.t] || '文本'} ${i + 1}/${b.docs.length}</div>${h}</div>` : h;
   }).join('') + (sbs ? '</div>' : '');
@@ -745,13 +791,15 @@ function vQs(b, u, it, id, refs) {
     if (!refs.q && !refs.para && !refs.ins && refs.doc >= 0 && b.docs.length > 1) stem += ` <a class="ref" data-act="jump" data-to="doc">看${TXN[b.docs[refs.doc].t] || '原文'}</a>`;
     stem += '</p>';
   }
-  return nav + tipHint(it, id) + stem + vOpts(it, id) + vFb(it, id);
+  const ask = ui().plain ? '' : b.p === 7 ? '<p class="ask">Leo 问你：</p>' : '<p class="ask">Mia：这一处帮我定一下</p>';
+  return nav + tipHint(it, id) + ask + stem + vOpts(it, id) + vFb(it, id);
 }
 function vOpts(it, id) {
   const a = S.ans[id], show = a && S.mode !== 'mock';
   return `<div class="opts">${it.o.map((o, i) => {
     const cls = show ? (i === it.a ? 'ok' : i === a.c ? 'no' : '') : (a && a.c === i ? 'ok' : '');
-    return `<button class="opt ${cls}" data-act="ans" data-c="${i}" ${a ? 'disabled' : ''}><b>${L4[i]}</b><span>${esc(o)}</span><span class="k">${i + 1}</span></button>`;
+    const mk = show && i === it.a ? '<i class="vm" aria-label="正确答案">✓ 正确</i>' : show && i === a.c ? '<i class="vm" aria-label="你的选择">✗ 你选的</i>' : `<span class="k">${i + 1}</span>`;
+    return `<button class="opt ${cls}" data-act="ans" data-c="${i}" ${a ? 'disabled' : ''}><b>${L4[i]}</b><span>${esc(o)}</span>${mk}</button>`;
   }).join('')}</div>${S.mode === 'diag' ? '<p class="mut sm hint">不会就选一个，继续下一题</p>' : ''}`;
 }
 /* P1-7：不显示每题秒数/目标；只有连续 3 题都 ≥1.5 倍参考用时，才温和提示一次（每次练习最多一次） */
@@ -764,20 +812,35 @@ function slowHint(id) {
   }
   return '<p class="sm slowh">最近几题想得比较久。卡住时先选最像的，做完再回头看，正确率通常不掉。</p>';
 }
+function verdict(it, a) {   // v1.2：作答后一句明确的结果 + 本题用时
+  const ok = a.c === it.a, s = Math.round((a.ms || 0) / 1000), t = it.t;
+  const tm = s ? `<span class="vt">用时 ${s} 秒${t ? (s <= t ? ' · 在参考时间内' : ` · 参考 ${t} 秒`) : ''}</span>` : '';
+  return `<div class="verdict ${ok ? 'right' : 'wrong'}" role="status"><b>${ok ? '✓ 答对了' : a.c < 0 ? '✗ 没有作答' : '✗ 答错了'}</b>${ok ? '' : `<span>正确答案是 (${L4[it.a]}) ${esc(it.o[it.a])}</span>`}${tm}</div>`;
+}
+/* v1.2：一句话结论——答错说你选的错在哪，答对说为什么对 */
+const first = t => { t = String(t || '').trim(); const m = t.match(/^.{8,}?[。；;！!](?=\s|[^”"]|$)/); return (m ? m[0] : t).slice(0, 90); };
+function oneLine(it, a, x) {
+  const wrong = a.c !== it.a, mine = wrong && a.c >= 0 ? x.dis[L4[a.c]] : '';
+  return wrong ? (mine ? `你选的 (${L4[a.c]}) ${first(mine)}` : first(x.why) || `正确的是 (${L4[it.a]})。`) : first(x.why) || '思路对了，保持这个节奏。';
+}
+function disHTML(it, a, x) {   // 干扰项逐个排除
+  const ks = it.o.map((o, i) => i).filter(i => i !== it.a && x.dis[L4[i]]);
+  return ks.length ? `<dt>排除</dt><dd>${ks.map(i => `<div class="${i === a.c ? 'mine' : ''}">(${L4[i]}) ${esc(x.dis[L4[i]])}${i === a.c ? ' <small>← 你选的</small>' : ''}</div>`).join('')}</dd>` : '';
+}
 function vFb(it, id) {
   const a = S.ans[id]; if (!a || S.mode === 'mock') return '';
-  if (S.fb === 'fast') return `<p class="fast">✓ 对</p>`;
   const x = API.explain(id), wrong = a.c !== it.a, mine = wrong && a.c >= 0 ? x.dis[L4[a.c]] : '';
   const L = API.lesson(it.n), nm = (ND[it.n] || {}).nm || '';
   const saved = (E.st.tips || []).some(t => t.id === id);
-  const tip = wrong && x.tip ? `<div class="tip"><span><b>记一招</b> ${esc(x.tip)}</span><button class="chip ${saved ? 'on' : ''}" data-act="tip">${saved ? '已记下' : '记下☆'}</button>${saved ? '<span class="mut sm tipok">下次遇到同类题会提醒你</span>' : ''}</div>` : '';
+  const tip = x.tip ? `<div class="tip"><span><b>记一招</b> ${esc(x.tip)}</span><button class="chip ${saved ? 'on' : ''}" data-act="tip">${saved ? '已记下' : '记下☆'}</button>${saved ? '<span class="mut sm tipok">下次遇到同类题会提醒你</span>' : ''}</div>` : '';
   let pp = '';
   if (it.p === 7 && x.pp.length && (S.ppShown === id || S.ppn < 2)) { if (S.ppShown !== id) { S.ppn++; S.ppShown = id; } const p = x.pp[0];
     pp = `<div class="pp">${ui().plain ? '' : 'Leo 的备忘：'}这两个说法是一回事<br>原文 <b>${esc(p[0])}</b> ↔ 选项 <b>${esc(p[1])}</b></div>`; }
   const bj = it.p === 7 && basisPhrase(id) ? ` <a class="ref" data-act="jump" data-to="basis">在原文里看</a>` : '';
-  return `<div class="fb"><div class="ans">${wrong ? '正确答案' : '答对了'} (${L4[it.a]}) ${esc(it.o[it.a])}</div>${slowHint(id)}
-    <dl>${x.basis ? `<dt>依据</dt><dd>${esc(x.basis)}${bj}</dd>` : ''}${x.why ? `<dt>为什么</dt><dd>${esc(x.why)}</dd>` : ''}${mine ? `<dt>你选的</dt><dd>(${L4[a.c]}) ${esc(mine)}</dd>` : ''}</dl>
-    ${tip}${pp}${nm ? `<p class="mut sm">考点：${esc(nm)}</p>` : ''}
+  const who = ui().plain ? '' : it.p === 5 ? 'Ken：' : it.p === 6 ? 'Mia：' : 'Leo：';
+  return `<div class="fb">${verdict(it, a)}<p class="one">${who ? `<b>${who}</b>` : ''}${esc(oneLine(it, a, x))}</p>${slowHint(id)}
+    <details class="ex"><summary>看详细解析</summary><dl>${x.basis ? `<dt>依据</dt><dd>${esc(x.basis)}${bj}</dd>` : ''}${x.why ? `<dt>为什么</dt><dd>${esc(x.why)}</dd>` : ''}${disHTML(it, a, x)}</dl>
+    ${tip}${pp}${nm ? `<p class="mut sm">考点：${esc(nm)}</p>` : ''}</details>
     <div class="nextbar">${it.p !== 5 ? '<button class="btn ghost mo" data-act="view" data-v="a">看原文</button>' : ''}${L && wrong ? `<button class="btn ghost" data-act="lesson">60 秒小讲解</button>` : ''}<button class="btn" style="flex:1" data-act="next">下一题</button></div></div>`;
 }
 function vLesson(L) {
@@ -846,10 +909,13 @@ function tick() {
   const o = E.st && ob();
   if (o && o.step === 'vtest' && o.vt && !o.vt.paused && !S) { const c = $('#vClock'); if (c) c.textContent = vtClock(o.vt); if (!vtLeft(o.vt) && !o.vt.chk) A.vend(); return; }
   if (!S || S.done || S.paused) return;
-  const f = $('#ringFg'); if (!f || !f.setAttribute) return;
-  if (S.mode === 'mock') { const left = Math.max(0, S.end - Date.now()); f.setAttribute('stroke-dashoffset', String(94.25 * left / 4.5e6)); if (!left) finish(); return; }
-  const id = curId(), it = IT[id]; if (!it || S.ans[id]) return;
-  f.setAttribute('stroke-dashoffset', String(94.25 * (1 - Math.min(1, spent(id) / (it.t * 1000)))));
+  if (S.mode === 'mock' && S.end - Date.now() <= 0) return finish();
+  const el = $('#tmr'); if (!el || !el.querySelector) return;
+  const id = curId(); if (!IT[id]) return;
+  if (S.mode === 'mock') { const l = S.end - Date.now(); el.querySelector('#tmT').textContent = mmss(l); el.className = `tmr mock ${l < 5 * 6e4 ? 'over' : l < 15 * 6e4 ? 'near' : ''}`; return; }
+  el.querySelector('#tmT').textContent = mmss(actMs());
+  if (S.ans[id]) return;
+  const q = tmrQ(id), qe = el.querySelector('#tmQ'); if (qe) qe.textContent = q.txt; el.className = `tmr ${q.cls}`;
 }
 
 /* ---------- 动作 ---------- */
@@ -955,7 +1021,7 @@ const A = {
   wqN() { WQ.i++; WQ.q = null; WQ.ans = null; if (WQ.i >= WQ.ws.length) { const ni = WQ.ni; WQ = null; $('#app').classList.remove('quiz'); if (ni) return startSession('review', E.reviewUnits(ni)); modal('<div class="res"><h2>复习做完了 ✓</h2><p class="mut">这些词会在快忘的时候再回来。</p><button class="btn full" data-act="closeM">好</button></div>'); return render(); } render(); },
   wqX() { WQ = null; $('#app').classList.remove('quiz'); render(); },
   start(el) {
-    if (S) { S.paused = false; S.qt0 = Date.now(); save(); return render(); }
+    if (S) { S.paused = false; S.qt0 = Date.now(); S.a0 = Date.now(); save(); return render(); }
     const m = +(el && el.dataset.m) || 5, p = API.plan(m);
     if (p.words && p.words.length) E.log('plan_words', { n: p.words.length });
     startSession('train', p.units);
@@ -971,7 +1037,7 @@ const A = {
   rev() { const a = revAlloc(); if (a.nw) { WQ = { ws: a.ws.slice(0, a.nw), i: 0, ni: a.ni, q: null, ans: null }; return render(); } startSession('review', E.reviewUnits(a.ni || 20)); },
   ans(el) { answer(+el.dataset.c); },
   next() { next(); },
-  pause() { leaveQ(); S.paused = true; tab = 'today'; save(); render(); },
+  pause() { leaveQ(); actStop(); S.paused = true; tab = 'today'; save(); render(); },
   closeR() { R = null; render(); },
   calib() {
     const v = parseInt(($('#mReal') || {}).value, 10);
@@ -980,6 +1046,7 @@ const A = {
     ui().calibAt = Date.now(); save(); render();
   },
   closeM() { modal(R ? vResult() : ''); },
+  rvw(el) { modal(vItemReview(el.dataset.id, +el.dataset.c)); },
   nostory() { S.noStory = true; save(); render(); },
   view(el) { S.v = el.dataset.v; save(); render(); },
   dr() { S.dr = !S.dr; save(); render(); },
@@ -1003,7 +1070,7 @@ const A = {
     const u = ui();
     const fi = Math.max(0, FZ.findIndex(f => f[0] === (u.fz || 1)));
     modal(`<h2>设置</h2><div class="li"><span>字号 · ${FZ[fi][1]}</span><span class="row"><button class="chip" data-act="fzs" data-d="-1" aria-label="字小一点" ${fi ? '' : 'disabled'}>A−</button><button class="chip" data-act="fzs" data-d="1" aria-label="字大一点" ${fi < FZ.length - 1 ? '' : 'disabled'}>A+</button></span></div>
-      <div class="li"><span>用时环</span><button class="chip" data-act="set" data-k="showRing">${u.showRing ? '隐藏' : '显示'}</button></div>
+      <div class="li"><span>做题计时</span><button class="chip" data-act="set" data-k="hideTimer">${u.hideTimer ? '显示' : '隐藏'}</button></div>
       <div class="li"><span>简洁外壳</span><button class="chip" data-act="set" data-k="plain">${u.plain ? '关' : '开'}</button></div>
       ${typeof window !== 'undefined' && window.innerWidth >= 1440 ? `<div class="li"><span>多篇并排看</span><button class="chip" data-act="set" data-k="sideBySide">${u.sideBySide ? '关' : '开'}</button></div>` : ''}
       <p class="mut sm">快捷键：A–D / 1–4 选，Enter 下一题，← → 换题，G 跳到引用，Space 切文章/题目，Alt+← → 调中缝</p><button class="btn full" data-act="closeM">好</button>`);

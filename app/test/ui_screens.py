@@ -45,7 +45,7 @@ def run(br, tag, w, h):
     check(pg.locator('.hint').count() == 1, f'{tag}: diag hint missing')
     pg.evaluate("while (S && S.mode === 'diag') answer(IT[curId()].a)")
     pg.wait_for_selector('.bc'); shot(pg, d, '00g_diag_result')
-    txt = pg.inner_text('#main'); check(not re.search(r'正确率|\d+\s*/\s*\d+ 题', txt), f'{tag}: S6 shows counts')
+    txt = pg.inner_text('#main'); check(pg.locator('.score2').count() == 1 and '答对' in txt, f'{tag}: v1.2 S6 shows correct count + time')
     check(1 <= pg.locator('.bc li').count() <= 8, f'{tag}: battle card lines'); check('第 1 天' in txt, f'{tag}: day 1 not shown')
     pg.click('[data-act=obDone]'); pg.wait_for_selector('#obRm'); shot(pg, d, '00h_remind'); no_overflow(pg, f'{tag} remind')
     check('每天几点提醒你' in pg.inner_text('#main') and pg.locator('[data-act=rmSkip]').count() == 1, f'{tag}: S7 remind/skip missing')
@@ -53,6 +53,11 @@ def run(br, tag, w, h):
     check(pg.evaluate("E.st.settings.remind") not in (None, False), f'{tag}: remind not saved')
     check(pg.locator('.fz').count() == 1, f'{tag}: streak freeze ❄ missing')
     check(pg.locator('.task .btn.lg').count() <= 1, f'{tag}: today has >1 main button')
+    check(pg.locator('.more .mrow').count() >= 3 and pg.locator('#nav button').count() <= 4, f'{tag}: v1.2 other-practice list / nav <=4')
+    pg.evaluate("E.st.doneDay = ''; render()"); shot(pg, d, '01b_today_todo')
+    check(pg.locator('.task .btn.lg').count() == 1 and '开始今天的工作' in pg.inner_text('.task'), f'{tag}: v1.2 single main button 开始今天的工作')
+    check(re.search(r'约 \d+ 分钟', pg.inner_text('.task')) is not None, f'{tag}: v1.2 main button shows minutes')
+    pg.evaluate("E.st.doneDay = today(); render()")
     # P0-3：词汇摸底改为诊断后可选补测（今天页“补测词汇”）
     pg.evaluate("A.vretest()"); shot(pg, d, '00b_vocab_intro')
     pg.click('[data-act=vstart]'); shot(pg, d, '00c_vocab_word')
@@ -65,7 +70,7 @@ def run(br, tag, w, h):
     pg.click('[data-act=obDone]'); pg.wait_for_selector('.task')
     # P5 一组
     pg.evaluate("startSession('train', D.items.filter(i => i.p === 5 && D.exp && D.exp[i.id] && /-{3,}/.test(i.s)).slice(0, 3).map(i => ({ ids: [i.id] })))")
-    shot(pg, d, '02_p5')
+    shot(pg, d, '02_p5'); check(pg.locator('.qh .tmr #tmT').count() == 1 and re.search(r'本题 \d+s / \d+s', pg.inner_text('.qh')), f'{tag}: v1.2 visible timer')
     if w < 768:
         oz = pg.evaluate("(() => { const o = [...document.querySelectorAll('.opt')].map(x => x.getBoundingClientRect()); return [o[0].top, o[o.length - 1].bottom]; })()")
         check(oz[0] >= h * 0.5 and oz[1] <= h, f'{tag}: P5 options not in thumb zone {oz}')
@@ -74,8 +79,10 @@ def run(br, tag, w, h):
     check(not pr, f'{tag}: lookup popover covers options')
     pg.keyboard.press('Escape'); pg.mouse.click(5, h - 5) if w < 768 else None
     wrong = pg.evaluate("(IT[curId()].a + 1) % 4")
-    pg.locator('.opt').nth(wrong).click(); shot(pg, d, '04_p5_feedback'); check(not re.search(r'目标 ?\d+ ?秒|\d+ 秒 ·', pg.inner_text('#main')) and pg.locator('.ring').count() == 0, f'{tag}: P1-7 no per-item seconds / ring hidden')
+    pg.locator('.opt').nth(wrong).click(); shot(pg, d, '04_p5_feedback'); check(pg.locator('.verdict.wrong').count() == 1 and '答错了' in pg.inner_text('.verdict') and pg.locator('.opt.no').count() == 1 and pg.locator('.opt.ok').count() == 1, f'{tag}: v1.2 explicit right/wrong feedback')
     check(pg.locator('.fb').count() == 1, f'{tag}: no feedback panel')
+    check(pg.locator('.fb .one').is_visible() and pg.evaluate("!document.querySelector('.fb details.ex').open"), f'{tag}: v1.2 one-line conclusion visible, detail collapsed')
+    pg.click('.fb details.ex summary'); pg.wait_for_timeout(150); shot(pg, d, '04b_p5_detail'); check(pg.evaluate("document.querySelector('.fb details.ex').open"), f'{tag}: v1.2 detail expands')
     pg.evaluate("while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); }"); pg.evaluate('R = null; render()')
     # P6
     pg.evaluate("(() => { const b = D.bundles.find(b => b.p === 6 && b.qs.every(q => IT[q])); startSession('train', [{ b: b.id, ids: b.qs.slice() }]); answer(IT[curId()].a); })()")
@@ -116,7 +123,16 @@ def run(br, tag, w, h):
     pg.evaluate("while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); }")
     pg.wait_for_selector('#modal:not(.hide) .res'); shot(pg, d, '10_result')
     txt = pg.inner_text('#sheet')
-    check(not re.search(r'正确率|\d+\s*/\s*\d+', txt), f'{tag}: result shows counts/accuracy')
+    check(pg.locator('#sheet .score2').count() == 1 and re.search(r'\d+\s*/\s*\d+', txt) and '用时' in txt, f'{tag}: v1.2 result shows N/M + time')
+    pg.click('[data-act=closeR]')
+    # v1.2：有错题的结算 → 错题列表逐题回看
+    pg.evaluate("startSession('train', D.items.filter(i => i.p === 5 && D.exp && D.exp[i.id]).slice(20, 23).map(i => ({ ids: [i.id] }))); while (S) { const id = curId(); if (!S.ans[id]) answer((IT[id].a + 1) % 4); else next(); }")
+    pg.wait_for_selector('#modal:not(.hide) .wl'); shot(pg, d, '10b_result_wrong'); check(pg.locator('.wl .wr').count() == 3 and '加入复习' in pg.inner_text('.wl'), f'{tag}: v1.2 wrong list')
+    pg.locator('.wl .wr').first.click(); shot(pg, d, '10c_review_item'); check(pg.locator('#sheet .opt.no').count() == 1 and pg.locator('#sheet .opt.ok').count() == 1, f'{tag}: v1.2 item review')
+    pg.click('[data-act=closeM]'); check(pg.locator('#sheet .wl').count() == 1, f'{tag}: back to result'); pg.click('[data-act=closeR]')
+    # v1.2：模考过程中不提示对错，交卷后出成绩 + 逐题解析
+    pg.evaluate("A.mock(); answer((IT[curId()].a + 1) % 4)"); check(pg.locator('.verdict').count() == 0 and pg.locator('.opt.no').count() == 0 and pg.locator('.tmr.mock').count() == 1, f'{tag}: v1.2 mock no feedback + countdown')
+    pg.evaluate("finish()"); pg.wait_for_selector('#modal:not(.hide) .wl'); shot(pg, d, '10d_mock_result'); check('逐题解析' in pg.inner_text('#sheet') and pg.locator('#sheet .score2').count() == 1, f'{tag}: v1.2 mock review')
     pg.click('[data-act=closeR]')
     if w >= 1024:   # PC 快捷键：1–4 作答、Enter 下一题、← 回上一题、Esc
         pg.evaluate("startSession('train', D.items.filter(i => i.p === 5).slice(10, 13).map(i => ({ ids: [i.id] })))")
