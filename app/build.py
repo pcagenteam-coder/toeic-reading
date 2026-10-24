@@ -172,6 +172,11 @@ def main():
     X = load(xp) if use_private else {'items': [], 'bundles': []}
     if use_private:
         print('private items:', os.path.relpath(xp, ROOT))
+        kx = os.path.join(ROOT, 'private_data', 'explanations', 'key_exclude_v1.json')
+        if os.path.exists(kx):  # 答案键可疑的训练题先排除（模考整套保留），待人工复核
+            bad = set(load(kx)['items']); n0 = len(X['items'])
+            X['items'] = [i for i in X['items'] if not (i['id'] in bad and i.get('use') != 'mock')]
+            print('key-suspect excluded:', n0 - len(X['items']))
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
     G = load('data/graph_v1.json'); S = load_strats()
     GC = load(GRAPH_COST) if os.path.exists(os.path.join(ROOT, GRAPH_COST)) else None
