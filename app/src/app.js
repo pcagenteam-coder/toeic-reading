@@ -220,12 +220,20 @@ function rmSuggest() {
   return String(Math.floor(r / 60)).padStart(2, '0') + ':' + (r % 60 ? '30' : '00');
 }
 const rmOk = v => /^([01]\d|2[0-3]):[0-5]\d$/.test(v || '');
+/* P2-4：时间用自绘的 24 小时制 时/分 选择（原生 time input 会跟浏览器区域显示成“04:30 PM”） */
+const p2 = n => String(n).padStart(2, '0');
+function tmPick(id, v) {
+  const [h, m] = (rmOk(v) ? v : rmSuggest()).split(':'), ms = [...new Set([...Array(12).keys()].map(i => p2(i * 5)).concat(m))].sort();
+  const sel = (sid, list, cur, lb) => `<select id="${sid}" aria-label="${lb}" style="width:auto;padding:6px 10px;border-radius:20px">${list.map(x => `<option value="${x}"${x === cur ? ' selected' : ''}>${x}</option>`).join('')}</select>`;
+  return `<span class="row tmp" id="${id}">${sel(id + 'H', [...Array(24).keys()].map(p2), h, '时')}<span>:</span>${sel(id + 'M', ms, m, '分')}</span>`;
+}
+const tmVal = id => { const h = ($('#' + id + 'H') || {}).value, m = ($('#' + id + 'M') || {}).value; return h && m ? h + ':' + m : ''; };
 function vRemind(o) {
   const sg = rmSuggest(), sel = o.rm || sg, opts = [...new Set([sg, '08:00', '12:30', '21:00'])];
   return `<div class="onb">${steps(3)}${obStory('Dana：每天几点叫你一声？')}<div class="card"><h2>每天几点提醒你？</h2>
     <p class="mut sm">到点后打开应用，今天页会提示你还没做的活。随时可在「我的」里改。</p>
     <div class="row wrapr">${opts.map(t => `<button class="chip ${t === sel ? 'on' : ''}" data-act="rmPick" data-v="${t}">${t === sg ? '建议 ' : ''}${t}</button>`).join('')}</div>
-    <h3>或者自己定</h3><input id="obRm" class="inl tmi" type="time" value="${sel}"></div>
+    <h3>或者自己定</h3>${tmPick('obRm', sel)}</div>
     <div class="thumb"><button class="btn full lg" data-act="rmSave">就这个时间</button><button class="link" data-act="rmSkip">先不设，跳过</button></div></div>`;
 }
 /* 今天页：到了提醒时间、今天的活还没做 → 一条应用内提示（当天可关） */
@@ -411,7 +419,7 @@ function vMe() {
     <div class="li"><span>剧情过渡（同事的一句话）</span>${sw('nostory', !u.nostory, 'tgl')}</div>
     <div class="li"><span>简洁外壳（不显示同事和剧情）</span>${sw('plain', u.plain)}</div>
     <div class="li"><span>用时环</span>${sw('hideRing', !u.hideRing, 'tgl')}</div>
-    <div class="li"><span>每日提醒</span><span class="row"><input id="mRm" class="inl tmi" type="time" value="${rmOk(set.remind) ? set.remind : ''}"><button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
+    <div class="li"><span>每日提醒</span><span class="row">${tmPick('mRm', set.remind)}<button class="chip" data-act="rmSet">保存</button><button class="chip ${rmOk(set.remind) ? '' : 'on'}" data-act="rmOff">关</button></span></div>
     <div class="li"><span>每天时长</span><span class="row">${[5, 10, 15].map(m => `<button class="chip ${(set.daily_min || 5) === m ? 'on' : ''}" data-act="dm" data-m="${m}">${m} 分钟</button>`).join('')}</span></div></div>
   <div class="card"><h2>越用越贴合</h2>
     <div class="li"><span>复习间隔</span><span class="mut sm">${pf.fsrs && pf.fsrs.personal ? '已按你的记忆速度调整' : '先用通用间隔，做得多了会按你的记忆速度调'}</span></div>
@@ -798,9 +806,9 @@ const A = {
   obMore() { const o = E.st.ob; if (o.step === 'result' && (E.st.settings || {}).remind === undefined) { o.step = 'remind'; o.then = 'more'; save(); return render(); } o.step = 'done'; save(); A.start({ dataset: { m: 5 } }); },
   rmPick(el) { E.st.ob.rm = el.dataset.v; save(); render(); },
   rmEnd(v) { const o = E.st.ob; E.setSetting('remind', v); const more = o.then === 'more'; o.step = 'done'; delete o.then; delete o.rm; tab = 'today'; save(); if (more) return A.start({ dataset: { m: 5 } }); render(); },
-  rmSave() { const v = (($('#obRm') || {}).value) || E.st.ob.rm || rmSuggest(); A.rmEnd(rmOk(v) ? v : rmSuggest()); },
+  rmSave() { const v = tmVal('obRm') || E.st.ob.rm || rmSuggest(); A.rmEnd(rmOk(v) ? v : rmSuggest()); },
   rmSkip() { A.rmEnd(false); },
-  rmSet() { const v = (($('#mRm') || {}).value) || ''; if (!rmOk(v)) return; E.setSetting('remind', v); delete ui().rmX; save(); render(); },
+  rmSet() { const v = tmVal('mRm'); if (!rmOk(v)) return; E.setSetting('remind', v); delete ui().rmX; save(); render(); },
   rmOff() { E.setSetting('remind', false); save(); render(); },
   rmX() { ui().rmX = today(); save(); render(); },
   goTab(el) { tab = el.dataset.t; render(); },

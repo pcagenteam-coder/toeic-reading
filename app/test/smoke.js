@@ -34,7 +34,7 @@ if (!/作战卡/.test(rh) || bl < 1 || bl > 8 || !/第 1 天/.test(rh)) throw ne
 if (/正确率/.test(rh)) throw new Error('S6 shows accuracy');
 A.obDone(); if (E.st.doneDay !== today()) throw new Error('day 1 not counted');
 if (E.st.ob.step !== 'remind') throw new Error('S7 remind step missing'); render(); if (!/每天几点提醒你/.test($('#main').innerHTML) || !/跳过/.test($('#main').innerHTML)) throw new Error('S7 remind view');
-$('#obRm').value = '21:30'; A.rmSave(); if (E.st.settings.remind !== '21:30' || E.st.ob.step !== 'done') throw new Error('remind save ' + E.st.settings.remind);
+if (/type="time"/.test($('#main').innerHTML) || !/obRmH/.test($('#main').innerHTML)) throw new Error('P2-4 24h picker'); $('#obRmH').value = '21'; $('#obRmM').value = '30'; A.rmSave(); if (E.st.settings.remind !== '21:30' || E.st.ob.step !== 'done') throw new Error('remind save ' + E.st.settings.remind);
 tab = 'today'; render(); if (!/补测词汇/.test($('#main').innerHTML)) throw new Error('P0-3 optional vocab entry');
 A.vretest(); render(); if (!/补测词汇 · 约 3 分钟/.test($('#main').innerHTML)) throw new Error('vocab intro');
 A.vstart(); let vk = 0; while (E.st.ob.step === 'vtest') { const vt = E.st.ob.vt; render(); if (vt.chk) A.vchk(el({ i: String(vt.chk.a) })); else A.vk(el({ y: vt.q[vt.i][1] ? '1' : '0' })); vk++; if (vk === 10) { A.vpause(); A.vresume(); } }
@@ -76,7 +76,7 @@ tab = 'progress'; render(); { const h = $('#main').innerHTML; if (/正确率|做
 ['apple', 'invoice', 'deadline', 'budget'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).slice(0, 30).forEach(k => E.st.cards[k].due = 0);
 { const a = revAlloc(); console.log('review alloc items', a.ni, 'words', a.nw); if (a.ni + a.nw > 20) throw new Error('review > 20');
   A.rev(); let k = 0; while (WQ) { render(); A.wqA(el({ i: String(k % 2 ? WQ.q.a : -1) })); if (WQ && WQ.ans != null) A.wqN(); k++; } while (S) { answer(0); if (S && S.fb) next(); } A.closeR(); }
-tab = 'me'; render(); if (!/mRm/.test($('#main').innerHTML)) throw new Error('me remind'); $('#mRm').value = '07:45'; A.rmSet(); if (E.st.settings.remind !== '07:45') throw new Error('me remind set'); A.rmOff(); if (E.st.settings.remind !== false) throw new Error('me remind off'); A.fz(el({ v: '1.25' })); A.tgl(el({ k: 'nostory' })); A.circ(); if ((E.st.settings || {}).circadian !== false) throw new Error('circadian off');
+tab = 'me'; render(); if (!/mRm/.test($('#main').innerHTML)) throw new Error('me remind'); $('#mRmH').value = '07'; $('#mRmM').value = '45'; A.rmSet(); if (E.st.settings.remind !== '07:45') throw new Error('me remind set'); A.rmOff(); if (E.st.settings.remind !== false) throw new Error('me remind off'); A.fz(el({ v: '1.25' })); A.tgl(el({ k: 'nostory' })); A.circ(); if ((E.st.settings || {}).circadian !== false) throw new Error('circadian off');
 { const pr = API.predict(); if (!pr.level || !pr.est || !/^(low|mid|high)$/.test(pr.level)) throw new Error('API.predict ' + JSON.stringify([pr.level, !!pr.est]));
   tab = 'progress'; render(); const h = $('#main').innerHTML; if (pr.level !== 'high' && new RegExp('>' + pr.p + '<').test(h) && pr.level === 'low') throw new Error('low confidence shows number');
   tab = 'me'; render(); if (!/考完了？填分数/.test($('#main').innerHTML)) throw new Error('calib entry'); $('#mReal').value = '300'; A.calib();
