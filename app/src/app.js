@@ -79,17 +79,16 @@ function examTip(dt) {
 }
 function s1Vals() {
   const v = id => (($('#' + id) || {}).value || '').trim();
-  const total = +v('sTotOther') || A._tg || 600, ls = A._lsU ? 0 : +v('sLs') || 0, man = +v('sRtg') || 0;
+  const total = +v('sTotOther') || A._tg || 600, ls = +v('sLs') || 0, man = +v('sRtg') || 0;   // P2-7：听力默认留空 = 按总分 ×0.45 估
   return { total: Math.max(10, Math.min(990, total)), listen: ls, rtg: man ? Math.max(5, Math.min(495, r5(man))) : rtgCalc(total, ls), exam: A._noDate ? '' : v('sDate') };
 }
 function vSetup() {
-  const t = A._tg || 600, first = !Profiles.list().length, lu = A._lsU !== false;
+  const t = A._tg || 600, first = !Profiles.list().length;
   return `<div class="onb">${steps(0)}${obStory('Dana：先认识一下你')}<div class="card">
   ${first ? '' : '<h3>新档案名</h3><input id="sName" placeholder="例如：小王">'}
   <h3>你想考到多少总分？</h3><div class="row wrapr">${[500, 600, 700, 800, 900].map(v => `<button class="chip ${v === t ? 'on' : ''}" data-act="tg" data-v="${v}">${v}</button>`).join('')}
     <input id="sTotOther" class="inl" inputmode="numeric" placeholder="其他"></div>
-  <h3>听力大概能考多少？</h3><div class="row wrapr"><button class="chip ${lu ? 'on' : ''}" data-act="lsU" data-v="1">不确定</button>
-    <button class="chip ${lu ? '' : 'on'}" data-act="lsU" data-v="0">约</button><input id="sLs" class="inl" inputmode="numeric" placeholder="___ 分" ${lu ? 'disabled' : ''}></div>
+  <h3>听力大概能考多少？<span class="mut sm">（可不填）</span></h3><div class="row wrapr"><input id="sLs" class="inl" inputmode="numeric" placeholder="不知道就留空"></div>
   <p class="out" id="rtgOut"></p>
   <details id="rtgMan"><summary>改一下阅读目标</summary><input id="sRtg" inputmode="numeric" placeholder="阅读目标（5–495）"></details>
   <h3>什么时候考？</h3><div class="row"><input id="sDate" type="date" ${A._noDate ? 'disabled' : ''}><button class="chip ${A._noDate ? 'on' : ''}" data-act="noDate">还没定</button></div>
@@ -99,7 +98,7 @@ function vSetup() {
 }
 function s1Upd() {
   const o = s1Vals(), r = $('#rtgOut'), d = $('#dateOut');
-  if (r) r.innerHTML = `→ 你的阅读目标：约 <b>${o.rtg}</b> 分${o.listen ? '' : '<span class="mut sm">（听力不确定，按总分 ×0.45 估）</span>'}`;
+  if (r) r.innerHTML = `${o.listen ? '' : `<span class="mut sm">听力不填就按总分的 45% 算</span><br>`}→ 你的阅读目标：约 <b>${o.rtg}</b> 分 <span class="mut sm">（${o.listen ? `${o.total} − 听力 ${o.listen}` : `${o.total} × 45%`}，可在下方改）</span>`;
   if (d) d.innerHTML = examTip(o.exam);
 }
 /* S2–S3 词汇摸底：约 40 真词（四档各 10）+ 7 假词 + ≤6 次四选一抽查，3 分钟到点自动结束 */
@@ -753,7 +752,6 @@ function tick() {
 /* ---------- 动作 ---------- */
 const A = {
   tg(el) { $$('[data-act=tg]').forEach(b => b.classList.toggle('on', b === el)); A._tg = +el.dataset.v; const o = $('#sTotOther'); if (o) o.value = ''; s1Upd(); },
-  lsU(el) { A._lsU = el.dataset.v === '1'; $$('[data-act=lsU]').forEach(b => b.classList.toggle('on', b === el)); const i = $('#sLs'); if (i) { i.disabled = A._lsU; if (!A._lsU && i.focus) i.focus(); } s1Upd(); },
   noDate(el) { A._noDate = !A._noDate; el.classList.toggle('on', A._noDate); const i = $('#sDate'); if (i) i.disabled = A._noDate; s1Upd(); },
   impOpen() { const c = prompt('粘贴进度码'); if (!c) return; try { const o = Code.dec(c); if (!o || !o.st) throw 0; Profiles.create(o.name || '导入'); E.st = o.st; setupNew = false; save(); boot(); } catch (e) { alert('进度码不对'); } },
   setupGo(el) {

@@ -34,7 +34,7 @@ def run(br, tag, w, h):
     pg.goto('file://' + DIST)
     # 首日 S1：目标 + 听力 + 考试日期
     pg.wait_for_selector('#rtgOut'); check('270' in pg.inner_text('#rtgOut'), f'{tag}: S1 reading target default 600×0.45')
-    pg.click('[data-act=lsU][data-v="0"]'); pg.fill('#sLs', '300'); pg.fill('#sDate', '2026-12-13'); shot(pg, d, '00a_s1_goal')
+    check(pg.input_value('#sLs') == '' and '45%' in pg.inner_text('#rtgOut'), f'{tag}: P2-7 listening default empty + 45% hint'); pg.fill('#sLs', '300'); pg.fill('#sDate', '2026-12-13'); shot(pg, d, '00a_s1_goal')
     check('300' in pg.inner_text('#rtgOut'), f'{tag}: S1 total−listening')
     pg.fill('#sDate', '2020-01-01'); check('已经过了' in pg.inner_text('#dateOut'), f'{tag}: past date not flagged')
     pg.fill('#sDate', '2026-12-13'); pg.click('[data-act=setupGo]'); shot(pg, d, '00b_diag_intro')

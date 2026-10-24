@@ -20,6 +20,7 @@ vm.runInContext(scripts[0], ctx);
 const test = `
 const el = (o) => ({ dataset: o || {} });
 $('#sName').value = 'A'; $('#sDate').value = '2026-12-20';
+render(); s1Upd(); if (!/45%/.test($('#rtgOut').innerHTML)) throw new Error('P2-7 45% hint'); $('#sLs').value = '300'; if (s1Vals().rtg !== 300) throw new Error('P2-7 total−listening'); $('#sLs').value = '';
 A.setupGo(el({ d: '1' }));
 if (E.st.rtg !== 270 || E.st.ob.step !== 'dintro') throw new Error('S1 goal → diag intro: rtg ' + E.st.rtg + ' step ' + E.st.ob.step);
 render(); { const h = $('#main').innerHTML; if (!/入职测试 · 约 5 分钟/.test(h) || /词汇/.test(h)) throw new Error('P0-3 diag intro first'); }
