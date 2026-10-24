@@ -125,7 +125,7 @@ def run(br, tag, w, h):
         pg.keyboard.press('Escape'); pg.evaluate("S = null; E.st.run = null; R = null; render()")
     # 复习：题卡 + 生词四选一（合计 ≤20）
     pg.evaluate("(() => { ['invoice', 'deadline', 'budget', 'shipment', 'warranty'].forEach(w => { E.addWord(w, 'x'); E.st.words[w].due = 0; }); Object.keys(E.st.cards).forEach(k => E.st.cards[k].due = 0); tab = 'review'; render(); })()")
-    shot(pg, d, '11_review'); check(pg.evaluate('(a => a.ni + a.nw)(revAlloc())') <= 20, f'{tag}: review > 20')
+    shot(pg, d, '11_review'); check(pg.locator('[data-act=weak]').count() <= 1, f'{tag}: P2-2 review has >1 weak-start button'); check(pg.evaluate('(a => a.ni + a.nw)(revAlloc())') <= 20, f'{tag}: review > 20')
     pg.click('[data-act=rev]'); shot(pg, d, '12_review_word')
     pg.evaluate("A.wqA({ dataset: { i: String((WQ.q.a + 1) % 4) } })"); shot(pg, d, '12b_review_word_wrong')
     pg.evaluate("while (WQ) { if (WQ.ans == null) A.wqA({ dataset: { i: String(WQ.q.a) } }); else A.wqN(); } while (S) { const id = curId(); if (!S.ans[id]) answer(IT[id].a); else next(); } R = null; modal(''); render()")

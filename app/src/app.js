@@ -370,7 +370,9 @@ function vReview() {
       <p class="sum">${[a.ni && `错题 ${a.ni}`, a.nw && `生词 ${a.nw}`].filter(Boolean).join(' · ')}</p><button class="btn full lg" data-act="rev">开始复习</button>
       <p class="mut sm">这些也会放进今天的活，不单独做也行。</p>${tl}</div>`
     : `<div class="card empty"><h2>今天没有要复习的，挺好。</h2><p class="mut">做题时点过的生词、做错的题，会在快忘的时候回来。</p><button class="btn full" data-act="goTab" data-t="today">去做今天的活</button>${tl}</div>`;
-  const nx = (g.next || []).map(x => { const nd = (g.nodes || []).find(y => y.id === x.id); return `<div class="li"><span>${esc(x.nm)}</span><span class="row"><span class="mut sm">${nd && nd.remainMin ? `约 ${Math.max(3, Math.min(30, nd.remainMin))} 分钟` : ''}</span><button class="chip" data-act="weak" data-n="${esc(x.id)}">开始</button></span></div>`; }).join('');
+  // P2-2：只露 ROI 最高的 1 项、一个按钮（有复习任务时用次按钮，避免两个主按钮）；其余折叠成纯文字
+  const nxs = g.next || [], mins = x => { const nd = (g.nodes || []).find(y => y.id === x.id); return nd && nd.remainMin ? Math.max(3, Math.min(30, nd.remainMin)) : 0; };
+  const nx = nxs.length ? `<p class="sum">先练 <b>${esc(nxs[0].nm)}</b>${mins(nxs[0]) ? `（约 ${mins(nxs[0])} 分钟）` : ''}</p><button class="btn full ${n ? 'ghost' : ''}" data-act="weak" data-n="${esc(nxs[0].id)}">开始</button>${nxs.length > 1 ? `<details><summary>之后排着 · ${nxs.length - 1} ›</summary>${nxs.slice(1).map(x => `<div class="li"><span>${esc(x.nm)}</span>${mins(x) ? `<span class="mut sm">约 ${mins(x)} 分钟</span>` : ''}</div>`).join('')}</details>` : ''}` : '';
   const W = Object.keys(E.st.words || {});
   const lists = `<div class="card"><details><summary>生词本 · ${W.length} ›</summary>${W.length ? W.slice(-30).reverse().map(w => `<div class="li"><b>${esc(w)}</b><span class="mut sm">${esc(API.lookup(w).zh.slice(0, 24))}</span></div>`).join('') : '<p class="mut sm">做题时点生词，会自动加进来。</p>'}</details></div>`;
   return hd + `<div class="grid2"><div>${main}${nx ? `<div class="card"><h2>${ui().plain ? '最快涨分' : '主管带你练（最快涨分）'}</h2>${nx}</div>` : ''}</div><div>${lists}</div></div>`;
