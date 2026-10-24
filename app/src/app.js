@@ -647,7 +647,7 @@ function vQuiz() {
   const seg = `<div class="seg"><button class="${S.v === 'a' ? 'on' : ''}" data-act="view" data-v="a">文章</button><button class="${S.v === 'q' ? 'on' : ''}" data-act="view" data-v="q">题目 ${S.qi + 1}/${u.ids.length}</button></div>`;
   return `<div class="qz">${head}${seg}<div class="qb"><div class="split" id="split" data-v="${S.v}" style="--sp:${ui().split || 55}%">
     <div class="pane pa" id="pa">${vPassage(b, it, id, refs, multi)}</div><div class="dv" id="dv" title="拖动调整，双击复位"></div>
-    <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div><button class="fab" data-act="flip" aria-label="切换">⇄</button></div>`;
+    <div class="pane pq" id="pq">${vQs(b, u, it, id, refs)}</div></div></div>${S.ans[id] && S.v !== 'a' ? '' : '<button class="fab" data-act="flip" aria-label="切换">⇄</button>'}</div>`;
 }
 /* P1-9：同类题（同主考点）出现时，在题干上方提示 1 次记下的招；每条招只提示一次（t.hinted） */
 function tipHint(it, id) {
@@ -722,7 +722,7 @@ function vFb(it, id) {
   return `<div class="fb"><div class="ans">${wrong ? '正确答案' : '答对了'} (${L4[it.a]}) ${esc(it.o[it.a])}</div><div class="mut sm">${sec} 秒 · 目标 ${it.t} 秒</div>
     <dl>${x.basis ? `<dt>依据</dt><dd>${esc(x.basis)}${bj}</dd>` : ''}${x.why ? `<dt>为什么</dt><dd>${esc(x.why)}</dd>` : ''}${mine ? `<dt>你选的</dt><dd>(${L4[a.c]}) ${esc(mine)}</dd>` : ''}</dl>
     ${tip}${pp}${nm ? `<p class="mut sm">考点：${esc(nm)}</p>` : ''}
-    <div class="nextbar">${L && wrong ? `<button class="btn ghost" data-act="lesson">60 秒小讲解</button>` : ''}<button class="btn" style="flex:1" data-act="next">下一题</button></div></div>`;
+    <div class="nextbar">${it.p !== 5 ? '<button class="btn ghost mo" data-act="view" data-v="a">看原文</button>' : ''}${L && wrong ? `<button class="btn ghost" data-act="lesson">60 秒小讲解</button>` : ''}<button class="btn" style="flex:1" data-act="next">下一题</button></div></div>`;
 }
 function vLesson(L) {
   return `<h2>${esc(L.nm)}</h2><p class="mut sm">${ui().plain ? '' : 'Dana 带你看 · '}约 60 秒</p><p>${esc(L.r)}</p>

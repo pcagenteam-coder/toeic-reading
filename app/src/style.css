@@ -210,3 +210,9 @@ details.pred summary::-webkit-details-marker{display:none}
 .grid2.solo{grid-template-columns:1fr;max-width:640px;margin:0 auto}
 .tiph{font-size:14px;color:#6b5a2e;background:#faf4e4;border-radius:8px;padding:6px 10px;margin:0 0 8px}.tipok{display:block;margin-top:4px}
 .card.exam{border-left:4px solid var(--ac)}
+/* P0-5：手机答题后 FAB 隐藏，操作栏贴底（看原文 / 下一题），不再挡“记下☆” */
+@media (max-width:767px){
+  #pq .nextbar{position:sticky;bottom:0;z-index:5;background:#fff;margin:14px -14px -14px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);border-radius:0 0 12px 12px}
+  #pq .nextbar .btn{padding:12px 12px}
+}
+@media (min-width:768px){.mo{display:none!important}}
