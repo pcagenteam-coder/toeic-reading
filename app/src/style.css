@@ -240,3 +240,13 @@ details.pred summary::-webkit-details-marker{display:none}
 .story button{width:44px;height:44px;flex:none}
 @keyframes storyout{0%,80%{opacity:1}100%{opacity:0;visibility:hidden}}
 @media (max-width:767px){.pa>.dtabs{display:none}.seg button b{color:var(--warn);margin-left:3px}.seg button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}}
+/* P1-6：触控区 ≥44px（视觉不变的用伪元素扩大点击区） */
+.chip,.dtabs button,a.ref,.blank{position:relative}
+.chip:after,.dtabs button:after,a.ref:before,.blank:after{content:"";position:absolute;left:-3px;right:-3px;top:-6px;bottom:-6px}
+a.ref:before,.blank:after{top:-10px;bottom:-10px}
+.dtabs button{min-height:36px}
+.qnav button{min-width:40px;height:40px}
+.qh .x,.mm,.vtop .x{width:44px;height:44px}
+.link{min-height:44px}
+details summary{padding:11px 0}
+@media (max-width:767px){.seg button{min-height:44px}}
