@@ -60,8 +60,6 @@ details summary{cursor:pointer;color:var(--ac);padding:8px 0;list-style:none}
 .ring{width:30px;height:30px;flex:none}.ring circle{fill:none;stroke-width:3}
 .ring .bg{stroke:var(--line)}.ring .fg{stroke:#b8b8b8;transition:stroke-dashoffset .9s linear}
 .mm{border:0;background:none;width:36px;height:36px;font-size:18px;border-radius:18px}
-.story{font-size:14px;color:var(--mut);padding:6px 16px;background:#fbfaf7;border-bottom:1px solid var(--line);flex:none;display:flex;gap:8px;justify-content:space-between}
-.story button{border:0;background:none;color:var(--mut)}
 .qb{flex:1;min-height:0;position:relative}
 .seg{display:none}
 .split{display:grid;grid-template-columns:var(--sp) 10px 1fr;height:100%}
@@ -231,14 +229,12 @@ details.pred summary::-webkit-details-marker{display:none}
   .qdf .row .btn{min-height:44px;padding:8px 14px}
   .split[data-v=a] .pa{padding-bottom:24px}
 }
-/* P1-3：剧情句浮层（不占位，2.5 秒淡出） */
-.qz{position:relative}
-.story{position:absolute;top:60px;left:50%;transform:translateX(-50%);z-index:12;max-width:calc(100% - 24px);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 4px 14px rgba(0,0,0,.1);padding:0 4px 0 16px;align-items:center;white-space:nowrap;animation:storyout 2.6s ease forwards;pointer-events:none}
-.story button{pointer-events:auto}
-@media (max-width:767px){.qz>.story{top:116px}.qz>.story.p5s{top:60px}}
-.story span{overflow:hidden;text-overflow:ellipsis}
-.story button{width:44px;height:44px;flex:none}
+/* P1-3：剧情句在标题副标题位置 2.5 秒后淡出 */
+.qh .tt small{position:relative}
+.qh .tt .sts{position:absolute;left:0;top:50%;transform:translateY(-50%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100vw - 210px);color:var(--ink);animation:storyout 2.6s ease forwards}
+.qh .tt .stb{opacity:0;animation:storyin 2.6s ease forwards}
 @keyframes storyout{0%,80%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes storyin{0%,80%{opacity:0}100%{opacity:1}}
 @media (max-width:767px){.pa>.dtabs{display:none}.seg button b{color:var(--warn);margin-left:3px}.seg button{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}}
 /* P1-6：触控区 ≥44px（视觉不变的用伪元素扩大点击区） */
 .chip,.dtabs button,a.ref,.blank{position:relative}
