@@ -140,6 +140,8 @@ def run(br, tag, w, h):
     pg.evaluate("tab = 'me'; render()"); shot(pg, d, '15_me')
     pg.click('[data-act=clr1]'); pg.locator('.warnbox').scroll_into_view_if_needed(); shot(pg, d, '16_me_clear_confirm'); pg.click('[data-act=clr0]')
     pg.click('[data-act=fz][data-v="1.25"]'); pg.evaluate("startSession('train', [{ ids: [D.items.find(i => i.p === 5).id] }])"); shot(pg, d, '17_p5_bigfont')
+    pg.click('[data-act=menu]'); pg.click('[data-act=fzs][data-d="-1"]'); shot(pg, d, '17b_menu_font')
+    check(pg.evaluate("ui().fz") == 1.12 and pg.evaluate("getComputedStyle(document.documentElement).getPropertyValue('--fz').trim()") == '1.12', f'{tag}: P2-5 menu A-'); pg.click('[data-act=closeM]')
     pg.evaluate("S = null; E.st.run = null; ui().fz = 1; tab = 'today'; render()")
     # 出错 / 首次（复习、进度在入职前）
     pg.evaluate("tab = 'nope'; render()"); shot(pg, d, '18_error'); check('进度已保存' in pg.inner_text('#main'), f'{tag}: error state')

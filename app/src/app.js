@@ -896,6 +896,7 @@ const A = {
   circ() { E.setSetting('circadian', (E.st.settings || {}).circadian === false); save(); render(); },
   pReset() { if (!confirm('重置个性化？作答记录不会删。')) return; delete E.st.fsrsFit; const u = ui(); delete u.circAt; delete u.circTip; delete u.circClosed; E.log('personal_reset', {}); E.fxReplay(); save(); render(); },
   tgl(el) { const k = el.dataset.k; ui()[k] = !ui()[k]; save(); render(); },
+  fzs(el) { const i = Math.max(0, FZ.findIndex(f => f[0] === (ui().fz || 1))), j = Math.min(FZ.length - 1, Math.max(0, i + +el.dataset.d)); ui().fz = FZ[j][0]; save(); applyFz(); A.menu(); },   // P2-5：阅读中 ··· 菜单 A−/A+，即时生效并记住
   fz(el) { ui().fz = +el.dataset.v; save(); render(); },
   mtg(el) { A._mtg = +el.dataset.v; render(); },
   saveGoal() {
@@ -966,7 +967,9 @@ const A = {
   unword(el) { const w = el.dataset.w; delete E.st.words[w]; E.log('word_remove', { lemma: w }); save(); hidePop(); },
   menu() {
     const u = ui();
-    modal(`<h2>设置</h2><div class="li"><span>用时环</span><button class="chip" data-act="set" data-k="showRing">${u.showRing ? '隐藏' : '显示'}</button></div>
+    const fi = Math.max(0, FZ.findIndex(f => f[0] === (u.fz || 1)));
+    modal(`<h2>设置</h2><div class="li"><span>字号 · ${FZ[fi][1]}</span><span class="row"><button class="chip" data-act="fzs" data-d="-1" aria-label="字小一点" ${fi ? '' : 'disabled'}>A−</button><button class="chip" data-act="fzs" data-d="1" aria-label="字大一点" ${fi < FZ.length - 1 ? '' : 'disabled'}>A+</button></span></div>
+      <div class="li"><span>用时环</span><button class="chip" data-act="set" data-k="showRing">${u.showRing ? '隐藏' : '显示'}</button></div>
       <div class="li"><span>简洁外壳</span><button class="chip" data-act="set" data-k="plain">${u.plain ? '关' : '开'}</button></div>
       ${typeof window !== 'undefined' && window.innerWidth >= 1440 ? `<div class="li"><span>多篇并排看</span><button class="chip" data-act="set" data-k="sideBySide">${u.sideBySide ? '关' : '开'}</button></div>` : ''}
       <p class="mut sm">快捷键：A–D / 1–4 选，Enter 下一题，← → 换题，G 跳到引用，Space 切文章/题目，Alt+← → 调中缝</p><button class="btn full" data-act="closeM">好</button>`);
