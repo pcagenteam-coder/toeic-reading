@@ -1,6 +1,6 @@
 /* Service Worker（P0-4 通知 + D2 离线缓存）。VERSION 由 build.py 构建时注入（产物内容哈希），变了就是新版。
  * 策略：同源 GET cache-first；首次安装预缓存应用壳；新版安装后 waiting，页面提示「刷新获取新版」再 skipWaiting，不打断做题。 */
-const VERSION = '62ea598902';
+const VERSION = '7d5e2d8f5a';
 const CACHE = 'toeic-r-' + VERSION;
 const CORE = ['./', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 const PAGES = ['index.html', 'index.private.html', 'sw.js'];   // 不存在的忽略（公开部署没有 private）

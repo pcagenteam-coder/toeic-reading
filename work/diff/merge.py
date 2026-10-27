@@ -117,7 +117,8 @@ def report(sets):
     L = ['# 难度重评 v2 报告（UX_SPEC_v2 §6）', '',
          '- 方法：LLM（deepseek-v4.1-flash，Kunyou + igrok 双端点）按固定 rubric + 7 条锚定示例，P5 每 5 题一次、P6/P7 每篇一次调用；输出 ETS 风格特征（CEFR 最难词、干扰项强度 0–3、定位距离、认知类型、同义替换、句法复杂度、句长、用时）+ 0–100 难度分。',
          '- 档位由分数固定映射：<35 基础(<500) / 35–54 进阶(500–650) / 55–74 熟练(650–800) / ≥75 真考+(800+)；新 difficulty_est(1–5)：<25→1, 25–39→2, 40–54→3, 55–69→4, ≥70→5。',
-         '- 文件：公开 `data/difficulty/difficulty_v2_open.json`；私有 `private_data/difficulty/difficulty_v2_private.json`（id→{score,band,diff1_5,features,chapter,technique_zh}）。', '']
+         '- 文件：公开 `data/difficulty/difficulty_v2_open.json`；私有 `private_data/difficulty/difficulty_v2_private.json`（id→{score,band,diff1_5,features,chapter,technique_zh}）。',
+         '- 局限：① LLM 分数偏向中段，800+ 档仅 2–3%（与题源自带难度 ρ≈0.42–0.45，P5 最好、P6 最弱），上线后须用作答数据 IRT 校准；② igrok 端点本次返回 Invalid token，全部由 Kunyou 完成；③ 公开池前约 110 个调用单位用默认推理强度，其后改 reasoning_effort=low（rubric 不变）；④ 题型 = 主考点 node 去掉文体后缀（P7X.DETAIL.EMAIL → P7.DETAIL）。', '']
     for st, (items, res, stat) in sets.items():
         name = '公开池' if st == 'open' else '私有池'
         got = [q for q in items if q['id'] in res]

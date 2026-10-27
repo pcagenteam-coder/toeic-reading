@@ -115,34 +115,102 @@
 
 ## 私有池
 
-- 题数 4855，已评 0，未评 4855；LLM 自报档与分数映射不一致 0（以分数为准）。
+- 题数 4855，已评 4855，未评 0；LLM 自报档与分数映射不一致 2（以分数为准）。
 
 ### 分布：题源 × Part × 档
 
 | 题源 | Part | 基础 <500 | 进阶 500–650 | 熟练 650–800 | 真考+ 800+ | 合计 | 均分 |
 |---|---|---|---|---|---|---|---|
-| **合计** | | **0** (0%) | **0** (0%) | **0** (0%) | **0** (0%) | **0** | |
+| 2troll | P5 | 5 | 6 | 1 | 0 | 12 | 38.8 |
+| 2troll | P6 | 3 | 4 | 1 | 0 | 8 | 41.5 |
+| 2troll | P7 | 2 | 4 | 2 | 0 | 8 | 46.0 |
+| asaiibowl | P5 | 19 | 35 | 31 | 10 | 95 | 50.8 |
+| asaiibowl | P6 | 15 | 26 | 15 | 0 | 56 | 46.4 |
+| asaiibowl | P7 | 27 | 66 | 70 | 2 | 165 | 50.0 |
+| bonnie8536 | P5 | 58 | 155 | 80 | 7 | 300 | 46.4 |
+| bonnie8536 | P6 | 45 | 87 | 47 | 1 | 180 | 45.7 |
+| bonnie8536 | P7 | 36 | 106 | 88 | 5 | 235 | 49.6 |
+| eddychang0630 | P5 | 25 | 49 | 17 | 2 | 93 | 43.6 |
+| eddychang0630 | P6 | 1 | 5 | 6 | 0 | 12 | 55.2 |
+| eddychang0630 | P7 | 2 | 10 | 11 | 1 | 24 | 53.8 |
+| ets1000_vol4 | P5 | 126 | 145 | 29 | 0 | 300 | 38.5 |
+| ets1000_vol4 | P6 | 28 | 78 | 53 | 1 | 160 | 47.7 |
+| ets1000_vol4 | P7 | 49 | 241 | 229 | 21 | 540 | 52.4 |
+| grittingleo_4tests | P5 | 13 | 61 | 45 | 1 | 120 | 49.9 |
+| grittingleo_4tests | P6 | 9 | 30 | 24 | 1 | 64 | 49.1 |
+| grittingleo_4tests | P7 | 18 | 88 | 103 | 7 | 216 | 53.5 |
+| nahuly | P5 | 19 | 33 | 6 | 1 | 59 | 40.3 |
+| nekonotestudio | P5 | 33 | 55 | 12 | 0 | 100 | 40.2 |
+| ninejubu | P5 | 106 | 254 | 229 | 46 | 635 | 50.9 |
+| ninejubu | P6 | 22 | 36 | 6 | 0 | 64 | 40.0 |
+| ninejubu | P7 | 42 | 42 | 12 | 0 | 96 | 37.4 |
+| seikaikyo | P5 | 23 | 40 | 15 | 1 | 79 | 43.2 |
+| seikaikyo | P6 | 38 | 85 | 13 | 0 | 136 | 40.5 |
+| seikaikyo | P7 | 23 | 47 | 28 | 0 | 98 | 45.4 |
+| xdf2019_1000 | P5 | 73 | 144 | 78 | 5 | 300 | 45.1 |
+| xdf2019_1000 | P6 | 11 | 75 | 72 | 2 | 160 | 52.8 |
+| xdf2019_1000 | P7 | 30 | 201 | 275 | 34 | 540 | 55.8 |
+| **合计** | | **901** (19%) | **2208** (45%) | **1598** (33%) | **148** (3%) | **4855** | |
 
 ### 与旧 difficulty_est 对比
 
 | 旧 est | n | 基础 | 进阶 | 熟练 | 真考+ | 新均分 | 新 est 均值 |
 |---|---|---|---|---|---|---|---|
+| 1 | 49 | 9 | 34 | 6 | 0 | 41.3 | 2.61 |
+| 2 | 556 | 227 | 227 | 101 | 1 | 40.5 | 2.62 |
+| 3 | 2981 | 591 | 1526 | 783 | 81 | 46.6 | 3.00 |
+| 4 | 1063 | 70 | 387 | 580 | 26 | 55.0 | 3.57 |
+| 5 | 206 | 4 | 34 | 128 | 40 | 63.9 | 4.13 |
 
-- 旧 est vs 新分 Spearman ρ = nan（n=0）；est 值变动 0 题。
+- 旧 est vs 新分 Spearman ρ = 0.370（n=4855）；est 值变动 2839 题。
+- **锚定（私有 555 道题源自带 difficulty）**：与 LLM 分 Spearman ρ = 0.453，Pearson r = 0.438；分题源：bonnie8536 ρ=0.67(n=155)，grittingleo_4tests ρ=0.44(n=400)
 
 ### 特征 × 档（均值）
 
 | 档 | 干扰项 0–3 | 句法 1–3 | 用时 s | 跨句/跨段/跨篇占比 | 推断/NOT/插入占比 | C1+ 词占比 |
 |---|---|---|---|---|---|---|
+| 基础 | 1.02 | 1.47 | 19 | 2% | 1% | 0% |
+| 进阶 | 1.45 | 1.72 | 26 | 14% | 11% | 3% |
+| 熟练 | 1.92 | 1.93 | 39 | 52% | 49% | 25% |
+| 真考+ | 2.41 | 2.02 | 49 | 47% | 49% | 67% |
 
 ### 缺口：题型 × 档（私有池；<20 标红；规格目标公开池每档每题型 ≥30）
 
 | 题型 | 基础 | 进阶 | 熟练 | 真考+ | 合计 | 缺口（补到 20 / 补到 30） |
 |---|---|---|---|---|---|---|
+| P5.VOCAB | 114 | 409 | 308 | 56 | 887 | 0 / 0 |
+| P5.VERB_FORM | 87 | 199 | 133 | <span style="color:red">**10**</span> | 429 | 10 / 20 |
+| P5.WORD_FORM | 128 | 82 | <span style="color:red">**14**</span> | <span style="color:red">**0**</span> | 224 | 26 / 46 |
+| P5.PREP | 41 | 76 | <span style="color:red">**7**</span> | <span style="color:red">**0**</span> | 124 | 33 / 53 |
+| P5.RELATIVE | 21 | 64 | 23 | <span style="color:red">**2**</span> | 110 | 18 / 44 |
+| P5.PRONOUN | 61 | 24 | <span style="color:red">**6**</span> | <span style="color:red">**0**</span> | 91 | 34 / 60 |
+| P5.CONNECTOR_MIX | <span style="color:red">**11**</span> | 53 | <span style="color:red">**17**</span> | <span style="color:red">**1**</span> | 82 | 31 / 61 |
+| P5.CONJ | <span style="color:red">**5**</span> | 40 | 23 | <span style="color:red">**1**</span> | 69 | 34 / 61 |
+| P5.COMPARATIVE | 24 | <span style="color:red">**14**</span> | <span style="color:red">**6**</span> | <span style="color:red">**0**</span> | 44 | 40 / 76 |
+| P5.PAIR_GRAMMAR | <span style="color:red">**8**</span> | <span style="color:red">**16**</span> | <span style="color:red">**6**</span> | <span style="color:red">**3**</span> | 33 | 47 / 87 |
+| P6.INDEPENDENT | 94 | 161 | 22 | <span style="color:red">**2**</span> | 279 | 18 / 36 |
+| P6.CTX_VOCAB | 45 | 163 | 68 | <span style="color:red">**2**</span> | 278 | 18 / 28 |
+| P6.INSERTION | <span style="color:red">**1**</span> | 22 | 133 | <span style="color:red">**1**</span> | 157 | 38 / 66 |
+| P6.CTX_TENSE | 24 | 61 | <span style="color:red">**9**</span> | <span style="color:red">**0**</span> | 94 | 31 / 57 |
+| P6.CTX_CONJ_ADV | <span style="color:red">**1**</span> | <span style="color:red">**12**</span> | <span style="color:red">**5**</span> | <span style="color:red">**0**</span> | 18 | 62 / 102 |
+| P6.CTX_PRONOUN | <span style="color:red">**7**</span> | <span style="color:red">**7**</span> | <span style="color:red">**0**</span> | <span style="color:red">**0**</span> | 14 | 66 / 106 |
+| P7.DETAIL | 78 | 235 | 168 | <span style="color:red">**6**</span> | 487 | 14 / 24 |
+| P7.INFERENCE | <span style="color:red">**5**</span> | 72 | 175 | 43 | 295 | 15 / 25 |
+| P7.MAIN_PURPOSE | 58 | 100 | 36 | <span style="color:red">**0**</span> | 194 | 20 / 30 |
+| P7.TRUE_INDICATED | <span style="color:red">**11**</span> | 101 | 61 | <span style="color:red">**5**</span> | 178 | 24 / 44 |
+| P7.NOT_TRUE | <span style="color:red">**1**</span> | 26 | 132 | <span style="color:red">**1**</span> | 160 | 38 / 62 |
+| P7.SYNONYM | <span style="color:red">**5**</span> | 62 | 47 | <span style="color:red">**1**</span> | 115 | 34 / 54 |
+| P7.DETAIL_NUMBER | 35 | 34 | 33 | <span style="color:red">**6**</span> | 108 | 14 / 24 |
+| P7.REQUEST_ACTION | <span style="color:red">**16**</span> | 65 | <span style="color:red">**15**</span> | <span style="color:red">**1**</span> | 97 | 28 / 58 |
+| P7.REASON | <span style="color:red">**6**</span> | 48 | 28 | <span style="color:red">**0**</span> | 82 | 34 / 56 |
+| P7.INFER_WHO | <span style="color:red">**12**</span> | 35 | 22 | <span style="color:red">**2**</span> | 71 | 26 / 54 |
+| P7.INTENT | <span style="color:red">**0**</span> | <span style="color:red">**17**</span> | 49 | <span style="color:red">**0**</span> | 66 | 43 / 73 |
+| P7.INSERTION | <span style="color:red">**0**</span> | <span style="color:red">**0**</span> | 45 | <span style="color:red">**3**</span> | 48 | 57 / 87 |
+| P7.INFER_NEXT | <span style="color:red">**2**</span> | <span style="color:red">**10**</span> | <span style="color:red">**7**</span> | <span style="color:red">**2**</span> | 21 | 59 / 99 |
 
-- 合计需补：到每格 20 题 0 题；到每格 30 题 0 题。
+- 合计需补：到每格 20 题 912 题；到每格 30 题 1593 题。
 
 ### 手册主章分布
 
-
+第1章 612 / 第2章 426 / 第3章 400 / 第4章 233 / 第5章 1087 / 第6章 230 / 第7章 3 / 第8章 744 / 第9章 452 / 第10章 450 / 第11章 218
 

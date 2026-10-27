@@ -16,10 +16,12 @@
 - 私有 P5 每 10 题一次（960 单位），公开 P5 每 5 题（376 单位）。速度约 9 单位/分钟。
 - work/diff/err.log 仅诊断用，不提交（可能含私有题模型输出片段）。
 
+- 存活/进度：`bash work/diff/poll.sh 110`（沙箱重启会杀后台进程，poll 自动重启）。
+
 ## 状态
 - [x] 试点 20 题（质量可用：特征合理、章节/技巧贴题；分数偏中段）
-- [ ] 公开全量
-- [ ] 私有全量
-- [ ] merge + 报告
-- [ ] build 接入 + 测试
-- [ ] grep 私有文本 + 提交推送
+- [x] 公开全量（1511/1511；中途加 reasoning_effort=low，思考 token ↓~85%）
+- [x] 私有全量（4855/4855，960 单位 0 失败）
+- [x] merge + 报告 docs/review/difficulty_v2_report.md
+- [x] build 接入 + 测试（fsrs/planner/predict/smoke 公开+私有/offline/ui_screens 全过）
+- [x] grep 私有文本（0 命中；dist 4 条为公开题本身重合）+ 提交推送
