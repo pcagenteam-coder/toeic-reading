@@ -9,3 +9,11 @@
   3. tier 2（42 条）：其余（动词时态语态、非谓语、代词、关系词、比较、特殊句式），按 target_band 由低到高。
 - `meta.order_by_band`：各档（≤500 / 600 / 730 / 860+）最小技巧集覆盖到的节点及顺序，App 可按用户目标档取用。
 - 解析与微讲解的关联：`data/explanations/zh_open_v1.json` 每题的 `node` 与 `tip_strategy_id` 可回链到本文件的 `node` / `strategy_ids`。
+
+# 《新人工作手册》handbook_v1
+
+- 文件：`handbook_v1.json`；生成/核对脚本 `work/handbook/gen.py`（Kunyou deepseek-v4.1-flash-1017，全部原创；每题由模型独立作答一遍，答案与键不一致或判定不唯一即重生成，最多 4 轮）。规格：`docs/ux/UX_SPEC_v2.md` §5。
+- 顶层：`meta`{version, model, license, chapters, items, key_mismatch_regenerated（核对不一致被重生成次数）, regen_total}、`chapters`[12]。
+- 章：`chapter`(1–12) · `part`(5/6/7) · `topic`（章目） · `mentor`（Ken/Mia/Leo/Dana） · `title`（职场化标题） · `trick`[≤3 行口诀] · `signals`[适用信号] · `example`（示范题，另含 `steps`[3 步拆解]） · `practice`[5 题，由易到难]。
+- 题：`id`（`HB05-3`；`-0`=示范题） · `band`（基础/进阶/熟练/真考+；练习为 基础/进阶/进阶/熟练/真考+） · `ref_seconds`（参考用时） · `passage`（P5 为 null；P6/P7 为 [{type, title, text}]，多篇 2 个） · `question`（P5 含 `_____`；P6 空格记作 `[BLANK]`） · `options`{A–D} · `answer` · `explain_zh`（中文解析） · `distractors`{错误字母: 中文排除理由}。
+- 通关（规格）：5 题对 4 且平均用时 ≤ ref_seconds。
