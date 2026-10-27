@@ -6,20 +6,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ST = os.path.join(HERE, 'state.json'); OUTF = os.path.join(HERE, '../../data/lessons/handbook_v1.json')
 MODEL = 'deepseek-v4.1-flash-1017'; lock = threading.Lock()
 
-def chat(msgs, max_tokens=6000, temp=0.7):
-    body = json.dumps({'model': MODEL, 'messages': msgs, 'max_tokens': max_tokens, 'temperature': temp,
-                       'response_format': {'type': 'json_object'}})
-    err = None
-    for a in range(3):
-        try:
-            r = subprocess.run(['curl', '-s', '--max-time', '420', 'https://api.kunyou.asia/v1/chat/completions',
-                                '-H', 'Content-Type: application/json', '-d', '@-'], input=body, capture_output=True, text=True, timeout=430)
-            c = json.loads(r.stdout)['choices'][0]['message']['content']
-            c = re.sub(r'^```(json)?|```$', '', c.strip()).strip()
-            return json.loads(c)
-        except Exception as e:
-            err = e; time.sleep(2 + 3 * a)
-    raise RuntimeError(f'api fail: {err}')
+import sys; sys.path.insert(0, os.path.join(HERE, '../llm'))
+from multi_chat import chat as _mc
+import multi_chat, threading as _t; multi_chat.SEM['kunyou'] = _t.BoundedSemaphore(5)  # Kunyou 另有难度重评子任务在用，留余量
+def chat(msgs, max_tokens=6000, temp=0.7, prefer='igrok'):
+    msgs = [dict(m) for m in msgs]; msgs[-1]['content'] += '\n\n只输出一个 JSON 对象，不要任何其他文字。'
+    return _mc(msgs, max_tokens, temp, prefer)
 
 # (id, part, 章目, 出题要求, 人物)
 CH = [
@@ -80,7 +72,7 @@ def solve(it, part):
         t += f"[{d.get('type')}] {d.get('title','')}\n{d.get('text','')}\n\n"
     t += f"Question: {it['question']}\n" + '\n'.join(f'({k}) {v}' for k, v in it['options'].items())
     s = chat([{'role': 'system', 'content': f'你是托业满分考生。独立作答这道 Part {part} 题。只输出 JSON：{{"answer":"字母","confidence":0到1,"unique":true/false（是否只有一个选项正确）,"reason":"一句中文"}}'},
-              {'role': 'user', 'content': t}], 4000, 0)
+              {'role': 'user', 'content': t}], 4000, 0, 'kunyou')
     return s
 
 def ok_item(it):
@@ -95,7 +87,7 @@ def check(it, part):
     return (a == it['answer'] and s.get('unique', True) is not False), s
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--workers', type=int, default=10); ap.add_argument('--rounds', type=int, default=4)
+    ap = argparse.ArgumentParser(); ap.add_argument('--workers', type=int, default=15); ap.add_argument('--rounds', type=int, default=4)
     a = ap.parse_args()
     st = json.load(open(ST)) if os.path.exists(ST) else {'ch': {}, 'log': {'mismatch': 0, 'regen': 0}}
     def save():

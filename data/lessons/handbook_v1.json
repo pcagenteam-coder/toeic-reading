@@ -1,0 +1,2029 @@
+{
+ "meta": {
+  "version": "handbook_v1",
+  "model": "deepseek-v4.1-flash-1017",
+  "license": "original (LLM-generated, independently re-solved)",
+  "chapters": 12,
+  "items": 72,
+  "key_mismatch_regenerated": 9,
+  "regen_total": 9,
+  "answer_balanced": "options reshuffled (seed 20261027), letters in explanations remapped, re-verified"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "part": 5,
+   "topic": "词性秒判",
+   "mentor": "Ken",
+   "title": "Ken 的词性三秒判",
+   "trick": [
+    "先看空格前后：冠词/形容词后多是名词",
+    "be 动词或系动词后优先形容词",
+    "修饰动词或整句，多半填副词"
+   ],
+   "signals": [
+    "空格前有 the、a、this、his 等限定词",
+    "空格前是 be 动词、look、remain、seem 等",
+    "空格后紧接动词、形容词或整个从句"
+   ],
+   "example": {
+    "passage": null,
+    "question": "The facilities team will conduct a _____ inspection of the ventilation system before the building reopens.",
+    "options": {
+     "A": "comprehensive",
+     "B": "comprehend",
+     "C": "comprehension",
+     "D": "comprehensively"
+    },
+    "answer": "A",
+    "explain_zh": "空格前有冠词 a，后面紧跟名词 inspection，因此需要形容词来修饰名词，comprehensive 符合。comprehend 是动词，comprehensively 是副词，不能直接修饰名词，comprehension 是名词，与 inspection 搭配会形成两个名词并列且语义不通。",
+    "distractors": {
+     "B": "动词，不能放在 a 与名词之间修饰 inspection。",
+     "C": "名词，与 inspection 并列后结构混乱，且不符合“全面检查”的语义。",
+     "D": "副词，通常修饰动词或形容词，不能直接修饰名词 inspection。"
+    },
+    "steps": [
+     "识别信号：空格前是冠词 a，空格后是名词 inspection。",
+     "运用招式：a + _____ + 名词，空格处需要形容词。",
+     "排除确认：B 动词、D 副词、C 名词均不合结构，只有 A 形容词 comprehensive 成立。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 20,
+    "id": "HB01-0"
+   },
+   "practice": [
+    {
+     "passage": null,
+     "question": "The new printer at Halvorsen is very _____ and rarely needs repairs.",
+     "options": {
+      "A": "reliability",
+      "B": "reliable",
+      "C": "rely",
+      "D": "reliably"
+     },
+     "answer": "B",
+     "explain_zh": "空格前有 be 动词 is 和程度副词 very，后面由 and 连接 rarely needs repairs，说明这里需要形容词作表语，描述打印机“可靠的”。reliable 是形容词，符合 is very _____ 的结构。rely 是动词，reliably 是副词，reliability 是名词，均不能在此结构中作表语。",
+     "distractors": {
+      "A": "reliability 是名词，不能直接受 very 修饰并作表语。",
+      "C": "rely 是动词原形，不能放在 is very 后作表语。",
+      "D": "reliably 是副词，不能作 be 动词后的表语。"
+     },
+     "band": "基础",
+     "ref_seconds": 15,
+     "id": "HB01-1"
+    },
+    {
+     "passage": null,
+     "question": "Before approving the merger, Halvorsen's legal team requested a more _____ review of the potential risks.",
+     "options": {
+      "A": "comprehension",
+      "B": "comprehend",
+      "C": "comprehensive",
+      "D": "comprehensively"
+     },
+     "answer": "C",
+     "explain_zh": "空格前有“a more”，空格后是名词“review”，因此需要一个形容词来修饰 review。comprehensive 意为“全面的”，符合“更全面的审查”这一商务语境。其余选项分别为动词、名词和副词，均不能直接修饰名词 review。",
+     "distractors": {
+      "A": "comprehension 是名词，不能修饰另一名词 review。",
+      "B": "comprehend 是动词，不能放在 more 后修饰名词 review。",
+      "D": "comprehensively 是副词，不能修饰名词 review。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB01-2"
+    },
+    {
+     "passage": null,
+     "question": "The procurement team has requested that all vendors submit a _____ description of any proposed changes to the delivery schedule.",
+     "options": {
+      "A": "detailing",
+      "B": "detail",
+      "C": "detailed",
+      "D": "details"
+     },
+     "answer": "C",
+     "explain_zh": "空格前有冠词 a、后有名词 description，需要形容词修饰名词，故填 detailed（详细的）。detail 是名词/动词原形，detailing 是现在分词，details 是复数名词，均不能直接放在 a 与 description 之间。",
+     "distractors": {
+      "A": "detailing 为分词形式，此处不构成进行时或分词短语修饰结构。",
+      "B": "detail 为名词或动词原形，不能修饰后面的名词 description。",
+      "D": "details 为复数名词，放入后形成两个并列名词，结构不通。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB01-3"
+    },
+    {
+     "passage": null,
+     "question": "Because the merger required extensive rebranding, the marketing director asked the design team to revise the campaign materials _____ before the regional managers arrived.",
+     "options": {
+      "A": "cautious",
+      "B": "cautionary",
+      "C": "cautiously",
+      "D": "caution"
+     },
+     "answer": "C",
+     "explain_zh": "空格前是完整的动宾结构 revise the campaign materials，空格后是 before 引导的时间状语，说明此处需要一个修饰动词 revise 的副词，故填 cautiously。D 项为名词/动词原形，A 项为形容词，均不能直接修饰动词；B 项 cautionary 虽为形容词但语义为“告诫性的”，也不修饰动作。",
+     "distractors": {
+      "A": "cautious 是形容词，不能修饰动词 revise，且与 materials 搭配语义不通。",
+      "B": "cautionary 意为“告诫性的”，是形容词，既不修饰动词也不符合“谨慎修改材料”的语境。",
+      "D": "caution 是名词或动词，无法修饰动词 revise。"
+     },
+     "band": "熟练",
+     "ref_seconds": 25,
+     "id": "HB01-4"
+    },
+    {
+     "passage": null,
+     "question": "At Halvorsen, the revised procurement guidelines were _____ drafted to ensure that any potential conflict of interest would be disclosed before a contract was awarded.",
+     "options": {
+      "A": "rigorousness",
+      "B": "rigorously",
+      "C": "rigor",
+      "D": "rigorous"
+     },
+     "answer": "B",
+     "explain_zh": "空格前是 were，空格后是 drafted，二者构成被动语态，空格处需要副词来修饰过去分词 drafted。rigorously 是副词，表示“严谨地”，与 drafted 搭配自然。虽然 were 后常接形容词，但此处 drafted 已构成被动结构，不能仅按系动词后接形容词来判断。",
+     "distractors": {
+      "A": "rigorousness 是名词，不能修饰 drafted。",
+      "C": "rigor 是名词，不能修饰过去分词 drafted。",
+      "D": "rigorous 是形容词，不能用来修饰 drafted 构成被动语态。"
+     },
+     "band": "真考+",
+     "ref_seconds": 30,
+     "id": "HB01-5"
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "part": 5,
+   "topic": "时态与语态",
+   "mentor": "Ken",
+   "title": "Ken 的时态信号锚定法",
+   "trick": [
+    "先找时间词，定时态基点",
+    "再看主语与动词，判主动被动",
+    "最后查主谓一致，排除干扰项"
+   ],
+   "signals": [
+    "看到 By the time、last、ago、yesterday，先定过去时间线",
+    "看到 since、for、so far、recently，优先现在完成",
+    "主语是动作承受者，或句末有 by + 施动者，考虑被动"
+   ],
+   "example": {
+    "passage": null,
+    "question": "By the time the client's legal team _____ the revised contract, Halvorsen had already booked the conference room for the signing ceremony.",
+    "options": {
+     "A": "was received",
+     "B": "had received",
+     "C": "receiving",
+     "D": "received"
+    },
+    "answer": "D",
+    "explain_zh": "By the time 引导时间状语从句，主句用 had already booked 表示更早完成的动作，从句用一般过去 received 表示到那时发生的动作。主语 the client's legal team 是 receive 的执行者，因此用主动语态。A 为被动，C 为非谓语，均不符合句子结构。",
+    "distractors": {
+     "A": "was received 为被动，但 legal team 是接收合同的一方，主动关系明确。",
+     "B": "had received 为过去完成主动，和主句 had already booked 叠用会让两个过去动作的先后失焦。",
+     "C": "receiving 为非谓语，导致从句缺少谓语动词。"
+    },
+    "steps": [
+     "识别信号：By the time 从句 + 主句 had already booked，时间线落在过去。",
+     "运用招式：主句过去完成表更早，从句用一般过去 received；team 是施动者，用主动。",
+     "排除确认：B 双过去完成失焦，A 被动错，C 非谓语缺谓语；选 D。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 20,
+    "id": "HB02-0"
+   },
+   "practice": [
+    {
+     "passage": null,
+     "question": "Every Monday, the office manager _____ the meeting room schedule.",
+     "options": {
+      "A": "updating",
+      "B": "updates",
+      "C": "is updated",
+      "D": "updated"
+     },
+     "answer": "B",
+     "explain_zh": "时间标志词 Every Monday 表示经常性、习惯性动作，时态基点应为一般现在时。主语 the office manager 是单数，且主动执行 update 这一动作，因此用 updates。C 是被动语态，但经理不是“被更新”的对象；D 是过去时，与 Every Monday 不符；A 是非谓语形式，不能单独作谓语。",
+     "distractors": {
+      "A": "updating 是现在分词/动名词，不能在此单独充当谓语。",
+      "C": "is updated 是被动语态，但主语 office manager 是主动更新日程的人，不是被更新的对象。",
+      "D": "updated 是过去时，与 Every Monday 表示的经常性动作不符。"
+     },
+     "band": "基础",
+     "ref_seconds": 15,
+     "id": "HB02-1"
+    },
+    {
+     "passage": null,
+     "question": "Before the visiting clients arrive tomorrow morning, the conference room _____ with the new projection system and name cards.",
+     "options": {
+      "A": "will equip",
+      "B": "has equipped",
+      "C": "will have been equipped",
+      "D": "equipped"
+     },
+     "answer": "C",
+     "explain_zh": "时间从句“Before ... arrive tomorrow morning”指向将来，主句应使用将来时；主语“the conference room”是“equip”的承受者，需用被动语态，因此“will have been equipped”最合适，表示在客户到达前完成布置。",
+     "distractors": {
+      "A": "“will equip”为主动将来时，主语会议室不能执行 equip 动作。",
+      "B": "“has equipped”为主动完成时，但会议室不能主动装备别物，主被动关系错误。",
+      "D": "“equipped”为过去式或过去分词，缺乏助动词，无法构成符合将来时间关系的谓语。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB02-2"
+    },
+    {
+     "passage": null,
+     "question": "By the time the quarterly budget meeting begins on Thursday, the travel expense forms _____ to every regional office.",
+     "options": {
+      "A": "had been sent",
+      "B": "will have been sent",
+      "C": "will send",
+      "D": "have been sending"
+     },
+     "answer": "B",
+     "explain_zh": "时间标志词“By the time the quarterly budget meeting begins on Thursday”指向将来某一时点，且强调该时点之前已经完成，因此主句要用将来完成时。主语“the travel expense forms”是“被寄送”的对象，与 send 构成被动关系，故用被动语态。复数主语 forms 对应 have，所以 will have been sent 完全符合。",
+     "distractors": {
+      "A": "过去完成时需以过去时间为基点，而从句用一般现在时 begins，时间基点在将来。",
+      "C": "主动语态，报销单本身不能“寄送”，且未体现完成含义。",
+      "D": "现在完成进行时表持续动作，与“周四会议开始前已完成”的将来时间基点不符。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB02-3"
+    },
+    {
+     "passage": null,
+     "question": "Once the supplier's revised pricing schedule _____ by the procurement committee at next Tuesday's review meeting, Halvorsen will be able to confirm the annual supply agreement before the fiscal year begins.",
+     "options": {
+      "A": "is approved",
+      "B": "approving",
+      "C": "approves",
+      "D": "will be approved"
+     },
+     "answer": "A",
+     "explain_zh": "句首 Once 引导时间状语从句，主句用将来表达 will be able to confirm，因此从句必须用一般现在时表示将来，排除 D 的 will be approved。从句主语 the revised pricing schedule 是“被采购委员会审批”的对象，与 approve 构成被动关系，故用被动语态 is approved。C 为主动语态（价目表不会自己审批），B 为非谓语形式，从句无法构成完整谓语，均排除。",
+     "distractors": {
+      "B": "现在分词属非谓语形式，该从句因此缺少谓语动词，故排除。",
+      "C": "主动语态，但主语 pricing schedule 是被审批的对象，不能执行 approve 这个动作，故排除。",
+      "D": "Once 引导的时间状语从句不能用一般将来时，须用一般现在时表将来，故排除。"
+     },
+     "band": "熟练",
+     "ref_seconds": 25,
+     "id": "HB02-4"
+    },
+    {
+     "passage": null,
+     "question": "Not until the revised safety protocols _____ to every warehouse supervisor will Halvorsen resume full-scale distribution at its Rotterdam facility.",
+     "options": {
+      "A": "will be distributed",
+      "B": "distribute",
+      "C": "having been distributed",
+      "D": "are distributed"
+     },
+     "answer": "D",
+     "explain_zh": "时间标志词“Not until”引导的时间状语从句中，主句用将来时“will ... resume”时，从句应使用一般现在时表示将来，因此排除A。主语“protocols”与动词distribute之间是被动关系，且protocols为复数，故用“are distributed”。B为主动形式，C为非谓语形式，均不能构成完整从句。",
+     "distractors": {
+      "A": "时间状语从句中不能用will表示将来，且与“Not until”结构不搭配。",
+      "B": "protocols不能主动执行distribute，且此处需要被动语态。",
+      "C": "非谓语形式不能充当从句谓语，导致句子结构不完整。"
+     },
+     "band": "真考+",
+     "ref_seconds": 30,
+     "id": "HB02-5"
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "part": 5,
+   "topic": "介词 vs 连词",
+   "mentor": "Ken",
+   "title": "Ken 的尾词定词性法",
+   "trick": [
+    "空格后接名词短语，选介词",
+    "空格后接完整从句，选连词",
+    "副词单独用，两边都不沾"
+   ],
+   "signals": [
+    "空格后是 the、our、a 等限定词开头的名词短语",
+    "空格后出现主语加谓语（如 we submitted、it rains）",
+    "选项中同时出现 despite 与 although、because of 与 because"
+   ],
+   "example": {
+    "passage": null,
+    "question": "_____ the facilities team had already reserved the Bergen conference room, the client requested a video link for the quarterly review.",
+    "options": {
+     "A": "Although",
+     "B": "Despite",
+     "C": "However",
+     "D": "Because of"
+    },
+    "answer": "A",
+    "explain_zh": "空格后是完整从句“the facilities team had already reserved the Bergen conference room”，有主语和谓语，因此需要连词，Although 符合。Despite 与 Because of 是介词，后面只能接名词短语；However 是副词，不能引导从句。语义上前后为让步关系，Although 也吻合。",
+    "steps": [
+     "第1步：看空格后——出现主语 the facilities team 和谓语 had reserved，是从句信号。",
+     "第2步：套口诀“接从句选连词”，在选项中锁定 Although。",
+     "第3步：Despite、Because of 后缺名词短语不成立；However 是副词，须加逗号另起分句，故排除，确认 A。"
+    ],
+    "distractors": {
+     "B": "Despite 是介词，后面必须接名词短语，不能直接跟完整从句。",
+     "C": "However 是副词，不能引导从句，且不能直接置于句首修饰整句。",
+     "D": "Because of 是介词短语，后接名词短语，且语义为因果，与句意不符。"
+    },
+    "band": "进阶",
+    "ref_seconds": 20,
+    "id": "HB03-0"
+   },
+   "practice": [
+    {
+     "passage": null,
+     "question": "_____ the new safety rules at Halvorsen, all employees must wear their ID badges.",
+     "options": {
+      "A": "Because",
+      "B": "Because of",
+      "C": "However",
+      "D": "Although"
+     },
+     "answer": "B",
+     "explain_zh": "空格后是“the new safety rules at Halvorsen”这一名词短语，不是完整从句，因此应选介词短语 Because of 表示原因。Because 和 Although 都是连词，后面需要接完整从句；However 是副词，不能直接连接名词短语。",
+     "distractors": {
+      "A": "Because 是连词，后面应接完整从句，不能直接接名词短语。",
+      "C": "However 是副词，不能放在名词短语前作连接词。",
+      "D": "Although 是连词，后面应接完整从句，且此处语义不符。"
+     },
+     "band": "基础",
+     "ref_seconds": 15,
+     "id": "HB03-1"
+    },
+    {
+     "passage": null,
+     "question": "_____ the new printing equipment was delivered to Halvorsen's headquarters, the facilities team arranged a brief training session for the staff.",
+     "options": {
+      "A": "Once",
+      "B": "Despite",
+      "C": "Because of",
+      "D": "However"
+     },
+     "answer": "A",
+     "explain_zh": "空格后是完整从句“the new printing equipment was delivered...”，主语和谓语齐全，因此需要连词。Once 作连词表示“一旦……”，引导时间/条件从句，符合句意：设备一送到，设施团队就安排了培训。",
+     "distractors": {
+      "B": "Despite 是介词，后面只能接名词短语，不能接完整从句。",
+      "C": "Because of 是介词短语，后面需接名词性成分，且语义上与“安排培训”的因果关系不如 Once 自然。",
+      "D": "However 是副词，不能直接引导从句，且位置与逗号结构不符。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB03-2"
+    },
+    {
+     "passage": null,
+     "question": "_____ the renovation of the east wing was still underway, the Halvorsen staff were temporarily moved to the annex on the fourth floor.",
+     "options": {
+      "A": "Despite",
+      "B": "Because of",
+      "C": "However",
+      "D": "Although"
+     },
+     "answer": "D",
+     "explain_zh": "空格后是完整从句“the renovation of the east wing was still underway”，主语 the renovation 与谓语 was 齐全，因此需要连词。Although 引导让步状语从句，句意为“尽管东翼的翻修仍在进行”，与主句“员工临时搬到四楼附楼”逻辑通顺。Despite 和 Because of 为介词，后只能接名词短语；However 为副词，不能引导从句。",
+     "distractors": {
+      "A": "Despite 是介词，后面只能接名词短语（如 Despite the renovation），不能接完整从句。",
+      "B": "Because of 是介词短语，后接名词短语，且表原因，与本题让步逻辑不符。",
+      "C": "However 是连接副词，需用分号或句号与主句隔开单独使用，不能直接引导从句。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB03-3"
+    },
+    {
+     "passage": null,
+     "question": "_____ the supplier's repeated delivery delays during the peak season, Halvorsen's logistics manager chose to renew the contract because the vendor had agreed to reduce the unit price and shorten the lead time.",
+     "options": {
+      "A": "Despite",
+      "B": "However",
+      "C": "Although",
+      "D": "Because of"
+     },
+     "answer": "A",
+     "explain_zh": "空格后接的是名词短语 the supplier's repeated delivery delays during the peak season，不是完整从句，所以应选介词 Despite。Although 是连词，后面需要接完整从句；However 是副词，不能直接接名词短语；Because of 虽是介词，但与后文“因降价和缩短交期而续约”的逻辑相反。",
+     "distractors": {
+      "B": "However 是连接副词，不能直接置于名词短语前作介词使用。",
+      "C": "Although 是从属连词，后面必须接完整从句，不能直接接名词短语。",
+      "D": "Because of 虽可接名词短语，但“由于供应商反复延迟交货而续约”与后文给出的续约理由逻辑相反。"
+     },
+     "band": "熟练",
+     "ref_seconds": 25,
+     "id": "HB03-4"
+    },
+    {
+     "passage": null,
+     "question": "_____ the fabrication vendor's written assurances that the custom brackets would arrive by Friday, Halvorsen's assembly line remained idle throughout the weekend.",
+     "options": {
+      "A": "Although",
+      "B": "Because of",
+      "C": "Despite",
+      "D": "However"
+     },
+     "answer": "C",
+     "explain_zh": "空格后是名词短语 the fabrication vendor's written assurances...，不是完整从句，因此应选介词 Despite，表示“尽管供应商书面保证……”。主句 remained idle throughout the weekend 与“保证周五到货”形成让步转折，语义也吻合。Although 后须接完整从句；However 是副词，不能直接引导该名词短语；Because of 虽可接名词短语，但“因为保证到货而生产线闲置”因果不合逻辑。",
+     "distractors": {
+      "A": "Although 是连词，后面必须接完整从句，而本空格后是名词短语。",
+      "B": "Because of 虽可接名词短语，但这里与主句“生产线闲置”不构成合理因果关系。",
+      "D": "However 是副词，不能直接放在名词短语前充当引导词。"
+     },
+     "band": "真考+",
+     "ref_seconds": 30,
+     "id": "HB03-5"
+    }
+   ]
+  },
+  {
+   "chapter": 4,
+   "part": 5,
+   "topic": "代词",
+   "mentor": "Ken",
+   "title": "Ken 的格位定位法",
+   "trick": [
+    "先看空格前后：动词后缺宾语用宾格",
+    "介词后接宾格；名词前用所有格",
+    "主语位用主格，反身代词要有同指主语"
+   ],
+   "signals": [
+    "空格在及物动词或介词之后",
+    "空格后紧跟名词，表示所属关系",
+    "句首或谓语前缺主语"
+   ],
+   "example": {
+    "passage": null,
+    "question": "Ms. Adler asked the facilities team to reserve the training room for _____ and two visiting auditors.",
+    "options": {
+     "A": "she",
+     "B": "herself",
+     "C": "hers",
+     "D": "her"
+    },
+    "answer": "D",
+    "explain_zh": "空格位于介词 for 之后，且与 and two visiting auditors 并列作介词宾语，因此要用宾格 her。A 项 she 是主格，不能作介词宾语；C 项 hers 是名词性物主代词，指“她的（东西）”，与语境不符；B 项 herself 是反身代词，但句中主语 Ms. Adler 与空格所指不是同一人，不能同指。",
+    "distractors": {
+     "A": "主格代词不能充当介词 for 的宾语。",
+     "B": "反身代词须与主语同指，这里指另一位同事，不能同指。",
+     "C": "名词性物主代词表示“她的东西”，此处需要指人的宾格。"
+    },
+    "steps": [
+     "第 1 步识别信号：空格紧跟在介词 for 后面，且后面用 and 连接并列成分。",
+     "第 2 步运用招式：介词后缺宾语，填宾格 her。",
+     "第 3 步排除并确认：she 是主格、hers 是名词性物主、herself 需与主语同指，均排除，故选 D。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 20,
+    "id": "HB04-0"
+   },
+   "practice": [
+    {
+     "passage": null,
+     "question": "Mr. Nakamura will explain the new vacation policy to _____ at tomorrow's meeting.",
+     "options": {
+      "A": "our",
+      "B": "we",
+      "C": "us",
+      "D": "ourselves"
+     },
+     "answer": "C",
+     "explain_zh": "空格前是介词 to，介词后面必须接人称代词的宾格，所以用 us。we 是主格，不能作介词宾语；our 是所有格，后面必须接名词；ourselves 是反身代词，需要与主语同指，而本句主语是 Mr. Nakamura，与「我们」不同指，因此排除。",
+     "distractors": {
+      "A": "our 是所有格，后面必须接名词，不能单独使用。",
+      "B": "we 是主格，不能放在介词 to 后面作宾语。",
+      "D": "ourselves 是反身代词，需与主语同指，本句主语 Mr. Nakamura 并非「我们」。"
+     },
+     "band": "基础",
+     "ref_seconds": 15,
+     "id": "HB04-1"
+    },
+    {
+     "passage": null,
+     "question": "After reviewing the expense reports, Ms. Sato asked Halvorsen's regional managers to resubmit _____ receipts with the original signatures.",
+     "options": {
+      "A": "their",
+      "B": "them",
+      "C": "theirs",
+      "D": "they"
+     },
+     "answer": "A",
+     "explain_zh": "空格后紧跟名词 receipts，需要一个所有格代词来限定该名词；此处指代前面的 Halvorsen's regional managers，因此用 their。they 是主格，不能修饰名词；them 是宾格；theirs 是名词性物主代词，后面不能再接名词。",
+     "distractors": {
+      "B": "them 为宾格，不能修饰后面的名词 receipts。",
+      "C": "theirs 为名词性物主代词，后面不能直接接名词 receipts。",
+      "D": "they 为主格，不能放在名词 receipts 前作限定语。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB04-2"
+    },
+    {
+     "passage": null,
+     "question": "Even though the warehouse employees had already checked the shipment against the packing list, the quality inspector asked _____ to verify the serial numbers a second time before the container was released.",
+     "options": {
+      "A": "their",
+      "B": "they",
+      "C": "them",
+      "D": "themselves"
+     },
+     "answer": "C",
+     "explain_zh": "空前的及物动词 asked 后面缺少宾语，且被要求核查序列号的是前文的 warehouse employees，因此用宾格 them 指代他们。they 是主格，只能充当从句或句子的主语；their 是形容词性所有格，后面必须紧跟名词；themselves 是反身代词，需与句子主语同指，而本句主语是单数的 the quality inspector，显然不是被要求核查的一方。",
+     "distractors": {
+      "A": "their 是所有格，后面需接名词，而空格后是 to verify。",
+      "B": "they 为主格，不能在 asked 后作宾语。",
+      "D": "themselves 要求与句子主语同指，但本句主语是 the quality inspector，并非 warehouse employees。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB04-3"
+    },
+    {
+     "passage": null,
+     "question": "Because the consultant had already reviewed the proposal, the procurement director asked Ms. Iversen and _____ to summarize our concerns before the Halvorsen board meeting.",
+     "options": {
+      "A": "me",
+      "B": "I",
+      "C": "my",
+      "D": "myself"
+     },
+     "answer": "A",
+     "explain_zh": "空格位于 asked 的宾语位置，与 Ms. Iversen 并列，因此需要用宾格 me。句子的主语是 the procurement director，并不是说话者本人，所以反身代词 myself 缺少同指主语；my 是所有格，不能单独作宾语。",
+     "distractors": {
+      "B": "I 是主格，不能作 asked 的宾语。",
+      "C": "my 是所有格，后面缺少名词，不能单独作宾语。",
+      "D": "myself 是反身代词，但句中主语是 the procurement director，并非与说话者同指。"
+     },
+     "band": "熟练",
+     "ref_seconds": 25,
+     "id": "HB04-4"
+    },
+    {
+     "passage": null,
+     "question": "When the proposed merger was abruptly put on hold pending a regulatory review, Halvorsen’s chief executive, Ms. Lindqvist, took it upon _____ to reassure the regional managers before the internal announcement was circulated.",
+     "options": {
+      "A": "she",
+      "B": "hers",
+      "C": "her",
+      "D": "herself"
+     },
+     "answer": "D",
+     "explain_zh": "固定搭配 take it upon oneself to do sth. 意为“主动承担做某事的责任”，此处必须用反身代词，且与主语 Ms. Lindqvist 同指，因此选 herself。虽然 upon 是介词，但该结构中的 oneself 不能换成普通宾格 her。",
+     "distractors": {
+      "A": "she 是主格，不能作介词 upon 后该固定结构所需的代词。",
+      "B": "hers 是名词性物主代词，不能在此充当 take it upon oneself 中的反身代词。",
+      "C": "her 虽可作介词宾语，但 take it upon oneself 是固定反身结构，不能用普通宾格。"
+     },
+     "band": "真考+",
+     "ref_seconds": 30,
+     "id": "HB04-5"
+    }
+   ]
+  },
+  {
+   "chapter": 5,
+   "part": 5,
+   "topic": "词汇搭配与生词止损",
+   "mentor": "Ken",
+   "title": "Ken 的搭配止损法",
+   "trick": [
+    "生词不查，先圈固定搭配锚点",
+    "两轮排除，剩余选项再回句",
+    "单题 90 秒，超时先标记跳过"
+   ],
+   "signals": [
+    "空格前后出现介词、动词等固定搭配线索",
+    "四个选项词性相同、意思相近，且句中有生词",
+    "单题超过 1 分钟仍无法确定"
+   ],
+   "example": {
+    "passage": null,
+    "question": "Notwithstanding the temporary closure of the north entrance, all Halvorsen staff must _____ with the badge-scanning procedure at the east gate.",
+    "options": {
+     "A": "conform",
+     "B": "abide",
+     "C": "comply",
+     "D": "adhere"
+    },
+    "answer": "C",
+    "explain_zh": "空格后紧跟 with，而四个选项都表示“遵守”，因此先看介词搭配。comply with 是固定搭配；adhere 常接 to，conform 常接 to，abide 常接 by。即使 notwithstanding 是生词，也不必纠缠，凭 with 即可排除 D、A、B，选 C。",
+    "distractors": {
+     "A": "conform 通常接 to，不接 with。",
+     "B": "abide 通常接 by，不接 with。",
+     "D": "adhere 通常接 to，不接 with。"
+    },
+    "steps": [
+     "识别信号：空格后紧跟 with，四个选项都表示“遵守”，先锁定介词搭配。",
+     "运用招式：生词 notwithstanding 不查不纠缠，逐一试配；adhere、conform 常接 to，abide 常接 by。",
+     "排除确认：只剩 comply with，句意为“尽管北门临时关闭，员工仍须在东门遵守刷卡程序”，选 C。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 20,
+    "id": "HB05-0"
+   },
+   "practice": [
+    {
+     "passage": null,
+     "question": "Because the client changed the specifications at the last minute, the design team had to work overtime to ______ the Friday deadline.",
+     "options": {
+      "A": "arrive",
+      "B": "meet",
+      "C": "reach",
+      "D": "catch"
+     },
+     "answer": "B",
+     "explain_zh": "本题的固定搭配锚点是 deadline，商务英语中“按期完成截止日期”只能说 meet the deadline，因此选 B。遇到 specifications 等生词时，不必停下去查词，先圈出 deadline 这个锚点词，并计时 90 秒，超时就直接标记跳过；然后用两轮排除法：先按用法排除 arrive（该词不及物，且不表示“按期完成”）和 catch（常搭配 bus/train/cold 等，不与 deadline 搭配），再回到原句比较 meet 与 reach；reach 指“到达某地或某个数量”，不能表示“按期完成”。",
+     "distractors": {
+      "A": "arrive 是不及物动词，需要接 at 或 in，且不表示“按期完成截止日期”。",
+      "C": "reach 表示“到达（地点、数量、结论）”，不与 deadline 搭配表示“按期完成”。",
+      "D": "catch 常与 bus、train、cold 等搭配，不能与 deadline 构成“按期完成”的意思。"
+     },
+     "band": "基础",
+     "ref_seconds": 15,
+     "id": "HB05-1"
+    },
+    {
+     "passage": null,
+     "question": "The design team worked overtime to _____ the deadline for the client's prototype.",
+     "options": {
+      "A": "reach",
+      "B": "achieve",
+      "C": "meet",
+      "D": "fulfill"
+     },
+     "answer": "C",
+     "explain_zh": "固定搭配锚点是 deadline：商务英语中表示“按期完成截止期限”用 meet a deadline，reach、achieve、fulfill 虽都有“达到/完成”之意，但不能与 deadline 这样搭配。遇到生词时先不查，圈出 deadline 这一搭配锚点，再做两轮排除：先排除语义相近但不搭配的 achieve、fulfill，最后确认 meet；单题控制在 90 秒，超时先标记跳过。",
+     "distractors": {
+      "A": "reach 常表示到达某地或达到某水平，不能构成“按期完成截止期限”的固定搭配。",
+      "B": "achieve 多搭配 goal、result 等，不与 deadline 搭配。",
+      "D": "fulfill 多搭配 order、requirement、promise 等，不能与 deadline 搭配。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB05-2"
+    },
+    {
+     "passage": null,
+     "question": "The revised vendor agreement stipulates that all suppliers must _____ to Halvorsen's environmental standards before their contracts are renewed.",
+     "options": {
+      "A": "adhere",
+      "B": "abide",
+      "C": "object",
+      "D": "comply"
+     },
+     "answer": "A",
+     "explain_zh": "空格后紧跟介词 to，而句意是“供应商必须遵守 Halvorsen 的环保标准”，固定搭配 adhere to（遵守、遵循）是唯一正确项。comply 只能接 with、abide 只能接 by，介词不符可直接排除。object to 搭配虽然成立，但意为“反对”，与 stipulates...must 所表达的强制要求相矛盾。若句中出现不认识的 stipulate，不必回查：先圈出 to 这个搭配锚点，两轮排除后剩下 adhere，单题控制在 90 秒内。",
+     "distractors": {
+      "B": "abide 必须接 by（abide by），不能接 to。",
+      "C": "object to 搭配正确但意为“反对”，与“必须遵守标准”的语境相反。",
+      "D": "comply 必须接 with（comply with），不能接 to。"
+     },
+     "band": "进阶",
+     "ref_seconds": 20,
+     "id": "HB05-3"
+    },
+    {
+     "passage": null,
+     "question": "Ms. Lindqvist asked the procurement team to _____ the revised supplier agreement carefully before the renewal deadline, as several payment terms had been reworded since the previous version.",
+     "options": {
+      "A": "inspect",
+      "B": "observe",
+      "C": "review",
+      "D": "revise"
+     },
+     "answer": "C",
+     "explain_zh": "句意为“请采购团队在续约截止日前仔细_____修订后的供应商协议”，与“agreement（协议）”构成固定商务搭配的动词是 review the agreement（审阅协议），强调逐条阅读并把关内容，符合 carefully 与 before the renewal deadline 的语境。revise 指“修改”，但协议已由对方修订完毕，此处要的是审阅而非再改；inspect 用于检查设备、场所等实体；observe 指观察现象或遵守规定，均不与 agreement 搭配。遇到生词时不要停查，先圈出 agreement、payment terms、renewal deadline 等搭配锚点，两轮排除后把剩余选项带回原句验证，单题控制在 90 秒内，超时先标记跳过。",
+     "distractors": {
+      "A": "inspect 多用于检查设备、场所等实体对象，不与 agreement 搭配。",
+      "B": "observe 意为“观察、遵守”，不能与 agreement 构成“审阅协议”的搭配。",
+      "D": "revise 意为“修改”，协议已修订完成，此处需要的是审阅而非再修改。"
+     },
+     "band": "熟练",
+     "ref_seconds": 25,
+     "id": "HB05-4"
+    },
+    {
+     "passage": null,
+     "question": "Before renewing its supplier agreements, Halvorsen requires every vendor to _____ strictly with the revised anti-bribery provisions annexed to the procurement contract.",
+     "options": {
+      "A": "adhere",
+      "B": "comply",
+      "C": "observe",
+      "D": "abide"
+     },
+     "answer": "B",
+     "explain_zh": "空格后紧跟 with，先锁定固定搭配锚点：comply strictly with 表示“严格遵守”，符合 anti-bribery provisions 的语境。生词止损：不必查 annexed、provisions 等词，先圈 with 做搭配锚点，再用两轮排除——abide 后接 by，adhere 后接 to，observe 作“遵守”时通常及物使用，不接 with；单题控制在 90 秒内，超时先标记跳过。",
+     "distractors": {
+      "A": "adhere 表示“遵守”时固定搭配是 adhere to，不能接 with。",
+      "C": "observe 表示“遵守”时可及物使用，如 observe rules，不与 with 搭配。",
+      "D": "abide 表示“遵守”时固定搭配是 abide by，不能接 with。"
+     },
+     "band": "真考+",
+     "ref_seconds": 30,
+     "id": "HB05-5"
+    }
+   ]
+  },
+  {
+   "chapter": 6,
+   "part": 6,
+   "topic": "句子插入看前后句",
+   "mentor": "Mia",
+   "title": "Mia 的前后句衔接术",
+   "trick": [
+    "先看空后指代词",
+    "再找空前逻辑词",
+    "话题复现一线牵"
+   ],
+   "signals": [
+    "空后出现 this/these/they/it 等指代词",
+    "空前有 However、Therefore、Also 等逻辑词",
+    "前后句重复或近义出现同一话题词"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Upcoming Customer-Service Refresher",
+      "text": "Hi team,\nAs part of Halvorsen's spring service initiative, we will run a short pilot workshop on handling complex client requests next Tuesday. [BLANK] These sessions will be limited to 12 participants each, so please reserve your spot by Friday.\nThe workshop will focus on de-escalation techniques and clear documentation, and completion will count toward the annual training requirement.\nThanks,\nMia"
+     }
+    ],
+    "question": "Which sentence best fits [BLANK]?",
+    "options": {
+     "A": "We will also offer two repeat sessions later in May.",
+     "B": "The main lobby will be repainted during the same week.",
+     "C": "Please submit your travel receipts to Finance by Thursday.",
+     "D": "The cafeteria will close early on Friday for maintenance."
+    },
+    "answer": "A",
+    "explain_zh": "空后 These sessions 需要复数先行词，且全段围绕客户服务培训。A 的 two repeat sessions 正好承接空前 pilot workshop，又让 These sessions 有所指。B、D 属设施维护，C 属费用报销，均与培训话题无关。",
+    "distractors": {
+     "B": "讲大堂粉刷，属设施话题，无法承接培训安排。",
+     "C": "讲差旅收据报销，与客户服务培训无关。",
+     "D": "讲食堂提前关闭，属设施话题，与空后 These sessions 不衔接。"
+    },
+    "steps": [
+     "第1步识别信号：空后 These sessions 是复数指代，空前 pilot workshop 引出培训话题。",
+     "第2步运用招式：插入句要提供复数 sessions 的先行词，并延续培训安排，不能突然换话题。",
+     "第3步排除并确认：B、D 讲设施，C 讲报销，均与培训链断开；A 的 two repeat sessions 与 These sessions 对齐。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 40,
+    "id": "HB06-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "notice",
+       "title": "Visitor Sign-In Procedure",
+       "text": "Starting Monday, all visitors to Halvorsen's main office must sign in at the front desk. [BLANK] These badges must be worn at all times while visitors are in the building. This change helps us keep the building secure. Thank you for your cooperation."
+      }
+     ],
+     "question": "Which sentence best fits [BLANK]?",
+     "options": {
+      "A": "The front desk is closed during the lunch hour.",
+      "B": "After signing in, each visitor will receive a temporary badge.",
+      "C": "All employees should update their contact information this week.",
+      "D": "Visitors may park in the garage on weekdays."
+     },
+     "answer": "B",
+     "explain_zh": "空后一句出现“These badges”，需要前一句先提到 badge；B 中的“a temporary badge”正好提供指代对象。空前一句提到“sign in at the front desk”，B 的“After signing in”也形成自然衔接。其他选项都没有引入 badge，无法与“These badges”对应。",
+     "distractors": {
+      "A": "虽然提到 front desk，但没有引出 badge，空后“These badges”失去指代对象。",
+      "C": "话题变成员工联系方式，与访客登记和 badge 无关。",
+      "D": "虽然提到访客停车，但没有引出 badge，不能衔接空后一句。"
+     },
+     "band": "基础",
+     "ref_seconds": 30,
+     "id": "HB06-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "notice",
+       "title": "New Visitor Check-In Procedure",
+       "text": "To improve building security, Halvorsen will introduce a new visitor check-in process at its headquarters on May 6. All guests must first report to the security counter in the main lobby. [BLANK] They will then receive a temporary badge and be asked to sign the visitor log. Badges must be returned to the counter when guests leave."
+      }
+     ],
+     "question": "Which sentence best fits [BLANK]?",
+     "options": {
+      "A": "A similar check-in system was introduced at Halvorsen's Oslo office last month.",
+      "B": "Halvorsen employees must wear their company ID cards visibly at all times.",
+      "C": "The main lobby also contains a small coffee shop and a branch of a local bank.",
+      "D": "Guests should show a government-issued photo ID and name the Halvorsen employee they are visiting."
+     },
+     "answer": "D",
+     "explain_zh": "空后“They will then receive a temporary badge”中的 They 指代来客，说明空格处应交代来客报到后的下一步。空前“first report to the security counter”与 D 中“show a government-issued photo ID and name the Halvorsen employee”构成清晰的先后流程，且 guests 与后句 They 指代一致。C 只补充大堂设施，B 转向员工工牌，A 是其他办公室的背景信息，都无法顺畅连接报到与领取访客证的步骤。",
+     "distractors": {
+      "A": "谈其他办公室过去类似系统，属背景信息，不能衔接“first report”与“then receive”的操作顺序。",
+      "B": "把话题转向员工工牌，若后句 They 指员工，则与访客领取临时证的语境冲突。",
+      "C": "只补充大堂设施，与报到后领取访客证的流程无关，且会使后句 They 的指代不清。"
+     },
+     "band": "进阶",
+     "ref_seconds": 40,
+     "id": "HB06-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Thursday Vendor Orientation — Room Change and Badge Reminder",
+       "text": "The vendor orientation scheduled for Thursday will now take place in the Bergen Room instead of the main auditorium, because the auditorium's lighting is being repaired. [BLANK] These badges must remain visible for the entire session, so please collect yours from the reception desk before 8:45 a.m. Lunch will still be served in the cafeteria at noon, and vegetarian options will be available."
+      }
+     ],
+     "question": "Which sentence best fits [BLANK]?",
+     "options": {
+      "A": "Halvorsen's cafeteria will offer a special lunch menu during the orientation.",
+      "B": "The Bergen Room has a capacity of about sixty people, which should be enough for the orientation.",
+      "C": "The lighting repairs in the auditorium are expected to take about two weeks.",
+      "D": "All attendees, including Halvorsen employees and visiting vendors, must wear name badges during the orientation."
+     },
+     "answer": "D",
+     "explain_zh": "空后紧接着说“These badges must remain visible...”，其中 These badges 必须指代前一句提到的 name badges，因此空格句应引入“佩戴名牌”的要求。D 中的 name badges 与空后的 These badges、collect yours 形成清晰的话题复现，语义衔接自然。B、C 只延续地点或灯修信息，无法解释后句的“These badges”；A 提前跳到午餐话题，也与空后指代不符。",
+     "distractors": {
+      "A": "提前提到 cafeteria 和 lunch，虽与末句午餐话题相近，但不能衔接 These badges，且会打乱行文顺序。",
+      "B": "只延续 Bergen Room 的地点信息，无法为后句 These badges 提供指代对象。",
+      "C": "重复 auditorium 与 lighting repairs，但后句 These badges 没有先行词。"
+     },
+     "band": "进阶",
+     "ref_seconds": 40,
+     "id": "HB06-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "notice",
+       "title": "Training Room Closure: Temporary Virtual Workshop Space",
+       "text": "Halvorsen’s third-floor training room will be closed from Monday through Wednesday while technicians install a new projector and sound system. [BLANK] This temporary arrangement will allow employees to attend virtual workshops without interrupting their teams’ regular meeting schedule. Please reserve the space through the online booking system and limit each session to two hours. We expect the upgraded training room to reopen on Thursday morning."
+      }
+     ],
+     "question": "Which sentence best fits [BLANK]?",
+     "options": {
+      "A": "The small conference room beside the cafeteria will be available for virtual workshops.",
+      "B": "The new projector will make it easier to share slides wirelessly.",
+      "C": "The cafeteria will offer a limited menu while the installation is under way.",
+      "D": "Staff should remove personal items from the training room by Friday."
+     },
+     "answer": "A",
+     "explain_zh": "空后一句的 This temporary arrangement 指代空格中提出的临时安排，且下一句的 the space 也需要前文出现一个可供预订的替代场地。A 提到小会议室可用于 virtual workshops，与后文的 virtual workshops 和 reserve the space 形成清晰衔接。C 的 cafeteria menu、B 的 projector feature、D 的 personal items 都无法被 This temporary arrangement 指代。",
+     "distractors": {
+      "B": "新投影仪的功能不是临时安排，也不能承接后文 the space 的指代。",
+      "C": "食堂菜单与虚拟工作坊的临时场地安排无关，无法衔接 This temporary arrangement。",
+      "D": "清理个人物品与提供虚拟工作坊场地无关，话题和指代都不衔接。"
+     },
+     "band": "熟练",
+     "ref_seconds": 50,
+     "id": "HB06-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "New Schedule for Office-Supply Requisitions",
+       "text": "To: Department Heads\nFrom: Ingrid Solheim, Facilities Coordinator\nSubject: New Schedule for Office-Supply Requisitions\n\nAs part of Halvorsen's effort to eliminate duplicate purchases, all departments will begin submitting office-supply requests through the facilities portal on 3 March. [BLANK] That schedule is intended to give the purchasing team a full day to consolidate requests before sending them to vendors. Any request submitted after the Tuesday noon cutoff, however, will be held until the following week."
+      }
+     ],
+     "question": "Which sentence best fits [BLANK]?",
+     "options": {
+      "A": "Previously, requests were emailed directly to the purchasing office and processed in the order received.",
+      "B": "Department heads must therefore ensure that their staff attend the portal training session.",
+      "C": "The purchasing team has already contacted several vendors about the new requirement.",
+      "D": "The portal will close each Tuesday at noon, and approved orders will be released to vendors on Thursday."
+     },
+     "answer": "D",
+     "explain_zh": "空后紧接着出现 That schedule，说明空格必须引入一个明确的时间安排；只有 D 提到“每周二中午关闭门户、周四向供应商下单”的日程。后文 Tuesday noon cutoff 又复现了 D 中的 Tuesday at noon，形成紧密衔接。A 讲旧流程、B 讲培训、C 讲联系供应商，均无法让 That schedule 有明确指代。",
+     "distractors": {
+      "A": "虽然与采购话题相关，但只描述旧流程，不能为后文 That schedule 提供时间安排指代。",
+      "B": "培训环节在文中未出现，且 therefore 缺乏前文依据，也无法衔接 That schedule。",
+      "C": "联系供应商不等于固定日程，后文 Tuesday noon cutoff 和 That schedule 均无法与之对应。"
+     },
+     "band": "真考+",
+     "ref_seconds": 60,
+     "id": "HB06-5"
+    }
+   ]
+  },
+  {
+   "chapter": 7,
+   "part": 6,
+   "topic": "时态看全文时间线",
+   "mentor": "Mia",
+   "title": "Mia 的时间线定位法",
+   "trick": [
+    "先找写作日，再排事件先后",
+    "已发生用过去，未发生用将来",
+    "同一空看全文，别只读单句"
+   ],
+   "signals": [
+    "开头或结尾出现 As of today、具体写作日期（如 March 20）",
+    "出现 already、last week、on March 3 等过去时间标记",
+    "出现 will、next month、on April 9、by + 未来日期等将来标记"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Brackenfield Fit-Out Schedule",
+      "text": "Dear Team,\nAs of today, March 20, here is the status of the Brackenfield office fit-out. The design team submitted the final floor plan on March 3, and the landlord approved it two days later. Our contractor, Nordvik Interiors, will begin demolition on April 14. The city permit [BLANK] on April 9, two days after the fire-safety inspection, so no work can start before then. Please send any scheduling questions to me by March 27.\nBest regards,\nMia Lindqvist\nFacilities Coordinator, Halvorsen"
+     }
+    ],
+    "question": "Choose the best option for [BLANK].",
+    "options": {
+     "A": "has been issued",
+     "B": "will be issued",
+     "C": "is issued",
+     "D": "was issued"
+    },
+    "answer": "B",
+    "explain_zh": "开头 “As of today, March 20” 明确了写作日期，而空后的 “on April 9” 晚于该日期，属于尚未发生的单次事件。前文 March 3 提交、两天后获批都是已发生动作，用过去时；April 14 开工用 will begin，同样指向将来。因此许可证“将被签发”应用一般将来时被动 will be issued。",
+    "distractors": {
+     "A": "has been issued 是现在完成时，表示已经签发，与 “no work can start before then” 矛盾。",
+     "C": "is issued 是现在时被动，不能表示将来某一天的一次性事件。",
+     "D": "was issued 是过去被动，但 April 9 在写作日 March 20 之后，事件尚未发生。"
+    },
+    "steps": [
+     "第1步 识别信号：抓住 “As of today, March 20” 定下写作日，再标出 March 3、March 5（已过）与 April 9、April 14、March 27（未到）。",
+     "第2步 运用招式：空后 “on April 9” 晚于 March 20，且为一次性事件，被动语态取一般将来时 will be issued。",
+     "第3步 排除并确认：was issued、has been issued 都指已发生，is issued 无法指将来单次，只有 B 与全文时间线一致。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 40,
+    "id": "HB07-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Office Move Planning Update",
+       "text": "From: Priya Nandakumar, Facilities Coordinator\nTo: All Staff\nDate: May 6\nSubject: Office Move Planning Update\n\nThe movers will visit our office on May 12 to check the loading area. On May 8, the facilities team [BLANK] the new furniture from Bergen Office Supply. All staff should label their boxes by May 9. The actual move will begin at 8 a.m. on May 15."
+      }
+     ],
+     "question": "Choose the best option for [BLANK].",
+     "options": {
+      "A": "ordered",
+      "B": "has ordered",
+      "C": "orders",
+      "D": "will order"
+     },
+     "answer": "D",
+     "explain_zh": "邮件写作日期是 May 6，而家具订购安排在 May 8，事件发生在写作日之后，因此要用将来时 will order。句中虽有具体日期，但必须结合全文时间线判断已发生还是未发生。",
+     "distractors": {
+      "A": "ordered 是过去时，但 May 8 在写作日 May 6 之后，尚未发生。",
+      "B": "has ordered 是现在完成时，表示已完成的动作，与 May 8 的未来安排矛盾。",
+      "C": "orders 是一般现在时，不能表示文中 May 8 的未来计划。"
+     },
+     "band": "基础",
+     "ref_seconds": 30,
+     "id": "HB07-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Regional Sales Meeting — Catering Update",
+       "text": "To: Lena Ortiz\nFrom: Marcus Feld\nDate: April 8\nSubject: Regional Sales Meeting — Catering Update\n\nThe venue contract for our regional sales meeting was signed on March 27. Ms. Ortiz confirmed the speaker schedule last week. The catering team [BLANK] the final menu by April 15, two days before the meeting. Please send me any dietary requests by April 10."
+      }
+     ],
+     "question": "Choose the best option for [BLANK].",
+     "options": {
+      "A": "finalized",
+      "B": "has finalized",
+      "C": "will finalize",
+      "D": "finalizes"
+     },
+     "answer": "C",
+     "explain_zh": "邮件写作日是 April 8，而空后的期限 April 15 晚于写作日，说明该动作尚未发生，应使用将来时 will finalize。前文的 March 27 签约和 last week 确认日程均为已发生事件，用于建立时间线。",
+     "distractors": {
+      "A": "一般过去时表示已发生，但 April 15 晚于写作日 April 8，动作尚未完成。",
+      "B": "现在完成时表示已经完成，与 April 15 这一未来期限矛盾。",
+      "D": "一般现在时通常表示习惯或既定安排，但此处是写作日之后的一次性未来动作，不适用。"
+     },
+     "band": "进阶",
+     "ref_seconds": 40,
+     "id": "HB07-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "memo",
+       "title": "Warehouse Renovation and Inventory Relocation — Halvorsen",
+       "text": "From: Ingrid Solvang, Facilities Manager\nTo: All Distribution Staff\nDate: March 4\nSubject: West Warehouse Renovation\n\nOur West Warehouse will close for renovation on April 15, and the work is expected to last approximately six weeks. All inventory currently stored there must be moved to the East Annex before the contractors arrive. The movers will begin packing on April 8, so please label every pallet by April 4. Once the renovation is complete, we [BLANK] the West Warehouse with a new shelving system and a larger loading dock. A detailed schedule will be posted in the break room next week."
+      }
+     ],
+     "question": "Choose the best option for [BLANK].",
+     "options": {
+      "A": "reopen",
+      "B": "have reopened",
+      "C": "reopened",
+      "D": "were reopening"
+     },
+     "answer": "A",
+     "explain_zh": "写作日为 3 月 4 日，而“Once the renovation is complete”指出整修要到 4 月 15 日之后才结束，属于尚未发生的事，因此用将来时 reopen（一般现在时在 once 引导的时间状语从句中表将来）。句中“will close”“will begin”也提示全文时间线指向未来。C、B、D 均为过去时或现在完成时，与“will be complete”的未来时间不符。",
+     "distractors": {
+      "B": "have reopened 为现在完成时，表示已完成，与“Once the renovation is complete”的未来条件矛盾。",
+      "C": "reopened 为一般过去时，但整修尚未开始，重开更未发生，时间线不符。",
+      "D": "were reopening 为过去进行时，指过去某时正在重开，全文无此语境。"
+     },
+     "band": "进阶",
+     "ref_seconds": 40,
+     "id": "HB07-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "North Harbor Conference — Final Files",
+       "text": "From: Petra Lindqvist\nSent: Tuesday, 12 March\nTo: Halvorsen Sales Team\nSubject: North Harbor Conference — Final Files\n\nThe venue confirmed on 8 March that our session will begin at 9:30 a.m. on 21 March, and the organizers have asked us to use the speaker portal for all materials. The sales team [BLANK] its demonstration slides to Ines Okafor by 5 p.m. on 10 March. Ines now has the final files and will convert the video segment on 18 March. Please send any last-minute corrections to Ines before she completes the conversion."
+      }
+     ],
+     "question": "Choose the best option for [BLANK].",
+     "options": {
+      "A": "submit",
+      "B": "has submitted",
+      "C": "will submit",
+      "D": "submitted"
+     },
+     "answer": "D",
+     "explain_zh": "邮件发送日期是 12 March，而幻灯片交给 Ines 的截止时间是 10 March，说明该动作在写作日之前已经完成。后文“Ines now has the final files”也进一步确认动作已完成，因此用一般过去时 submitted。",
+     "distractors": {
+      "A": "submit 是一般现在时，不能表示 10 March 已完成的过去动作。",
+      "B": "has submitted 是现在完成时，不能与明确的过去时间“by 5 p.m. on 10 March”连用。",
+      "C": "10 March 早于邮件发送日 12 March，不能再用表示未来的 will submit。"
+     },
+     "band": "熟练",
+     "ref_seconds": 50,
+     "id": "HB07-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Archival Scanning Schedule — Halvorsen Legal Department",
+       "text": "To: Priya Nandakumar, Records Manager\nFrom: Elias Corwin, Facility Services\nDate: 14 March\n\nThe vendor will begin scanning the litigation files in Room 2B on 24 March, and its technicians are scheduled to work through 4 April. Because the fire-suppression inspection originally set for 27 March has been moved to 10 April, the scanning team [BLANK] the remaining cabinets before the corridors are cleared for inspection. Please remind department staff not to remove any boxes from the designated area until the project is over. The vendor's final quality report will be forwarded to you within three business days after the last batch is returned."
+      }
+     ],
+     "question": "Choose the best option for [BLANK].",
+     "options": {
+      "A": "will have completed",
+      "B": "completed",
+      "C": "has completed",
+      "D": "had completed"
+     },
+     "answer": "A",
+     "explain_zh": "邮件写作日为 14 March，扫描工作从 24 March 才开始，而检查改到 10 April，因此在写作时“完成扫描”仍未发生。空处表示在 10 April 检查前将已经完成，故用将来完成时 will have completed。B、C、D 都表示过去或现在已完成，与全文时间线冲突。",
+     "distractors": {
+      "B": "completed 为一般过去时，但扫描要到 24 March 才开始，写作日尚未发生。",
+      "C": "has completed 为现在完成时，暗示截至写作日已完成，与 24 March 才开始矛盾。",
+      "D": "had completed 为过去完成时，需要过去参照点，而本文时间线指向 10 April 的未来检查。"
+     },
+     "band": "真考+",
+     "ref_seconds": 60,
+     "id": "HB07-5"
+    }
+   ]
+  },
+  {
+   "chapter": 8,
+   "part": 7,
+   "topic": "先看题再定位",
+   "mentor": "Leo",
+   "title": "Leo 的题干锚点定位法",
+   "trick": [
+    "先扫题干，圈出人名、数字、日期",
+    "带着锚点回原文，只读附近句",
+    "对照同义改写，排除无关段落"
+   ],
+   "signals": [
+    "题干出现具体人名、金额、日期或编号",
+    "原文较长且信息分散在多段",
+    "选项含相近数字、时间或条件"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Halvorsen Facilities: Nordvik Visit Update",
+      "text": "Hello all,\nThe client group from Nordvik will now arrive at 10:40 a.m. on Thursday, 14 March, not 9:30 as first planned. Their train was rescheduled because of track maintenance. Please have Conference Room B set up by 10:15 with eight chairs, a projector, and two water pitchers. The reception desk should print visitor badges for six guests; two colleagues from Nordvik's legal office will join remotely. Lunch will be served in the atrium at 12:30, so do not order the usual sandwich platters. Instead, Marisol in Procurement will arrange a hot buffet. If the projector cannot be repaired by Wednesday afternoon, notify me immediately and we will use the portable screen from the training room.\nThanks,\nPriya"
+     }
+    ],
+    "question": "According to the email, what should the facilities team do if the projector is still not working by Wednesday afternoon?",
+    "options": {
+     "A": "Ask Marisol to find another projector.",
+     "B": "Print extra visitor badges for the Nordvik group.",
+     "C": "Contact Priya without delay.",
+     "D": "Move the client meeting to the training room."
+    },
+    "answer": "C",
+    "explain_zh": "题干关键词是 projector 和 Wednesday afternoon。原文末尾的 If the projector cannot be repaired by Wednesday afternoon, notify me immediately 直接对应“立刻联系我”。发件人为 Priya，因此选 C。其余选项把便携屏幕、自助餐负责人和访客证任务混入，均无依据。",
+    "distractors": {
+     "A": "Marisol 负责安排热自助餐，与投影仪维修无关。",
+     "B": "打印访客证是接待处的常规任务，不是投影仪故障时的指示。",
+     "D": "原文只说可从培训室取便携屏幕，并非把会议移到培训室。"
+    },
+    "steps": [
+     "第1步：题干出现时间 Wednesday afternoon 和物品 projector，先圈定为定位锚点。",
+     "第2步：回原文只扫含 projector 的末句，看到 Wednesday afternoon 与 notify me immediately。",
+     "第3步：确认 me 指发件人 Priya；地点、采购、访客证等选项均不匹配，排除后选 C。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 60,
+    "id": "HB08-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Your Building Access Card",
+       "text": "From: Nadia Feld, Facilities Coordinator\nTo: All Halvorsen Staff\nDate: March 4\nSubject: New Building Access Cards\n\nDear colleagues,\n\nOur current access cards will stop working on March 31. New cards are ready for pickup at the front desk on the first floor.\n\nPlease bring your employee ID when you come. You can pick up your card between 8:00 A.M. and 5:00 P.M., Monday to Friday. If you work in the Riverside office, your card will be mailed to you instead.\n\nAfter you receive your new card, please test it at the main entrance. If it does not open the door, contact the facilities team at extension 220.\n\nThank you,\nNadia Feld"
+      }
+     ],
+     "question": "According to the email, what should staff bring when they pick up their new cards?",
+     "options": {
+      "A": "A copy of the email",
+      "B": "Their employee ID",
+      "C": "A signed form",
+      "D": "Their old access card"
+     },
+     "answer": "B",
+     "explain_zh": "题干关键词是 bring 和 pick up，回原文定位到“Please bring your employee ID when you come.”，直接对应选项 B。原文只要求带员工证件，没有提到邮件副本、旧卡或签字表格，因此其余选项均无依据。",
+     "distractors": {
+      "A": "原文未要求携带邮件副本。",
+      "C": "原文没有提到任何需要签字的表格。",
+      "D": "旧卡将于 3 月 31 日失效，但领取新卡时并未要求交回。"
+     },
+     "band": "基础",
+     "ref_seconds": 45,
+     "id": "HB08-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Order #4471 — Partial Delivery",
+       "text": "To: Ingrid Salvesen, Office Manager, Halvorsen\nFrom: Marcus Teale, Bergen Office Supply\nDate: March 4\nSubject: Order #4471 — Partial Delivery\n\nDear Ms. Salvesen,\n\nThank you for Halvorsen's order of 40 ergonomic desk chairs for the Trondheim branch. Unfortunately, the graphite model is out of stock until late March. We can ship 25 units in charcoal gray on March 12, which is the closest color currently available.\n\nThe remaining 15 graphite chairs would arrive on April 2. If the color change is acceptable, please confirm by March 8 so that we can hold the March 12 shipment. Otherwise, we will send the complete order in April.\n\nPlease note that the assembly service you requested is included at no extra charge for orders of more than 30 units.\n\nRegards,\nMarcus Teale\nBergen Office Supply"
+      }
+     ],
+     "question": "According to the email, what is Ms. Salvesen asked to do by March 8?",
+     "options": {
+      "A": "Change the delivery date to April 2",
+      "B": "Approve an additional fee for assembly service",
+      "C": "Reduce the order from 40 chairs to 25",
+      "D": "Confirm that charcoal gray chairs are acceptable"
+     },
+     "answer": "D",
+     "explain_zh": "以题干中的日期 March 8 和人名 Ms. Salvesen 为锚点，定位到「If the color change is acceptable, please confirm by March 8」。前一句说明可先发 25 把 charcoal gray（炭灰色）椅子，因此要她确认的就是能否接受这一颜色替换，D 为同义改写。",
+     "distractors": {
+      "A": "4 月 2 日是剩余 15 把椅子的预计到货日，并非要求她更改送货日期。",
+      "B": "原文说组装服务对超过 30 台的订单免费提供，并不需要额外付费批准。",
+      "C": "25 把是 3 月 12 日可先发货的数量，邮件并未要求她削减订单。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB08-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Visitor registration changes from 14 March",
+       "text": "From: Priya Raman, Office Services\nTo: All Halvorsen Staff\nSubject: Visitor registration changes from 14 March\n\nStarting 14 March, employees must register every visitor to our Oslo office through the online guest portal at least one business day before arrival. Please enter the visitor's full name and company, then forward the confirmation email to reception@halvorsen.com. Visitors without a confirmation will wait in the lobby while reception contacts the host. For meetings with more than eight guests, email Marta Eide in Office Services at least two business days before the meeting and no later than 10 a.m. Badges must be worn in all common areas and returned to the front desk when visitors leave. The paper sign-in sheet will be discontinued after 21 March. For help, call extension 4421."
+      }
+     ],
+     "question": "According to the email, what should employees do for a meeting with more than eight guests?",
+     "options": {
+      "A": "Register the guests at the front desk on the day of the meeting.",
+      "B": "Ask reception to prepare paper sign-in sheets.",
+      "C": "Send each guest's confirmation email to Marta Eide.",
+      "D": "Contact Marta Eide at least two business days in advance."
+     },
+     "answer": "D",
+     "explain_zh": "题干关键词 “more than eight guests” 可定位到原文 “For meetings with more than eight guests, email Marta Eide ... at least two business days before the meeting and no later than 10 a.m.”，因此应至少提前两个工作日联系 Marta Eide。其余选项分别混淆了确认邮件的收件人、访客登记方式和即将停用的纸质签到表。",
+     "distractors": {
+      "A": "访客应至少提前一个工作日通过在线访客系统登记，而非当天到前台登记。",
+      "B": "纸质签到表将在 3 月 21 日后停用，不能再要求前台准备。",
+      "C": "原文要求将确认邮件转发给 reception@halvorsen.com，而不是 Marta Eide。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB08-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Arrangements for the Solvang Audit Visit",
+       "text": "From: Elena Markovic, Office Manager\nTo: Halvorsen Staff\nSubject: Arrangements for the Solvang Audit Visit\n\nThe Solvang audit team will visit our Oslo office on Thursday, 12 September. Their flight lands at 08:15, and a shuttle will bring them to reception by 09:00. Please note that the main conference room will be unavailable from 09:00 to 11:30 for their briefing. Staff who usually book that room should use Meeting Room 4B instead; its key can be collected from reception. At 11:30, Inger Solberg from Finance will give the visitors a short overview of our compliance procedures in the training room. A buffet lunch will follow in the cafeteria at 12:45. If you have documents for the auditors, place them in the labeled tray at reception by 16:00 on 11 September. Do not deliver them directly to the conference room."
+      }
+     ],
+     "question": "According to the email, what should staff do by 16:00 on 11 September?",
+     "options": {
+      "A": "Give documents to Inger Solberg in the training room.",
+      "B": "Place documents for the auditors in the labeled tray at reception.",
+      "C": "Leave documents in Meeting Room 4B.",
+      "D": "Deliver documents directly to the main conference room."
+     },
+     "answer": "B",
+     "explain_zh": "题干中的日期“16:00 on 11 September”是定位锚点，回原文可找到“place them in the labeled tray at reception by 16:00 on 11 September”。其中 them 指代前一句的“documents for the auditors”，因此应把文件放到接待处的标记托盘。Meeting Room 4A 是给原会议室使用者改用的房间，Inger Solberg 是做合规流程简介，均与交文件无关。",
+     "distractors": {
+      "A": "Inger Solberg 在培训室做合规流程简介，并不是收文件的人。",
+      "C": "Meeting Room 4A 是供原会议室使用者改用的房间，文中未说在那儿放审计文件。",
+      "D": "文中明确说不要把文件直接送到会议室，与正确做法相反。"
+     },
+     "band": "熟练",
+     "ref_seconds": 75,
+     "id": "HB08-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Advanced Negotiation Workshop — revised arrangements",
+       "text": "To: All Halvorsen staff enrolled in the Advanced Negotiation Workshop\nFrom: Priya Raghunathan, Learning & Development\nDate: 3 March\n\nThank you for confirming your places in the workshop led by Ingrid Solberg. Because demand from the Oslo and Trondheim offices exceeded our original estimate, the session has been moved from the Bergen Room to the Aurora Suite, which seats 40 rather than 30. The date is unchanged: 14 March, 09:00–16:30.\n\nTwo practical points. First, the pre-work case study must reach me by 10 March. Anyone who has not submitted it will lose their place to a colleague on the waiting list, since we cannot admit unprepared participants. Second, the caterer needs final numbers, so let me know by 7 March if you require a vegetarian or gluten-free lunch. Parking permits are no longer issued at reception; collect yours from the security desk on the day."
+      }
+     ],
+     "question": "According to the email, what will happen to an enrollee who does not hand in the case study on time?",
+     "options": {
+      "A": "They will be asked to confirm their meal requirements by 7 March.",
+      "B": "Their place will be offered to a colleague on the waiting list.",
+      "C": "They will be allowed to attend if they complete it during the lunch break.",
+      "D": "They will be moved to a later session held in the Bergen Room."
+     },
+     "answer": "B",
+     "explain_zh": "题干问“未按时交案例研究的人会怎样”，锚点是日期 10 March 和 pre-work case study，回到原文第二段：“Anyone who has not submitted it will lose their place to a colleague on the waiting list”，即名额转给候补同事，故选 B。原文只说“cannot admit unprepared participants”，并未允许午休补做（C错）；房间更换（Bergen→Aurora）是针对全体学员，且日期未变，D 无依据；7 March 的餐食确认是另一项独立要求，A 是拿另一个日期设的干扰。",
+     "distractors": {
+      "A": "7 March 是餐食特殊需求的确认期限，与案例研究无关。",
+      "C": "原文只说不能接收未做准备者，从未允许午休时间补做。",
+      "D": "房间由 Bergen 改为 Aurora，且日期未变，不存在“改到之后场次”。"
+     },
+     "band": "真考+",
+     "ref_seconds": 90,
+     "id": "HB08-5"
+    }
+   ]
+  },
+  {
+   "chapter": 9,
+   "part": 7,
+   "topic": "同义替换",
+   "mentor": "Leo",
+   "title": "Leo 的同义替换雷达",
+   "trick": [
+    "题干关键词，回原文找同义说法",
+    "选项照搬原词，先查对象和时间",
+    "同义改写对得上，才是正确选项"
+   ],
+   "signals": [
+    "题干问已预订、已安排者接下来做什么",
+    "原文出现 please、confirm、contact 等指令词",
+    "选项重复 equipment、annex、Friday 等词但对象或时间被改"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Meeting Room Availability Update",
+      "text": "From: Priya Nandakumar, Facilities\nTo: All Halvorsen Staff\nSubject: Meeting Room Availability Update\n\nThe north conference room will be unavailable from Monday through Wednesday next week while technicians replace the audiovisual equipment. If you have already booked this room for those dates, please move your meeting to the fourth-floor training room. It seats up to twelve people and has the same video-conferencing setup. To avoid overlapping reservations, confirm your new room through the online booking system before Friday at noon. For meetings with more than twelve attendees, contact my office; we will arrange a larger space in the annex. Thank you for your patience as we complete this upgrade."
+     }
+    ],
+    "question": "According to the email, what should employees do if they have already reserved the north conference room?",
+    "options": {
+     "A": "Confirm their reservation before Monday noon.",
+     "B": "Arrange for another location for their meeting.",
+     "C": "Contact the annex to request a larger office.",
+     "D": "Replace the audiovisual equipment themselves."
+    },
+    "answer": "B",
+    "explain_zh": "题干中的 already reserved 对应原文 have already booked this room。原文接着说 please move your meeting to the fourth-floor training room，意思就是为会议安排另一个地点，因此 B 是同义改写。D 把技术人员更换设备说成员工自己更换；C 把超过十二人时联系办公室说成申请更大办公室；A 把确认新房间的截止时间改成周一中午。",
+    "distractors": {
+     "A": "原文要求在 Friday at noon 前确认新房间，不是 Monday noon 前确认原预订。",
+     "C": "原文说超过十二人时联系办公室安排 annex 的更大空间，不是申请更大办公室。",
+     "D": "原文说 technicians replace the audiovisual equipment，不是让员工自己更换。"
+    },
+    "steps": [
+     "识别信号：题干 already reserved 对应原文 have already booked，问接下来该做什么。",
+     "运用招式：定位 please move your meeting to the fourth-floor training room，归纳为 arrange for another location。",
+     "排除确认：D 是技术人员换设备；C 仅限超十二人；A 截止周五中午且确认新房间。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 60,
+    "id": "HB09-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "New Procedure for Office Supply Requests",
+       "text": "Dear Halvorsen staff,\n\nStarting next Monday, all requests for office supplies will be handled by the Facilities Team instead of the reception desk. Please submit the online request form on the company intranet at least three business days before you need the items. Orders placed after 2 P.M. on Friday will not be processed until the following Tuesday.\n\nEmployees who work in the Riverside Building can still pick up small items, such as pens and paper clips, from the storage room on the second floor. For larger orders, such as printers or chairs, wait for an e-mail from Facilities confirming the delivery date.\n\nThank you,\nMarta Nilsen\nFacilities Team"
+      }
+     ],
+     "question": "According to the e-mail, how should employees request office supplies?",
+     "options": {
+      "A": "By sending an e-mail to Marta Nilsen",
+      "B": "By visiting the storage room on the second floor",
+      "C": "By calling the reception desk",
+      "D": "By filling out a form on the company's internal website"
+     },
+     "answer": "D",
+     "explain_zh": "题干问「如何申请办公用品」，回原文定位到「submit the online request form on the company intranet」，intranet 即公司内网，与选项 D 的「internal website」同义改写，故 D 正确。C 的 reception desk 在原文出现，但原文说的是「不再由前台处理」，对象不符；B 的 storage room 是领取笔、回形针等小件的地点，不是申请方式；A 只借用了署名的人名，原文并未要求给 Marta 发邮件。",
+     "distractors": {
+      "A": "Marta Nilsen 只是邮件署名，原文没有要求员工给她发邮件。",
+      "B": "storage room 在原文中只用于自取小件物品，不是提交申请的方式。",
+      "C": "原文提到 reception desk，但说的是办公用品不再由前台负责，属于照搬原词、对象相反。"
+     },
+     "band": "基础",
+     "ref_seconds": 45,
+     "id": "HB09-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Use of the Updated Conference Rooms",
+       "text": "From: Priya Nandakumar, Facilities Coordinator\nTo: All Halvorsen Staff\nSubject: Use of the updated conference rooms\n\nThe renovation of the third-floor conference rooms is complete. Starting Monday, employees may use Rooms 3A and 3B. Because demand is expected to be high, please submit a booking request through the facilities portal no later than one business day before your meeting. Requests sent directly to the facilities team will not be processed. Each room seats eight people, and video equipment must be reserved separately. If your meeting is canceled, please delete the booking so that others can use the space. A short guide to the new equipment is available on the intranet."
+      }
+     ],
+     "question": "According to the email, what should employees do to book a renovated conference room?",
+     "options": {
+      "A": "Reserve video equipment at the same time as the room.",
+      "B": "Submit a request on the facilities portal at least one working day ahead.",
+      "C": "Delete the booking one business day before the meeting.",
+      "D": "Contact the facilities team directly before the meeting."
+     },
+     "answer": "B",
+     "explain_zh": "题干问如何预订翻新后的会议室，回原文找同义说法：需通过 facilities portal 提交 booking request，并且 no later than one business day before，对应 B 的 at least one working day ahead。D 虽然照搬 facilities team，但原文明确说直接发给该团队的请求不会受理；A 与“video equipment must be reserved separately”矛盾；C 把取消后删除预订误当成会前操作。",
+     "distractors": {
+      "A": "原文要求视频设备另行预订，不能与会议室同时预订。",
+      "C": "删除预订是会议取消后的做法，不是会前预订步骤。",
+      "D": "原文说直接联系 facilities team 的请求将不被处理，与预订要求相反。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB09-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Updated Procedure for Office Supply Orders",
+       "text": "Beginning Monday, requests for office supplies must be sent through the new procurement portal. The old order forms will no longer be accepted after Friday. When submitting a request, please include the budget code for your department; requests without this information will be returned. Items normally arrive within three business days, but special orders may take up to two weeks. If you need an item urgently, contact me directly instead of marking the request as urgent in the portal. Please note that the portal is for supplies only. Equipment purchases, such as monitors or keyboards, should still be discussed with your department manager."
+      }
+     ],
+     "question": "According to the email, what must employees do when ordering office supplies?",
+     "options": {
+      "A": "Discuss equipment purchases with a department manager.",
+      "B": "Use the cost-center number assigned to their team.",
+      "C": "Allow three weeks for all supply deliveries.",
+      "D": "Mark the request as urgent in the procurement portal."
+     },
+     "answer": "B",
+     "explain_zh": "原文要求提交用品申请时“include the budget code for your department”，即填写所在部门的预算代码。B 项“cost-center number assigned to their team”是对“department 的 budget code”的同义改写，对象和时间均吻合。D 项与原文“instead of marking the request as urgent”相反；C 项把普通用品三天、特殊订单最多两周错改成所有用品三周；A 项是设备采购的做法，不适用于用品订购。",
+     "distractors": {
+      "A": "与部门经理讨论的是显示器、键盘等设备采购，不是办公用品订购。",
+      "C": "原文说普通用品通常三个工作日到达，特殊订单最多两周，并非所有用品都要等三周。",
+      "D": "原文明确说紧急时直接联系发件人，而不是在门户中标记为紧急。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB09-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Changes to Expense Report Submission",
+       "text": "To: All Halvorsen Staff\nFrom: Priya Nandakumar, Finance Office\nDate: March 14\nSubject: Changes to expense report submission\n\nStarting April 1, staff must submit expense reports through the Finance Portal. The old mailbox outside Room 214 will no longer accept printed forms. After completing the online form, scan each receipt and upload it as a single PDF. Please keep the paper receipts in your desk file for six months; do not send them to Finance unless the office requests them. Reports received after the 10th of the following month may be processed in the next pay cycle. If you have not yet activated your portal account, contact the Help Desk before March 28. A short guide is available on the Finance page."
+      }
+     ],
+     "question": "According to the email, what should employees do with their paper receipts?",
+     "options": {
+      "A": "Put the paper receipts in the drop box outside Room 214.",
+      "B": "Mail the paper receipts to the Finance Office for review.",
+      "C": "Store the paper receipts in their workspace for six months.",
+      "D": "Upload the paper receipts to the Finance Portal as a PDF."
+     },
+     "answer": "C",
+     "explain_zh": "题干关键词是 paper receipts，回原文可定位到“keep the paper receipts in your desk file for six months”。正确项把 desk file 同义改写为 workspace，并保留了六个月这一时间信息。D 的 upload 对象是扫描后的 PDF，不是纸质收据本身；B、A 都照搬了原文词，但对象或做法与原文不符。",
+     "distractors": {
+      "A": "旧邮箱已不再接收打印表格，也不是放置纸质收据的地方。",
+      "B": "原文只说除非财务部要求，否则不要寄送，并不是要求员工主动寄送。",
+      "D": "原文要求上传的是扫描后的单一 PDF，不是纸质收据本身。"
+     },
+     "band": "熟练",
+     "ref_seconds": 75,
+     "id": "HB09-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "notice",
+       "title": "Annual Fire Drill Procedures",
+       "text": "Halvorsen's annual fire drill will take place on Friday, 22 November, at 10:15 a.m. Because the north stairwell will be used by the fire service for training, all staff on floors 4–7 should use the east stairwell. Department liaisons must collect a printed attendance sheet from the facilities office by 5 p.m. on Thursday and bring it to the assembly point in the west parking lot. After the drill, liaisons should return the completed sheet to the facilities office; do not leave it in the lobby. The drill is expected to last about twenty minutes, and normal work may resume once the building warden gives clearance."
+      }
+     ],
+     "question": "According to the notice, what should department liaisons do before the fire drill?",
+     "options": {
+      "A": "Use the north stairwell with the fire service.",
+      "B": "Leave the completed sheet in the lobby.",
+      "C": "Deliver the attendance sheet to the west parking lot.",
+      "D": "Obtain a paper copy of the attendance record from Facilities."
+     },
+     "answer": "D",
+     "explain_zh": "原文说“Department liaisons must collect a printed attendance sheet from the facilities office by 5 p.m. on Thursday”，即在演习前从设施办公室领取纸质签到表。正确项用 obtain a paper copy 同义改写 collect a printed attendance sheet，Facilities 对应 facilities office。C 的 west parking lot 是演习集合点，不是演习前要做的事；B 原文明确禁止把表留在 lobby；A 的 north stairwell 是消防部门使用，员工应走 east stairwell。",
+     "distractors": {
+      "A": "北楼梯由消防部门训练使用，且员工应使用东楼梯，对象和方向均错。",
+      "B": "原文明确说不要把完成的表留在 lobby，与选项相反。",
+      "C": "把“带到西停车场集合点”误当作演习前任务，且原文时间是在演习时。"
+     },
+     "band": "真考+",
+     "ref_seconds": 90,
+     "id": "HB09-5"
+    }
+   ]
+  },
+  {
+   "chapter": 10,
+   "part": 7,
+   "topic": "NOT 与推断排除法",
+   "mentor": "Leo",
+   "title": "Leo 的圈词排除法",
+   "trick": [
+    "见 NOT 先圈题干，再圈原文已提项",
+    "逐项回原文定位，找不到即答案",
+    "推断只认字里行间，不认常识"
+   ],
+   "signals": [
+    "题干出现 NOT / EXCEPT / 除了 / 未提及",
+    "四个选项中有三项能在原文找到同义对应句",
+    "推断题选项读起来很“合理”，但原文没有依据"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Q3 Vendor Audit — Schedule Update",
+      "text": "To: Procurement Team\nFrom: Lena Vogt, Procurement Lead\nSubject: Q3 Vendor Audit — Schedule Update\n\nTeam,\n\nThe Q3 vendor audit originally set for 14 October has been moved to 21 October, as Norvex's quality manager will be at their Tallinn plant that week. The audit will still take place at Norvex's local warehouse, and the same checklist applies.\n\nPlease note that travel costs will now be reimbursed from the facilities budget rather than procurement, so keep your receipts and submit them to Marta in Finance within five days of the visit.\n\nWe also need one additional team member to review the shipping logs. If you have not yet signed up, reply to me by Friday. Prior audit experience is helpful but not required.\n\nThanks,\nLena"
+     }
+    ],
+    "question": "What is NOT indicated about the Q3 vendor audit?",
+    "options": {
+     "A": "One more person is needed to check shipping records.",
+     "B": "Its date has been rescheduled.",
+     "C": "It will be held at a different site.",
+     "D": "Its travel expenses will be charged to another budget."
+    },
+    "answer": "C",
+    "explain_zh": "题干问“未提及”，先圈出原文已明确写到的三项。原文说日期“has been moved to 21 October”，对应 B；费用“reimbursed from the facilities budget rather than procurement”，对应 D；还缺一人“review the shipping logs”，对应 A。唯独地点原文写“will still take place at Norvex's local warehouse”，即地点未变，故 C“将在另一地点举行”为未提及项。",
+    "distractors": {
+     "A": "原文说还需一名成员 review the shipping logs，属于已提及，排除。",
+     "B": "原文明确写到改到 10 月 21 日，属于已提及，排除。",
+     "D": "原文说差旅费改由 facilities budget 报销，属于已提及，排除。"
+    },
+    "steps": [
+     "第 1 步：识别信号——题干出现 NOT，说明三项在原文有据、一项无据。",
+     "第 2 步：运用招式——把 B/D/A 逐项回原文找同义句（moved to 21 October、facilities budget、one additional team member），全部命中。",
+     "第 3 步：排除并确认——C 说换地点，但原文是“will still take place at Norvex's local warehouse”，地点未变，故 C 为答案。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 60,
+    "id": "HB10-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Training on the New Expense System",
+       "text": "To: All Halvorsen Staff\nFrom: Priya Raman, Office Manager\nSubject: Training on the New Expense System\n\nDear colleagues,\n\nStarting next month, we will use a new online system for expense reports. The old paper forms will no longer be accepted.\n\nWe will hold two training sessions in the Bergen Room on the second floor. The first is on Tuesday, May 6, from 10:00 to 11:30 a.m. The second is on Thursday, May 8, from 2:00 to 3:30 p.m. Each session is limited to twenty people, so please sign up early.\n\nYou do not need to bring a laptop. We will provide tablets for everyone to use during the practice exercises. However, please bring your employee ID card, as you will need it to log in.\n\nIf you cannot attend either session, contact me by May 2 to arrange a short one-on-one meeting.\n\nPriya"
+      }
+     ],
+     "question": "What is NOT indicated about the training sessions?",
+     "options": {
+      "A": "Each session is limited to twenty people.",
+      "B": "They will be led by an outside trainer.",
+      "C": "They will be held in the Bergen Room.",
+      "D": "Each of them will last ninety minutes."
+     },
+     "answer": "B",
+     "explain_zh": "题干问“没有提到”的内容，逐项回原文定位：C 对应“in the Bergen Room on the second floor”；D 由“10:00 to 11:30”和“2:00 to 3:30”可算出各为 90 分钟；A 对应“Each session is limited to twenty people”。原文只说提供平板电脑、需带员工证，从未提到由外部讲师授课，故 B 为答案。",
+     "distractors": {
+      "A": "原文有“Each session is limited to twenty people”，已提及。",
+      "C": "原文明确写“in the Bergen Room on the second floor”，已提及。",
+      "D": "两场时间分别为 10:00–11:30 和 2:00–3:30，均为 90 分钟，已提及。"
+     },
+     "band": "基础",
+     "ref_seconds": 45,
+     "id": "HB10-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Phone-System Training on March 21",
+       "text": "To: Client Support Staff\nFrom: Priya Nandakumar, Facilities & IT Coordinator\nDate: March 12\nSubject: Phone-System Training on March 21\n\nAll Client Support staff must attend a training session on the new desk phone system on Friday, March 21, from 9:30 to 11:30 a.m. in Meeting Room B on the fourth floor. The session will cover call transfers, voicemail setup, and the new headset controls. Please bring your employee badge to enter the fourth-floor training area. Laptops are not required.\n\nIf you cannot attend, notify Priya Nandakumar by March 18 and arrange to join the repeat session on March 28. A brief reference guide will be emailed after the training. Refreshments will be provided during the mid-morning break."
+      }
+     ],
+     "question": "What is NOT indicated about the training session?",
+     "options": {
+      "A": "A follow-up reference guide will be sent by email.",
+      "B": "It will cover how to set up voicemail.",
+      "C": "Laptops will be provided for attendees.",
+      "D": "It will take place in Meeting Room B."
+     },
+     "answer": "C",
+     "explain_zh": "题干问的是 NOT，逐项回原文定位：地点 Meeting Room B 对应 D，voicemail setup 对应 B，after the training 会 emailed a reference guide 对应 A。C 说会提供笔记本电脑，但原文只写“Laptops are not required”，并未提到会提供，因此 C 是找不到依据的选项。",
+     "distractors": {
+      "A": "原文明确说培训后会通过电子邮件发送 reference guide。",
+      "B": "原文明确提到 voicemail setup，即涵盖语音信箱设置。",
+      "D": "原文明确说明培训在四楼 Meeting Room B 举行。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB10-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Customer Service Workshop — Registration and Room Change",
+       "text": "The customer service workshop scheduled for Thursday, May 16, will now take place in the Birch Room on the second floor, not the Cedar Conference Center. The session will run from 9:30 a.m. to 12:00 p.m. and will be led by Mara Ellison, a training consultant from Northline Advisory. Attendance is required for all support staff who joined Halvorsen in the past six months. Others may attend if space permits. Please confirm your attendance with me by Friday, May 10, so that I can finalize the handout count. We will not be serving lunch, but coffee will be available outside the room beginning at 9:00 a.m. Bring a notebook and your employee ID."
+      }
+     ],
+     "question": "What is NOT indicated about the workshop?",
+     "options": {
+      "A": "The instructor is from an outside organization.",
+      "B": "It was originally scheduled for the Cedar Conference Center.",
+      "C": "Participants will receive a certificate.",
+      "D": "Attendees should bring a notebook."
+     },
+     "answer": "C",
+     "explain_zh": "NOT 题先圈题干，再逐项回原文定位。B 对应“not the Cedar Conference Center”，A 对应“training consultant from Northline Advisory”，D 对应“Bring a notebook”；只有 C 的 certificate 在原文中完全找不到，因此选 C。",
+     "distractors": {
+      "A": "原文说主讲人是 Northline Advisory 的培训顾问，说明来自外部机构，故已提及。",
+      "B": "原文明确提到改为 Birch Room，“not the Cedar Conference Center”，故已提及。",
+      "D": "原文末尾明确写“Bring a notebook”，故已提及。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB10-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Temporary Visitor Check-In Changes",
+       "text": "To all Halvorsen staff,\nBeginning Monday, February 3, the main lobby will undergo lighting repairs for two weeks. During this period, all visitors must use the north entrance, where reception staff will check a photo ID and issue a temporary badge. Hosts will receive an automated email as soon as their guest arrives; please meet guests in the north lobby rather than the main reception area. Visitors should keep badges visible at all times and return them to reception when leaving. Contractors working after 6 p.m. must also sign in with security. We appreciate your patience and ask that you direct questions to Facilities at ext. 4821.\n—Marta Nilsen, Facilities Coordinator"
+      }
+     ],
+     "question": "What is NOT indicated about visitor check-in during the lobby repairs?",
+     "options": {
+      "A": "An automated email is sent to the host when a guest arrives.",
+      "B": "Temporary badges must be returned when visitors leave.",
+      "C": "A photo ID must be shown at reception.",
+      "D": "Hosts must accompany visitors throughout the building."
+     },
+     "answer": "D",
+     "explain_zh": "原文只说明接待处会查验 photo ID、发放临时 badge，并会向 host 发送 automated email；访客离开时需归还 badge。原文要求 host 到 north lobby 接客人，但并未提到 host 必须全程陪同访客，因此 D 为未提及项。",
+     "distractors": {
+      "A": "原文明确提到 Hosts will receive an automated email as soon as their guest arrives，故已提及。",
+      "B": "原文明确提到 return them to reception when leaving，故已提及。",
+      "C": "原文明确提到 reception staff will check a photo ID，故已提及。"
+     },
+     "band": "熟练",
+     "ref_seconds": 75,
+     "id": "HB10-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "North Stairwell Closure: HVAC Replacement, 14–25 April",
+       "text": "From 14 to 25 April, the north stairwell will be closed while Halvorsen's building services team replaces the rooftop HVAC coil. Staff on floors 6–9 should use the east elevators; the west elevators will remain reserved for deliveries and clients. The records room on floor 7 will stay accessible via the east corridor, although file retrieval requests may take an extra day to process. Contractors will work from 7:00 a.m. to 4:00 p.m.; noisy drilling is scheduled only before 9:00 a.m. If the replacement coil does not arrive by 11 April, the closure will extend into the following week. Building services will post daily updates on the intranet and at the ground-floor reception desk. Please direct urgent facilities issues to extension 4821."
+      }
+     ],
+     "question": "What is NOT indicated about the north stairwell closure?",
+     "options": {
+      "A": "The building's fire-safety inspection has been moved to late April.",
+      "B": "The west elevators are not available for general staff use during the closure.",
+      "C": "Access to the records room will be maintained through an alternative route.",
+      "D": "The work may continue beyond the announced dates if a component is delayed."
+     },
+     "answer": "A",
+     "explain_zh": "原文明确提到 records room 仍可经 east corridor 进入；若 replacement coil 未在 4 月 11 日前到货，closure 会延至下一周；west elevators 保留给 deliveries and clients，说明普通员工不使用。全文没有提到 fire-safety inspection，因此 A 是未提及项。做 NOT 题时先圈题干，再逐项回原文定位，找不到对应信息的一项即为答案。",
+     "distractors": {
+      "B": "原文说 west elevators 保留给 deliveries and clients，已暗示普通员工不使用，已提及。",
+      "C": "原文说 records room 仍可经 east corridor 进入，已提及。",
+      "D": "原文说 replacement coil 若未在 4 月 11 日前到货，closure 会延至下一周，已提及。"
+     },
+     "band": "真考+",
+     "ref_seconds": 90,
+     "id": "HB10-5"
+    }
+   ]
+  },
+  {
+   "chapter": 11,
+   "part": 7,
+   "topic": "多篇跨文定位",
+   "mentor": "Leo",
+   "title": "Leo 的跨篇时间锚定法",
+   "trick": [
+    "先找两文共有的时间、地点、编号",
+    "再用甲文条件筛乙文里的动作",
+    "最后逐项回原文双向核对"
+   ],
+   "signals": [
+    "两篇分别出现日期或时段，题目问何时、先做什么",
+    "一篇邮件给任务，另一篇日程或表单列资源与冲突",
+    "题干含 according to both、by 时间点、新人该做什么"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Nordvik Labs visit — Thursday",
+      "text": "Hi Leo, Nordvik Labs confirmed that their two representatives will arrive Thursday at 10:15, not 9:30. They need the East Conference Room because they are bringing samples that require a sink. I have reserved it from 9:45 to noon. Please ask the new hire to print six copies of the revised agenda and place them in the room by 9:40. Visitor badges will be waiting at reception under my name. Thanks, Mei Raman"
+     },
+     {
+      "type": "schedule",
+      "title": "Thursday room schedule — Halvorsen",
+      "text": "East Conference Room: 8:30–9:30 Facilities Team Stand-up; 9:45–12:00 Nordvik Labs Client Visit. West Conference Room: 8:00–9:15 Recruiting Interviews; 12:15–1:00 New Hire Orientation. Reception: Visitor badges available from 8:00. Note: The East Room sink was inspected Wednesday; sample trays are stored in the East Room cabinet. All room changes must be approved by Facilities."
+     }
+    ],
+    "question": "According to the email and the schedule, what should the new hire do just before the East Conference Room is reserved for Nordvik Labs?",
+    "options": {
+     "A": "Move the Facilities Team Stand-up to the West Conference Room.",
+     "B": "Set up the West Conference Room for New Hire Orientation.",
+     "C": "Place six printed copies of the revised agenda in the East Conference Room.",
+     "D": "Meet the Nordvik representatives at reception at 9:30."
+    },
+    "answer": "C",
+    "explain_zh": "邮件要求 new hire 在 9:40 前把六份 revised agenda 放进房间；日程显示 East Conference Room 从 9:45 起给 Nordvik Labs，且 Stand-up 在 9:30 结束，因此 9:40 可行。D 的代表到访时间是 10:15，A 的 Stand-up 在原房间结束且无需移动，B 的 Orientation 在 12:15。故 C。",
+    "distractors": {
+     "A": "日程中 Facilities Team Stand-up 8:30–9:30 已在 East Room，未要求搬到 West。",
+     "B": "New Hire Orientation 在 12:15 于 West Room，不是 9:40 前的任务。",
+     "D": "邮件说代表 10:15 到，不是 9:30 到前台接人。"
+    },
+    "steps": [
+     "① 识别信号：题干问 East Room 被 Nordvik 预订前，新人要做什么。",
+     "② 用招式：邮件锁定“six copies…by 9:40”，日程确认 East Room 9:45 才给 Nordvik。",
+     "③ 排除确认：D 到访为 10:15，A 无需移动，B 为 12:15，故选 C。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 60,
+    "id": "HB11-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Friday Team Lunch",
+       "text": "From: Dana Kim\nTo: Marketing Team\nSubject: Friday Team Lunch\n\nPlease choose your lunch for Friday's team meeting by Wednesday at 5 p.m. The meeting will start at noon in Room 4B. If you do not eat meat or fish, choose a salad. Send your completed form to me, not to the café. The café needs our final list on Thursday morning.\n\nDana"
+      },
+      {
+       "type": "form",
+       "title": "Halvorsen Marketing — Friday Team Lunch Order Form",
+       "text": "Halvorsen Marketing — Friday Team Lunch Order Form\n\nName: ___________\n\nMeal (choose one):\n[ ] Chicken sandwich\n[ ] Tuna sandwich\n[ ] Garden salad\n\nDrink (choose one):\n[ ] Water\n[ ] Coffee\n\nReturn to: Dana Kim by Wednesday, 5 p.m.\n\nNote: The café will bring all meals to Room 4B at 12:00 p.m."
+      }
+     ],
+     "question": "Minseo does not eat meat or fish. What should she select in the “Meal” section of the form?",
+     "options": {
+      "A": "Chicken sandwich",
+      "B": "Water",
+      "C": "Tuna sandwich",
+      "D": "Garden salad"
+     },
+     "answer": "D",
+     "explain_zh": "邮件说明，不吃肉或鱼的人应选择沙拉（choose a salad）；表格的 Meal 栏目中只有 Garden salad 符合这一条件。Chicken sandwich 和 Tuna sandwich 分别含鸡肉和鱼肉，Water 属于 Drink 栏。因此应选 D。",
+     "distractors": {
+      "A": "鸡肉三明治含肉，不符合邮件中不吃肉或鱼的条件。",
+      "B": "Water 在表格中属于 Drink（饮品）栏，不是 Meal（餐食）选项。",
+      "C": "金枪鱼三明治含鱼，不符合邮件条件。"
+     },
+     "band": "基础",
+     "ref_seconds": 45,
+     "id": "HB11-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Delivery instructions for order H-2084",
+       "text": "From: Mira Solberg, Facilities, Halvorsen\nTo: J. Nilsen, Northline Office Supply\nSubject: Delivery for order H-2084\n\nThe items and quantity listed on our order form are correct. Please keep the March 14 delivery date, but bring the shipment to the receiving entrance on Birch Street, not the visitor entrance shown on the form. Our building closes at 4:30, so the truck must arrive by 3:00. Please include the order number on every carton."
+      },
+      {
+       "type": "form",
+       "title": "Halvorsen Office Supply Order Form",
+       "text": "Order no.: H-2084\nSupplier: Northline Office Supply\nItem: Ergonomic desk chairs (model E-12)\nQuantity: 24\nUnit price: $89.50\nDelivery date requested: March 14\nDelivery location: Visitor entrance, 40 King Street\nContact: Mira Solberg, Facilities\nPayment terms: Net 30\nSpecial instructions: Call the recipient 30 minutes before arrival. Keep the delivery vehicle in the short-term lot."
+      }
+     ],
+     "question": "According to the email and the order form, what should Northline Office Supply do?",
+     "options": {
+      "A": "Deliver the 24 chairs to the visitor entrance on March 14.",
+      "B": "Deliver the 24 chairs to the receiving entrance by 3:00 p.m. on March 14.",
+      "C": "Change the order quantity to 24 and call Mira before shipping the chairs.",
+      "D": "Delay the delivery to March 15 and use the short-term lot."
+     },
+     "answer": "B",
+     "explain_zh": "邮件说明订单 H-2084 的商品和数量正确，并明确要求保留 3 月 14 日的送货日期，但把交货地点从表单上的 visitor entrance 改为 Birch Street 的 receiving entrance，且必须在 3:00 前到达。订单表单列出数量为 24 把椅子，因此综合两文信息，供应商应在 3 月 14 日下午 3 点前把 24 把椅子送到收货入口。A 仍使用表单上的错误地点；C 的数量本来正确，且电话要求是到达前 30 分钟；D 的日期和重点均不符。",
+     "distractors": {
+      "A": "忽略了邮件中要求改送 receiving entrance 的关键指示，仍按表单上的 visitor entrance 送货。",
+      "C": "订单数量 24 本来就在表单中正确，且邮件/表单并未要求发货前打电话；电话是到达前 30 分钟。",
+      "D": "邮件要求保留 3 月 14 日，未要求延到 3 月 15 日；short-term lot 只是表单中的停车提示，不是主要送货要求。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB11-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Quote BL-2291 — final chair order",
+       "text": "To: Daniel Okafor, Brightline Interiors\nFrom: Priya Raman, Office Manager, Halvorsen\nSubject: Quote BL-2291 — final chair order\n\nDaniel,\n\nThanks for sending the floor samples. The Alder was popular with staff, but our requirements are firm: the order goes in on June 2, all fourteen chairs must be installed by June 12, and each chair — assembly included — cannot exceed $310. The full order must also stay under the $4,300 our board approved. Facilities policy requires a five-year warranty on all seating. Please confirm which model you recommend.\n\nPriya"
+      },
+      {
+       "type": "form",
+       "title": "Brightline Interiors — Quote BL-2291: Seating Options",
+       "text": "Prepared for: Halvorsen Inc. — Attn: Priya Raman\nQuote reference: BL-2291\nPrices are in U.S. dollars. Assembly is either included or billed per chair, as shown.\n\nModel | Price per chair | Assembly | Earliest delivery | Warranty\nAlder | $292 | $16 per chair | June 18 | 5 years\nBirch | $318 | included | June 9 | 5 years\nCedar | $288 | $14 per chair | June 10 | 3 years\nDogwood | $300 | included | June 10 | 5 years\n\nDelivery dates above assume the order is placed by June 3. Quantities of ten or more ship from stock."
+      }
+     ],
+     "question": "Based on the email and the quote, which chair model should Ms. Raman order?",
+     "options": {
+      "A": "Birch",
+      "B": "Cedar",
+      "C": "Alder",
+      "D": "Dogwood"
+     },
+     "answer": "D",
+     "explain_zh": "先把两文共有的编号 BL-2291 与日期对上，再用邮件里的四个条件逐一筛报价单。Alder 虽受员工欢迎，但含组装费每把 $308，十四把共 $4,312，超过 $4,300 的总预算，且最早 6 月 18 日到货，晚于 6 月 12 日；Birch 每把 $318 已超 $310 上限；Cedar 价格与到货日期都合格，但保修只有 3 年，不符合「five-year warranty」的规定。只有 Dogwood 每把 $300（含组装）、6 月 10 日到货、保修 5 年，总价 $4,200 也在预算内，四项条件全部满足。",
+     "distractors": {
+      "A": "Birch 虽能在 6 月 9 日到货，但每把 $318 已超过邮件规定的 $310 上限，总价 $4,452 也超出预算。",
+      "B": "Cedar 价格与到货日期均合格，但保修仅 3 年，不满足邮件中「five-year warranty on all seating」的要求。",
+      "C": "Alder 是员工最喜欢的型号，但到货日为 6 月 18 日，晚于 6 月 12 日，且十四把总价 $4,312 超出 $4,300 预算。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB11-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "North Wing room closures—Thursday, October 17",
+       "text": "From: Priya Nandakumar, Facilities\nTo: All Halvorsen Staff\nSubject: North Wing room closures—Thursday, October 17\n\nPlease note that acoustic panel replacement will make North Wing Rooms B and C unavailable from 8:00 a.m. to 1:00 p.m. on Thursday, October 17. Room A will remain open. Staff with bookings in the affected rooms should relocate to the South Wing. To request a South Wing room, complete the online room-request form no later than noon on Wednesday, October 16, and include your original meeting time. Facilities will confirm assignments by 4:00 p.m. that day."
+      },
+      {
+       "type": "schedule",
+       "title": "South Wing Conference Room Availability—Thursday, October 17",
+       "text": "South Wing Conference Room Availability — Thursday, October 17\nRoom S1: 8:00–9:30 a.m.; 2:00–5:00 p.m. (closed 9:30 a.m.–2:00 p.m. for maintenance)\nRoom S2: 9:00 a.m.–12:30 p.m.; 3:00–5:00 p.m.\nRoom S3: 10:30 a.m.–1:00 p.m.; 2:00–4:30 p.m.\nNote: Rooms are assigned only after a request is submitted through the online form. Requests received after the deadline will be considered for future dates."
+      }
+     ],
+     "question": "A Halvorsen team has a booking in North Wing Room B from 10:00 a.m. to 12:00 p.m. on Thursday, October 17. According to the email and the schedule, what should the team do?",
+     "options": {
+      "A": "Submit a request for South Wing Room S3 from 10:30 a.m. to 12:00 p.m.",
+      "B": "Submit a request for South Wing Room S2 by noon on Wednesday, October 16.",
+      "C": "Ask Facilities to reopen North Wing Room B after 1:00 p.m. on Thursday.",
+      "D": "Move the meeting to North Wing Room A at 10:00 a.m."
+     },
+     "answer": "B",
+     "explain_zh": "邮件说明 10 月 17 日 8:00–13:00 North Wing 的 D、C 会议室不可用，受影响预订应改到 South Wing，且需在 10 月 16 日中午前提交线上申请。日程表显示 South Wing 的 S2 在 9:00–12:30 可用，正好覆盖 10:00–12:00；S3 从 10:30 才开始，无法覆盖完整时段。因此应申请 S2，并在周三中午前提交。",
+     "distractors": {
+      "A": "S3 在 10:30 才开始可用，无法覆盖 10:00–12:00 的完整会议时间。",
+      "C": "问题时段是 10:00–12:00，不是 13:00 以后，且邮件并未建议等候 Room D 重开。",
+      "D": "Room B 虽开放，但邮件明确要求受影响预订改到 South Wing，不能直接改在 North Wing。"
+     },
+     "band": "熟练",
+     "ref_seconds": 75,
+     "id": "HB11-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Thursday Cooling Upgrade — Staff Instructions",
+       "text": "Subject: Thursday Cooling Upgrade — Staff Instructions\nFrom: Priya Nandakumar, Facilities\nThe server-room cooling upgrade has been moved to Thursday, 14 March. Because the vendor requires an uninterrupted power supply, all departmental file shares will be unavailable from 08:00 to 11:30. Save documents locally and log off by 17:45 on Wednesday. Temporary Wi-Fi credentials will be issued only to staff on floors 3–5; those on floors 1–2 should use the visitor lounge. Requests for exceptions must reach me by noon Wednesday."
+      },
+      {
+       "type": "schedule",
+       "title": "Halvorsen Facilities — Cooling Upgrade Schedule",
+       "text": "Halvorsen Facilities — Cooling Upgrade Schedule\nThursday, 14 March\n07:30 Vendor crew arrives at loading bay\n08:00–09:15 Electrical isolation, floors 1–2\n09:15–10:30 Coolant line replacement, floors 3–5\n10:30–11:30 Network switchover and testing\n11:30 Power restored\nNote: The visitor lounge is reserved for client meetings from 09:00 to 12:00. Staff without temporary credentials must use the cafeteria annex during that period."
+      }
+     ],
+     "question": "An employee whose desk is on floor 2 needs to work on-site at 09:30 on Thursday. According to the email and the schedule, what should the employee do?",
+     "options": {
+      "A": "Use the cafeteria annex.",
+      "B": "Request temporary Wi-Fi credentials from the vendor.",
+      "C": "Wait until 12:00 to begin work.",
+      "D": "Use the visitor lounge as the email directs."
+     },
+     "answer": "A",
+     "explain_zh": "邮件说明临时 Wi-Fi 凭证只发给 3–5 楼员工，因此 2 楼员工没有凭证，应按邮件去访客休息室；但日程表注明访客休息室 09:00–12:00 被客户会议占用，且无临时凭证的员工须改去 cafeteria annex。09:30 正好落在该时段，所以应去 cafeteria annex。",
+     "distractors": {
+      "B": "邮件明确临时 Wi-Fi 凭证只发给 3–5 楼员工，2 楼员工不符合资格。",
+      "C": "日程表只说 11:30 恢复供电、访客休息室占用到 12:00，并未要求员工等到 12:00 才开始工作。",
+      "D": "邮件确实提到 1–2 楼员工使用访客休息室，但日程表显示 09:30 该处正被客户会议占用，不能选。"
+     },
+     "band": "真考+",
+     "ref_seconds": 90,
+     "id": "HB11-5"
+    }
+   ]
+  },
+  {
+   "chapter": 12,
+   "part": 7,
+   "topic": "时间预算与弃题",
+   "mentor": "Dana",
+   "title": "Dana 的 75 分钟时间账",
+   "trick": [
+    "P5 每题 20 秒，P6 每篇 2 分钟，P7 每题 1 分钟",
+    "卡住超时先猜一个，标记后立刻走",
+    "先做能定位的题，长定位题最后回头捡"
+   ],
+   "signals": [
+    "题干关键词在原文里扫了两遍还没出现，时间已超过 1 分钟预算",
+    "四个选项里的词原文都出现过，必须回文逐句比对才敢下判断",
+    "题干带 NOT、EXCEPT、例外或“已提交”这类需要跨段核对的限定"
+   ],
+   "example": {
+    "passage": [
+     {
+      "type": "email",
+      "title": "Meeting-Room Booking Changes Starting 17 March",
+      "text": "To: All Department Heads\nFrom: Priya Raman, Facilities Coordinator\nDate: 3 March\nSubject: Meeting-Room Booking Changes Starting 17 March\n\nStarting 17 March, all meeting rooms on floors 4–7 must be booked through the RoomReserve app rather than the shared calendar. Rooms left unclaimed ten minutes after the hour will be released to other teams.\n\nWe are also converting Room 612 into a four-person focus room and adding video units to Rooms 401 and 405. The construction crew will work evenings from 6 p.m. to 9 p.m. between 10 and 14 March, so please ask staff on those floors to clear personal items from the corridor desks before 5 p.m. each day.\n\nTeam assistants will receive RoomReserve training on 10 March at 2 p.m. in the Auditorium. Managers who have already submitted recurring bookings do not need to re-enter them; Facilities will migrate those automatically."
+     }
+    ],
+    "question": "What is indicated about managers who have already submitted recurring bookings?",
+    "options": {
+     "A": "Their bookings will be transferred by the Facilities team.",
+     "B": "They must re-enter each booking in RoomReserve.",
+     "C": "They are required to attend the 10 March session.",
+     "D": "They must clear personal items from corridor desks."
+    },
+    "answer": "A",
+    "explain_zh": "题干关键词 recurring bookings 只出现在末段最后一句：“Managers who have already submitted recurring bookings do not need to re-enter them; Facilities will migrate those automatically.” migrate 即“由设施部代为迁移”，与 A 的 transferred by the Facilities team 对应。B 与原文 do not need to re-enter 相反；C 的培训对象是 team assistants；D 是对 4–7 层员工在 10–14 日的要求，均与本题主语不符。",
+    "distractors": {
+     "B": "原文明确说不需要重新录入，方向正好说反。",
+     "C": "10 March 的培训是给 team assistants 的，不是给 managers 的。",
+     "D": "清空走廊桌面是施工期间对楼层员工的要求，与 recurring bookings 无关。"
+    },
+    "steps": [
+     "识别信号：题干出现 have already submitted 这种“已发生状态”，说明答案一定藏在讲例外或豁免的那一句，属于要回文核对的长定位题——先给它 1 分钟上限。",
+     "运用招式：带着 recurring bookings 直接扫各段首尾句，末段最后一句同时出现 recurring bookings 与 Facilities will migrate，20 秒内锁定该句，不必读中间施工段。",
+     "排除确认：B 与 do not need to re-enter 相反，C 主语错位（team assistants），D 属于施工通知段，三选皆排除，选 A；若扫到 1 分钟仍无定位，就先猜 A 标记后走，回头再看。"
+    ],
+    "band": "进阶",
+    "ref_seconds": 60,
+    "id": "HB12-0"
+   },
+   "practice": [
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Staff Cafeteria Hours During Renovation",
+       "text": "From: Lena Ortiz, Facilities Coordinator\nTo: All Halvorsen Employees\nSubject: Staff Cafeteria Hours During Renovation\n\nThe staff cafeteria on the second floor will be closed from Monday, May 6, through Friday, May 10, while new flooring is installed. During this period, free coffee and tea will be available in the lobby from 8:00 a.m. to 10:00 a.m. Employees may use the small kitchen on the fourth floor to store and heat their lunches, but please clean the tables after use. The nearby Garden Café on Oak Street will offer Halvorsen employees a 10% discount on all food items next week. Show your company ID to receive the discount. The cafeteria will reopen at 7:30 a.m. on Monday, May 13. We apologize for any inconvenience.\n\nLena Ortiz\nFacilities Coordinator"
+      }
+     ],
+     "question": "What will be offered in the lobby from 8:00 a.m. to 10:00 a.m.?",
+     "options": {
+      "A": "Free coffee and tea",
+      "B": "New flooring samples",
+      "C": "Extra lunch tables",
+      "D": "A 10% discount on food"
+     },
+     "answer": "A",
+     "explain_zh": "邮件明确写到“free coffee and tea will be available in the lobby from 8:00 a.m. to 10:00 a.m.”，因此答案为 A。D 的折扣是在附近的 Garden Café，不是在大厅提供；B 是施工内容；C 文中未提到。",
+     "distractors": {
+      "B": "新地板是食堂施工项目，不是大厅提供的物品。",
+      "C": "文中没有提到增加午餐桌。",
+      "D": "折扣是 Garden Café 下周的优惠，不是大厅在 8:00–10:00 提供的内容。"
+     },
+     "band": "基础",
+     "ref_seconds": 45,
+     "id": "HB12-1"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "AV Equipment Requests for the Quarterly Review",
+       "text": "To: Halvorsen Operations Team\nFrom: Priya Nandakumar, Facilities Coordinator\nSubject: AV Equipment Requests for the Quarterly Review\nDate: March 4\n\nThe quarterly operations review will take place in the Bergen Room on March 21. Because the room will be reconfigured the previous afternoon, any request for extra audiovisual equipment must reach Facilities by 3 P.M. on March 18. Requests submitted after that time can still be considered, but only if the item is already in our storage room; we cannot arrange outside rentals at short notice.\n\nPlease use the attached form rather than emailing your requirements. The form asks you to specify the session, the equipment, and the name of the person responsible for returning it. Department heads should approve all requests before they are sent to Facilities.\n\nA limited number of portable screens will be available on a first-come basis. If your session depends on a screen, please mention this in the \"critical needs\" section."
+      }
+     ],
+     "question": "What is indicated about equipment requests submitted after 3 P.M. on March 18?",
+     "options": {
+      "A": "They can be fulfilled only with equipment already on site.",
+      "B": "They will be automatically denied.",
+      "C": "They will be charged an outside rental fee.",
+      "D": "They must be approved by the Facilities Coordinator."
+     },
+     "answer": "A",
+     "explain_zh": "原文说明，3月18日下午3点后提交的申请“can still be considered, but only if the item is already in our storage room”，即只能使用现有库存设备，不能临时安排外部租赁。因此A正确。B与“can still be considered”相反；D混淆了审批人；C原文明确不能安排外部租赁，也未提收费。",
+     "distractors": {
+      "B": "原文说超时申请仍可考虑，并非自动拒绝。",
+      "C": "原文明确不能临时安排外部租赁，更未提到收费。",
+      "D": "原文要求由部门主管批准，不是设施协调员批准。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB12-2"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Visitor Parking During East Lot Repairs",
+       "text": "To: All Halvorsen Staff\nFrom: Facilities Office\nSubject: Visitor Parking During East Lot Repairs\n\nThe East Visitor Lot will be closed from June 3 through June 14 while new lighting is installed. During this period, visitors should enter through the north gate and use spaces V-1 through V-8 near the security desk. These spaces may not be reserved by staff for personal use. If a visitor is expected before 9:00 A.M., please notify the security desk by email the previous afternoon so a temporary pass can be prepared. Visitors arriving after 6:00 P.M. must be met in the main lobby and cannot enter the lot without an escort. The repair schedule may change if heavy rain delays the work. Any changes will be posted on the facilities page."
+      }
+     ],
+     "question": "For a visitor expected before 9:00 A.M., what are staff asked to do?",
+     "options": {
+      "A": "Email the security desk the previous afternoon.",
+      "B": "Meet the visitor in the main lobby.",
+      "C": "Reserve a space in the East Visitor Lot.",
+      "D": "Provide an escort at the north gate."
+     },
+     "answer": "A",
+     "explain_zh": "题干关键词是 before 9:00 C.M.；原文对应 “If a visitor is expected before 9:00 C.M., please notify the security desk by email the previous afternoon...”，因此选 A。C 与原文 “may not be reserved by staff” 相反；B 是 6:00 P.M. 后的规定；D 文中并未要求员工在北门提供陪同。本章时间纪律：这类定位题先扫题干中的时间词，若约 1 分钟仍卡住，先猜一个并标记，继续做后面的题。",
+     "distractors": {
+      "B": "在主楼大厅会面是针对 6:00 P.M. 后到访者的规定，故排除。",
+      "C": "原文明确说员工不得为个人用途预留这些车位，故排除。",
+      "D": "文中只提到晚间到访者无陪同不得进入停车场，并未要求员工在北门提供陪同，故排除。"
+     },
+     "band": "进阶",
+     "ref_seconds": 60,
+     "id": "HB12-3"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Updated Process for Promotional Item Orders",
+       "text": "Starting Monday, all requests for promotional items—such as pens, mugs, and printed folders—must be submitted through the Procurement Portal rather than by email. Standard items listed in the current catalog can be ordered without manager approval if the total is under $750; however, any custom-printed item requires a digital proof approved by the requesting department before the order is placed. Please submit custom requests at least ten business days before the needed date. Rush requests will be accepted only when the supplier confirms availability, and a 15% surcharge will apply. Department coordinators should review the attached catalog and remove outdated item codes from their saved request forms by Thursday. For assistance, contact ext. 4421."
+      }
+     ],
+     "question": "According to the email, what must a coordinator do before placing an order for a custom-printed item?",
+     "options": {
+      "A": "Wait for the supplier to confirm availability.",
+      "B": "Ask a manager to approve the order total.",
+      "C": "Have the requesting department approve a digital proof.",
+      "D": "Remove outdated item codes from the request form."
+     },
+     "answer": "C",
+     "explain_zh": "题干关键词 custom-printed item 可定位到“requires a digital proof approved by the requesting department before the order is placed”，因此 C 正确。B 中的经理审批只涉及标准品且条件不同，A 是加急请求的条件，D 是周四前整理表单的独立要求。按本章一招，P7 每题约 1 分钟；若一时无法排除，可先猜 C 并标记，立刻继续下一题。",
+     "distractors": {
+      "A": "供应商确认可用性是加急请求的条件，不适用于所有定制订单。",
+      "B": "经理审批针对标准品且有金额条件，不是定制印刷品的前置要求。",
+      "D": "删除旧物料编号是周四前的另一项整理工作，与下单前置审批无关。"
+     },
+     "band": "熟练",
+     "ref_seconds": 75,
+     "id": "HB12-4"
+    },
+    {
+     "passage": [
+      {
+       "type": "email",
+       "title": "Room Reconfiguration Request — Halvorsen Q3 Supplier Forum",
+       "text": "From: Priya Nandakumar, Facilities Coordinator\nTo: Building Services Desk, Halvorsen Northgate Complex\nDate: 3 June\nSubject: Reconfiguration request — Atrium Hall, 19 June\n\nBuilding Services Desk,\n\nThe Q3 Supplier Forum will occupy Atrium Hall on 19 June from 8:30 a.m. to 4:00 p.m. Last year's forum drew roughly 180 attendees, and the seating plan we used then — rows of eight facing a central aisle — is not suitable this time, because two breakout sessions will run concurrently in the rear third of the hall.\n\nPlease replace the current 200-chair row layout with 12 round tables of nine seats each, arranged so that the rear third can be screened off without blocking the main entrance or the emergency exits on the east wall. Chairs in excess of the 108 required should be stored in the adjoining service corridor, not the hall.\n\nOne caution: the audio-visual contractor can only access the hall after 2:00 p.m. on 18 June, so any reconfiguration must be completed and signed off by then.\n\nThank you,\nPriya Nandakumar\nFacilities Coordinator, Halvorsen\n"
+      },
+      {
+       "type": "notice",
+       "title": "Atrium Hall — Scheduled Occupancy, 18–19 June",
+       "text": "ATRIUM HALL — OCCUPANCY NOTICE (Halvorsen Northgate Complex)\n\n18 June\n• 8:00–12:00 — Staff Town Hall (row layout; hall cleared by 12:30)\n• 12:30–14:00 — Hall closed, deep clean\n• 14:00 onward — Audio-visual contractor (access to stage and ceiling rigging only; no floor work)\n\n19 June\n• 8:30–16:00 — Q3 Supplier Forum (organizer: P. Nandakumar)\n\nNote: East-wall emergency exits must remain unobstructed at all times. Floor work in the hall may not overlap with the contractor's rigging access."
+      }
+     ],
+     "question": "What is the main obstacle the facilities coordinator must resolve?",
+     "options": {
+      "A": "The Staff Town Hall on 18 June cannot be moved to accommodate the forum.",
+      "B": "The number of round tables requested exceeds what the hall can hold.",
+      "C": "The hall's emergency exits prevent the rear third from being screened off.",
+      "D": "The audio-visual contractor's access window leaves no time for the requested floor reconfiguration."
+     },
+     "answer": "D",
+     "explain_zh": "邮件要求把椅子改成12张圆桌并须在6月18日完成签收，而占用通知显示18日14:00起 contractors 只能做舞台与吊顶作业、不得做 floor work，且12:30前大厅还被 Town Hall 占用——可用地面作业时间被两头挤掉，因此协调人必须解决这个时间冲突。C与通知“东墙安全出口不得遮挡”矛盾但并非障碍来源；B中108座远低于现有200椅容量；A文中未提搬移 Town Hall 的需求。",
+     "distractors": {
+      "A": "两篇文本均未提及要调整或搬移 Town Hall，属无中生有。",
+      "B": "12桌×9座=108座，远低于大厅现有的200把椅子，容量不成问题。",
+      "C": "通知只要求出口保持畅通，邮件也已要求布局避开出口，并非无法解决的障碍。"
+     },
+     "band": "真考+",
+     "ref_seconds": 90,
+     "id": "HB12-5"
+    }
+   ]
+  }
+ ]
+}
