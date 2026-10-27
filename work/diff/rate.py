@@ -57,19 +57,21 @@ EPS = [('https://api.kunyou.asia/v1/chat/completions', 'deepseek-v4.1-flash-1017
        ('https://igrok.lvyrix.com/v1/chat/completions', 'deepseek-v4.1-flash')]
 SEMS = [threading.Semaphore(10), threading.Semaphore(10)]
 EP_STAT = [[0, 0], [0, 0]]   # ok, fail
+EP_DOWN = [0.0, 0.0]          # 鉴权失败（如 Invalid token）的端点暂停到该时间戳，10 分钟后再探
 
 
 def _pick(prefer):
-    for k in (prefer, 1 - prefer):
+    up = [k for k in (prefer, 1 - prefer) if EP_DOWN[k] < time.time()] or [0]
+    for k in up:
         if SEMS[k].acquire(blocking=False):
             return k
-    SEMS[prefer].acquire(); return prefer
+    SEMS[up[0]].acquire(); return up[0]
 
 
 def chat(msgs, max_tokens=2500, temp=0):
     err = None
     for a in range(6):
-        k = _pick((a + threading.get_ident()) % 2)
+        k = _pick((a + (threading.get_ident() >> 12)) % 2)
         url, model = EPS[k]
         body = json.dumps({'model': model, 'messages': msgs, 'max_tokens': max_tokens, 'temperature': temp,
                            'response_format': {'type': 'json_object'}})
@@ -86,6 +88,8 @@ def chat(msgs, max_tokens=2500, temp=0):
             return res, dict(j.get('usage') or {}, ep=k)
         except Exception as e:
             EP_STAT[k][1] += 1
+            if 'Invalid token' in out or 'unauthorized' in out.lower():
+                EP_DOWN[k] = time.time() + 600
             err = f'ep{k} {type(e).__name__}: {str(e)[:100]} | {out[:160]}'
         finally:
             SEMS[k].release()

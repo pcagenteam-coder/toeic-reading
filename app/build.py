@@ -17,6 +17,19 @@ OPEN_SETS = [('data/items_open_maximcuynat.json', 'open'), ('data/items_open_kde
 # EdNet 先验 + 新制节奏：xdf/open 题没有 target_time_sec / difficulty_est 时用这里的默认值
 DEF_TIME = {5: 22, 6: 30, 7: 55}
 DEF_DIFF = {5: 3, 6: 3, 7: 3}
+# 难度 v2（UX_SPEC_v2 §6，LLM 重评 + 4 档）：id→{score,band,diff1_5,chapter,technique_zh}；缺失题回退旧 difficulty_est
+DIFF_V2 = 'data/difficulty/difficulty_v2_open.json'
+DIFF_V2_PRIV = 'private_data/difficulty/difficulty_v2_private.json'   # 仅私有构建读取
+DV2 = {}
+
+
+def load_diff_v2(use_private):
+    DV2.clear()
+    for f in [DIFF_V2] + ([DIFF_V2_PRIV] if use_private else []):
+        pth = os.path.join(ROOT, f)
+        if os.path.exists(pth):
+            DV2.update(json.load(open(pth, encoding='utf-8')).get('items', {}))
+            print('difficulty v2:', f)
 
 
 def load(p):
@@ -63,6 +76,13 @@ def conv_item(i, src, kind=None):
          'src': src}
     if i.get('bundle_id'):
         o['b'] = i['bundle_id']
+    v2 = DV2.get(i['id'])
+    if v2:   # 新 difficulty_est(1–5) 供 engine diffB；band=4 档；chapter=手册章节（主章在前）；technique_zh=本题技巧
+        o['d'] = v2['diff1_5']; o['band'] = v2['band']
+        if v2.get('chapter'):
+            o['chapter'] = v2['chapter']
+        if v2.get('technique_zh'):
+            o['technique_zh'] = v2['technique_zh']
     if dr:
         o['dr'] = {str(k): v for k, v in dr.items()}
     if p == 6:
@@ -178,6 +198,7 @@ def main():
             X['items'] = [i for i in X['items'] if not (i['id'] in bad and i.get('use') != 'mock')]
             print('key-suspect excluded:', n0 - len(X['items']))
     print('build mode:', 'PRIVATE (含无授权题，禁止公开)' if use_private else 'PUBLIC (仅公开题)')
+    load_diff_v2(use_private)
     G = load('data/graph_v1.json'); S = load_strats()
     GC = load(GRAPH_COST) if os.path.exists(os.path.join(ROOT, GRAPH_COST)) else None
     if GC:
@@ -208,6 +229,8 @@ def main():
             items.append(conv_item(i, src, kinds.get(i.get('bundle_id'))))
             if src == 'priv' and i.get('use'):
                 items[-1]['u'] = i['use']   # 私有题用途：mock 只做模考 / train 训练
+    nb = sum(1 for i in items if 'band' in i)
+    print('difficulty v2 applied: %d/%d items (rest fallback to old difficulty_est)' % (nb, len(items)))
     nodes = [{'id': n['id'], 'nm': n['name_zh'], 'l': n['layer'], 'pa': n['parent'],
               'w': n['exam_weight'], 'bd': n['target_band'], 'g': 1 if n['is_group'] else 0, 'pr': n.get('prereqs') or []}
              for n in G['nodes']]
