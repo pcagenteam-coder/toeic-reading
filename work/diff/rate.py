@@ -47,7 +47,7 @@ score 必须落在与你判断的档位对应的区间内。用满整个区间�
 - "handbook_chapter": 解这题最该用的《工作手册》章节号数组（1–12，主章在前，1–3 个）。章目：1词性秒判 2时态与语态 3介词vs连词 4代词 5词汇搭配与生词止损 6句子插入看前后句 7时态看全文时间线 8先看题再定位 9同义替换 10 NOT/推断排除法 11多篇跨文定位 12时间预算与弃题
 - "technique_zh": 简体中文 ≤40 字，说明这题怎么用主章这一招快速解出（点出具体信号词/定位点，不要复述题目全文）
 
-只输出 JSON：{"items":[{"qid":"题目标号", ...上述字段...}]}，每道题一条，qid 原样照抄，不得遗漏。不要输出解释。'''
+只输出 JSON：{"items":[{"qid":"题目标号", ...上述字段...}]}，每道题一条，qid 原样照抄，不得遗漏。不要输出解释。按 rubric 快速判断，思考保持简短。'''
 
 ARGS = None
 
@@ -74,7 +74,7 @@ def chat(msgs, max_tokens=2500, temp=0):
         k = _pick((a + (threading.get_ident() >> 12)) % 2)
         url, model = EPS[k]
         body = json.dumps({'model': model, 'messages': msgs, 'max_tokens': max_tokens, 'temperature': temp,
-                           'response_format': {'type': 'json_object'}})
+                           'response_format': {'type': 'json_object'}, 'reasoning_effort': 'low'})
         out = ''
         try:
             r = subprocess.run(['curl', '-s', '--max-time', '300', url, '-H', 'Content-Type: application/json', '-d', '@-'],
@@ -153,6 +153,9 @@ def work(u):
       got = {str(x.get('qid')).strip('[] 【】'): x for x in (res.get('items') or []) if isinstance(x, dict)}
       if all(lb in got and 'score' in got[lb] for lb in labels):
           break
+      with lock:
+          open(os.path.join(ROOT, 'work/diff/err.log'), 'a').write(json.dumps({'t': time.time(), 'uid': u['uid'], 'err': 'missing',
+              'keys': list(res.keys())[:5], 'got': list(got.keys())[:8], 'n': len(labels)}, ensure_ascii=False) + '\n')
     out = []
     for q, lb in zip(u['qs'], labels):
         x = got.get(lb)
