@@ -9,7 +9,11 @@
 - 脚本 work/handbook/gen.py（双端点 work/llm/multi_chat.py：igrok 生成 ≤10、Kunyou 核对 ≤5（Kunyou 另有难度子任务），workers 15），state.json 断点续跑，后台：
   `setsid nohup python3 gen.py --workers 10 >> gen.log 2>&1 &`
 - 流程：每章 meta(标题/一招/信号/示范题+3步) → 5 练习(基础/进阶/进阶/熟练/真考+) → 每题独立 solve 核对，答案不一致或 unique=false 即重生成（最多 4 轮）
-- [ ] 生成 [ ] 原创性 n-gram 检查 [ ] README schema [ ] sample.md [ ] commit
+- [x] 生成 12 章 72 题（生成阶段核对不一致→重生成 9 次，含部分 "(C)" 格式误判；最终 0 题未过）
+- [x] 答案位置均衡 balance.py（原 A27/B26/C15/D4 → 18×4，解析中字母同步替换）→ reverify 72/72 一致
+- [x] 原创性 origin_check.py：与公开+私有题库 8-gram 重合仅 4 题、均为时间区间（"from 2:00 to 3:30 p.m."）
+- [x] README schema、docs/review/handbook_sample.md（第 8 章）、commit
+- 待：人工通读 12 章（第 3 章标题"尾词定词性法"略不贴题，可改）
 
 ## 3. data_todo
 - [x] docs/review/data_todo.md（b9c4251）

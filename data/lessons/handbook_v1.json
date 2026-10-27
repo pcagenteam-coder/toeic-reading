@@ -7,7 +7,8 @@
   "items": 72,
   "key_mismatch_regenerated": 9,
   "regen_total": 9,
-  "answer_balanced": "options reshuffled (seed 20261027), letters in explanations remapped, re-verified"
+  "answer_balanced": "options reshuffled (seed 20261027), letters in explanations remapped, re-verified",
+  "reverify_after_balance": "72/72 一致（work/handbook/reverify.py；首轮 9 题为答案解析格式误判 \"(C)\"，修正解析后复核一致）"
  },
  "chapters": [
   {

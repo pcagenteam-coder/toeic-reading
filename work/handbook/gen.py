@@ -83,7 +83,7 @@ def ok_item(it):
 def check(it, part):
     if not ok_item(it): return False, {'err': 'schema'}
     s = solve(it, part)
-    a = str(s.get('answer', '')).strip()[:1].upper()
+    a = (re.search(r'[ABCD]', str(s.get('answer', '')).upper()) or [''])[0]
     return (a == it['answer'] and s.get('unique', True) is not False), s
 
 def main():
