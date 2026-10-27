@@ -11,3 +11,5 @@ work/bili/
 work/drive_sync_state.json
 data/external/
 work/screens/
+work/diff/err.log
+work/diff/*.log

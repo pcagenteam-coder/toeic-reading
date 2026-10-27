@@ -8,8 +8,16 @@
 - `work/diff/merge.py`：合并 → data/difficulty/difficulty_v2_open.json、private_data/difficulty/difficulty_v2_private.json、docs/review/difficulty_v2_report.md。
 - build.py 读上述文件：写 band / difficulty_est(diff1_5) / chapter / technique_zh，缺失回退旧值。
 
+## 注意（续跑者必读）
+- Kunyou 网关会丢弃长 system 消息 → rubric 并入 user 消息。
+- 推理模型思考占 max_tokens，曾大量 finish=length → 现 7000+900×题数（≤16000）。
+- igrok 端点从本沙箱返回 "Invalid token"（2026-10-27 23:30），脚本自动暂停该端点 10 分钟再探，实际只跑 Kunyou 10 路。
+- 停止：`bash work/diff/stop.sh`（单独一条命令执行，勿与其它命令串联，pkill -f 会误杀同行 shell）。启动：`(setsid nohup bash work/diff/run_all.sh >/dev/null 2>&1 &)`。
+- 私有 P5 每 10 题一次（960 单位），公开 P5 每 5 题（376 单位）。速度约 9 单位/分钟。
+- work/diff/err.log 仅诊断用，不提交（可能含私有题模型输出片段）。
+
 ## 状态
-- [ ] 试点 20 题
+- [x] 试点 20 题（质量可用：特征合理、章节/技巧贴题；分数偏中段）
 - [ ] 公开全量
 - [ ] 私有全量
 - [ ] merge + 报告

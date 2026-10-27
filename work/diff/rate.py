@@ -91,6 +91,8 @@ def chat(msgs, max_tokens=2500, temp=0):
             if 'Invalid token' in out or 'unauthorized' in out.lower():
                 EP_DOWN[k] = time.time() + 600
             err = f'ep{k} {type(e).__name__}: {str(e)[:100]} | {out[:160]}'
+            with lock:
+                open(os.path.join(ROOT, 'work/diff/err.log'), 'a').write(json.dumps({'t': time.time(), 'ep': k, 'err': err, 'tail': out[-300:]}, ensure_ascii=False) + '\n')
         finally:
             SEMS[k].release()
         time.sleep(1 + 2 * a + random.random())
@@ -127,8 +129,9 @@ def units(set_name):
                 byb.setdefault(q['bundle_id'], []).append(q)
             else:
                 p5.append(q)
-        for i in range(0, len(p5), 5):
-            g = p5[i:i + 5]
+        bs = 10 if set_name == 'private' else 5   # 私有 P5 每 10 题一次（省调用）；公开保持 5
+        for i in range(0, len(p5), bs):
+            g = p5[i:i + bs]
             us.append({'uid': 'P5:' + g[0]['id'], 'qs': g, 'b': None})
         for bid, g in byb.items():
             us.append({'uid': bid, 'qs': sorted(g, key=lambda x: int(x['qnum'])), 'b': bmap[bid]})
@@ -146,8 +149,8 @@ def work(u):
     t += '【题目】\n' + '\n\n'.join(qblock(q, lb) for q, lb in zip(u['qs'], labels))
     for _try in range(3):
       res, usage = chat([{'role': 'user', 'content': RUBRIC + '\n\n===== 待评题目 =====\n' + t}],  # 网关会丢弃长 system 消息，rubric 并入 user
-                      max_tokens=1800 + 550 * len(u['qs']))
-      got = {str(x.get('qid')): x for x in (res.get('items') or []) if isinstance(x, dict)}
+                      max_tokens=min(16000, 7000 + 900 * len(u['qs'])))  # 推理模型思考占预算，给足防 finish=length
+      got = {str(x.get('qid')).strip('[] 【】'): x for x in (res.get('items') or []) if isinstance(x, dict)}
       if all(lb in got and 'score' in got[lb] for lb in labels):
           break
     out = []
